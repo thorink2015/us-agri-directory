@@ -1,0 +1,13 @@
+/* TEAM */
+Title: Fondator & Editor
+Contact: contact@terradron.ro
+Location: Romania
+
+/* SITE */
+Name: TerraDron.ro
+Description: Directorul operatorilor de drone agricole din Romania si Moldova
+Last update: 2026-04-11
+Language: Romanian
+Standards: HTML5, CSS3, TypeScript
+Framework: Next.js 14
+Hosting: Netlify
