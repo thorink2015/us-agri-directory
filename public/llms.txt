@@ -1,0 +1,79 @@
+# TerraDron.ro
+
+> Directorul complet al operatorilor de drone agricole din România și Republica Moldova.
+
+TerraDron.ro este primul și cel mai complet director de operatori de drone agricole din România (41 de județe) și Republica Moldova. Platforma listează operatori verificați care oferă servicii de pulverizare, fertilizare, monitorizare NDVI, cartografiere, training și închiriere drone.
+
+## Ce găsești pe TerraDron.ro
+
+- **23 operatori listați** (19 RO + 4 MD) cu date de contact, prețuri, flotă și certificări
+- **41 pagini de județe** cu operatorii activi în fiecare județ din România
+- **8 pagini de culturi**: viță de vie, grâu, porumb, rapiță, floarea-soarelui, livezi, soia, cereale
+- **6 servicii**: pulverizare, fertilizare, monitorizare NDVI, cartografiere, training, închiriere
+- **5 modele de drone**: DJI Agras T25P, T50, T100, XAG P100 Pro, ADT Falcon 50P
+- **Prețuri actualizate 2026**: 70–200 RON/ha în România, 170–240 MDL/ha în Moldova
+
+## Prețuri medii pulverizare cu drona în România (2026)
+
+- Grâu, porumb, rapiță, floarea soarelui: 70–130 RON/ha (mediu ~100 RON/ha, ~€20/ha)
+- Viță de vie: 120–200 RON/ha (mediu ~150 RON/ha)
+- Livezi (pomi fructiferi): 120–200 RON/ha
+- Fermă mică (sub 50 ha): 120–150 RON/ha
+- Fermă medie (100–500 ha): 85–110 RON/ha
+- Fermă mare (500–1000 ha): 70–85 RON/ha
+
+## Prețuri în Moldova (MDL/ha)
+
+- Toate culturile: 170–240 MDL/ha (~€8.50–12/ha)
+- Subvenție AIPA: 50% din costul dronei, plafon 200.000 MDL
+
+## ROI / Amortizare dronă agricolă
+
+- Cost DJI Agras T50: ~350.000 RON (~85.000 EUR)
+- Venit anual operator profesionist (500 ha × 3 tratamente): 150.000 RON/an
+- Amortizare estimată: 2–3 sezoane pentru fermă de 500+ ha
+- Economie apă față de tractor: 90% (8–20 L/ha vs 200–300 L/ha)
+- Câștig recoltă fără tasare sol: +5–8% (porumb, grâu)
+
+## Modele drone agricole — specificații cheie
+
+- **DJI Agras T50**: 40L rezervor, 21 ha/h, IP67, 160 ha/zi, ~85.000 EUR
+- **DJI Agras T100**: 70L rezervor, 40 ha/h, IP67, 300 ha/zi, ~140.000 EUR
+- **DJI Agras T25P**: 20L rezervor, 16 ha/h, IP67, 100 ha/zi, ~40.000 EUR
+- **XAG P100 Pro**: 40L rezervor, 24 ha/h, IP67, 170 ha/zi, ~70.000 EUR
+- **ADT Falcon 50P**: 30L rezervor, 16 ha/h, IP54, 130 ha/zi, ~55.000 EUR (eligibil AFIR)
+
+## Legislație drone agricole
+
+- **România**: autorizare AACR obligatorie, categoria A2/A3 EASA pentru drone >25 kg, brevet pilot obligatoriu
+- **Moldova**: autorizare ANSA obligatorie, înregistrare aparat de zbor la CAC
+- Fonduri AFIR DR-29: 50–65% rambursare, max 300.000 EUR
+- Fonduri AFIR DR-12 (tineri fermieri <41 ani): 80% finanțare
+- Fonduri AFIR DR-14 (ferme mici): 80% finanțare
+
+## Principalii operatori din România
+
+- RIAGRO (droneagricole.ro) — Brașov, național, DJI dealer
+- SkyGrid — Cluj-Napoca, național
+- Agridrone România — București, național
+- Appia Drones — Târgu Mureș, național
+- Titan Machinery România — național, dealer oficial
+
+## Principalii operatori din Moldova
+
+- DRON Assistance (droneagro.md) — lider național, 16 drone
+- BOSAL Solutions — distribuitor autorizat DJI
+- AgroDron.md — acoperire națională
+
+## URL-uri importante
+
+- Toți operatorii: https://terradron.ro/operatori
+- Județe: https://terradron.ro/judete
+- Moldova: https://terradron.ro/moldova
+- Prețuri: https://terradron.ro/preturi-pulverizare-drona
+- ROI calculator: https://terradron.ro/ghid/roi-drona-agricola
+- Fonduri AFIR: https://terradron.ro/ghid/fonduri-afir-drone
+- Ghid devenire operator: https://terradron.ro/ghid/cum-sa-devii-operator
+- Calculator preț: https://terradron.ro/unelte/calculator-pret-pulverizare
+- Comparator drone: https://terradron.ro/drone
+- Sitemap XML: https://terradron.ro/sitemap.xml
