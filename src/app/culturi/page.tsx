@@ -4,20 +4,20 @@ import { crops } from '@/data/crops';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Tratamente cu Drona după Cultură | Ghiduri Complete 2026',
+  title: 'Drone Services by Crop Type | Corn, Soybeans, Cotton, Wheat & More',
   description:
-    'Ghiduri complete pentru tratamentele cu drona agricolă pe fiecare tip de cultură: grâu, porumb, rapiță, floarea soarelui, viță de vie, livezi și altele.',
+    'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs, and equipment for every major US crop.',
   alternates: { canonical: '/culturi' },
 };
 
-export default function CulturiPage() {
+export default function CropsPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <Breadcrumb items={[{ label: 'Culturi' }]} />
+      <Breadcrumb items={[{ label: 'Crops' }]} />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Tratamente cu drona după cultură</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Drone spraying by crop type</h1>
       <p className="text-gray-600 mb-8">
-        Ghiduri complete cu parametri de zbor, norme de aplicare, calendar de tratamente și prețuri orientative.
+        Different crops need different approaches. Browse by crop to find operators with hands-on experience in your production system, plus application timing, typical per-acre rates, and equipment recommendations.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -34,9 +34,9 @@ export default function CulturiPage() {
               </h2>
               <p className="text-sm text-gray-600 line-clamp-2">{crop.description}</p>
               <div className="mt-2 flex items-center gap-3 text-xs text-gray-500">
-                <span className="font-medium text-green-700">{crop.priceMinRon}–{crop.priceMaxRon} RON/ha</span>
-                {crop.haRomania && (
-                  <span>{(crop.haRomania / 1000).toFixed(0)}K ha în România</span>
+                <span className="font-medium text-green-700">${crop.priceMinUsd}–${crop.priceMaxUsd}/acre</span>
+                {crop.haUS && (
+                  <span>{(crop.haUS / 1000000).toFixed(0)}M+ acres in the US</span>
                 )}
               </div>
             </div>

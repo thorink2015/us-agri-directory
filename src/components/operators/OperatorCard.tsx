@@ -17,7 +17,6 @@ interface OperatorCardProps {
 const MAX_VISIBLE_TAGS = 3;
 
 export default function OperatorCard({ operator, showCounty = true }: OperatorCardProps) {
-  // Display shortName on cards for visual balance; fall back to full name
   const displayName = operator.shortName || operator.name;
   const visibleServices = operator.services.slice(0, MAX_VISIBLE_TAGS);
   const hiddenCount = operator.services.length - MAX_VISIBLE_TAGS;
@@ -28,7 +27,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
       itemScope
       itemType="https://schema.org/ProfessionalService"
     >
-      {/* ── Header: icon + name + badges ───────────────────────── */}
+      {/* Header: icon + name + badges */}
       <header className="flex items-start gap-3 mb-2">
         <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:from-green-200 group-hover:to-green-100 transition-colors">
           <Plane className="w-6 h-6 text-green-700 rotate-45" />
@@ -44,41 +43,38 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
               {displayName}
             </Link>
             {operator.verified && (
-              <span title="Verificat" className="flex-shrink-0">
-                <CheckCircle className="w-4 h-4 text-green-600" aria-label="Verificat" />
+              <span title="Verified" className="flex-shrink-0">
+                <CheckCircle className="w-4 h-4 text-green-600" aria-label="Verified" />
               </span>
             )}
           </div>
           {showCounty && (
             <div className="flex items-center gap-1 text-xs text-gray-500 mt-0.5" itemProp="address">
               <MapPin className="w-3 h-3 flex-shrink-0" />
-              <span className="truncate">
-                {operator.city}
-                {operator.country === 'MD' ? ', MD' : ', RO'}
-              </span>
+              <span className="truncate">{operator.city}, US</span>
             </div>
           )}
         </div>
         {operator.featured && (
           <span className="text-[10px] bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full font-semibold uppercase tracking-wide flex-shrink-0">
-            Top
+            Featured
           </span>
         )}
       </header>
 
-      {/* ── Tagline (optional, more descriptive than description) ── */}
+      {/* Tagline */}
       {operator.tagline && (
         <p className="text-xs font-medium text-green-700 mb-2 line-clamp-1">
           {operator.tagline}
         </p>
       )}
 
-      {/* ── Description ─────────────────────────────────────────── */}
+      {/* Description */}
       <p className="text-sm text-gray-600 line-clamp-2 mb-3 flex-grow-0" itemProp="description">
         {operator.description}
       </p>
 
-      {/* ── Service tags (3 visible + overflow counter) ─────────── */}
+      {/* Service tags */}
       <div className="flex flex-wrap gap-1 mb-3 min-h-[24px]">
         {visibleServices.map((service) => (
           <span
@@ -92,38 +88,41 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
           <Link
             href={`/operatori/${operator.slug}`}
             className="text-[11px] text-gray-500 hover:text-green-700 px-2 py-0.5 rounded-md border border-gray-200 hover:border-green-300 transition-colors font-medium"
-            aria-label={`Mai multe servicii (${hiddenCount})`}
+            aria-label={`View ${hiddenCount} more services`}
           >
-            +{hiddenCount} mai multe
+            +{hiddenCount} more
           </Link>
         )}
       </div>
 
-      {/* ── Stats row (grows to push footer down) ─────────────── */}
+      {/* Stats row */}
       <div className="flex-1 flex items-end">
         <div className="w-full">
           <div className="flex flex-wrap items-center justify-between gap-2 pt-3 border-t border-gray-100">
             <div className="text-sm font-bold text-green-700">
-              {operator.priceMinRon
-                ? formatPrice(operator.priceMinRon, operator.priceMaxRon)
-                : operator.priceMinMdl
-                ? formatPrice(operator.priceMinMdl, operator.priceMaxMdl, 'MDL')
-                : <span className="text-gray-400 font-normal text-xs">Preț la cerere</span>}
+              {operator.priceMinUsd
+                ? formatPrice(operator.priceMinUsd, operator.priceMaxUsd)
+                : <span className="text-gray-400 font-normal text-xs">Price on request</span>}
             </div>
             <div className="flex items-center gap-2 text-[11px] text-gray-500">
               {operator.haTreated && operator.haTreated >= 1000 && (
-                <span className="flex items-center gap-0.5" title="Hectare tratate cumulat">
-                  <Zap className="w-3 h-3" /> {(operator.haTreated / 1000).toFixed(0)}K ha
+                <span className="flex items-center gap-0.5" title="Acres serviced">
+                  <Zap className="w-3 h-3" /> {(operator.haTreated / 1000).toFixed(0)}K ac
                 </span>
               )}
               {operator.fleetSize && (
-                <span className="flex items-center gap-0.5" title="Flotă drone">
+                <span className="flex items-center gap-0.5" title="Drone fleet size">
                   <Plane className="w-3 h-3 rotate-45" /> {operator.fleetSize}
                 </span>
               )}
-              {operator.acceptsAfirFunds && (
-                <span title="Acceptă fonduri AFIR">
+              {operator.ndaaCompliant && (
+                <span title="NDAA compliant">
                   <Shield className="w-3 h-3 text-blue-600" />
+                </span>
+              )}
+              {(operator.certFAAPart107 || operator.certFAAPart137) && (
+                <span title="FAA Certified" className="text-green-600 font-semibold text-[10px]">
+                  FAA
                 </span>
               )}
             </div>
@@ -131,14 +130,14 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
         </div>
       </div>
 
-      {/* ── Footer: 2 CTAs (Vezi profil + Website) ──────────────── */}
+      {/* Footer: 2 CTAs */}
       <footer className="flex items-stretch gap-2 mt-3 pt-3 border-t border-gray-100">
         <Link
           href={`/operatori/${operator.slug}`}
-          aria-label={`Vezi profil ${operator.name}`}
+          aria-label={`View profile for ${operator.name}`}
           className="flex-1 text-center px-3 py-2 bg-green-700 text-white text-xs font-semibold rounded-lg hover:bg-green-800 transition-colors"
         >
-          Vezi profil
+          View Profile
         </Link>
         {operator.website ? (
           <a
@@ -146,7 +145,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="flex-1 flex items-center justify-center gap-1 px-3 py-2 bg-white border border-green-700 text-green-700 text-xs font-semibold rounded-lg hover:bg-green-50 transition-colors"
-            aria-label={`Website ${operator.name}`}
+            aria-label={`Website for ${operator.name}`}
             onClick={() => trackOperatorWebsiteClick(operator.slug, 'operator_card')}
           >
             <Globe className="w-3.5 h-3.5" /> Website
@@ -155,10 +154,10 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
           <a
             href={`tel:${operator.phone}`}
             className="flex-1 flex items-center justify-center gap-1 px-3 py-2 bg-white border border-green-700 text-green-700 text-xs font-semibold rounded-lg hover:bg-green-50 transition-colors"
-            aria-label={`Telefon ${operator.name}`}
+            aria-label={`Call ${operator.name}`}
             onClick={() => trackOperatorPhoneClick(operator.slug)}
           >
-            <Phone className="w-3.5 h-3.5" /> Telefon
+            <Phone className="w-3.5 h-3.5" /> Call
           </a>
         ) : (
           <Link

@@ -1,4 +1,20 @@
-import { MoldovaRegion } from './types';
+// Legacy Moldova data — retained for compatibility but not used in the US site
+
+interface MoldovaRegion {
+  slug: string;
+  name: string;
+  nameRo?: string;
+  region?: string;
+  lat: number;
+  lng: number;
+  populatie?: number;
+  suprafataKm2?: number;
+  mainCrops?: string[];
+  vineyardHa?: number;
+  orchardHa?: number;
+  agriculturalLandHa?: number;
+  [key: string]: unknown;
+}
 
 /**
  * Complete list of Moldova administrative divisions:

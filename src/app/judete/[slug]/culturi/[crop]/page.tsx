@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!county || !crop) return {};
 
   return {
-    title: `Drone ${crop.name} ${county.name} | Pulverizare ${crop.name} cu Drona 2026`,
-    description: `Operatori de drone pentru ${crop.name.toLowerCase()} în județul ${county.name}. Prețuri ${formatPrice(crop.priceMinRon, crop.priceMaxRon)}, contactează direct operatorii verificați.`,
+    title: `${crop.name} Drone Spraying in ${county.name} | Agricultural Drone Services 2026`,
+    description: `Drone operators for ${crop.name.toLowerCase()} in ${county.name}. Rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre — contact verified operators directly.`,
     alternates: {
       canonical: `/judete/${params.slug}/culturi/${params.crop}`,
     },
@@ -40,24 +40,23 @@ export default function CountyCropPage({ params }: Props) {
   if (!county || !crop) notFound();
 
   const allCountyOps = getOperatorsByCounty(county.slug);
-  // Operators that treat this crop (or all county operators if no crop filter possible)
   const cropOps = allCountyOps.filter((op) => op.crops.includes(crop.slug));
   const displayOps = cropOps.length > 0 ? cropOps : allCountyOps;
 
-  const monthNames = ['Ian', 'Feb', 'Mar', 'Apr', 'Mai', 'Iun', 'Iul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   const faqs = [
     {
-      question: `Cât costă pulverizarea cu drona la ${crop.name.toLowerCase()} în ${county.name}?`,
-      answer: `Prețul pentru tratamentele cu drona la ${crop.name.toLowerCase()} în județul ${county.name} este de ${formatPrice(crop.priceMinRon, crop.priceMaxRon)}. Prețul variază în funcție de suprafața totală, distanța față de baza operatorului și tipul produsului fitosanitar utilizat.`,
+      question: `How much does drone spraying for ${crop.name.toLowerCase()} cost in ${county.name}?`,
+      answer: `Drone spraying rates for ${crop.name.toLowerCase()} in ${county.name} typically run ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)} per acre for application only — the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base, and product type.`,
     },
     {
-      question: `Când se aplică tratamentele cu drona la ${crop.name.toLowerCase()}?`,
-      answer: `Tratamentele cu drona pentru ${crop.name.toLowerCase()} se aplică în lunile: ${crop.treatmentMonths.map((m) => monthNames[m - 1]).join(', ')}. Calendarul exact depinde de condițiile meteorologice și de presiunea bolilor sau dăunătorilor în fiecare an.`,
+      question: `When should I schedule drone applications for ${crop.name.toLowerCase()}?`,
+      answer: `Optimal timing for ${crop.name.toLowerCase()} drone applications is: ${crop.treatmentMonths.map((m) => monthNames[m - 1]).join(', ')}. Exact timing depends on weather conditions and pest or disease pressure each season. Contact a local operator in ${county.name} for scheduling.`,
     },
     {
-      question: `Ce avantaje oferă drona față de utilajele terestre pentru ${crop.name.toLowerCase()}?`,
-      answer: `Drona agricolă are mai multe avantaje pentru ${crop.name.toLowerCase()}: nu tasează solul, poate opera pe terenuri umede sau accidentate, asigură acoperire uniformă 100% a culturii și reduce risipa de produse fitosanitare cu 20–30% față de metodele terestre.`,
+      question: `What advantages does drone spraying offer for ${crop.name.toLowerCase()} vs. ground equipment?`,
+      answer: `Drone spraying on ${crop.name.toLowerCase()} offers several advantages: zero soil compaction, ability to operate when fields are too wet for tractors, GPS-guided uniform coverage at 95%+ accuracy, and the ability to treat small or irregularly shaped fields. It also reduces product waste by 20–30% compared to ground equipment.`,
     },
   ];
 
@@ -65,7 +64,7 @@ export default function CountyCropPage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: 'Județe', href: '/judete' },
+          { label: 'States', href: '/judete' },
           { label: county.name, href: `/judete/${county.slug}` },
           { label: crop.name },
         ]}
@@ -75,14 +74,14 @@ export default function CountyCropPage({ params }: Props) {
       <div className="mb-8">
         <div className="flex items-center gap-2 text-green-700 text-sm font-medium mb-2">
           <MapPin className="w-4 h-4" />
-          <span>{county.region}, România</span>
+          <span>{county.region}</span>
         </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-3">
-          Drone agricole pentru {crop.name.toLowerCase()} în {county.name}
+          {crop.name} Drone Spraying in {county.name}
         </h1>
         <p className="text-gray-600 text-lg">
-          Tratamente fitosanitare cu drona pentru {crop.name.toLowerCase()} în județul {county.name}.{' '}
-          Preț orientativ: <span className="font-semibold text-green-700">{formatPrice(crop.priceMinRon, crop.priceMaxRon)}</span>
+          Agricultural drone services for {crop.name.toLowerCase()} in {county.name}.{' '}
+          Typical rate: <span className="font-semibold text-green-700">{formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre</span>
         </p>
       </div>
 
@@ -91,19 +90,21 @@ export default function CountyCropPage({ params }: Props) {
         <div className="flex items-start gap-4">
           <span className="text-4xl">{crop.icon}</span>
           <div>
-            <h2 className="font-semibold text-gray-900 mb-2">Despre cultura {crop.name.toLowerCase()}</h2>
+            <h2 className="font-semibold text-gray-900 mb-2">About {crop.name.toLowerCase()}</h2>
             <p className="text-gray-700 text-sm leading-relaxed mb-3">{crop.description}</p>
             <div className="flex flex-wrap gap-4 text-sm">
               <div>
-                <span className="text-gray-500">Preț România: </span>
-                <span className="font-semibold text-green-700">{formatPrice(crop.priceMinRon, crop.priceMaxRon)}</span>
+                <span className="text-gray-500">Typical rate: </span>
+                <span className="font-semibold text-green-700">{formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre</span>
               </div>
-              <div>
-                <span className="text-gray-500">Suprafață RO: </span>
-                <span className="font-semibold text-gray-900">
-                  {crop.haRomania ? `${(crop.haRomania / 1000000).toFixed(1)} mil. ha` : 'N/A'}
-                </span>
-              </div>
+              {crop.haUS && (
+                <div>
+                  <span className="text-gray-500">US acreage: </span>
+                  <span className="font-semibold text-gray-900">
+                    {(crop.haUS / 1000000).toFixed(0)}M+ acres
+                  </span>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -111,7 +112,7 @@ export default function CountyCropPage({ params }: Props) {
 
       {/* Treatment calendar */}
       <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8">
-        <h2 className="font-semibold text-gray-900 mb-4">Calendar tratamente {crop.name.toLowerCase()}</h2>
+        <h2 className="font-semibold text-gray-900 mb-4">Application calendar for {crop.name.toLowerCase()}</h2>
         <div className="grid grid-cols-6 sm:grid-cols-12 gap-2">
           {monthNames.map((month, idx) => {
             const isActive = crop.treatmentMonths.includes(idx + 1);
@@ -131,16 +132,16 @@ export default function CountyCropPage({ params }: Props) {
         </div>
         <p className="text-xs text-gray-500 mt-2">
           <CheckCircle className="w-3 h-3 text-green-600 inline mr-1" />
-          Lunile marcate cu verde sunt perioadele optime de tratament
+          Green months = optimal application window
         </p>
       </div>
 
       {/* Operators */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Operatori drone {crop.name.toLowerCase()} în {county.name}
+          {crop.name} drone operators in {county.name}
           {cropOps.length === 0 && allCountyOps.length > 0 && (
-            <span className="text-sm font-normal text-gray-500 ml-2">(toți operatorii din județ)</span>
+            <span className="text-sm font-normal text-gray-500 ml-2">(all operators in state)</span>
           )}
         </h2>
 
@@ -153,20 +154,20 @@ export default function CountyCropPage({ params }: Props) {
         ) : (
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center">
             <p className="text-amber-800 font-medium mb-3">
-              Nu avem operatori listați în {county.name} momentan
+              No operators listed in {county.name} yet
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 href="/operatori"
                 className="px-4 py-2 bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-sm font-medium hover:bg-amber-200 transition-colors"
               >
-                Toți operatorii naționali
+                All US operators
               </Link>
               <Link
                 href="/adauga-operator"
                 className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors"
               >
-                Adaugă-te gratuit
+                List your business free
               </Link>
             </div>
           </div>
@@ -176,14 +177,14 @@ export default function CountyCropPage({ params }: Props) {
       {/* FAQ */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Întrebări frecvente despre drone pentru {crop.name.toLowerCase()} în {county.name}
+          FAQ: {crop.name.toLowerCase()} drone spraying in {county.name}
         </h2>
         <FAQAccordion faqs={faqs} />
       </div>
 
-      {/* Related crops in county */}
+      {/* Related crops in state */}
       <div className="mb-8">
-        <h2 className="text-base font-semibold text-gray-900 mb-3">Alte culturi în {county.name}</h2>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Other crops in {county.name}</h2>
         <div className="flex flex-wrap gap-2">
           {county.mainCrops
             .filter((c) => c !== crop.slug)
@@ -200,7 +201,7 @@ export default function CountyCropPage({ params }: Props) {
             href={`/judete/${county.slug}`}
             className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-600"
           >
-            ← Înapoi la {county.name}
+            ← Back to {county.name}
           </Link>
         </div>
       </div>

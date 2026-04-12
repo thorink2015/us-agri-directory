@@ -4,8 +4,8 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Contact | TerraDron.ro',
-  description: 'Contactează echipa TerraDron.ro pentru întrebări, sugestii sau adăugarea unui nou operator în director.',
+  title: 'Contact | US Ag Drone Directory',
+  description: 'Contact the US Ag Drone Directory team with questions, suggestions, or to add or update a listing.',
   alternates: { canonical: '/contact' },
 };
 
@@ -16,16 +16,16 @@ export default function ContactPage() {
 
       <h1 className="text-3xl font-bold text-gray-900 mb-3">Contact</h1>
       <p className="text-gray-600 mb-8">
-        Ai întrebări sau sugestii? Suntem disponibili prin email.
+        Have a question or suggestion? Reach us by email.
       </p>
 
       <div className="space-y-4 mb-8">
         <div className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
           <Mail className="w-6 h-6 text-green-600 flex-shrink-0" />
           <div>
-            <div className="font-semibold text-gray-900 mb-1">Email general</div>
-            <a href="mailto:contact@terradron.ro" className="text-green-700 hover:underline text-sm">
-              contact@terradron.ro
+            <div className="font-semibold text-gray-900 mb-1">General inquiries</div>
+            <a href="mailto:contact@usagdronedirectory.com" className="text-green-700 hover:underline text-sm">
+              contact@usagdronedirectory.com
             </a>
           </div>
         </div>
@@ -33,24 +33,24 @@ export default function ContactPage() {
         <div className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
           <MessageSquare className="w-6 h-6 text-green-600 flex-shrink-0" />
           <div>
-            <div className="font-semibold text-gray-900 mb-1">Adaugă / corectează o listare</div>
+            <div className="font-semibold text-gray-900 mb-1">Add or update a listing</div>
             <p className="text-sm text-gray-600 mb-2">
-              Dacă ești operator sau dacă ai informații incorecte în director, completează formularul dedicat.
+              If you&apos;re an operator or have corrections to an existing listing, use the dedicated form.
             </p>
             <Link
               href="/adauga-operator"
               className="text-sm text-green-700 font-medium hover:underline"
             >
-              Formular adăugare operator →
+              Operator listing form →
             </Link>
           </div>
         </div>
       </div>
 
       <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-        <h2 className="font-semibold text-gray-900 mb-2">Timp de răspuns</h2>
+        <h2 className="font-semibold text-gray-900 mb-2">Response time</h2>
         <p className="text-sm text-gray-600">
-          Răspundem la emailuri în maxim 48 de ore lucrătoare. Cererile de listare sunt procesate și publicate în același interval de timp.
+          We respond to emails within 48 business hours. New listing submissions are reviewed and published within the same window.
         </p>
       </div>
     </div>

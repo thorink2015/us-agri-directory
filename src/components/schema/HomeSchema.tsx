@@ -2,21 +2,21 @@ export default function HomeSchema() {
   const org = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'TerraDron.ro',
-    url: 'https://terradron.ro',
-    description: 'Directorul operatorilor de drone agricole din România și Moldova.',
-    areaServed: ['RO', 'MD'],
+    name: 'US Agricultural Drone Directory',
+    url: 'https://usagdronedirectory.com',
+    description: 'The largest directory of agricultural drone services in America. Connecting farmers with verified drone operators in all 50 states.',
+    areaServed: 'US',
     sameAs: [],
   };
 
   const website = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'TerraDron.ro',
-    url: 'https://terradron.ro',
+    name: 'US Ag Drone Directory',
+    url: 'https://usagdronedirectory.com',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://terradron.ro/operatori?q={search_term_string}',
+      target: 'https://usagdronedirectory.com/operatori?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };

@@ -5,79 +5,74 @@ export interface FAQ {
 
 export const pricingFAQs: FAQ[] = [
   {
-    question: 'Cât costă stropitul cu drona pe hectar?',
+    question: 'How much does drone spraying cost per acre?',
     answer:
-      'Prețul mediu pentru stropitul cu drona este de 100 RON/ha (~€20/ha) în România pentru culturi de câmp (grâu, porumb, rapiță, floarea soarelui). Pentru vii și livezi prețul ajunge la 120–200 RON/ha datorită dificultății sporite. Fermele mici sub 50 ha plătesc 120–150 RON/ha, fermele medii 100–500 ha plătesc 85–110 RON/ha, iar contractele industriale peste 1.000 ha pot coborî la 65–70 RON/ha. În Moldova prețurile sunt 170–240 MDL/ha.',
+      'Most operators charge $12 to $18 per acre for application only, with the farmer supplying the chemical product. Rates vary by region, field size, terrain, and product type. Small or irregularly shaped fields typically cost more per acre than large, open tracts. Cover crop seeding runs in a similar range. These rates have dropped from $22 to $25 per acre just two years ago as more operators have entered the market.',
   },
   {
-    question: 'Câte hectare poate stropi o dronă agricolă într-o zi?',
+    question: 'How many acres can a drone spray per hour?',
     answer:
-      'DJI Agras T100 (rezervor 100L) poate acoperi până la 300 ha/zi în condiții de operare continuă. DJI Agras T50 (40L) acoperă 150–180 ha/zi pe teren plan. Media practică pentru un operator solo pe culturi de câmp este de 80–120 ha/zi, incluzând timpii de umplere și deplasare. În vii și livezi productivitatea scade la 20–40 ha/zi.',
+      'A single commercial spray drone covers 20 to 50 acres per hour depending on the application rate, field layout, and drone model. Most operators using a DJI Agras T50 or Hylio AG-272 average 30 to 40 acres per hour in real-world conditions. Multiple-drone fleets increase throughput significantly.',
   },
   {
-    question: 'În cât timp se amortizează o dronă agricolă?',
+    question: 'Should I buy a spray drone or hire a custom operator?',
     answer:
-      'Pentru o fermă proprie de peste 500 ha care efectuează 3–4 tratamente pe an, investiția se amortizează în 2–3 sezoane agricole. Un operator de servicii care tratează 3.000–5.000 ha/sezon la 100 RON/ha poate recupera investiția într-un singur sezon. Beneficiile indirecte (fără tasare sol, recuperare 5–8% din recoltă pierduți la tractor) accelerează amortizarea.',
+      'University of Missouri Extension research shows the break-even between owning a DJI Agras T40 and hiring custom application is approximately 980 acres per year. For fewer than 1,000 acres, hiring custom application is typically more economical. For larger operations or those who offer services to neighboring farms, ownership can pay off within two to three seasons.',
   },
   {
-    question: 'Este mai eficientă drona decât tractorul cu bara de stropit?',
+    question: 'Is drone spraying as effective as a ground rig?',
     answer:
-      'Drona are avantaje clare față de tractorul cu bara de stropit: nu tasează solul (tractorul distruge 5–8% din cultură prin călcare), poate intra pe câmp oricând indiferent de umiditate, tratează suprafețe accidentate sau greu accesibile, aplică substanța cu normă ULV (8–20 L/ha față de 200–300 L/ha la tractor), și poate opera pe timp de noapte. Dezavantajul dronei este costul mai ridicat/ha față de tractorul propriu și rezervorul mai mic.',
+      'University research confirms it. Beck\'s Hybrids trials in Iowa and Nebraska showed drone-applied fungicide at 2 to 3 gallons per acre produced yields equal to ground rig applications at 15 to 20 gallons per acre. Purdue University found similar results for soybean fungicide. The lower carrier volume works because rotor downwash pushes droplets into the canopy.',
   },
   {
-    question: 'Cât durează bateria la o dronă agricolă?',
+    question: 'What is the difference between drone spraying and crop dusting?',
     answer:
-      'Autonomia de zbor cu rezervorul plin este de 8–12 minute. Procesul este optimizat prin schimbarea bateriei în sub 1 minut și încărcare ultra-rapidă în 9–12 minute (cu generator DJI C12000). Strategia standard este 3 baterii per dronă: una în zbor, una la încărcat, una în răcire. Bateriile DJI inteligente (DB2160) sunt garantate pentru ~1.500 cicluri de încărcare.',
+      'Drones fly 8 to 15 feet above the canopy, while crop dusters fly at 50 to 100 feet or higher. Drones produce less drift, can spray at night, handle small and irregular fields, and do not require a runway. Crop dusters cover more acres per hour and carry larger payloads, making them better for very large open fields. Drone spraying costs $12 to $18 per acre compared to around $12 per acre for airplane application.',
   },
   {
-    question: 'Ce factori influențează prețul pulverizării cu drona?',
+    question: 'What factors affect the per-acre price of drone spraying?',
     answer:
-      'Principalii factori sunt: tipul de cultură (câmp vs. vie/livadă), suprafața totală (suprafețele mari beneficiază de tarife mai mici), distanța față de baza operatorului, tipul de substanță aplicată și condițiile de teren (pantă, obstacole). Fermele cu suprafețe de peste 200 ha pot negocia prețuri de 70–80 RON/ha.',
-  },
-  {
-    question: 'Este mai ieftină drona față de avionul agricol?',
-    answer:
-      'Drona costă ~100 RON/ha față de avionul agricol care costă ~80 RON/ha în medie. Avantajul dronei este precizia ridicată, capacitatea de a trata suprafețe mici și fragmentate, posibilitatea de a lucra dimineața devreme și accesibilitatea în zone cu obstacole. Avionul rămâne competitiv pentru ferme mari și uniforme de peste 5.000 ha.',
-  },
-  {
-    question: 'Se pot stropi pomii fructiferi și vița de vie cu drona agricolă?',
-    answer:
-      'Da, drona este ideală pentru vii și livezi. DJI Agras T50 are terrain follow mode care adaptează înălțimea de zbor la relieful terasat. Curentul de aer al elicelor (downwash) ajută la penetrarea coronamentului și acoperirea frunzelor pe ambele fețe. Norma de aplicare este 40–90 L/ha pentru vii față de 8–20 L/ha pentru culturile de câmp.',
+      'Key factors include field size (larger fields get lower per-acre rates), terrain (irregular or hilly fields cost more), product type (viscous or corrosive products may add a surcharge), distance from the operator\'s base, and season timing. Fields over 200 acres can often negotiate rates toward $12 per acre, while small fields under 40 acres typically run toward $18 per acre.',
   },
 ];
 
 export const legalFAQs: FAQ[] = [
   {
-    question: 'Este legală drona agricolă în România?',
+    question: 'Is drone spraying legal in my state?',
     answer:
-      'Da, utilizarea dronelor pentru tratamente fitosanitare este legală în România. Legea L494/2025 a clarificat cadrul legal. Operatorii au nevoie de autorizație AACR (pentru zbor SPECIFIC/STS01-STS02) și aviz ANF (Agenția Națională Fitosanitară) pentru aplicarea pesticidelor. Substanțele aplicate trebuie să fie autorizate pentru administrare aeriană.',
+      'Yes, agricultural drone spraying is legal in all 50 states. Operators must hold an FAA Part 107 Remote Pilot Certificate and an FAA Part 137 Agricultural Aircraft Operator Certificate. Most states also require a state pesticide applicator license with an aerial category. Requirements vary by state — check your state\'s page on this directory for specifics.',
   },
   {
-    question: 'Ce autorizații trebuie să aibă un operator de drone agricole?',
+    question: 'What certifications does a drone spray operator need?',
     answer:
-      'Un operator de drone agricole din România trebuie să dețină: (1) certificat de competență pilot AACR categoria A2 sau SPECIFIC, (2) autorizație de operare AACR pentru categoria SPECIFIC/STS01, (3) aviz ANF pentru aplicarea tratamentelor fitosanitare, (4) asigurare de răspundere civilă pentru dronă, (5) drona înregistrată la AACR.',
+      'Every operator must hold: (1) FAA Part 107 Remote Pilot Certificate — passes the Unmanned Aircraft General knowledge exam and renews every 24 months; (2) FAA Part 137 Agricultural Aircraft Operator Certificate — authorizes dispensing chemicals from a drone; (3) a state pesticide applicator license with an aerial endorsement; (4) active liability insurance. For drones over 55 pounds loaded, a Section 44807 exemption is also required.',
   },
   {
-    question: 'Cât costă obținerea licenței de pilot de dronă agricolă?',
+    question: 'How much does it cost to get FAA certified for drone spraying?',
     answer:
-      'Costurile pentru certificatul de pilot dronă în 2026: test online A1/A3 gratuit, examen A2 costă 250 RON taxa AACR. Cursul complet STS-01 (recomandat pentru drone agricole >25 kg) variază între 1.500–5.000 RON la centrele autorizate. Înregistrarea ca operator UAS costă 120 RON. Asigurarea RCA pentru dronă este 1.500–4.000 RON/an.',
+      'The FAA Part 107 knowledge test costs $175 at approved testing centers. Part 137 applications are free. State pesticide applicator licenses cost $50 to $200 depending on state. Liability insurance runs $3,000 to $6,000 per drone per year. Pilot training programs that cover all requirements cost $500 to $3,500.',
   },
 ];
 
 export const generalFAQs: FAQ[] = [
   {
-    question: 'Cum găsesc un operator de drone agricole în județul meu?',
+    question: 'How do I find a drone spray operator near my farm?',
     answer:
-      'Folosește filtrul de județ din directorul nostru pentru a găsi toți operatorii care acoperă zona ta. Mulți operatori naționali acoperă mai multe județe și se deplasează la fermă. Poți contacta direct operatorul prin formularul de pe profilul său sau prin telefon.',
+      'Use the state search filter in our directory to find all operators covering your area. Many operators serve multiple states and will travel to your farm. You can contact operators directly through their profile page with no fees or intermediaries.',
   },
   {
-    question: 'Merită să cumpăr propria dronă agricolă sau mai bine apelez la un prestator de servicii?',
+    question: 'How far in advance should I book a drone applicator?',
     answer:
-      'Pentru ferme sub 200 ha, apelarea la un prestator de servicii (100 RON/ha) este mai economică decât achiziția propriei drone (investiție 50.000–100.000 EUR). Achiziția proprie devine rentabilă dacă ai suprafețe de peste 300–500 ha, aplici minimum 3–4 tratamente/an sau oferi servicii și altor fermieri din zonă. Poți folosi fonduri AFIR pentru 50–65% rambursare.',
+      'During peak season (July and August for corn fungicide, September and October for cotton defoliation), operators book up fast. Contact operators at least two to four weeks before your anticipated spray window. For cover crop seeding in the fall, start reaching out in July or August. Off-peak applications can usually be scheduled within a few days.',
   },
   {
-    question: 'Cum adaug afacerea mea în director?',
+    question: 'Can drones spray when my fields are too wet for equipment?',
     answer:
-      'Listarea în directorul nostru este complet gratuită. Completează formularul de pe pagina „Adaugă Operator" cu datele companiei tale: servicii oferite, județele acoperite, tipul dronelor și prețurile. Echipa noastră va verifica informațiile și va publica profilul în maxim 48 de ore.',
+      'This is the number one reason farmers hire drone applicators. Drones fly above the field and never touch the ground, so soil conditions do not matter. If your ground rig would leave ruts or your tractor would get stuck, a drone can still get the job done. Many operators report that wet-field calls make up the majority of their peak-season bookings.',
+  },
+  {
+    question: 'How do I list my drone business in this directory?',
+    answer:
+      'Creating a listing is completely free. Click "List Your Business" on any page to fill out your profile: service area, equipment, certifications, and rates. Our team reviews the information and publishes your profile within 48 hours.',
   },
 ];

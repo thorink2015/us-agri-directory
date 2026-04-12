@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!county || !service) return {};
 
   return {
-    title: `${service.nameRo} ${county.name} | Operatori Drone Agricole 2026`,
-    description: `Servicii de ${service.name.toLowerCase()} cu drona în județul ${county.name}. Preț: ${formatPrice(service.priceMinRon, service.priceMaxRon, service.priceUnit.replace('RON/', '') === 'ha' ? 'RON' : 'RON')}, operatori verificați, contact direct.`,
+    title: `${service.name} in ${county.name} | Agricultural Drone Operators 2026`,
+    description: `${service.name} drone services in ${county.name}. ${service.description} Find verified operators and contact them directly.`,
     alternates: {
       canonical: `/judete/${params.slug}/servicii/${params.service}`,
     },
@@ -47,11 +47,11 @@ export default function CountyServicePage({ params }: Props) {
   const faqs = [
     ...service.faqs,
     {
-      question: `Câți operatori oferă ${service.name.toLowerCase()} cu drona în ${county.name}?`,
+      question: `How many operators offer ${service.name.toLowerCase()} in ${county.name}?`,
       answer:
         serviceOps.length > 0
-          ? `Există ${serviceOps.length} operator${serviceOps.length !== 1 ? 'i' : ''} care oferă servicii de ${service.name.toLowerCase()} cu drona în județul ${county.name}: ${serviceOps.map((o) => o.name).join(', ')}.`
-          : `Momentan nu avem operatori specializați în ${service.name.toLowerCase()} listați direct în ${county.name}. Mulți operatori naționali acoperă întreaga țară, contactează-i pentru disponibilitate.`,
+          ? `There ${serviceOps.length === 1 ? 'is' : 'are'} ${serviceOps.length} operator${serviceOps.length !== 1 ? 's' : ''} offering ${service.name.toLowerCase()} drone services in ${county.name}: ${serviceOps.map((o) => o.name).join(', ')}.`
+          : `We don't currently have operators specialized in ${service.name.toLowerCase()} listed directly in ${county.name}. Many national operators cover multiple states — contact them for availability.`,
     },
   ];
 
@@ -59,7 +59,7 @@ export default function CountyServicePage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: 'Județe', href: '/judete' },
+          { label: 'States', href: '/judete' },
           { label: county.name, href: `/judete/${county.slug}` },
           { label: service.name },
         ]}
@@ -69,10 +69,10 @@ export default function CountyServicePage({ params }: Props) {
       <div className="mb-8">
         <div className="flex items-center gap-2 text-green-700 text-sm font-medium mb-2">
           <MapPin className="w-4 h-4" />
-          <span>{county.region}, România</span>
+          <span>{county.region}</span>
         </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-3">
-          {service.nameRo} în {county.name}
+          {service.name} in {county.name}
         </h1>
         <p className="text-gray-600 text-lg">{service.description}</p>
       </div>
@@ -82,13 +82,13 @@ export default function CountyServicePage({ params }: Props) {
         <div className="flex items-start gap-4">
           <span className="text-4xl">{service.icon}</span>
           <div className="flex-1">
-            <h2 className="font-semibold text-gray-900 mb-2">Cum funcționează {service.name.toLowerCase()} cu drona</h2>
+            <h2 className="font-semibold text-gray-900 mb-2">How {service.name.toLowerCase()} works</h2>
             <p className="text-gray-700 text-sm leading-relaxed mb-3">{service.longDescription}</p>
-            {(service.priceMinRon || service.priceMaxRon) && (
+            {(service.priceMinUsd || service.priceMaxUsd) && (
               <div className="text-sm">
-                <span className="text-gray-500">Preț orientativ: </span>
+                <span className="text-gray-500">Typical rate: </span>
                 <span className="font-semibold text-green-700">
-                  {formatPrice(service.priceMinRon, service.priceMaxRon)} {service.priceUnit.includes('/') ? '' : service.priceUnit}
+                  {formatPrice(service.priceMinUsd, service.priceMaxUsd)}
                 </span>
               </div>
             )}
@@ -99,9 +99,9 @@ export default function CountyServicePage({ params }: Props) {
       {/* Operators */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Operatori {service.name.toLowerCase()} cu drona în {county.name}
+          {service.name} drone operators in {county.name}
           {serviceOps.length === 0 && allCountyOps.length > 0 && (
-            <span className="text-sm font-normal text-gray-500 ml-2">(toți operatorii din județ)</span>
+            <span className="text-sm font-normal text-gray-500 ml-2">(all operators in state)</span>
           )}
         </h2>
 
@@ -114,20 +114,20 @@ export default function CountyServicePage({ params }: Props) {
         ) : (
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center">
             <p className="text-amber-800 font-medium mb-3">
-              Nu avem operatori listați în {county.name} momentan
+              No operators listed in {county.name} yet
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
                 href="/operatori"
                 className="px-4 py-2 bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-sm font-medium hover:bg-amber-200 transition-colors"
               >
-                Toți operatorii naționali
+                All US operators
               </Link>
               <Link
                 href="/adauga-operator"
                 className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors"
               >
-                Adaugă-te gratuit
+                List your business free
               </Link>
             </div>
           </div>
@@ -137,14 +137,14 @@ export default function CountyServicePage({ params }: Props) {
       {/* FAQ */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Întrebări frecvente despre {service.name.toLowerCase()} cu drona în {county.name}
+          FAQ: {service.name.toLowerCase()} in {county.name}
         </h2>
         <FAQAccordion faqs={faqs} />
       </div>
 
-      {/* Other services in county */}
+      {/* Other services in state */}
       <div className="mb-8">
-        <h2 className="text-base font-semibold text-gray-900 mb-3">Alte servicii drone în {county.name}</h2>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Other drone services in {county.name}</h2>
         <div className="flex flex-wrap gap-2">
           {Object.entries(SERVICE_LABELS)
             .filter(([key]) => key !== service.slug)
@@ -161,7 +161,7 @@ export default function CountyServicePage({ params }: Props) {
             href={`/judete/${county.slug}`}
             className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-600"
           >
-            ← Înapoi la {county.name}
+            ← Back to {county.name}
           </Link>
         </div>
       </div>
