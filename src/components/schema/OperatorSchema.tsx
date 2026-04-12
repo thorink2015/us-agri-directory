@@ -18,7 +18,7 @@ export default function OperatorSchema({ operator }: Props) {
           '@type': 'PostalAddress',
           streetAddress: operator.address,
           addressLocality: operator.city,
-          addressCountry: operator.country,
+          addressCountry: 'US',
         }
       : undefined,
     geo: operator.lat && operator.lng
@@ -28,16 +28,13 @@ export default function OperatorSchema({ operator }: Props) {
           longitude: operator.lng,
         }
       : undefined,
-    areaServed: (operator.counties.length > 0
-      ? operator.counties
-      : operator.moldovaRaioane || []
-    ).map((c) => ({
+    areaServed: operator.counties.map((c) => ({
       '@type': 'AdministrativeArea',
       name: c,
     })),
     sameAs: [operator.website, operator.facebook].filter(Boolean),
-    priceRange: operator.priceMinRon
-      ? `${operator.priceMinRon}–${operator.priceMaxRon || operator.priceMinRon} RON/ha`
+    priceRange: operator.priceMinUsd
+      ? `$${operator.priceMinUsd}–${operator.priceMaxUsd || operator.priceMinUsd}/acre`
       : undefined,
     foundingDate: operator.founded?.toString(),
   };

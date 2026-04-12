@@ -2,24 +2,20 @@ import { Metadata } from 'next';
 import { Operator } from '@/data/types';
 import { County } from '@/data/types';
 
-const SITE_URL = 'https://terradron.ro';
-const SITE_NAME = 'TerraDron.ro';
+const SITE_URL = 'https://usagdronedirectory.com';
+const SITE_NAME = 'US Ag Drone Directory';
 
 export function buildOperatorMetadata(operator: Operator): Metadata {
-  const price = operator.priceMinRon
-    ? `Prețuri de la ${operator.priceMinRon} RON/ha. `
-    : operator.priceMinMdl
-    ? `Prețuri de la ${operator.priceMinMdl} MDL/ha. `
+  const price = operator.priceMinUsd
+    ? `Rates from $${operator.priceMinUsd}/acre. `
     : '';
-  const coverage = operator.country === 'MD'
-    ? `Acoperire în ${operator.moldovaRaioane?.length || 'toate'} raioane din Moldova.`
-    : `Acoperire în ${operator.counties.length} județe din România.`;
+  const coverage = `Service area: ${operator.counties.length} state${operator.counties.length !== 1 ? 's' : ''}.`;
   return {
-    title: `${operator.name} | Servicii Drone Agricole ${operator.city} | Prețuri și Contact`,
-    description: `${operator.name}, operator de drone agricole din ${operator.city}. ${price}${operator.services.length} servicii disponibile. ${coverage} Contact direct.`,
+    title: `${operator.name} | Ag Drone Services ${operator.city} | Rates and Contact`,
+    description: `${operator.name}, agricultural drone operator based in ${operator.city}. ${price}${operator.services.length} services available. ${coverage} Contact directly.`,
     alternates: { canonical: `/operatori/${operator.slug}` },
     openGraph: {
-      title: `${operator.name} | TerraDron.ro`,
+      title: `${operator.name} | US Ag Drone Directory`,
       description: operator.description.slice(0, 155),
       url: `${SITE_URL}/operatori/${operator.slug}`,
       siteName: SITE_NAME,
@@ -27,7 +23,7 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${operator.name} | Drone Agricole ${operator.city}`,
+      title: `${operator.name} | Ag Drone Services, ${operator.city}`,
       description: operator.description.slice(0, 155),
     },
   };
@@ -35,21 +31,21 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
 
 export function buildCountyMetadata(county: County, operatorCount: number): Metadata {
   const crops = county.mainCrops.slice(0, 3).join(', ');
-  const desc = `Găsești ${operatorCount} operatori de drone agricole în județul ${county.name}. Prețuri pulverizare, recenzii și contact direct. Servicii pentru ${crops} și alte culturi.`;
+  const desc = `Find ${operatorCount} verified drone spraying operator${operatorCount !== 1 ? 's' : ''} in ${county.name}. Compare rates, check certifications, and hire an ag drone service for your ${crops} fields.`;
   return {
-    title: `Drone Agricole ${county.name} | Operatori și Prețuri 2026`,
+    title: `Drone Spraying Services in ${county.name} | Ag Drone Directory`,
     description: desc,
     alternates: { canonical: `/judete/${county.slug}` },
     openGraph: {
-      title: `Drone Agricole ${county.name} | TerraDron.ro`,
-      description: `Operatori verificați de drone agricole în ${county.name}. Pulverizare, cartografiere și monitorizare pentru fermieri.`,
+      title: `Drone Spraying in ${county.name} | US Ag Drone Directory`,
+      description: `Verified ag drone operators in ${county.name}. Spraying, seeding, mapping, and scouting for ${crops} growers.`,
       url: `${SITE_URL}/judete/${county.slug}`,
       siteName: SITE_NAME,
       type: 'website',
     },
     twitter: {
       card: 'summary_large_image',
-      title: `Drone Agricole ${county.name} | Operatori și Prețuri 2026`,
+      title: `Drone Spraying in ${county.name} | Rates and Operators`,
       description: desc,
     },
   };
@@ -58,19 +54,23 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Directorul Operatorilor de Drone Agricole din România și Moldova | TerraDron.ro',
-    template: '%s | TerraDron.ro',
+    default: 'US Agricultural Drone Directory | Find Verified Drone Spraying Operators',
+    template: '%s | US Ag Drone Directory',
   },
   description:
-    'Cel mai complet director de operatori de drone agricole din România și Moldova. Găsește operatori verificați pentru pulverizare, cartografiere și monitorizare în toată țara.',
+    'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping, and scouting across all 50 states.',
   keywords: [
-    'drone agricole', 'operatori drone agricole', 'pulverizare cu drona',
-    'tratamente cu drona', 'drone agricole Romania', 'director drone agricole',
+    'drone spraying near me',
+    'agricultural drone services',
+    'drone crop spraying',
+    'ag drone operator near me',
+    'drone spraying cost per acre',
+    'drone applicator directory',
   ],
   openGraph: {
     siteName: SITE_NAME,
     type: 'website',
-    locale: 'ro_RO',
+    locale: 'en_US',
   },
   robots: {
     index: true,

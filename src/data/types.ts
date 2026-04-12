@@ -11,27 +11,26 @@ export type ServiceType =
   | 'emergency';
 
 export const SERVICE_LABELS: Record<ServiceType, string> = {
-  spraying: 'Pulverizare',
-  spreading: 'Fertilizare',
-  monitoring: 'Monitorizare',
-  mapping: 'Cartografiere',
-  training: 'Formare piloți',
-  rental: 'Închiriere drone',
-  sales: 'Vânzare echipamente',
-  seeding: 'Semănat',
-  consultancy: 'Consultanță agricolă',
-  emergency: 'Intervenție rapidă',
+  spraying: 'Drone Spraying',
+  spreading: 'Fertilizer Application',
+  monitoring: 'Crop Scouting',
+  mapping: 'Aerial Mapping',
+  training: 'Pilot Training',
+  rental: 'Equipment Rental',
+  sales: 'Equipment Sales',
+  seeding: 'Cover Crop Seeding',
+  consultancy: 'Ag Consulting',
+  emergency: 'Emergency Response',
 };
 
 export interface Operator {
   slug: string;
-  name: string;             // Full legal name (used on profile page)
-  shortName?: string;       // Short name for listings (max ~18 chars)
-  tagline?: string;         // 1-line pitch (max ~60 chars)
+  name: string;
+  shortName?: string;
+  tagline?: string;
   description: string;
-  country: 'RO' | 'MD';
-  counties: string[];
-  moldovaRaioane?: string[]; // Moldova: raion slugs covered
+  country: string;
+  counties: string[];           // US state slugs covered
   city: string;
   address?: string;
   phone?: string;
@@ -46,31 +45,28 @@ export interface Operator {
   services: ServiceType[];
   drones: string[];
   crops: string[];
-  priceMinRon?: number;
-  priceMaxRon?: number;
-  priceMinMdl?: number;
-  priceMaxMdl?: number;
-  haTreated?: number;
+  priceMinUsd?: number;
+  priceMaxUsd?: number;
+  haTreated?: number;           // cumulative acres treated (we store in "ha" field but mean acres)
   fleetSize?: number;
   pilotsCount?: number;
   clientsCount?: number;
-  responseTimeHours?: number;     // Average response time
-  coverageRadiusKm?: number;      // Radius from base
-  languagesSpoken?: string[];     // ['ro', 'en', 'hu', 'ru']
-  paymentMethods?: string[];      // ['cash', 'transfer', 'card', 'leasing']
-  acceptsAfirFunds?: boolean;     // Accepts AFIR-funded payments
-  emergencyService?: boolean;     // 24/7 emergency service
-  certAACR?: boolean;
+  responseTimeHours?: number;
+  coverageRadiusKm?: number;
+  languagesSpoken?: string[];
+  paymentMethods?: string[];
+  acceptsUsdaFunds?: boolean;   // Accepts USDA / FSA program payments
+  emergencyService?: boolean;
+  certFAAPart107?: boolean;     // FAA Part 107 Remote Pilot Certificate
+  certFAAPart137?: boolean;     // FAA Part 137 Agricultural Aircraft Operator
   certDJI?: boolean;
   certXAG?: boolean;
-  certANSA?: boolean;             // Moldova
-  iso9001?: boolean;              // Quality certification
-  gdprCompliant?: boolean;
-  cui?: string;                   // Romanian tax ID
-  regCom?: string;                // Registry number
+  certHylio?: boolean;
+  ndaaCompliant?: boolean;      // NDAA Section 848 compliance
+  iso9001?: boolean;
   featured?: boolean;
   verified?: boolean;
-  logoUrl?: string;               // Path to logo image
+  logoUrl?: string;
   lat?: number;
   lng?: number;
 }
@@ -78,42 +74,29 @@ export interface Operator {
 export interface County {
   slug: string;
   name: string;
-  nameRo: string;
+  nameRo: string;              // Full state name (e.g. "State of Iowa")
   region: string;
   lat: number;
   lng: number;
-  agriculturalLandHa: number;
+  agriculturalLandHa: number;  // agricultural acres (stored as "ha" for compat)
   mainCrops: string[];
   vineyardHa?: number;
   orchardHa?: number;
 }
 
-export interface MoldovaRegion {
-  slug: string;
-  name: string;
-  region: string;               // North, Center, South, Găgăuzia, Transnistria
-  lat: number;
-  lng: number;
-  agriculturalLandHa?: number;
-  vineyardHa?: number;
-  orchardHa?: number;
-  mainCrops?: string[];
-}
-
 export interface Crop {
   slug: string;
   name: string;
-  nameRo: string;
+  nameRo: string;             // English display name
   description: string;
-  priceMinRon: number;
-  priceMaxRon: number;
+  priceMinUsd: number;        // min per-acre rate (USD)
+  priceMaxUsd: number;        // max per-acre rate (USD)
   treatmentMonths: number[];
-  haRomania?: number;
-  haMoldova?: number;
+  haUS?: number;              // approximate US acreage
   icon: string;
-  mainPests?: string[];           // Top pests/diseases (search terms farmers use)
-  uvlNormLHa?: string;            // Ultra-low volume norm (e.g. "8-15 L/ha")
-  yieldGainPct?: number;          // Estimated yield gain from drone use vs. trampling
+  mainPests?: string[];
+  uvlNormLHa?: string;        // carrier volume per acre (gpa)
+  yieldGainPct?: number;
 }
 
 export interface DroneModel {
@@ -122,16 +105,16 @@ export interface DroneModel {
   manufacturer: string;
   tankCapacityL: number;
   coverageHaPerHour: number;
-  haPerDay?: number;              // Practical daily coverage (8h operation)
-  flowRateLPerMin?: number;       // Max spray flow rate
-  workWidthM?: number;            // Spray work width (meters)
-  spreadingCapacityKg?: number;   // Granule/seed spreading payload (kg)
-  weightKg?: number;              // Empty weight (kg)
-  ipRating?: string;              // Ingress protection (IP67 etc.)
-  priceEurMin?: number;
-  priceEurMax?: number;
-  afirEligible?: boolean;
-  highlightFeature?: string;      // Key selling point for comparisons
+  haPerDay?: number;
+  flowRateLPerMin?: number;
+  workWidthM?: number;
+  spreadingCapacityKg?: number;
+  weightKg?: number;
+  ipRating?: string;
+  priceUsdMin?: number;
+  priceUsdMax?: number;
+  ndaaCompliant?: boolean;
+  highlightFeature?: string;
 }
 
 export interface BlogPost {
@@ -139,8 +122,8 @@ export interface BlogPost {
   title: string;
   description: string;
   category: 'top-lists' | 'guide' | 'news' | 'case-study' | 'legislation';
-  country?: 'RO' | 'MD';       // defaults to 'RO' if absent
-  publishedAt: string;          // ISO date
+  country?: string;
+  publishedAt: string;
   updatedAt?: string;
   author: string;
   readMinutes: number;
@@ -148,6 +131,6 @@ export interface BlogPost {
   relatedCounties?: string[];
   relatedCrops?: string[];
   relatedServices?: ServiceType[];
-  content: string;              // Markdown
+  content: string;
   featuredImage?: string;
 }

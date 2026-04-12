@@ -2,47 +2,71 @@ import { County } from './types';
 import { operators } from './operators';
 
 export const counties: County[] = [
-  { slug: 'alba', name: 'Alba', nameRo: 'Județul Alba', region: 'Transilvania', lat: 46.0732, lng: 23.5801, agriculturalLandHa: 183000, mainCrops: ['grau', 'porumb', 'vita-de-vie'], vineyardHa: 2800 },
-  { slug: 'arad', name: 'Arad', nameRo: 'Județul Arad', region: 'Banat', lat: 46.1866, lng: 21.3123, agriculturalLandHa: 415000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita'] },
-  { slug: 'arges', name: 'Argeș', nameRo: 'Județul Argeș', region: 'Muntenia', lat: 44.8565, lng: 24.8699, agriculturalLandHa: 248000, mainCrops: ['grau', 'porumb', 'vita-de-vie'], orchardHa: 8000 },
-  { slug: 'bacau', name: 'Bacău', nameRo: 'Județul Bacău', region: 'Moldova', lat: 46.5677, lng: 26.9146, agriculturalLandHa: 245000, mainCrops: ['porumb', 'grau', 'vita-de-vie'] },
-  { slug: 'bihor', name: 'Bihor', nameRo: 'Județul Bihor', region: 'Crișana', lat: 47.0722, lng: 21.9217, agriculturalLandHa: 352000, mainCrops: ['grau', 'porumb', 'floarea-soarelui'] },
-  { slug: 'bistrita-nasaud', name: 'Bistrița-Năsăud', nameRo: 'Județul Bistrița-Năsăud', region: 'Transilvania', lat: 47.1358, lng: 24.4961, agriculturalLandHa: 168000, mainCrops: ['grau', 'porumb', 'ovaz'] },
-  { slug: 'botosani', name: 'Botoșani', nameRo: 'Județul Botoșani', region: 'Moldova', lat: 47.7458, lng: 26.6626, agriculturalLandHa: 348000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita'] },
-  { slug: 'braila', name: 'Brăila', nameRo: 'Județul Brăila', region: 'Muntenia', lat: 45.2702, lng: 27.9574, agriculturalLandHa: 418000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita', 'soia'] },
-  { slug: 'brasov', name: 'Brașov', nameRo: 'Județul Brașov', region: 'Transilvania', lat: 45.6427, lng: 25.5887, agriculturalLandHa: 165000, mainCrops: ['grau', 'porumb', 'cartofi'] },
-  { slug: 'bucuresti', name: 'București', nameRo: 'Municipiul București', region: 'Muntenia', lat: 44.4268, lng: 26.1025, agriculturalLandHa: 18000, mainCrops: ['legume'] },
-  { slug: 'buzau', name: 'Buzău', nameRo: 'Județul Buzău', region: 'Muntenia', lat: 45.1502, lng: 26.8208, agriculturalLandHa: 365000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'vita-de-vie'], vineyardHa: 14000 },
-  { slug: 'calarasi', name: 'Călărași', nameRo: 'Județul Călărași', region: 'Muntenia', lat: 44.2018, lng: 27.3311, agriculturalLandHa: 440000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita', 'soia'] },
-  { slug: 'cluj', name: 'Cluj', nameRo: 'Județul Cluj', region: 'Transilvania', lat: 46.7712, lng: 23.6236, agriculturalLandHa: 330000, mainCrops: ['grau', 'porumb', 'orz'] },
-  { slug: 'constanta', name: 'Constanța', nameRo: 'Județul Constanța', region: 'Dobrogea', lat: 44.1765, lng: 28.6499, agriculturalLandHa: 586000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita'], vineyardHa: 8500 },
-  { slug: 'covasna', name: 'Covasna', nameRo: 'Județul Covasna', region: 'Transilvania', lat: 45.8518, lng: 26.1868, agriculturalLandHa: 113000, mainCrops: ['grau', 'porumb', 'cartofi'] },
-  { slug: 'dambovita', name: 'Dâmbovița', nameRo: 'Județul Dâmbovița', region: 'Muntenia', lat: 44.9249, lng: 25.4561, agriculturalLandHa: 215000, mainCrops: ['grau', 'porumb', 'vita-de-vie'], orchardHa: 4500 },
-  { slug: 'dolj', name: 'Dolj', nameRo: 'Județul Dolj', region: 'Oltenia', lat: 44.3302, lng: 23.7949, agriculturalLandHa: 555000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita'] },
-  { slug: 'galati', name: 'Galați', nameRo: 'Județul Galați', region: 'Moldova', lat: 45.4353, lng: 28.0073, agriculturalLandHa: 385000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'vita-de-vie'] },
-  { slug: 'giurgiu', name: 'Giurgiu', nameRo: 'Județul Giurgiu', region: 'Muntenia', lat: 43.9037, lng: 25.9699, agriculturalLandHa: 290000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita'] },
-  { slug: 'gorj', name: 'Gorj', nameRo: 'Județul Gorj', region: 'Oltenia', lat: 44.9524, lng: 23.3361, agriculturalLandHa: 138000, mainCrops: ['porumb', 'grau', 'vita-de-vie'] },
-  { slug: 'harghita', name: 'Harghita', nameRo: 'Județul Harghita', region: 'Transilvania', lat: 46.4897, lng: 25.6060, agriculturalLandHa: 148000, mainCrops: ['cartofi', 'porumb', 'orz'] },
-  { slug: 'hunedoara', name: 'Hunedoara', nameRo: 'Județul Hunedoara', region: 'Transilvania', lat: 45.7489, lng: 22.9021, agriculturalLandHa: 185000, mainCrops: ['grau', 'porumb', 'orz'] },
-  { slug: 'ialomita', name: 'Ialomița', nameRo: 'Județul Ialomița', region: 'Muntenia', lat: 44.6063, lng: 27.3739, agriculturalLandHa: 416000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita', 'soia'] },
-  { slug: 'iasi', name: 'Iași', nameRo: 'Județul Iași', region: 'Moldova', lat: 47.1585, lng: 27.6014, agriculturalLandHa: 365000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'vita-de-vie'], vineyardHa: 12000 },
-  { slug: 'ilfov', name: 'Ilfov', nameRo: 'Județul Ilfov', region: 'Muntenia', lat: 44.5376, lng: 26.2096, agriculturalLandHa: 124000, mainCrops: ['grau', 'porumb', 'legume'] },
-  { slug: 'maramures', name: 'Maramureș', nameRo: 'Județul Maramureș', region: 'Transilvania', lat: 47.6594, lng: 23.5686, agriculturalLandHa: 178000, mainCrops: ['porumb', 'grau', 'cartofi'] },
-  { slug: 'mehedinti', name: 'Mehedinți', nameRo: 'Județul Mehedinți', region: 'Oltenia', lat: 44.6323, lng: 22.6573, agriculturalLandHa: 195000, mainCrops: ['grau', 'porumb', 'vita-de-vie'] },
-  { slug: 'mures', name: 'Mureș', nameRo: 'Județul Mureș', region: 'Transilvania', lat: 46.5452, lng: 24.5574, agriculturalLandHa: 345000, mainCrops: ['grau', 'porumb', 'vita-de-vie'], vineyardHa: 3500 },
-  { slug: 'neamt', name: 'Neamț', nameRo: 'Județul Neamț', region: 'Moldova', lat: 46.9759, lng: 26.3806, agriculturalLandHa: 202000, mainCrops: ['porumb', 'grau', 'orz'] },
-  { slug: 'olt', name: 'Olt', nameRo: 'Județul Olt', region: 'Oltenia', lat: 44.4285, lng: 24.3660, agriculturalLandHa: 426000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita'] },
-  { slug: 'prahova', name: 'Prahova', nameRo: 'Județul Prahova', region: 'Muntenia', lat: 45.0431, lng: 25.9699, agriculturalLandHa: 295000, mainCrops: ['grau', 'porumb', 'vita-de-vie'], vineyardHa: 7500, orchardHa: 5000 },
-  { slug: 'satu-mare', name: 'Satu Mare', nameRo: 'Județul Satu Mare', region: 'Crișana', lat: 47.7930, lng: 22.8855, agriculturalLandHa: 275000, mainCrops: ['grau', 'porumb', 'floarea-soarelui'] },
-  { slug: 'salaj', name: 'Sălaj', nameRo: 'Județul Sălaj', region: 'Crișana', lat: 47.1921, lng: 23.0570, agriculturalLandHa: 195000, mainCrops: ['grau', 'porumb', 'orz'] },
-  { slug: 'sibiu', name: 'Sibiu', nameRo: 'Județul Sibiu', region: 'Transilvania', lat: 45.7983, lng: 24.1256, agriculturalLandHa: 218000, mainCrops: ['grau', 'porumb', 'cartofi'] },
-  { slug: 'suceava', name: 'Suceava', nameRo: 'Județul Suceava', region: 'Moldova', lat: 47.6514, lng: 26.2556, agriculturalLandHa: 358000, mainCrops: ['grau', 'porumb', 'cartofi'] },
-  { slug: 'teleorman', name: 'Teleorman', nameRo: 'Județul Teleorman', region: 'Muntenia', lat: 43.9766, lng: 25.3337, agriculturalLandHa: 480000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita'] },
-  { slug: 'timis', name: 'Timiș', nameRo: 'Județul Timiș', region: 'Banat', lat: 45.7489, lng: 21.2087, agriculturalLandHa: 606000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'rapita', 'soia'] },
-  { slug: 'tulcea', name: 'Tulcea', nameRo: 'Județul Tulcea', region: 'Dobrogea', lat: 45.1813, lng: 28.8025, agriculturalLandHa: 312000, mainCrops: ['grau', 'floarea-soarelui', 'porumb'] },
-  { slug: 'vaslui', name: 'Vaslui', nameRo: 'Județul Vaslui', region: 'Moldova', lat: 46.6407, lng: 27.7292, agriculturalLandHa: 332000, mainCrops: ['grau', 'porumb', 'floarea-soarelui', 'vita-de-vie'] },
-  { slug: 'valcea', name: 'Vâlcea', nameRo: 'Județul Vâlcea', region: 'Oltenia', lat: 45.1063, lng: 24.3661, agriculturalLandHa: 175000, mainCrops: ['vita-de-vie', 'porumb', 'livada'], vineyardHa: 6500, orchardHa: 5500 },
-  { slug: 'vrancea', name: 'Vrancea', nameRo: 'Județul Vrancea', region: 'Moldova', lat: 45.7003, lng: 27.1876, agriculturalLandHa: 248000, mainCrops: ['vita-de-vie', 'grau', 'porumb'], vineyardHa: 18000 },
+  // Corn Belt / Heartland
+  { slug: 'iowa', name: 'Iowa', nameRo: 'State of Iowa', region: 'Corn Belt', lat: 42.0046, lng: -93.2140, agriculturalLandHa: 30400000, mainCrops: ['corn', 'soybeans', 'cover-crops'] },
+  { slug: 'illinois', name: 'Illinois', nameRo: 'State of Illinois', region: 'Corn Belt', lat: 40.6331, lng: -89.3985, agriculturalLandHa: 27000000, mainCrops: ['corn', 'soybeans', 'wheat'] },
+  { slug: 'indiana', name: 'Indiana', nameRo: 'State of Indiana', region: 'Corn Belt', lat: 40.2672, lng: -86.1349, agriculturalLandHa: 15000000, mainCrops: ['corn', 'soybeans', 'wheat'] },
+  { slug: 'ohio', name: 'Ohio', nameRo: 'State of Ohio', region: 'Corn Belt', lat: 40.4173, lng: -82.9071, agriculturalLandHa: 14000000, mainCrops: ['corn', 'soybeans', 'wheat'] },
+  { slug: 'missouri', name: 'Missouri', nameRo: 'State of Missouri', region: 'Corn Belt', lat: 37.9643, lng: -91.8318, agriculturalLandHa: 28500000, mainCrops: ['corn', 'soybeans', 'cotton'] },
+
+  // Northern Great Plains
+  { slug: 'kansas', name: 'Kansas', nameRo: 'State of Kansas', region: 'Great Plains', lat: 38.5266, lng: -96.7265, agriculturalLandHa: 46000000, mainCrops: ['wheat', 'corn', 'soybeans'] },
+  { slug: 'nebraska', name: 'Nebraska', nameRo: 'State of Nebraska', region: 'Great Plains', lat: 41.4925, lng: -99.9018, agriculturalLandHa: 45000000, mainCrops: ['corn', 'soybeans', 'wheat'] },
+  { slug: 'north-dakota', name: 'North Dakota', nameRo: 'State of North Dakota', region: 'Great Plains', lat: 47.5515, lng: -101.0020, agriculturalLandHa: 39000000, mainCrops: ['wheat', 'corn', 'soybeans'] },
+  { slug: 'south-dakota', name: 'South Dakota', nameRo: 'State of South Dakota', region: 'Great Plains', lat: 43.9695, lng: -99.9018, agriculturalLandHa: 43000000, mainCrops: ['corn', 'wheat', 'soybeans'] },
+  { slug: 'minnesota', name: 'Minnesota', nameRo: 'State of Minnesota', region: 'Great Plains', lat: 46.7296, lng: -94.6859, agriculturalLandHa: 27000000, mainCrops: ['corn', 'soybeans', 'wheat'] },
+  { slug: 'montana', name: 'Montana', nameRo: 'State of Montana', region: 'Great Plains', lat: 46.8797, lng: -110.3626, agriculturalLandHa: 59000000, mainCrops: ['wheat', 'cover-crops'] },
+  { slug: 'wyoming', name: 'Wyoming', nameRo: 'State of Wyoming', region: 'Great Plains', lat: 43.0760, lng: -107.2903, agriculturalLandHa: 30000000, mainCrops: ['wheat', 'corn'] },
+  { slug: 'colorado', name: 'Colorado', nameRo: 'State of Colorado', region: 'Great Plains', lat: 39.5501, lng: -105.7821, agriculturalLandHa: 31000000, mainCrops: ['wheat', 'corn', 'cover-crops'] },
+
+  // Southern Plains
+  { slug: 'texas', name: 'Texas', nameRo: 'State of Texas', region: 'Southern Plains', lat: 31.9686, lng: -99.9018, agriculturalLandHa: 130000000, mainCrops: ['cotton', 'wheat', 'corn'] },
+  { slug: 'oklahoma', name: 'Oklahoma', nameRo: 'State of Oklahoma', region: 'Southern Plains', lat: 35.0078, lng: -97.0929, agriculturalLandHa: 34000000, mainCrops: ['wheat', 'cotton', 'corn'] },
+  { slug: 'new-mexico', name: 'New Mexico', nameRo: 'State of New Mexico', region: 'Southern Plains', lat: 34.5199, lng: -105.8701, agriculturalLandHa: 43000000, mainCrops: ['cotton', 'wheat'] },
+
+  // Mississippi Delta / Southeast
+  { slug: 'mississippi', name: 'Mississippi', nameRo: 'State of Mississippi', region: 'Delta', lat: 32.7673, lng: -89.6812, agriculturalLandHa: 11000000, mainCrops: ['cotton', 'soybeans', 'rice'] },
+  { slug: 'arkansas', name: 'Arkansas', nameRo: 'State of Arkansas', region: 'Delta', lat: 35.2010, lng: -91.8318, agriculturalLandHa: 14000000, mainCrops: ['rice', 'soybeans', 'cotton'] },
+  { slug: 'louisiana', name: 'Louisiana', nameRo: 'State of Louisiana', region: 'Delta', lat: 31.1695, lng: -91.8678, agriculturalLandHa: 8000000, mainCrops: ['rice', 'soybeans', 'cotton'] },
+  { slug: 'tennessee', name: 'Tennessee', nameRo: 'State of Tennessee', region: 'Southeast', lat: 35.7478, lng: -86.6923, agriculturalLandHa: 10500000, mainCrops: ['soybeans', 'corn', 'cotton'] },
+  { slug: 'alabama', name: 'Alabama', nameRo: 'State of Alabama', region: 'Southeast', lat: 32.3182, lng: -86.9023, agriculturalLandHa: 9000000, mainCrops: ['cotton', 'corn', 'soybeans'] },
+  { slug: 'georgia', name: 'Georgia', nameRo: 'State of Georgia', region: 'Southeast', lat: 32.1656, lng: -82.9001, agriculturalLandHa: 10000000, mainCrops: ['cotton', 'corn', 'soybeans'] },
+  { slug: 'florida', name: 'Florida', nameRo: 'State of Florida', region: 'Southeast', lat: 27.6648, lng: -81.5158, agriculturalLandHa: 9500000, mainCrops: ['corn', 'soybeans', 'cover-crops'] },
+  { slug: 'south-carolina', name: 'South Carolina', nameRo: 'State of South Carolina', region: 'Southeast', lat: 33.8361, lng: -81.1637, agriculturalLandHa: 4800000, mainCrops: ['soybeans', 'corn', 'cotton'] },
+  { slug: 'north-carolina', name: 'North Carolina', nameRo: 'State of North Carolina', region: 'Southeast', lat: 35.7596, lng: -79.0193, agriculturalLandHa: 8500000, mainCrops: ['soybeans', 'corn', 'wheat'] },
+  { slug: 'virginia', name: 'Virginia', nameRo: 'State of Virginia', region: 'Southeast', lat: 37.4316, lng: -78.6569, agriculturalLandHa: 7800000, mainCrops: ['soybeans', 'corn', 'wheat'] },
+  { slug: 'west-virginia', name: 'West Virginia', nameRo: 'State of West Virginia', region: 'Appalachian', lat: 38.5976, lng: -80.4549, agriculturalLandHa: 3700000, mainCrops: ['corn', 'wheat', 'cover-crops'] },
+  { slug: 'kentucky', name: 'Kentucky', nameRo: 'State of Kentucky', region: 'Appalachian', lat: 37.8393, lng: -84.2700, agriculturalLandHa: 13000000, mainCrops: ['corn', 'soybeans', 'wheat'] },
+
+  // Pacific / West
+  { slug: 'california', name: 'California', nameRo: 'State of California', region: 'Pacific', lat: 36.7783, lng: -119.4179, agriculturalLandHa: 25000000, mainCrops: ['grapes', 'orchards', 'rice'], vineyardHa: 900000, orchardHa: 1200000 },
+  { slug: 'washington', name: 'Washington', nameRo: 'State of Washington', region: 'Pacific', lat: 47.7511, lng: -120.7401, agriculturalLandHa: 14500000, mainCrops: ['orchards', 'wheat', 'grapes'], orchardHa: 500000 },
+  { slug: 'oregon', name: 'Oregon', nameRo: 'State of Oregon', region: 'Pacific', lat: 43.8041, lng: -120.5542, agriculturalLandHa: 16500000, mainCrops: ['wheat', 'orchards', 'cover-crops'], orchardHa: 200000 },
+  { slug: 'idaho', name: 'Idaho', nameRo: 'State of Idaho', region: 'Mountain', lat: 44.0682, lng: -114.7420, agriculturalLandHa: 11700000, mainCrops: ['wheat', 'corn', 'cover-crops'] },
+  { slug: 'nevada', name: 'Nevada', nameRo: 'State of Nevada', region: 'Mountain', lat: 38.8026, lng: -116.4194, agriculturalLandHa: 6000000, mainCrops: ['wheat', 'cover-crops'] },
+  { slug: 'utah', name: 'Utah', nameRo: 'State of Utah', region: 'Mountain', lat: 39.3210, lng: -111.0937, agriculturalLandHa: 11000000, mainCrops: ['wheat', 'corn', 'cover-crops'] },
+  { slug: 'arizona', name: 'Arizona', nameRo: 'State of Arizona', region: 'Mountain', lat: 34.0489, lng: -111.0937, agriculturalLandHa: 26000000, mainCrops: ['cotton', 'wheat', 'cover-crops'] },
+
+  // Midwest / Lake States
+  { slug: 'michigan', name: 'Michigan', nameRo: 'State of Michigan', region: 'Lake States', lat: 44.3148, lng: -85.6024, agriculturalLandHa: 10000000, mainCrops: ['corn', 'soybeans', 'orchards'], orchardHa: 60000 },
+  { slug: 'wisconsin', name: 'Wisconsin', nameRo: 'State of Wisconsin', region: 'Lake States', lat: 43.7844, lng: -88.7879, agriculturalLandHa: 15500000, mainCrops: ['corn', 'soybeans', 'cover-crops'] },
+
+  // Northeast
+  { slug: 'pennsylvania', name: 'Pennsylvania', nameRo: 'State of Pennsylvania', region: 'Northeast', lat: 41.2033, lng: -77.1945, agriculturalLandHa: 7300000, mainCrops: ['corn', 'soybeans', 'wheat'] },
+  { slug: 'new-york', name: 'New York', nameRo: 'State of New York', region: 'Northeast', lat: 42.1657, lng: -74.9481, agriculturalLandHa: 7000000, mainCrops: ['corn', 'grapes', 'orchards'], vineyardHa: 55000, orchardHa: 50000 },
+  { slug: 'maryland', name: 'Maryland', nameRo: 'State of Maryland', region: 'Northeast', lat: 39.0458, lng: -76.6413, agriculturalLandHa: 2000000, mainCrops: ['corn', 'soybeans', 'wheat'] },
+  { slug: 'new-jersey', name: 'New Jersey', nameRo: 'State of New Jersey', region: 'Northeast', lat: 40.0583, lng: -74.4057, agriculturalLandHa: 733000, mainCrops: ['corn', 'soybeans', 'cover-crops'] },
+  { slug: 'connecticut', name: 'Connecticut', nameRo: 'State of Connecticut', region: 'Northeast', lat: 41.6032, lng: -73.0877, agriculturalLandHa: 375000, mainCrops: ['corn', 'cover-crops'] },
+  { slug: 'delaware', name: 'Delaware', nameRo: 'State of Delaware', region: 'Northeast', lat: 38.9108, lng: -75.5277, agriculturalLandHa: 494000, mainCrops: ['corn', 'soybeans', 'wheat'] },
+  { slug: 'rhode-island', name: 'Rhode Island', nameRo: 'State of Rhode Island', region: 'Northeast', lat: 41.6809, lng: -71.5118, agriculturalLandHa: 68000, mainCrops: ['corn', 'cover-crops'] },
+  { slug: 'massachusetts', name: 'Massachusetts', nameRo: 'State of Massachusetts', region: 'Northeast', lat: 42.4072, lng: -71.3824, agriculturalLandHa: 498000, mainCrops: ['corn', 'orchards', 'cover-crops'] },
+  { slug: 'vermont', name: 'Vermont', nameRo: 'State of Vermont', region: 'Northeast', lat: 44.5588, lng: -72.5778, agriculturalLandHa: 1300000, mainCrops: ['corn', 'cover-crops'] },
+  { slug: 'new-hampshire', name: 'New Hampshire', nameRo: 'State of New Hampshire', region: 'Northeast', lat: 43.1939, lng: -71.5724, agriculturalLandHa: 474000, mainCrops: ['corn', 'cover-crops'] },
+  { slug: 'maine', name: 'Maine', nameRo: 'State of Maine', region: 'Northeast', lat: 45.2538, lng: -69.4455, agriculturalLandHa: 1300000, mainCrops: ['wheat', 'cover-crops'] },
+
+  // Non-contiguous
+  { slug: 'alaska', name: 'Alaska', nameRo: 'State of Alaska', region: 'Non-contiguous', lat: 64.2008, lng: -153.4937, agriculturalLandHa: 900000, mainCrops: ['wheat', 'cover-crops'] },
+  { slug: 'hawaii', name: 'Hawaii', nameRo: 'State of Hawaii', region: 'Non-contiguous', lat: 19.8968, lng: -155.5828, agriculturalLandHa: 1900000, mainCrops: ['cover-crops'] },
 ];
 
 export function getCountyBySlug(slug: string): County | undefined {
@@ -55,8 +79,6 @@ export function getAdjacentCounties(county: County, count = 4): County[] {
     .slice(0, count);
 }
 
-export function getCountyOperatorCount(countySlug: string): number {
-  return operators.filter(
-    (op) => op.country === 'RO' && op.counties.includes(countySlug)
-  ).length;
+export function getCountyOperatorCount(stateSlug: string): number {
+  return operators.filter((op) => op.counties.includes(stateSlug)).length;
 }

@@ -30,10 +30,10 @@ export default function SubmitForm() {
       if (res.ok) {
         setSubmitted(true);
       } else {
-        setError('A apărut o eroare. Vă rugăm trimiteți un email direct la contact@terradron.ro');
+        setError('Something went wrong. Please email us directly at contact@usagdronedirectory.com');
       }
     } catch {
-      setError('A apărut o eroare de rețea. Încercați din nou.');
+      setError('Network error. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -43,9 +43,9 @@ export default function SubmitForm() {
     return (
       <div className="text-center py-10">
         <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Cerere trimisă cu succes!</h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">Submission received!</h3>
         <p className="text-gray-600">
-          Am primit informațiile dumneavoastră. Echipa noastră va verifica și va publica profilul în maxim 48 de ore.
+          We&apos;ve got your information. Our team will review and publish your profile within 48 hours.
         </p>
       </div>
     );
@@ -56,25 +56,25 @@ export default function SubmitForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1.5">
-            Denumire companie *
+            Business name *
           </label>
           <input
             name="company"
             type="text"
             required
-            placeholder="Ex: AgroDrone SRL"
+            placeholder="e.g. AgriForce Drone Services LLC"
             className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1.5">
-            Localitate / Oraș *
+            City *
           </label>
           <input
             name="city"
             type="text"
             required
-            placeholder="Ex: Timișoara"
+            placeholder="e.g. Ames, IA"
             className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -82,15 +82,14 @@ export default function SubmitForm() {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          Județ principal *
+          Primary state *
         </label>
         <select
           name="county"
           required
           className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
         >
-          <option value="">Selectează județul...</option>
-          <option value="Moldova">Republica Moldova</option>
+          <option value="">Select state...</option>
           {counties.map((c) => (
             <option key={c.slug} value={c.name}>{c.name}</option>
           ))}
@@ -99,19 +98,19 @@ export default function SubmitForm() {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          Județe acoperite (multiple)
+          Additional states served
         </label>
         <textarea
           name="counties_covered"
           rows={2}
-          placeholder="Ex: Timiș, Arad, Bihor, Caraș-Severin..."
+          placeholder="e.g. Iowa, Illinois, Missouri, Nebraska..."
           className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
         />
       </div>
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          Servicii oferite *
+          Services offered *
         </label>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
           {Object.entries(SERVICE_LABELS).map(([key, label]) => (
@@ -130,12 +129,12 @@ export default function SubmitForm() {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          Tipuri de drone utilizate
+          Drone models used
         </label>
         <input
           name="drones"
           type="text"
-          placeholder="Ex: DJI Agras T50, DJI Agras T25P"
+          placeholder="e.g. DJI Agras T50, Hylio AG-272"
           className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
         />
       </div>
@@ -143,12 +142,12 @@ export default function SubmitForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1.5">
-            Preț mediu (RON/ha)
+            Average rate ($/acre)
           </label>
           <input
             name="price_avg"
             type="text"
-            placeholder="Ex: 100 RON/ha"
+            placeholder="e.g. $14/acre"
             className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -159,7 +158,7 @@ export default function SubmitForm() {
           <input
             name="website"
             type="url"
-            placeholder="https://exemplu.ro"
+            placeholder="https://example.com"
             className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -168,13 +167,13 @@ export default function SubmitForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1.5">
-            Telefon *
+            Phone *
           </label>
           <input
             name="phone"
             type="tel"
             required
-            placeholder="+40 7XX XXX XXX"
+            placeholder="+1 (555) 000-0000"
             className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -186,7 +185,7 @@ export default function SubmitForm() {
             name="email"
             type="email"
             required
-            placeholder="contact@companie.ro"
+            placeholder="contact@yourcompany.com"
             className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -194,12 +193,12 @@ export default function SubmitForm() {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          Informații suplimentare
+          Additional information
         </label>
         <textarea
           name="message"
           rows={3}
-          placeholder="Descriere scurtă, hectare tratate, certificări, etc."
+          placeholder="Short description, acres treated, certifications (FAA Part 107/137), etc."
           className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
         />
       </div>
@@ -216,18 +215,18 @@ export default function SubmitForm() {
         className="w-full flex items-center justify-center gap-2 px-6 py-3.5 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {loading ? (
-          'Se trimite...'
+          'Submitting...'
         ) : (
           <>
             <Send className="w-4 h-4" />
-            Trimite cererea de listare
+            Submit listing request
           </>
         )}
       </button>
 
       <p className="text-xs text-gray-500 text-center">
-        Prin trimiterea acestui formular, ești de acord ca informațiile să fie publicate în directorul TerraDron.ro.
-        Listarea este gratuită și permanentă.
+        By submitting this form, you agree to have your information published in the US Ag Drone Directory.
+        Listings are free and permanent.
       </p>
     </form>
   );

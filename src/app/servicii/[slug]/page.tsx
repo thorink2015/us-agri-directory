@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
 
   return {
-    title: `${service.nameRo} | Drone Agricole România 2026`,
-    description: `${service.description} Găsește operatori verificați de drone pentru ${service.name.toLowerCase()} în toate județele din România.`,
+    title: `${service.name} | Agricultural Drone Services US 2026`,
+    description: `${service.description} Find verified agricultural drone operators offering ${service.name.toLowerCase()} across all 50 states.`,
     alternates: {
       canonical: `/servicii/${params.slug}`,
     },
@@ -42,7 +42,7 @@ export default function ServicePage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: 'Servicii', href: '/servicii' },
+          { label: 'Services', href: '/servicii' },
           { label: service.name },
         ]}
       />
@@ -50,20 +50,20 @@ export default function ServicePage({ params }: Props) {
       {/* Header */}
       <div className="mb-8">
         <div className="text-4xl mb-3">{service.icon}</div>
-        <h1 className="text-3xl font-bold text-gray-900 mb-3">{service.nameRo}</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-3">{service.name}</h1>
         <p className="text-gray-600 text-lg">{service.description}</p>
       </div>
 
       {/* About */}
       <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
-        <h2 className="font-semibold text-gray-900 mb-3">Despre serviciu</h2>
+        <h2 className="font-semibold text-gray-900 mb-3">About this service</h2>
         <p className="text-gray-700 leading-relaxed mb-4">{service.longDescription}</p>
-        {(service.priceMinRon || service.priceMaxRon) && (
+        {(service.priceMinUsd || service.priceMaxUsd) && (
           <div className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-600" />
             <span className="text-sm text-gray-700">
-              Preț orientativ:{' '}
-              <span className="font-semibold text-green-700">{formatPrice(service.priceMinRon, service.priceMaxRon)} {service.priceUnit.split('/')[1] ? '' : ''}</span>
+              Typical rate:{' '}
+              <span className="font-semibold text-green-700">{formatPrice(service.priceMinUsd, service.priceMaxUsd)}</span>
             </span>
           </div>
         )}
@@ -71,7 +71,7 @@ export default function ServicePage({ params }: Props) {
 
       {/* Keywords / SEO chips */}
       <div className="mb-8">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Caută și după</p>
+        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Also searched as</p>
         <div className="flex flex-wrap gap-2">
           {service.keywords.map((kw) => (
             <span key={kw} className="px-2.5 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
@@ -84,7 +84,7 @@ export default function ServicePage({ params }: Props) {
       {/* Operators offering this service */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Operatori care oferă {service.name.toLowerCase()} cu drona
+          Operators offering {service.name.toLowerCase()}
           <span className="text-sm font-normal text-gray-500 ml-2">({serviceOps.length})</span>
         </h2>
 
@@ -97,13 +97,13 @@ export default function ServicePage({ params }: Props) {
         ) : (
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center">
             <p className="text-amber-800 font-medium mb-3">
-              Nu avem operatori specializați în {service.name.toLowerCase()} momentan.
+              No operators specializing in {service.name.toLowerCase()} are listed yet.
             </p>
             <Link
               href="/operatori"
               className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors"
             >
-              Toți operatorii
+              All operators
             </Link>
           </div>
         )}
@@ -112,14 +112,14 @@ export default function ServicePage({ params }: Props) {
       {/* FAQ */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
-          Întrebări frecvente despre {service.name.toLowerCase()}
+          FAQ: {service.name.toLowerCase()}
         </h2>
         <FAQAccordion faqs={service.faqs} />
       </div>
 
       {/* Other services */}
       <div>
-        <h2 className="text-base font-semibold text-gray-900 mb-3">Alte servicii drone agricole</h2>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">Other agricultural drone services</h2>
         <div className="flex flex-wrap gap-2">
           {Object.entries(SERVICE_LABELS)
             .filter(([key]) => key !== service.slug)

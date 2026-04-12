@@ -2,14 +2,13 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import {
   Globe, MapPin, CheckCircle, Calendar, Plane,
-  Clock, Languages, CreditCard, Shield, Award, Zap, Users, ClipboardList,
+  Clock, Languages, CreditCard, Shield, Award, Zap, Users,
 } from 'lucide-react';
 import {
   FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon, TiktokIcon,
 } from '@/components/ui/SocialIcons';
 import { operators, getOperatorBySlug } from '@/data/operators';
 import { counties } from '@/data/counties';
-import { moldovaRegions } from '@/data/regions-moldova';
 import { CROP_NAME_MAP } from '@/data/crops';
 import { DRONE_NAME_MAP } from '@/data/drone-models';
 import { SERVICE_LABELS } from '@/data/types';
@@ -35,29 +34,27 @@ export async function generateMetadata({ params }: Props) {
 }
 
 const LANGUAGE_LABELS: Record<string, string> = {
-  ro: 'Română',
-  en: 'Engleză',
-  hu: 'Maghiară',
-  ru: 'Rusă',
-  de: 'Germană',
-  fr: 'Franceză',
+  en: 'English',
+  es: 'Spanish',
+  fr: 'French',
+  de: 'German',
+  pt: 'Portuguese',
+  zh: 'Mandarin',
 };
 
 const PAYMENT_LABELS: Record<string, string> = {
-  cash: 'Numerar',
-  transfer: 'Transfer bancar',
-  card: 'Card',
-  leasing: 'Leasing',
+  cash: 'Cash',
+  check: 'Check',
+  transfer: 'Bank transfer',
+  card: 'Credit card',
+  venmo: 'Venmo / Zelle',
 };
 
 export default function OperatorPage({ params }: Props) {
   const operator = getOperatorBySlug(params.slug);
   if (!operator) notFound();
 
-  const coveredCounties = counties.filter((c) => operator.counties.includes(c.slug));
-  const coveredRaioane = moldovaRegions.filter((r) =>
-    operator.moldovaRaioane?.includes(r.slug)
-  );
+  const coveredStates = counties.filter((c) => operator.counties.includes(c.slug));
 
   return (
     <>
@@ -65,7 +62,7 @@ export default function OperatorPage({ params }: Props) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
           items={[
-            { label: 'Operatori', href: '/operatori' },
+            { label: 'Operators', href: '/operatori' },
             { label: operator.name },
           ]}
         />
@@ -84,12 +81,12 @@ export default function OperatorPage({ params }: Props) {
                     <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">{operator.name}</h1>
                     {operator.verified && (
                       <span className="flex items-center gap-1 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-semibold">
-                        <CheckCircle className="w-3 h-3" /> Verificat
+                        <CheckCircle className="w-3 h-3" /> Verified
                       </span>
                     )}
                     {operator.featured && (
                       <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full font-semibold uppercase tracking-wide">
-                        Recomandat
+                        Featured
                       </span>
                     )}
                   </div>
@@ -99,19 +96,18 @@ export default function OperatorPage({ params }: Props) {
                   <div className="flex items-center gap-3 flex-wrap text-sm text-gray-600">
                     <span className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
-                      {operator.city}
-                      {operator.country === 'MD' ? ', Moldova' : ', România'}
+                      {operator.city}, US
                     </span>
                     {operator.founded && (
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />
-                        Fondată {operator.founded}
+                        Est. {operator.founded}
                       </span>
                     )}
                     {operator.coverageRadiusKm && (
                       <span className="flex items-center gap-1">
                         <Zap className="w-3.5 h-3.5" />
-                        Rază {operator.coverageRadiusKm} km
+                        {Math.round(operator.coverageRadiusKm * 0.621)} mi radius
                       </span>
                     )}
                   </div>
@@ -125,26 +121,26 @@ export default function OperatorPage({ params }: Props) {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-gray-200">
                   {operator.haTreated && (
                     <div>
-                      <div className="text-xl font-bold text-green-700">{operator.haTreated.toLocaleString('ro')}</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">ha tratate</div>
+                      <div className="text-xl font-bold text-green-700">{operator.haTreated.toLocaleString('en-US')}</div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wide">acres treated</div>
                     </div>
                   )}
                   {operator.fleetSize && (
                     <div>
                       <div className="text-xl font-bold text-green-700">{operator.fleetSize}</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">drone în flotă</div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wide">drones in fleet</div>
                     </div>
                   )}
                   {operator.pilotsCount && (
                     <div>
                       <div className="text-xl font-bold text-green-700">{operator.pilotsCount}</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">piloți</div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wide">licensed pilots</div>
                     </div>
                   )}
                   {operator.clientsCount && (
                     <div>
                       <div className="text-xl font-bold text-green-700">{operator.clientsCount}+</div>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">clienți</div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wide">farm clients</div>
                     </div>
                   )}
                 </div>
@@ -153,7 +149,7 @@ export default function OperatorPage({ params }: Props) {
 
             {/* Services */}
             <section className="bg-white border border-gray-200 rounded-xl p-6">
-              <h2 className="font-bold text-gray-900 mb-4 text-lg">Servicii oferite</h2>
+              <h2 className="font-bold text-gray-900 mb-4 text-lg">Services offered</h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {operator.services.map((s) => (
                   <Link
@@ -170,7 +166,7 @@ export default function OperatorPage({ params }: Props) {
             {/* Crops */}
             {operator.crops.length > 0 && (
               <section className="bg-white border border-gray-200 rounded-xl p-6">
-                <h2 className="font-bold text-gray-900 mb-4 text-lg">Culturi tratate</h2>
+                <h2 className="font-bold text-gray-900 mb-4 text-lg">Crops serviced</h2>
                 <div className="flex flex-wrap gap-2">
                   {operator.crops.map((c) => (
                     <Link
@@ -188,7 +184,7 @@ export default function OperatorPage({ params }: Props) {
             {/* Drones */}
             {operator.drones.length > 0 && (
               <section className="bg-white border border-gray-200 rounded-xl p-6">
-                <h2 className="font-bold text-gray-900 mb-4 text-lg">Drone utilizate</h2>
+                <h2 className="font-bold text-gray-900 mb-4 text-lg">Equipment used</h2>
                 <div className="flex flex-wrap gap-2">
                   {operator.drones.map((d) => (
                     <Link
@@ -205,73 +201,67 @@ export default function OperatorPage({ params }: Props) {
             )}
 
             {/* Certifications + Quality */}
-            {(operator.certAACR || operator.certDJI || operator.certXAG || operator.certANSA || operator.iso9001 || operator.gdprCompliant || operator.acceptsAfirFunds) && (
+            {(operator.certFAAPart107 || operator.certFAAPart137 || operator.certHylio || operator.ndaaCompliant || operator.iso9001 || operator.acceptsUsdaFunds) && (
               <section className="bg-white border border-gray-200 rounded-xl p-6">
                 <h2 className="font-bold text-gray-900 mb-4 text-lg flex items-center gap-2">
                   <Award className="w-5 h-5 text-green-600" />
-                  Certificări și conformitate
+                  Certifications & compliance
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {operator.certAACR && (
+                  {operator.certFAAPart107 && (
                     <div className="flex items-center gap-2 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                      <span>Autorizație AACR (Aeronautică Civilă)</span>
+                      <span>FAA Part 107 Remote Pilot Certificate</span>
                     </div>
                   )}
-                  {operator.certDJI && (
+                  {operator.certFAAPart137 && (
                     <div className="flex items-center gap-2 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                      <span>Partener autorizat DJI</span>
+                      <span>FAA Part 137 Agricultural Aircraft Operator</span>
                     </div>
                   )}
-                  {operator.certXAG && (
+                  {operator.certHylio && (
                     <div className="flex items-center gap-2 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                      <span>Dealer autorizat XAG</span>
+                      <span>Hylio Certified Operator</span>
                     </div>
                   )}
-                  {operator.certANSA && (
+                  {operator.ndaaCompliant && (
                     <div className="flex items-center gap-2 text-sm text-gray-700">
-                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                      <span>Certificat ANSA Moldova</span>
+                      <Shield className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                      <span>NDAA-compliant drone fleet</span>
                     </div>
                   )}
                   {operator.iso9001 && (
                     <div className="flex items-center gap-2 text-sm text-gray-700">
                       <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
-                      <span>Certificare ISO 9001</span>
+                      <span>ISO 9001 certified</span>
                     </div>
                   )}
-                  {operator.gdprCompliant && (
+                  {operator.acceptsUsdaFunds && (
                     <div className="flex items-center gap-2 text-sm text-gray-700">
                       <Shield className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                      <span>Conform GDPR</span>
-                    </div>
-                  )}
-                  {operator.acceptsAfirFunds && (
-                    <div className="flex items-center gap-2 text-sm text-gray-700">
-                      <Shield className="w-4 h-4 text-blue-600 flex-shrink-0" />
-                      <span>Acceptă proiecte AFIR</span>
+                      <span>Accepts USDA grant-funded projects</span>
                     </div>
                   )}
                   {operator.emergencyService && (
                     <div className="flex items-center gap-2 text-sm text-gray-700">
                       <Clock className="w-4 h-4 text-red-600 flex-shrink-0" />
-                      <span>Intervenție rapidă 24/7</span>
+                      <span>Emergency response available</span>
                     </div>
                   )}
                 </div>
               </section>
             )}
 
-            {/* Coverage — Romania counties */}
-            {coveredCounties.length > 0 && (
+            {/* Coverage — US states */}
+            {coveredStates.length > 0 && (
               <section className="bg-white border border-gray-200 rounded-xl p-6">
                 <h2 className="font-bold text-gray-900 mb-4 text-lg">
-                  Zone de acoperire ({coveredCounties.length} județe)
+                  States served ({coveredStates.length})
                 </h2>
                 <div className="flex flex-wrap gap-2">
-                  {coveredCounties.map((c) => (
+                  {coveredStates.map((c) => (
                     <Link
                       key={c.slug}
                       href={`/judete/${c.slug}`}
@@ -283,50 +273,6 @@ export default function OperatorPage({ params }: Props) {
                 </div>
               </section>
             )}
-
-            {/* Coverage — Moldova raioane */}
-            {coveredRaioane.length > 0 && (
-              <section className="bg-white border border-gray-200 rounded-xl p-6">
-                <h2 className="font-bold text-gray-900 mb-4 text-lg">
-                  Raioane acoperite în Moldova ({coveredRaioane.length})
-                </h2>
-                <div className="flex flex-wrap gap-2">
-                  {coveredRaioane.map((r) => (
-                    <Link
-                      key={r.slug}
-                      href={`/moldova/${r.slug}`}
-                      className="px-2.5 py-1 bg-blue-50 text-blue-700 text-xs border border-blue-200 rounded hover:border-blue-400 transition-colors"
-                    >
-                      {r.name}
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            {/* Legal info (RO only) */}
-            {(operator.cui || operator.regCom) && (
-              <section className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-                <h2 className="font-semibold text-gray-900 mb-3 text-sm flex items-center gap-2">
-                  <ClipboardList className="w-4 h-4" />
-                  Date legale
-                </h2>
-                <div className="grid grid-cols-2 gap-3 text-sm">
-                  {operator.cui && (
-                    <div>
-                      <div className="text-xs text-gray-500">CUI</div>
-                      <div className="font-mono text-gray-900">{operator.cui}</div>
-                    </div>
-                  )}
-                  {operator.regCom && (
-                    <div>
-                      <div className="text-xs text-gray-500">Reg. Com.</div>
-                      <div className="font-mono text-gray-900">{operator.regCom}</div>
-                    </div>
-                  )}
-                </div>
-              </section>
-            )}
           </div>
 
           {/* ─── Sidebar ─────────────────────────────────────── */}
@@ -334,21 +280,18 @@ export default function OperatorPage({ params }: Props) {
             {/* Price */}
             <div className="bg-gradient-to-br from-green-50 to-white border border-green-200 rounded-xl p-5">
               <h3 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wide">
-                Prețuri orientative
+                Estimated rates
               </h3>
               <div className="text-3xl font-bold text-green-700 mb-1">
-                {formatPrice(operator.priceMinRon, operator.priceMaxRon)}
+                {operator.priceMinUsd
+                  ? formatPrice(operator.priceMinUsd, operator.priceMaxUsd)
+                  : <span className="text-xl">Contact for quote</span>}
               </div>
-              {operator.priceMinMdl && (
-                <div className="text-xl font-semibold text-green-600">
-                  {formatPrice(operator.priceMinMdl, operator.priceMaxMdl, 'MDL')}
-                </div>
-              )}
-              {!operator.priceMinRon && !operator.priceMinMdl && (
-                <p className="text-sm text-gray-500">Contactați pentru ofertă</p>
+              {!operator.priceMinUsd && (
+                <p className="text-sm text-gray-500">Rates vary by crop, field size, and location</p>
               )}
               <p className="text-xs text-gray-500 mt-2">
-                * Variază în funcție de cultură și suprafață
+                * Chemical/product not included unless noted
               </p>
             </div>
 
@@ -358,19 +301,19 @@ export default function OperatorPage({ params }: Props) {
                 {operator.responseTimeHours && (
                   <div>
                     <div className="text-xs text-gray-500 uppercase tracking-wide mb-1 flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5" /> Timp răspuns
+                      <Clock className="w-3.5 h-3.5" /> Response time
                     </div>
                     <div className="text-sm font-semibold text-gray-900">
                       {operator.responseTimeHours < 1
-                        ? '< 1 oră'
-                        : `~ ${operator.responseTimeHours} ore`}
+                        ? '< 1 hour'
+                        : `~ ${operator.responseTimeHours} hours`}
                     </div>
                   </div>
                 )}
                 {operator.languagesSpoken && operator.languagesSpoken.length > 0 && (
                   <div>
                     <div className="text-xs text-gray-500 uppercase tracking-wide mb-1 flex items-center gap-1.5">
-                      <Languages className="w-3.5 h-3.5" /> Limbi vorbite
+                      <Languages className="w-3.5 h-3.5" /> Languages spoken
                     </div>
                     <div className="text-sm text-gray-900">
                       {operator.languagesSpoken.map((l) => LANGUAGE_LABELS[l] || l).join(', ')}
@@ -380,7 +323,7 @@ export default function OperatorPage({ params }: Props) {
                 {operator.paymentMethods && operator.paymentMethods.length > 0 && (
                   <div>
                     <div className="text-xs text-gray-500 uppercase tracking-wide mb-1 flex items-center gap-1.5">
-                      <CreditCard className="w-3.5 h-3.5" /> Metode de plată
+                      <CreditCard className="w-3.5 h-3.5" /> Payment accepted
                     </div>
                     <div className="text-sm text-gray-900">
                       {operator.paymentMethods.map((p) => PAYMENT_LABELS[p] || p).join(', ')}
@@ -409,7 +352,7 @@ export default function OperatorPage({ params }: Props) {
                     className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors"
                   >
                     <Globe className="w-4 h-4 text-green-600" />
-                    Website oficial
+                    Official website
                   </ExternalLink>
                 )}
               </div>
@@ -488,13 +431,13 @@ export default function OperatorPage({ params }: Props) {
               href="/adauga-operator"
               className="block w-full text-center px-4 py-2.5 border border-green-700 text-green-700 rounded-xl text-sm font-medium hover:bg-green-50 transition-colors"
             >
-              Corectează informațiile
+              Update this listing
             </Link>
             <Link
-              href="/ghid/cum-sa-devii-operator"
+              href="/adauga-operator"
               className="block w-full text-center px-4 py-2.5 bg-yellow-50 border border-yellow-300 text-yellow-900 rounded-xl text-sm font-medium hover:bg-yellow-100 transition-colors"
             >
-              Vrei să devii operator?
+              List your business free
             </Link>
           </aside>
         </div>

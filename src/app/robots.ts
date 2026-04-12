@@ -22,6 +22,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'YouBot', allow: '/' },           // You.com
       { userAgent: 'meta-externalagent', allow: '/' }, // Meta AI
     ],
-    sitemap: 'https://terradron.ro/sitemap.xml',
+    sitemap: 'https://usagdronedirectory.com/sitemap.xml',
   };
 }

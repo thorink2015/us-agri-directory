@@ -14,29 +14,28 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  metadataBase: new URL('https://terradron.ro'),
+  metadataBase: new URL('https://usagdronedirectory.com'),
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
     other: {
       'msvalidate.01': process.env.NEXT_PUBLIC_BING_VERIFICATION ?? '',
-      'yandex-verification': process.env.NEXT_PUBLIC_YANDEX_VERIFICATION ?? '',
     },
   },
   openGraph: {
     type: 'website',
-    locale: 'ro_RO',
-    url: 'https://terradron.ro',
-    siteName: 'TerraDron.ro',
-    title: 'Directorul Operatorilor de Drone Agricole din România și Moldova',
+    locale: 'en_US',
+    url: 'https://usagdronedirectory.com',
+    siteName: 'US Ag Drone Directory',
+    title: 'US Agricultural Drone Directory | Find Verified Drone Operators',
     description:
-      'Găsește rapid operatori verificați de drone agricole în județul tău. Servicii de pulverizare, fertilizare, cartografiere și monitorizare.',
+      'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping, and scouting across all 50 states.',
     images: ['/opengraph-image'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Directorul Operatorilor de Drone Agricole | TerraDron.ro',
+    title: 'US Ag Drone Directory | Find Drone Spraying Operators Near You',
     description:
-      'Găsește operatori verificați de drone agricole în România și Moldova.',
+      'Find verified agricultural drone operators in all 50 states. Compare rates, check certifications, and contact directly.',
     images: ['/opengraph-image'],
   },
   robots: {
@@ -57,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ro">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://formspree.io" />
@@ -67,7 +66,7 @@ export default function RootLayout({
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-green-700 focus:text-white focus:rounded-lg focus:font-semibold"
         >
-          Sari la conținut
+          Skip to content
         </a>
         <GoogleAnalytics />
         <GAPageView />

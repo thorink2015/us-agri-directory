@@ -5,32 +5,32 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { operators } from '@/data/operators';
 
 export const metadata: Metadata = {
-  title: 'Despre TerraDron.ro | Directorul Operatorilor de Drone Agricole',
+  title: 'About Us | US Agricultural Drone Directory',
   description:
-    'TerraDron.ro este primul director complet de operatori de drone agricole din România și Moldova. Misiunea noastră: conectăm fermierii cu operatorii de drone agricole verificați.',
+    'US Ag Drone Directory is the most complete directory of agricultural drone operators in the United States. Our mission: connect farmers with verified drone spraying services near them.',
   alternates: { canonical: '/despre' },
 };
 
-export default function DesprePage() {
-  const totalHa = operators.reduce((sum, op) => sum + (op.haTreated || 0), 0);
+export default function AboutPage() {
+  const totalAcres = operators.reduce((sum, op) => sum + (op.haTreated || 0), 0);
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <Breadcrumb items={[{ label: 'Despre noi' }]} />
+      <Breadcrumb items={[{ label: 'About' }]} />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Despre TerraDron.ro</h1>
+      <h1 className="text-3xl font-bold text-gray-900 mb-6">About US Ag Drone Directory</h1>
 
       <div className="prose prose-gray max-w-none space-y-6 text-gray-700">
         <p className="text-lg leading-relaxed">
-          <strong>TerraDron.ro</strong> este primul director complet de operatori de drone agricole din România și Moldova. Misiunea noastră este simplă: să conectăm fermierii cu operatorii de drone agricole verificați din zona lor, în cel mai rapid mod posibil.
+          <strong>US Ag Drone Directory</strong> is the most complete directory of agricultural drone operators in the United States. Our mission is simple: connect farmers with verified drone spraying services in their area — as quickly and easily as possible.
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8">
           {[
-            { value: `${operators.length}+`, label: 'Operatori listați' },
-            { value: '41', label: 'Județe acoperite' },
-            { value: `${(totalHa / 1000).toFixed(0)}K+`, label: 'Ha tratate cumulat' },
-            { value: '100%', label: 'Listare gratuită' },
+            { value: `${operators.length}+`, label: 'Operators listed' },
+            { value: '50', label: 'States covered' },
+            { value: `${(totalAcres / 1000).toFixed(0)}K+`, label: 'Acres treated' },
+            { value: '100%', label: 'Free listing' },
           ].map((s) => (
             <div key={s.label} className="text-center bg-green-50 rounded-xl p-4 border border-green-200">
               <div className="text-2xl font-bold text-green-800">{s.value}</div>
@@ -39,20 +39,20 @@ export default function DesprePage() {
           ))}
         </div>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">De ce am construit acest director?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">Why we built this directory</h2>
         <p className="leading-relaxed">
-          Piața de drone agricole din România crește cu peste 40% pe an, dar fermierii nu aveau o resursă centralizată pentru a găsi operatori locali verificați. Întrebând «drone agricole [județ]» pe Google, găseai numai pagini generice sau magazine online, niciun director al prestatorilor de servicii.
+          The US agricultural drone market is growing fast — but farmers didn&apos;t have a reliable, centralized resource to find vetted local operators. Searching &ldquo;ag drone spraying [state]&rdquo; returned generic results and equipment retailers, not service providers. Operators, on the other hand, had no cost-effective way to get discovered online.
         </p>
         <p className="leading-relaxed">
-          Am construit TerraDron.ro pentru a umple acest gol: un director structurat, cu profiluri detaliate, prețuri orientative și posibilitatea de a contacta direct operatorul.
+          We built US Ag Drone Directory to fill that gap: a structured directory with detailed operator profiles, estimated per-acre rates, service filters, and direct contact — no middlemen, no commissions.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-8">
           {[
-            { icon: Target, title: 'Misiunea noastră', desc: 'Conectăm fermierii cu operatori de drone agricole verificați din zona lor.' },
-            { icon: Shield, title: 'Calitate verificată', desc: 'Verificăm fiecare operator înainte de publicare: autorizații, servicii, contact.' },
-            { icon: Globe, title: 'Acoperire completă', desc: 'România: toate 41 de județe. Moldova: acoperire națională.' },
-            { icon: TrendingUp, title: 'Actualizat constant', desc: 'Directorul este actualizat cu noi operatori și prețuri actualizate regulat.' },
+            { icon: Target, title: 'Our mission', desc: 'Connect farmers with verified agricultural drone operators across all 50 states.' },
+            { icon: Shield, title: 'Verified listings', desc: 'Every operator is reviewed before publishing — certifications, services, and contact information.' },
+            { icon: Globe, title: 'Full US coverage', desc: 'All 50 states. From the Corn Belt to California vineyards to the Delta rice fields.' },
+            { icon: TrendingUp, title: 'Always current', desc: 'New operators added regularly. Pricing benchmarks updated each season.' },
           ].map((b) => (
             <div key={b.title} className="flex gap-3 p-4 bg-white border border-gray-200 rounded-xl">
               <b.icon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -64,21 +64,21 @@ export default function DesprePage() {
           ))}
         </div>
 
-        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">Cum funcționează listarea?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mt-8 mb-4">How listings work</h2>
         <p className="leading-relaxed">
-          Listarea în TerraDron.ro este și va rămâne <strong>complet gratuită</strong> pentru toți operatorii de drone agricole din România și Moldova. Nu percepem comisioane, nu există versiuni premium ascunse. Putem oferi în viitor opțiuni de promovare suplimentară, dar listarea de bază va fi mereu gratuită.
+          Listing your business in US Ag Drone Directory is and will remain <strong>completely free</strong> for all agricultural drone operators in the US. We don&apos;t charge commissions, take referral fees, or hide features behind a paywall. Basic listings are free — forever.
         </p>
 
         <div className="bg-green-50 border border-green-200 rounded-xl p-5 mt-6">
-          <p className="font-medium text-gray-900 mb-2">Ești operator de drone agricole?</p>
+          <p className="font-medium text-gray-900 mb-2">Are you an agricultural drone operator?</p>
           <p className="text-sm text-gray-600 mb-3">
-            Adaugă afacerea ta gratuit și ajunge la mii de fermieri din toată România și Moldova.
+            Add your business for free and connect with farmers across your state and region.
           </p>
           <Link
             href="/adauga-operator"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
           >
-            Adaugă-te gratuit
+            List your business free
           </Link>
         </div>
       </div>

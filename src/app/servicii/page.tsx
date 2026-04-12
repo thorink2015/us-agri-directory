@@ -9,9 +9,9 @@ import { formatPrice } from '@/lib/utils';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Servicii Drone Agricole România | Pulverizare, Fertilizare, Cartografiere',
+  title: 'Agricultural Drone Services | Spraying, Seeding, Mapping & More',
   description:
-    'Toate serviciile de drone agricole disponibile în România: pulverizare, fertilizare, monitorizare NDVI, cartografiere, formare piloți și închiriere.',
+    'Browse all agricultural drone services available through our directory: spraying, cover crop seeding, aerial mapping, crop scouting, pilot training, and equipment rental.',
   alternates: {
     canonical: '/servicii',
   },
@@ -30,15 +30,15 @@ const serviceIconMap: Record<string, LucideIcon> = {
   emergency: Zap,
 };
 
-export default function ServiciiPage() {
+export default function ServicesPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <Breadcrumb items={[{ label: 'Servicii' }]} />
+      <Breadcrumb items={[{ label: 'Services' }]} />
 
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">Servicii Drone Agricole</h1>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Agricultural Drone Services</h1>
         <p className="text-gray-600">
-          Descoperă toate serviciile disponibile de la operatorii de drone agricole din România.
+          Modern ag drones do more than spray. Browse the full range of drone services available from verified operators in our directory.
         </p>
       </div>
 
@@ -58,9 +58,9 @@ export default function ServiciiPage() {
                 {service.name}
               </h2>
               <p className="text-gray-600 text-sm line-clamp-3 mb-4">{service.description}</p>
-              {(service.priceMinRon || service.priceMaxRon) && (
+              {(service.priceMinUsd || service.priceMaxUsd) && (
                 <div className="text-sm font-semibold text-green-700">
-                  {formatPrice(service.priceMinRon, service.priceMaxRon)}
+                  {formatPrice(service.priceMinUsd, service.priceMaxUsd)}
                 </div>
               )}
             </Link>
@@ -69,15 +69,15 @@ export default function ServiciiPage() {
       </div>
 
       <div className="mt-10 p-6 bg-green-50 rounded-xl border border-green-200 text-center">
-        <h2 className="font-semibold text-gray-900 mb-2">Ești operator de drone?</h2>
+        <h2 className="font-semibold text-gray-900 mb-2">Are you a drone operator?</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Adaugă-ți serviciile gratuit în cel mai complet director de drone agricole din România.
+          Create a free listing and connect with farmers searching for drone services in your state.
         </p>
         <Link
           href="/adauga-operator"
           className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
         >
-          Adaugă operator gratuit
+          List Your Business Free
         </Link>
       </div>
     </div>
