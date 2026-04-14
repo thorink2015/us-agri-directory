@@ -306,6 +306,45 @@ export const operators: Operator[] = [
     lat: 40.6936,
     lng: -89.5890,
   },
+  // ── SOUTHEAST BATCH 3: Alabama part 3 ───────────────────────────────────
+  {
+    slug: 'sky-spray-llc',
+    name: 'Sky-Spray LLC',
+    tagline: 'North Alabama · row crops, pasture, pumpkins & cover crop seeding',
+    description:
+      'Agriculture drone spraying service in Cullman, Alabama serving all of North Alabama. Run by Mickle. Operates GPS/RTK spray drones for row crop spraying (fungicides, herbicides, insecticides), pasture/hay field broadleaf herbicide, cover crop seeding, fertilizer spreading, multispectral mapping, and pond treatments. Applied fungicide and insecticide at Peinhardt Living History Farm for pumpkins and sorghum.',
+    country: 'US',
+    counties: ['alabama'],
+    city: 'Cullman',
+    phone: '256-736-4761',
+    website: 'https://sky-spray.com/',
+    services: ['spraying', 'seeding', 'spreading', 'mapping'],
+    drones: ['dji-agras-t50'],
+    crops: ['corn', 'soybeans', 'wheat', 'cover-crops'],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+  {
+    slug: 'south-alabama-drone-services',
+    name: 'South Alabama Drone Services',
+    shortName: 'South AL Drone',
+    tagline: 'AL · authorized DJI dealer, T50/T40/T25 fleet since 2023',
+    description:
+      'Alabama drone services company that began operations in 2023 with a single drone and by 2025 operates a fleet including multiple DJI T50 drones and a T25. Authorized DJI dealer for drones and parts. Provides custom spraying and drone sales.',
+    country: 'US',
+    counties: ['alabama'],
+    city: 'Alabama',
+    website: 'https://www.southalabamadroneservices.com/',
+    services: ['spraying', 'sales'],
+    drones: ['dji-agras-t50', 'dji-agras-t25p'],
+    crops: ['corn', 'soybeans', 'cotton', 'cover-crops'],
+    certFAAPart107: true,
+    certDJI: true,
+    verified: true,
+    featured: false,
+  },
+
   // ── SOUTHEAST BATCH 2: Alabama part 2 ───────────────────────────────────
   {
     slug: 'darkstar-drones',
