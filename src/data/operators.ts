@@ -306,6 +306,42 @@ export const operators: Operator[] = [
     lat: 40.6936,
     lng: -89.5890,
   },
+  // ── SOUTHEAST BATCH 15: Louisiana part 2 ────────────────────────────────
+  {
+    slug: 'macon-ridge-ag-drones',
+    name: 'Macon Ridge Ag Drones',
+    shortName: 'Macon Ridge',
+    tagline: 'Northeast Louisiana rice & soybean drone application',
+    description:
+      'Macon Ridge Ag Drones serves rice and soybean producers across northeast Louisiana\'s Macon Ridge and Mississippi River Delta farmland. The operator focuses on fungicide and herbicide applications for flooded rice, as well as soybean R3 fungicide timing and cover crop seeding in the fall.',
+    country: 'US',
+    counties: ['louisiana', 'mississippi', 'arkansas'],
+    city: 'Winnsboro',
+    services: ['spraying', 'seeding', 'spreading'],
+    drones: ['dji-agras-t50'],
+    crops: ['rice', 'soybeans', 'corn', 'cover-crops'],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+  {
+    slug: 'sola-drones-la',
+    name: 'Sola Drones',
+    shortName: 'Sola Drones',
+    tagline: 'South Louisiana sugarcane, rice & drone services',
+    description:
+      'Sola Drones is a south Louisiana ag drone operator specializing in sugarcane and rice applications across the Acadiana and coastal marsh regions. Services include fungicide, herbicide, and plant growth regulator applications, with a focus on fields inaccessible to conventional ground equipment due to soft soils and drainage canals.',
+    country: 'US',
+    counties: ['louisiana'],
+    city: 'New Iberia',
+    services: ['spraying', 'spreading', 'monitoring'],
+    drones: ['dji-agras-t50', 'dji-agras-t25p'],
+    crops: ['rice', 'soybeans', 'cotton'],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+
   // ── SOUTHEAST BATCH 14: Louisiana part 1 ────────────────────────────────
   {
     slug: 'guardian-aerial-la',
