@@ -11,7 +11,7 @@ interface BreadcrumbProps {
 }
 
 export default function Breadcrumb({ items }: BreadcrumbProps) {
-  const all = [{ label: 'Acasă', href: '/' }, ...items];
+  const all = [{ label: 'Home', href: '/' }, ...items];
 
   return (
     <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-6">
