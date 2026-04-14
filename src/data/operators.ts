@@ -306,6 +306,43 @@ export const operators: Operator[] = [
     lat: 40.6936,
     lng: -89.5890,
   },
+  // ── SOUTHEAST BATCH 17: Mississippi part 2 ──────────────────────────────
+  {
+    slug: 'msu-agricultural-autonomy',
+    name: 'Mississippi State University Agricultural Autonomy Lab',
+    shortName: 'MSU Ag Autonomy',
+    tagline: 'Land-grant drone research & Extension training – Starkville MS',
+    description:
+      'The MSU Agricultural Autonomy Lab conducts applied research on unmanned aerial systems for precision agriculture, including drone-based spraying efficacy, remote sensing, and crop scouting. The lab partners with MSU Extension to deliver producer workshops across Mississippi on FAA regulations, drone integration, and agronomic applications.',
+    country: 'US',
+    counties: ['mississippi'],
+    city: 'Starkville',
+    website: 'https://www.msstate.edu',
+    services: ['monitoring', 'mapping', 'training', 'consultancy'],
+    drones: ['dji-agras-t50'],
+    crops: ['corn', 'soybeans', 'cotton', 'rice'],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+  {
+    slug: 'raven-6-rising',
+    name: 'Raven 6 Rising LLC',
+    shortName: 'Raven 6 Rising',
+    tagline: 'Mississippi veteran-owned ag drone application company',
+    description:
+      'Raven 6 Rising LLC is a veteran-owned agricultural drone company serving Mississippi row-crop producers. The company offers corn and soybean fungicide applications, cotton defoliant spraying, and cover crop seeding, with a focus on reliability and rapid turnaround during critical application windows across the Delta and north Mississippi.',
+    country: 'US',
+    counties: ['mississippi', 'alabama', 'tennessee'],
+    city: 'Tupelo',
+    services: ['spraying', 'seeding', 'spreading'],
+    drones: ['dji-agras-t50'],
+    crops: ['corn', 'soybeans', 'cotton', 'cover-crops'],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+
   // ── SOUTHEAST BATCH 16: Mississippi part 1 ──────────────────────────────
   {
     slug: 'agri-spray-drones-leland',
