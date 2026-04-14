@@ -306,6 +306,43 @@ export const operators: Operator[] = [
     lat: 40.6936,
     lng: -89.5890,
   },
+  // ── SOUTHEAST BATCH 13: Kentucky part 2 ─────────────────────────────────
+  {
+    slug: 'uk-martin-gatton-drone',
+    name: 'University of Kentucky Martin-Gatton College of Agriculture',
+    shortName: 'UK Ag Drone Program',
+    tagline: 'Land-grant drone research, training & extension – Lexington KY',
+    description:
+      'The Martin-Gatton College of Agriculture, Food and Environment at the University of Kentucky operates a drone research and extension program focused on precision agriculture for Kentucky grain, tobacco, and forage producers. The program conducts field trials, trains producers in drone scouting and application, and partners with county Extension offices statewide.',
+    country: 'US',
+    counties: ['kentucky'],
+    city: 'Lexington',
+    website: 'https://agriculture.uky.edu',
+    services: ['monitoring', 'mapping', 'training', 'consultancy'],
+    drones: ['dji-agras-t50'],
+    crops: ['corn', 'soybeans', 'wheat', 'cover-crops'],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+  {
+    slug: 'western-ky-aerial-spraying',
+    name: 'Western Kentucky Aerial Spraying',
+    shortName: 'WKY Aerial',
+    tagline: 'Corn, soybean & wheat fungicide – Bowling Green area',
+    description:
+      'Western Kentucky Aerial Spraying provides drone fungicide and herbicide services to row-crop producers across the Pennyroyal and south-central Kentucky. The operator specializes in corn and soybean VT/R3 applications and wheat T3 fungicide timing, offering rapid scheduling and competitive per-acre pricing.',
+    country: 'US',
+    counties: ['kentucky', 'tennessee'],
+    city: 'Bowling Green',
+    services: ['spraying', 'seeding'],
+    drones: ['dji-agras-t50'],
+    crops: ['corn', 'soybeans', 'wheat', 'cover-crops'],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+
   // ── SOUTHEAST BATCH 12: Kentucky part 1 ─────────────────────────────────
   {
     slug: 'aero-ag-llc-ky',
