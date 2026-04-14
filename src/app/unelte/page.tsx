@@ -4,38 +4,38 @@ import { Calculator, Ruler, Zap, Calendar, ArrowRight } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Unelte gratuite pentru fermieri și operatori drone | TerraDron.ro',
+  title: 'Free Tools for Farmers & Drone Operators | US Ag Drone Directory',
   description:
-    'Calculatoare gratuite pentru fermieri și operatori drone agricole: calculator preț pulverizare, calculator hectare, comparator drone, calendar tratamente.',
+    'Free calculators and tools for farmers and agricultural drone operators: spray cost calculator, acreage converter, drone comparison, and treatment calendar.',
   alternates: { canonical: '/unelte' },
 };
 
 const tools = [
   {
     slug: 'calculator-pret-pulverizare',
-    name: 'Calculator preț pulverizare',
-    description: 'Calculează costul total al pulverizării cu drona pentru ferma ta, în funcție de suprafață și cultură.',
+    name: 'Spray Cost Calculator',
+    description: 'Estimate the total cost of drone spraying for your operation based on acreage, crop type, and number of applications.',
     icon: Calculator,
     color: 'green',
   },
   {
     slug: 'calculator-hectare',
-    name: 'Calculator suprafață hectare',
-    description: 'Convertor rapid între hectare, acri, metri pătrați și pogoane românești.',
+    name: 'Acreage Converter',
+    description: 'Quick converter between acres, hectares, and square feet for field planning and quoting.',
     icon: Ruler,
     color: 'blue',
   },
   {
     slug: 'comparator-drone',
-    name: 'Comparator drone agricole',
-    description: 'Compară specificațiile dronelor DJI Agras, XAG și ADT: preț, capacitate, productivitate.',
+    name: 'Drone Comparison Tool',
+    description: 'Compare DJI Agras, Hylio AG-272, and XAG P100 side by side: price, tank capacity, coverage rate, and NDAA compliance.',
     icon: Zap,
     color: 'yellow',
   },
   {
     slug: 'calendar-tratamente',
-    name: 'Calendar tratamente',
-    description: 'Calendar lunar cu tratamentele recomandate pentru principalele culturi din România.',
+    name: 'Crop Treatment Calendar',
+    description: 'Monthly guide to recommended drone application timing for corn, soybeans, wheat, cotton, rice, vineyards, and orchards.',
     icon: Calendar,
     color: 'purple',
   },
@@ -51,15 +51,15 @@ const COLOR_MAP: Record<string, string> = {
 export default function ToolsHubPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <Breadcrumb items={[{ label: 'Unelte' }]} />
+      <Breadcrumb items={[{ label: 'Tools' }]} />
 
       <header className="mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-          Unelte gratuite pentru fermieri și operatori
+          Free Tools for Farmers & Drone Operators
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Calculatoare și instrumente online gratuite pentru a estima costurile tratamentelor cu drona, a
-          compara echipamentele și a planifica sezonul agricol.
+          Free online calculators and planning tools to estimate spray costs, compare drone equipment,
+          and plan your application season.
         </p>
       </header>
 
@@ -80,7 +80,7 @@ export default function ToolsHubPage() {
               </h2>
               <p className="text-sm text-gray-600 mb-4">{tool.description}</p>
               <span className="text-sm text-green-700 font-medium group-hover:underline">
-                Deschide unealta <ArrowRight className="w-4 h-4 inline" />
+                Open tool <ArrowRight className="w-4 h-4 inline" />
               </span>
             </Link>
           );

@@ -115,6 +115,11 @@ export default function Footer() {
 
         <div className="border-t border-green-800 mt-4 pt-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-green-200">
           <p>© 2026 US Agricultural Drone Directory. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <span className="text-green-700">|</span>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          </div>
           <p>Free basic listings for all verified operators</p>
         </div>
       </div>

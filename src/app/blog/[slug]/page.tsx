@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getBlogPostBySlug(params.slug);
   if (!post) return {};
   return {
-    title: `${post.title} | TerraDron.ro Blog`,
+    title: `${post.title} | US Ag Drone Directory Blog`,
     description: post.description,
     alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
@@ -78,9 +78,9 @@ export default function BlogPostPage({ params }: Props) {
               </span>
               <span className="flex items-center gap-1">
                 <Calendar className="w-3 h-3" />
-                {new Date(post.publishedAt).toLocaleDateString('ro', { day: 'numeric', month: 'long', year: 'numeric' })}
+                {new Date(post.publishedAt).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
               </span>
-              <span>de {post.author}</span>
+              <span>by {post.author}</span>
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight">
               {post.title}
@@ -108,7 +108,7 @@ export default function BlogPostPage({ params }: Props) {
         {/* Related */}
         {related.length > 0 && (
           <section className="mt-12 pt-8 border-t border-gray-200">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Articole similare</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Related Articles</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {related.map((r) => (
                 <Link
@@ -127,13 +127,13 @@ export default function BlogPostPage({ params }: Props) {
         )}
 
         <div className="mt-10 bg-green-50 border border-green-200 rounded-xl p-6 text-center">
-          <h2 className="font-bold text-gray-900 mb-2">Cauți un operator de drone?</h2>
-          <p className="text-sm text-gray-600 mb-4">Descoperă peste 20 de operatori verificați din România și Moldova.</p>
+          <h2 className="font-bold text-gray-900 mb-2">Looking for a drone operator near you?</h2>
+          <p className="text-sm text-gray-600 mb-4">Browse our full directory of verified US agricultural drone operators.</p>
           <Link
             href="/operatori"
             className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
           >
-            Toți operatorii <ArrowRight className="w-4 h-4" />
+            All Operators <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>
