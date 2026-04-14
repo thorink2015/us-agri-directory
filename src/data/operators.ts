@@ -306,6 +306,43 @@ export const operators: Operator[] = [
     lat: 40.6936,
     lng: -89.5890,
   },
+  // ── SOUTHEAST BATCH 20: South Carolina ──────────────────────────────────
+  {
+    slug: 'carter-aerial-land-mgmt',
+    name: 'Carter Aerial Land Management',
+    shortName: 'Carter Aerial',
+    tagline: 'South Carolina cotton, soybeans & timber drone services',
+    description:
+      'Carter Aerial Land Management is a South Carolina-based drone application company serving cotton, soybean, and timber producers across the Pee Dee and Lowcountry regions. Services include fungicide and defoliant applications for cotton, soybean R3 programs, and herbicide spraying for pine release and invasive species control in managed timberlands.',
+    country: 'US',
+    counties: ['south-carolina', 'north-carolina', 'georgia'],
+    city: 'Florence',
+    services: ['spraying', 'spreading', 'seeding'],
+    drones: ['dji-agras-t50'],
+    crops: ['cotton', 'soybeans', 'corn', 'cover-crops'],
+    certFAAPart107: true,
+    certFAAPart137: true,
+    verified: true,
+    featured: false,
+  },
+  {
+    slug: 'conservation-drone-services-sc',
+    name: 'Conservation Drone Services',
+    shortName: 'Conservation Drone SC',
+    tagline: 'SC wetland seeding, wildlife habitat & ag drone services',
+    description:
+      'Conservation Drone Services operates across South Carolina providing drone seeding for wildlife habitat restoration, wetland grass establishment, and cover crop broadcasting, alongside crop scouting and mapping services. The company works with USDA NRCS, Ducks Unlimited, and private landowners to restore native grasses, waterfowl impoundments, and longleaf pine understory.',
+    country: 'US',
+    counties: ['south-carolina', 'north-carolina', 'georgia'],
+    city: 'Columbia',
+    services: ['seeding', 'mapping', 'monitoring', 'consultancy'],
+    drones: ['dji-agras-t50'],
+    crops: ['cover-crops', 'soybeans', 'corn'],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+
   // ── SOUTHEAST BATCH 19: North Carolina part 2 ───────────────────────────
   {
     slug: 'north-carolina-ag-drones',
