@@ -306,6 +306,44 @@ export const operators: Operator[] = [
     lat: 40.6936,
     lng: -89.5890,
   },
+  // ── SOUTHEAST BATCH 22: Tennessee part 2 ────────────────────────────────
+  {
+    slug: 'tsu-drones-program',
+    name: 'Tennessee State University DRONEs Program',
+    shortName: 'TSU DRONEs',
+    tagline: 'HBCU drone ag research & outreach – Nashville TN',
+    description:
+      'Tennessee State University\'s DRONEs (Drone Research, Outreach, Navigation, and Education) Program is an HBCU-based initiative delivering drone agriculture research, pilot training, and Extension outreach to Tennessee farmers, with emphasis on serving historically underserved and limited-resource producers. The program offers FAA Part 107 prep courses, precision ag workshops, and applied field research.',
+    country: 'US',
+    counties: ['tennessee', 'kentucky', 'alabama'],
+    city: 'Nashville',
+    website: 'https://www.tnstate.edu',
+    services: ['training', 'monitoring', 'mapping', 'consultancy'],
+    drones: ['dji-agras-t50'],
+    crops: ['corn', 'soybeans', 'wheat'],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+  {
+    slug: 'ut-psep-drone',
+    name: 'University of Tennessee Pesticide Safety Education Program',
+    shortName: 'UT PSEP',
+    tagline: 'UT Extension drone applicator licensing & safety training',
+    description:
+      'The University of Tennessee Pesticide Safety Education Program (PSEP) provides drone applicator licensing support, pesticide safety training, and FAA Part 137 compliance guidance to commercial drone operators across Tennessee. The program works with county Extension offices to deliver workshops on label compliance, drift management, and regulatory requirements for ag drone operations.',
+    country: 'US',
+    counties: ['tennessee'],
+    city: 'Knoxville',
+    website: 'https://extension.tennessee.edu',
+    services: ['training', 'consultancy'],
+    drones: [],
+    crops: [],
+    certFAAPart107: true,
+    verified: true,
+    featured: false,
+  },
+
   // ── SOUTHEAST BATCH 21: Tennessee part 1 ────────────────────────────────
   {
     slug: 'airborne-ag-drones-tn',
