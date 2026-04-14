@@ -5,9 +5,9 @@ import { guides, GUIDE_CATEGORIES } from '@/data/guides';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Ghiduri Drone Agricole România 2026 | Legislație AACR, AFIR, Licențe',
+  title: 'Ag Drone Guides 2026 | FAA Part 107, USDA Funding, Licensing',
   description:
-    'Ghiduri complete pentru operatori de drone agricole din România: legislație AACR, fonduri AFIR, licențe pilot, alegerea dronei și cum să devii operator.',
+    'Complete guides for agricultural drone operators in the United States: FAA regulations, USDA funding programs, pilot licensing, equipment selection, and business start-up.',
   alternates: { canonical: '/ghid' },
 };
 
@@ -17,15 +17,15 @@ export default function GuidesHubPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <Breadcrumb items={[{ label: 'Ghiduri' }]} />
+      <Breadcrumb items={[{ label: 'Guides' }]} />
 
       <header className="mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-          Ghiduri complete: drone agricole în România 2026
+          Agricultural Drone Guides: US Operators 2026
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Tot ce trebuie să știi pentru a începe și dezvolta o afacere cu drone agricole în România.
-          Ghiduri actualizate pentru 2026, bazate pe reglementările oficiale AACR și AFIR.
+          Everything you need to start, grow, and operate a successful agricultural drone business in the
+          United States. Guides updated for 2026 based on current FAA regulations and USDA programs.
         </p>
       </header>
 
@@ -59,7 +59,7 @@ export default function GuidesHubPage() {
                         </span>
                         <span>•</span>
                         <span className="text-green-700 font-medium group-hover:underline">
-                          Citește ghidul <ArrowRight className="w-3 h-3 inline" />
+                          Read guide <ArrowRight className="w-3 h-3 inline" />
                         </span>
                       </div>
                     </div>

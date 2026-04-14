@@ -2,9 +2,9 @@ import { Metadata } from 'next';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Calendar tratamente culturi 2026: Când să stropești? | TerraDron.ro',
+  title: 'Crop Treatment Calendar 2026: When to Spray? | US Ag Drone Directory',
   description:
-    'Calendar lunar cu tratamentele recomandate pentru grâu, porumb, rapiță, viță de vie, livezi și alte culturi din România.',
+    'Monthly guide to recommended drone application timing for corn, soybeans, wheat, cotton, rice, vineyards, and orchards across US growing regions.',
   alternates: { canonical: '/unelte/calendar-tratamente' },
 };
 
@@ -16,91 +16,97 @@ interface Treatment {
 
 const CALENDAR: Treatment[] = [
   {
-    month: 'Ianuarie', monthNumber: 1,
+    month: 'January', monthNumber: 1,
     crops: [
-      { crop: 'Livezi', treatment: 'Tratament de iarnă (cupru) contra bolilor de scoarță', urgency: 'low' },
+      { crop: 'Orchards', treatment: 'Dormant copper spray for fungal canker and fire blight prevention', urgency: 'low' },
     ],
   },
   {
-    month: 'Februarie', monthNumber: 2,
+    month: 'February', monthNumber: 2,
     crops: [
-      { crop: 'Viță de vie', treatment: 'Tăieri + tratament cupru', urgency: 'low' },
-      { crop: 'Livezi', treatment: 'Stropire prefloralǎ cu cupru', urgency: 'medium' },
+      { crop: 'Vineyards', treatment: 'Dormant pruning + sulfur application for powdery mildew', urgency: 'low' },
+      { crop: 'Orchards', treatment: 'Pre-bloom copper spray for fire blight and leaf curl', urgency: 'medium' },
     ],
   },
   {
-    month: 'Martie', monthNumber: 3,
+    month: 'March', monthNumber: 3,
     crops: [
-      { crop: 'Grâu / Orz', treatment: 'Erbicidare de primăvară + fungicid preventiv', urgency: 'high' },
-      { crop: 'Rapiță', treatment: 'Tratament contra gândacului lucios', urgency: 'high' },
-      { crop: 'Livezi', treatment: 'Stropiri preventive fungice', urgency: 'medium' },
+      { crop: 'Winter Wheat', treatment: 'Spring herbicide + preventive fungicide (T1 timing)', urgency: 'high' },
+      { crop: 'Orchards', treatment: 'Pink stage fungicide for scab and powdery mildew', urgency: 'medium' },
+      { crop: 'Vineyards', treatment: 'Early season copper + sulfur application', urgency: 'medium' },
     ],
   },
   {
-    month: 'Aprilie', monthNumber: 4,
+    month: 'April', monthNumber: 4,
     crops: [
-      { crop: 'Viță de vie', treatment: 'Primul tratament cu cupru + sulf', urgency: 'high' },
-      { crop: 'Grâu', treatment: 'Fungicid T1 (fuzarioză, pătarea)', urgency: 'high' },
-      { crop: 'Porumb', treatment: 'Semănat + erbicide preemergente', urgency: 'high' },
-      { crop: 'Livezi', treatment: 'Tratamente contra păduchelui din San José', urgency: 'medium' },
+      { crop: 'Vineyards', treatment: 'First powdery and downy mildew fungicide', urgency: 'high' },
+      { crop: 'Winter Wheat', treatment: 'T2 fungicide at flag leaf — scab and stripe rust', urgency: 'high' },
+      { crop: 'Corn', treatment: 'Pre-emerge herbicide application', urgency: 'high' },
+      { crop: 'Orchards', treatment: 'Codling moth and scab fungicide program begins', urgency: 'medium' },
     ],
   },
   {
-    month: 'Mai', monthNumber: 5,
+    month: 'May', monthNumber: 5,
     crops: [
-      { crop: 'Viță de vie', treatment: 'Tratamente contra manei + făinării', urgency: 'high' },
-      { crop: 'Grâu', treatment: 'Fungicid T2 (protecția spicului)', urgency: 'high' },
-      { crop: 'Rapiță', treatment: 'Tratament contra gărgăriței silicvei', urgency: 'high' },
-      { crop: 'Floarea-soarelui', treatment: 'Erbicide postemergente', urgency: 'medium' },
+      { crop: 'Vineyards', treatment: 'Downy mildew and powdery mildew 2-week spray program', urgency: 'high' },
+      { crop: 'Winter Wheat', treatment: 'T3 fungicide at heading — Fusarium head blight', urgency: 'high' },
+      { crop: 'Rice', treatment: 'Pre-emerge herbicide for barnyardgrass control', urgency: 'high' },
+      { crop: 'Soybeans', treatment: 'Pre-emerge herbicide if planting this month', urgency: 'medium' },
     ],
   },
   {
-    month: 'Iunie', monthNumber: 6,
+    month: 'June', monthNumber: 6,
     crops: [
-      { crop: 'Viță de vie', treatment: 'Tratamente contra manei + făinării (2x)', urgency: 'high' },
-      { crop: 'Porumb', treatment: 'Erbicide postemergente + insecticid', urgency: 'high' },
-      { crop: 'Livezi', treatment: 'Tratamente contra viermilor din fructe', urgency: 'high' },
+      { crop: 'Vineyards', treatment: 'Continue mildew fungicide program (every 10–14 days)', urgency: 'high' },
+      { crop: 'Corn', treatment: 'Post-emerge herbicide + early insecticide for rootworm', urgency: 'high' },
+      { crop: 'Orchards', treatment: 'Codling moth and brown rot fungicide', urgency: 'high' },
+      { crop: 'Cotton', treatment: 'Early season herbicide + plant bug insecticide', urgency: 'medium' },
     ],
   },
   {
-    month: 'Iulie', monthNumber: 7,
+    month: 'July', monthNumber: 7,
     crops: [
-      { crop: 'Viță de vie', treatment: 'Tratamente finale preventive', urgency: 'medium' },
-      { crop: 'Porumb', treatment: 'Tratament contra sfredelitorului', urgency: 'high' },
-      { crop: 'Floarea-soarelui', treatment: 'Fungicid contra phomopsis', urgency: 'medium' },
+      { crop: 'Corn', treatment: 'VT/R1 fungicide — Tar Spot, Gray Leaf Spot, Southern Rust', urgency: 'high' },
+      { crop: 'Soybeans', treatment: 'R3 fungicide — White Mold and Frogeye Leaf Spot', urgency: 'high' },
+      { crop: 'Rice', treatment: 'Blast and sheath blight fungicide', urgency: 'high' },
+      { crop: 'Vineyards', treatment: 'Final preventive fungicide applications', urgency: 'medium' },
     ],
   },
   {
     month: 'August', monthNumber: 8,
     crops: [
-      { crop: 'Livezi', treatment: 'Tratamente pre-recoltare (cu timp de pauză)', urgency: 'medium' },
-      { crop: 'Rapiță', treatment: 'Pregătire teren + semănat', urgency: 'high' },
+      { crop: 'Soybeans', treatment: 'R5 fungicide if pressure warrants; aphid insecticide', urgency: 'medium' },
+      { crop: 'Cover Crops', treatment: 'Drone seeding into standing corn and soybeans', urgency: 'high' },
+      { crop: 'Cotton', treatment: 'Bollworm and plant bug insecticide', urgency: 'high' },
+      { crop: 'Orchards', treatment: 'Pre-harvest fungicide (observe pre-harvest intervals)', urgency: 'medium' },
     ],
   },
   {
-    month: 'Septembrie', monthNumber: 9,
+    month: 'September', monthNumber: 9,
     crops: [
-      { crop: 'Rapiță', treatment: 'Erbicide preemergente', urgency: 'high' },
-      { crop: 'Grâu', treatment: 'Pregătire teren + semănat', urgency: 'high' },
-      { crop: 'Viță de vie', treatment: 'Culegere + tratamente pre-iernare', urgency: 'low' },
+      { crop: 'Cover Crops', treatment: 'Continue drone seeding as corn and soybeans mature', urgency: 'high' },
+      { crop: 'Cotton', treatment: 'Defoliant and boll opener application', urgency: 'high' },
+      { crop: 'Winter Wheat', treatment: 'Seedbed prep and planting begins in northern states', urgency: 'high' },
+      { crop: 'Vineyards', treatment: 'Harvest timing + Botrytis spray if pressure warrants', urgency: 'low' },
     ],
   },
   {
-    month: 'Octombrie', monthNumber: 10,
+    month: 'October', monthNumber: 10,
     crops: [
-      { crop: 'Grâu', treatment: 'Erbicid postemergent', urgency: 'medium' },
-      { crop: 'Livezi', treatment: 'Tratament de toamnă (cupru) contra bolilor', urgency: 'medium' },
+      { crop: 'Winter Wheat', treatment: 'Post-emerge herbicide after establishment', urgency: 'medium' },
+      { crop: 'Cover Crops', treatment: 'Final seeding window before frost — Great Plains', urgency: 'high' },
+      { crop: 'Orchards', treatment: 'Post-harvest copper spray for disease prevention', urgency: 'medium' },
     ],
   },
   {
-    month: 'Noiembrie', monthNumber: 11,
+    month: 'November', monthNumber: 11,
     crops: [
-      { crop: 'Livezi', treatment: 'Tratament cupru după căderea frunzelor', urgency: 'medium' },
+      { crop: 'Orchards', treatment: 'Dormant copper spray after leaf drop', urgency: 'medium' },
     ],
   },
   {
-    month: 'Decembrie', monthNumber: 12,
-    crops: [{ crop: '—', treatment: 'Planificare sezonul următor + revizie echipament', urgency: 'low' }],
+    month: 'December', monthNumber: 12,
+    crops: [{ crop: '—', treatment: 'Plan next season applications + equipment maintenance and inspection', urgency: 'low' }],
   },
 ];
 
@@ -114,17 +120,18 @@ export default function TreatmentCalendarPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[
-        { label: 'Unelte', href: '/unelte' },
-        { label: 'Calendar tratamente' },
+        { label: 'Tools', href: '/unelte' },
+        { label: 'Treatment Calendar' },
       ]} />
 
       <header className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-3">
-          Calendar tratamente agricole 2026
+          Crop Treatment Calendar 2026
         </h1>
         <p className="text-gray-600 max-w-3xl">
-          Ghid lunar cu tratamentele recomandate pentru principalele culturi din România. Perioadele exacte
-          pot varia în funcție de condițiile meteorologice și de regiune.
+          Monthly guide to recommended drone application timing for major US crops. Exact timing
+          will vary by region, variety, and weather conditions — always scout fields and consult
+          your agronomist before application.
         </p>
       </header>
 
@@ -150,15 +157,15 @@ export default function TreatmentCalendarPage() {
       </div>
 
       <div className="mt-10 bg-green-50 border border-green-200 rounded-xl p-6 text-center">
-        <h2 className="font-bold text-gray-900 mb-2">Cauți un operator pentru tratamentele tale?</h2>
+        <h2 className="font-bold text-gray-900 mb-2">Ready to schedule your applications?</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Programează tratamentele cu operatorii verificați din județul tău.
+          Find verified drone operators available in your state for this season.
         </p>
         <a
           href="/operatori"
           className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
         >
-          Găsește un operator →
+          Find an Operator →
         </a>
       </div>
     </div>

@@ -5,14 +5,14 @@ import { blogPosts, BLOG_CATEGORY_LABELS } from '@/data/blog-posts';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Blog Drone Agricole: Topuri, Ghiduri și Noutăți 2026 | TerraDron.ro',
+  title: 'Ag Drone Blog: Top Lists, Guides & Industry News 2026 | US Ag Drone Directory',
   description:
-    'Articole despre drone agricole: topuri operatori, ghiduri de tratamente, legislație AACR și studii de caz AFIR.',
+    'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies, and equipment comparisons.',
   alternates: { canonical: '/blog' },
 };
 
 export default function BlogHub() {
-  // Only show Romania posts here. Moldova posts are on /moldova (separate directory)
+  // Only show non-Moldova posts here
   const roPosts = blogPosts.filter((p) => !p.country || p.country === 'RO');
   const sortedPosts = [...roPosts].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   const featured = sortedPosts[0];
@@ -24,11 +24,11 @@ export default function BlogHub() {
 
       <header className="mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-          Blog Drone Agricole
+          Ag Drone Blog
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Topuri de operatori, ghiduri de tratamente, noutăți legislative și studii de caz despre drone
-          agricole din România și Moldova. Actualizat săptămânal.
+          Operator rankings, application guides, legislation updates, and equipment comparisons for
+          the US agricultural drone industry. Updated weekly.
         </p>
       </header>
 
@@ -40,7 +40,7 @@ export default function BlogHub() {
         >
           <div className="flex flex-wrap items-center gap-3 text-xs text-green-200 mb-3 uppercase tracking-wide">
             <span className="bg-yellow-400 text-yellow-900 px-2 py-0.5 rounded-full font-bold">
-              Recomandat
+              Featured
             </span>
             <span>{BLOG_CATEGORY_LABELS[featured.category]}</span>
             <span className="flex items-center gap-1">
@@ -52,7 +52,7 @@ export default function BlogHub() {
           </h2>
           <p className="text-green-100 text-lg mb-4">{featured.description}</p>
           <span className="inline-flex items-center gap-2 text-yellow-300 font-semibold">
-            Citește articolul <ArrowRight className="w-4 h-4" />
+            Read article <ArrowRight className="w-4 h-4" />
           </span>
         </Link>
       )}
@@ -80,9 +80,9 @@ export default function BlogHub() {
             <div className="flex items-center justify-between text-xs text-gray-500 pt-3 border-t border-gray-100">
               <span className="flex items-center gap-1">
                 <Calendar className="w-3 h-3" />
-                {new Date(post.publishedAt).toLocaleDateString('ro', { day: 'numeric', month: 'short', year: 'numeric' })}
+                {new Date(post.publishedAt).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' })}
               </span>
-              <span className="text-green-700 font-medium group-hover:underline">Citește →</span>
+              <span className="text-green-700 font-medium group-hover:underline">Read →</span>
             </div>
           </Link>
         ))}
