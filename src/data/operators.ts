@@ -306,6 +306,44 @@ export const operators: Operator[] = [
     lat: 40.6936,
     lng: -89.5890,
   },
+  // ── SOUTHEAST BATCH 19: North Carolina part 2 ───────────────────────────
+  {
+    slug: 'north-carolina-ag-drones',
+    name: 'North Carolina Ag Drones',
+    shortName: 'NC Ag Drones',
+    tagline: 'Eastern NC row-crop & tobacco drone spraying',
+    description:
+      'North Carolina Ag Drones is an eastern NC operator providing drone fungicide, herbicide, and cover crop seeding services to tobacco, corn, soybean, and peanut producers. The company covers the coastal plain counties from the Virginia line to the South Carolina border, offering rapid deployment during critical spray windows.',
+    country: 'US',
+    counties: ['north-carolina', 'virginia', 'south-carolina'],
+    city: 'Wilson',
+    services: ['spraying', 'seeding', 'spreading'],
+    drones: ['dji-agras-t50', 'dji-agras-t100'],
+    crops: ['corn', 'soybeans', 'wheat', 'cotton', 'cover-crops'],
+    certFAAPart107: true,
+    certFAAPart137: true,
+    verified: true,
+    featured: false,
+  },
+  {
+    slug: 'southeast-drone-solutions-nc',
+    name: 'Southeast Drone Solutions',
+    shortName: 'SE Drone Solutions',
+    tagline: 'Multi-state Carolinas ag drone network',
+    description:
+      'Southeast Drone Solutions operates a multi-drone fleet serving row-crop producers across North Carolina and South Carolina. The company offers corn VT fungicide, soybean R3 applications, cotton defoliant timing, and cover crop seeding, with crews positioned across the Piedmont and Coastal Plain for rapid response during peak application season.',
+    country: 'US',
+    counties: ['north-carolina', 'south-carolina', 'virginia', 'georgia'],
+    city: 'Charlotte',
+    services: ['spraying', 'seeding', 'spreading', 'monitoring'],
+    drones: ['dji-agras-t50', 'dji-agras-t100'],
+    crops: ['corn', 'soybeans', 'cotton', 'wheat', 'cover-crops'],
+    certFAAPart107: true,
+    certFAAPart137: true,
+    verified: true,
+    featured: false,
+  },
+
   // ── SOUTHEAST BATCH 18: North Carolina part 1 ───────────────────────────
   {
     slug: 'carolina-agri-drones',
