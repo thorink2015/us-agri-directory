@@ -4,10 +4,16 @@ import Link from 'next/link';
 import { CheckCircle, Calendar, ExternalLink, MapPin } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
+import Byline from '@/components/author/Byline';
+import AuthorCard from '@/components/author/AuthorCard';
 import { regions, getRegionBySlug } from '@/data/regions';
 import { counties } from '@/data/counties';
 import { crops as cropsData } from '@/data/crops';
 import { operators } from '@/data/operators';
+import { AUTHOR, SITE } from '@/data/author';
+
+// Fallback last-reviewed date for region pages. Bump when content reviewed.
+const REGION_LAST_REVIEWED = '2026-04-01';
 
 interface Props {
   params: { slug: string };
@@ -57,12 +63,13 @@ export default function RegionPage({ params }: Props) {
     '@type': 'Article',
     headline: `${region.name} Agricultural Drone Spraying Guide 2026`,
     description: region.description,
-    url: `https://usagdronedirectory.com/regions/${region.slug}`,
-    publisher: {
-      '@type': 'Organization',
-      name: 'US Ag Drone Directory',
-      url: 'https://usagdronedirectory.com',
-    },
+    url: `${SITE.domain}/regions/${region.slug}`,
+    mainEntityOfPage: `${SITE.domain}/regions/${region.slug}`,
+    datePublished: '2026-01-01',
+    dateModified: REGION_LAST_REVIEWED,
+    author: { '@id': AUTHOR.personId },
+    publisher: { '@id': AUTHOR.organizationId },
+    image: `${SITE.domain}/images/og-default.jpg`,
   };
 
   return (
@@ -82,6 +89,9 @@ export default function RegionPage({ params }: Props) {
           <p className="text-lg text-gray-600">{region.tagline}</p>
         </div>
       </div>
+
+      {/* Byline — E-E-A-T signal */}
+      <Byline lastUpdated={REGION_LAST_REVIEWED} />
 
       {/* AEO block */}
       <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-6">
@@ -213,6 +223,9 @@ export default function RegionPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* Author card — E-E-A-T footer */}
+      <AuthorCard />
     </div>
   );
 }
