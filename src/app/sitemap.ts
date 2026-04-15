@@ -88,6 +88,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
+  // ─── Tool pages ─────────────────────────────────────────────────────────
+  const toolPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/tools`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
+    { url: `${BASE_URL}/tools/spray-cost-calculator`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.75 },
+    { url: `${BASE_URL}/tools/roi-calculator`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.75 },
+    { url: `${BASE_URL}/tools/coverage-calculator`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.75 },
+    { url: `${BASE_URL}/tools/acreage-converter`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.65 },
+    { url: `${BASE_URL}/tools/drone-comparison`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.65 },
+    { url: `${BASE_URL}/tools/treatment-calendar`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.65 },
+  ];
+
   return [
     ...staticPages,        // 12
     ...operatorPages,      // 10+
@@ -97,6 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...cropPages,          // 8
     ...servicePages,       // 6+
     ...dronePages,         // 5
-    // Total: ~900+ URLs
+    ...toolPages,          // 7
+    // Total: ~960+ URLs
   ];
 }
