@@ -652,7 +652,7 @@ export const guideContent: Record<string, ReactNode> = {
       <ul>
         <li>Apply to USDA EQIP first — state programs often require proof of federal application</li>
         <li>Contact your state Department of Agriculture early in the calendar year — budgets are limited and sign-up windows close fast</li>
-        <li>Your state's land-grant university Extension office often has a precision agriculture specialist who knows every current program available locally</li>
+        <li>Your state&apos;s land-grant university Extension office often has a precision agriculture specialist who knows every current program available locally</li>
         <li>Farm Bureau membership can give access to additional member-only loan programs and grant alerts</li>
       </ul>
 
@@ -862,7 +862,7 @@ export const guideContent: Record<string, ReactNode> = {
       <ul>
         <li><strong>No wheel traffic at critical timings:</strong> VT corn and R3 soybean applications by ground rig damage 3–6% of yield through compaction and lodging. At $200/acre corn value, 3% loss on 500 acres = $3,000 per application.</li>
         <li><strong>Ultra-low volume (ULV) application:</strong> drones use 1–3 gallons/acre vs. 10–20 gallons/acre for ground rigs — less water hauling, faster turnaround per load.</li>
-        <li><strong>Timing flexibility:</strong> apply at night, immediately after rain, or on isolated field edges without waiting for an external operator's schedule during peak demand weeks.</li>
+        <li><strong>Timing flexibility:</strong> apply at night, immediately after rain, or on isolated field edges without waiting for an external operator&apos;s schedule during peak demand weeks.</li>
         <li><strong>NDVI and mapping revenue:</strong> add a multispectral camera and offer variable-rate application (VRA) scouting maps as a premium service to neighboring farms.</li>
       </ul>
 

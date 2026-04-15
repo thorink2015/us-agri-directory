@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Mail, Linkedin, AlertTriangle, BookOpen, Users, CheckCircle } from 'lucide-react';
+import { Mail, ExternalLink, AlertTriangle, BookOpen, Users, CheckCircle } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { operators } from '@/data/operators';
 import { AUTHOR, SITE, personSchema, organizationSchema } from '@/data/author';
@@ -113,7 +113,7 @@ export default function AboutPage() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
                   >
-                    <Linkedin className="w-4 h-4" /> LinkedIn
+                    <ExternalLink className="w-4 h-4" /> LinkedIn
                   </a>
                 )}
                 <a

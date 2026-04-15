@@ -7,6 +7,7 @@ const Op = ({ slug, children }: { slug: string; children: ReactNode }) => (
   </Link>
 );
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Cnt = ({ slug, children }: { slug: string; children: ReactNode }) => (
   <Link href={`/states/${slug}`} className="text-green-700 hover:underline font-medium">
     {children}
@@ -389,7 +390,7 @@ export const blogContent: Record<string, ReactNode> = {
     <div className="space-y-5">
       <p>
         2026 brings important regulatory updates for commercial agricultural drone operators in the US.
-        If you apply pesticides or fertilizers by drone commercially, here's what you need to know to
+        If you apply pesticides or fertilizers by drone commercially, here&apos;s what you need to know to
         stay compliant with FAA and EPA requirements.
       </p>
       <h2>1. FAA Part 107 — Remote Pilot Certificate (required for all operators)</h2>

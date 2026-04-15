@@ -29,6 +29,35 @@ the push failed.
 
 ## Build / runtime gotchas
 
+### 2026-04-15 — lucide-react v1.8.0 is a legacy fork with limited icons
+**Symptom:** `Module '"lucide-react"' has no exported member 'Linkedin'.`
+**Cause:** The package.json pins `lucide-react: ^1.8.0`, which is an
+older fork. The modern `lucide-react` uses v0.x versioning and exports
+hundreds more icons including `Linkedin`, `Twitter`, `Github`, etc.
+**Fix:** Before importing any lucide icon, verify it's available:
+```bash
+node -e "const L = require('lucide-react'); console.log(Object.keys(L).includes('IconName'))"
+```
+For social icons (LinkedIn, X, GitHub), use `ExternalLink` as a
+neutral fallback until the package is upgraded.
+**Known-good icons in v1.8.0:** Plane, ArrowRight, Search, Mail,
+ExternalLink, Link, Link2, MapPin, Calendar, CheckCircle, AlertTriangle,
+BookOpen, Users, Shield, Globe, Target, TrendingUp, Leaf, Droplets,
+Eye, Map, Sprout, BarChart3, ChevronDown.
+
+### 2026-04-15 — Next.js ESLint errors block production builds
+**Symptom:** Build succeeds at "Compiled successfully" but then fails
+at "Linting and checking validity of types" with errors like:
+- `react/no-unescaped-entities` (unescaped apostrophes in JSX text)
+- `@typescript-eslint/no-unused-vars` (unused imports/variables)
+**Fix options:**
+1. Escape apostrophes: `'` → `&apos;` inside JSX text nodes
+2. For unused exports referenced elsewhere but not in that file, add
+   `// eslint-disable-next-line @typescript-eslint/no-unused-vars`
+**Never fix by disabling ESLint globally.** Fix the individual issues.
+**Before committing JSX content with apostrophes, run** `npm run build`
+**locally if possible** — this catches both issues pre-push.
+
 ### `useState` / `useEffect` in server components
 **Symptom:** Build errors about hooks in server components.
 **Fix:** Add `'use client'` directive at the top of any interactive
