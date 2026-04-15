@@ -203,7 +203,7 @@ export default function CropPage({ params }: Props) {
           </table>
         </div>
         <Link
-          href="/preturi-pulverizare-drona"
+          href="/pricing"
           className="inline-block mt-3 text-sm text-green-700 hover:underline"
         >
           See the full pricing guide →

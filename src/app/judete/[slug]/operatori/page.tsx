@@ -56,7 +56,7 @@ export default function CountyOperatorsPage({ params }: Props) {
       ) : (
         <div className="text-center py-12">
           <p className="text-gray-500 mb-4">No operators listed in {county.name} yet.</p>
-          <Link href="/adauga-operator" className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors">
+          <Link href="/list-your-business" className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors">
             List your business free
           </Link>
         </div>

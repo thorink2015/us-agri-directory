@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Crop Treatment Calendar 2026: When to Spray? | US Ag Drone Directory',
   description:
     'Monthly guide to recommended drone application timing for corn, soybeans, wheat, cotton, rice, vineyards, and orchards across US growing regions.',
-  alternates: { canonical: '/unelte/calendar-tratamente' },
+  alternates: { canonical: '/tools/treatment-calendar' },
 };
 
 interface Treatment {
@@ -120,7 +120,7 @@ export default function TreatmentCalendarPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[
-        { label: 'Tools', href: '/unelte' },
+        { label: 'Tools', href: '/tools' },
         { label: 'Treatment Calendar' },
       ]} />
 

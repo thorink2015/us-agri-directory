@@ -11,11 +11,11 @@ export const metadata: Metadata = {
   title: 'How Much Does Drone Spraying Cost? | Agricultural Drone Pricing Guide 2026',
   description:
     'Drone spraying rates in the US: $12–$18/acre for field crops, $20–$35/acre for specialty crops and orchards. Complete pricing guide with tables, factors, and ROI calculator.',
-  alternates: { canonical: '/preturi-pulverizare-drona' },
+  alternates: { canonical: '/pricing' },
   openGraph: {
     title: 'Ag Drone Spraying Prices 2026 | $12–$35/acre | US Ag Drone Directory',
     description: 'How much does drone spraying cost? Complete tables by crop, field size, and service type — all in USD per acre.',
-    url: 'https://usagdronedirectory.com/preturi-pulverizare-drona',
+    url: 'https://usagdronedirectory.com/pricing',
   },
 };
 
@@ -57,7 +57,7 @@ export default function PricingPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-      { '@type': 'ListItem', position: 2, name: 'Drone Spraying Prices', item: 'https://usagdronedirectory.com/preturi-pulverizare-drona' },
+      { '@type': 'ListItem', position: 2, name: 'Drone Spraying Prices', item: 'https://usagdronedirectory.com/pricing' },
     ],
   };
 

@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   title: 'Calculator suprafață hectare | Conversie ha, acri, m² | TerraDron.ro',
   description:
     'Calculator online gratuit pentru conversia între hectare, acri, metri pătrați și pogoane. Tool util pentru fermieri români.',
-  alternates: { canonical: '/unelte/calculator-hectare' },
+  alternates: { canonical: '/tools/acreage-converter' },
 };
 
 export default function HectareCalculatorPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[
-        { label: 'Unelte', href: '/unelte' },
+        { label: 'Unelte', href: '/tools' },
         { label: 'Calculator hectare' },
       ]} />
 

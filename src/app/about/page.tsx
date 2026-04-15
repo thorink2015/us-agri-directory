@@ -75,7 +75,7 @@ export default function AboutPage() {
             Add your business for free and connect with farmers across your state and region.
           </p>
           <Link
-            href="/adauga-operator"
+            href="/list-your-business"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
           >
             List your business free

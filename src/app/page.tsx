@@ -314,7 +314,7 @@ export default function HomePage() {
           <FAQAccordion faqs={allFaqs} />
           <div className="text-center mt-6">
             <Link
-              href="/preturi-pulverizare-drona"
+              href="/pricing"
               className="text-green-700 font-medium text-sm hover:underline"
             >
               View the complete pricing guide →
@@ -336,7 +336,7 @@ export default function HomePage() {
             <li>✓ Featured placement available for your state pages</li>
           </ul>
           <Link
-            href="/adauga-operator"
+            href="/list-your-business"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-800 font-bold rounded-xl hover:bg-green-50 transition-colors"
           >
             Create Your Free Listing <ArrowRight className="w-5 h-5" />

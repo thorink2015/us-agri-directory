@@ -75,7 +75,7 @@ export const guideContent: Record<string, ReactNode> = {
       <h2>6. Reduce costs with USDA EQIP funding</h2>
       <p>
         USDA EQIP can reimburse 30–50% of eligible equipment costs for qualifying operations. See our{' '}
-        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</a>{' '}
+        <a href="/guides/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</a>{' '}
         for eligibility requirements and how to apply.
       </p>
 
@@ -84,7 +84,7 @@ export const guideContent: Record<string, ReactNode> = {
         The most effective customer acquisition channels for new operators in 2026:
       </p>
       <ul>
-        <li>List your business for free in the <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">US Ag Drone Directory</a></li>
+        <li>List your business for free in the <a href="/list-your-business" className="text-green-700 hover:underline font-medium">US Ag Drone Directory</a></li>
         <li>Introduce yourself to local ag retailers, co-ops, and crop consultants — they refer dozens of growers per season</li>
         <li>Attend local Farm Bureau meetings and commodity group meetings (corn, soybean, wheat grower associations)</li>
         <li>Partner with agronomists and certified crop advisers (CCAs) who can recommend drone applications to their clients</li>
@@ -552,7 +552,7 @@ export const guideContent: Record<string, ReactNode> = {
         <li>Confirm local dealer and service center availability — downtime during spray season is costly</li>
         <li>Budget 1.5–2× the drone price for a complete field-ready package (batteries, charger, generator)</li>
         <li>Check USDA EQIP eligibility — you may recover 40–50% of costs through{' '}
-          <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">EQIP cost-share payments</a>
+          <a href="/guides/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">EQIP cost-share payments</a>
         </li>
         <li>Buy from an authorized dealer to maintain warranty and access manufacturer training</li>
       </ul>
@@ -561,7 +561,7 @@ export const guideContent: Record<string, ReactNode> = {
       <p>
         Compare DJI Agras T50, Hylio AG-272, and XAG P100 side by side on tank size, coverage rate,
         price, and NDAA status using our{' '}
-        <a href="/unelte/comparator-drone" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</a>.
+        <a href="/tools/drone-comparison" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</a>.
       </p>
     </div>
   ),
@@ -776,7 +776,7 @@ export const guideContent: Record<string, ReactNode> = {
         <li>Introduce yourself to local co-op agronomists and independent crop consultants — they are the primary referral source for drone services in the region</li>
         <li>Attend state commodity group meetings: Alabama Cotton Producers, Georgia Peanut Commission, Mississippi Soybean Promotion Board</li>
         <li>List your operation in the{' '}
-          <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">US Ag Drone Directory</a>{' '}
+          <a href="/list-your-business" className="text-green-700 hover:underline font-medium">US Ag Drone Directory</a>{' '}
           — growers across the Southeast actively search by state
         </li>
         <li>Partner with established operators like{' '}
@@ -878,15 +878,15 @@ export const guideContent: Record<string, ReactNode> = {
       <p>
         USDA EQIP cost-share can cover 40–50% of eligible equipment costs for qualifying operations —
         reducing a $28,000 T50 package to a net investment of $14,000–17,000. Read our{' '}
-        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">complete USDA EQIP funding guide</a>{' '}
+        <a href="/guides/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">complete USDA EQIP funding guide</a>{' '}
         before purchasing.
       </p>
 
       <h2>Useful tools</h2>
       <ul>
         <li><a href="/drone" className="text-green-700 hover:underline font-medium">Ag drone comparison: DJI, Hylio, XAG</a></li>
-        <li><a href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">Drone spray pricing guide 2026</a></li>
-        <li><a href="/unelte/calculator-pret-pulverizare" className="text-green-700 hover:underline font-medium">Spray cost calculator</a></li>
+        <li><a href="/pricing" className="text-green-700 hover:underline font-medium">Drone spray pricing guide 2026</a></li>
+        <li><a href="/tools/spray-cost-calculator" className="text-green-700 hover:underline font-medium">Spray cost calculator</a></li>
       </ul>
     </div>
   ),

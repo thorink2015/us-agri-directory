@@ -38,7 +38,7 @@ export default function ContactPage() {
               If you&apos;re an operator or have corrections to an existing listing, use the dedicated form.
             </p>
             <Link
-              href="/adauga-operator"
+              href="/list-your-business"
               className="text-sm text-green-700 font-medium hover:underline"
             >
               Operator listing form →

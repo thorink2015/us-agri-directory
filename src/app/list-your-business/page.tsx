@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'List Your Ag Drone Business | Free Operator Listing',
   description:
     'Add your agricultural drone business to the US Ag Drone Directory for free. Reviewed and published within 48 hours. Reach farmers searching in your state.',
-  alternates: { canonical: '/adauga-operator' },
+  alternates: { canonical: '/list-your-business' },
 };
 
 export default function AddOperatorPage() {

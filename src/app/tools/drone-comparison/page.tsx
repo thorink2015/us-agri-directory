@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Compare Ag Drones: DJI Agras, Hylio, XAG Specs 2026 | US Ag Drone Directory',
   description:
     'Compare agricultural spray drones: DJI Agras T25P, T50, T100, Hylio AG-272, XAG P100 Pro. Tank size, coverage rate, price, and NDAA compliance.',
-  alternates: { canonical: '/unelte/comparator-drone' },
+  alternates: { canonical: '/tools/drone-comparison' },
 };
 
 export default function DroneComparator() {
@@ -17,7 +17,7 @@ export default function DroneComparator() {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[
-        { label: 'Tools', href: '/unelte' },
+        { label: 'Tools', href: '/tools' },
         { label: 'Drone Comparator' },
       ]} />
 

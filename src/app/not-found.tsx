@@ -32,8 +32,8 @@ export default function NotFound() {
             { href: '/judete', label: 'Județe' },
             { href: '/culturi', label: 'Culturi' },
             { href: '/servicii', label: 'Servicii' },
-            { href: '/preturi-pulverizare-drona', label: 'Prețuri' },
-            { href: '/ghid', label: 'Ghiduri' },
+            { href: '/pricing', label: 'Prețuri' },
+            { href: '/guides', label: 'Ghiduri' },
             { href: '/moldova', label: 'Moldova' },
           ].map((link) => (
             <Link

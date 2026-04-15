@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Ag Drone Guides 2026 | FAA Part 107, USDA Funding, Licensing',
   description:
     'Complete guides for agricultural drone operators in the United States: FAA regulations, USDA funding programs, pilot licensing, equipment selection, and business start-up.',
-  alternates: { canonical: '/ghid' },
+  alternates: { canonical: '/guides' },
 };
 
 export default function GuidesHubPage() {
@@ -41,7 +41,7 @@ export default function GuidesHubPage() {
               {categoryGuides.map((guide) => (
                 <Link
                   key={guide.slug}
-                  href={`/ghid/${guide.slug}`}
+                  href={`/guides/${guide.slug}`}
                   className="group bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-green-300 transition-all"
                 >
                   <div className="flex items-start gap-4">

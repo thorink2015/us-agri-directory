@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${guide.title} | TerraDron.ro`,
     description: guide.description,
-    alternates: { canonical: `/ghid/${guide.slug}` },
+    alternates: { canonical: `/guides/${guide.slug}` },
     openGraph: {
       title: guide.title,
       description: guide.description,
@@ -70,7 +70,7 @@ export default function GuidePage({ params }: Props) {
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Breadcrumb items={[{ label: 'Guides', href: '/ghid' }, { label: guide.shortTitle }]} />
+        <Breadcrumb items={[{ label: 'Guides', href: '/guides' }, { label: guide.shortTitle }]} />
 
         <article>
           <header className="mb-8">
@@ -100,7 +100,7 @@ export default function GuidePage({ params }: Props) {
             {otherGuides.map((g) => (
               <Link
                 key={g.slug}
-                href={`/ghid/${g.slug}`}
+                href={`/guides/${g.slug}`}
                 className="group p-4 bg-white border border-gray-200 rounded-xl hover:border-green-300 hover:shadow-sm transition-all"
               >
                 <div className="text-2xl mb-2">{g.icon}</div>

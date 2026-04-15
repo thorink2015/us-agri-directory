@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   title: 'Drone Spray Cost Calculator 2026 | US Ag Drone Directory',
   description:
     'Free calculator to estimate total drone spraying costs for your US farm. Enter your acreage, crop type, and number of applications for an instant estimate.',
-  alternates: { canonical: '/unelte/calculator-pret-pulverizare' },
+  alternates: { canonical: '/tools/spray-cost-calculator' },
 };
 
 export default function PriceCalculatorPage() {
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[
-        { label: 'Tools', href: '/unelte' },
+        { label: 'Tools', href: '/tools' },
         { label: 'Spray Cost Calculator' },
       ]} />
 

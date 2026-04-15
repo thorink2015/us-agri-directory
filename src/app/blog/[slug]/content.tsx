@@ -154,7 +154,7 @@ export const blogContent: Record<string, ReactNode> = {
         Midwest.
       </p>
       <p className="mt-6">
-        Open our <Link href="/unelte/comparator-drone" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</Link> for
+        Open our <Link href="/tools/drone-comparison" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</Link> for
         a detailed side-by-side analysis.
       </p>
     </div>
@@ -179,7 +179,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         Drone spraying for vineyards and orchards costs $25–35/acre per application in 2026, depending
         on canopy density, terrain, and operator. See our{' '}
-        <Link href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">full pricing guide</Link>.
+        <Link href="/pricing" className="text-green-700 hover:underline font-medium">full pricing guide</Link>.
       </p>
       <h2>Typical spray schedule</h2>
       <ol>
@@ -263,7 +263,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         USDA EQIP (Environmental Quality Incentives Program) and FSA loan programs can offset
         30–50% of equipment costs for qualifying operations. See our{' '}
-        <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</Link> for
+        <Link href="/guides/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</Link> for
         details on how to apply.
       </p>
     </div>
@@ -334,8 +334,8 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         Drone spraying for row crops typically runs $12–17/acre per application in 2026, depending on
         field size, region, and number of applications booked. See our{' '}
-        <Link href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">full pricing guide</Link> and{' '}
-        <Link href="/unelte/calculator-pret-pulverizare" className="text-green-700 hover:underline font-medium">cost calculator</Link>.
+        <Link href="/pricing" className="text-green-700 hover:underline font-medium">full pricing guide</Link> and{' '}
+        <Link href="/tools/spray-cost-calculator" className="text-green-700 hover:underline font-medium">cost calculator</Link>.
       </p>
       <h2>Find a grain crop specialist</h2>
       <p>
@@ -423,7 +423,7 @@ export const blogContent: Record<string, ReactNode> = {
       </p>
       <p className="mt-6">
         Read our{' '}
-        <Link href="/ghid/legislatie-drone-agricole" className="text-green-700 hover:underline font-medium">complete US ag drone regulations guide</Link>{' '}
+        <Link href="/guides/legislatie-drone-agricole" className="text-green-700 hover:underline font-medium">complete US ag drone regulations guide</Link>{' '}
         for state-by-state details.
       </p>
     </div>
@@ -502,7 +502,7 @@ export const blogContent: Record<string, ReactNode> = {
       </p>
       <p className="mt-6">
         Read our{' '}
-        <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">complete USDA EQIP funding guide</Link>{' '}
+        <Link href="/guides/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">complete USDA EQIP funding guide</Link>{' '}
         to prepare your own application.
       </p>
     </div>

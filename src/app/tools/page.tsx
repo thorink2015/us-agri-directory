@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Free Tools for Farmers & Drone Operators | US Ag Drone Directory',
   description:
     'Free calculators and tools for farmers and agricultural drone operators: spray cost calculator, acreage converter, drone comparison, and treatment calendar.',
-  alternates: { canonical: '/unelte' },
+  alternates: { canonical: '/tools' },
 };
 
 const tools = [
@@ -69,7 +69,7 @@ export default function ToolsHubPage() {
           return (
             <Link
               key={tool.slug}
-              href={`/unelte/${tool.slug}`}
+              href={`/tools/${tool.slug}`}
               className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-green-300 transition-all"
             >
               <div className={`w-14 h-14 ${COLOR_MAP[tool.color]} border rounded-xl flex items-center justify-center mb-4`}>

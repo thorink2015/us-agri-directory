@@ -40,7 +40,7 @@ export default function Footer() {
               <li><Link href="/servicii/mapping" className="hover:text-white transition-colors">Aerial Mapping</Link></li>
               <li><Link href="/servicii/monitoring" className="hover:text-white transition-colors">Crop Scouting</Link></li>
               <li><Link href="/servicii/spreading" className="hover:text-white transition-colors">Fertilizer Application</Link></li>
-              <li><Link href="/preturi-pulverizare-drona" className="hover:text-white transition-colors">Pricing Guide</Link></li>
+              <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing Guide</Link></li>
             </ul>
           </div>
 
@@ -52,8 +52,8 @@ export default function Footer() {
               <li><Link href="/judete" className="hover:text-white transition-colors">Browse by State</Link></li>
               <li><Link href="/culturi" className="hover:text-white transition-colors">Browse by Crop</Link></li>
               <li><Link href="/drone" className="hover:text-white transition-colors">Drone Models</Link></li>
-              <li><Link href="/adauga-operator" className="hover:text-white transition-colors">List Your Business</Link></li>
-              <li><Link href="/despre" className="hover:text-white transition-colors">About</Link></li>
+              <li><Link href="/list-your-business" className="hover:text-white transition-colors">List Your Business</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
             </ul>
           </div>
 
@@ -61,7 +61,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Company</h3>
             <ul className="space-y-2 text-sm text-green-300">
-              <li><Link href="/despre" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>

@@ -156,7 +156,7 @@ export default function DronePage({ params }: Props) {
           Add your business to the directory for free and connect with farmers searching for operators who fly the {drone.name}.
         </p>
         <Link
-          href="/adauga-operator"
+          href="/list-your-business"
           className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
         >
           List your business free

@@ -428,13 +428,13 @@ export default function OperatorPage({ params }: Props) {
             </div>
 
             <Link
-              href="/adauga-operator"
+              href="/list-your-business"
               className="block w-full text-center px-4 py-2.5 border border-green-700 text-green-700 rounded-xl text-sm font-medium hover:bg-green-50 transition-colors"
             >
               Update this listing
             </Link>
             <Link
-              href="/adauga-operator"
+              href="/list-your-business"
               className="block w-full text-center px-4 py-2.5 bg-yellow-50 border border-yellow-300 text-yellow-900 rounded-xl text-sm font-medium hover:bg-yellow-100 transition-colors"
             >
               List your business free

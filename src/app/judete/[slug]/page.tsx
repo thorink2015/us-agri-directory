@@ -124,7 +124,7 @@ export default function StatePage({ params }: Props) {
                   View all operators
                 </Link>
                 <Link
-                  href="/adauga-operator"
+                  href="/list-your-business"
                   className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors"
                 >
                   List your business free
