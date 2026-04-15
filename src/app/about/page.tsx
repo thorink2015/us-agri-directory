@@ -16,22 +16,21 @@ export const metadata: Metadata = {
   },
 };
 
-// ─── PLACEHOLDER: Replace with real editor info before launch ──────────────
-// See build-plan-v2.md Section C for E-E-A-T requirements
+// Editor/Reviewer data moved to src/data/author.ts (single source of truth).
+// /about page will be rewritten to the new 8-section structure in G3.
+// For now leave existing placeholder rendering intact — unchanged below.
 const EDITOR = {
-  name: '{{EDITOR_NAME}}',           // e.g. "John Miller"
-  title: '{{EDITOR_TITLE}}',         // e.g. "Managing Editor"
-  bio: '{{EDITOR_BIO}}',             // 2-3 sentence bio with ag/drone credentials
-  linkedin: '{{EDITOR_LINKEDIN_URL}}', // e.g. "https://linkedin.com/in/johnmiller"
-  photo: '{{EDITOR_PHOTO_URL}}',     // headshot URL
+  name: '{{EDITOR_NAME}}',
+  title: '{{EDITOR_TITLE}}',
+  bio: '{{EDITOR_BIO}}',
+  linkedin: '{{EDITOR_LINKEDIN_URL}}',
+  photo: '{{EDITOR_PHOTO_URL}}',
 };
-
 const REVIEWER = {
-  name: '{{REVIEWER_NAME}}',         // e.g. "Sarah Chen, Part 137 Operator"
-  credentials: '{{REVIEWER_CREDENTIALS}}', // e.g. "FAA Part 137 AAO, Licensed Pesticide Applicator (IA)"
-  bio: '{{REVIEWER_BIO}}',           // 1-2 sentence reviewer bio
+  name: '{{REVIEWER_NAME}}',
+  credentials: '{{REVIEWER_CREDENTIALS}}',
+  bio: '{{REVIEWER_BIO}}',
 };
-// ───────────────────────────────────────────────────────────────────────────
 
 export default function AboutPage() {
   const totalAcres = operators.reduce((sum, op) => sum + (op.haTreated || 0), 0);
