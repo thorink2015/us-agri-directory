@@ -120,29 +120,42 @@ export const blogContent: Record<string, ReactNode> = {
   'top-drone-2026': (
     <div className="space-y-5">
       <p>
-        În 2026, piața dronelor agricole este dominată de 5 modele principale. În acest articol comparăm
-        specificațiile, prețurile și recomandările pentru fiecare.
+        The US ag drone market is dominated by a handful of proven platforms in 2026. Here we compare
+        the top five models by tank capacity, coverage rate, price, and NDAA compliance status —
+        the key factors American operators and growers care about most.
       </p>
       <h2>1. DJI Agras T50</h2>
       <p>
-        Rezervor 40L, 40 ha/oră, preț 15.000–19.000 EUR (fără accesorii). Cea mai vândută dronă agricolă din
-        România în 2025–2026. Avantaj: service excelent prin Nik-ro, RIAGRO și BOSAL.
+        40 L tank, coverage up to 100 acres/hour, priced at $18,000–22,000 USD (without accessories).
+        The most widely deployed ag spray drone in North America. Strong dealer and service network
+        across the US through DJI Enterprise partners.
       </p>
       <h2>2. DJI Agras T100</h2>
       <p>
-        Rezervor 80L, 70 ha/oră. Pentru ferme mari (peste 500 ha). Preț 28.000–35.000 EUR.
+        80 L tank, up to 175 acres/hour. Built for large-acreage corn, soybean, and cotton operations
+        (1,000+ acres per season). Priced at $34,000–42,000 USD. Requires FAA Part 137 certificate for
+        commercial pesticide application.
       </p>
       <h2>3. DJI Agras T25P</h2>
       <p>
-        Rezervor 20L. Pentru ferme sub 100 ha. Preț 8.000–11.000 EUR, cea mai bună opțiune pentru începători.
+        20 L tank, compact and portable. Priced at $10,000–14,000 USD — the most accessible entry
+        point for operators starting with smaller fields or specialty crops like vineyards and orchards.
       </p>
-      <h2>4. XAG P100 Pro</h2>
-      <p>Rezervor 50L, AI integrat. Alternativă tehnică serioasă la DJI, cu preț similar.</p>
-      <h2>5. ADT Falcon 50P (Appia)</h2>
-      <p>Dronă produsă parțial în România, eligibilă AFIR. 50L, 18 ha/h.</p>
+      <h2>4. Hylio AG-272</h2>
+      <p>
+        The leading NDAA-compliant, American-made option. 10-gallon tank, made in Houston TX. Preferred
+        for federal contracts, defense-adjacent operations, or buyers requiring US-manufactured equipment
+        under NDAA Section 848/899 restrictions.
+      </p>
+      <h2>5. XAG P100 Pro</h2>
+      <p>
+        50 L tank with integrated AI obstacle avoidance. A strong technical alternative to DJI at a
+        comparable price point (~$20,000–24,000 USD). Growing dealer presence in the Southeast and
+        Midwest.
+      </p>
       <p className="mt-6">
-        Deschide <Link href="/unelte/comparator-drone" className="text-green-700 hover:underline font-medium">comparatorul nostru interactiv</Link> pentru
-        o analiză detaliată.
+        Open our <Link href="/unelte/comparator-drone" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</Link> for
+        a detailed side-by-side analysis.
       </p>
     </div>
   ),
@@ -150,33 +163,45 @@ export const blogContent: Record<string, ReactNode> = {
   'vita-de-vie-ghid': (
     <div className="space-y-5">
       <p>
-        Viticultura este sectorul cu cea mai rapidă adopție a dronelor agricole în România. Din cele 180.000
-        hectare de viță de vie, peste 30% sunt tratate anual cu drona în 2026.
+        Vineyards and orchards are among the fastest-growing segments for agricultural drones in the US.
+        Hilly terrain, tight row spacing, and high spray-pass frequency make them ideal candidates for
+        drone applications over traditional ground rigs.
       </p>
-      <h2>De ce drona pentru viță de vie?</h2>
+      <h2>Why drones for vineyards and orchards?</h2>
       <ul>
-        <li>Terenurile în pantă sunt dificile pentru utilajele terestre</li>
-        <li>Viță de vie necesită 8–12 tratamente/sezon</li>
-        <li>Economie de 30–50% de apă și substanțe active</li>
-        <li>Acces imediat după ploaie (solul este încă umed pentru tractoare)</li>
+        <li>Hillside rows are unsafe or inaccessible for ground equipment</li>
+        <li>Vines require 8–12 spray passes per season (powdery mildew, downy mildew, Botrytis)</li>
+        <li>Drones reduce water usage by 30–50% and minimize chemical drift</li>
+        <li>Access immediately after rain — no soil compaction, no waiting for fields to dry</li>
+        <li>Reduced labor cost vs. airblast sprayers that require more setup time</li>
       </ul>
-      <h2>Preț mediu în România</h2>
+      <h2>Average pricing in the US</h2>
       <p>
-        Pulverizarea viței de vie cu drona costă 120–200 RON/ha în 2026, în funcție de regiune și operator.
-        Vezi <Link href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">pagina noastră de prețuri</Link>.
+        Drone spraying for vineyards and orchards costs $25–35/acre per application in 2026, depending
+        on canopy density, terrain, and operator. See our{' '}
+        <Link href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">full pricing guide</Link>.
       </p>
-      <h2>Program de tratamente</h2>
+      <h2>Typical spray schedule</h2>
       <ol>
-        <li>Martie: cupru + sulf (preventiv)</li>
-        <li>Aprilie: primul tratament fungicid</li>
-        <li>Mai: 2 tratamente contra manei</li>
-        <li>Iunie: 2–3 tratamente contra manei și făinării</li>
-        <li>Iulie: 1–2 tratamente preventive finale</li>
+        <li>February–March: dormant copper + sulfur spray (powdery mildew prevention)</li>
+        <li>April: first fungicide at bud break (scab, downy mildew)</li>
+        <li>May: two passes for downy and powdery mildew</li>
+        <li>June: 2–3 passes every 10–14 days through rapid canopy growth</li>
+        <li>July: final preventive applications before veraison</li>
+        <li>August: pre-harvest Botrytis spray if pressure warrants</li>
       </ol>
-      <h2>Operatori recomandați</h2>
+      <h2>Key wine and orchard regions</h2>
       <p>
-        <Op slug="hortidrones">Hortidrones</Op>, <Op slug="riagro">RIAGRO</Op>, <Op slug="agronix">Agronix</Op> sunt
-        specializați pe viticultură.
+        Napa/Sonoma (CA), Willamette Valley (OR), Columbia Valley (WA), Finger Lakes (NY), and
+        Appalachian apple country (VA/NC/WV) are the most active markets for vineyard and orchard
+        drone services in 2026.
+      </p>
+      <h2>Finding a specialist operator</h2>
+      <p>
+        Look for operators with vineyard-specific experience — canopy penetration settings, low-drift
+        nozzle configurations, and familiarity with wine-grape fungicide windows. Browse{' '}
+        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> and
+        filter by crop type.
       </p>
     </div>
   ),
