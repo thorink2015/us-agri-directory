@@ -462,61 +462,106 @@ export const guideContent: Record<string, ReactNode> = {
   'alegerea-dronei-agricole': (
     <div className="space-y-6">
       <p>
-        Alegerea dronei agricole depinde de suprafața fermei, tipul de cultură, bugetul disponibil și
-        disponibilitatea service-ului local. În 2026, piața este dominată de DJI Agras (90% cotă), urmată de
-        XAG (6%) și ADT Falcon (3%).
+        Choosing the right agricultural drone depends on your acreage, crop type, available budget,
+        NDAA compliance requirements, and local service support. In 2026, the US market is dominated
+        by DJI Agras (~75% share), followed by Hylio (~12%), XAG (~8%), and others. Here is a
+        practical breakdown of every major platform to help you decide.
       </p>
 
-      <h2>DJI Agras: Opțiunea populară</h2>
+      <h2>DJI Agras — Market leader</h2>
+      <p>
+        The most widely deployed ag spray drones in the US. Excellent dealer network, mature software
+        (DJI Agras app with field mapping and prescription layers), and the broadest parts availability.
+        <strong> Note: DJI drones are NOT NDAA-compliant</strong> — check your situation before buying
+        if you work on federal land or with USDA program participants.
+      </p>
       <ul>
-        <li><strong>T25P</strong>: 20L, 17 ha/oră, 45–55.000 EUR. Pentru ferme mici și medii.</li>
-        <li><strong>T50</strong>: 40L, 40 ha/oră, 75–95.000 EUR. Cea mai vândută dronă în România.</li>
-        <li><strong>T100</strong>: 75L, 70 ha/oră, 110–130.000 EUR. Pentru ferme mari (&gt; 500 ha).</li>
+        <li>
+          <strong><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a></strong>:
+          20L tank, ~60 acres/hour, $10,000–14,000. Best entry-level option for specialty crops
+          (vineyards, orchards) or operators starting on smaller fields.
+        </li>
+        <li>
+          <strong><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a></strong>:
+          40L tank, ~100 acres/hour, $18,000–22,000. The most popular production drone in the US.
+          Handles corn, soybean, wheat, and cotton at scale.
+        </li>
+        <li>
+          <strong><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a></strong>:
+          80L tank, ~175 acres/hour, $34,000–42,000. For high-volume operations (1,000+ acres/season).
+          Requires Part 137 certificate and careful logistics due to size and weight.
+        </li>
+      </ul>
+
+      <h2>Hylio AG-272 — NDAA-compliant US-made option</h2>
+      <p>
+        Made in Houston, TX. The only commercially available ag spray drone currently meeting NDAA
+        Section 848/899 requirements for US-manufactured equipment. Required for federal land operations,
+        many USDA program contexts, and defense-adjacent buyers.
+      </p>
+      <ul>
+        <li>
+          <strong><a href="/drone/hylio-ag-272" className="text-green-700 hover:underline font-medium">Hylio AG-272</a></strong>:
+          10-gallon (~38L) tank, ~50 acres/hour, $25,000–30,000. Growing dealer network; manufacturer
+          training required for warranty coverage.
+        </li>
+      </ul>
+
+      <h2>XAG — Advanced technology alternative</h2>
+      <p>
+        Competitive technology with integrated AI path planning and obstacle avoidance. Pricing is
+        similar to DJI. Dealer and service network in the US is smaller but growing — verify local
+        support before buying.
+      </p>
+      <ul>
+        <li>
+          <strong><a href="/drone/xag-p100" className="text-green-700 hover:underline font-medium">XAG P100 Pro</a></strong>:
+          50L tank, ~80 acres/hour, $20,000–24,000. Strong AI features; good fit for precision
+          application on specialty crops.
+        </li>
+        <li>
+          <strong>XAG V40</strong>: 16L tank, ~40 acres/hour, $11,000–14,000. Entry-level option
+          with solid autonomous flight capabilities.
+        </li>
       </ul>
       <p>
-        Avantaje DJI: service excelent în România (Nik-ro, BOSAL, RIAGRO), rețea de piese de schimb, software
-        matur. Dezavantaje: preț mai mare decât XAG.
+        <strong>Note:</strong> XAG is also not NDAA-compliant as of 2026.
       </p>
 
-      <h2>XAG: Alternativa tehnică</h2>
-      <ul>
-        <li><strong>P100 Pro</strong>: 50L, 32 ha/oră, 70–85.000 EUR. Tehnologie avansată.</li>
-        <li><strong>V40</strong>: 16L, 16 ha/oră, 40–50.000 EUR. Pentru începători.</li>
-      </ul>
-      <p>
-        Avantaje XAG: AI integrat, planificare automată, preț mai bun. Dezavantaje: service mai slab în
-        România, piese de schimb greu de găsit.
-      </p>
-
-      <h2>ADT Falcon: Opțiunea robustă</h2>
-      <p>
-        Producător chinez mai puțin cunoscut, dar cu drone robuste și prețuri competitive (40–70.000 EUR).
-        Reprezentat în România de LandTech și câțiva dealeri regionali.
-      </p>
-
-      <h2>Matrice decizională</h2>
+      <h2>Decision matrix by operation size</h2>
       <table className="w-full text-sm border border-gray-200 rounded">
         <thead className="bg-gray-50">
           <tr>
-            <th className="p-2 text-left">Suprafață</th>
-            <th className="p-2 text-left">Dronă recomandată</th>
-            <th className="p-2 text-left">Investiție</th>
+            <th className="p-2 text-left">Acreage per season</th>
+            <th className="p-2 text-left">Recommended drone</th>
+            <th className="p-2 text-left">Investment</th>
           </tr>
         </thead>
         <tbody>
-          <tr className="border-t"><td className="p-2">&lt; 100 ha</td><td className="p-2">DJI T25P / XAG V40</td><td className="p-2">45–55K EUR</td></tr>
-          <tr className="border-t"><td className="p-2">100–500 ha</td><td className="p-2">DJI T50</td><td className="p-2">75–95K EUR</td></tr>
-          <tr className="border-t"><td className="p-2">500–2000 ha</td><td className="p-2">DJI T50 (2 buc) sau T100</td><td className="p-2">150–200K EUR</td></tr>
-          <tr className="border-t"><td className="p-2">&gt; 2000 ha</td><td className="p-2">Flotă DJI T100</td><td className="p-2">300K+ EUR</td></tr>
+          <tr className="border-t"><td className="p-2">&lt; 500 acres</td><td className="p-2">DJI T25P / XAG V40</td><td className="p-2">$12–18K</td></tr>
+          <tr className="border-t"><td className="p-2">500–2,500 acres</td><td className="p-2">DJI T50</td><td className="p-2">$22–30K</td></tr>
+          <tr className="border-t"><td className="p-2">2,500–8,000 acres</td><td className="p-2">2× DJI T50 or DJI T100</td><td className="p-2">$40–55K</td></tr>
+          <tr className="border-t"><td className="p-2">&gt; 8,000 acres</td><td className="p-2">Fleet of DJI T100 or T50</td><td className="p-2">$80K+</td></tr>
+          <tr className="border-t"><td className="p-2">Federal/NDAA required</td><td className="p-2">Hylio AG-272</td><td className="p-2">$28–35K</td></tr>
         </tbody>
       </table>
 
-      <h2>Recomandare finală</h2>
+      <h2>Key buying checklist</h2>
+      <ul>
+        <li>Verify NDAA compliance requirements for your specific operation before purchasing</li>
+        <li>Confirm local dealer and service center availability — downtime during spray season is costly</li>
+        <li>Budget 1.5–2× the drone price for a complete field-ready package (batteries, charger, generator)</li>
+        <li>Check USDA EQIP eligibility — you may recover 40–50% of costs through{' '}
+          <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">EQIP cost-share payments</a>
+        </li>
+        <li>Buy from an authorized dealer to maintain warranty and access manufacturer training</li>
+      </ul>
+
+      <h2>Use our comparison tool</h2>
       <p>
-        Pentru majoritatea fermelor din România, DJI Agras T50 este alegerea optimă: rețea de service extinsă,
-        capacitate suficientă, eligibilă AFIR. Cumpără de la dealeri autorizați precum{' '}
-        <a href="/operatori/nik-ro" className="text-green-700 hover:underline font-medium">Nik-ro</a> sau{' '}
-        <a href="/operatori/riagro" className="text-green-700 hover:underline font-medium">RIAGRO</a>.
+        Compare DJI Agras T50, Hylio AG-272, and XAG P100 side by side on tank size, coverage rate,
+        price, and NDAA status using our{' '}
+        <a href="/unelte/comparator-drone" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</a>.
       </p>
     </div>
   ),
