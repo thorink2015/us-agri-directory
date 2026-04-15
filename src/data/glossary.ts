@@ -132,6 +132,93 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition:
       'A USDA NRCS cost-share program that reimburses farmers for conservation practices, including drone-applied cover crop seeding and precision pesticide application. Typical payments cover 50–75% of eligible costs.',
   },
+
+  // ─── F ───────────────────────────────────────────────────────────────────
+  {
+    term: 'FAA (Federal Aviation Administration)',
+    slug: 'faa',
+    category: 'regulatory',
+    definition:
+      'The US government agency that regulates all civil aviation, including commercial drone operations. Agricultural drone operators are primarily governed by FAA rules under 14 CFR Part 107 and Part 137.',
+    relatedTerms: ['part-107', 'part-137'],
+  },
+  {
+    term: 'FIFRA',
+    slug: 'fifra',
+    category: 'regulatory',
+    definition:
+      'The Federal Insecticide, Fungicide, and Rodenticide Act — the primary federal law governing pesticide use in the US. FIFRA requires applicators to follow every restriction on the pesticide label, including aerial-specific limits.',
+    relatedTerms: ['epa-fifra', 'label-rate'],
+  },
+  {
+    term: 'Flight Controller',
+    slug: 'flight-controller',
+    category: 'hardware',
+    definition:
+      'The onboard computer that stabilizes the drone and executes flight commands. Modern ag drones use integrated flight controllers with RTK GPS, obstacle avoidance radar, and automated spray-mission execution.',
+    relatedTerms: ['rtk'],
+  },
+  {
+    term: 'FSA (Farm Service Agency)',
+    slug: 'fsa',
+    category: 'business',
+    definition:
+      'The USDA agency that administers farm loan programs, commodity payments, and disaster assistance. Some operators accept FSA-guaranteed loans for equipment purchases.',
+  },
+
+  // ─── G ───────────────────────────────────────────────────────────────────
+  {
+    term: 'GPA (Gallons Per Acre)',
+    slug: 'gpa',
+    category: 'application',
+    definition:
+      'The standard US measure of spray carrier volume. Agricultural drones typically operate at 2–5 gpa; ground rigs use 10–20 gpa; airplanes often use 1–3 gpa.',
+    relatedTerms: ['carrier-volume', 'application-rate'],
+  },
+  {
+    term: 'Ground Rig',
+    slug: 'ground-rig',
+    category: 'application',
+    definition:
+      'A tractor-mounted or self-propelled sprayer that applies chemicals from the ground. Drones compete with ground rigs in wet-field and tall-crop conditions where tractors cannot operate without damage.',
+  },
+
+  // ─── H ───────────────────────────────────────────────────────────────────
+  {
+    term: 'Hopper',
+    slug: 'hopper',
+    category: 'hardware',
+    definition:
+      'The solid-material container on a drone used for spreading dry products like cover crop seed, fertilizer granules, or bait. Capacity typically ranges from 50 to 165 pounds on commercial ag drones.',
+    relatedTerms: ['spreader'],
+  },
+
+  // ─── I ───────────────────────────────────────────────────────────────────
+  {
+    term: 'IPM (Integrated Pest Management)',
+    slug: 'ipm',
+    category: 'agronomic',
+    definition:
+      'A science-based approach that combines biological, cultural, and chemical tactics to manage pests at economically acceptable levels. Drone scouting and spot spraying support IPM by enabling site-specific applications only where thresholds are exceeded.',
+  },
+
+  // ─── L ───────────────────────────────────────────────────────────────────
+  {
+    term: 'LAANC (Low Altitude Authorization and Notification Capability)',
+    slug: 'laanc',
+    category: 'regulatory',
+    definition:
+      'The FAA system that provides near-instant airspace authorization for drone operations in controlled airspace at or below approved altitudes. Most agricultural drones operate via LAANC-approved third-party apps like Aloft or Airmap.',
+    relatedTerms: ['airspace-authorization'],
+  },
+  {
+    term: 'Label Rate',
+    slug: 'label-rate',
+    category: 'application',
+    definition:
+      'The legally binding application instructions on an EPA-approved pesticide label, including product rate per acre, carrier volume, droplet size, and buffer requirements. Drone operators must follow label rates exactly, including any aerial-specific restrictions.',
+    relatedTerms: ['fifra', 'epa-fifra'],
+  },
 ];
 
 export function getGlossaryTermBySlug(slug: string): GlossaryTerm | undefined {
