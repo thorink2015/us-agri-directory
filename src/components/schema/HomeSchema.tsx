@@ -1,22 +1,22 @@
+import { SITE, personSchema, organizationSchema } from '@/data/author';
+
 export default function HomeSchema() {
-  const org = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'US Agricultural Drone Directory',
-    url: 'https://usagdronedirectory.com',
-    description: 'The largest directory of agricultural drone services in America. Connecting farmers with verified drone operators in all 50 states.',
-    areaServed: 'US',
-    sameAs: [],
-  };
+  // Canonical Organization + Person — @ids referenced by every Article schema
+  // on the site (crops, services, regions, guides). Single source of truth
+  // is src/data/author.ts.
+  const org = organizationSchema();
+  const person = personSchema();
 
   const website = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'US Ag Drone Directory',
-    url: 'https://usagdronedirectory.com',
+    '@id': `${SITE.domain}/#website`,
+    name: SITE.name,
+    url: SITE.domain,
+    publisher: { '@id': org['@id'] },
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://usagdronedirectory.com/operatori?q={search_term_string}',
+      target: `${SITE.domain}/operators?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   };
@@ -24,6 +24,7 @@ export default function HomeSchema() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(person) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }} />
     </>
   );

@@ -2,13 +2,14 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 const Op = ({ slug, children }: { slug: string; children: ReactNode }) => (
-  <Link href={`/operatori/${slug}`} className="text-green-700 hover:underline font-medium">
+  <Link href={`/operators/${slug}`} className="text-green-700 hover:underline font-medium">
     {children}
   </Link>
 );
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const Cnt = ({ slug, children }: { slug: string; children: ReactNode }) => (
-  <Link href={`/judete/${slug}`} className="text-green-700 hover:underline font-medium">
+  <Link href={`/states/${slug}`} className="text-green-700 hover:underline font-medium">
     {children}
   </Link>
 );
@@ -74,7 +75,7 @@ export const blogContent: Record<string, ReactNode> = {
         rice, cotton, and soybean applications.
       </p>
       <p className="mt-6">
-        See the full list of <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>.
+        See the full list of <Link href="/operators" className="text-green-700 hover:underline font-medium">all verified US operators</Link>.
       </p>
     </div>
   ),
@@ -112,7 +113,7 @@ export const blogContent: Record<string, ReactNode> = {
         Mississippi, and Arkansas.
       </p>
       <p className="mt-6">
-        Browse <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> by state.
+        Browse <Link href="/operators" className="text-green-700 hover:underline font-medium">all US operators</Link> by state.
       </p>
     </div>
   ),
@@ -154,7 +155,7 @@ export const blogContent: Record<string, ReactNode> = {
         Midwest.
       </p>
       <p className="mt-6">
-        Open our <Link href="/unelte/comparator-drone" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</Link> for
+        Open our <Link href="/tools/drone-comparison" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</Link> for
         a detailed side-by-side analysis.
       </p>
     </div>
@@ -179,7 +180,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         Drone spraying for vineyards and orchards costs $25–35/acre per application in 2026, depending
         on canopy density, terrain, and operator. See our{' '}
-        <Link href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">full pricing guide</Link>.
+        <Link href="/pricing" className="text-green-700 hover:underline font-medium">full pricing guide</Link>.
       </p>
       <h2>Typical spray schedule</h2>
       <ol>
@@ -200,7 +201,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         Look for operators with vineyard-specific experience — canopy penetration settings, low-drift
         nozzle configurations, and familiarity with wine-grape fungicide windows. Browse{' '}
-        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> and
+        <Link href="/operators" className="text-green-700 hover:underline font-medium">all US operators</Link> and
         filter by crop type.
       </p>
     </div>
@@ -226,7 +227,7 @@ export const blogContent: Record<string, ReactNode> = {
         <li><strong>10. Texas Hill Country, TX</strong>: ~5,000 acres. Fastest-growing wine region in the US by new plantings.</li>
       </ol>
       <p className="mt-4">
-        Browse <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> and
+        Browse <Link href="/operators" className="text-green-700 hover:underline font-medium">all US operators</Link> and
         filter by crop to find vineyard specialists in your region.
       </p>
     </div>
@@ -263,7 +264,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         USDA EQIP (Environmental Quality Incentives Program) and FSA loan programs can offset
         30–50% of equipment costs for qualifying operations. See our{' '}
-        <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</Link> for
+        <Link href="/guides/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</Link> for
         details on how to apply.
       </p>
     </div>
@@ -304,7 +305,7 @@ export const blogContent: Record<string, ReactNode> = {
       </p>
       <p className="mt-6">
         Find verified drone operators across the South at our{' '}
-        <Link href="/operatori" className="text-green-700 hover:underline font-medium">operator directory</Link>.
+        <Link href="/operators" className="text-green-700 hover:underline font-medium">operator directory</Link>.
       </p>
     </div>
   ),
@@ -334,8 +335,8 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         Drone spraying for row crops typically runs $12–17/acre per application in 2026, depending on
         field size, region, and number of applications booked. See our{' '}
-        <Link href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">full pricing guide</Link> and{' '}
-        <Link href="/unelte/calculator-pret-pulverizare" className="text-green-700 hover:underline font-medium">cost calculator</Link>.
+        <Link href="/pricing" className="text-green-700 hover:underline font-medium">full pricing guide</Link> and{' '}
+        <Link href="/tools/spray-cost-calculator" className="text-green-700 hover:underline font-medium">cost calculator</Link>.
       </p>
       <h2>Find a grain crop specialist</h2>
       <p>
@@ -379,7 +380,7 @@ export const blogContent: Record<string, ReactNode> = {
       </ol>
       <p className="mt-4">
         Browse{' '}
-        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
+        <Link href="/operators" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
         and filter by state to find Corn Belt coverage in your area.
       </p>
     </div>
@@ -389,7 +390,7 @@ export const blogContent: Record<string, ReactNode> = {
     <div className="space-y-5">
       <p>
         2026 brings important regulatory updates for commercial agricultural drone operators in the US.
-        If you apply pesticides or fertilizers by drone commercially, here's what you need to know to
+        If you apply pesticides or fertilizers by drone commercially, here&apos;s what you need to know to
         stay compliant with FAA and EPA requirements.
       </p>
       <h2>1. FAA Part 107 — Remote Pilot Certificate (required for all operators)</h2>
@@ -423,7 +424,7 @@ export const blogContent: Record<string, ReactNode> = {
       </p>
       <p className="mt-6">
         Read our{' '}
-        <Link href="/ghid/legislatie-drone-agricole" className="text-green-700 hover:underline font-medium">complete US ag drone regulations guide</Link>{' '}
+        <Link href="/guides/legislatie-drone-agricole" className="text-green-700 hover:underline font-medium">complete US ag drone regulations guide</Link>{' '}
         for state-by-state details.
       </p>
     </div>
@@ -459,7 +460,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p className="mt-4">
         High winds and low humidity in the Plains require operators experienced with drift management
         and application-window timing. Browse{' '}
-        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
+        <Link href="/operators" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
         to find specialists in your state.
       </p>
     </div>
@@ -502,7 +503,7 @@ export const blogContent: Record<string, ReactNode> = {
       </p>
       <p className="mt-6">
         Read our{' '}
-        <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">complete USDA EQIP funding guide</Link>{' '}
+        <Link href="/guides/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">complete USDA EQIP funding guide</Link>{' '}
         to prepare your own application.
       </p>
     </div>

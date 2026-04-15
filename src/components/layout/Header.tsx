@@ -6,21 +6,21 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, Plane, ChevronDown } from 'lucide-react';
 
 const nav = [
-  { href: '/operatori', label: 'Find Operators' },
-  { href: '/judete', label: 'Browse by State' },
+  { href: '/operators', label: 'Find Operators' },
+  { href: '/states', label: 'Browse by State' },
   {
     label: 'Crops & Services',
     dropdown: [
-      { href: '/culturi', label: 'Crops', description: 'Corn, soybeans, cotton, wheat, vineyards' },
-      { href: '/servicii', label: 'Services', description: 'Spraying, seeding, mapping, scouting' },
-      { href: '/drone', label: 'Drone Models', description: 'DJI Agras, Hylio, XAG' },
+      { href: '/crops', label: 'Crops', description: 'Corn, soybeans, cotton, wheat, vineyards' },
+      { href: '/services', label: 'Services', description: 'Spraying, seeding, mapping, scouting' },
+      { href: '/drones', label: 'Drone Models', description: 'DJI Agras, Hylio, XAG' },
     ],
   },
   {
     label: 'Resources',
     dropdown: [
-      { href: '/preturi-pulverizare-drona', label: 'Pricing Guide', description: 'Per-acre rates by crop and region 2026' },
-      { href: '/despre', label: 'About', description: 'About this directory' },
+      { href: '/pricing', label: 'Pricing Guide', description: 'Per-acre rates by crop and region 2026' },
+      { href: '/about', label: 'About', description: 'About this directory' },
       { href: '/contact', label: 'Contact', description: 'Get in touch with our team' },
     ],
   },
@@ -106,7 +106,7 @@ export default function Header() {
             )}
 
             <Link
-              href="/adauga-operator"
+              href="/list-your-business"
               className="ml-2 px-4 py-2 text-white text-sm font-semibold rounded-lg bg-green-700 hover:bg-green-800 transition-colors"
             >
               List Your Business
@@ -160,7 +160,7 @@ export default function Header() {
               )}
 
               <Link
-                href="/adauga-operator"
+                href="/list-your-business"
                 className="mt-3 mx-3 px-4 py-2 text-white text-sm font-semibold rounded-lg text-center bg-green-700 hover:bg-green-800 transition-colors"
                 onClick={() => setOpen(false)}
               >

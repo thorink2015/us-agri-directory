@@ -28,12 +28,12 @@ import HomeSchema from '@/components/schema/HomeSchema';
 import NewsletterCTA from '@/components/ui/NewsletterCTA';
 
 const services = [
-  { icon: Droplets, name: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', href: '/servicii/spraying' },
-  { icon: Leaf, name: 'Cover Crop Seeding', desc: 'Broadcast cereal rye, ryegrass, and clover blends', href: '/servicii/seeding' },
-  { icon: Map, name: 'Aerial Mapping', desc: 'NDVI maps, orthomosaics, and prescription files', href: '/servicii/mapping' },
-  { icon: Eye, name: 'Crop Scouting', desc: 'Pest pressure, disease, hail damage identification', href: '/servicii/monitoring' },
-  { icon: Sprout, name: 'Fertilizer Application', desc: 'Granular and foliar nutrient application', href: '/servicii/spreading' },
-  { icon: Plane, name: 'Emergency Response', desc: '24–48 hour mobilization for urgent applications', href: '/servicii/emergency' },
+  { icon: Droplets, name: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', href: '/services/spraying' },
+  { icon: Leaf, name: 'Cover Crop Seeding', desc: 'Broadcast cereal rye, ryegrass, and clover blends', href: '/services/seeding' },
+  { icon: Map, name: 'Aerial Mapping', desc: 'NDVI maps, orthomosaics, and prescription files', href: '/services/mapping' },
+  { icon: Eye, name: 'Crop Scouting', desc: 'Pest pressure, disease, hail damage identification', href: '/services/monitoring' },
+  { icon: Sprout, name: 'Fertilizer Application', desc: 'Granular and foliar nutrient application', href: '/services/spreading' },
+  { icon: Plane, name: 'Emergency Response', desc: '24–48 hour mobilization for urgent applications', href: '/services/emergency' },
 ];
 
 const howItWorks = [
@@ -82,7 +82,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
             <CheckCircle className="w-4 h-4 text-yellow-400" />
-            {operators.filter((op) => op.verified).length} verified ag drone operators listed
+            {operators.length}+ verified ag drone operators listed
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance">
@@ -195,7 +195,7 @@ export default function HomePage() {
               <p className="text-gray-500 mt-1">Verified, insured, and actively booking</p>
             </div>
             <Link
-              href="/operatori"
+              href="/operators"
               className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors"
             >
               View all operators <ArrowRight className="w-4 h-4" />
@@ -222,7 +222,7 @@ export default function HomePage() {
             {crops.map((crop) => (
               <Link
                 key={crop.slug}
-                href={`/culturi/${crop.slug}`}
+                href={`/crops/${crop.slug}`}
                 className="flex items-center gap-3 p-4 bg-white rounded-xl border border-gray-200 hover:border-green-300 hover:shadow-sm transition-all group"
               >
                 <span className="text-2xl">{crop.icon}</span>
@@ -249,7 +249,7 @@ export default function HomePage() {
               <p className="text-gray-500 mt-1">Operators active in all 50 states</p>
             </div>
             <Link
-              href="/judete"
+              href="/states"
               className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors"
             >
               All states <ArrowRight className="w-4 h-4" />
@@ -294,7 +294,7 @@ export default function HomePage() {
 
           <div className="text-center mt-10">
             <Link
-              href="/operatori"
+              href="/operators"
               className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition-colors"
             >
               Find an Operator <ArrowRight className="w-4 h-4" />
@@ -304,7 +304,7 @@ export default function HomePage() {
       </section>
 
       {/* Newsletter CTA */}
-      <NewsletterCTA variant="ro" />
+      <NewsletterCTA />
 
       {/* FAQ */}
       <section className="py-14">
@@ -314,7 +314,7 @@ export default function HomePage() {
           <FAQAccordion faqs={allFaqs} />
           <div className="text-center mt-6">
             <Link
-              href="/preturi-pulverizare-drona"
+              href="/pricing"
               className="text-green-700 font-medium text-sm hover:underline"
             >
               View the complete pricing guide →
@@ -336,7 +336,7 @@ export default function HomePage() {
             <li>✓ Featured placement available for your state pages</li>
           </ul>
           <Link
-            href="/adauga-operator"
+            href="/list-your-business"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-800 font-bold rounded-xl hover:bg-green-50 transition-colors"
           >
             Create Your Free Listing <ArrowRight className="w-5 h-5" />

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { MapPin, Phone, Globe, CheckCircle, Plane, Zap, Shield } from 'lucide-react';
 import { Operator, SERVICE_LABELS } from '@/data/types';
-import { formatPrice, addUtmParams } from '@/lib/utils';
+import { formatPrice, addUtmParams, getStateAbbr } from '@/lib/utils';
 import {
   trackOperatorWebsiteClick,
   trackOperatorPhoneClick,
@@ -35,7 +35,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1.5 flex-wrap">
             <Link
-              href={`/operatori/${operator.slug}`}
+              href={`/operators/${operator.slug}`}
               className="font-bold text-gray-900 group-hover:text-green-700 transition-colors text-base leading-tight truncate"
               itemProp="name"
               title={operator.name}
@@ -51,7 +51,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
           {showCounty && (
             <div className="flex items-center gap-1 text-xs text-gray-500 mt-0.5" itemProp="address">
               <MapPin className="w-3 h-3 flex-shrink-0" />
-              <span className="truncate">{operator.city}, US</span>
+              <span className="truncate">{operator.city}, {getStateAbbr(operator.counties)}</span>
             </div>
           )}
         </div>
@@ -86,7 +86,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
         ))}
         {hiddenCount > 0 && (
           <Link
-            href={`/operatori/${operator.slug}`}
+            href={`/operators/${operator.slug}`}
             className="text-[11px] text-gray-500 hover:text-green-700 px-2 py-0.5 rounded-md border border-gray-200 hover:border-green-300 transition-colors font-medium"
             aria-label={`View ${hiddenCount} more services`}
           >
@@ -133,7 +133,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
       {/* Footer: 2 CTAs */}
       <footer className="flex items-stretch gap-2 mt-3 pt-3 border-t border-gray-100">
         <Link
-          href={`/operatori/${operator.slug}`}
+          href={`/operators/${operator.slug}`}
           aria-label={`View profile for ${operator.name}`}
           className="flex-1 text-center px-3 py-2 bg-green-700 text-white text-xs font-semibold rounded-lg hover:bg-green-800 transition-colors"
         >
@@ -161,7 +161,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
           </a>
         ) : (
           <Link
-            href={`/operatori/${operator.slug}#contact`}
+            href={`/operators/${operator.slug}#contact`}
             className="flex-1 text-center px-3 py-2 bg-white border border-green-700 text-green-700 text-xs font-semibold rounded-lg hover:bg-green-50 transition-colors"
           >
             Contact

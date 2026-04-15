@@ -11,8 +11,8 @@ interface Props {
  * Point `href` to your WhatsApp channel URL once created at whatsapp.com/channel.
  */
 export default function WhatsAppChannel({
-  href = 'https://whatsapp.com/channel/droneagricol',
-  label = 'Canal WhatsApp',
+  href = 'https://whatsapp.com/channel/usagdronedirectory',
+  label = 'WhatsApp Channel',
   className = '',
 }: Props) {
   return (

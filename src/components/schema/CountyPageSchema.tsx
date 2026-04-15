@@ -11,12 +11,12 @@ export default function CountyPageSchema({ county, operators: ops, faqs }: Props
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: `Operatori drone agricole în județul ${county.name}`,
-    description: `Lista completă a operatorilor de drone agricole din ${county.name}. ${ops.length} operatori disponibili.`,
-    url: `https://terradron.ro/judete/${county.slug}`,
+    name: `Agricultural Drone Operators in ${county.name}`,
+    description: `Complete list of agricultural drone operators in ${county.name}. ${ops.length} operators available.`,
+    url: `https://usagdronedirectory.com/states/${county.slug}`,
     mainEntity: {
       '@type': 'ItemList',
-      name: `Operatori drone agricole ${county.name}`,
+      name: `Agricultural Drone Operators in ${county.name}`,
       numberOfItems: ops.length,
       itemListElement: ops.map((op, i) => ({
         '@type': 'ListItem',
@@ -24,12 +24,12 @@ export default function CountyPageSchema({ county, operators: ops, faqs }: Props
         item: {
           '@type': 'LocalBusiness',
           name: op.name,
-          url: `https://terradron.ro/operatori/${op.slug}`,
+          url: `https://usagdronedirectory.com/operators/${op.slug}`,
           telephone: op.phone,
           address: {
             '@type': 'PostalAddress',
             addressLocality: op.city,
-            addressCountry: 'RO',
+            addressCountry: 'US',
           },
         },
       })),
@@ -40,9 +40,9 @@ export default function CountyPageSchema({ county, operators: ops, faqs }: Props
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Acasă', item: 'https://terradron.ro' },
-      { '@type': 'ListItem', position: 2, name: 'Județe', item: 'https://terradron.ro/judete' },
-      { '@type': 'ListItem', position: 3, name: county.name, item: `https://terradron.ro/judete/${county.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
+      { '@type': 'ListItem', position: 2, name: 'States', item: 'https://usagdronedirectory.com/states' },
+      { '@type': 'ListItem', position: 3, name: county.name, item: `https://usagdronedirectory.com/states/${county.slug}` },
     ],
   };
 

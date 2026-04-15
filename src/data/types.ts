@@ -89,6 +89,7 @@ export interface Crop {
   name: string;
   nameRo: string;             // English display name
   description: string;
+  aeoBlock: string;           // 2-3 sentence definitive answer for AI engines, contains a number
   priceMinUsd: number;        // min per-acre rate (USD)
   priceMaxUsd: number;        // max per-acre rate (USD)
   treatmentMonths: number[];
@@ -97,6 +98,8 @@ export interface Crop {
   mainPests?: string[];
   uvlNormLHa?: string;        // carrier volume per acre (gpa)
   yieldGainPct?: number;
+  authorityLinks: { label: string; url: string }[];
+  lastReviewedAt?: string;    // ISO date (YYYY-MM-DD) of last editorial review
 }
 
 export interface DroneModel {

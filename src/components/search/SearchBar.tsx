@@ -12,9 +12,9 @@ export default function SearchBar() {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (county) {
-      router.push(`/judete/${county}`);
+      router.push(`/states/${county}`);
     } else {
-      router.push('/operatori');
+      router.push('/operators');
     }
   }
 

@@ -13,11 +13,11 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
   return {
     title: `${operator.name} | Ag Drone Services ${operator.city} | Rates and Contact`,
     description: `${operator.name}, agricultural drone operator based in ${operator.city}. ${price}${operator.services.length} services available. ${coverage} Contact directly.`,
-    alternates: { canonical: `/operatori/${operator.slug}` },
+    alternates: { canonical: `/operators/${operator.slug}` },
     openGraph: {
       title: `${operator.name} | US Ag Drone Directory`,
       description: operator.description.slice(0, 155),
-      url: `${SITE_URL}/operatori/${operator.slug}`,
+      url: `${SITE_URL}/operators/${operator.slug}`,
       siteName: SITE_NAME,
       type: 'website',
     },
@@ -35,11 +35,11 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
   return {
     title: `Drone Spraying Services in ${county.name} | Ag Drone Directory`,
     description: desc,
-    alternates: { canonical: `/judete/${county.slug}` },
+    alternates: { canonical: `/states/${county.slug}` },
     openGraph: {
       title: `Drone Spraying in ${county.name} | US Ag Drone Directory`,
       description: `Verified ag drone operators in ${county.name}. Spraying, seeding, mapping, and scouting for ${crops} growers.`,
-      url: `${SITE_URL}/judete/${county.slug}`,
+      url: `${SITE_URL}/states/${county.slug}`,
       siteName: SITE_NAME,
       type: 'website',
     },
