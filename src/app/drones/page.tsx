@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     'Compare commercial agricultural spray drones used by operators across the US: DJI Agras T50, T25P, T100, Hylio AG-272, and XAG P100 Pro. Specifications and pricing.',
   alternates: {
-    canonical: '/drone',
+    canonical: '/drones',
   },
 };
 
@@ -29,7 +29,7 @@ export default function DronePage() {
         {droneModels.map((drone) => (
           <Link
             key={drone.slug}
-            href={`/drone/${drone.slug}`}
+            href={`/drones/${drone.slug}`}
             className="group bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-blue-300 transition-all"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -77,7 +77,7 @@ export default function DronePage() {
           Use the operator search filters to find drone applicators by drone model in your state.
         </p>
         <Link
-          href="/operatori"
+          href="/operators"
           className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
         >
           Find Operators

@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${service.name} | Agricultural Drone Services US 2026`,
     description: `${service.description} Find verified agricultural drone operators offering ${service.name.toLowerCase()} across all 50 states.`,
     alternates: {
-      canonical: `/servicii/${params.slug}`,
+      canonical: `/services/${params.slug}`,
     },
     keywords: service.keywords.join(', '),
   };
@@ -42,7 +42,7 @@ export default function ServicePage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: 'Services', href: '/servicii' },
+          { label: 'Services', href: '/services' },
           { label: service.name },
         ]}
       />
@@ -100,7 +100,7 @@ export default function ServicePage({ params }: Props) {
               No operators specializing in {service.name.toLowerCase()} are listed yet.
             </p>
             <Link
-              href="/operatori"
+              href="/operators"
               className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors"
             >
               All operators
@@ -126,7 +126,7 @@ export default function ServicePage({ params }: Props) {
             .map(([key, label]) => (
               <Link
                 key={key}
-                href={`/servicii/${key}`}
+                href={`/services/${key}`}
                 className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
               >
                 {label}

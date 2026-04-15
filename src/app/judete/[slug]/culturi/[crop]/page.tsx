@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${crop.name} Drone Spraying in ${county.name} | Agricultural Drone Services 2026`,
     description: `Drone operators for ${crop.name.toLowerCase()} in ${county.name}. Rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre — contact verified operators directly.`,
     alternates: {
-      canonical: `/judete/${params.slug}/culturi/${params.crop}`,
+      canonical: `/judete/${params.slug}/crops/${params.crop}`,
     },
   };
 }
@@ -158,7 +158,7 @@ export default function CountyCropPage({ params }: Props) {
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
-                href="/operatori"
+                href="/operators"
                 className="px-4 py-2 bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-sm font-medium hover:bg-amber-200 transition-colors"
               >
                 All US operators
@@ -191,7 +191,7 @@ export default function CountyCropPage({ params }: Props) {
             .map((c) => (
               <Link
                 key={c}
-                href={`/judete/${county.slug}/culturi/${c}`}
+                href={`/judete/${county.slug}/crops/${c}`}
                 className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
               >
                 {CROP_NAME_MAP[c] || c}

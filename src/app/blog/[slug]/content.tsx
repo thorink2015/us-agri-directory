@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 const Op = ({ slug, children }: { slug: string; children: ReactNode }) => (
-  <Link href={`/operatori/${slug}`} className="text-green-700 hover:underline font-medium">
+  <Link href={`/operators/${slug}`} className="text-green-700 hover:underline font-medium">
     {children}
   </Link>
 );
@@ -74,7 +74,7 @@ export const blogContent: Record<string, ReactNode> = {
         rice, cotton, and soybean applications.
       </p>
       <p className="mt-6">
-        See the full list of <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>.
+        See the full list of <Link href="/operators" className="text-green-700 hover:underline font-medium">all verified US operators</Link>.
       </p>
     </div>
   ),
@@ -112,7 +112,7 @@ export const blogContent: Record<string, ReactNode> = {
         Mississippi, and Arkansas.
       </p>
       <p className="mt-6">
-        Browse <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> by state.
+        Browse <Link href="/operators" className="text-green-700 hover:underline font-medium">all US operators</Link> by state.
       </p>
     </div>
   ),
@@ -200,7 +200,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         Look for operators with vineyard-specific experience — canopy penetration settings, low-drift
         nozzle configurations, and familiarity with wine-grape fungicide windows. Browse{' '}
-        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> and
+        <Link href="/operators" className="text-green-700 hover:underline font-medium">all US operators</Link> and
         filter by crop type.
       </p>
     </div>
@@ -226,7 +226,7 @@ export const blogContent: Record<string, ReactNode> = {
         <li><strong>10. Texas Hill Country, TX</strong>: ~5,000 acres. Fastest-growing wine region in the US by new plantings.</li>
       </ol>
       <p className="mt-4">
-        Browse <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> and
+        Browse <Link href="/operators" className="text-green-700 hover:underline font-medium">all US operators</Link> and
         filter by crop to find vineyard specialists in your region.
       </p>
     </div>
@@ -304,7 +304,7 @@ export const blogContent: Record<string, ReactNode> = {
       </p>
       <p className="mt-6">
         Find verified drone operators across the South at our{' '}
-        <Link href="/operatori" className="text-green-700 hover:underline font-medium">operator directory</Link>.
+        <Link href="/operators" className="text-green-700 hover:underline font-medium">operator directory</Link>.
       </p>
     </div>
   ),
@@ -379,7 +379,7 @@ export const blogContent: Record<string, ReactNode> = {
       </ol>
       <p className="mt-4">
         Browse{' '}
-        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
+        <Link href="/operators" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
         and filter by state to find Corn Belt coverage in your area.
       </p>
     </div>
@@ -459,7 +459,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p className="mt-4">
         High winds and low humidity in the Plains require operators experienced with drift management
         and application-window timing. Browse{' '}
-        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
+        <Link href="/operators" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
         to find specialists in your state.
       </p>
     </div>

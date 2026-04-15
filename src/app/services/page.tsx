@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     'Browse all agricultural drone services available through our directory: spraying, cover crop seeding, aerial mapping, crop scouting, pilot training, and equipment rental.',
   alternates: {
-    canonical: '/servicii',
+    canonical: '/services',
   },
 };
 
@@ -48,7 +48,7 @@ export default function ServicesPage() {
           return (
             <Link
               key={service.slug}
-              href={`/servicii/${service.slug}`}
+              href={`/services/${service.slug}`}
               className="group bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-green-300 transition-all"
             >
               <div className="w-11 h-11 bg-green-50 rounded-xl flex items-center justify-center mb-4">

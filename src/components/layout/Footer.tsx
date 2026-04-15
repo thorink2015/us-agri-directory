@@ -35,11 +35,11 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Services</h3>
             <ul className="space-y-2 text-sm text-green-300">
-              <li><Link href="/servicii/spraying" className="hover:text-white transition-colors">Drone Spraying</Link></li>
-              <li><Link href="/servicii/seeding" className="hover:text-white transition-colors">Cover Crop Seeding</Link></li>
-              <li><Link href="/servicii/mapping" className="hover:text-white transition-colors">Aerial Mapping</Link></li>
-              <li><Link href="/servicii/monitoring" className="hover:text-white transition-colors">Crop Scouting</Link></li>
-              <li><Link href="/servicii/spreading" className="hover:text-white transition-colors">Fertilizer Application</Link></li>
+              <li><Link href="/services/spraying" className="hover:text-white transition-colors">Drone Spraying</Link></li>
+              <li><Link href="/services/seeding" className="hover:text-white transition-colors">Cover Crop Seeding</Link></li>
+              <li><Link href="/services/mapping" className="hover:text-white transition-colors">Aerial Mapping</Link></li>
+              <li><Link href="/services/monitoring" className="hover:text-white transition-colors">Crop Scouting</Link></li>
+              <li><Link href="/services/spreading" className="hover:text-white transition-colors">Fertilizer Application</Link></li>
               <li><Link href="/pricing" className="hover:text-white transition-colors">Pricing Guide</Link></li>
             </ul>
           </div>
@@ -48,10 +48,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Directory</h3>
             <ul className="space-y-2 text-sm text-green-300">
-              <li><Link href="/operatori" className="hover:text-white transition-colors">All Operators</Link></li>
+              <li><Link href="/operators" className="hover:text-white transition-colors">All Operators</Link></li>
               <li><Link href="/judete" className="hover:text-white transition-colors">Browse by State</Link></li>
-              <li><Link href="/culturi" className="hover:text-white transition-colors">Browse by Crop</Link></li>
-              <li><Link href="/drone" className="hover:text-white transition-colors">Drone Models</Link></li>
+              <li><Link href="/crops" className="hover:text-white transition-colors">Browse by Crop</Link></li>
+              <li><Link href="/drones" className="hover:text-white transition-colors">Drone Models</Link></li>
               <li><Link href="/list-your-business" className="hover:text-white transition-colors">List Your Business</Link></li>
               <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
             </ul>

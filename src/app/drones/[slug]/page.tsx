@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${drone.name} | ${drone.manufacturer} Ag Drone: Specs & Operators`,
     description: `${drone.name}: ${drone.tankCapacityL}L tank, ${drone.coverageHaPerHour} ac/hr coverage. Find operators using ${drone.name} across the US.`,
     alternates: {
-      canonical: `/drone/${params.slug}`,
+      canonical: `/drones/${params.slug}`,
     },
   };
 }
@@ -38,7 +38,7 @@ export default function DronePage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: 'Drone Models', href: '/drone' },
+          { label: 'Drone Models', href: '/drones' },
           { label: drone.name },
         ]}
       />
@@ -140,7 +140,7 @@ export default function DronePage({ params }: Props) {
               No operators using {drone.name} are listed yet.
             </p>
             <Link
-              href="/operatori"
+              href="/operators"
               className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors"
             >
               All operators

@@ -40,7 +40,7 @@ export default function PriceCalculatorPage() {
         <p className="mt-4 text-xs text-gray-500">
           * Prices are estimates and may vary by operator, region, and field conditions.
           For an actual quote, contact{' '}
-          <a href="/operatori" className="text-green-700 underline">operators in your state</a> directly.
+          <a href="/operators" className="text-green-700 underline">operators in your state</a> directly.
         </p>
       </section>
     </div>

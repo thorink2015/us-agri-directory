@@ -21,7 +21,7 @@ export default function NotFound() {
             <ArrowRight className="w-4 h-4 rotate-180" /> Pagina principală
           </Link>
           <Link
-            href="/operatori"
+            href="/operators"
             className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-green-400 hover:text-green-700 transition-colors"
           >
             <Search className="w-4 h-4" /> Caută operatori
@@ -30,8 +30,8 @@ export default function NotFound() {
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
           {[
             { href: '/judete', label: 'Județe' },
-            { href: '/culturi', label: 'Culturi' },
-            { href: '/servicii', label: 'Servicii' },
+            { href: '/crops', label: 'Culturi' },
+            { href: '/services', label: 'Servicii' },
             { href: '/pricing', label: 'Prețuri' },
             { href: '/guides', label: 'Ghiduri' },
             { href: '/moldova', label: 'Moldova' },

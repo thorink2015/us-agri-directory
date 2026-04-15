@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Drone Services by Crop Type | Corn, Soybeans, Cotton, Wheat & More',
   description:
     'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs, and equipment for every major US crop.',
-  alternates: { canonical: '/culturi' },
+  alternates: { canonical: '/crops' },
 };
 
 export default function CropsPage() {
@@ -24,7 +24,7 @@ export default function CropsPage() {
         {crops.map((crop) => (
           <Link
             key={crop.slug}
-            href={`/culturi/${crop.slug}`}
+            href={`/crops/${crop.slug}`}
             className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-green-300 transition-all group"
           >
             <span className="text-4xl flex-shrink-0">{crop.icon}</span>

@@ -66,7 +66,7 @@ export default function DroneComparator() {
                 </td>
                 <td className="p-4">
                   <Link
-                    href={`/drone/${drone.slug}`}
+                    href={`/drones/${drone.slug}`}
                     className="text-green-700 text-sm font-medium hover:underline"
                   >
                     Details →
@@ -82,22 +82,22 @@ export default function DroneComparator() {
         <div className="bg-green-50 border border-green-200 rounded-xl p-5">
           <h3 className="font-bold text-gray-900 mb-2">Small farms (&lt; 200 acres)</h3>
           <p className="text-sm text-gray-700">
-            The <Link href="/drone/dji-agras-t25p" className="text-green-700 font-medium hover:underline">DJI Agras T25P</Link>
+            The <Link href="/drones/dji-agras-t25p" className="text-green-700 font-medium hover:underline">DJI Agras T25P</Link>
             {' '}offers the best price-to-performance ratio at $11,999.
           </p>
         </div>
         <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-5">
           <h3 className="font-bold text-gray-900 mb-2">Mid-size farms (200–1,000 acres)</h3>
           <p className="text-sm text-gray-700">
-            The <Link href="/drone/dji-agras-t50" className="text-green-700 font-medium hover:underline">DJI Agras T50</Link>
+            The <Link href="/drones/dji-agras-t50" className="text-green-700 font-medium hover:underline">DJI Agras T50</Link>
             {' '}is the most widely adopted platform by US operators.
           </p>
         </div>
         <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
           <h3 className="font-bold text-gray-900 mb-2">Large operations (&gt; 1,000 acres)</h3>
           <p className="text-sm text-gray-700">
-            The <Link href="/drone/dji-agras-t100" className="text-green-700 font-medium hover:underline">DJI Agras T100</Link>
-            {' '}(75L tank, 40 ac/hr) or the <Link href="/drone/hylio-ag-272" className="text-green-700 font-medium hover:underline">Hylio AG-272</Link> for NDAA-compliant operations.
+            The <Link href="/drones/dji-agras-t100" className="text-green-700 font-medium hover:underline">DJI Agras T100</Link>
+            {' '}(75L tank, 40 ac/hr) or the <Link href="/drones/hylio-ag-272" className="text-green-700 font-medium hover:underline">Hylio AG-272</Link> for NDAA-compliant operations.
           </p>
         </div>
       </section>

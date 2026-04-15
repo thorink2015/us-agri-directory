@@ -24,7 +24,7 @@ export default function CountyPageSchema({ county, operators: ops, faqs }: Props
         item: {
           '@type': 'LocalBusiness',
           name: op.name,
-          url: `https://terradron.ro/operatori/${op.slug}`,
+          url: `https://terradron.ro/operators/${op.slug}`,
           telephone: op.phone,
           address: {
             '@type': 'PostalAddress',

@@ -118,7 +118,7 @@ export default function StatePage({ params }: Props) {
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link
-                  href="/operatori"
+                  href="/operators"
                   className="px-4 py-2 bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-sm font-medium hover:bg-amber-200 transition-colors"
                 >
                   View all operators
@@ -144,7 +144,7 @@ export default function StatePage({ params }: Props) {
               CROP_NAME_MAP[crop] ? (
                 <Link
                   key={crop}
-                  href={`/culturi/${crop}`}
+                  href={`/crops/${crop}`}
                   className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
                 >
                   {CROP_NAME_MAP[crop]}

@@ -162,7 +162,7 @@ export default function TreatmentCalendarPage() {
           Find verified drone operators available in your state for this season.
         </p>
         <a
-          href="/operatori"
+          href="/operators"
           className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
         >
           Find an Operator →

@@ -16,7 +16,7 @@ export default function HomeSchema() {
     url: 'https://usagdronedirectory.com',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://usagdronedirectory.com/operatori?q={search_term_string}',
+      target: 'https://usagdronedirectory.com/operators?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };

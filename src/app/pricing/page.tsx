@@ -235,7 +235,7 @@ export default function PricingPage() {
             ))}
           </div>
           <div className="text-center mt-4">
-            <Link href="/operatori" className="text-green-700 font-medium text-sm hover:underline">
+            <Link href="/operators" className="text-green-700 font-medium text-sm hover:underline">
               View all operators →
             </Link>
           </div>

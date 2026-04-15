@@ -13,11 +13,11 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
   return {
     title: `${operator.name} | Ag Drone Services ${operator.city} | Rates and Contact`,
     description: `${operator.name}, agricultural drone operator based in ${operator.city}. ${price}${operator.services.length} services available. ${coverage} Contact directly.`,
-    alternates: { canonical: `/operatori/${operator.slug}` },
+    alternates: { canonical: `/operators/${operator.slug}` },
     openGraph: {
       title: `${operator.name} | US Ag Drone Directory`,
       description: operator.description.slice(0, 155),
-      url: `${SITE_URL}/operatori/${operator.slug}`,
+      url: `${SITE_URL}/operators/${operator.slug}`,
       siteName: SITE_NAME,
       type: 'website',
     },

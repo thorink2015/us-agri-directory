@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `Drone Spraying for ${crop.name}: Complete Guide 2026`,
     description: `Complete guide to agricultural drone spraying on ${crop.name.toLowerCase()}. Rates $${crop.priceMinUsd}–$${crop.priceMaxUsd}/acre, treatment calendar, and verified operators.`,
-    alternates: { canonical: `/culturi/${params.slug}` },
+    alternates: { canonical: `/crops/${params.slug}` },
   };
 }
 
@@ -63,8 +63,8 @@ export default function CropPage({ params }: Props) {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-      { '@type': 'ListItem', position: 2, name: 'Crops', item: 'https://usagdronedirectory.com/culturi' },
-      { '@type': 'ListItem', position: 3, name: crop.name, item: `https://usagdronedirectory.com/culturi/${crop.slug}` },
+      { '@type': 'ListItem', position: 2, name: 'Crops', item: 'https://usagdronedirectory.com/crops' },
+      { '@type': 'ListItem', position: 3, name: crop.name, item: `https://usagdronedirectory.com/crops/${crop.slug}` },
     ],
   };
 
@@ -73,7 +73,7 @@ export default function CropPage({ params }: Props) {
     '@type': 'Article',
     headline: `Drone Spraying for ${crop.name}: Guide 2026`,
     description: crop.description,
-    url: `https://usagdronedirectory.com/culturi/${crop.slug}`,
+    url: `https://usagdronedirectory.com/crops/${crop.slug}`,
     publisher: {
       '@type': 'Organization',
       name: 'US Ag Drone Directory',
@@ -89,7 +89,7 @@ export default function CropPage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: 'Crops', href: '/culturi' },
+          { label: 'Crops', href: '/crops' },
           { label: crop.name },
         ]}
       />
@@ -228,7 +228,7 @@ export default function CropPage({ params }: Props) {
             ))}
           </div>
           <div className="text-center mt-4">
-            <Link href="/operatori" className="text-green-700 font-medium text-sm hover:underline">
+            <Link href="/operators" className="text-green-700 font-medium text-sm hover:underline">
               View all operators →
             </Link>
           </div>

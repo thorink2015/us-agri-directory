@@ -14,14 +14,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ─── Static pages ────────────────────────────────────────────────────────
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${BASE_URL}/operatori`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/operators`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/judete`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/culturi`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/servicii`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/drone`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/crops`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/drones`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/list-your-business`, lastModified: now, changeFrequency: 'yearly', priority: 0.6 },
-    { url: `${BASE_URL}/despre`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
+    { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE_URL}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ─── Operator profiles ───────────────────────────────────────────────────
   const operatorPages: MetadataRoute.Sitemap = operators.map((op) => ({
-    url: `${BASE_URL}/operatori/${op.slug}`,
+    url: `${BASE_URL}/operators/${op.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.85,
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ─── State + Crop pages (50 × 8 = 400) ───────────────────────────────────
   const countyCropPages: MetadataRoute.Sitemap = counties.flatMap((county) =>
     crops.map((crop) => ({
-      url: `${BASE_URL}/judete/${county.slug}/culturi/${crop.slug}`,
+      url: `${BASE_URL}/judete/${county.slug}/crops/${crop.slug}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
@@ -57,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceKeys = Object.keys(SERVICE_LABELS);
   const countyServicePages: MetadataRoute.Sitemap = counties.flatMap((county) =>
     serviceKeys.map((serviceKey) => ({
-      url: `${BASE_URL}/judete/${county.slug}/servicii/${serviceKey}`,
+      url: `${BASE_URL}/judete/${county.slug}/services/${serviceKey}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
@@ -66,7 +66,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ─── Crop pages (8) ──────────────────────────────────────────────────────
   const cropPages: MetadataRoute.Sitemap = crops.map((c) => ({
-    url: `${BASE_URL}/culturi/${c.slug}`,
+    url: `${BASE_URL}/crops/${c.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
@@ -74,7 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ─── Service pages ───────────────────────────────────────────────────────
   const servicePages: MetadataRoute.Sitemap = services.map((s) => ({
-    url: `${BASE_URL}/servicii/${s.slug}`,
+    url: `${BASE_URL}/services/${s.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.75,
@@ -82,7 +82,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ─── Drone model pages ───────────────────────────────────────────────────
   const dronePages: MetadataRoute.Sitemap = droneModels.map((d) => ({
-    url: `${BASE_URL}/drone/${d.slug}`,
+    url: `${BASE_URL}/drones/${d.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
     priority: 0.65,

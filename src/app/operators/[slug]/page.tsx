@@ -62,7 +62,7 @@ export default function OperatorPage({ params }: Props) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
           items={[
-            { label: 'Operators', href: '/operatori' },
+            { label: 'Operators', href: '/operators' },
             { label: operator.name },
           ]}
         />
@@ -154,7 +154,7 @@ export default function OperatorPage({ params }: Props) {
                 {operator.services.map((s) => (
                   <Link
                     key={s}
-                    href={`/servicii/${s}`}
+                    href={`/services/${s}`}
                     className="px-3 py-2 bg-green-50 text-green-800 border border-green-200 rounded-lg text-sm font-medium hover:bg-green-100 hover:border-green-300 transition-colors text-center"
                   >
                     {SERVICE_LABELS[s]}
@@ -171,7 +171,7 @@ export default function OperatorPage({ params }: Props) {
                   {operator.crops.map((c) => (
                     <Link
                       key={c}
-                      href={`/culturi/${c}`}
+                      href={`/crops/${c}`}
                       className="px-3 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors"
                     >
                       {CROP_NAME_MAP[c] || c}
@@ -189,7 +189,7 @@ export default function OperatorPage({ params }: Props) {
                   {operator.drones.map((d) => (
                     <Link
                       key={d}
-                      href={`/drone/${d}`}
+                      href={`/drones/${d}`}
                       className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-800 border border-blue-200 rounded-lg text-sm font-medium hover:bg-blue-100 transition-colors"
                     >
                       <Plane className="w-3.5 h-3.5 rotate-45" />

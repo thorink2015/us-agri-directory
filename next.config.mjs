@@ -29,6 +29,16 @@ const nextConfig = {
       // Guides hub + individual guide slugs
       { source: '/ghid', destination: '/guides', permanent: true },
       { source: '/ghid/:slug', destination: '/guides/:slug', permanent: true },
+
+      // High-traffic route renames
+      { source: '/operatori', destination: '/operators', permanent: true },
+      { source: '/operatori/:slug', destination: '/operators/:slug', permanent: true },
+      { source: '/culturi', destination: '/crops', permanent: true },
+      { source: '/culturi/:slug', destination: '/crops/:slug', permanent: true },
+      { source: '/servicii', destination: '/services', permanent: true },
+      { source: '/servicii/:slug', destination: '/services/:slug', permanent: true },
+      { source: '/drone', destination: '/drones', permanent: true },
+      { source: '/drone/:slug', destination: '/drones/:slug', permanent: true },
     ];
   },
 };

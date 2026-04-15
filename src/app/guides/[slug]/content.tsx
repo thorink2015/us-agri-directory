@@ -300,9 +300,9 @@ export const guideContent: Record<string, ReactNode> = {
         application. Most commonly approved models:
       </p>
       <ul>
-        <li><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a>: $12,000–15,000 (drone only)</li>
-        <li><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a>: $18,000–22,000</li>
-        <li><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a>: $34,000–42,000</li>
+        <li><a href="/drones/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a>: $12,000–15,000 (drone only)</li>
+        <li><a href="/drones/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a>: $18,000–22,000</li>
+        <li><a href="/drones/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a>: $34,000–42,000</li>
         <li>Hylio AG-272 (NDAA-compliant): $25,000–30,000</li>
       </ul>
 
@@ -477,17 +477,17 @@ export const guideContent: Record<string, ReactNode> = {
       </p>
       <ul>
         <li>
-          <strong><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a></strong>:
+          <strong><a href="/drones/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a></strong>:
           20L tank, ~60 acres/hour, $10,000–14,000. Best entry-level option for specialty crops
           (vineyards, orchards) or operators starting on smaller fields.
         </li>
         <li>
-          <strong><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a></strong>:
+          <strong><a href="/drones/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a></strong>:
           40L tank, ~100 acres/hour, $18,000–22,000. The most popular production drone in the US.
           Handles corn, soybean, wheat, and cotton at scale.
         </li>
         <li>
-          <strong><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a></strong>:
+          <strong><a href="/drones/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a></strong>:
           80L tank, ~175 acres/hour, $34,000–42,000. For high-volume operations (1,000+ acres/season).
           Requires Part 137 certificate and careful logistics due to size and weight.
         </li>
@@ -501,7 +501,7 @@ export const guideContent: Record<string, ReactNode> = {
       </p>
       <ul>
         <li>
-          <strong><a href="/drone/hylio-ag-272" className="text-green-700 hover:underline font-medium">Hylio AG-272</a></strong>:
+          <strong><a href="/drones/hylio-ag-272" className="text-green-700 hover:underline font-medium">Hylio AG-272</a></strong>:
           10-gallon (~38L) tank, ~50 acres/hour, $25,000–30,000. Growing dealer network; manufacturer
           training required for warranty coverage.
         </li>
@@ -515,7 +515,7 @@ export const guideContent: Record<string, ReactNode> = {
       </p>
       <ul>
         <li>
-          <strong><a href="/drone/xag-p100" className="text-green-700 hover:underline font-medium">XAG P100 Pro</a></strong>:
+          <strong><a href="/drones/xag-p100" className="text-green-700 hover:underline font-medium">XAG P100 Pro</a></strong>:
           50L tank, ~80 acres/hour, $20,000–24,000. Strong AI features; good fit for precision
           application on specialty crops.
         </li>
@@ -780,8 +780,8 @@ export const guideContent: Record<string, ReactNode> = {
           — growers across the Southeast actively search by state
         </li>
         <li>Partner with established operators like{' '}
-          <a href="/operatori/osprey-agri-drone-national" className="text-green-700 hover:underline font-medium">Osprey Agri Drones</a> or{' '}
-          <a href="/operatori/kdb-land-and-air" className="text-green-700 hover:underline font-medium">KDB Land and Air</a>{' '}
+          <a href="/operators/osprey-agri-drone-national" className="text-green-700 hover:underline font-medium">Osprey Agri Drones</a> or{' '}
+          <a href="/operators/kdb-land-and-air" className="text-green-700 hover:underline font-medium">KDB Land and Air</a>{' '}
           for subcontracting during peak season
         </li>
       </ul>
@@ -884,7 +884,7 @@ export const guideContent: Record<string, ReactNode> = {
 
       <h2>Useful tools</h2>
       <ul>
-        <li><a href="/drone" className="text-green-700 hover:underline font-medium">Ag drone comparison: DJI, Hylio, XAG</a></li>
+        <li><a href="/drones" className="text-green-700 hover:underline font-medium">Ag drone comparison: DJI, Hylio, XAG</a></li>
         <li><a href="/pricing" className="text-green-700 hover:underline font-medium">Drone spray pricing guide 2026</a></li>
         <li><a href="/tools/spray-cost-calculator" className="text-green-700 hover:underline font-medium">Spray cost calculator</a></li>
       </ul>

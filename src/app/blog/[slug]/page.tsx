@@ -130,7 +130,7 @@ export default function BlogPostPage({ params }: Props) {
           <h2 className="font-bold text-gray-900 mb-2">Looking for a drone operator near you?</h2>
           <p className="text-sm text-gray-600 mb-4">Browse our full directory of verified US agricultural drone operators.</p>
           <Link
-            href="/operatori"
+            href="/operators"
             className="inline-flex items-center gap-2 px-6 py-2.5 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm"
           >
             All Operators <ArrowRight className="w-4 h-4" />

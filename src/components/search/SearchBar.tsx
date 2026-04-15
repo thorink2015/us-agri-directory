@@ -14,7 +14,7 @@ export default function SearchBar() {
     if (county) {
       router.push(`/judete/${county}`);
     } else {
-      router.push('/operatori');
+      router.push('/operators');
     }
   }
 
