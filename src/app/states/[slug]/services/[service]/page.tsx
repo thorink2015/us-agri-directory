@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${service.name} in ${county.name} | Agricultural Drone Operators 2026`,
     description: `${service.name} drone services in ${county.name}. ${service.description} Find verified operators and contact them directly.`,
     alternates: {
-      canonical: `/judete/${params.slug}/services/${params.service}`,
+      canonical: `/states/${params.slug}/services/${params.service}`,
     },
   };
 }
@@ -59,8 +59,8 @@ export default function CountyServicePage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: 'States', href: '/judete' },
-          { label: county.name, href: `/judete/${county.slug}` },
+          { label: 'States', href: '/states' },
+          { label: county.name, href: `/states/${county.slug}` },
           { label: service.name },
         ]}
       />
@@ -151,14 +151,14 @@ export default function CountyServicePage({ params }: Props) {
             .map(([key, label]) => (
               <Link
                 key={key}
-                href={`/judete/${county.slug}/services/${key}`}
+                href={`/states/${county.slug}/services/${key}`}
                 className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
               >
                 {label}
               </Link>
             ))}
           <Link
-            href={`/judete/${county.slug}`}
+            href={`/states/${county.slug}`}
             className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-600"
           >
             ← Back to {county.name}

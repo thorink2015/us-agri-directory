@@ -8,7 +8,7 @@ const Op = ({ slug, children }: { slug: string; children: ReactNode }) => (
 );
 
 const Cnt = ({ slug, children }: { slug: string; children: ReactNode }) => (
-  <Link href={`/judete/${slug}`} className="text-green-700 hover:underline font-medium">
+  <Link href={`/states/${slug}`} className="text-green-700 hover:underline font-medium">
     {children}
   </Link>
 );

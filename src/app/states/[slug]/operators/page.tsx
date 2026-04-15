@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `Drone Operators in ${county.name} | Agricultural Drone Directory`,
     description: `Full list of agricultural drone operators in ${county.name}. Direct contact and estimated rates.`,
-    alternates: { canonical: `/judete/${params.slug}/operatori` },
+    alternates: { canonical: `/states/${params.slug}/operators` },
   };
 }
 
@@ -34,8 +34,8 @@ export default function CountyOperatorsPage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: 'States', href: '/judete' },
-          { label: county.name, href: `/judete/${county.slug}` },
+          { label: 'States', href: '/states' },
+          { label: county.name, href: `/states/${county.slug}` },
           { label: 'Operators' },
         ]}
       />

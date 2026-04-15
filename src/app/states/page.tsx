@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: 'Drone Spraying Services by State | All 50 States',
   description:
     'Find agricultural drone operators in all 50 states. Browse by region to find verified drone spraying, seeding, and mapping services near your farm.',
-  alternates: { canonical: '/judete' },
+  alternates: { canonical: '/states' },
   openGraph: {
     title: 'Ag Drone Services by State | US Agricultural Drone Directory',
     description: 'Browse verified drone spraying operators in all 50 states. Select your state to see local operators, rates, and certifications.',
-    url: 'https://usagdronedirectory.com/judete',
+    url: 'https://usagdronedirectory.com/states',
   },
 };
 

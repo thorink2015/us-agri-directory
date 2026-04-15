@@ -30,6 +30,13 @@ const nextConfig = {
       { source: '/ghid', destination: '/guides', permanent: true },
       { source: '/ghid/:slug', destination: '/guides/:slug', permanent: true },
 
+      // States (judete) hub + nested sub-routes
+      { source: '/judete', destination: '/states', permanent: true },
+      { source: '/judete/:slug', destination: '/states/:slug', permanent: true },
+      { source: '/judete/:slug/operatori', destination: '/states/:slug/operators', permanent: true },
+      { source: '/judete/:slug/culturi/:crop', destination: '/states/:slug/crops/:crop', permanent: true },
+      { source: '/judete/:slug/servicii/:service', destination: '/states/:slug/services/:service', permanent: true },
+
       // High-traffic route renames
       { source: '/operatori', destination: '/operators', permanent: true },
       { source: '/operatori/:slug', destination: '/operators/:slug', permanent: true },

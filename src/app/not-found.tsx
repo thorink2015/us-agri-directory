@@ -29,7 +29,7 @@ export default function NotFound() {
         </div>
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
           {[
-            { href: '/judete', label: 'Județe' },
+            { href: '/states', label: 'Județe' },
             { href: '/crops', label: 'Culturi' },
             { href: '/services', label: 'Servicii' },
             { href: '/pricing', label: 'Prețuri' },

@@ -35,11 +35,11 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
   return {
     title: `Drone Spraying Services in ${county.name} | Ag Drone Directory`,
     description: desc,
-    alternates: { canonical: `/judete/${county.slug}` },
+    alternates: { canonical: `/states/${county.slug}` },
     openGraph: {
       title: `Drone Spraying in ${county.name} | US Ag Drone Directory`,
       description: `Verified ag drone operators in ${county.name}. Spraying, seeding, mapping, and scouting for ${crops} growers.`,
-      url: `${SITE_URL}/judete/${county.slug}`,
+      url: `${SITE_URL}/states/${county.slug}`,
       siteName: SITE_NAME,
       type: 'website',
     },

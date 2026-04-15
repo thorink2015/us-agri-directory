@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${crop.name} Drone Spraying in ${county.name} | Agricultural Drone Services 2026`,
     description: `Drone operators for ${crop.name.toLowerCase()} in ${county.name}. Rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre — contact verified operators directly.`,
     alternates: {
-      canonical: `/judete/${params.slug}/crops/${params.crop}`,
+      canonical: `/states/${params.slug}/crops/${params.crop}`,
     },
   };
 }
@@ -64,8 +64,8 @@ export default function CountyCropPage({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb
         items={[
-          { label: 'States', href: '/judete' },
-          { label: county.name, href: `/judete/${county.slug}` },
+          { label: 'States', href: '/states' },
+          { label: county.name, href: `/states/${county.slug}` },
           { label: crop.name },
         ]}
       />
@@ -191,14 +191,14 @@ export default function CountyCropPage({ params }: Props) {
             .map((c) => (
               <Link
                 key={c}
-                href={`/judete/${county.slug}/crops/${c}`}
+                href={`/states/${county.slug}/crops/${c}`}
                 className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
               >
                 {CROP_NAME_MAP[c] || c}
               </Link>
             ))}
           <Link
-            href={`/judete/${county.slug}`}
+            href={`/states/${county.slug}`}
             className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-600"
           >
             ← Back to {county.name}

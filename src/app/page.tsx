@@ -249,7 +249,7 @@ export default function HomePage() {
               <p className="text-gray-500 mt-1">Operators active in all 50 states</p>
             </div>
             <Link
-              href="/judete"
+              href="/states"
               className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors"
             >
               All states <ArrowRight className="w-4 h-4" />

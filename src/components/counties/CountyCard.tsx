@@ -14,7 +14,7 @@ export default function CountyCard({ county }: CountyCardProps) {
 
   return (
     <Link
-      href={`/judete/${county.slug}`}
+      href={`/states/${county.slug}`}
       className="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md hover:border-green-300 transition-all group"
     >
       <div className="flex items-start justify-between gap-2 mb-2">

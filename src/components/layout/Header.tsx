@@ -7,7 +7,7 @@ import { Menu, X, Plane, ChevronDown } from 'lucide-react';
 
 const nav = [
   { href: '/operators', label: 'Find Operators' },
-  { href: '/judete', label: 'Browse by State' },
+  { href: '/states', label: 'Browse by State' },
   {
     label: 'Crops & Services',
     dropdown: [

@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${BASE_URL}/operators`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/judete`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/states`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/crops`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/drones`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
@@ -37,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // ─── State pages (50 × 1 = 50) ───────────────────────────────────────────
   const countyPages: MetadataRoute.Sitemap = counties.map((c) => ({
-    url: `${BASE_URL}/judete/${c.slug}`,
+    url: `${BASE_URL}/states/${c.slug}`,
     lastModified: now,
     changeFrequency: 'weekly' as const,
     priority: 0.85,
@@ -46,7 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ─── State + Crop pages (50 × 8 = 400) ───────────────────────────────────
   const countyCropPages: MetadataRoute.Sitemap = counties.flatMap((county) =>
     crops.map((crop) => ({
-      url: `${BASE_URL}/judete/${county.slug}/crops/${crop.slug}`,
+      url: `${BASE_URL}/states/${county.slug}/crops/${crop.slug}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
@@ -57,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceKeys = Object.keys(SERVICE_LABELS);
   const countyServicePages: MetadataRoute.Sitemap = counties.flatMap((county) =>
     serviceKeys.map((serviceKey) => ({
-      url: `${BASE_URL}/judete/${county.slug}/services/${serviceKey}`,
+      url: `${BASE_URL}/states/${county.slug}/services/${serviceKey}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,

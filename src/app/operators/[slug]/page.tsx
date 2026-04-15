@@ -264,7 +264,7 @@ export default function OperatorPage({ params }: Props) {
                   {coveredStates.map((c) => (
                     <Link
                       key={c.slug}
-                      href={`/judete/${c.slug}`}
+                      href={`/states/${c.slug}`}
                       className="px-2.5 py-1 bg-gray-50 text-gray-600 text-xs border border-gray-200 rounded hover:border-green-300 hover:text-green-700 transition-colors"
                     >
                       {c.name}

@@ -49,7 +49,7 @@ export default function Footer() {
             <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Directory</h3>
             <ul className="space-y-2 text-sm text-green-300">
               <li><Link href="/operators" className="hover:text-white transition-colors">All Operators</Link></li>
-              <li><Link href="/judete" className="hover:text-white transition-colors">Browse by State</Link></li>
+              <li><Link href="/states" className="hover:text-white transition-colors">Browse by State</Link></li>
               <li><Link href="/crops" className="hover:text-white transition-colors">Browse by Crop</Link></li>
               <li><Link href="/drones" className="hover:text-white transition-colors">Drone Models</Link></li>
               <li><Link href="/list-your-business" className="hover:text-white transition-colors">List Your Business</Link></li>
@@ -85,7 +85,7 @@ export default function Footer() {
               {counties.map((state) => (
                 <Link
                   key={state.slug}
-                  href={`/judete/${state.slug}`}
+                  href={`/states/${state.slug}`}
                   className="hover:text-white transition-colors py-1.5 block"
                 >
                   {state.name}
@@ -97,7 +97,7 @@ export default function Footer() {
               {counties.slice(0, 10).map((state) => (
                 <Link
                   key={state.slug}
-                  href={`/judete/${state.slug}`}
+                  href={`/states/${state.slug}`}
                   className="hover:text-white transition-colors py-1.5 block"
                 >
                   {state.name}

@@ -57,7 +57,7 @@ export default function StatePage({ params }: Props) {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
           items={[
-            { label: 'States', href: '/judete' },
+            { label: 'States', href: '/states' },
             { label: state.name },
           ]}
         />
@@ -177,7 +177,7 @@ export default function StatePage({ params }: Props) {
               {adjacent.map((c) => (
                 <Link
                   key={c.slug}
-                  href={`/judete/${c.slug}`}
+                  href={`/states/${c.slug}`}
                   className="text-center p-3 bg-white border border-gray-200 rounded-xl hover:border-green-300 hover:text-green-700 transition-all text-sm font-medium text-gray-700"
                 >
                   {c.name}
