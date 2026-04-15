@@ -4,6 +4,7 @@ import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
 import { services } from '@/data/services';
 import { droneModels } from '@/data/drone-models';
+import { regions } from '@/data/regions';
 import { SERVICE_LABELS } from '@/data/types';
 
 const BASE_URL = 'https://usagdronedirectory.com';
@@ -23,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/list-your-business`, lastModified: now, changeFrequency: 'yearly', priority: 0.6 },
     { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${BASE_URL}/glossary`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE_URL}/regions`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE_URL}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
@@ -89,6 +91,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
+  // ─── Region hub pages ────────────────────────────────────────────────────
+  const regionPages: MetadataRoute.Sitemap = regions.map((r) => ({
+    url: `${BASE_URL}/regions/${r.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.75,
+  }));
+
   // ─── Tool pages ─────────────────────────────────────────────────────────
   const toolPages: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/tools`, lastModified: now, changeFrequency: 'monthly' as const, priority: 0.7 },
@@ -109,6 +119,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...cropPages,          // 8
     ...servicePages,       // 6+
     ...dronePages,         // 5
+    ...regionPages,        // 1+
     ...toolPages,          // 7
     // Total: ~960+ URLs
   ];
