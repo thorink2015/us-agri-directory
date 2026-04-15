@@ -743,73 +743,76 @@ export const guideContent: Record<string, ReactNode> = {
   'roi-drona-agricola': (
     <div className="space-y-6">
       <p>
-        Cea mai frecventă întrebare pe care o pun fermierii este: <strong>merită să cumpăr propria dronă sau
-        mai bine apelez la un prestator de servicii?</strong> Răspunsul depinde de suprafața ta, numărul de
-        tratamente pe an și disponibilitatea operatorilor din zonă.
+        The most common question farmers and new operators ask in 2026: <strong>should I buy my own
+        ag drone, or hire a service operator?</strong> The answer depends on your acreage, number of
+        applications per season, availability of local operators, and whether you want to generate
+        service revenue from neighbors. Here are three real-world scenarios with full numbers.
       </p>
 
-      <h2>Scenariul 1: Fermă de 200 ha, 3 tratamente/an</h2>
+      <h2>Scenario 1: 500-acre grain farm, 3 applications per season</h2>
       <ul>
-        <li><strong>Cost serviciu extern:</strong> 200 ha × 3 tratamente × 100 RON/ha = <strong>60.000 RON/an</strong></li>
-        <li><strong>Investiție DJI Agras T25P:</strong> ~200.000 RON (50.000 EUR)</li>
-        <li><strong>Costuri operare anuale:</strong> ~15.000 RON (baterii, mentenanță, asigurare)</li>
-        <li><strong>Economie anuală netă:</strong> ~45.000 RON</li>
-        <li><strong>Amortizare estimată: 4–5 sezoane</strong></li>
-        <li><strong>Beneficiu adăugat:</strong> fără tasare sol (recuperezi 5–8% din recoltă)</li>
+        <li><strong>Cost of hiring an operator:</strong> 500 acres × 3 applications × $14/acre = <strong>$21,000/year</strong></li>
+        <li><strong>Investment in DJI Agras T25P (full package):</strong> ~$18,000 (drone + batteries + charger)</li>
+        <li><strong>Annual operating costs:</strong> ~$3,500 (battery replacement, maintenance, insurance)</li>
+        <li><strong>Annual net savings vs. hiring out:</strong> ~$17,500</li>
+        <li><strong>Estimated payback: 1 season</strong></li>
+        <li><strong>Added benefit:</strong> no wheel traffic damage — ground rigs compact soil and destroy 3–6% of crop stand at late-season timings</li>
       </ul>
       <p className="text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
-        Concluzie: la 200 ha, drona proprie devine rentabilă dacă tratezi și suprafețele altor fermieri
-        din zonă. Poți acoperi 1.000 ha/sezon cu T25P, generând 100.000 RON venituri suplimentare.
+        Conclusion: at 500 acres with 3 applications, a T25P pays back in a single season. Adding
+        neighbor acres at $14/acre generates an additional $7,000–14,000 per season on top of
+        your own crop savings.
       </p>
 
-      <h2>Scenariul 2: Fermă de 500 ha, 3–4 tratamente/an</h2>
+      <h2>Scenario 2: 1,200-acre operation, 3–4 applications per season</h2>
       <ul>
-        <li><strong>Cost serviciu extern:</strong> 500 ha × 4 × 100 RON/ha = <strong>200.000 RON/an</strong></li>
-        <li><strong>Investiție DJI Agras T50 (pachet complet):</strong> ~350.000 RON (85.000 EUR)</li>
-        <li><strong>Costuri operare anuale:</strong> ~30.000 RON</li>
-        <li><strong>Economie anuală netă:</strong> ~170.000 RON</li>
-        <li><strong>Amortizare estimată: 2 sezoane</strong></li>
-        <li><strong>Fond AFIR DR-29 (50%):</strong> reducere investiție la ~175.000 RON</li>
+        <li><strong>Cost of hiring an operator:</strong> 1,200 acres × 4 applications × $14/acre = <strong>$67,200/year</strong></li>
+        <li><strong>Investment in DJI Agras T50 (full package):</strong> ~$28,000</li>
+        <li><strong>Annual operating costs:</strong> ~$6,000</li>
+        <li><strong>Annual net savings:</strong> ~$61,200</li>
+        <li><strong>Estimated payback: less than 6 months of spray season</strong></li>
+        <li><strong>USDA EQIP cost-share (40–50%):</strong> reduces net investment to ~$14,000–17,000</li>
       </ul>
 
-      <h2>Scenariul 3: Operator de servicii profesionist</h2>
+      <h2>Scenario 3: Commercial service operator (dedicated drone business)</h2>
       <ul>
-        <li><strong>Suprafața tratată/sezon:</strong> 3.000 ha (100 ha/zi × 30 zile lucrătoare)</li>
-        <li><strong>Venituri brute:</strong> 3.000 ha × 100 RON/ha = <strong>300.000 RON/sezon</strong></li>
-        <li><strong>Costuri totale (operare + depreciere):</strong> ~80.000 RON/sezon</li>
-        <li><strong>Profit net estimat:</strong> ~220.000 RON/sezon</li>
-        <li><strong>Amortizare DJI T50: 1–2 sezoane</strong></li>
+        <li><strong>Acres treated per season:</strong> 5,000 acres (80 acres/day × 60 spray days)</li>
+        <li><strong>Gross revenue:</strong> 5,000 acres × $14/acre = <strong>$70,000/season</strong></li>
+        <li><strong>Total costs (fuel, maintenance, insurance, depreciation):</strong> ~$18,000/season</li>
+        <li><strong>Estimated net profit:</strong> ~$52,000/season per drone</li>
+        <li><strong>DJI T50 payback: under 1 season</strong></li>
+        <li><strong>Add a second drone:</strong> revenue scales linearly with minimal overhead increase</li>
       </ul>
 
-      <h2>Beneficii necontabilizate ale dronei proprii</h2>
+      <h2>Hidden benefits of owning your own drone</h2>
       <ul>
-        <li><strong>Eliminarea tasării solului:</strong> tractorul cu bara de stropit distruge 5–8% din cultură prin călcare. La 500 ha grâu cu recoltă medie de 5 t/ha × 600 RON/t, pierderile sunt 7.500–12.000 RON/sezon.</li>
-        <li><strong>Normă ULV:</strong> drona folosește 8–20 L/ha față de 200–300 L/ha la tractor, economie de apă și timp de umplere.</li>
-        <li><strong>Flexibilitate maximă:</strong> drona poate trata oricând (noapte, după ploaie, câmpuri izolate) fără dependența de disponibilitatea unui operator extern.</li>
-        <li><strong>Date NDVI:</strong> cu o cameră multispectrală atașată, poți monitoriza sănătatea culturilor și aplica tratamente diferențiate (VRA).</li>
+        <li><strong>No wheel traffic at critical timings:</strong> VT corn and R3 soybean applications by ground rig damage 3–6% of yield through compaction and lodging. At $200/acre corn value, 3% loss on 500 acres = $3,000 per application.</li>
+        <li><strong>Ultra-low volume (ULV) application:</strong> drones use 1–3 gallons/acre vs. 10–20 gallons/acre for ground rigs — less water hauling, faster turnaround per load.</li>
+        <li><strong>Timing flexibility:</strong> apply at night, immediately after rain, or on isolated field edges without waiting for an external operator's schedule during peak demand weeks.</li>
+        <li><strong>NDVI and mapping revenue:</strong> add a multispectral camera and offer variable-rate application (VRA) scouting maps as a premium service to neighboring farms.</li>
       </ul>
 
-      <h2>Când NU merită drona proprie</h2>
+      <h2>When owning your own drone does NOT make sense</h2>
       <ul>
-        <li>Suprafața sub 150 ha cu un singur tip de cultură</li>
-        <li>Nu ai personal instruit sau nu vrei să investești în cursuri pilot AACR</li>
-        <li>Există operatori de servicii calificați disponibili rapid în zona ta</li>
-        <li>Nu ești eligibil pentru fonduri AFIR și nu ai capital pentru investiție</li>
+        <li>Total treated acreage is under 300 acres per season with only one crop type</li>
+        <li>No one on your operation is willing to get FAA Part 107 + Part 137 certified</li>
+        <li>Reliable, competitively priced local operators are already available with quick booking</li>
+        <li>Capital is better deployed in seed, inputs, or land rent for your operation size</li>
       </ul>
 
-      <h2>Fonduri AFIR disponibile pentru achiziție dronă</h2>
+      <h2>Reduce your upfront cost with USDA EQIP</h2>
       <p>
-        Prin intervențiile PNS 2023–2027, poți obține 50–80% rambursare din costul dronei. Citește{' '}
-        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">ghidul complet AFIR pentru drone agricole</a>{' '}
-        și consultă{' '}
-        <a href="/operatori?service=consultancy" className="text-green-700 hover:underline font-medium">un consultant AFIR din directorul nostru</a>.
+        USDA EQIP cost-share can cover 40–50% of eligible equipment costs for qualifying operations —
+        reducing a $28,000 T50 package to a net investment of $14,000–17,000. Read our{' '}
+        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">complete USDA EQIP funding guide</a>{' '}
+        before purchasing.
       </p>
 
-      <h2>Resurse utile</h2>
+      <h2>Useful tools</h2>
       <ul>
-        <li><a href="/drone" className="text-green-700 hover:underline font-medium">Comparator drone agricole: DJI, XAG, ADT</a></li>
-        <li><a href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">Prețuri pulverizare cu drona în România 2026</a></li>
-        <li><a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">Ghid fonduri AFIR pentru drone</a></li>
+        <li><a href="/drone" className="text-green-700 hover:underline font-medium">Ag drone comparison: DJI, Hylio, XAG</a></li>
+        <li><a href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">Drone spray pricing guide 2026</a></li>
+        <li><a href="/unelte/calculator-pret-pulverizare" className="text-green-700 hover:underline font-medium">Spray cost calculator</a></li>
       </ul>
     </div>
   ),
