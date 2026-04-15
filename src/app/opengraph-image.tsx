@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
-export const alt = 'TerraDron.ro: Director Operatori Drone Agricole din România și Moldova';
+export const alt = 'US Agricultural Drone Directory — Find Verified Ag Drone Operators Near You';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -33,7 +33,7 @@ export default async function Image() {
           fontSize: 18,
           letterSpacing: 1,
         }}>
-          terradron.ro
+          usagdronedirectory.com
         </div>
 
         {/* Main logo */}
@@ -51,9 +51,9 @@ export default async function Image() {
             ✈
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div style={{ fontSize: 68, fontWeight: 800, color: '#ffffff', letterSpacing: -2, lineHeight: 1 }}>
-              TerraDron
-              <span style={{ color: '#FFD166' }}>.ro</span>
+            <div style={{ fontSize: 60, fontWeight: 800, color: '#ffffff', letterSpacing: -2, lineHeight: 1 }}>
+              US Ag Drone
+              <span style={{ color: '#FFD166' }}> Directory</span>
             </div>
           </div>
         </div>
@@ -67,15 +67,15 @@ export default async function Image() {
           lineHeight: 1.45,
           marginBottom: 44,
         }}>
-          Directorul complet al operatorilor de drone agricole din România și Moldova
+          The most complete directory of agricultural drone operators in America
         </div>
 
         {/* Stats */}
         <div style={{ display: 'flex', gap: 20 }}>
           {[
-            '23 operatori verificați',
-            '41 județe acoperite',
-            '993 pagini indexabile',
+            '130+ verified operators',
+            'All 50 states covered',
+            '900+ indexed pages',
           ].map((stat) => (
             <div key={stat} style={{
               backgroundColor: 'rgba(255,255,255,0.14)',
@@ -98,7 +98,7 @@ export default async function Image() {
           fontSize: 18,
           color: 'rgba(255,255,255,0.45)',
         }}>
-          Pulverizare · Fertilizare · Monitorizare NDVI · Cartografiere
+          Spraying · Seeding · NDVI Mapping · Crop Scouting
         </div>
       </div>
     ),

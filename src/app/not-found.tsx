@@ -9,32 +9,32 @@ export default function NotFound() {
           <Plane className="w-8 h-8 text-green-700 rotate-45" />
         </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-3">404</h1>
-        <h2 className="text-xl font-semibold text-gray-700 mb-3">Pagina nu a fost găsită</h2>
+        <h2 className="text-xl font-semibold text-gray-700 mb-3">Page Not Found</h2>
         <p className="text-gray-500 mb-8">
-          Pagina pe care o cauți nu există sau a fost mutată. Încearcă să navighezi la una dintre paginile de mai jos.
+          The page you're looking for doesn't exist or has been moved. Try navigating to one of the pages below.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
             href="/"
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-700 text-white font-semibold rounded-lg hover:bg-green-800 transition-colors"
           >
-            <ArrowRight className="w-4 h-4 rotate-180" /> Pagina principală
+            <ArrowRight className="w-4 h-4 rotate-180" /> Home
           </Link>
           <Link
             href="/operators"
             className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-green-400 hover:text-green-700 transition-colors"
           >
-            <Search className="w-4 h-4" /> Caută operatori
+            <Search className="w-4 h-4" /> Find Operators
           </Link>
         </div>
         <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm">
           {[
-            { href: '/states', label: 'Județe' },
-            { href: '/crops', label: 'Culturi' },
-            { href: '/services', label: 'Servicii' },
-            { href: '/pricing', label: 'Prețuri' },
-            { href: '/guides', label: 'Ghiduri' },
-            { href: '/moldova', label: 'Moldova' },
+            { href: '/states', label: 'Browse by State' },
+            { href: '/crops', label: 'Crops' },
+            { href: '/services', label: 'Services' },
+            { href: '/pricing', label: 'Pricing' },
+            { href: '/guides', label: 'Guides' },
+            { href: '/list-your-business', label: 'List Your Business' },
           ].map((link) => (
             <Link
               key={link.href}

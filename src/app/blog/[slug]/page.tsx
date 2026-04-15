@@ -56,8 +56,8 @@ export default function BlogPostPage({ params }: Props) {
             author: { '@type': 'Organization', name: post.author },
             publisher: {
               '@type': 'Organization',
-              name: 'TerraDron.ro',
-              logo: { '@type': 'ImageObject', url: 'https://terradron.ro/opengraph-image' },
+              name: 'US Ag Drone Directory',
+              logo: { '@type': 'ImageObject', url: 'https://usagdronedirectory.com/opengraph-image' },
             },
             keywords: post.tags.join(', '),
           }),

@@ -50,7 +50,7 @@ export default function NewsletterCTA() {
 
             <div className="border-t border-white/10 pt-4">
               <a
-                href="https://whatsapp.com/channel/droneagricol"
+                href="https://whatsapp.com/channel/usagdronedirectory"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
