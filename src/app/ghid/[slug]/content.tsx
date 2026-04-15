@@ -113,55 +113,108 @@ export const guideContent: Record<string, ReactNode> = {
   'legislatie-drone-agricole': (
     <div className="space-y-6">
       <p>
-        Operarea dronelor agricole în România este reglementată de{' '}
-        <strong>Regulamentul UE 2019/947</strong> (direct aplicabil) și normele complementare ale{' '}
-        <ExtLink href="https://www.caa.ro">AACR</ExtLink>. Acest ghid sintetizează toate obligațiile legale pentru operatori.
+        Commercial agricultural drone operations in the US are governed by a layered regulatory
+        framework spanning federal aviation law, federal pesticide law, and state-level applicator
+        licensing. This guide covers every requirement a commercial ag drone operator needs to stay
+        fully compliant in 2026.
       </p>
 
-      <h2>Clasificarea operațiilor</h2>
-      <ul>
-        <li><strong>Clasa Open</strong>: drone &lt; 25 kg, zboruri până la 120 m, fără autorizație specială</li>
-        <li><strong>Clasa Specific</strong>: obligatorie pentru drone &gt; 25 kg sau operații comerciale de pulverizare: necesită autorizație AACR</li>
-        <li><strong>Clasa Certified</strong>: aplicabilă dronelor de transport pasageri (nu vizează agricultura)</li>
-      </ul>
-
-      <h2>Cerințe pentru operatori comerciali</h2>
-      <ol>
-        <li>Înregistrare ca operator la AACR (gratuit online)</li>
-        <li>Obținerea numărului de operator: trebuie afișat pe dronă</li>
-        <li>Pilotul trebuie să dețină certificat de competență A1/A3 sau A2</li>
-        <li>Pentru pulverizare comercială: autorizație STS-01 sau autorizație Specific individuală</li>
-        <li>Asigurare de răspundere civilă obligatorie (min. 1 mil. EUR)</li>
-      </ol>
-
-      <h2>Distanțe și restricții</h2>
-      <ul>
-        <li>Interzisă operarea peste aglomerări urbane fără autorizație specială</li>
-        <li>Distanță minimă 50 m față de persoane neimplicate</li>
-        <li>Interzisă în zone de aeroport (CTR) fără permisiunea prealabilă a ATC</li>
-        <li>Respectarea zonelor NOTAM și <ExtLink href="https://airspace.caa.ro">hărții AACR</ExtLink></li>
-      </ul>
-
-      <h2>Documente obligatorii în timpul operării</h2>
-      <ul>
-        <li>Certificat de competență pilot</li>
-        <li>Autorizație de operator (dacă este cazul)</li>
-        <li>Polița de asigurare RCA</li>
-        <li>Manual de operare al dronei</li>
-        <li>Jurnal de zbor (obligatoriu pentru Specific)</li>
-      </ul>
-
-      <h2>Sancțiuni</h2>
+      <h2>Layer 1 — FAA Aviation Regulations</h2>
       <p>
-        Operarea fără autorizație se sancționează cu amenzi de la 1.500 RON la 30.000 RON și posibilă
-        confiscare a echipamentului (conform Codului Aerian: Legea 21/2020).
+        The FAA governs all UAS flight operations in US airspace regardless of what the drone is
+        carrying. Two rules apply to ag drone operators:
+      </p>
+      <ul>
+        <li>
+          <strong>14 CFR Part 107 (Small UAS Rule)</strong>: All commercial UAS pilots must hold a
+          valid Part 107 Remote Pilot Certificate. Drones must weigh under 55 lbs (25 kg) at takeoff
+          and may not fly over people, moving vehicles, or at night without a waiver.
+        </li>
+        <li>
+          <strong>14 CFR Part 137 (Agricultural Aircraft Operations)</strong>: Required for any
+          commercial application of pesticides, herbicides, fertilizers, or seed by air. The operator
+          business must hold an Agricultural Aircraft Operator (AAO) certificate from the local FAA
+          FSDO. Each pilot flying under the certificate must be listed as a worker or have their own
+          Part 107 certificate.
+        </li>
+      </ul>
+
+      <h2>Layer 2 — EPA Pesticide Law (FIFRA)</h2>
+      <p>
+        The Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) governs all pesticide
+        applications in the US. Key requirements for drone applicators:
+      </p>
+      <ul>
+        <li>Only apply pesticides registered with the EPA for the target use (crop + pest)</li>
+        <li>Apply only at label rates and under label conditions — the label is the law</li>
+        <li>Maintain application records for 2 years (date, location, product, rate, applicator)</li>
+        <li>Restricted Use Pesticides (RUPs) may only be applied by licensed commercial applicators</li>
+      </ul>
+
+      <h2>Layer 3 — State Pesticide Applicator License</h2>
+      <p>
+        Nearly every state requires a Commercial Pesticide Applicator License to apply any pesticide
+        for compensation. Requirements vary by state but typically include:
+      </p>
+      <ol>
+        <li>Written knowledge exam (core exam + category exam, e.g. Category 1: Agricultural Pest Control)</li>
+        <li>Annual continuing education credits (2–8 hours depending on state)</li>
+        <li>License renewal every 1–3 years ($50–300 fee)</li>
+      </ol>
+      <p>
+        Contact your state Department of Agriculture for state-specific exam schedules and reciprocity
+        agreements if operating across state lines.
       </p>
 
-      <h2>Resurse oficiale</h2>
+      <h2>Airspace restrictions and tools</h2>
       <ul>
-        <li><ExtLink href="https://www.caa.ro">AACR: Legislație drone</ExtLink></li>
-        <li><ExtLink href="https://www.easa.europa.eu/en/domains/civil-drones">EASA: Reglementări drone UE</ExtLink></li>
-        <li><ExtLink href="https://legislatie.just.ro">legislatie.just.ro: Codul Aerian</ExtLink></li>
+        <li>Do not fly in Class B, C, or D airspace without LAANC authorization or an FAA waiver</li>
+        <li>Check airspace authorization before every flight using{' '}
+          <ExtLink href="https://www.faa.gov/uas/programs_partnerships/data_exchange">FAA LAANC</ExtLink> or the{' '}
+          <ExtLink href="https://www.faa.gov/uas/recreational_fliers/where_can_i_fly/b4ufly">B4UFLY app</ExtLink>
+        </li>
+        <li>Check for active TFRs (Temporary Flight Restrictions) before every flight at{' '}
+          <ExtLink href="https://tfr.faa.gov">tfr.faa.gov</ExtLink>
+        </li>
+        <li>Minimum safe altitude: comply with Part 107 400 ft AGL ceiling in uncontrolled airspace</li>
+        <li>Visual line of sight (VLOS) required — BVLOS operations require a separate FAA waiver</li>
+      </ul>
+
+      <h2>Required documents to carry during operations</h2>
+      <ul>
+        <li>FAA Part 107 Remote Pilot Certificate (physical or digital)</li>
+        <li>FAA Part 137 Operator Certificate (on file; carry a copy)</li>
+        <li>State Commercial Pesticide Applicator License</li>
+        <li>Drone registration certificate (FAA registration, $5/3 years)</li>
+        <li>Liability insurance certificate ($1M+ general liability recommended)</li>
+        <li>Pesticide application records for current season</li>
+      </ul>
+
+      <h2>NDAA compliance for government-adjacent work</h2>
+      <p>
+        NDAA Section 848/899 restricts use of certain foreign-made drones on federally funded projects
+        or by federal agencies. DJI and most Chinese-manufactured drones are currently restricted.
+        Operators working on USDA program land or with federal contractors should verify equipment
+        compliance. The{' '}
+        <ExtLink href="https://www.hylio.com">Hylio AG-272</ExtLink> is the leading NDAA-compliant
+        US-manufactured option.
+      </p>
+
+      <h2>Penalties for non-compliance</h2>
+      <p>
+        FAA civil penalties for commercial UAS violations start at $1,100 per violation and can reach
+        $27,500 per day for continuing violations. Criminal penalties (willful violations) can reach
+        $250,000 and imprisonment. State pesticide violations carry separate fines of $500–25,000
+        depending on state.
+      </p>
+
+      <h2>Official resources</h2>
+      <ul>
+        <li><ExtLink href="https://www.faa.gov/uas/commercial_operators">FAA: Commercial UAS Operations</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/agricultural_operations">FAA: Part 137 Agricultural Aircraft</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/pesticide-applicator-certification-and-training">EPA: Pesticide Applicator Certification</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/enforcement/pesticides-enforcement">EPA: FIFRA Enforcement</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/programs_partnerships/data_exchange">FAA LAANC: Low Altitude Authorization</ExtLink></li>
       </ul>
     </div>
   ),
