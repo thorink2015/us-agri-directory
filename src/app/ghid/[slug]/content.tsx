@@ -222,66 +222,105 @@ export const guideContent: Record<string, ReactNode> = {
   'fonduri-afir-drone': (
     <div className="space-y-6">
       <p>
-        <ExtLink href="https://portal.afir.info">AFIR</ExtLink> (Agenția pentru Finanțarea Investițiilor Rurale)
-        oferă finanțare nerambursabilă pentru achiziția de drone agricole prin mai multe submăsuri ale PNDR și
-        PNS 2023–2027. În acest ghid găsești tot ce trebuie să știi pentru a obține fonduri europene pentru o
-        dronă în 2026.
+        US farmers and drone operators can significantly reduce equipment costs through federal and
+        state funding programs. The primary source is{' '}
+        <ExtLink href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives">USDA EQIP</ExtLink>{' '}
+        (Environmental Quality Incentives Program), which in 2024–2026 has funded hundreds of
+        agricultural drone purchases nationwide. This guide covers every major program available
+        in 2026 and how to apply.
       </p>
 
-      <h2>Intervențiile PNS 2023–2027 aplicabile dronelor</h2>
+      <h2>USDA EQIP — Primary funding source</h2>
+      <p>
+        EQIP is administered by USDA NRCS (Natural Resources Conservation Service) and provides
+        cost-share payments for conservation practices, including precision agriculture technology.
+        Relevant practice codes for drone equipment:
+      </p>
       <ul>
-        <li><strong>DR-12 (Modernizarea exploatațiilor agricole)</strong>: până la 80% finanțare nerambursabilă pentru tineri fermieri (sub 41 ani), buget max. 200.000 EUR. Ideal pentru prima dronă agricolă.</li>
-        <li><strong>DR-14 (Investiții în exploatații mici)</strong>: pentru ferme cu 4.000–12.000 SO. Finanțare 80%, buget forfetar 75.000 EUR. Potrivit pentru DJI Agras T25P.</li>
-        <li><strong>DR-16 (Investiții în sectorul legumicol)</strong>: finanțare 65–80% pentru producători de legume și cartofi care achiziționează drone pentru monitorizare și tratamente.</li>
-        <li><strong>DR-29 (Investiții în exploatații agricole)</strong>: intensitate ajutor 50–65%, buget max. 300.000 EUR. Cel mai accesibil pentru ferme medii și mari.</li>
-        <li><strong>DR-30 (Tineri fermieri)</strong>: pachet forfetar 60.000–70.000 EUR + bonus 10% pentru fermierii sub 41 de ani care se instalează pentru prima dată.</li>
-        <li><strong>Submăsura 4.1 (PNDR)</strong>: pentru cereri depuse anterior 2023, cu dosare în evaluare sau rambursare.</li>
+        <li><strong>Practice 595 (Pest Management)</strong>: covers drone spray equipment used for
+          Integrated Pest Management (IPM) programs. Payment rates: 40–50% of eligible costs.</li>
+        <li><strong>Practice 328 (Conservation Cover) + aerial seeding</strong>: supports cover crop
+          drone seeding equipment. Payment rates: 35–50%.</li>
+        <li><strong>Beginning Farmer priority</strong>: operators farming fewer than 10 years receive
+          a boosted payment rate — up to 90% on the first $50,000 of eligible costs.</li>
+        <li><strong>Underserved/Socially Disadvantaged Farmer priority</strong>: same 90% rate applies
+          to qualifying producers.</li>
       </ul>
 
-      <h2>Condiții de eligibilitate</h2>
+      <h2>USDA FSA Loan Programs</h2>
       <ul>
-        <li>Solicitant: fermă cu minim 8.000 SO (standard output) — pentru DR-29, DR-12</li>
-        <li>DR-14: ferme între 4.000–12.000 SO</li>
-        <li>Înregistrat la APIA și ONRC</li>
-        <li>Ferma activă de minim 12 luni</li>
-        <li>Fără datorii la bugetul de stat</li>
-        <li>Drona trebuie să fie nouă, certificată CE, cu factura de la dealer autorizat</li>
+        <li>
+          <strong>FSA Operating Loans</strong>: up to $400,000 at below-market interest rates for
+          equipment purchases including drones. Available to beginning and established farmers who
+          cannot get commercial credit.
+        </li>
+        <li>
+          <strong>FSA Microloans</strong>: up to $50,000 — streamlined application, ideal for a
+          single drone setup. Interest rate: ~5–6% (2026).
+        </li>
       </ul>
 
-      <h2>Pașii procesului</h2>
+      <h2>State-level programs</h2>
+      <p>
+        Many states have their own ag technology cost-share or loan programs. Notable examples:
+      </p>
+      <ul>
+        <li><strong>Iowa:</strong> Beginning Farmer Tax Credit + Iowa Agricultural Development Authority loans</li>
+        <li><strong>Illinois:</strong> IDOA Ag Equipment Loan Fund</li>
+        <li><strong>California:</strong> CDFA State Conservancy and SWEEP program (water efficiency — applicable for low-drift drone applications)</li>
+        <li><strong>Texas:</strong> TADB Beginning Farmer/Rancher Loan Program</li>
+      </ul>
+      <p>Contact your state Department of Agriculture for current program availability.</p>
+
+      <h2>Eligibility requirements (EQIP)</h2>
+      <ul>
+        <li>Must be an agricultural producer (owner, tenant, or sharecropper on eligible land)</li>
+        <li>Land must be privately owned agricultural land in the US</li>
+        <li>Must be in compliance with wetland and highly erodible land provisions</li>
+        <li>No delinquent federal debt</li>
+        <li>Equipment must be new and installed/used on the farm receiving payment</li>
+      </ul>
+
+      <h2>Step-by-step EQIP application process</h2>
       <ol>
-        <li>Verificare eligibilitate la <ExtLink href="https://portal.afir.info">portalul AFIR</ExtLink></li>
-        <li>Elaborare plan de afaceri + buget (consultanță recomandată: 3–5% din valoarea proiectului)</li>
-        <li>Depunere cerere online pe portalul AFIR (în sesiunile anuale)</li>
-        <li>Evaluare tehnică și financiară (60–90 zile)</li>
-        <li>Contractare și începerea investiției</li>
-        <li>Depunere cereri de plată (rambursare pe tranșe)</li>
+        <li>Contact your local{' '}
+          <ExtLink href="https://www.nrcs.usda.gov/contact/find-a-service-center">USDA Service Center</ExtLink>{' '}
+          to schedule a free eligibility consultation with an NRCS agent</li>
+        <li>Complete the EQIP application (Form CCC-1200) — typically 1–2 hours with agent assistance</li>
+        <li>Applications are ranked by resource concern priority — apply early in the fiscal year sign-up window</li>
+        <li>If selected, receive a contract offer and review payment schedule</li>
+        <li>Purchase and install equipment after contract is signed (do not purchase before contract)</li>
+        <li>Submit practice payment request with receipts — NRCS will verify installation</li>
+        <li>Receive cost-share payment within 30–60 days of approved request</li>
       </ol>
 
-      <h2>Ce drone sunt eligibile?</h2>
+      <h2>Eligible drone models (2026)</h2>
       <p>
-        Toate dronele marcate CE și certificate pentru uz agricol sunt eligibile. Cele mai populare modele
-        AFIR-eligible în 2026:
+        Any commercially available, EPA-FIFRA-compliant spray drone can be included in an EQIP
+        application. Most commonly approved models:
       </p>
       <ul>
-        <li><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a>: 50.000 EUR</li>
-        <li><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a>: 85.000 EUR</li>
-        <li><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a>: 115.000 EUR</li>
+        <li><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a>: $12,000–15,000 (drone only)</li>
+        <li><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a>: $18,000–22,000</li>
+        <li><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a>: $34,000–42,000</li>
+        <li>Hylio AG-272 (NDAA-compliant): $25,000–30,000</li>
       </ul>
 
-      <h2>Sfaturi pentru aprobarea proiectului</h2>
+      <h2>Tips to maximize your approval odds</h2>
       <ul>
-        <li>Lucrează cu un consultant AFIR acreditat</li>
-        <li>Include cursul de pilot în bugetul proiectului</li>
-        <li>Justifică nevoia prin analize tehnico-economice</li>
-        <li>Include și echipamente conexe (stații încărcare, baterii de rezervă)</li>
+        <li>Apply during the first sign-up window of the federal fiscal year (October–December)</li>
+        <li>Include batteries, charger, and generator in the project budget — these are eligible costs</li>
+        <li>Document a clear conservation benefit: reduced chemical use, reduced soil compaction, IPM records</li>
+        <li>If you qualify as a beginning farmer, underserved producer, or veteran farmer — state that clearly; it raises your ranking score</li>
+        <li>Consider working with a farm financial consultant or your ag lender for application assistance</li>
       </ul>
 
-      <h2>Resurse oficiale</h2>
+      <h2>Official resources</h2>
       <ul>
-        <li><ExtLink href="https://portal.afir.info">Portalul AFIR</ExtLink></li>
-        <li><ExtLink href="https://www.madr.ro/pndr-2014-2020.html">MADR: Program Național de Dezvoltare Rurală</ExtLink></li>
-        <li><ExtLink href="https://www.apia.org.ro">APIA: Agenția de Plăți și Intervenție</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives">USDA NRCS: EQIP Program</ExtLink></li>
+        <li><ExtLink href="https://www.fsa.usda.gov/programs-and-services/farm-loan-programs/index">USDA FSA: Farm Loan Programs</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/contact/find-a-service-center">USDA: Find Your Local Service Center</ExtLink></li>
+        <li><ExtLink href="https://www.farmers.gov/loans">Farmers.gov: Loan Finder Tool</ExtLink></li>
       </ul>
     </div>
   ),
