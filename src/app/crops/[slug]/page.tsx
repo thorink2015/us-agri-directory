@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { Calendar, TrendingUp, Plane } from 'lucide-react';
+import { Calendar, TrendingUp, Plane, ExternalLink } from 'lucide-react';
 import { crops, getCropBySlug } from '@/data/crops';
 import { operators } from '@/data/operators';
 import Breadcrumb from '@/components/layout/Breadcrumb';
@@ -21,9 +21,14 @@ export async function generateMetadata({ params }: Props) {
   const crop = getCropBySlug(params.slug);
   if (!crop) return {};
   return {
-    title: `Drone Spraying for ${crop.name}: Complete Guide 2026`,
-    description: `Complete guide to agricultural drone spraying on ${crop.name.toLowerCase()}. Rates $${crop.priceMinUsd}–$${crop.priceMaxUsd}/acre, treatment calendar, and verified operators.`,
+    title: `Drone Spraying for ${crop.name}: Rates, Timing & Operators 2026`,
+    description: crop.aeoBlock.slice(0, 155),
     alternates: { canonical: `/crops/${params.slug}` },
+    openGraph: {
+      title: `Drone Spraying for ${crop.name} | US Ag Drone Directory`,
+      description: `$${crop.priceMinUsd}–$${crop.priceMaxUsd}/acre, treatment calendar, key pests, and verified operators across all 50 states.`,
+      url: `https://usagdronedirectory.com/crops/${crop.slug}`,
+    },
   };
 }
 
@@ -95,11 +100,11 @@ export default function CropPage({ params }: Props) {
       />
 
       {/* Header */}
-      <div className="flex items-start gap-4 mb-8">
+      <div className="flex items-start gap-4 mb-6">
         <span className="text-5xl">{crop.icon}</span>
         <div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Drone Spraying for {crop.name}: Guide 2026
+            Drone Spraying for {crop.name}: Rates, Timing &amp; Operators 2026
           </h1>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="flex items-center gap-1.5 bg-green-100 text-green-800 px-3 py-1 rounded-full">
@@ -114,6 +119,11 @@ export default function CropPage({ params }: Props) {
             )}
           </div>
         </div>
+      </div>
+
+      {/* AEO block */}
+      <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-6">
+        <p className="text-sm text-gray-700 leading-relaxed">{crop.aeoBlock}</p>
       </div>
 
       {/* Description */}
@@ -208,6 +218,41 @@ export default function CropPage({ params }: Props) {
         >
           See the full pricing guide →
         </Link>
+      </div>
+
+      {/* Authority links */}
+      {crop.authorityLinks.length > 0 && (
+        <div className="mb-8">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">Official resources</p>
+          <div className="flex flex-col gap-2">
+            {crop.authorityLinks.map((link) => (
+              <a
+                key={link.url}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-green-700 hover:underline"
+              >
+                <ExternalLink className="w-3.5 h-3.5 flex-shrink-0" />
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Related tools */}
+      <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
+        <p className="text-sm font-semibold text-gray-700 mb-3">Related tools</p>
+        <div className="flex flex-wrap gap-3">
+          <Link href="/tools/spray-cost-calculator" className="text-sm text-green-700 hover:underline">Spray Cost Calculator</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/tools/roi-calculator" className="text-sm text-green-700 hover:underline">ROI Buy vs. Hire</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/tools/treatment-calendar" className="text-sm text-green-700 hover:underline">Treatment Calendar</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/pricing" className="text-sm text-green-700 hover:underline">Full Pricing Guide</Link>
+        </div>
       </div>
 
       {/* FAQ */}
