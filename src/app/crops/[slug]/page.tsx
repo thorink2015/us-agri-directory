@@ -3,9 +3,16 @@ import Link from 'next/link';
 import { Calendar, TrendingUp, Plane, ExternalLink } from 'lucide-react';
 import { crops, getCropBySlug } from '@/data/crops';
 import { operators } from '@/data/operators';
+import { AUTHOR, SITE } from '@/data/author';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import Byline from '@/components/author/Byline';
+import AuthorCard from '@/components/author/AuthorCard';
+
+// Default last-reviewed date used when an individual crop entry does not
+// supply its own `lastReviewedAt`. Bumped when crop data is reviewed.
+const DEFAULT_REVIEWED = '2026-04-01';
 
 interface Props {
   params: { slug: string };
@@ -73,17 +80,20 @@ export default function CropPage({ params }: Props) {
     ],
   };
 
+  const lastReviewed = crop.lastReviewedAt ?? DEFAULT_REVIEWED;
+
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: `Drone Spraying for ${crop.name}: Guide 2026`,
     description: crop.description,
-    url: `https://usagdronedirectory.com/crops/${crop.slug}`,
-    publisher: {
-      '@type': 'Organization',
-      name: 'US Ag Drone Directory',
-      url: 'https://usagdronedirectory.com',
-    },
+    url: `${SITE.domain}/crops/${crop.slug}`,
+    mainEntityOfPage: `${SITE.domain}/crops/${crop.slug}`,
+    datePublished: '2026-01-01',
+    dateModified: lastReviewed,
+    author: { '@id': AUTHOR.personId },
+    publisher: { '@id': AUTHOR.organizationId },
+    image: `${SITE.domain}/images/og-default.jpg`,
   };
 
   return (
@@ -120,6 +130,9 @@ export default function CropPage({ params }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Byline — E-E-A-T signal, drives Google "last updated" parsing */}
+      <Byline lastUpdated={lastReviewed} />
 
       {/* AEO block */}
       <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-6">
@@ -279,6 +292,9 @@ export default function CropPage({ params }: Props) {
           </div>
         </div>
       )}
+
+      {/* Author card — E-E-A-T footer */}
+      <AuthorCard />
     </div>
     </>
   );

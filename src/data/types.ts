@@ -99,6 +99,7 @@ export interface Crop {
   uvlNormLHa?: string;        // carrier volume per acre (gpa)
   yieldGainPct?: number;
   authorityLinks: { label: string; url: string }[];
+  lastReviewedAt?: string;    // ISO date (YYYY-MM-DD) of last editorial review
 }
 
 export interface DroneModel {
