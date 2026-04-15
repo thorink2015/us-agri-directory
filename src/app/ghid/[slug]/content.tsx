@@ -10,84 +10,102 @@ export const guideContent: Record<string, ReactNode> = {
   'cum-sa-devii-operator': (
     <div className="space-y-6">
       <p>
-        Piața dronelor agricole din România crește cu peste 40% anual, iar cererea de operatori specializați
-        depășește oferta. În acest ghid detaliat vei găsi toți pașii necesari pentru a începe o afacere de
-        succes cu drone agricole în 2026.
+        The US agricultural drone services market is growing at 35–45% per year, and demand for
+        certified commercial applicators far exceeds supply in most states. This guide walks through
+        every step to launching a profitable ag drone operation in 2026 — from FAA certification to
+        finding your first clients.
       </p>
 
-      <h2>1. Înțelege piața și cererea</h2>
+      <h2>1. Understand the market opportunity</h2>
       <p>
-        România are aproximativ 8,5 milioane de hectare de teren arabil, iar mai puțin de 5% este tratat anual
-        cu drone. Fermele cu suprafețe între 50–500 ha sunt principalii clienți, în special pentru viticultură
-        (150.000 ha), livezi (200.000 ha) și cereale păioase.
+        The US has over 900 million acres of farmland, with roughly 400 million acres of active cropland.
+        Only 3–5% is currently treated by drone annually — meaning the market is still in its early
+        growth stage. Target customers are farms between 50 and 2,000 acres, especially for corn VT
+        fungicide, soybean R3, winter wheat heading applications, and specialty crops like vineyards
+        and orchards where drones outperform ground rigs.
       </p>
 
-      <h2>2. Alegerea formei juridice</h2>
+      <h2>2. Choose your business structure</h2>
       <ul>
-        <li><strong>SRL</strong>: recomandat pentru activitate comercială (răspundere limitată)</li>
-        <li><strong>PFA</strong>: viabil pentru operatori individuali cu cifră de afaceri sub 100.000 EUR</li>
-        <li><strong>Cooperativă agricolă</strong>: avantaje fiscale și eligibilitate AFIR extinsă</li>
+        <li><strong>LLC</strong>: recommended for most operators — limits personal liability, simple taxation, low setup cost ($50–500 depending on state)</li>
+        <li><strong>Sole Proprietorship</strong>: lowest cost to start, but no liability protection — suitable only for testing the market</li>
+        <li><strong>S-Corp</strong>: worthwhile once revenue exceeds ~$80,000/year for tax savings on self-employment income</li>
       </ul>
       <p>
-        Înregistrarea unei SRL se face online la{' '}
-        <ExtLink href="https://portal.onrc.ro">Oficiul Național al Registrului Comerțului (ONRC)</ExtLink>,
-        durează 3–5 zile lucrătoare.
+        Register your LLC through your state Secretary of State portal. Most states process filings in
+        1–5 business days online. Get an EIN from the{' '}
+        <ExtLink href="https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online">IRS (free, instant online)</ExtLink>.
       </p>
 
-      <h2>3. Autorizarea AACR</h2>
+      <h2>3. Get FAA certified</h2>
       <p>
-        Orice operator comercial de drone agricole trebuie înregistrat la{' '}
-        <ExtLink href="https://www.caa.ro">Autoritatea Aeronautică Civilă Română (AACR)</ExtLink>. Pentru
-        dronele mai mari de 25 kg (DJI Agras T50, T100), este necesară autorizația de clasă{' '}
-        <em>Specific</em> și pilotul trebuie să dețină certificat de competență avansat (A2 sau STS).
+        Two FAA certifications are required for commercial pesticide application by drone:
       </p>
+      <ol>
+        <li>
+          <strong>FAA Part 107 Remote Pilot Certificate</strong> — required for any commercial UAS operation.
+          Pass the aeronautical knowledge test at an FAA-approved testing center ($175 fee). Study time: 20–40 hours.
+        </li>
+        <li>
+          <strong>FAA Part 137 Agricultural Aircraft Operator Certificate</strong> — required specifically for
+          commercial pesticide, fertilizer, or seed application. Applied for at your local FSDO (Flight Standards
+          District Office). Free to apply.
+        </li>
+      </ol>
+
+      <h2>4. Get your state pesticide applicator license</h2>
+      <p>
+        Nearly every state requires a Commercial Pesticide Applicator License to apply EPA-registered products
+        for hire. Contact your state department of agriculture for exam requirements — most require a written
+        test and 2–4 hours of continuing education annually. Fees: $50–300.
+      </p>
+
+      <h2>5. Startup budget (2026)</h2>
       <ul>
-        <li>Taxă înregistrare operator: 100 RON</li>
-        <li>Curs pilot + examen: 1.500–3.000 RON</li>
-        <li>Asigurare RCA obligatorie: 1.500–4.000 RON/an</li>
+        <li>DJI Agras T25P (starter setup): $14,000–18,000</li>
+        <li>DJI Agras T50 (production setup): $22,000–28,000</li>
+        <li>Batteries (4×) + fast charger: $4,000–6,000</li>
+        <li>Portable generator: $1,500–3,000</li>
+        <li>PPE + chemical handling equipment: $500–1,000</li>
+        <li>Liability insurance (first year): $2,500–5,000</li>
+        <li>FAA + state licenses + training: $1,500–3,000</li>
+        <li><strong>Total estimated startup cost:</strong> $30,000–55,000</li>
       </ul>
 
-      <h2>4. Bugetul inițial (2026)</h2>
+      <h2>6. Reduce costs with USDA EQIP funding</h2>
+      <p>
+        USDA EQIP can reimburse 30–50% of eligible equipment costs for qualifying operations. See our{' '}
+        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</a>{' '}
+        for eligibility requirements and how to apply.
+      </p>
+
+      <h2>7. Find your first clients</h2>
+      <p>
+        The most effective customer acquisition channels for new operators in 2026:
+      </p>
       <ul>
-        <li>Dronă DJI Agras T25P: 45.000–55.000 EUR</li>
-        <li>Dronă DJI Agras T50: 75.000–95.000 EUR</li>
-        <li>Generator portabil + stație încărcare: 4.000–8.000 EUR</li>
-        <li>Echipament protecție + EPP: 1.000 EUR</li>
-        <li>Autovehicul transport: 10.000+ EUR</li>
-        <li><strong>Total estimativ:</strong> 90.000–150.000 EUR</li>
+        <li>List your business for free in the <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">US Ag Drone Directory</a></li>
+        <li>Introduce yourself to local ag retailers, co-ops, and crop consultants — they refer dozens of growers per season</li>
+        <li>Attend local Farm Bureau meetings and commodity group meetings (corn, soybean, wheat grower associations)</li>
+        <li>Partner with agronomists and certified crop advisers (CCAs) who can recommend drone applications to their clients</li>
+        <li>Join state drone applicator associations (most major ag states have one)</li>
       </ul>
 
-      <h2>5. Fonduri nerambursabile (AFIR)</h2>
+      <h2>8. Pricing and profitability</h2>
       <p>
-        Prin <ExtLink href="https://portal.afir.info">AFIR (submăsura 4.1)</ExtLink>, fermierii eligibili pot
-        obține până la 65% rambursare din costul dronei. Consultă și{' '}
-        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">ghidul nostru complet pentru AFIR</a>.
+        Average market rates run $12–17/acre for row crops and $25–35/acre for vineyards and orchards.
+        A single DJI Agras T50 can cover 80–100 acres per day in good conditions. At $14/acre on 90 acres,
+        that is $1,260/day gross revenue. Operating costs (fuel, maintenance, depreciation, insurance) run
+        approximately $400–600/day, leaving $660–860/day net per drone. A 60-day spray season generates
+        roughly $40,000–50,000 net per drone annually.
       </p>
 
-      <h2>6. Găsirea primilor clienți</h2>
-      <p>
-        Cele mai eficiente canale de achiziție clienți în 2026:
-      </p>
+      <h2>Official resources</h2>
       <ul>
-        <li>Listare în directoare de operatori (precum <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">TerraDron.ro</a>: gratuit)</li>
-        <li>Grupuri Facebook de fermieri (ex: &quot;Agricultori România&quot;)</li>
-        <li>Colaborare cu magazine agro (Agrosem, Agro Rural)</li>
-        <li>Parteneriate cu consultanți fitosanitari</li>
-      </ul>
-
-      <h2>7. Preț și rentabilitate</h2>
-      <p>
-        Prețul mediu al serviciului este de 80–150 RON/ha pentru cereale, 120–200 RON/ha pentru viticultură.
-        O echipă cu o dronă T50 poate trata 100 ha/zi, ceea ce înseamnă venituri de aproximativ 10.000–15.000
-        RON/zi. Costurile operaționale (combustibil, reparații, deprecieri) se ridică la 3.000–5.000 RON/zi.
-      </p>
-
-      <h2>Resurse oficiale</h2>
-      <ul>
-        <li><ExtLink href="https://www.caa.ro">AACR: Autoritatea Aeronautică Civilă Română</ExtLink></li>
-        <li><ExtLink href="https://portal.afir.info">AFIR: Agenția pentru Finanțarea Investițiilor Rurale</ExtLink></li>
-        <li><ExtLink href="https://www.madr.ro">MADR: Ministerul Agriculturii</ExtLink></li>
-        <li><ExtLink href="https://portal.onrc.ro">ONRC: Registrul Comerțului</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/commercial_operators">FAA: Commercial UAS Operators</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/agricultural_operations">FAA: Part 137 Agricultural Operations</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/pesticide-applicator-certification-and-training">EPA: Pesticide Applicator Certification</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives">USDA NRCS: EQIP Program</ExtLink></li>
       </ul>
     </div>
   ),
@@ -95,55 +113,108 @@ export const guideContent: Record<string, ReactNode> = {
   'legislatie-drone-agricole': (
     <div className="space-y-6">
       <p>
-        Operarea dronelor agricole în România este reglementată de{' '}
-        <strong>Regulamentul UE 2019/947</strong> (direct aplicabil) și normele complementare ale{' '}
-        <ExtLink href="https://www.caa.ro">AACR</ExtLink>. Acest ghid sintetizează toate obligațiile legale pentru operatori.
+        Commercial agricultural drone operations in the US are governed by a layered regulatory
+        framework spanning federal aviation law, federal pesticide law, and state-level applicator
+        licensing. This guide covers every requirement a commercial ag drone operator needs to stay
+        fully compliant in 2026.
       </p>
 
-      <h2>Clasificarea operațiilor</h2>
-      <ul>
-        <li><strong>Clasa Open</strong>: drone &lt; 25 kg, zboruri până la 120 m, fără autorizație specială</li>
-        <li><strong>Clasa Specific</strong>: obligatorie pentru drone &gt; 25 kg sau operații comerciale de pulverizare: necesită autorizație AACR</li>
-        <li><strong>Clasa Certified</strong>: aplicabilă dronelor de transport pasageri (nu vizează agricultura)</li>
-      </ul>
-
-      <h2>Cerințe pentru operatori comerciali</h2>
-      <ol>
-        <li>Înregistrare ca operator la AACR (gratuit online)</li>
-        <li>Obținerea numărului de operator: trebuie afișat pe dronă</li>
-        <li>Pilotul trebuie să dețină certificat de competență A1/A3 sau A2</li>
-        <li>Pentru pulverizare comercială: autorizație STS-01 sau autorizație Specific individuală</li>
-        <li>Asigurare de răspundere civilă obligatorie (min. 1 mil. EUR)</li>
-      </ol>
-
-      <h2>Distanțe și restricții</h2>
-      <ul>
-        <li>Interzisă operarea peste aglomerări urbane fără autorizație specială</li>
-        <li>Distanță minimă 50 m față de persoane neimplicate</li>
-        <li>Interzisă în zone de aeroport (CTR) fără permisiunea prealabilă a ATC</li>
-        <li>Respectarea zonelor NOTAM și <ExtLink href="https://airspace.caa.ro">hărții AACR</ExtLink></li>
-      </ul>
-
-      <h2>Documente obligatorii în timpul operării</h2>
-      <ul>
-        <li>Certificat de competență pilot</li>
-        <li>Autorizație de operator (dacă este cazul)</li>
-        <li>Polița de asigurare RCA</li>
-        <li>Manual de operare al dronei</li>
-        <li>Jurnal de zbor (obligatoriu pentru Specific)</li>
-      </ul>
-
-      <h2>Sancțiuni</h2>
+      <h2>Layer 1 — FAA Aviation Regulations</h2>
       <p>
-        Operarea fără autorizație se sancționează cu amenzi de la 1.500 RON la 30.000 RON și posibilă
-        confiscare a echipamentului (conform Codului Aerian: Legea 21/2020).
+        The FAA governs all UAS flight operations in US airspace regardless of what the drone is
+        carrying. Two rules apply to ag drone operators:
+      </p>
+      <ul>
+        <li>
+          <strong>14 CFR Part 107 (Small UAS Rule)</strong>: All commercial UAS pilots must hold a
+          valid Part 107 Remote Pilot Certificate. Drones must weigh under 55 lbs (25 kg) at takeoff
+          and may not fly over people, moving vehicles, or at night without a waiver.
+        </li>
+        <li>
+          <strong>14 CFR Part 137 (Agricultural Aircraft Operations)</strong>: Required for any
+          commercial application of pesticides, herbicides, fertilizers, or seed by air. The operator
+          business must hold an Agricultural Aircraft Operator (AAO) certificate from the local FAA
+          FSDO. Each pilot flying under the certificate must be listed as a worker or have their own
+          Part 107 certificate.
+        </li>
+      </ul>
+
+      <h2>Layer 2 — EPA Pesticide Law (FIFRA)</h2>
+      <p>
+        The Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) governs all pesticide
+        applications in the US. Key requirements for drone applicators:
+      </p>
+      <ul>
+        <li>Only apply pesticides registered with the EPA for the target use (crop + pest)</li>
+        <li>Apply only at label rates and under label conditions — the label is the law</li>
+        <li>Maintain application records for 2 years (date, location, product, rate, applicator)</li>
+        <li>Restricted Use Pesticides (RUPs) may only be applied by licensed commercial applicators</li>
+      </ul>
+
+      <h2>Layer 3 — State Pesticide Applicator License</h2>
+      <p>
+        Nearly every state requires a Commercial Pesticide Applicator License to apply any pesticide
+        for compensation. Requirements vary by state but typically include:
+      </p>
+      <ol>
+        <li>Written knowledge exam (core exam + category exam, e.g. Category 1: Agricultural Pest Control)</li>
+        <li>Annual continuing education credits (2–8 hours depending on state)</li>
+        <li>License renewal every 1–3 years ($50–300 fee)</li>
+      </ol>
+      <p>
+        Contact your state Department of Agriculture for state-specific exam schedules and reciprocity
+        agreements if operating across state lines.
       </p>
 
-      <h2>Resurse oficiale</h2>
+      <h2>Airspace restrictions and tools</h2>
       <ul>
-        <li><ExtLink href="https://www.caa.ro">AACR: Legislație drone</ExtLink></li>
-        <li><ExtLink href="https://www.easa.europa.eu/en/domains/civil-drones">EASA: Reglementări drone UE</ExtLink></li>
-        <li><ExtLink href="https://legislatie.just.ro">legislatie.just.ro: Codul Aerian</ExtLink></li>
+        <li>Do not fly in Class B, C, or D airspace without LAANC authorization or an FAA waiver</li>
+        <li>Check airspace authorization before every flight using{' '}
+          <ExtLink href="https://www.faa.gov/uas/programs_partnerships/data_exchange">FAA LAANC</ExtLink> or the{' '}
+          <ExtLink href="https://www.faa.gov/uas/recreational_fliers/where_can_i_fly/b4ufly">B4UFLY app</ExtLink>
+        </li>
+        <li>Check for active TFRs (Temporary Flight Restrictions) before every flight at{' '}
+          <ExtLink href="https://tfr.faa.gov">tfr.faa.gov</ExtLink>
+        </li>
+        <li>Minimum safe altitude: comply with Part 107 400 ft AGL ceiling in uncontrolled airspace</li>
+        <li>Visual line of sight (VLOS) required — BVLOS operations require a separate FAA waiver</li>
+      </ul>
+
+      <h2>Required documents to carry during operations</h2>
+      <ul>
+        <li>FAA Part 107 Remote Pilot Certificate (physical or digital)</li>
+        <li>FAA Part 137 Operator Certificate (on file; carry a copy)</li>
+        <li>State Commercial Pesticide Applicator License</li>
+        <li>Drone registration certificate (FAA registration, $5/3 years)</li>
+        <li>Liability insurance certificate ($1M+ general liability recommended)</li>
+        <li>Pesticide application records for current season</li>
+      </ul>
+
+      <h2>NDAA compliance for government-adjacent work</h2>
+      <p>
+        NDAA Section 848/899 restricts use of certain foreign-made drones on federally funded projects
+        or by federal agencies. DJI and most Chinese-manufactured drones are currently restricted.
+        Operators working on USDA program land or with federal contractors should verify equipment
+        compliance. The{' '}
+        <ExtLink href="https://www.hylio.com">Hylio AG-272</ExtLink> is the leading NDAA-compliant
+        US-manufactured option.
+      </p>
+
+      <h2>Penalties for non-compliance</h2>
+      <p>
+        FAA civil penalties for commercial UAS violations start at $1,100 per violation and can reach
+        $27,500 per day for continuing violations. Criminal penalties (willful violations) can reach
+        $250,000 and imprisonment. State pesticide violations carry separate fines of $500–25,000
+        depending on state.
+      </p>
+
+      <h2>Official resources</h2>
+      <ul>
+        <li><ExtLink href="https://www.faa.gov/uas/commercial_operators">FAA: Commercial UAS Operations</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/agricultural_operations">FAA: Part 137 Agricultural Aircraft</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/pesticide-applicator-certification-and-training">EPA: Pesticide Applicator Certification</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/enforcement/pesticides-enforcement">EPA: FIFRA Enforcement</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/programs_partnerships/data_exchange">FAA LAANC: Low Altitude Authorization</ExtLink></li>
       </ul>
     </div>
   ),
@@ -151,66 +222,105 @@ export const guideContent: Record<string, ReactNode> = {
   'fonduri-afir-drone': (
     <div className="space-y-6">
       <p>
-        <ExtLink href="https://portal.afir.info">AFIR</ExtLink> (Agenția pentru Finanțarea Investițiilor Rurale)
-        oferă finanțare nerambursabilă pentru achiziția de drone agricole prin mai multe submăsuri ale PNDR și
-        PNS 2023–2027. În acest ghid găsești tot ce trebuie să știi pentru a obține fonduri europene pentru o
-        dronă în 2026.
+        US farmers and drone operators can significantly reduce equipment costs through federal and
+        state funding programs. The primary source is{' '}
+        <ExtLink href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives">USDA EQIP</ExtLink>{' '}
+        (Environmental Quality Incentives Program), which in 2024–2026 has funded hundreds of
+        agricultural drone purchases nationwide. This guide covers every major program available
+        in 2026 and how to apply.
       </p>
 
-      <h2>Intervențiile PNS 2023–2027 aplicabile dronelor</h2>
+      <h2>USDA EQIP — Primary funding source</h2>
+      <p>
+        EQIP is administered by USDA NRCS (Natural Resources Conservation Service) and provides
+        cost-share payments for conservation practices, including precision agriculture technology.
+        Relevant practice codes for drone equipment:
+      </p>
       <ul>
-        <li><strong>DR-12 (Modernizarea exploatațiilor agricole)</strong>: până la 80% finanțare nerambursabilă pentru tineri fermieri (sub 41 ani), buget max. 200.000 EUR. Ideal pentru prima dronă agricolă.</li>
-        <li><strong>DR-14 (Investiții în exploatații mici)</strong>: pentru ferme cu 4.000–12.000 SO. Finanțare 80%, buget forfetar 75.000 EUR. Potrivit pentru DJI Agras T25P.</li>
-        <li><strong>DR-16 (Investiții în sectorul legumicol)</strong>: finanțare 65–80% pentru producători de legume și cartofi care achiziționează drone pentru monitorizare și tratamente.</li>
-        <li><strong>DR-29 (Investiții în exploatații agricole)</strong>: intensitate ajutor 50–65%, buget max. 300.000 EUR. Cel mai accesibil pentru ferme medii și mari.</li>
-        <li><strong>DR-30 (Tineri fermieri)</strong>: pachet forfetar 60.000–70.000 EUR + bonus 10% pentru fermierii sub 41 de ani care se instalează pentru prima dată.</li>
-        <li><strong>Submăsura 4.1 (PNDR)</strong>: pentru cereri depuse anterior 2023, cu dosare în evaluare sau rambursare.</li>
+        <li><strong>Practice 595 (Pest Management)</strong>: covers drone spray equipment used for
+          Integrated Pest Management (IPM) programs. Payment rates: 40–50% of eligible costs.</li>
+        <li><strong>Practice 328 (Conservation Cover) + aerial seeding</strong>: supports cover crop
+          drone seeding equipment. Payment rates: 35–50%.</li>
+        <li><strong>Beginning Farmer priority</strong>: operators farming fewer than 10 years receive
+          a boosted payment rate — up to 90% on the first $50,000 of eligible costs.</li>
+        <li><strong>Underserved/Socially Disadvantaged Farmer priority</strong>: same 90% rate applies
+          to qualifying producers.</li>
       </ul>
 
-      <h2>Condiții de eligibilitate</h2>
+      <h2>USDA FSA Loan Programs</h2>
       <ul>
-        <li>Solicitant: fermă cu minim 8.000 SO (standard output) — pentru DR-29, DR-12</li>
-        <li>DR-14: ferme între 4.000–12.000 SO</li>
-        <li>Înregistrat la APIA și ONRC</li>
-        <li>Ferma activă de minim 12 luni</li>
-        <li>Fără datorii la bugetul de stat</li>
-        <li>Drona trebuie să fie nouă, certificată CE, cu factura de la dealer autorizat</li>
+        <li>
+          <strong>FSA Operating Loans</strong>: up to $400,000 at below-market interest rates for
+          equipment purchases including drones. Available to beginning and established farmers who
+          cannot get commercial credit.
+        </li>
+        <li>
+          <strong>FSA Microloans</strong>: up to $50,000 — streamlined application, ideal for a
+          single drone setup. Interest rate: ~5–6% (2026).
+        </li>
       </ul>
 
-      <h2>Pașii procesului</h2>
+      <h2>State-level programs</h2>
+      <p>
+        Many states have their own ag technology cost-share or loan programs. Notable examples:
+      </p>
+      <ul>
+        <li><strong>Iowa:</strong> Beginning Farmer Tax Credit + Iowa Agricultural Development Authority loans</li>
+        <li><strong>Illinois:</strong> IDOA Ag Equipment Loan Fund</li>
+        <li><strong>California:</strong> CDFA State Conservancy and SWEEP program (water efficiency — applicable for low-drift drone applications)</li>
+        <li><strong>Texas:</strong> TADB Beginning Farmer/Rancher Loan Program</li>
+      </ul>
+      <p>Contact your state Department of Agriculture for current program availability.</p>
+
+      <h2>Eligibility requirements (EQIP)</h2>
+      <ul>
+        <li>Must be an agricultural producer (owner, tenant, or sharecropper on eligible land)</li>
+        <li>Land must be privately owned agricultural land in the US</li>
+        <li>Must be in compliance with wetland and highly erodible land provisions</li>
+        <li>No delinquent federal debt</li>
+        <li>Equipment must be new and installed/used on the farm receiving payment</li>
+      </ul>
+
+      <h2>Step-by-step EQIP application process</h2>
       <ol>
-        <li>Verificare eligibilitate la <ExtLink href="https://portal.afir.info">portalul AFIR</ExtLink></li>
-        <li>Elaborare plan de afaceri + buget (consultanță recomandată: 3–5% din valoarea proiectului)</li>
-        <li>Depunere cerere online pe portalul AFIR (în sesiunile anuale)</li>
-        <li>Evaluare tehnică și financiară (60–90 zile)</li>
-        <li>Contractare și începerea investiției</li>
-        <li>Depunere cereri de plată (rambursare pe tranșe)</li>
+        <li>Contact your local{' '}
+          <ExtLink href="https://www.nrcs.usda.gov/contact/find-a-service-center">USDA Service Center</ExtLink>{' '}
+          to schedule a free eligibility consultation with an NRCS agent</li>
+        <li>Complete the EQIP application (Form CCC-1200) — typically 1–2 hours with agent assistance</li>
+        <li>Applications are ranked by resource concern priority — apply early in the fiscal year sign-up window</li>
+        <li>If selected, receive a contract offer and review payment schedule</li>
+        <li>Purchase and install equipment after contract is signed (do not purchase before contract)</li>
+        <li>Submit practice payment request with receipts — NRCS will verify installation</li>
+        <li>Receive cost-share payment within 30–60 days of approved request</li>
       </ol>
 
-      <h2>Ce drone sunt eligibile?</h2>
+      <h2>Eligible drone models (2026)</h2>
       <p>
-        Toate dronele marcate CE și certificate pentru uz agricol sunt eligibile. Cele mai populare modele
-        AFIR-eligible în 2026:
+        Any commercially available, EPA-FIFRA-compliant spray drone can be included in an EQIP
+        application. Most commonly approved models:
       </p>
       <ul>
-        <li><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a>: 50.000 EUR</li>
-        <li><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a>: 85.000 EUR</li>
-        <li><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a>: 115.000 EUR</li>
+        <li><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a>: $12,000–15,000 (drone only)</li>
+        <li><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a>: $18,000–22,000</li>
+        <li><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a>: $34,000–42,000</li>
+        <li>Hylio AG-272 (NDAA-compliant): $25,000–30,000</li>
       </ul>
 
-      <h2>Sfaturi pentru aprobarea proiectului</h2>
+      <h2>Tips to maximize your approval odds</h2>
       <ul>
-        <li>Lucrează cu un consultant AFIR acreditat</li>
-        <li>Include cursul de pilot în bugetul proiectului</li>
-        <li>Justifică nevoia prin analize tehnico-economice</li>
-        <li>Include și echipamente conexe (stații încărcare, baterii de rezervă)</li>
+        <li>Apply during the first sign-up window of the federal fiscal year (October–December)</li>
+        <li>Include batteries, charger, and generator in the project budget — these are eligible costs</li>
+        <li>Document a clear conservation benefit: reduced chemical use, reduced soil compaction, IPM records</li>
+        <li>If you qualify as a beginning farmer, underserved producer, or veteran farmer — state that clearly; it raises your ranking score</li>
+        <li>Consider working with a farm financial consultant or your ag lender for application assistance</li>
       </ul>
 
-      <h2>Resurse oficiale</h2>
+      <h2>Official resources</h2>
       <ul>
-        <li><ExtLink href="https://portal.afir.info">Portalul AFIR</ExtLink></li>
-        <li><ExtLink href="https://www.madr.ro/pndr-2014-2020.html">MADR: Program Național de Dezvoltare Rurală</ExtLink></li>
-        <li><ExtLink href="https://www.apia.org.ro">APIA: Agenția de Plăți și Intervenție</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives">USDA NRCS: EQIP Program</ExtLink></li>
+        <li><ExtLink href="https://www.fsa.usda.gov/programs-and-services/farm-loan-programs/index">USDA FSA: Farm Loan Programs</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/contact/find-a-service-center">USDA: Find Your Local Service Center</ExtLink></li>
+        <li><ExtLink href="https://www.farmers.gov/loans">Farmers.gov: Loan Finder Tool</ExtLink></li>
       </ul>
     </div>
   ),
@@ -218,46 +328,133 @@ export const guideContent: Record<string, ReactNode> = {
   'licenta-pilot-drona': (
     <div className="space-y-6">
       <p>
-        Pentru a opera o dronă agricolă în scop comercial în România, pilotul trebuie să dețină un certificat
-        de competență eliberat de AACR. Acest ghid detaliază cursurile, examenul și costurile aferente.
+        To apply pesticides commercially by drone in the US, every pilot needs two FAA certifications
+        plus a state pesticide applicator license. This guide covers every exam, cost, and study
+        resource you need to get certified in 2026 — from the Part 107 knowledge test to the
+        ag-specific Part 137 certificate.
       </p>
 
-      <h2>Tipuri de certificate</h2>
+      <h2>Certificate 1 — FAA Part 107 Remote Pilot Certificate</h2>
+      <p>
+        The foundational requirement for any commercial UAS pilot. Required before flying any
+        drone commercially, regardless of the application type.
+      </p>
       <ul>
-        <li><strong>A1/A3 (Open)</strong>: test online gratuit pe <ExtLink href="https://dronetest.caa.ro">dronetest.caa.ro</ExtLink></li>
-        <li><strong>A2 (Open)</strong>: curs teoretic + examen + autoverificare (250 RON taxa examen)</li>
-        <li><strong>STS-01 / Specific</strong>: curs complet + examen practic la un centru autorizat</li>
+        <li><strong>Format:</strong> 60 multiple-choice questions, 2 hours, administered at an FAA-approved testing center (PSI/CATS)</li>
+        <li><strong>Passing score:</strong> 70% (42 out of 60 correct)</li>
+        <li><strong>Fee:</strong> $175 at the testing center</li>
+        <li><strong>Valid:</strong> 24 months — renewal via free online recurrent training at{' '}
+          <ExtLink href="https://www.faasafety.gov">FAASafety.gov</ExtLink>
+        </li>
+        <li><strong>No minimum flight hours required</strong> — purely a knowledge exam</li>
       </ul>
 
-      <h2>Pași pentru certificat STS-01 (recomandat pentru agricultură)</h2>
+      <h2>What the Part 107 exam covers</h2>
+      <ul>
+        <li>Airspace classifications and operating requirements</li>
+        <li>Weather and meteorological effects on UAS flight</li>
+        <li>Small unmanned aircraft loading and performance</li>
+        <li>Emergency procedures</li>
+        <li>Crew resource management</li>
+        <li>Radio communication procedures</li>
+        <li>Determining the performance of small unmanned aircraft</li>
+        <li>Physiological effects on pilots (fatigue, stress)</li>
+        <li>Aeronautical decision-making and judgment</li>
+        <li>Airport operations</li>
+        <li>Maintenance and preflight inspection procedures</li>
+      </ul>
+
+      <h2>How to study for Part 107</h2>
       <ol>
-        <li>Înscriere la un <a href="/operatori?service=training" className="text-green-700 hover:underline font-medium">centru autorizat AACR</a></li>
-        <li>Parcurgere curs teoretic (25–40 ore): legislație, meteorologie, operațiuni</li>
-        <li>Curs practic pe drona agricolă (8–16 ore): pe teren</li>
-        <li>Examen teoretic (60 întrebări, min. 75% corect)</li>
-        <li>Examen practic (demonstrație de zbor și proceduri de siguranță)</li>
-        <li>Obținere certificat AACR (valid 5 ani)</li>
+        <li>Start with the free{' '}
+          <ExtLink href="https://www.faasafety.gov/gslac/ALC/course_content.aspx?cID=451">FAA Remote Pilot Small UAS Study Guide</ExtLink>
+        </li>
+        <li>Take practice tests at{' '}
+          <ExtLink href="https://www.kingschools.com/drone-pilot-training">King Schools</ExtLink>,{' '}
+          <ExtLink href="https://www.udemy.com/topic/faa-part-107/">Udemy</ExtLink>, or{' '}
+          <ExtLink href="https://www.3dr.com/faa-part-107/">3DR</ExtLink> (paid prep courses, $30–150)
+        </li>
+        <li>Study airspace charts using{' '}
+          <ExtLink href="https://skyvector.com">SkyVector</ExtLink> — you will be tested on reading sectional charts
+        </li>
+        <li>Most pilots pass with 15–25 hours of dedicated study</li>
       </ol>
 
-      <h2>Costuri estimate (2026)</h2>
+      <h2>Certificate 2 — FAA Part 137 Agricultural Aircraft Operator (AAO)</h2>
+      <p>
+        Required specifically for commercial pesticide, fertilizer, or seed application by air.
+        This is a business-level certificate — the company or operator holds it, not the individual pilot.
+      </p>
       <ul>
-        <li>Curs teoretic A2: 500–1.200 RON</li>
-        <li>Curs STS-01 complet: 2.000–4.500 RON</li>
-        <li>Curs DJI Agras avansat: 1.500–3.000 RON</li>
-        <li>Taxă examen AACR: 250 RON</li>
-        <li>Re-certificare la 5 ani: 500–1.000 RON</li>
+        <li><strong>Apply at:</strong> your local{' '}
+          <ExtLink href="https://www.faa.gov/about/office_org/field_offices/fsdo">FAA Flight Standards District Office (FSDO)</ExtLink>
+        </li>
+        <li><strong>Fee:</strong> Free</li>
+        <li><strong>Requirements:</strong> Proof of Part 107 certificate, description of operations (aircraft type, area of operations, product types), and a safety plan</li>
+        <li><strong>Processing time:</strong> typically 2–6 weeks depending on FSDO workload</li>
+        <li><strong>No written exam required</strong> — reviewed and approved by an FAA inspector</li>
+        <li><strong>Valid indefinitely</strong> (but operations must remain as described in the application)</li>
       </ul>
 
-      <h2>Centre de formare recomandate</h2>
+      <h2>Certificate 3 — State Pesticide Applicator License</h2>
       <p>
-        Vezi lista noastră cu <a href="/operatori?service=training" className="text-green-700 hover:underline font-medium">operatori care oferă cursuri</a>,
-        inclusiv Agronix, BOSAL Solutions, La Înălțime Academy.
+        Required by nearly every state to apply EPA-registered pesticides for hire. Most states use
+        a two-part exam:
+      </p>
+      <ul>
+        <li><strong>Core exam:</strong> general pest management principles, safety, label reading, regulations</li>
+        <li><strong>Category exam:</strong> Category 1 (Agricultural Pest Control) is the most common for ag drone operators; some states also require Category 7 (Aerial Application)</li>
+        <li><strong>Renewal:</strong> every 1–3 years with continuing education credits (CEUs)</li>
+        <li><strong>Fee:</strong> $50–300 depending on state</li>
+      </ul>
+      <p>
+        Contact your state Department of Agriculture for exam dates and approved study materials.
+        Many state extension services offer free exam prep workshops.
       </p>
 
-      <h2>Resurse oficiale</h2>
+      <h2>Ag drone-specific training</h2>
+      <p>
+        FAA certification covers flight law — it does not cover crop scouting, nozzle calibration,
+        or application timing. Additional training to consider:
+      </p>
       <ul>
-        <li><ExtLink href="https://www.caa.ro">AACR: Certificare piloți drone</ExtLink></li>
-        <li><ExtLink href="https://dronetest.caa.ro">DroneTest: Examen online A1/A3</ExtLink></li>
+        <li>
+          <strong>DJI Agras flight training:</strong> 1–2 day hands-on courses offered by DJI
+          Enterprise dealers across the US. Covers T50/T100 operation, field planning software,
+          and maintenance. Cost: $500–1,200.
+        </li>
+        <li>
+          <strong>Hylio operator training:</strong> Required for warranty coverage on Hylio AG-272.
+          Offered online + in-person at Hylio HQ (Houston, TX).
+        </li>
+        <li>
+          <strong>NAAA (National Agricultural Aviation Association):</strong>{' '}
+          <ExtLink href="https://www.agaviation.org">agaviation.org</ExtLink> — industry resources,
+          safety training, and networking for aerial applicators.
+        </li>
+        <li>
+          <strong>State CCA (Certified Crop Adviser) program:</strong> not required, but valuable
+          for understanding crop disease timing and fungicide windows that drive demand.
+        </li>
+      </ul>
+
+      <h2>Estimated costs to get fully certified</h2>
+      <ul>
+        <li>Part 107 prep course: $50–150 (optional but recommended)</li>
+        <li>Part 107 test fee: $175</li>
+        <li>Part 137 application: free</li>
+        <li>State pesticide license exam: $50–300</li>
+        <li>Ag drone manufacturer training: $500–1,200</li>
+        <li><strong>Total:</strong> approximately $800–1,800 to be fully certified and operational</li>
+      </ul>
+
+      <h2>Official resources</h2>
+      <ul>
+        <li><ExtLink href="https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot">FAA: Become a Commercial Drone Pilot</ExtLink></li>
+        <li><ExtLink href="https://iacra.faa.gov">IACRA: FAA Certificate Application System</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/agricultural_operations">FAA: Part 137 Agricultural Operations</ExtLink></li>
+        <li><ExtLink href="https://www.agaviation.org">NAAA: National Agricultural Aviation Association</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/pesticide-applicator-certification-and-training">EPA: State Pesticide Applicator Licensing</ExtLink></li>
       </ul>
     </div>
   ),
@@ -265,61 +462,106 @@ export const guideContent: Record<string, ReactNode> = {
   'alegerea-dronei-agricole': (
     <div className="space-y-6">
       <p>
-        Alegerea dronei agricole depinde de suprafața fermei, tipul de cultură, bugetul disponibil și
-        disponibilitatea service-ului local. În 2026, piața este dominată de DJI Agras (90% cotă), urmată de
-        XAG (6%) și ADT Falcon (3%).
+        Choosing the right agricultural drone depends on your acreage, crop type, available budget,
+        NDAA compliance requirements, and local service support. In 2026, the US market is dominated
+        by DJI Agras (~75% share), followed by Hylio (~12%), XAG (~8%), and others. Here is a
+        practical breakdown of every major platform to help you decide.
       </p>
 
-      <h2>DJI Agras: Opțiunea populară</h2>
+      <h2>DJI Agras — Market leader</h2>
+      <p>
+        The most widely deployed ag spray drones in the US. Excellent dealer network, mature software
+        (DJI Agras app with field mapping and prescription layers), and the broadest parts availability.
+        <strong> Note: DJI drones are NOT NDAA-compliant</strong> — check your situation before buying
+        if you work on federal land or with USDA program participants.
+      </p>
       <ul>
-        <li><strong>T25P</strong>: 20L, 17 ha/oră, 45–55.000 EUR. Pentru ferme mici și medii.</li>
-        <li><strong>T50</strong>: 40L, 40 ha/oră, 75–95.000 EUR. Cea mai vândută dronă în România.</li>
-        <li><strong>T100</strong>: 75L, 70 ha/oră, 110–130.000 EUR. Pentru ferme mari (&gt; 500 ha).</li>
+        <li>
+          <strong><a href="/drone/dji-agras-t25p" className="text-green-700 hover:underline font-medium">DJI Agras T25P</a></strong>:
+          20L tank, ~60 acres/hour, $10,000–14,000. Best entry-level option for specialty crops
+          (vineyards, orchards) or operators starting on smaller fields.
+        </li>
+        <li>
+          <strong><a href="/drone/dji-agras-t50" className="text-green-700 hover:underline font-medium">DJI Agras T50</a></strong>:
+          40L tank, ~100 acres/hour, $18,000–22,000. The most popular production drone in the US.
+          Handles corn, soybean, wheat, and cotton at scale.
+        </li>
+        <li>
+          <strong><a href="/drone/dji-agras-t100" className="text-green-700 hover:underline font-medium">DJI Agras T100</a></strong>:
+          80L tank, ~175 acres/hour, $34,000–42,000. For high-volume operations (1,000+ acres/season).
+          Requires Part 137 certificate and careful logistics due to size and weight.
+        </li>
+      </ul>
+
+      <h2>Hylio AG-272 — NDAA-compliant US-made option</h2>
+      <p>
+        Made in Houston, TX. The only commercially available ag spray drone currently meeting NDAA
+        Section 848/899 requirements for US-manufactured equipment. Required for federal land operations,
+        many USDA program contexts, and defense-adjacent buyers.
+      </p>
+      <ul>
+        <li>
+          <strong><a href="/drone/hylio-ag-272" className="text-green-700 hover:underline font-medium">Hylio AG-272</a></strong>:
+          10-gallon (~38L) tank, ~50 acres/hour, $25,000–30,000. Growing dealer network; manufacturer
+          training required for warranty coverage.
+        </li>
+      </ul>
+
+      <h2>XAG — Advanced technology alternative</h2>
+      <p>
+        Competitive technology with integrated AI path planning and obstacle avoidance. Pricing is
+        similar to DJI. Dealer and service network in the US is smaller but growing — verify local
+        support before buying.
+      </p>
+      <ul>
+        <li>
+          <strong><a href="/drone/xag-p100" className="text-green-700 hover:underline font-medium">XAG P100 Pro</a></strong>:
+          50L tank, ~80 acres/hour, $20,000–24,000. Strong AI features; good fit for precision
+          application on specialty crops.
+        </li>
+        <li>
+          <strong>XAG V40</strong>: 16L tank, ~40 acres/hour, $11,000–14,000. Entry-level option
+          with solid autonomous flight capabilities.
+        </li>
       </ul>
       <p>
-        Avantaje DJI: service excelent în România (Nik-ro, BOSAL, RIAGRO), rețea de piese de schimb, software
-        matur. Dezavantaje: preț mai mare decât XAG.
+        <strong>Note:</strong> XAG is also not NDAA-compliant as of 2026.
       </p>
 
-      <h2>XAG: Alternativa tehnică</h2>
-      <ul>
-        <li><strong>P100 Pro</strong>: 50L, 32 ha/oră, 70–85.000 EUR. Tehnologie avansată.</li>
-        <li><strong>V40</strong>: 16L, 16 ha/oră, 40–50.000 EUR. Pentru începători.</li>
-      </ul>
-      <p>
-        Avantaje XAG: AI integrat, planificare automată, preț mai bun. Dezavantaje: service mai slab în
-        România, piese de schimb greu de găsit.
-      </p>
-
-      <h2>ADT Falcon: Opțiunea robustă</h2>
-      <p>
-        Producător chinez mai puțin cunoscut, dar cu drone robuste și prețuri competitive (40–70.000 EUR).
-        Reprezentat în România de LandTech și câțiva dealeri regionali.
-      </p>
-
-      <h2>Matrice decizională</h2>
+      <h2>Decision matrix by operation size</h2>
       <table className="w-full text-sm border border-gray-200 rounded">
         <thead className="bg-gray-50">
           <tr>
-            <th className="p-2 text-left">Suprafață</th>
-            <th className="p-2 text-left">Dronă recomandată</th>
-            <th className="p-2 text-left">Investiție</th>
+            <th className="p-2 text-left">Acreage per season</th>
+            <th className="p-2 text-left">Recommended drone</th>
+            <th className="p-2 text-left">Investment</th>
           </tr>
         </thead>
         <tbody>
-          <tr className="border-t"><td className="p-2">&lt; 100 ha</td><td className="p-2">DJI T25P / XAG V40</td><td className="p-2">45–55K EUR</td></tr>
-          <tr className="border-t"><td className="p-2">100–500 ha</td><td className="p-2">DJI T50</td><td className="p-2">75–95K EUR</td></tr>
-          <tr className="border-t"><td className="p-2">500–2000 ha</td><td className="p-2">DJI T50 (2 buc) sau T100</td><td className="p-2">150–200K EUR</td></tr>
-          <tr className="border-t"><td className="p-2">&gt; 2000 ha</td><td className="p-2">Flotă DJI T100</td><td className="p-2">300K+ EUR</td></tr>
+          <tr className="border-t"><td className="p-2">&lt; 500 acres</td><td className="p-2">DJI T25P / XAG V40</td><td className="p-2">$12–18K</td></tr>
+          <tr className="border-t"><td className="p-2">500–2,500 acres</td><td className="p-2">DJI T50</td><td className="p-2">$22–30K</td></tr>
+          <tr className="border-t"><td className="p-2">2,500–8,000 acres</td><td className="p-2">2× DJI T50 or DJI T100</td><td className="p-2">$40–55K</td></tr>
+          <tr className="border-t"><td className="p-2">&gt; 8,000 acres</td><td className="p-2">Fleet of DJI T100 or T50</td><td className="p-2">$80K+</td></tr>
+          <tr className="border-t"><td className="p-2">Federal/NDAA required</td><td className="p-2">Hylio AG-272</td><td className="p-2">$28–35K</td></tr>
         </tbody>
       </table>
 
-      <h2>Recomandare finală</h2>
+      <h2>Key buying checklist</h2>
+      <ul>
+        <li>Verify NDAA compliance requirements for your specific operation before purchasing</li>
+        <li>Confirm local dealer and service center availability — downtime during spray season is costly</li>
+        <li>Budget 1.5–2× the drone price for a complete field-ready package (batteries, charger, generator)</li>
+        <li>Check USDA EQIP eligibility — you may recover 40–50% of costs through{' '}
+          <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">EQIP cost-share payments</a>
+        </li>
+        <li>Buy from an authorized dealer to maintain warranty and access manufacturer training</li>
+      </ul>
+
+      <h2>Use our comparison tool</h2>
       <p>
-        Pentru majoritatea fermelor din România, DJI Agras T50 este alegerea optimă: rețea de service extinsă,
-        capacitate suficientă, eligibilă AFIR. Cumpără de la dealeri autorizați precum{' '}
-        <a href="/operatori/nik-ro" className="text-green-700 hover:underline font-medium">Nik-ro</a> sau{' '}
-        <a href="/operatori/riagro" className="text-green-700 hover:underline font-medium">RIAGRO</a>.
+        Compare DJI Agras T50, Hylio AG-272, and XAG P100 side by side on tank size, coverage rate,
+        price, and NDAA status using our{' '}
+        <a href="/unelte/comparator-drone" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</a>.
       </p>
     </div>
   ),
@@ -327,53 +569,99 @@ export const guideContent: Record<string, ReactNode> = {
   'subventii-moldova-aipa': (
     <div className="space-y-6">
       <p>
-        Agenția de Intervenție și Plăți pentru Agricultură (<ExtLink href="https://aipa.gov.md">AIPA</ExtLink>)
-        oferă subvenții pentru achiziția de drone agricole în Republica Moldova prin Fondul Național de
-        Dezvoltare a Agriculturii și Mediului Rural (FNDAMR).
+        Beyond federal USDA programs, many states offer their own grants, loans, and cost-share
+        programs for agricultural technology — including drones. This guide covers the most
+        significant state-level funding opportunities available to US drone operators and farmers
+        in 2026, organized by region.
       </p>
 
-      <h2>Programul principal: Anexa 3</h2>
+      <h2>Midwest — Corn Belt states</h2>
+      <ul>
+        <li>
+          <strong>Iowa — Beginning Farmer Tax Credit:</strong> Iowa resident farmers who purchase
+          agricultural equipment from a qualifying seller may receive a state income tax credit of
+          up to 5% of sale price. Contact the{' '}
+          <ExtLink href="https://www.iada.iowa.gov">Iowa Agricultural Development Authority (IADA)</ExtLink>.
+        </li>
+        <li>
+          <strong>Illinois — IDOA Ag Technology Grants:</strong> The Illinois Department of
+          Agriculture periodically opens grant rounds for precision agriculture equipment including
+          drones. Awards typically $5,000–25,000 per applicant.
+        </li>
+        <li>
+          <strong>Indiana — ISDA Beginning Farmer Loan Program:</strong> Below-market interest rate
+          loans up to $500,000 for beginning farmers purchasing equipment. Drones and accessories
+          are eligible capital items.
+        </li>
+        <li>
+          <strong>Ohio — OAQDA Ag-LINK Loans:</strong> Ohio Agricultural Linked Deposit Program
+          offers interest rate reductions of 3% on eligible equipment loans through participating
+          lenders.
+        </li>
+      </ul>
+
+      <h2>South — Cotton Belt and Delta states</h2>
+      <ul>
+        <li>
+          <strong>Texas — TADB Ag Loan Program:</strong> Texas Agricultural Finance Authority loans
+          up to $500,000 at reduced rates for new or expanding ag operations purchasing equipment.
+        </li>
+        <li>
+          <strong>Mississippi — MAFES / MSU Extension grants:</strong> Mississippi State University
+          Extension periodically offers cost-share programs for precision agriculture adoption on
+          row-crop farms through USDA partnerships.
+        </li>
+        <li>
+          <strong>Arkansas — ADFA Rural Development Loans:</strong> Arkansas Development Finance
+          Authority offers below-market financing for farm equipment in rural counties.
+        </li>
+      </ul>
+
+      <h2>West — Specialty crop and wine states</h2>
+      <ul>
+        <li>
+          <strong>California — CDFA SWEEP Program:</strong> State Water Efficiency and Enhancement
+          Program. Drone sprayers that demonstrably reduce water use qualify for grants up to
+          $200,000. Particularly relevant for vineyard and orchard operators in water-stressed regions.
+        </li>
+        <li>
+          <strong>California — CDFA Specialty Crop Block Grants:</strong> Annual federal pass-through
+          grants for projects that enhance competitiveness of California specialty crops — precision
+          application technology qualifies.
+        </li>
+        <li>
+          <strong>Washington — WSU Precision Ag Initiative:</strong> Washington State University
+          Extension offers subsidized training and equipment demonstration programs for drone
+          applicators in tree fruit and wine grape production.
+        </li>
+        <li>
+          <strong>Oregon — ODA Ag Development Fund:</strong> Oregon Department of Agriculture loans
+          for beginning farmers purchasing crop protection equipment including drones.
+        </li>
+      </ul>
+
+      <h2>How to stack multiple funding sources</h2>
       <p>
-        Fermierii moldoveni pot beneficia de o subvenție de <strong>50% din costul dronei agricole</strong>,
-        plafonată la 200.000 MDL (~10.000 EUR) per beneficiar. Programul este finanțat parțial de UE prin
-        <ExtLink href="https://www.eu4moldova.md">EU4Moldova</ExtLink>.
+        The most effective approach is to combine federal USDA EQIP cost-share with a state loan
+        program. Example: EQIP covers 45% of a $28,000 T50 package ($12,600), an IADA Beginning
+        Farmer loan at below-market rate finances the remaining $15,400. Effective out-of-pocket
+        cost in year one can be near zero if revenue from service applications covers loan payments.
       </p>
 
-      <h2>Eligibilitate</h2>
+      <h2>Tips for state program applications</h2>
       <ul>
-        <li>Gospodărie țărănească sau SRL agricol înregistrat în Moldova</li>
-        <li>Cifra de afaceri &lt; 5 mil. MDL</li>
-        <li>Activitate agricolă de minim 12 luni</li>
-        <li>Fără datorii la buget</li>
+        <li>Apply to USDA EQIP first — state programs often require proof of federal application</li>
+        <li>Contact your state Department of Agriculture early in the calendar year — budgets are limited and sign-up windows close fast</li>
+        <li>Your state's land-grant university Extension office often has a precision agriculture specialist who knows every current program available locally</li>
+        <li>Farm Bureau membership can give access to additional member-only loan programs and grant alerts</li>
       </ul>
 
-      <h2>Documente necesare</h2>
-      <ol>
-        <li>Cerere la biroul regional AIPA</li>
-        <li>Plan de afaceri simplificat</li>
-        <li>Ofertă de la un dealer autorizat</li>
-        <li>Copie CUI / extras ONRC (Moldova)</li>
-        <li>Certificat ANSA pentru tratamente fitosanitare</li>
-      </ol>
-
-      <h2>Dealeri autorizați în Moldova</h2>
+      <h2>Official resources</h2>
       <ul>
-        <li><a href="/operatori/bosal-solutions" className="text-green-700 hover:underline font-medium">BOSAL Solutions</a>: dealer oficial DJI</li>
-        <li><a href="/operatori/dron-assistance-moldova" className="text-green-700 hover:underline font-medium">DRON Assistance</a>: vânzări + servicii integrate</li>
-      </ul>
-
-      <h2>Sfaturi</h2>
-      <ul>
-        <li>Depune cererea în primele luni ale anului (bugetul se epuizează rapid)</li>
-        <li>Folosește consultanți AIPA acreditați</li>
-        <li>Asigură-te că drona are certificat ANSA pentru aplicarea pesticidelor</li>
-      </ul>
-
-      <h2>Resurse oficiale</h2>
-      <ul>
-        <li><ExtLink href="https://aipa.gov.md">AIPA: Subvenții agricole Moldova</ExtLink></li>
-        <li><ExtLink href="https://www.eu4moldova.md">EU4Moldova: Programul UE</ExtLink></li>
-        <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii și Industriei Alimentare</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives">USDA NRCS: EQIP (federal baseline)</ExtLink></li>
+        <li><ExtLink href="https://www.farmers.gov/loans">Farmers.gov: Loan and Grant Finder</ExtLink></li>
+        <li><ExtLink href="https://www.nasda.org/members">NASDA: State Agriculture Department Contacts</ExtLink></li>
+        <li><ExtLink href="https://www.extension.org">eXtension: Land-Grant University Resources</ExtLink></li>
       </ul>
     </div>
   ),
@@ -381,54 +669,71 @@ export const guideContent: Record<string, ReactNode> = {
   'legislatie-ansa-moldova': (
     <div className="space-y-6">
       <p>
-        Operarea dronelor agricole în Republica Moldova este reglementată de <strong>ANSA</strong> (Agenția Națională
-        pentru Siguranța Alimentelor) și de Autoritatea Aeronautică Civilă a Moldovei (AAC). Spre deosebire de
-        România (care aplică regulamentul EASA), Moldova are propriul cadru legislativ adaptat.
+        Crop protection regulations govern what products drone operators can apply, at what rates,
+        and under what conditions. This guide covers the EPA and state-level crop protection
+        regulatory framework that every US ag drone operator must understand in 2026 — from
+        pesticide label law to buffer zone requirements and recordkeeping.
       </p>
 
-      <h2>Cadrul legal de bază</h2>
-      <ul>
-        <li><strong>Hotărârea Guvernului nr. 647/2020</strong>: regulamentul general pentru UAS în Moldova</li>
-        <li><strong>ANSA</strong>: autorizează aplicarea produselor fitosanitare cu drona</li>
-        <li><strong>AAC Moldova</strong>: înregistrarea și licențierea operatorilor de zbor comercial</li>
-      </ul>
-
-      <h2>Autorizarea ANSA pentru tratamente fitosanitare</h2>
+      <h2>The pesticide label is federal law (FIFRA)</h2>
       <p>
-        Orice operator care dorește să aplice pesticide, fungicide sau fertilizatori cu drona în Moldova
-        trebuie să obțină autorizare de la ANSA. Documentele necesare:
+        Under the Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA), the pesticide label
+        is a legally binding document. Violating label directions — including application method,
+        rate, timing, or target crop — is a federal violation. Key label elements drone operators
+        must check before every application:
       </p>
       <ul>
-        <li>Cerere tip ANSA</li>
-        <li>Certificat de înregistrare a dronei la AAC</li>
-        <li>Licență pilot (sau certificat de competență)</li>
-        <li>Contractul cu producătorul/importatorul de drone</li>
-        <li>Lista produselor fitosanitare autorizate în Moldova</li>
+        <li><strong>Application method:</strong> verify the label permits aerial or UAS application — not all products do</li>
+        <li><strong>Rate and volume:</strong> some labels specify minimum carrier volume (gallons/acre) that ULV drone applications may fall below — check for aerial ULV allowances</li>
+        <li><strong>Restricted Entry Interval (REI):</strong> how long workers must stay out of treated fields after application</li>
+        <li><strong>Pre-Harvest Interval (PHI):</strong> minimum days between application and harvest — critical for specialty crops</li>
+        <li><strong>Buffer zones:</strong> many labels require setbacks from water bodies, inhabited structures, or non-target areas</li>
       </ul>
 
-      <h2>Înregistrarea dronei la AAC Moldova</h2>
-      <p>Toate aparatele de zbor cu greutatea peste 250 g trebuie înregistrate. Taxele sunt simbolice (200–500 MDL).</p>
+      <h2>Restricted Use Pesticides (RUPs)</h2>
+      <p>
+        RUPs may only be purchased and applied by a certified commercial pesticide applicator or
+        under their direct supervision. Most common ag drone applications (fungicides, herbicides,
+        insecticides) include products classified as RUPs. Always verify classification before
+        accepting an application job — applying an RUP without a license is a federal violation.
+      </p>
 
-      <h2>Zone restricționate</h2>
+      <h2>Drift management requirements</h2>
       <ul>
-        <li>5 km în jurul aeroporturilor (Chișinău, Bălți, Cahul)</li>
-        <li>Zonele de frontieră (fâșia de 5 km)</li>
-        <li>Zonele Transnistria</li>
+        <li>Drone applications are generally lower-drift than manned aerial but still subject to label drift restrictions</li>
+        <li>Wind speed limits: most labels restrict application above 10–15 mph; check specific product labels</li>
+        <li>Temperature inversions (calm, still air at night) can concentrate drift — many operators avoid applications in those conditions</li>
+        <li>Notify adjacent organic or sensitive crop neighbors before applications where label requires it</li>
       </ul>
 
-      <h2>Diferențe față de România (AACR/EASA)</h2>
+      <h2>Recordkeeping requirements</h2>
+      <p>
+        Federal law (FIFRA) requires commercial applicators to maintain application records for
+        all RUPs for a minimum of 2 years. Best practice is to keep records for all applications,
+        RUP or not. Required fields:
+      </p>
       <ul>
-        <li>Moldova nu aplică regulamentul european EASA: are cadru propriu</li>
-        <li>Nu există clasele Open/Specific/Certified ca în UE</li>
-        <li>Autorizarea ANSA pentru pesticide este obligatorie (în RO este MADR)</li>
-        <li>Produsele fitosanitare trebuie să fie pe lista ANSA, nu EFSA</li>
+        <li>Date and location of application (GPS coordinates or field description)</li>
+        <li>Product name, EPA registration number, and amount applied</li>
+        <li>Crop treated and total acreage</li>
+        <li>Name and license number of applicator</li>
+        <li>Weather conditions at time of application</li>
       </ul>
 
-      <h2>Resurse oficiale</h2>
+      <h2>State crop protection regulations</h2>
+      <p>
+        Each state maintains its own list of registered pesticides, additional label requirements,
+        and notification rules. Some states (e.g. California, New York) have stricter restrictions
+        than federal requirements — always check your state Department of Agriculture before
+        applying any product in a new state.
+      </p>
+
+      <h2>Official resources</h2>
       <ul>
-        <li><ExtLink href="https://ansa.gov.md">ANSA: Agenția Națională pentru Siguranța Alimentelor</ExtLink></li>
-        <li><ExtLink href="https://www.caa.md">AAC Moldova: Autoritatea Aeronautică Civilă</ExtLink></li>
-        <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii Moldova</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/pesticides">EPA: Pesticides Program</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/safepestcontrol/label-review-manual">EPA: Label Review Manual</ExtLink></li>
+        <li><ExtLink href="https://www.cdms.net">CDMS: Pesticide Label Database</ExtLink></li>
+        <li><ExtLink href="https://www.nasda.org/members">NASDA: State Ag Department Contacts</ExtLink></li>
       </ul>
     </div>
   ),
@@ -436,64 +741,75 @@ export const guideContent: Record<string, ReactNode> = {
   'cum-sa-devii-operator-moldova': (
     <div className="space-y-6">
       <p>
-        Piața de drone agricole din Republica Moldova este la început, dar crește rapid. Fermele mari de viticultură
-        (100.000+ ha) și câmpurile de cereale din nordul și centrul țării reprezintă o oportunitate reală. În 2026,
-        mai puțin de 5% din suprafața agricolă este tratată cu drone: restul este piața ta.
+        The Southeast US — Alabama, Georgia, Florida, Mississippi, Louisiana, South Carolina, and
+        North Carolina — is one of the fastest-growing markets for agricultural drone services in
+        2026. Cotton defoliation, peanut late-season disease programs, soybean white mold, and
+        rice blast are driving explosive demand. This guide is for operators starting or expanding
+        a drone spraying business in the Southeast.
       </p>
 
-      <h2>1. Înțelege piața moldovenească</h2>
+      <h2>1. Understand the Southeast market</h2>
       <ul>
-        <li>1,8 milioane ha teren agricol (câmpuri de cereale, viță de vie, livezi)</li>
-        <li>100.000+ ha de viticultură: principala piață pentru drone</li>
-        <li>Prețuri: 170–240 MDL/ha (€8.50–12/ha)</li>
-        <li>Principali clienți: exploatații mari 200–2000 ha, vinării, asociații agricole</li>
+        <li>40+ million acres of cropland across the 7-state Southeast region</li>
+        <li>Primary demand: cotton defoliation (Aug–Oct), peanut late cercospora (Jul–Sep), soybean R3 fungicide (Jul–Aug), rice blast (Jul–Aug)</li>
+        <li>Rates: $14–17/acre for row crops; $25–35/acre for peanuts and specialty crops</li>
+        <li>Key clients: 500–5,000-acre cotton and peanut producers, rice farms in the Mississippi Delta, orchard and blueberry operations in GA/FL/NC</li>
+        <li>Season length: April–October with peak demand July–September</li>
       </ul>
 
-      <h2>2. Forma juridică</h2>
+      <h2>2. State licensing priorities for Southeast operators</h2>
       <ul>
-        <li><strong>SRL</strong>: forma recomandată, capital minim 5.400 MDL</li>
-        <li><strong>Î.I.</strong> (Întreprindere Individuală): pentru operatori singuri, mai simplu fiscal</li>
-        <li>Înregistrare la <ExtLink href="https://egov.md">ASP (Agenția Servicii Publice)</ExtLink>, online sau la ghișeu</li>
+        <li><strong>Multi-state licensing is essential</strong> — most Southeast operators cover 2–4 states. Each state requires its own Commercial Pesticide Applicator License, though many have reciprocity agreements with neighbors.</li>
+        <li>Alabama, Georgia, Florida, and Mississippi all have active reciprocity — check with each state DOA before applying.</li>
+        <li>North Carolina and South Carolina have a joint reciprocity program for licensed applicators.</li>
       </ul>
 
-      <h2>3. Autorizările necesare</h2>
+      <h2>3. Equipment recommendations for Southeast conditions</h2>
       <ul>
-        <li>Înregistrare dronă la <strong>AAC Moldova</strong></li>
-        <li>Autorizare <strong>ANSA</strong> pentru aplicarea produselor fitosanitare</li>
-        <li>Curs pilot (cursuri disponibile în Chișinău și Cluj pentru cetățenii moldoveni)</li>
+        <li><strong>DJI Agras T50 or T100:</strong> best fit for large-acreage cotton and soybean. Heat and humidity are hard on batteries — plan for reduced flight times in July–August vs. manufacturer specs.</li>
+        <li><strong>Spray system setup:</strong> flat-fan nozzles for cotton defoliant; hollow-cone nozzles for fungicide canopy penetration in soybeans and peanuts.</li>
+        <li><strong>Logistics:</strong> portable generator + fast charger setup is critical — Southeast fields are often remote with no grid power nearby.</li>
       </ul>
 
-      <h2>4. Finanțarea: subvenție AIPA 50%</h2>
+      <h2>4. Finding clients in the Southeast</h2>
+      <ul>
+        <li>Introduce yourself to local co-op agronomists and independent crop consultants — they are the primary referral source for drone services in the region</li>
+        <li>Attend state commodity group meetings: Alabama Cotton Producers, Georgia Peanut Commission, Mississippi Soybean Promotion Board</li>
+        <li>List your operation in the{' '}
+          <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">US Ag Drone Directory</a>{' '}
+          — growers across the Southeast actively search by state
+        </li>
+        <li>Partner with established operators like{' '}
+          <a href="/operatori/osprey-agri-drone-national" className="text-green-700 hover:underline font-medium">Osprey Agri Drones</a> or{' '}
+          <a href="/operatori/kdb-land-and-air" className="text-green-700 hover:underline font-medium">KDB Land and Air</a>{' '}
+          for subcontracting during peak season
+        </li>
+      </ul>
+
+      <h2>5. Peak season logistics</h2>
       <p>
-        Cel mai important avantaj față de alte piețe: AIPA subvenționează 50% din prețul dronei, cu plafon
-        200.000 MDL (~€10.000). O dronă DJI T25P costă ~€45.000 → plătești €22.500, AIPA returnează €10.000.
+        July–September is the highest-pressure window: cotton defoliation, soybean R3, and peanut
+        programs all overlap. Successful Southeast operators book their calendar by June 1 and often
+        operate 7 days a week during the 6-week peak. Planning tips:
       </p>
       <ul>
-        <li>Depune cerere la AIPA înainte de achiziție</li>
-        <li>Drona trebuie să fie pe lista echipamentelor eligibile</li>
-        <li>Plata se face după achiziție și prezentarea facturilor</li>
+        <li>Pre-book fields in May — offer early-commitment discounts to lock in your calendar</li>
+        <li>Keep a waitlist — cancellations are rare but last-minute additions are common in peak weeks</li>
+        <li>Have a backup pilot or second operator for equipment failures during peak demand</li>
+        <li>Monitor Tar Spot and Southern Rust forecasts from{' '}
+          <ExtLink href="https://corn.ipmpipe.org">Corn IPM PIPE</ExtLink>{' '}
+          and{' '}
+          <ExtLink href="https://sbr.ipmpipe.org">SBR PIPE</ExtLink>{' '}
+          — disease alerts drive surge demand
+        </li>
       </ul>
 
-      <h2>5. Primii clienți</h2>
+      <h2>Official resources</h2>
       <ul>
-        <li>Contactează direct vinăriile mari (Purcari, Cricova, Mileștii Mici, Château Vartely)</li>
-        <li>Asociațiile agricole din nordul Moldovei (Bălți, Edineț, Soroca)</li>
-        <li>Postează pe platformele agricole locale și grupurile Facebook de fermieri</li>
-        <li>Colaborează cu DRON Assistance pentru subcontractare la început</li>
-      </ul>
-
-      <h2>6. Concurența</h2>
-      <p>
-        Principalii operatori activi: DRON Assistance (lider național), BOSAL Solutions, AgroDron.md.
-        Piața are loc pentru mulți operatori noi, în special în zonele rurale și raioanele de sud.
-      </p>
-
-      <h2>Resurse oficiale Moldova</h2>
-      <ul>
-        <li><ExtLink href="https://aipa.gov.md">AIPA: Subvenții pentru echipamente</ExtLink></li>
-        <li><ExtLink href="https://ansa.gov.md">ANSA: Autorizare fitosanitară</ExtLink></li>
-        <li><ExtLink href="https://asp.gov.md">ASP: Înregistrare firmă</ExtLink></li>
-        <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii Moldova</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/commercial_operators">FAA: Commercial UAS Operators</ExtLink></li>
+        <li><ExtLink href="https://www.agaviation.org">NAAA: National Agricultural Aviation Association</ExtLink></li>
+        <li><ExtLink href="https://corn.ipmpipe.org">Corn IPM PIPE: Tar Spot & Southern Rust Tracker</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/contact/find-a-service-center">USDA: Find Your Local Service Center</ExtLink></li>
       </ul>
     </div>
   ),
@@ -501,73 +817,76 @@ export const guideContent: Record<string, ReactNode> = {
   'roi-drona-agricola': (
     <div className="space-y-6">
       <p>
-        Cea mai frecventă întrebare pe care o pun fermierii este: <strong>merită să cumpăr propria dronă sau
-        mai bine apelez la un prestator de servicii?</strong> Răspunsul depinde de suprafața ta, numărul de
-        tratamente pe an și disponibilitatea operatorilor din zonă.
+        The most common question farmers and new operators ask in 2026: <strong>should I buy my own
+        ag drone, or hire a service operator?</strong> The answer depends on your acreage, number of
+        applications per season, availability of local operators, and whether you want to generate
+        service revenue from neighbors. Here are three real-world scenarios with full numbers.
       </p>
 
-      <h2>Scenariul 1: Fermă de 200 ha, 3 tratamente/an</h2>
+      <h2>Scenario 1: 500-acre grain farm, 3 applications per season</h2>
       <ul>
-        <li><strong>Cost serviciu extern:</strong> 200 ha × 3 tratamente × 100 RON/ha = <strong>60.000 RON/an</strong></li>
-        <li><strong>Investiție DJI Agras T25P:</strong> ~200.000 RON (50.000 EUR)</li>
-        <li><strong>Costuri operare anuale:</strong> ~15.000 RON (baterii, mentenanță, asigurare)</li>
-        <li><strong>Economie anuală netă:</strong> ~45.000 RON</li>
-        <li><strong>Amortizare estimată: 4–5 sezoane</strong></li>
-        <li><strong>Beneficiu adăugat:</strong> fără tasare sol (recuperezi 5–8% din recoltă)</li>
+        <li><strong>Cost of hiring an operator:</strong> 500 acres × 3 applications × $14/acre = <strong>$21,000/year</strong></li>
+        <li><strong>Investment in DJI Agras T25P (full package):</strong> ~$18,000 (drone + batteries + charger)</li>
+        <li><strong>Annual operating costs:</strong> ~$3,500 (battery replacement, maintenance, insurance)</li>
+        <li><strong>Annual net savings vs. hiring out:</strong> ~$17,500</li>
+        <li><strong>Estimated payback: 1 season</strong></li>
+        <li><strong>Added benefit:</strong> no wheel traffic damage — ground rigs compact soil and destroy 3–6% of crop stand at late-season timings</li>
       </ul>
       <p className="text-sm text-gray-600 bg-gray-50 rounded-lg p-3">
-        Concluzie: la 200 ha, drona proprie devine rentabilă dacă tratezi și suprafețele altor fermieri
-        din zonă. Poți acoperi 1.000 ha/sezon cu T25P, generând 100.000 RON venituri suplimentare.
+        Conclusion: at 500 acres with 3 applications, a T25P pays back in a single season. Adding
+        neighbor acres at $14/acre generates an additional $7,000–14,000 per season on top of
+        your own crop savings.
       </p>
 
-      <h2>Scenariul 2: Fermă de 500 ha, 3–4 tratamente/an</h2>
+      <h2>Scenario 2: 1,200-acre operation, 3–4 applications per season</h2>
       <ul>
-        <li><strong>Cost serviciu extern:</strong> 500 ha × 4 × 100 RON/ha = <strong>200.000 RON/an</strong></li>
-        <li><strong>Investiție DJI Agras T50 (pachet complet):</strong> ~350.000 RON (85.000 EUR)</li>
-        <li><strong>Costuri operare anuale:</strong> ~30.000 RON</li>
-        <li><strong>Economie anuală netă:</strong> ~170.000 RON</li>
-        <li><strong>Amortizare estimată: 2 sezoane</strong></li>
-        <li><strong>Fond AFIR DR-29 (50%):</strong> reducere investiție la ~175.000 RON</li>
+        <li><strong>Cost of hiring an operator:</strong> 1,200 acres × 4 applications × $14/acre = <strong>$67,200/year</strong></li>
+        <li><strong>Investment in DJI Agras T50 (full package):</strong> ~$28,000</li>
+        <li><strong>Annual operating costs:</strong> ~$6,000</li>
+        <li><strong>Annual net savings:</strong> ~$61,200</li>
+        <li><strong>Estimated payback: less than 6 months of spray season</strong></li>
+        <li><strong>USDA EQIP cost-share (40–50%):</strong> reduces net investment to ~$14,000–17,000</li>
       </ul>
 
-      <h2>Scenariul 3: Operator de servicii profesionist</h2>
+      <h2>Scenario 3: Commercial service operator (dedicated drone business)</h2>
       <ul>
-        <li><strong>Suprafața tratată/sezon:</strong> 3.000 ha (100 ha/zi × 30 zile lucrătoare)</li>
-        <li><strong>Venituri brute:</strong> 3.000 ha × 100 RON/ha = <strong>300.000 RON/sezon</strong></li>
-        <li><strong>Costuri totale (operare + depreciere):</strong> ~80.000 RON/sezon</li>
-        <li><strong>Profit net estimat:</strong> ~220.000 RON/sezon</li>
-        <li><strong>Amortizare DJI T50: 1–2 sezoane</strong></li>
+        <li><strong>Acres treated per season:</strong> 5,000 acres (80 acres/day × 60 spray days)</li>
+        <li><strong>Gross revenue:</strong> 5,000 acres × $14/acre = <strong>$70,000/season</strong></li>
+        <li><strong>Total costs (fuel, maintenance, insurance, depreciation):</strong> ~$18,000/season</li>
+        <li><strong>Estimated net profit:</strong> ~$52,000/season per drone</li>
+        <li><strong>DJI T50 payback: under 1 season</strong></li>
+        <li><strong>Add a second drone:</strong> revenue scales linearly with minimal overhead increase</li>
       </ul>
 
-      <h2>Beneficii necontabilizate ale dronei proprii</h2>
+      <h2>Hidden benefits of owning your own drone</h2>
       <ul>
-        <li><strong>Eliminarea tasării solului:</strong> tractorul cu bara de stropit distruge 5–8% din cultură prin călcare. La 500 ha grâu cu recoltă medie de 5 t/ha × 600 RON/t, pierderile sunt 7.500–12.000 RON/sezon.</li>
-        <li><strong>Normă ULV:</strong> drona folosește 8–20 L/ha față de 200–300 L/ha la tractor, economie de apă și timp de umplere.</li>
-        <li><strong>Flexibilitate maximă:</strong> drona poate trata oricând (noapte, după ploaie, câmpuri izolate) fără dependența de disponibilitatea unui operator extern.</li>
-        <li><strong>Date NDVI:</strong> cu o cameră multispectrală atașată, poți monitoriza sănătatea culturilor și aplica tratamente diferențiate (VRA).</li>
+        <li><strong>No wheel traffic at critical timings:</strong> VT corn and R3 soybean applications by ground rig damage 3–6% of yield through compaction and lodging. At $200/acre corn value, 3% loss on 500 acres = $3,000 per application.</li>
+        <li><strong>Ultra-low volume (ULV) application:</strong> drones use 1–3 gallons/acre vs. 10–20 gallons/acre for ground rigs — less water hauling, faster turnaround per load.</li>
+        <li><strong>Timing flexibility:</strong> apply at night, immediately after rain, or on isolated field edges without waiting for an external operator's schedule during peak demand weeks.</li>
+        <li><strong>NDVI and mapping revenue:</strong> add a multispectral camera and offer variable-rate application (VRA) scouting maps as a premium service to neighboring farms.</li>
       </ul>
 
-      <h2>Când NU merită drona proprie</h2>
+      <h2>When owning your own drone does NOT make sense</h2>
       <ul>
-        <li>Suprafața sub 150 ha cu un singur tip de cultură</li>
-        <li>Nu ai personal instruit sau nu vrei să investești în cursuri pilot AACR</li>
-        <li>Există operatori de servicii calificați disponibili rapid în zona ta</li>
-        <li>Nu ești eligibil pentru fonduri AFIR și nu ai capital pentru investiție</li>
+        <li>Total treated acreage is under 300 acres per season with only one crop type</li>
+        <li>No one on your operation is willing to get FAA Part 107 + Part 137 certified</li>
+        <li>Reliable, competitively priced local operators are already available with quick booking</li>
+        <li>Capital is better deployed in seed, inputs, or land rent for your operation size</li>
       </ul>
 
-      <h2>Fonduri AFIR disponibile pentru achiziție dronă</h2>
+      <h2>Reduce your upfront cost with USDA EQIP</h2>
       <p>
-        Prin intervențiile PNS 2023–2027, poți obține 50–80% rambursare din costul dronei. Citește{' '}
-        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">ghidul complet AFIR pentru drone agricole</a>{' '}
-        și consultă{' '}
-        <a href="/operatori?service=consultancy" className="text-green-700 hover:underline font-medium">un consultant AFIR din directorul nostru</a>.
+        USDA EQIP cost-share can cover 40–50% of eligible equipment costs for qualifying operations —
+        reducing a $28,000 T50 package to a net investment of $14,000–17,000. Read our{' '}
+        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">complete USDA EQIP funding guide</a>{' '}
+        before purchasing.
       </p>
 
-      <h2>Resurse utile</h2>
+      <h2>Useful tools</h2>
       <ul>
-        <li><a href="/drone" className="text-green-700 hover:underline font-medium">Comparator drone agricole: DJI, XAG, ADT</a></li>
-        <li><a href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">Prețuri pulverizare cu drona în România 2026</a></li>
-        <li><a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">Ghid fonduri AFIR pentru drone</a></li>
+        <li><a href="/drone" className="text-green-700 hover:underline font-medium">Ag drone comparison: DJI, Hylio, XAG</a></li>
+        <li><a href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">Drone spray pricing guide 2026</a></li>
+        <li><a href="/unelte/calculator-pret-pulverizare" className="text-green-700 hover:underline font-medium">Spray cost calculator</a></li>
       </ul>
     </div>
   ),

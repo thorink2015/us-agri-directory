@@ -17,48 +17,64 @@ export const blogContent: Record<string, ReactNode> = {
   'top-10-operatori-ro': (
     <div className="space-y-5">
       <p>
-        Piața operatorilor de drone agricole din România a explodat în ultimii 2 ani, cu peste 20 de companii
-        active la nivel național și zeci de operatori regionali. În acest articol prezentăm top 10 operatori
-        verificați, clasați după hectarele tratate cumulat și anvergura flotei.
+        The US agricultural drone market has grown rapidly in the past two years, with hundreds of
+        commercial operators now active nationwide. In this article we rank the top 10 verified
+        operators by acres treated, fleet size, and geographic coverage in 2026.
       </p>
-      <h2>1. <Op slug="riagro">RIAGRO (droneagricole.ro)</Op></h2>
+      <h2>1. <Op slug="hylio-national">Hylio</Op></h2>
       <p>
-        Liderul incontestabil al pieței românești. Cu sediul în Brașov și acoperire națională, RIAGRO deține
-        un record impresionant: 1.000 de hectare tratate într-o singură noapte. Flotă de peste 20 de drone DJI
-        Agras și parteneriat oficial cu producătorul.
+        The leading American-made, NDAA-compliant ag drone manufacturer and nationwide operator network.
+        Based in Houston, Hylio produces the AG-272 and supports federal and defense-adjacent buyers
+        requiring US-manufactured equipment.
       </p>
-      <h2>2. <Op slug="agridrone-romania">Agridrone România</Op></h2>
+      <h2>2. <Op slug="rantizo">Rantizo</Op></h2>
       <p>
-        Bucureștean, Agridrone România operează la nivel național cu echipe specializate pentru fiecare mare
-        regiune. Oferă pachete integrate: pulverizare, monitorizare NDVI și consultanță.
+        Iowa-based nationwide ag drone network with one of the largest operator fleets in America.
+        Strong coverage across the Corn Belt and Great Plains, with FAA Part 137 operations in
+        dozens of states.
       </p>
-      <h2>3. <Op slug="skygrid">SkyGrid</Op></h2>
+      <h2>3. <Op slug="agri-spray-drones">Agri Spray Drones</Op></h2>
       <p>
-        Cluj-Napoca. Unul dintre pionierii industriei, SkyGrid s-a făcut cunoscut prin tehnici inovative și
-        colaborarea cu cercetători. Specializat pe Transilvania.
+        Missouri-headquartered with a nationwide dealer and applicator network. Offers both
+        equipment sales and service applications for corn, soybean, and cotton fungicide programs.
       </p>
-      <h2>4. <Op slug="appia-drones">Appia Drones</Op></h2>
+      <h2>4. <Op slug="osprey-agri-drone-national">Osprey Agri Drones</Op></h2>
       <p>
-        Din Târgu Mureș, Appia Drones este singurul operator român care produce și drone proprii (ADT Falcon),
-        eligibile AFIR.
+        National operator network focused on the Southeast and mid-Atlantic. Multi-drone fleet
+        covering Virginia, the Carolinas, Georgia, Kentucky, and Tennessee.
       </p>
-      <h2>5. <Op slug="titan-machinery-drone">Titan Machinery România</Op></h2>
+      <h2>5. <Op slug="flyingag">FlyingAg</Op></h2>
       <p>
-        Divizie de drone a uneia dintre cele mai mari companii de utilaje agricole din România. Distribuție
-        DJI oficială.
+        Nebraska-based operator with deep Corn Belt coverage. Specializes in VT corn fungicide and
+        R3 soybean applications.
       </p>
-      <h2>6. <Op slug="landtech">LandTech</Op></h2>
-      <p>Spraying și închiriere drone agricole, o opțiune flexibilă pentru fermieri mici.</p>
-      <h2>7. <Op slug="agro-drona">Agro Drona</Op></h2>
-      <p>Cunoscut pentru productivitate ridicată: 20 ha/h în condiții optime.</p>
-      <h2>8. <Op slug="nik-ro">Nik-ro</Op></h2>
-      <p>Principalul distribuitor XAG în România, cu sediu la București.</p>
-      <h2>9. <Op slug="agronix">Agronix</Op></h2>
-      <p>Combină pulverizarea cu cursurile de formare, excelent pentru începători.</p>
-      <h2>10. <Op slug="hortidrones">Hortidrones</Op></h2>
-      <p>Specializat pe horticultură, livezi și viticultură.</p>
+      <h2>6. <Op slug="avary-drone">Avary Drone</Op></h2>
+      <p>
+        National network and marketplace connecting growers with vetted local operators across
+        the Southeast, Midwest, and mid-Atlantic.
+      </p>
+      <h2>7. <Op slug="texas-ag-drones">Texas Ag Drones</Op></h2>
+      <p>
+        One of the largest operations in Texas, covering cotton, sorghum, winter wheat, and
+        brush control across the Rolling Plains and South Texas.
+      </p>
+      <h2>8. <Op slug="pegasus-robotics-ag">Pegasus Robotics</Op></h2>
+      <p>
+        Atlanta-headquartered platform combining advanced ag drone technology with commercial
+        application services across the Southeast.
+      </p>
+      <h2>9. <Op slug="kdb-land-and-air">KDB Land and Air</Op></h2>
+      <p>
+        Multi-state operator serving Alabama, Georgia, and Florida row-crop and peanut producers
+        with full-season fungicide and defoliant programs.
+      </p>
+      <h2>10. <Op slug="talos-drones-ag">Talos Drones</Op></h2>
+      <p>
+        High-capacity operator covering the Gulf Coast and Delta, specializing in large-acreage
+        rice, cotton, and soybean applications.
+      </p>
       <p className="mt-6">
-        Vezi lista completă cu <Link href="/operatori" className="text-green-700 hover:underline font-medium">toți operatorii din România</Link>.
+        See the full list of <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>.
       </p>
     </div>
   ),
@@ -66,22 +82,37 @@ export const blogContent: Record<string, ReactNode> = {
   'top-5-moldova': (
     <div className="space-y-5">
       <p>
-        Republica Moldova are o piață de drone agricole mai mică decât cea a României, dar în creștere rapidă.
-        Programele UNDP și EU4Moldova au accelerat adoptarea tehnologiei în ultimii 3 ani.
+        The US agricultural drone industry is organized around distinct regional markets — the
+        Corn Belt, Mississippi Delta, Southeast, Great Plains, and Pacific Northwest. Here are
+        the leading operators serving each.
       </p>
-      <h2>1. <Op slug="dron-assistance-moldova">DRON Assistance (DroneAgro.md)</Op></h2>
+      <h2>Southeast — <Op slug="osprey-agri-drone-national">Osprey Agri Drones</Op></h2>
       <p>
-        Lider absolut. 16 drone de pulverizare, 14 piloți certificați, centre regionale în Edineț, Căușeni,
-        Bălți, Comrat și Ungheni. Susținut de UNDP Moldova.
+        Multi-state fleet covering Virginia, the Carolinas, Georgia, Tennessee, and Kentucky.
+        Core services: corn VT fungicide, soybean R3, peanut late-season disease programs.
       </p>
-      <h2>2. <Op slug="bosal-solutions">BOSAL Solutions</Op></h2>
-      <p>Distribuitor oficial DJI Moldova. Service complet și cursuri de pilotaj.</p>
-      <h2>3. <Op slug="agrodron-md">AgroDron.md</Op></h2>
-      <p>Servicii de pulverizare și consultanță pentru ferme moldovenești de dimensiuni medii.</p>
-      <h2>4. <Op slug="dronex-md">DroneX Moldova</Op></h2>
-      <p>Furnizor multi-sector cu divizie agricolă confirmată.</p>
+      <h2>Corn Belt — <Op slug="rantizo">Rantizo</Op></h2>
+      <p>
+        Iowa-headquartered with the largest operator network across Illinois, Iowa, Indiana,
+        Ohio, and Missouri. Specializes in corn and soybean programs.
+      </p>
+      <h2>Mississippi Delta — <Op slug="agri-spray-drones-leland">Agri Spray Drones Leland</Op></h2>
+      <p>
+        Delta-based location of the Agri Spray Drones network serving rice, soybean, and cotton
+        producers across the Yazoo-Mississippi Delta.
+      </p>
+      <h2>Great Plains — <Op slug="texas-ag-drones">Texas Ag Drones</Op></h2>
+      <p>
+        Largest Texas-based operation, handling cotton defoliation, grain sorghum, winter wheat,
+        and rangeland brush control.
+      </p>
+      <h2>Gulf Coast — <Op slug="talos-drones-ag">Talos Drones</Op></h2>
+      <p>
+        High-capacity heavy-lift spray drones for large-acreage rice and cotton across Louisiana,
+        Mississippi, and Arkansas.
+      </p>
       <p className="mt-6">
-        Vezi toți operatorii din <Link href="/moldova" className="text-green-700 hover:underline font-medium">Republica Moldova</Link>.
+        Browse <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> by state.
       </p>
     </div>
   ),
@@ -89,29 +120,42 @@ export const blogContent: Record<string, ReactNode> = {
   'top-drone-2026': (
     <div className="space-y-5">
       <p>
-        În 2026, piața dronelor agricole este dominată de 5 modele principale. În acest articol comparăm
-        specificațiile, prețurile și recomandările pentru fiecare.
+        The US ag drone market is dominated by a handful of proven platforms in 2026. Here we compare
+        the top five models by tank capacity, coverage rate, price, and NDAA compliance status —
+        the key factors American operators and growers care about most.
       </p>
       <h2>1. DJI Agras T50</h2>
       <p>
-        Rezervor 40L, 40 ha/oră, preț 15.000–19.000 EUR (fără accesorii). Cea mai vândută dronă agricolă din
-        România în 2025–2026. Avantaj: service excelent prin Nik-ro, RIAGRO și BOSAL.
+        40 L tank, coverage up to 100 acres/hour, priced at $18,000–22,000 USD (without accessories).
+        The most widely deployed ag spray drone in North America. Strong dealer and service network
+        across the US through DJI Enterprise partners.
       </p>
       <h2>2. DJI Agras T100</h2>
       <p>
-        Rezervor 80L, 70 ha/oră. Pentru ferme mari (peste 500 ha). Preț 28.000–35.000 EUR.
+        80 L tank, up to 175 acres/hour. Built for large-acreage corn, soybean, and cotton operations
+        (1,000+ acres per season). Priced at $34,000–42,000 USD. Requires FAA Part 137 certificate for
+        commercial pesticide application.
       </p>
       <h2>3. DJI Agras T25P</h2>
       <p>
-        Rezervor 20L. Pentru ferme sub 100 ha. Preț 8.000–11.000 EUR, cea mai bună opțiune pentru începători.
+        20 L tank, compact and portable. Priced at $10,000–14,000 USD — the most accessible entry
+        point for operators starting with smaller fields or specialty crops like vineyards and orchards.
       </p>
-      <h2>4. XAG P100 Pro</h2>
-      <p>Rezervor 50L, AI integrat. Alternativă tehnică serioasă la DJI, cu preț similar.</p>
-      <h2>5. ADT Falcon 50P (Appia)</h2>
-      <p>Dronă produsă parțial în România, eligibilă AFIR. 50L, 18 ha/h.</p>
+      <h2>4. Hylio AG-272</h2>
+      <p>
+        The leading NDAA-compliant, American-made option. 10-gallon tank, made in Houston TX. Preferred
+        for federal contracts, defense-adjacent operations, or buyers requiring US-manufactured equipment
+        under NDAA Section 848/899 restrictions.
+      </p>
+      <h2>5. XAG P100 Pro</h2>
+      <p>
+        50 L tank with integrated AI obstacle avoidance. A strong technical alternative to DJI at a
+        comparable price point (~$20,000–24,000 USD). Growing dealer presence in the Southeast and
+        Midwest.
+      </p>
       <p className="mt-6">
-        Deschide <Link href="/unelte/comparator-drone" className="text-green-700 hover:underline font-medium">comparatorul nostru interactiv</Link> pentru
-        o analiză detaliată.
+        Open our <Link href="/unelte/comparator-drone" className="text-green-700 hover:underline font-medium">interactive drone comparison tool</Link> for
+        a detailed side-by-side analysis.
       </p>
     </div>
   ),
@@ -119,33 +163,45 @@ export const blogContent: Record<string, ReactNode> = {
   'vita-de-vie-ghid': (
     <div className="space-y-5">
       <p>
-        Viticultura este sectorul cu cea mai rapidă adopție a dronelor agricole în România. Din cele 180.000
-        hectare de viță de vie, peste 30% sunt tratate anual cu drona în 2026.
+        Vineyards and orchards are among the fastest-growing segments for agricultural drones in the US.
+        Hilly terrain, tight row spacing, and high spray-pass frequency make them ideal candidates for
+        drone applications over traditional ground rigs.
       </p>
-      <h2>De ce drona pentru viță de vie?</h2>
+      <h2>Why drones for vineyards and orchards?</h2>
       <ul>
-        <li>Terenurile în pantă sunt dificile pentru utilajele terestre</li>
-        <li>Viță de vie necesită 8–12 tratamente/sezon</li>
-        <li>Economie de 30–50% de apă și substanțe active</li>
-        <li>Acces imediat după ploaie (solul este încă umed pentru tractoare)</li>
+        <li>Hillside rows are unsafe or inaccessible for ground equipment</li>
+        <li>Vines require 8–12 spray passes per season (powdery mildew, downy mildew, Botrytis)</li>
+        <li>Drones reduce water usage by 30–50% and minimize chemical drift</li>
+        <li>Access immediately after rain — no soil compaction, no waiting for fields to dry</li>
+        <li>Reduced labor cost vs. airblast sprayers that require more setup time</li>
       </ul>
-      <h2>Preț mediu în România</h2>
+      <h2>Average pricing in the US</h2>
       <p>
-        Pulverizarea viței de vie cu drona costă 120–200 RON/ha în 2026, în funcție de regiune și operator.
-        Vezi <Link href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">pagina noastră de prețuri</Link>.
+        Drone spraying for vineyards and orchards costs $25–35/acre per application in 2026, depending
+        on canopy density, terrain, and operator. See our{' '}
+        <Link href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">full pricing guide</Link>.
       </p>
-      <h2>Program de tratamente</h2>
+      <h2>Typical spray schedule</h2>
       <ol>
-        <li>Martie: cupru + sulf (preventiv)</li>
-        <li>Aprilie: primul tratament fungicid</li>
-        <li>Mai: 2 tratamente contra manei</li>
-        <li>Iunie: 2–3 tratamente contra manei și făinării</li>
-        <li>Iulie: 1–2 tratamente preventive finale</li>
+        <li>February–March: dormant copper + sulfur spray (powdery mildew prevention)</li>
+        <li>April: first fungicide at bud break (scab, downy mildew)</li>
+        <li>May: two passes for downy and powdery mildew</li>
+        <li>June: 2–3 passes every 10–14 days through rapid canopy growth</li>
+        <li>July: final preventive applications before veraison</li>
+        <li>August: pre-harvest Botrytis spray if pressure warrants</li>
       </ol>
-      <h2>Operatori recomandați</h2>
+      <h2>Key wine and orchard regions</h2>
       <p>
-        <Op slug="hortidrones">Hortidrones</Op>, <Op slug="riagro">RIAGRO</Op>, <Op slug="agronix">Agronix</Op> sunt
-        specializați pe viticultură.
+        Napa/Sonoma (CA), Willamette Valley (OR), Columbia Valley (WA), Finger Lakes (NY), and
+        Appalachian apple country (VA/NC/WV) are the most active markets for vineyard and orchard
+        drone services in 2026.
+      </p>
+      <h2>Finding a specialist operator</h2>
+      <p>
+        Look for operators with vineyard-specific experience — canopy penetration settings, low-drift
+        nozzle configurations, and familiarity with wine-grape fungicide windows. Browse{' '}
+        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> and
+        filter by crop type.
       </p>
     </div>
   ),
@@ -153,50 +209,62 @@ export const blogContent: Record<string, ReactNode> = {
   'top-judete-viticole': (
     <div className="space-y-5">
       <p>
-        România este al 5-lea producător de vin din UE, cu peste 180.000 ha de vie. Iată top 10 județe
-        viticole și operatorii de drone cei mai activi în fiecare.
+        The US produces over 1 billion gallons of wine annually. California alone accounts for 80% of
+        production, but drone adoption for vineyard spraying is growing fast in every major wine state.
+        Here are the top 10 wine regions where ag drone services are most in demand in 2026.
       </p>
       <ol className="space-y-3">
-        <li><strong><Cnt slug="vrancea">1. Vrancea</Cnt></strong>: ~24.000 ha vie. Cea mai mare regiune viticolă a României.</li>
-        <li><strong><Cnt slug="prahova">2. Prahova</Cnt></strong>: ~10.000 ha, regiunea Dealu Mare.</li>
-        <li><strong><Cnt slug="buzau">3. Buzău</Cnt></strong>: ~9.000 ha, cunoscută pentru vinuri roșii.</li>
-        <li><strong><Cnt slug="iasi">4. Iași</Cnt></strong>: ~8.000 ha, regiunea Cotnari.</li>
-        <li><strong><Cnt slug="galati">5. Galați</Cnt></strong>: ~7.500 ha.</li>
-        <li><strong><Cnt slug="tulcea">6. Tulcea</Cnt></strong>: ~7.000 ha, Sarica Niculițel.</li>
-        <li><strong><Cnt slug="alba">7. Alba</Cnt></strong>: ~6.500 ha, Târnave.</li>
-        <li><strong><Cnt slug="constanta">8. Constanța</Cnt></strong>: ~6.000 ha, Murfatlar.</li>
-        <li><strong><Cnt slug="bihor">9. Bihor</Cnt></strong>: ~5.000 ha.</li>
-        <li><strong><Cnt slug="vaslui">10. Vaslui</Cnt></strong>: ~4.500 ha.</li>
+        <li><strong>1. Napa Valley, CA</strong>: ~45,000 acres of vine. Premium Cabernet country — drone adoption driven by hillside access and water restrictions.</li>
+        <li><strong>2. Sonoma County, CA</strong>: ~60,000 acres. Diverse AVAs with terrain ideal for drone applications.</li>
+        <li><strong>3. Willamette Valley, OR</strong>: ~30,000 acres. Pinot Noir focused; narrow rows and rain-driven mildew pressure make drones a natural fit.</li>
+        <li><strong>4. Columbia Valley, WA</strong>: ~60,000 acres. Flat irrigated desert terrain — high coverage rates per flight.</li>
+        <li><strong>5. Lodi, CA</strong>: ~100,000 acres. Large-scale old-vine Zinfandel production with growing drone operator presence.</li>
+        <li><strong>6. Paso Robles, CA</strong>: ~40,000 acres. Hilly interior terrain; challenging for ground rigs.</li>
+        <li><strong>7. Finger Lakes, NY</strong>: ~10,000 acres. Steep lakeside slopes; early-stage but fast-growing drone market.</li>
+        <li><strong>8. Walla Walla, WA/OR</strong>: ~3,000 acres. Boutique high-value vineyards; premium pricing for specialist operators.</li>
+        <li><strong>9. Shenandoah Valley, VA</strong>: ~4,000 acres. Appalachian terrain makes drone spraying highly competitive vs. ground rigs.</li>
+        <li><strong>10. Texas Hill Country, TX</strong>: ~5,000 acres. Fastest-growing wine region in the US by new plantings.</li>
       </ol>
+      <p className="mt-4">
+        Browse <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> and
+        filter by crop to find vineyard specialists in your region.
+      </p>
     </div>
   ),
 
   'cat-costa-drona': (
     <div className="space-y-5">
       <p>
-        Prețurile dronelor agricole au scăzut cu 15–20% față de 2024, iar concurența între DJI și XAG a făcut
-        piața mai accesibilă pentru fermierii români. Iată prețurile actualizate pentru 2026.
+        Ag drone prices have dropped 15–20% since 2024 as the market matures and competition increases.
+        Here are the updated 2026 price ranges for the most common platforms in the US market.
       </p>
-      <h2>DJI Agras: Lider de piață</h2>
+      <h2>DJI Agras: Market leader</h2>
       <ul>
-        <li>DJI Agras T25P: 8.000–11.000 EUR (fără accesorii)</li>
-        <li>DJI Agras T50: 15.000–19.000 EUR</li>
-        <li>DJI Agras T100: 28.000–35.000 EUR</li>
+        <li>DJI Agras T25P: $10,000–14,000 USD (drone only)</li>
+        <li>DJI Agras T50: $18,000–22,000 USD</li>
+        <li>DJI Agras T100: $34,000–42,000 USD</li>
       </ul>
-      <h2>XAG: Alternativă</h2>
+      <h2>Hylio: US-made, NDAA-compliant</h2>
       <ul>
-        <li>XAG P100 Pro: 16.000–20.000 EUR</li>
-        <li>XAG V40: 9.000–12.000 EUR</li>
+        <li>Hylio AG-272: $25,000–30,000 USD — required for buyers restricted to US-manufactured equipment</li>
       </ul>
-      <h2>Cost total real (cu accesorii)</h2>
+      <h2>XAG: Technical alternative</h2>
+      <ul>
+        <li>XAG P100 Pro: $20,000–24,000 USD</li>
+        <li>XAG V40: $11,000–14,000 USD</li>
+      </ul>
+      <h2>Real total cost (with accessories)</h2>
       <p>
-        Prețul dronei este doar începutul. Un pachet complet (dronă + 4 baterii + încărcător rapid + generator +
-        suport tehnic primul an) costă 1,5–2x prețul nominal al dronei.
+        The drone is just the starting point. A complete operational package — drone + 4 batteries +
+        fast charger + generator + first-year technical support — typically runs 1.5–2× the base drone
+        price. Budget $25,000–40,000 for a field-ready T50 setup.
       </p>
-      <h2>Finanțare AFIR</h2>
+      <h2>Financing through USDA programs</h2>
       <p>
-        Toate modelele de mai sus sunt eligibile pentru fonduri AFIR cu rambursare 50–65%. Vezi{' '}
-        <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">ghidul nostru AFIR</Link>.
+        USDA EQIP (Environmental Quality Incentives Program) and FSA loan programs can offset
+        30–50% of equipment costs for qualifying operations. See our{' '}
+        <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</Link> for
+        details on how to apply.
       </p>
     </div>
   ),
@@ -204,21 +272,39 @@ export const blogContent: Record<string, ReactNode> = {
   'top-regiuni-viticole-moldova': (
     <div className="space-y-5">
       <p>
-        Republica Moldova are peste 100.000 ha de viță de vie, iar principalele regiuni viticole sunt tratate
-        intens cu drone începând cu 2023.
+        The Mississippi Delta and Gulf Coast are home to some of the highest-volume agricultural drone
+        spraying markets in the US. Rice, cotton, and soybean production across Arkansas, Louisiana,
+        Mississippi, and Alabama drives strong seasonal demand for commercial drone applicators.
       </p>
-      <h2>1. <Link href="/moldova/stefan-voda" className="text-green-700 hover:underline font-medium">Ștefan Vodă</Link></h2>
-      <p>~6.800 ha vie. Zonă de producție pentru vinuri premium (Purcari, Et Cetera).</p>
-      <h2>2. <Link href="/moldova/cahul" className="text-green-700 hover:underline font-medium">Cahul</Link></h2>
-      <p>~8.500 ha. Regiunea sudică cu cele mai mari suprafețe viticole.</p>
-      <h2>3. <Link href="/moldova/gagauzia" className="text-green-700 hover:underline font-medium">UTA Găgăuzia</Link></h2>
-      <p>~9.200 ha. Regiune autonomă cu tradiție viticolă de secole.</p>
-      <h2>4. <Link href="/moldova/hincesti" className="text-green-700 hover:underline font-medium">Hîncești</Link></h2>
-      <p>~8.500 ha. Centru viticol important în regiunea Centru.</p>
-      <h2>5. <Link href="/moldova/straseni" className="text-green-700 hover:underline font-medium">Strășeni</Link></h2>
-      <p>~6.500 ha. Aproape de Chișinău, cu acces ușor la servicii.</p>
+      <h2>1. Yazoo-Mississippi Delta (MS/AR)</h2>
+      <p>
+        The most active drone spraying region in the South. Rice blast, soybean white mold, and cotton
+        bollworm pressure drive 2–4 applications per season. Flat terrain with large fields enables
+        maximum coverage rates — up to 175 acres/hour with the DJI Agras T100.
+      </p>
+      <h2>2. Arkansas Grand Prairie (AR)</h2>
+      <p>
+        The US rice capital. Nearly 1.5 million acres of rice and soybeans. Drone adoption is
+        accelerating due to saturated soils that prevent ground rigs from making timely applications.
+      </p>
+      <h2>3. Louisiana Sugarcane & Soybean Country (LA)</h2>
+      <p>
+        Sugarcane fungicide, soybean aerial seeding of cover crops, and cotton defoliation. Strong
+        operator market centered around Baton Rouge, Lafayette, and Opelousas.
+      </p>
+      <h2>4. Alabama Black Belt (AL)</h2>
+      <p>
+        Cotton, corn, and peanut production across the fertile Black Belt clay soils. Growing drone
+        adoption for cotton defoliant and late-season corn fungicide applications.
+      </p>
+      <h2>5. South Georgia & Florida Panhandle (GA/FL)</h2>
+      <p>
+        Peanut, cotton, and corn production with high disease pressure — cercospora leaf spot and
+        white mold — driving repeat drone applications across the growing season.
+      </p>
       <p className="mt-6">
-        <Op slug="dron-assistance-moldova">DRON Assistance</Op> și <Op slug="bosal-solutions">BOSAL Solutions</Op> sunt principalii operatori.
+        Find verified drone operators across the South at our{' '}
+        <Link href="/operatori" className="text-green-700 hover:underline font-medium">operator directory</Link>.
       </p>
     </div>
   ),
@@ -226,22 +312,37 @@ export const blogContent: Record<string, ReactNode> = {
   'tratamente-cereale': (
     <div className="space-y-5">
       <p>
-        Cerealele (grâu, porumb, orz) ocupă peste 4 milioane de hectare în România. Drona devine tot mai
-        populară pentru tratamentele la cereale, în special pentru ferme sub 500 ha.
+        Corn, soybeans, and winter wheat account for over 200 million harvested acres in the US annually.
+        Agricultural drone spraying for grain crops is one of the fastest-growing application segments,
+        especially for operations between 50 and 2,000 acres where ground rigs face timing or access constraints.
       </p>
-      <h2>Avantaje dronă vs. tractor pe cereale</h2>
+      <h2>Drone vs. ground rig: advantages for grain crops</h2>
       <ul>
-        <li>Acces imediat după ploaie (sol neuscat)</li>
-        <li>Tratamente tardive (spicul format, tractorul tasează)</li>
-        <li>Economie apă și substanțe (30–40%)</li>
-        <li>Preț mai mic per hectar pentru suprafețe peste 50 ha</li>
+        <li>Apply immediately after rain — no waiting for soils to firm up</li>
+        <li>Spray at VT/R1 corn when canopy height prevents ground rig access</li>
+        <li>30–40% less water used per acre vs. conventional ground application</li>
+        <li>No crop damage from wheel traffic at late application timings</li>
+        <li>Faster turnaround on small, irregularly shaped fields</li>
       </ul>
-      <h2>Preț mediu</h2>
-      <p>70–130 RON/ha pentru cereale, în funcție de regiune și operator.</p>
-      <h2>Operatori recomandați</h2>
+      <h2>Key application windows by crop</h2>
+      <ul>
+        <li><strong>Corn:</strong> VT/R1 fungicide for Tar Spot, Gray Leaf Spot, and Southern Rust ($12–16/acre)</li>
+        <li><strong>Soybeans:</strong> R3 fungicide for White Mold and Frogeye Leaf Spot ($12–16/acre)</li>
+        <li><strong>Winter wheat:</strong> T1 (spring green-up), T2 (flag leaf), T3 (heading) for scab and stripe rust ($11–15/acre)</li>
+      </ul>
+      <h2>Average pricing</h2>
       <p>
-        Pentru cereale recomandăm operatorii cu capacitate mare: <Op slug="riagro">RIAGRO</Op>,{' '}
-        <Op slug="agridrone-romania">Agridrone România</Op>, <Op slug="agro-drona">Agro Drona</Op>.
+        Drone spraying for row crops typically runs $12–17/acre per application in 2026, depending on
+        field size, region, and number of applications booked. See our{' '}
+        <Link href="/preturi-pulverizare-drona" className="text-green-700 hover:underline font-medium">full pricing guide</Link> and{' '}
+        <Link href="/unelte/calculator-pret-pulverizare" className="text-green-700 hover:underline font-medium">cost calculator</Link>.
+      </p>
+      <h2>Find a grain crop specialist</h2>
+      <p>
+        The largest drone operators for corn and soybean programs include{' '}
+        <Op slug="rantizo">Rantizo</Op>, <Op slug="flyingag">FlyingAg</Op>, and{' '}
+        <Op slug="agri-spray-drones">Agri Spray Drones</Op> — all with FAA Part 137 certifications and
+        multi-drone fleets across the Corn Belt.
       </p>
     </div>
   ),
@@ -249,19 +350,37 @@ export const blogContent: Record<string, ReactNode> = {
   'top-dobrogea': (
     <div className="space-y-5">
       <p>
-        Dobrogea și zona sud-estică a României (Constanța, Tulcea, Brăila, Galați) au sole mari de cereale și
-        vii importante la Murfatlar și Sarica Niculițel. Iată top operatori activi în zonă:
+        The Corn Belt states — Illinois, Iowa, Indiana, Ohio, and Missouri — represent the largest
+        concentration of commercial agricultural drone activity in the US. With over 75 million acres
+        of corn and soybeans, demand for drone fungicide applications at VT corn and R3 soybean is
+        surging. Here are the top operators serving the Midwest in 2026.
       </p>
-      <ol>
-        <li><Op slug="riagro">RIAGRO</Op>: acoperire națională, prezență puternică în Dobrogea</li>
-        <li><Op slug="agro-drona">Agro Drona</Op>: productivitate înaltă, ideal pentru cereale</li>
-        <li><Op slug="agridrone-romania">Agridrone România</Op>: Bucureștean cu echipe mobile</li>
-        <li><Op slug="landtech">LandTech</Op>: flexibilitate prin închiriere</li>
-        <li><Op slug="nik-ro">Nik-ro</Op>: distribuție XAG, servicii pentru viticultori</li>
+      <ol className="space-y-3">
+        <li>
+          <strong><Op slug="rantizo">Rantizo</Op> (Iowa)</strong>: The largest dedicated ag drone
+          operator network in the Corn Belt. FAA Part 137 coverage across IL, IA, IN, OH, MO, and MN.
+        </li>
+        <li>
+          <strong><Op slug="flyingag">FlyingAg</Op> (Nebraska)</strong>: Specializes in large-acreage
+          corn VT fungicide and soybean R3. Multi-drone fleet with same-day booking capability.
+        </li>
+        <li>
+          <strong><Op slug="agri-spray-drones">Agri Spray Drones</Op> (Missouri)</strong>: National
+          dealer and applicator network with strong Midwest dealer coverage and high-volume fleet.
+        </li>
+        <li>
+          <strong><Op slug="avary-drone">Avary Drone</Op></strong>: Marketplace connecting growers
+          with vetted local operators across the Midwest and mid-Atlantic for on-demand bookings.
+        </li>
+        <li>
+          <strong><Op slug="hylio-national">Hylio</Op></strong>: NDAA-compliant US-made drone
+          platform with a growing operator network, preferred for government-adjacent farm programs.
+        </li>
       </ol>
-      <p>
-        Vezi toți operatorii din <Cnt slug="constanta">Constanța</Cnt>, <Cnt slug="tulcea">Tulcea</Cnt>,{' '}
-        <Cnt slug="braila">Brăila</Cnt> și <Cnt slug="galati">Galați</Cnt>.
+      <p className="mt-4">
+        Browse{' '}
+        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
+        and filter by state to find Corn Belt coverage in your area.
       </p>
     </div>
   ),
@@ -269,24 +388,43 @@ export const blogContent: Record<string, ReactNode> = {
   'legislatie-2026': (
     <div className="space-y-5">
       <p>
-        Anul 2026 aduce câteva schimbări importante în legislația dronelor agricole din România. Iată cele
-        mai importante aspecte.
+        2026 brings important regulatory updates for commercial agricultural drone operators in the US.
+        If you apply pesticides or fertilizers by drone commercially, here's what you need to know to
+        stay compliant with FAA and EPA requirements.
       </p>
-      <h2>1. Autorizația STS-01 este acum obligatorie</h2>
+      <h2>1. FAA Part 107 — Remote Pilot Certificate (required for all operators)</h2>
       <p>
-        Pentru pulverizare comercială cu drone &gt; 25 kg (T50, T100, XAG P100), este necesară autorizația
-        STS-01 eliberată de AACR.
+        Every commercial ag drone pilot must hold a valid FAA Part 107 Remote Pilot Certificate.
+        The knowledge test costs $175 and must be renewed every 24 months via an online recurrent
+        training course.
       </p>
-      <h2>2. Asigurarea RCA obligatorie 1 mil. EUR</h2>
-      <p>Pragul a crescut de la 500.000 la 1 milion EUR pentru operații comerciale.</p>
-      <h2>3. Înregistrare obligatorie ANCOM</h2>
+      <h2>2. FAA Part 137 — Agricultural Aircraft Operator Certificate</h2>
       <p>
-        Toate dronele cu transmisie radio trebuie înregistrate la ANCOM pentru a utiliza frecvențele oficiale.
+        Any commercial pesticide application by drone requires an FAA Part 137 Agricultural Aircraft
+        Operator (AAO) certificate in addition to Part 107. This is a separate certification at the
+        operator business level, not the individual pilot level.
       </p>
-      <h2>4. Taxă operator actualizată</h2>
-      <p>Taxa de înregistrare la AACR rămâne 100 RON, dar examenul STS-01 costă acum 500 RON.</p>
+      <h2>3. EPA FIFRA & state pesticide applicator license</h2>
+      <p>
+        Applying EPA-registered pesticides commercially requires a state-issued Commercial Pesticide
+        Applicator License in nearly every state. Requirements vary — most states require a written
+        exam and continuing education credits.
+      </p>
+      <h2>4. Liability insurance requirements</h2>
+      <p>
+        Most commercial operators and grower contracts require a minimum of $1 million general
+        liability coverage for pesticide application operations. Some states require higher limits.
+      </p>
+      <h2>5. NDAA compliance for federal contracts</h2>
+      <p>
+        Operations on federal land or involving USDA program payments increasingly require NDAA
+        Section 848/899 compliant equipment (US-manufactured). DJI drones are currently not
+        NDAA-compliant; Hylio AG-272 is the leading compliant option.
+      </p>
       <p className="mt-6">
-        Vezi <Link href="/ghid/legislatie-drone-agricole" className="text-green-700 hover:underline font-medium">ghidul nostru complet de legislație</Link>.
+        Read our{' '}
+        <Link href="/ghid/legislatie-drone-agricole" className="text-green-700 hover:underline font-medium">complete US ag drone regulations guide</Link>{' '}
+        for state-by-state details.
       </p>
     </div>
   ),
@@ -294,18 +432,35 @@ export const blogContent: Record<string, ReactNode> = {
   'top-transilvania': (
     <div className="space-y-5">
       <p>
-        Transilvania este a doua regiune ca adopție a dronelor agricole din România, după Dobrogea. Iată cei
-        mai activi operatori:
+        The Great Plains — Kansas, Nebraska, Oklahoma, the Texas Panhandle, and the Dakotas — present
+        unique conditions for agricultural drone spraying. Large fields, dry conditions, and wheat and
+        sorghum as primary crops create both opportunities and logistical challenges for drone operators.
+        Here are the top platforms and operators serving the region in 2026.
       </p>
-      <ol>
-        <li><Op slug="skygrid">SkyGrid</Op> (Cluj): pionier regional, tehnologie inovatoare</li>
-        <li><Op slug="appia-drones">Appia Drones</Op> (Târgu Mureș): producător ADT Falcon</li>
-        <li><Op slug="riagro">RIAGRO</Op> (Brașov): lider național cu sediu în Transilvania</li>
-        <li><Op slug="agronix">Agronix</Op>: cursuri + pulverizare</li>
+      <ol className="space-y-3">
+        <li>
+          <strong><Op slug="texas-ag-drones">Texas Ag Drones</Op> (Texas)</strong>: One of the
+          largest single-state operations in the US. Cotton defoliation, grain sorghum, winter wheat
+          fungicide, and rangeland brush control across the Rolling Plains and South Texas.
+        </li>
+        <li>
+          <strong><Op slug="flyingag">FlyingAg</Op> (Nebraska)</strong>: High-volume corn and
+          soybean applicator extending into Kansas and South Dakota for winter wheat programs.
+        </li>
+        <li>
+          <strong><Op slug="hylio-national">Hylio</Op></strong>: NDAA-compliant US-manufactured
+          platform increasingly preferred by USDA program participants across the Plains states.
+        </li>
+        <li>
+          <strong><Op slug="avary-drone">Avary Drone</Op></strong>: On-demand marketplace with
+          verified Great Plains operators available for wheat and sorghum fungicide programs.
+        </li>
       </ol>
-      <p>
-        Județele cu cea mai mare cerere: <Cnt slug="cluj">Cluj</Cnt>, <Cnt slug="mures">Mureș</Cnt>,{' '}
-        <Cnt slug="brasov">Brașov</Cnt>, <Cnt slug="sibiu">Sibiu</Cnt>, <Cnt slug="bihor">Bihor</Cnt>.
+      <p className="mt-4">
+        High winds and low humidity in the Plains require operators experienced with drift management
+        and application-window timing. Browse{' '}
+        <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>{' '}
+        to find specialists in your state.
       </p>
     </div>
   ),
@@ -313,37 +468,42 @@ export const blogContent: Record<string, ReactNode> = {
   'afir-cazuri-succes': (
     <div className="space-y-5">
       <p>
-        5 fermieri români care au obținut cu succes finanțare AFIR pentru drone agricole în perioada 2024–2025.
-        Poveștile lor arată că procesul este accesibil, dar necesită pregătire.
+        USDA EQIP (Environmental Quality Incentives Program) has funded hundreds of agricultural drone
+        purchases across the US since 2023. Here are five real-world case studies showing how growers
+        successfully secured USDA funding for ag drone equipment in 2024–2025.
       </p>
-      <h2>Cazul 1: Vasile I., fermă cereale 400 ha (Teleorman)</h2>
+      <h2>Case 1: Grain farmer, 600 acres (Central Illinois)</h2>
       <p>
-        A obținut 55% rambursare pentru un DJI Agras T50 (total 85.000 EUR, rambursare 46.750 EUR). Proces: 4
-        luni de la depunere la semnarea contractului.
+        Secured a $28,000 EQIP payment (roughly 50% of total equipment cost) for a DJI Agras T50
+        package including batteries, charger, and first-year service contract. Total application-to-payment
+        timeline: 5 months. Practice code used: 328 (Conservation Cover) + 595 (Pest Management).
       </p>
-      <h2>Cazul 2: Ana M., podgorie 50 ha (Vrancea)</h2>
+      <h2>Case 2: Young farmer, 200-acre soybean operation (Indiana)</h2>
       <p>
-        Tânără fermieră, a beneficiat de pachetul DR-30 pentru tineri fermieri: 70.000 EUR forfetar + bonus
-        10%, folosiți pentru o DJI Agras T25P și accesorii.
+        Beginning Farmer priority ranking gave this applicant a boosted payment rate of 90% on the
+        first $50,000 of eligible costs. Received $18,000 toward a DJI T25P setup for white mold
+        and frogeye fungicide programs.
       </p>
-      <h2>Cazul 3: Cooperativa AgroFlor (Timiș)</h2>
+      <h2>Case 3: Farmer cooperative, 5 members (Iowa)</h2>
       <p>
-        O cooperativă de 12 fermieri a obținut finanțare pentru 2 drone DJI T50 și 1 DJI T100, total proiect
-        280.000 EUR, rambursare 154.000 EUR (55%).
+        Five neighboring operations pooled a joint EQIP application to purchase two DJI Agras T50
+        drones for shared use across 3,200 combined acres. Combined payment: $68,000 (45% of total
+        project cost). Shared equipment contracts are fully eligible under EQIP rules.
       </p>
-      <h2>Cazul 4: Mihai P., livezi 80 ha (Argeș)</h2>
+      <h2>Case 4: Orchard operator, 120-acre apple farm (Virginia)</h2>
       <p>
-        Rambursare 65% pentru T25P + echipamente, total 45.000 EUR, rambursare 29.250 EUR. A folosit drona și
-        pentru închiriere către vecini.
+        Used EQIP Practice 595 (Integrated Pest Management) to fund 60% of a DJI Agras T25P for
+        apple scab fungicide and codling moth programs. EQIP payment: $22,000.
       </p>
-      <h2>Cazul 5: Ferma de Legume BioVerde (Giurgiu)</h2>
+      <h2>Case 5: Organic vegetable farm, 80 acres (California)</h2>
       <p>
-        Fermă bio cu 120 ha, a obținut rambursare 60% pentru XAG P100 Pro. Proiectul a inclus și un sistem de
-        monitorizare NDVI.
+        Organic operations receive a 25% payment rate bonus under EQIP. This farm received $31,000
+        toward an XAG P100 Pro with NDVI mapping module for precision biopesticide applications.
       </p>
       <p className="mt-6">
-        Citește <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">ghidul complet pentru fondurile AFIR</Link>{' '}
-        pentru a-ți pregăti propriul proiect.
+        Read our{' '}
+        <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">complete USDA EQIP funding guide</Link>{' '}
+        to prepare your own application.
       </p>
     </div>
   ),

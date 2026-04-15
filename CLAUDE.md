@@ -5,6 +5,21 @@ Read this file at the start of every session before making any changes.
 
 ---
 
+## IMPORTANT: Work in Small Batches to Avoid API Timeouts
+
+When making large content changes (translating files, adding many entries, rewriting articles),
+**always work in small batches**:
+
+- **Max 1–3 items (article, operator, section) per batch** — never attempt a full large file in one go
+- After each batch: commit, push, and wait for the user to say "next"
+- This prevents "API Error: Stream idle timeout - partial response received"
+- For very large files (like `blog/[slug]/content.tsx` with 12+ articles, or `ghid/[slug]/content.tsx`
+  with 9+ guides): split into batches of 1–2 articles/guides at a time
+- Use `Edit` tool with targeted replacements instead of full `Write` rewrites when possible
+- Always report what's done and what's next, so the user can say "next"
+
+---
+
 ## Project Overview
 
 **droneagricol.ro** — the most complete directory of agricultural drone operators in Romania and Moldova.
