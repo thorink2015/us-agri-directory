@@ -10,84 +10,102 @@ export const guideContent: Record<string, ReactNode> = {
   'cum-sa-devii-operator': (
     <div className="space-y-6">
       <p>
-        Piața dronelor agricole din România crește cu peste 40% anual, iar cererea de operatori specializați
-        depășește oferta. În acest ghid detaliat vei găsi toți pașii necesari pentru a începe o afacere de
-        succes cu drone agricole în 2026.
+        The US agricultural drone services market is growing at 35–45% per year, and demand for
+        certified commercial applicators far exceeds supply in most states. This guide walks through
+        every step to launching a profitable ag drone operation in 2026 — from FAA certification to
+        finding your first clients.
       </p>
 
-      <h2>1. Înțelege piața și cererea</h2>
+      <h2>1. Understand the market opportunity</h2>
       <p>
-        România are aproximativ 8,5 milioane de hectare de teren arabil, iar mai puțin de 5% este tratat anual
-        cu drone. Fermele cu suprafețe între 50–500 ha sunt principalii clienți, în special pentru viticultură
-        (150.000 ha), livezi (200.000 ha) și cereale păioase.
+        The US has over 900 million acres of farmland, with roughly 400 million acres of active cropland.
+        Only 3–5% is currently treated by drone annually — meaning the market is still in its early
+        growth stage. Target customers are farms between 50 and 2,000 acres, especially for corn VT
+        fungicide, soybean R3, winter wheat heading applications, and specialty crops like vineyards
+        and orchards where drones outperform ground rigs.
       </p>
 
-      <h2>2. Alegerea formei juridice</h2>
+      <h2>2. Choose your business structure</h2>
       <ul>
-        <li><strong>SRL</strong>: recomandat pentru activitate comercială (răspundere limitată)</li>
-        <li><strong>PFA</strong>: viabil pentru operatori individuali cu cifră de afaceri sub 100.000 EUR</li>
-        <li><strong>Cooperativă agricolă</strong>: avantaje fiscale și eligibilitate AFIR extinsă</li>
+        <li><strong>LLC</strong>: recommended for most operators — limits personal liability, simple taxation, low setup cost ($50–500 depending on state)</li>
+        <li><strong>Sole Proprietorship</strong>: lowest cost to start, but no liability protection — suitable only for testing the market</li>
+        <li><strong>S-Corp</strong>: worthwhile once revenue exceeds ~$80,000/year for tax savings on self-employment income</li>
       </ul>
       <p>
-        Înregistrarea unei SRL se face online la{' '}
-        <ExtLink href="https://portal.onrc.ro">Oficiul Național al Registrului Comerțului (ONRC)</ExtLink>,
-        durează 3–5 zile lucrătoare.
+        Register your LLC through your state Secretary of State portal. Most states process filings in
+        1–5 business days online. Get an EIN from the{' '}
+        <ExtLink href="https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online">IRS (free, instant online)</ExtLink>.
       </p>
 
-      <h2>3. Autorizarea AACR</h2>
+      <h2>3. Get FAA certified</h2>
       <p>
-        Orice operator comercial de drone agricole trebuie înregistrat la{' '}
-        <ExtLink href="https://www.caa.ro">Autoritatea Aeronautică Civilă Română (AACR)</ExtLink>. Pentru
-        dronele mai mari de 25 kg (DJI Agras T50, T100), este necesară autorizația de clasă{' '}
-        <em>Specific</em> și pilotul trebuie să dețină certificat de competență avansat (A2 sau STS).
+        Two FAA certifications are required for commercial pesticide application by drone:
       </p>
+      <ol>
+        <li>
+          <strong>FAA Part 107 Remote Pilot Certificate</strong> — required for any commercial UAS operation.
+          Pass the aeronautical knowledge test at an FAA-approved testing center ($175 fee). Study time: 20–40 hours.
+        </li>
+        <li>
+          <strong>FAA Part 137 Agricultural Aircraft Operator Certificate</strong> — required specifically for
+          commercial pesticide, fertilizer, or seed application. Applied for at your local FSDO (Flight Standards
+          District Office). Free to apply.
+        </li>
+      </ol>
+
+      <h2>4. Get your state pesticide applicator license</h2>
+      <p>
+        Nearly every state requires a Commercial Pesticide Applicator License to apply EPA-registered products
+        for hire. Contact your state department of agriculture for exam requirements — most require a written
+        test and 2–4 hours of continuing education annually. Fees: $50–300.
+      </p>
+
+      <h2>5. Startup budget (2026)</h2>
       <ul>
-        <li>Taxă înregistrare operator: 100 RON</li>
-        <li>Curs pilot + examen: 1.500–3.000 RON</li>
-        <li>Asigurare RCA obligatorie: 1.500–4.000 RON/an</li>
+        <li>DJI Agras T25P (starter setup): $14,000–18,000</li>
+        <li>DJI Agras T50 (production setup): $22,000–28,000</li>
+        <li>Batteries (4×) + fast charger: $4,000–6,000</li>
+        <li>Portable generator: $1,500–3,000</li>
+        <li>PPE + chemical handling equipment: $500–1,000</li>
+        <li>Liability insurance (first year): $2,500–5,000</li>
+        <li>FAA + state licenses + training: $1,500–3,000</li>
+        <li><strong>Total estimated startup cost:</strong> $30,000–55,000</li>
       </ul>
 
-      <h2>4. Bugetul inițial (2026)</h2>
+      <h2>6. Reduce costs with USDA EQIP funding</h2>
+      <p>
+        USDA EQIP can reimburse 30–50% of eligible equipment costs for qualifying operations. See our{' '}
+        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</a>{' '}
+        for eligibility requirements and how to apply.
+      </p>
+
+      <h2>7. Find your first clients</h2>
+      <p>
+        The most effective customer acquisition channels for new operators in 2026:
+      </p>
       <ul>
-        <li>Dronă DJI Agras T25P: 45.000–55.000 EUR</li>
-        <li>Dronă DJI Agras T50: 75.000–95.000 EUR</li>
-        <li>Generator portabil + stație încărcare: 4.000–8.000 EUR</li>
-        <li>Echipament protecție + EPP: 1.000 EUR</li>
-        <li>Autovehicul transport: 10.000+ EUR</li>
-        <li><strong>Total estimativ:</strong> 90.000–150.000 EUR</li>
+        <li>List your business for free in the <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">US Ag Drone Directory</a></li>
+        <li>Introduce yourself to local ag retailers, co-ops, and crop consultants — they refer dozens of growers per season</li>
+        <li>Attend local Farm Bureau meetings and commodity group meetings (corn, soybean, wheat grower associations)</li>
+        <li>Partner with agronomists and certified crop advisers (CCAs) who can recommend drone applications to their clients</li>
+        <li>Join state drone applicator associations (most major ag states have one)</li>
       </ul>
 
-      <h2>5. Fonduri nerambursabile (AFIR)</h2>
+      <h2>8. Pricing and profitability</h2>
       <p>
-        Prin <ExtLink href="https://portal.afir.info">AFIR (submăsura 4.1)</ExtLink>, fermierii eligibili pot
-        obține până la 65% rambursare din costul dronei. Consultă și{' '}
-        <a href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">ghidul nostru complet pentru AFIR</a>.
+        Average market rates run $12–17/acre for row crops and $25–35/acre for vineyards and orchards.
+        A single DJI Agras T50 can cover 80–100 acres per day in good conditions. At $14/acre on 90 acres,
+        that is $1,260/day gross revenue. Operating costs (fuel, maintenance, depreciation, insurance) run
+        approximately $400–600/day, leaving $660–860/day net per drone. A 60-day spray season generates
+        roughly $40,000–50,000 net per drone annually.
       </p>
 
-      <h2>6. Găsirea primilor clienți</h2>
-      <p>
-        Cele mai eficiente canale de achiziție clienți în 2026:
-      </p>
+      <h2>Official resources</h2>
       <ul>
-        <li>Listare în directoare de operatori (precum <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">TerraDron.ro</a>: gratuit)</li>
-        <li>Grupuri Facebook de fermieri (ex: &quot;Agricultori România&quot;)</li>
-        <li>Colaborare cu magazine agro (Agrosem, Agro Rural)</li>
-        <li>Parteneriate cu consultanți fitosanitari</li>
-      </ul>
-
-      <h2>7. Preț și rentabilitate</h2>
-      <p>
-        Prețul mediu al serviciului este de 80–150 RON/ha pentru cereale, 120–200 RON/ha pentru viticultură.
-        O echipă cu o dronă T50 poate trata 100 ha/zi, ceea ce înseamnă venituri de aproximativ 10.000–15.000
-        RON/zi. Costurile operaționale (combustibil, reparații, deprecieri) se ridică la 3.000–5.000 RON/zi.
-      </p>
-
-      <h2>Resurse oficiale</h2>
-      <ul>
-        <li><ExtLink href="https://www.caa.ro">AACR: Autoritatea Aeronautică Civilă Română</ExtLink></li>
-        <li><ExtLink href="https://portal.afir.info">AFIR: Agenția pentru Finanțarea Investițiilor Rurale</ExtLink></li>
-        <li><ExtLink href="https://www.madr.ro">MADR: Ministerul Agriculturii</ExtLink></li>
-        <li><ExtLink href="https://portal.onrc.ro">ONRC: Registrul Comerțului</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/commercial_operators">FAA: Commercial UAS Operators</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/agricultural_operations">FAA: Part 137 Agricultural Operations</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/pesticide-applicator-certification-and-training">EPA: Pesticide Applicator Certification</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives">USDA NRCS: EQIP Program</ExtLink></li>
       </ul>
     </div>
   ),
