@@ -12,7 +12,7 @@ import { counties } from '@/data/counties';
 import { CROP_NAME_MAP } from '@/data/crops';
 import { DRONE_NAME_MAP } from '@/data/drone-models';
 import { SERVICE_LABELS } from '@/data/types';
-import { formatPrice } from '@/lib/utils';
+import { formatPrice, getStateAbbr } from '@/lib/utils';
 import { buildOperatorMetadata } from '@/lib/seo';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorSchema from '@/components/schema/OperatorSchema';
@@ -96,7 +96,7 @@ export default function OperatorPage({ params }: Props) {
                   <div className="flex items-center gap-3 flex-wrap text-sm text-gray-600">
                     <span className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
-                      {operator.city}, US
+                      {operator.city}, {getStateAbbr(operator.counties)}
                     </span>
                     {operator.founded && (
                       <span className="flex items-center gap-1">

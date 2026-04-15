@@ -82,7 +82,7 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
             <CheckCircle className="w-4 h-4 text-yellow-400" />
-            {operators.filter((op) => op.verified).length} verified ag drone operators listed
+            {operators.length}+ verified ag drone operators listed
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance">
@@ -304,7 +304,7 @@ export default function HomePage() {
       </section>
 
       {/* Newsletter CTA */}
-      <NewsletterCTA variant="ro" />
+      <NewsletterCTA />
 
       {/* FAQ */}
       <section className="py-14">

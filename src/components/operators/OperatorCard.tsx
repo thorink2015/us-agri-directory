@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { MapPin, Phone, Globe, CheckCircle, Plane, Zap, Shield } from 'lucide-react';
 import { Operator, SERVICE_LABELS } from '@/data/types';
-import { formatPrice, addUtmParams } from '@/lib/utils';
+import { formatPrice, addUtmParams, getStateAbbr } from '@/lib/utils';
 import {
   trackOperatorWebsiteClick,
   trackOperatorPhoneClick,
@@ -51,7 +51,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
           {showCounty && (
             <div className="flex items-center gap-1 text-xs text-gray-500 mt-0.5" itemProp="address">
               <MapPin className="w-3 h-3 flex-shrink-0" />
-              <span className="truncate">{operator.city}, US</span>
+              <span className="truncate">{operator.city}, {getStateAbbr(operator.counties)}</span>
             </div>
           )}
         </div>
