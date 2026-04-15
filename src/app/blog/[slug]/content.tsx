@@ -209,50 +209,62 @@ export const blogContent: Record<string, ReactNode> = {
   'top-judete-viticole': (
     <div className="space-y-5">
       <p>
-        România este al 5-lea producător de vin din UE, cu peste 180.000 ha de vie. Iată top 10 județe
-        viticole și operatorii de drone cei mai activi în fiecare.
+        The US produces over 1 billion gallons of wine annually. California alone accounts for 80% of
+        production, but drone adoption for vineyard spraying is growing fast in every major wine state.
+        Here are the top 10 wine regions where ag drone services are most in demand in 2026.
       </p>
       <ol className="space-y-3">
-        <li><strong><Cnt slug="vrancea">1. Vrancea</Cnt></strong>: ~24.000 ha vie. Cea mai mare regiune viticolă a României.</li>
-        <li><strong><Cnt slug="prahova">2. Prahova</Cnt></strong>: ~10.000 ha, regiunea Dealu Mare.</li>
-        <li><strong><Cnt slug="buzau">3. Buzău</Cnt></strong>: ~9.000 ha, cunoscută pentru vinuri roșii.</li>
-        <li><strong><Cnt slug="iasi">4. Iași</Cnt></strong>: ~8.000 ha, regiunea Cotnari.</li>
-        <li><strong><Cnt slug="galati">5. Galați</Cnt></strong>: ~7.500 ha.</li>
-        <li><strong><Cnt slug="tulcea">6. Tulcea</Cnt></strong>: ~7.000 ha, Sarica Niculițel.</li>
-        <li><strong><Cnt slug="alba">7. Alba</Cnt></strong>: ~6.500 ha, Târnave.</li>
-        <li><strong><Cnt slug="constanta">8. Constanța</Cnt></strong>: ~6.000 ha, Murfatlar.</li>
-        <li><strong><Cnt slug="bihor">9. Bihor</Cnt></strong>: ~5.000 ha.</li>
-        <li><strong><Cnt slug="vaslui">10. Vaslui</Cnt></strong>: ~4.500 ha.</li>
+        <li><strong>1. Napa Valley, CA</strong>: ~45,000 acres of vine. Premium Cabernet country — drone adoption driven by hillside access and water restrictions.</li>
+        <li><strong>2. Sonoma County, CA</strong>: ~60,000 acres. Diverse AVAs with terrain ideal for drone applications.</li>
+        <li><strong>3. Willamette Valley, OR</strong>: ~30,000 acres. Pinot Noir focused; narrow rows and rain-driven mildew pressure make drones a natural fit.</li>
+        <li><strong>4. Columbia Valley, WA</strong>: ~60,000 acres. Flat irrigated desert terrain — high coverage rates per flight.</li>
+        <li><strong>5. Lodi, CA</strong>: ~100,000 acres. Large-scale old-vine Zinfandel production with growing drone operator presence.</li>
+        <li><strong>6. Paso Robles, CA</strong>: ~40,000 acres. Hilly interior terrain; challenging for ground rigs.</li>
+        <li><strong>7. Finger Lakes, NY</strong>: ~10,000 acres. Steep lakeside slopes; early-stage but fast-growing drone market.</li>
+        <li><strong>8. Walla Walla, WA/OR</strong>: ~3,000 acres. Boutique high-value vineyards; premium pricing for specialist operators.</li>
+        <li><strong>9. Shenandoah Valley, VA</strong>: ~4,000 acres. Appalachian terrain makes drone spraying highly competitive vs. ground rigs.</li>
+        <li><strong>10. Texas Hill Country, TX</strong>: ~5,000 acres. Fastest-growing wine region in the US by new plantings.</li>
       </ol>
+      <p className="mt-4">
+        Browse <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> and
+        filter by crop to find vineyard specialists in your region.
+      </p>
     </div>
   ),
 
   'cat-costa-drona': (
     <div className="space-y-5">
       <p>
-        Prețurile dronelor agricole au scăzut cu 15–20% față de 2024, iar concurența între DJI și XAG a făcut
-        piața mai accesibilă pentru fermierii români. Iată prețurile actualizate pentru 2026.
+        Ag drone prices have dropped 15–20% since 2024 as the market matures and competition increases.
+        Here are the updated 2026 price ranges for the most common platforms in the US market.
       </p>
-      <h2>DJI Agras: Lider de piață</h2>
+      <h2>DJI Agras: Market leader</h2>
       <ul>
-        <li>DJI Agras T25P: 8.000–11.000 EUR (fără accesorii)</li>
-        <li>DJI Agras T50: 15.000–19.000 EUR</li>
-        <li>DJI Agras T100: 28.000–35.000 EUR</li>
+        <li>DJI Agras T25P: $10,000–14,000 USD (drone only)</li>
+        <li>DJI Agras T50: $18,000–22,000 USD</li>
+        <li>DJI Agras T100: $34,000–42,000 USD</li>
       </ul>
-      <h2>XAG: Alternativă</h2>
+      <h2>Hylio: US-made, NDAA-compliant</h2>
       <ul>
-        <li>XAG P100 Pro: 16.000–20.000 EUR</li>
-        <li>XAG V40: 9.000–12.000 EUR</li>
+        <li>Hylio AG-272: $25,000–30,000 USD — required for buyers restricted to US-manufactured equipment</li>
       </ul>
-      <h2>Cost total real (cu accesorii)</h2>
+      <h2>XAG: Technical alternative</h2>
+      <ul>
+        <li>XAG P100 Pro: $20,000–24,000 USD</li>
+        <li>XAG V40: $11,000–14,000 USD</li>
+      </ul>
+      <h2>Real total cost (with accessories)</h2>
       <p>
-        Prețul dronei este doar începutul. Un pachet complet (dronă + 4 baterii + încărcător rapid + generator +
-        suport tehnic primul an) costă 1,5–2x prețul nominal al dronei.
+        The drone is just the starting point. A complete operational package — drone + 4 batteries +
+        fast charger + generator + first-year technical support — typically runs 1.5–2× the base drone
+        price. Budget $25,000–40,000 for a field-ready T50 setup.
       </p>
-      <h2>Finanțare AFIR</h2>
+      <h2>Financing through USDA programs</h2>
       <p>
-        Toate modelele de mai sus sunt eligibile pentru fonduri AFIR cu rambursare 50–65%. Vezi{' '}
-        <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">ghidul nostru AFIR</Link>.
+        USDA EQIP (Environmental Quality Incentives Program) and FSA loan programs can offset
+        30–50% of equipment costs for qualifying operations. See our{' '}
+        <Link href="/ghid/fonduri-afir-drone" className="text-green-700 hover:underline font-medium">USDA funding guide</Link> for
+        details on how to apply.
       </p>
     </div>
   ),
