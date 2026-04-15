@@ -7,7 +7,7 @@ import { glossaryTerms, GlossaryTerm } from '@/data/glossary';
 export const metadata: Metadata = {
   title: 'Agricultural Drone Glossary 2026 | FAA, EPA & Spraying Terms',
   description:
-    'Plain-English definitions of 80+ agricultural drone terms: Part 107, Part 137, LAANC, FIFRA, GPA, ULV, and more. Updated for 2026 regulations.',
+    'Plain-English definitions of 55+ agricultural drone terms: Part 107, Part 137, LAANC, FIFRA, GPA, ULV, RTK, and more. Updated for 2026 regulations.',
   alternates: { canonical: '/glossary' },
   openGraph: {
     title: 'Agricultural Drone Glossary | US Ag Drone Directory',

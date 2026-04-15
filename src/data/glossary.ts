@@ -332,6 +332,134 @@ export const glossaryTerms: GlossaryTerm[] = [
       'A high-precision GPS correction technology that delivers centimeter-level accuracy, compared to meter-level accuracy for standard GPS. RTK is standard on commercial ag drones to ensure even swath alignment and prevent overlap or skips.',
     relatedTerms: ['flight-controller'],
   },
+
+  // ─── S ───────────────────────────────────────────────────────────────────
+  {
+    term: 'Scouting',
+    slug: 'scouting',
+    category: 'agronomic',
+    definition:
+      'Systematic field inspection to identify pest pressure, disease incidence, or nutrient deficiency. Multispectral drone scouting creates NDVI maps that show crop stress days or weeks before it is visible to the human eye.',
+    relatedTerms: ['ndvi'],
+  },
+  {
+    term: 'Section 333 / 44807',
+    slug: 'section-333',
+    category: 'regulatory',
+    definition:
+      'The legacy exemption process for oversized drones, now codified under 49 USC Section 44807. Ag operators flying drones over 55 pounds must hold a current 44807 exemption from the FAA.',
+    relatedTerms: ['part-44807'],
+  },
+  {
+    term: 'Spray Drift Management Plan',
+    slug: 'spray-drift-management',
+    category: 'application',
+    definition:
+      'A written plan identifying downwind sensitive areas (schools, waterways, organic farms) and the buffer distances, wind limits, and droplet sizes required to protect them. Many states require drift management plans on file before commercial applications.',
+    relatedTerms: ['drift'],
+  },
+  {
+    term: 'Spreader',
+    slug: 'spreader',
+    category: 'hardware',
+    definition:
+      'A drone attachment for dispensing dry granular products such as cover crop seed, urea fertilizer, or rodent bait. Most spreaders use a spinning disc and are interchangeable with a spray tank on the same drone airframe.',
+    relatedTerms: ['hopper'],
+  },
+  {
+    term: 'Swath',
+    slug: 'swath',
+    category: 'application',
+    definition:
+      'The effective width of a single drone pass, typically 20–33 feet on commercial ag drones. Swath alignment and overlap (usually 10–15%) determine whether a field receives uniform coverage or has streaks and skips.',
+    relatedTerms: ['boom-width'],
+  },
+
+  // ─── T ───────────────────────────────────────────────────────────────────
+  {
+    term: 'Tank Mix',
+    slug: 'tank-mix',
+    category: 'application',
+    definition:
+      'A combination of two or more pesticide products applied in a single spray. Tank-mix compatibility must be verified by label and physical jar test before loading a drone tank, especially at the low carrier volumes used in drone applications.',
+  },
+  {
+    term: 'TRUST (The Recreational UAS Safety Test)',
+    slug: 'trust',
+    category: 'regulatory',
+    definition:
+      'A free FAA knowledge test for recreational drone flyers. TRUST is not sufficient for commercial ag operations — commercial operators must hold a Part 107 Remote Pilot Certificate.',
+    relatedTerms: ['part-107'],
+  },
+
+  // ─── U ───────────────────────────────────────────────────────────────────
+  {
+    term: 'UAS (Unmanned Aircraft System)',
+    slug: 'uas',
+    category: 'regulatory',
+    definition:
+      'The FAA\'s formal term for a drone, including the aircraft, ground control station, and communication links. Used throughout 14 CFR Part 107 and Part 137.',
+    relatedTerms: ['uav'],
+  },
+  {
+    term: 'UAV (Unmanned Aerial Vehicle)',
+    slug: 'uav',
+    category: 'regulatory',
+    definition:
+      'The aircraft portion of a UAS. In casual usage, UAV is often used interchangeably with "drone."',
+    relatedTerms: ['uas'],
+  },
+  {
+    term: 'ULV (Ultra-Low Volume)',
+    slug: 'ulv',
+    category: 'application',
+    definition:
+      'Application technique using less than 5 gallons of spray per acre, enabled by highly concentrated formulations and fine droplets. Most drone spray work qualifies as ULV or low-volume (LV).',
+    relatedTerms: ['gpa', 'application-rate'],
+  },
+  {
+    term: 'USDA (United States Department of Agriculture)',
+    slug: 'usda',
+    category: 'business',
+    definition:
+      'The federal department overseeing farm programs, conservation cost-share, and agricultural research. USDA sub-agencies including NRCS, FSA, and ARS are the primary federal touchpoints for drone operators.',
+    relatedTerms: ['nrcs', 'fsa'],
+  },
+
+  // ─── V ───────────────────────────────────────────────────────────────────
+  {
+    term: 'VLOS (Visual Line of Sight)',
+    slug: 'vlos',
+    category: 'regulatory',
+    definition:
+      'The default Part 107 requirement that the remote pilot or a visual observer must maintain unaided sight of the drone throughout flight. Most ag spray operations are conducted under VLOS unless a BVLOS waiver has been granted.',
+    relatedTerms: ['bvlos', 'part-107'],
+  },
+
+  // ─── W ───────────────────────────────────────────────────────────────────
+  {
+    term: 'Waiver',
+    slug: 'waiver',
+    category: 'regulatory',
+    definition:
+      'An FAA-issued exception to a Part 107 rule, granted when the operator demonstrates an equivalent level of safety. Common ag waivers include night operations (107.29) and operations over people (107.39).',
+  },
+  {
+    term: 'WPS (Worker Protection Standard)',
+    slug: 'wps',
+    category: 'regulatory',
+    definition:
+      'EPA regulation (40 CFR Part 170) protecting workers and handlers from agricultural pesticide exposure. WPS requires notification, training, PPE, REI signage, and decontamination supplies on farms using agricultural-use pesticides.',
+    relatedTerms: ['ppe', 'rei'],
+  },
+  {
+    term: 'Work Width',
+    slug: 'work-width',
+    category: 'application',
+    definition:
+      'Synonym for swath — the effective spray width of a single drone pass. Manufacturer-stated work width is based on label-rate droplet size at recommended altitude.',
+    relatedTerms: ['swath'],
+  },
 ];
 
 export function getGlossaryTermBySlug(slug: string): GlossaryTerm | undefined {
