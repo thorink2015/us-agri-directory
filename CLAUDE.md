@@ -11,12 +11,14 @@ how to operate on this repo.
 This project uses a self-maintained knowledge base at `_memory/`.
 **At the start of every session, read these in order:**
 
-1. `_memory/project-facts.md` — verified facts about the project
+1. `_memory/copy-source-of-truth.md` — **HARD RULE** on what Claude
+   Code may write vs. what must come from Eugen's research deliverables
+2. `_memory/project-facts.md` — verified facts about the project
    (branch, domain, author, env vars, conventions)
-2. `_memory/pending-items.md` — what's blocked and what's ready to build
-3. `_memory/known-issues.md` — gotchas and their fixes
-4. `_memory/session-history.md` — what's been shipped, in order
-5. `_memory/code-patterns.md` — reusable code/content patterns to copy
+3. `_memory/pending-items.md` — what's blocked and what's ready to build
+4. `_memory/known-issues.md` — gotchas and their fixes
+5. `_memory/session-history.md` — what's been shipped, in order
+6. `_memory/code-patterns.md` — reusable code/content patterns to copy
 
 These files exist **so the user never has to repeat themselves.** If a
 fact is recorded there, don't ask for it again.
