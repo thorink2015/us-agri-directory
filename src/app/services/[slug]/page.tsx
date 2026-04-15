@@ -6,9 +6,15 @@ import { services, getServiceBySlug } from '@/data/services';
 import { operators } from '@/data/operators';
 import { ServiceType, SERVICE_LABELS } from '@/data/types';
 import { formatPrice } from '@/lib/utils';
+import { AUTHOR, SITE } from '@/data/author';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import Byline from '@/components/author/Byline';
+import AuthorCard from '@/components/author/AuthorCard';
+
+// Fallback last-reviewed date for service pages. Bump when content reviewed.
+const SERVICE_LAST_REVIEWED = '2026-04-01';
 
 interface Props {
   params: { slug: string };
@@ -46,8 +52,8 @@ export default function ServicePage({ params }: Props) {
     '@type': 'Service',
     name: service.name,
     description: service.longDescription,
-    url: `https://usagdronedirectory.com/services/${service.slug}`,
-    provider: { '@type': 'Organization', name: 'US Ag Drone Directory', url: 'https://usagdronedirectory.com' },
+    url: `${SITE.domain}/services/${service.slug}`,
+    provider: { '@id': AUTHOR.organizationId },
     ...(service.priceMinUsd && {
       offers: {
         '@type': 'AggregateOffer',
@@ -58,6 +64,20 @@ export default function ServicePage({ params }: Props) {
       },
     }),
     areaServed: { '@type': 'Country', name: 'United States' },
+  };
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${service.name} Services | Agricultural Drone Operators US 2026`,
+    description: service.longDescription,
+    url: `${SITE.domain}/services/${service.slug}`,
+    mainEntityOfPage: `${SITE.domain}/services/${service.slug}`,
+    datePublished: '2026-01-01',
+    dateModified: SERVICE_LAST_REVIEWED,
+    author: { '@id': AUTHOR.personId },
+    publisher: { '@id': AUTHOR.organizationId },
+    image: `${SITE.domain}/images/og-default.jpg`,
   };
 
   const faqSchema = {
@@ -83,6 +103,7 @@ export default function ServicePage({ params }: Props) {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
@@ -97,6 +118,7 @@ export default function ServicePage({ params }: Props) {
       <div className="mb-6">
         <div className="text-4xl mb-3">{service.icon}</div>
         <h1 className="text-3xl font-bold text-gray-900 mb-3">{service.name}</h1>
+        <Byline lastUpdated={SERVICE_LAST_REVIEWED} />
         {/* AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-4">
           <p className="text-sm text-gray-700 leading-relaxed">{service.aeoBlock}</p>
@@ -224,6 +246,9 @@ export default function ServicePage({ params }: Props) {
             ))}
         </div>
       </div>
+
+      {/* Author card — E-E-A-T footer */}
+      <AuthorCard />
     </div>
   );
 }
