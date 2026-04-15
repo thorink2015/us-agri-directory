@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Plane, ChevronDown } from 'lucide-react';
 import { counties } from '@/data/counties';
+import { AUTHOR, SITE } from '@/data/author';
 
 export default function Footer() {
   const [showAll, setShowAll] = useState(false);
@@ -113,14 +114,22 @@ export default function Footer() {
           )}
         </div>
 
-        <div className="border-t border-green-800 mt-4 pt-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-green-200">
-          <p>© 2026 US Agricultural Drone Directory. All rights reserved.</p>
-          <div className="flex items-center gap-4">
+        {/* Canonical Eugen credit (E-E-A-T footer signal) */}
+        <div className="border-t border-green-800 mt-4 pt-5 text-sm text-green-200 text-center">
+          <p className="mb-2">
+            © 2026 {SITE.name}. Edited by{' '}
+            <Link href="/about" className="text-white hover:text-yellow-300 transition-colors font-medium">
+              {AUTHOR.fullName}
+            </Link>
+            . Every page personally researched and updated.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-green-300">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span className="text-green-700">|</span>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <span className="text-green-700">|</span>
+            <span>Free basic listings for all verified operators</span>
           </div>
-          <p>Free basic listings for all verified operators</p>
         </div>
       </div>
     </footer>
