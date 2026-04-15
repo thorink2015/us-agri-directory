@@ -219,6 +219,119 @@ export const glossaryTerms: GlossaryTerm[] = [
       'The legally binding application instructions on an EPA-approved pesticide label, including product rate per acre, carrier volume, droplet size, and buffer requirements. Drone operators must follow label rates exactly, including any aerial-specific restrictions.',
     relatedTerms: ['fifra', 'epa-fifra'],
   },
+
+  // ─── M ───────────────────────────────────────────────────────────────────
+  {
+    term: 'Mission Planner',
+    slug: 'mission-planner',
+    category: 'hardware',
+    definition:
+      'Software that converts a field boundary and application parameters into an automated flight path for a spray drone. Major ag drone brands ship their own mission planners (DJI Agras, XAG One, Hylio AgraSync).',
+  },
+  {
+    term: 'MPH (Miles Per Hour)',
+    slug: 'mph',
+    category: 'application',
+    definition:
+      'The US measure of drone flight speed during spraying, typically 10–25 mph. Faster speeds increase coverage rate but reduce droplet deposition uniformity.',
+  },
+
+  // ─── N ───────────────────────────────────────────────────────────────────
+  {
+    term: 'NDAA Compliance',
+    slug: 'ndaa-compliance',
+    category: 'regulatory',
+    definition:
+      'Section 848 of the National Defense Authorization Act restricts federal agencies from procuring drones made in covered foreign countries. NDAA-compliant drones (such as Hylio and Skydio models) are required for USDA-funded programs and government contracts.',
+  },
+  {
+    term: 'NRCS (Natural Resources Conservation Service)',
+    slug: 'nrcs',
+    category: 'business',
+    definition:
+      'The USDA agency that administers conservation cost-share programs including EQIP and CSP. NRCS Practice Standard 340 covers aerial cover crop seeding, making drone seeding eligible for payment in most states.',
+    relatedTerms: ['eqip'],
+  },
+  {
+    term: 'Nozzle',
+    slug: 'nozzle',
+    category: 'hardware',
+    definition:
+      'The orifice that atomizes spray liquid into droplets of a specific size and pattern. Modern ag drones use rotary atomizers or pressure-swirl nozzles optimized for 2–5 gpa application rates.',
+    relatedTerms: ['droplet-size'],
+  },
+
+  // ─── P ───────────────────────────────────────────────────────────────────
+  {
+    term: 'Part 107',
+    slug: 'part-107',
+    category: 'regulatory',
+    definition:
+      'The FAA regulation (14 CFR Part 107) governing commercial small drone operations under 55 pounds. Every pilot-in-command of a commercial ag drone must hold a Remote Pilot Certificate issued under Part 107.',
+    relatedTerms: ['part-137', 'remote-pilot-certificate'],
+  },
+  {
+    term: 'Part 137',
+    slug: 'part-137',
+    category: 'regulatory',
+    definition:
+      'The FAA regulation (14 CFR Part 137) governing agricultural aircraft operations — any aircraft dispensing pesticides, seed, or other agricultural products. Commercial drone spray operators need a Part 137 Agricultural Aircraft Operator certificate in addition to Part 107.',
+    relatedTerms: ['part-107', 'aao'],
+  },
+  {
+    term: 'Part 137 Private',
+    slug: 'part-137-private',
+    category: 'regulatory',
+    definition:
+      'A Part 137 certificate restricted to dispensing on land owned or leased by the operator. Private AAO certification has lower application costs but cannot be used for commercial custom-application work.',
+    relatedTerms: ['part-137', 'aao'],
+  },
+  {
+    term: 'Part 44807 Exemption',
+    slug: 'part-44807',
+    category: 'regulatory',
+    definition:
+      'An FAA exemption required to fly drones over 55 pounds, which includes most commercial spray drones (DJI Agras T50, T100, Hylio AG-272). Exemption is typically granted for 2 years and must be renewed.',
+  },
+  {
+    term: 'PPE (Personal Protective Equipment)',
+    slug: 'ppe',
+    category: 'application',
+    definition:
+      'Safety gear required by pesticide labels, including coveralls, chemical-resistant gloves, respirators, and eye protection. Ag drone operators must wear label-specified PPE during mixing, loading, and nozzle cleaning.',
+  },
+
+  // ─── R ───────────────────────────────────────────────────────────────────
+  {
+    term: 'REI (Restricted-Entry Interval)',
+    slug: 'rei',
+    category: 'application',
+    definition:
+      'The label-specified time period after a pesticide application during which unprotected workers may not enter the treated area. Drone operators should document application time and post REI signage per EPA Worker Protection Standard.',
+  },
+  {
+    term: 'Remote ID',
+    slug: 'remote-id',
+    category: 'regulatory',
+    definition:
+      'FAA rule requiring most drones to broadcast identification and location during flight, effective September 2023. All commercial ag drones must have built-in Remote ID or a Remote ID broadcast module.',
+  },
+  {
+    term: 'Remote Pilot Certificate',
+    slug: 'remote-pilot-certificate',
+    category: 'regulatory',
+    definition:
+      'The FAA-issued credential obtained by passing the Part 107 Aeronautical Knowledge Test. Valid for 2 years; holders must complete recurrent online training to maintain currency.',
+    relatedTerms: ['part-107'],
+  },
+  {
+    term: 'RTK (Real-Time Kinematic) GPS',
+    slug: 'rtk',
+    category: 'hardware',
+    definition:
+      'A high-precision GPS correction technology that delivers centimeter-level accuracy, compared to meter-level accuracy for standard GPS. RTK is standard on commercial ag drones to ensure even swath alignment and prevent overlap or skips.',
+    relatedTerms: ['flight-controller'],
+  },
 ];
 
 export function getGlossaryTermBySlug(slug: string): GlossaryTerm | undefined {
