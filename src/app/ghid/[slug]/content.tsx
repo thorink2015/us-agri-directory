@@ -328,46 +328,133 @@ export const guideContent: Record<string, ReactNode> = {
   'licenta-pilot-drona': (
     <div className="space-y-6">
       <p>
-        Pentru a opera o dronă agricolă în scop comercial în România, pilotul trebuie să dețină un certificat
-        de competență eliberat de AACR. Acest ghid detaliază cursurile, examenul și costurile aferente.
+        To apply pesticides commercially by drone in the US, every pilot needs two FAA certifications
+        plus a state pesticide applicator license. This guide covers every exam, cost, and study
+        resource you need to get certified in 2026 — from the Part 107 knowledge test to the
+        ag-specific Part 137 certificate.
       </p>
 
-      <h2>Tipuri de certificate</h2>
+      <h2>Certificate 1 — FAA Part 107 Remote Pilot Certificate</h2>
+      <p>
+        The foundational requirement for any commercial UAS pilot. Required before flying any
+        drone commercially, regardless of the application type.
+      </p>
       <ul>
-        <li><strong>A1/A3 (Open)</strong>: test online gratuit pe <ExtLink href="https://dronetest.caa.ro">dronetest.caa.ro</ExtLink></li>
-        <li><strong>A2 (Open)</strong>: curs teoretic + examen + autoverificare (250 RON taxa examen)</li>
-        <li><strong>STS-01 / Specific</strong>: curs complet + examen practic la un centru autorizat</li>
+        <li><strong>Format:</strong> 60 multiple-choice questions, 2 hours, administered at an FAA-approved testing center (PSI/CATS)</li>
+        <li><strong>Passing score:</strong> 70% (42 out of 60 correct)</li>
+        <li><strong>Fee:</strong> $175 at the testing center</li>
+        <li><strong>Valid:</strong> 24 months — renewal via free online recurrent training at{' '}
+          <ExtLink href="https://www.faasafety.gov">FAASafety.gov</ExtLink>
+        </li>
+        <li><strong>No minimum flight hours required</strong> — purely a knowledge exam</li>
       </ul>
 
-      <h2>Pași pentru certificat STS-01 (recomandat pentru agricultură)</h2>
+      <h2>What the Part 107 exam covers</h2>
+      <ul>
+        <li>Airspace classifications and operating requirements</li>
+        <li>Weather and meteorological effects on UAS flight</li>
+        <li>Small unmanned aircraft loading and performance</li>
+        <li>Emergency procedures</li>
+        <li>Crew resource management</li>
+        <li>Radio communication procedures</li>
+        <li>Determining the performance of small unmanned aircraft</li>
+        <li>Physiological effects on pilots (fatigue, stress)</li>
+        <li>Aeronautical decision-making and judgment</li>
+        <li>Airport operations</li>
+        <li>Maintenance and preflight inspection procedures</li>
+      </ul>
+
+      <h2>How to study for Part 107</h2>
       <ol>
-        <li>Înscriere la un <a href="/operatori?service=training" className="text-green-700 hover:underline font-medium">centru autorizat AACR</a></li>
-        <li>Parcurgere curs teoretic (25–40 ore): legislație, meteorologie, operațiuni</li>
-        <li>Curs practic pe drona agricolă (8–16 ore): pe teren</li>
-        <li>Examen teoretic (60 întrebări, min. 75% corect)</li>
-        <li>Examen practic (demonstrație de zbor și proceduri de siguranță)</li>
-        <li>Obținere certificat AACR (valid 5 ani)</li>
+        <li>Start with the free{' '}
+          <ExtLink href="https://www.faasafety.gov/gslac/ALC/course_content.aspx?cID=451">FAA Remote Pilot Small UAS Study Guide</ExtLink>
+        </li>
+        <li>Take practice tests at{' '}
+          <ExtLink href="https://www.kingschools.com/drone-pilot-training">King Schools</ExtLink>,{' '}
+          <ExtLink href="https://www.udemy.com/topic/faa-part-107/">Udemy</ExtLink>, or{' '}
+          <ExtLink href="https://www.3dr.com/faa-part-107/">3DR</ExtLink> (paid prep courses, $30–150)
+        </li>
+        <li>Study airspace charts using{' '}
+          <ExtLink href="https://skyvector.com">SkyVector</ExtLink> — you will be tested on reading sectional charts
+        </li>
+        <li>Most pilots pass with 15–25 hours of dedicated study</li>
       </ol>
 
-      <h2>Costuri estimate (2026)</h2>
+      <h2>Certificate 2 — FAA Part 137 Agricultural Aircraft Operator (AAO)</h2>
+      <p>
+        Required specifically for commercial pesticide, fertilizer, or seed application by air.
+        This is a business-level certificate — the company or operator holds it, not the individual pilot.
+      </p>
       <ul>
-        <li>Curs teoretic A2: 500–1.200 RON</li>
-        <li>Curs STS-01 complet: 2.000–4.500 RON</li>
-        <li>Curs DJI Agras avansat: 1.500–3.000 RON</li>
-        <li>Taxă examen AACR: 250 RON</li>
-        <li>Re-certificare la 5 ani: 500–1.000 RON</li>
+        <li><strong>Apply at:</strong> your local{' '}
+          <ExtLink href="https://www.faa.gov/about/office_org/field_offices/fsdo">FAA Flight Standards District Office (FSDO)</ExtLink>
+        </li>
+        <li><strong>Fee:</strong> Free</li>
+        <li><strong>Requirements:</strong> Proof of Part 107 certificate, description of operations (aircraft type, area of operations, product types), and a safety plan</li>
+        <li><strong>Processing time:</strong> typically 2–6 weeks depending on FSDO workload</li>
+        <li><strong>No written exam required</strong> — reviewed and approved by an FAA inspector</li>
+        <li><strong>Valid indefinitely</strong> (but operations must remain as described in the application)</li>
       </ul>
 
-      <h2>Centre de formare recomandate</h2>
+      <h2>Certificate 3 — State Pesticide Applicator License</h2>
       <p>
-        Vezi lista noastră cu <a href="/operatori?service=training" className="text-green-700 hover:underline font-medium">operatori care oferă cursuri</a>,
-        inclusiv Agronix, BOSAL Solutions, La Înălțime Academy.
+        Required by nearly every state to apply EPA-registered pesticides for hire. Most states use
+        a two-part exam:
+      </p>
+      <ul>
+        <li><strong>Core exam:</strong> general pest management principles, safety, label reading, regulations</li>
+        <li><strong>Category exam:</strong> Category 1 (Agricultural Pest Control) is the most common for ag drone operators; some states also require Category 7 (Aerial Application)</li>
+        <li><strong>Renewal:</strong> every 1–3 years with continuing education credits (CEUs)</li>
+        <li><strong>Fee:</strong> $50–300 depending on state</li>
+      </ul>
+      <p>
+        Contact your state Department of Agriculture for exam dates and approved study materials.
+        Many state extension services offer free exam prep workshops.
       </p>
 
-      <h2>Resurse oficiale</h2>
+      <h2>Ag drone-specific training</h2>
+      <p>
+        FAA certification covers flight law — it does not cover crop scouting, nozzle calibration,
+        or application timing. Additional training to consider:
+      </p>
       <ul>
-        <li><ExtLink href="https://www.caa.ro">AACR: Certificare piloți drone</ExtLink></li>
-        <li><ExtLink href="https://dronetest.caa.ro">DroneTest: Examen online A1/A3</ExtLink></li>
+        <li>
+          <strong>DJI Agras flight training:</strong> 1–2 day hands-on courses offered by DJI
+          Enterprise dealers across the US. Covers T50/T100 operation, field planning software,
+          and maintenance. Cost: $500–1,200.
+        </li>
+        <li>
+          <strong>Hylio operator training:</strong> Required for warranty coverage on Hylio AG-272.
+          Offered online + in-person at Hylio HQ (Houston, TX).
+        </li>
+        <li>
+          <strong>NAAA (National Agricultural Aviation Association):</strong>{' '}
+          <ExtLink href="https://www.agaviation.org">agaviation.org</ExtLink> — industry resources,
+          safety training, and networking for aerial applicators.
+        </li>
+        <li>
+          <strong>State CCA (Certified Crop Adviser) program:</strong> not required, but valuable
+          for understanding crop disease timing and fungicide windows that drive demand.
+        </li>
+      </ul>
+
+      <h2>Estimated costs to get fully certified</h2>
+      <ul>
+        <li>Part 107 prep course: $50–150 (optional but recommended)</li>
+        <li>Part 107 test fee: $175</li>
+        <li>Part 137 application: free</li>
+        <li>State pesticide license exam: $50–300</li>
+        <li>Ag drone manufacturer training: $500–1,200</li>
+        <li><strong>Total:</strong> approximately $800–1,800 to be fully certified and operational</li>
+      </ul>
+
+      <h2>Official resources</h2>
+      <ul>
+        <li><ExtLink href="https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot">FAA: Become a Commercial Drone Pilot</ExtLink></li>
+        <li><ExtLink href="https://iacra.faa.gov">IACRA: FAA Certificate Application System</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/agricultural_operations">FAA: Part 137 Agricultural Operations</ExtLink></li>
+        <li><ExtLink href="https://www.agaviation.org">NAAA: National Agricultural Aviation Association</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/pesticide-applicator-certification-and-training">EPA: State Pesticide Applicator Licensing</ExtLink></li>
       </ul>
     </div>
   ),
