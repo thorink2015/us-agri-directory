@@ -1,260 +1,143 @@
-# CLAUDE.md — Master Documentation for droneagricol.ro
+# CLAUDE.md — Master rules for Claude Code sessions
 
-This file is the single source of truth for Claude Code sessions working on this project.
-Read this file at the start of every session before making any changes.
-
----
-
-## IMPORTANT: Work in Small Batches to Avoid API Timeouts
-
-When making large content changes (translating files, adding many entries, rewriting articles),
-**always work in small batches**:
-
-- **Max 1–3 items (article, operator, section) per batch** — never attempt a full large file in one go
-- After each batch: commit, push, and wait for the user to say "next"
-- This prevents "API Error: Stream idle timeout - partial response received"
-- For very large files (like `blog/[slug]/content.tsx` with 12+ articles, or `ghid/[slug]/content.tsx`
-  with 9+ guides): split into batches of 1–2 articles/guides at a time
-- Use `Edit` tool with targeted replacements instead of full `Write` rewrites when possible
-- Always report what's done and what's next, so the user can say "next"
+**This file is auto-loaded at the start of every session.** Read it
+fully before doing any work. It is the single source of authority for
+how to operate on this repo.
 
 ---
 
-## Project Overview
+## Self-maintained memory system (`_memory/`)
 
-**droneagricol.ro** — the most complete directory of agricultural drone operators in Romania and Moldova.
+This project uses a self-maintained knowledge base at `_memory/`.
+**At the start of every session, read these in order:**
 
-- **Framework:** Next.js 14 (App Router) + TypeScript + Tailwind CSS
-- **Deployment:** Netlify (branch: `claude/build-agri-drone-directory-K8coy`)
-- **Language:** Romanian only (structure ready for /ru/ and /en/ later)
-- **Data:** TypeScript files in `src/data/` — no database, no CMS
-- **Analytics:** Google Analytics 4 (env: `NEXT_PUBLIC_GA_MEASUREMENT_ID`)
-- **Forms:** Formspree (env: `NEXT_PUBLIC_FORMSPREE_ID`)
+1. `_memory/project-facts.md` — verified facts about the project
+   (branch, domain, author, env vars, conventions)
+2. `_memory/pending-items.md` — what's blocked and what's ready to build
+3. `_memory/known-issues.md` — gotchas and their fixes
+4. `_memory/session-history.md` — what's been shipped, in order
+5. `_memory/code-patterns.md` — reusable code/content patterns to copy
 
----
+These files exist **so the user never has to repeat themselves.** If a
+fact is recorded there, don't ask for it again.
 
-## Directory Structure
+**During work, update these files** whenever:
 
-```
-src/
-├── app/
-│   ├── layout.tsx                    # Root layout: GA4, OG meta, Header/Footer
-│   ├── page.tsx                      # Homepage
-│   ├── operatori/
-│   │   ├── page.tsx                  # Server wrapper (passes data to client)
-│   │   ├── OperatoriClient.tsx       # Client: search + advanced filters + sort
-│   │   └── [slug]/page.tsx           # Operator profile
-│   ├── judete/
-│   │   ├── page.tsx                  # All 41 counties grouped by region
-│   │   └── [slug]/
-│   │       ├── page.tsx              # County detail (41 pages)
-│   │       ├── operatori/page.tsx    # Operators in county
-│   │       ├── culturi/[crop]/page.tsx    # County + crop (41×8=328 pages)
-│   │       └── servicii/[service]/page.tsx # County + service (41×6=246 pages)
-│   ├── culturi/
-│   │   ├── page.tsx                  # All 8 crops
-│   │   └── [slug]/page.tsx           # Crop detail
-│   ├── servicii/
-│   │   ├── page.tsx                  # All services hub
-│   │   └── [slug]/page.tsx           # Service detail (6 pages)
-│   ├── drone/
-│   │   ├── page.tsx                  # All drone models
-│   │   └── [slug]/page.tsx           # Drone model detail (5 pages)
-│   ├── orase/[slug]/page.tsx         # City pages (~20 pages)
-│   ├── regiuni-viticole/
-│   │   ├── page.tsx                  # Wine regions hub
-│   │   └── [slug]/page.tsx           # Wine region detail (6 pages)
-│   ├── moldova/
-│   │   ├── page.tsx                  # Moldova hub
-│   │   └── [slug]/page.tsx           # Moldova regions (8 pages)
-│   ├── preturi-pulverizare-drona/page.tsx  # Pricing guide
-│   ├── adauga-operator/              # Submission form
-│   ├── despre/page.tsx
-│   ├── contact/page.tsx
-│   ├── sitemap.ts                    # ~742 URLs auto-generated
-│   └── robots.ts                    # Allows AI crawlers
-├── components/
-│   ├── analytics/
-│   │   ├── GoogleAnalytics.tsx       # GA4 Script injection
-│   │   └── events.ts                 # trackEvent() helpers
-│   ├── layout/
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   └── Breadcrumb.tsx
-│   ├── operators/
-│   │   ├── OperatorCard.tsx          # Card with UTM link on website icon
-│   │   └── OperatorGrid.tsx
-│   ├── counties/
-│   │   └── CountyCard.tsx
-│   ├── search/
-│   │   └── SearchBar.tsx
-│   ├── schema/
-│   │   ├── OperatorSchema.tsx        # LocalBusiness JSON-LD
-│   │   ├── CountyPageSchema.tsx      # CollectionPage + ItemList JSON-LD
-│   │   └── HomeSchema.tsx            # Organization + WebSite JSON-LD
-│   └── ui/
-│       ├── FAQAccordion.tsx
-│       └── ExternalLink.tsx          # UTM-tracked external link component
-├── data/
-│   ├── types.ts                      # All TypeScript interfaces
-│   ├── operators.ts                  # 23 operators (19 RO + 4 MD)
-│   ├── counties.ts                   # 41 Romanian counties
-│   ├── crops.ts                      # 8 crop types
-│   ├── services.ts                   # 6 service definitions
-│   ├── drone-models.ts               # 5 drone models
-│   ├── cities.ts                     # 20 major cities
-│   ├── wine-regions.ts               # 6 Romanian wine regions
-│   ├── regions-moldova.ts            # 8 Moldova regions
-│   └── faqs.ts                       # FAQ content arrays
-└── lib/
-    ├── utils.ts                      # cn(), formatPrice(), addUtmParams()
-    └── seo.ts                        # buildOperatorMetadata(), buildCountyMetadata()
-```
+- The user states a fact that should persist (author details, domain,
+  branch, env var value, preference) → append to `project-facts.md`
+- A new reusable pattern is introduced → document in `code-patterns.md`
+- An error is encountered and resolved → log in `known-issues.md`
+- A batch of work is completed → add a one-liner to `session-history.md`
+- An item becomes blocked → add to `pending-items.md`
+- An item becomes unblocked → move from `pending-items.md` into
+  `session-history.md`
+
+**Rules for updating memory files:**
+
+- Small atomic edits (one fact per edit)
+- Use `Edit` tool, not `Write`, for existing files
+- Use ISO dates (YYYY-MM-DD)
+- Never fabricate — flag `TODO` or `??` if uncertain
+- Commit memory updates **with** the work they describe, not separately
+
+See `_memory/README.md` for the full memory system spec.
 
 ---
 
-## How to Add a New Operator
+## Work in small batches (hard rule)
 
-Edit `src/data/operators.ts` and add an entry to the `operators` array:
+The Claude Code API times out on long streams. **Never** attempt more
+than 1–3 items (files, articles, sections) per response. After each
+batch:
 
-```typescript
-{
-  slug: 'company-slug',           // REQUIRED: lowercase, hyphens, no diacritics
-  name: 'Company Name SRL',       // REQUIRED: full legal name
-  description: '...',             // REQUIRED: 1–3 sentences, max 300 chars
-  country: 'RO',                  // REQUIRED: 'RO' or 'MD'
-  counties: ['timis', 'arad'],    // REQUIRED: array of county slugs they cover
-  city: 'Timișoara',              // REQUIRED: city name (with diacritics)
-  phone: '+40 722 123 456',       // optional
-  email: 'contact@example.com',  // optional
-  website: 'https://example.com', // optional — UTM params auto-added
-  facebook: 'https://facebook.com/page', // optional
-  services: ['spraying', 'monitoring'], // REQUIRED: see ServiceType in types.ts
-  drones: ['dji-agras-t50'],      // optional: see drone-models.ts for slugs
-  crops: ['grau', 'porumb'],      // optional: see crops.ts for slugs
-  priceMinRon: 80,                // optional
-  priceMaxRon: 120,               // optional
-  haTreated: 5000,                // optional: cumulative hectares treated
-  fleetSize: 3,                   // optional: number of drones
-  verified: true,                 // optional: show verified badge
-  featured: false,                // optional: appears first in listings
-  certAACR: true,                 // optional: AACR authorization
-}
-```
+1. Commit
+2. Push
+3. Report what's done and what's next
+4. Wait for user to say "next"
 
-**After adding:** Run `npm run build` to verify no TypeScript errors.
+This is non-negotiable. Documented in `_memory/known-issues.md`.
 
 ---
 
-## How to Add a New County (if Romania adds a county)
+## Branch discipline (hard rule)
 
-Edit `src/data/counties.ts` — add to the `counties` array. The county will automatically appear on:
-- `/judete/` (all counties page)
-- `/judete/[slug]/` (county detail)
-- All 328 county+crop pages
-- All 246 county+service pages
-- Sitemap
-
----
-
-## UTM Tracking
-
-All outbound links to operator websites automatically get UTM parameters via `addUtmParams()` in `src/lib/utils.ts`:
-
-```
-utm_source=droneagricol.ro
-utm_medium=directory
-utm_campaign=operator-listing
-utm_content=[operator-slug]
-```
-
-**To check traffic sent:** Google Analytics → Reports → Traffic Acquisition → filter by Source = `droneagricol.ro`
-
-The `ExternalLink` component (`src/components/ui/ExternalLink.tsx`) also fires a GA4 `operator_website_click` event.
+- **Working branch:** `claude/add-drone-operators-directory-T0YnN`
+- **Never push to other branches** without explicit user approval
+- **Never merge `main`** into the working branch — main holds the old
+  Romanian codebase plus research file uploads; merging would
+  reintroduce Romanian URLs
+- **Never force push**, never `--no-verify`, never amend pushed commits
 
 ---
 
-## Analytics Events
+## Project snapshot
 
-Tracked in `src/components/analytics/events.ts`:
+See `_memory/project-facts.md` for the authoritative version. Quick
+reference:
 
-| Event | Trigger | Parameters |
-|-------|---------|------------|
-| `operator_website_click` | Click external website link | operator_slug, source |
-| `operator_phone_click` | Click phone number | operator_slug |
-| `operator_email_click` | Click email | operator_slug |
-| `form_submit` | Submit operator addition form | form_name |
-| `filter_applied` | Apply filter on /operatori | filter_type, filter_value |
-| `county_search` | Search by county in hero | county_slug |
+- **Site:** US Ag Drone Directory — `https://usagdronedirectory.com`
+- **Author:** Eugen (founder + editor). Canonical identity in `src/data/author.ts`
+- **Stack:** Next.js 14 App Router, TypeScript, Tailwind, Netlify
+- **Data:** TypeScript in `src/data/` — no database
+- **Internal folders:** `_research/` (docs), `_memory/` (this system) — both deletable before launch
 
 ---
 
-## SEO Architecture
+## Tool usage rules
 
-### URL structure (742+ pages)
-- `/` — Homepage (priority 1.0)
-- `/operatori/` — All operators (priority 0.9)
-- `/preturi-pulverizare-drona/` — Pricing page (priority 0.9)
-- `/operatori/[slug]/` — Operator profiles (priority 0.85)
-- `/judete/[slug]/` — County pages (priority 0.85)
-- `/judete/[slug]/culturi/[crop]/` — County+crop (328 pages, priority 0.7)
-- `/judete/[slug]/servicii/[service]/` — County+service (246 pages, priority 0.7)
-- `/culturi/[slug]/` — Crop pages (priority 0.8)
-- `/servicii/[slug]/` — Service pages (priority 0.75)
-- `/regiuni-viticole/[slug]/` — Wine regions (priority 0.72)
-- `/orase/[slug]/` — City pages (priority 0.7)
-- `/moldova/[slug]/` — Moldova regions (priority 0.75)
-- `/drone/[slug]/` — Drone model pages (priority 0.65)
-
-### Schema markup
-- Homepage: `Organization` + `WebSite`
-- County pages: `CollectionPage` + `ItemList` + `BreadcrumbList` + `FAQPage`
-- Operator profiles: `ProfessionalService` + `BreadcrumbList`
-- Pricing page: `FAQPage` embedded
+- Use `Read` before any `Edit` on a file (Edit fails otherwise)
+- Use `Edit` not `Write` when modifying existing files
+- Use `Grep`/`Glob`, never `grep`/`find` in Bash
+- Multiple independent tool calls → run in parallel in one response
+- Dependent tool calls → sequential
+- Git commit messages: short subject + 2-3 line body, no `Co-Authored-By`
+  unless user asks
 
 ---
 
-## Deployment (Netlify)
+## When to ask the user vs. proceed
 
-1. Push to branch `claude/build-agri-drone-directory-K8coy`
-2. Netlify auto-deploys via `@netlify/plugin-nextjs` (see `netlify.toml`)
-3. Build command: `npm run build`
-4. Publish directory: `.next`
+**Proceed without asking** when:
+- Making a local, reversible edit
+- Adding new content following an established pattern
+- Refactoring for consistency with `_memory/code-patterns.md`
+- Fixing something the user just asked about
 
-**Environment variables to set in Netlify dashboard:**
-- `NEXT_PUBLIC_GA_MEASUREMENT_ID` — GA4 measurement ID
-- `NEXT_PUBLIC_FORMSPREE_ID` — Formspree form ID
-
----
-
-## Development Commands
-
-```bash
-npm run dev       # Start dev server on http://localhost:3000
-npm run build     # Production build (generates all static pages)
-npm run lint      # ESLint check
-```
+**Ask first** when:
+- About to delete or rename files the user didn't explicitly mention
+- About to push to a branch other than the working branch
+- Introducing a new dependency
+- Ambiguous scope ("fix the bug" with multiple possible bugs)
+- The user's request conflicts with a recorded fact in `_memory/`
+  (tell them the conflict, let them reconcile)
 
 ---
 
-## Branch
+## When something goes wrong
 
-**Always develop on:** `claude/build-agri-drone-directory-K8coy`
-**Push command:** `git push -u origin claude/build-agri-drone-directory-K8coy`
+Consult `_memory/backup-and-recovery.md`. Core principles:
 
----
-
-## Common Issues & Solutions
-
-| Issue | Solution |
-|-------|---------|
-| Build fails with TypeScript errors | Check `src/data/types.ts` — all ServiceType values must match |
-| New county not appearing | Verify slug matches exactly in both counties.ts and operator.counties[] |
-| UTM not appearing on links | Use `ExternalLink` component or call `addUtmParams()` directly |
-| GA4 not firing | Check `NEXT_PUBLIC_GA_MEASUREMENT_ID` is set in Netlify env vars |
-| Formspree form not working | Set `NEXT_PUBLIC_FORMSPREE_ID` in Netlify env vars |
-| Sitemap missing pages | Update `src/app/sitemap.ts` — import new data source and add to return array |
+- **Don't panic.** Git reflog recovers almost anything.
+- **Prefer `revert` over `reset --hard`.**
+- **Never push --force.**
+- **Check `git status` and `git diff` before committing.**
 
 ---
 
-*Last updated: Session on claude/build-agri-drone-directory-K8coy*
+## Session end protocol
+
+Before ending a work session:
+
+1. Verify all commits are pushed (`git status` → "up to date")
+2. Update `_memory/session-history.md` with what was shipped
+3. Update `_memory/pending-items.md` — move completed items out,
+   add new blockers
+4. If any new pattern was introduced, document it in
+   `_memory/code-patterns.md`
+5. Commit the memory updates together with the work commit (don't
+   leave memory stale in a separate unpushed commit)
+
+---
+
+*Last reviewed: 2026-04-15. When this file becomes stale (>60 days since
+last review), the next session should refresh it before starting work.*
