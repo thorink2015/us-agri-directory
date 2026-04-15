@@ -64,17 +64,17 @@ export default function RegionsIndexPage() {
         ))}
       </div>
 
-      {/* Coming soon notice */}
-      {regions.length < 5 && (
-        <div className="mt-8 bg-amber-50 border border-amber-200 rounded-xl p-5">
-          <p className="text-sm text-amber-900">
-            <strong>More regions coming.</strong> Great Plains, Delta, California, and Southeast hubs are being
-            added. In the meantime, browse operators{' '}
-            <Link href="/states" className="text-green-700 hover:underline font-medium">by state</Link> or by{' '}
-            <Link href="/crops" className="text-green-700 hover:underline font-medium">crop</Link>.
-          </p>
-        </div>
-      )}
+      {/* Cross-link */}
+      <div className="mt-10 bg-gray-50 border border-gray-200 rounded-xl p-5">
+        <p className="text-sm text-gray-700">
+          Prefer to browse by state or crop?{' '}
+          <Link href="/states" className="text-green-700 hover:underline font-medium">All 50 states</Link>
+          {' · '}
+          <Link href="/crops" className="text-green-700 hover:underline font-medium">All crops</Link>
+          {' · '}
+          <Link href="/operators" className="text-green-700 hover:underline font-medium">All operators</Link>
+        </p>
+      </div>
     </div>
   );
 }

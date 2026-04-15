@@ -92,6 +92,58 @@ export const regions: Region[] = [
       { label: 'LSU AgCenter: Rice Disease Management', url: 'https://www.lsuagcenter.com/topics/crops/rice' },
     ],
   },
+  {
+    slug: 'california',
+    name: 'California',
+    tagline: 'Vineyards, orchards, and high-value specialty crops',
+    stateSlugs: ['california'],
+    primaryCrops: ['grapes', 'orchards', 'rice'],
+    totalAcres: 25000000,
+    icon: '🍇',
+    aeoBlock:
+      'California is the highest-value-per-acre drone spray market in the US, with approximately 900,000 acres of wine grapes, 1.2 million acres of tree nuts and orchards, and 500,000 acres of rice. Hillside vineyard applications for powdery mildew and downy mildew, plus orchard canopy penetration, drive drone demand at $18 to $35 per acre. California also has the most complex regulatory layer in the US — every application must be reported to the County Agricultural Commissioner and comply with CDPR restricted-materials rules.',
+    description:
+      'California accounts for nearly half the value of US specialty crop production and has the most stringent pesticide regulations of any state. Drone spraying is uniquely suited to California because of the state\'s hillside vineyards (where tractors cannot safely operate), dense high-value orchards (almonds, pistachios, walnuts), and flooded rice fields in the Sacramento Valley. The California Department of Pesticide Regulation (CDPR) has specific drone aerial application rules that are stricter than federal FAA/EPA requirements, including mandatory Restricted Material Permits for many products and daily Notice of Intent filings. Commercial drone operators in California must hold both the state QAC (Qualified Applicator Certificate) with aerial subcategory, and the county agricultural commissioner registration for each county of operation.',
+    keyInsights: [
+      'Hillside Napa and Sonoma vineyards are the premier drone application market in the US — ground equipment cannot safely operate on slopes above 15%.',
+      'Almond, pistachio, and walnut orchards (1.2M+ acres) use drones for canopy fungicide and early-season dormant applications.',
+      'California Restricted Material Permits and daily Notice of Intent filings add regulatory complexity beyond federal FAA/EPA rules.',
+      'Sacramento Valley rice (500K+ acres) receives heavy drone fungicide at heading for rice blast and sheath blight.',
+      'UC Davis Cooperative Extension research shows drone application reduces chemical runoff by 30–40% vs. conventional airblast sprayers on hillsides.',
+    ],
+    sprayWindow: 'February through November, peaking March–August',
+    authorityLinks: [
+      { label: 'California Department of Pesticide Regulation', url: 'https://www.cdpr.ca.gov' },
+      { label: 'UC IPM: Vineyard and Orchard Pest Management', url: 'https://ipm.ucanr.edu/agriculture' },
+      { label: 'UC Davis Cooperative Extension: Drone Applications', url: 'https://ucanr.edu' },
+    ],
+  },
+  {
+    slug: 'southeast',
+    name: 'Southeast',
+    tagline: 'Cotton, peanuts, and specialty crops from Georgia to North Carolina',
+    stateSlugs: ['georgia', 'alabama', 'tennessee', 'south-carolina', 'north-carolina', 'virginia', 'florida'],
+    primaryCrops: ['cotton', 'soybeans', 'corn', 'orchards'],
+    totalAcres: 55000000,
+    icon: '🌾',
+    aeoBlock:
+      'The Southeast — Georgia, Alabama, Florida, Tennessee, and the Carolinas — combines cotton, peanuts, soybeans, and specialty crops across roughly 55 million agricultural acres. Drone spraying targets cotton defoliation, peanut fungicide at pegging, soybean R3 fungicide, and citrus greening management in Florida. Rates run $14 to $22 per acre, and operator demand is driven by the region\'s irregular field shapes, rolling topography, and frequent summer rainfall that limits ground rig access.',
+    description:
+      'The Southeast is a diverse agricultural region spanning from Virginia peanuts and tobacco down to Florida citrus and south Georgia cotton. Field shapes here are smaller and more irregular than the Corn Belt, driven by historical land-use patterns and the region\'s rolling topography. Drone applications fill gaps where ground equipment is impractical and airplane mobilization is uneconomic. Cotton defoliation in October, peanut fungicide at R3/R4, and fall cover crop overseeding into corn and soybeans are the top three drone use cases. Florida citrus greening (HLB) management has also emerged as a specialty use, with operators applying nutritional cocktails and targeted insecticides for Asian citrus psyllid control.',
+    keyInsights: [
+      'Georgia cotton (1M+ acres) is the largest single-state cotton drone market east of the Mississippi.',
+      'Peanut R3/R4 fungicide applications across Georgia, Alabama, and Florida (1.5M peanut acres) favor drones on wet August ground.',
+      'Florida citrus greening management pushes operators into nutritional and targeted psyllid applications in orchards.',
+      'Tennessee and the Carolinas have fragmented field shapes that make ground rigs inefficient and airplanes uneconomic.',
+      'UGA and NC State extension actively publish drone trial data for cotton and peanut systems.',
+    ],
+    sprayWindow: 'April through November, peaking July–October',
+    authorityLinks: [
+      { label: 'University of Georgia Extension: Cotton Production', url: 'https://site.extension.uga.edu/colquittag/cotton' },
+      { label: 'NC State Extension: Peanut Production', url: 'https://peanut.ces.ncsu.edu' },
+      { label: 'University of Florida IFAS: Citrus Greening', url: 'https://crec.ifas.ufl.edu/extension/greening' },
+    ],
+  },
 ];
 
 export function getRegionBySlug(slug: string): Region | undefined {
