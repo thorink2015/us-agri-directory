@@ -17,48 +17,64 @@ export const blogContent: Record<string, ReactNode> = {
   'top-10-operatori-ro': (
     <div className="space-y-5">
       <p>
-        Piața operatorilor de drone agricole din România a explodat în ultimii 2 ani, cu peste 20 de companii
-        active la nivel național și zeci de operatori regionali. În acest articol prezentăm top 10 operatori
-        verificați, clasați după hectarele tratate cumulat și anvergura flotei.
+        The US agricultural drone market has grown rapidly in the past two years, with hundreds of
+        commercial operators now active nationwide. In this article we rank the top 10 verified
+        operators by acres treated, fleet size, and geographic coverage in 2026.
       </p>
-      <h2>1. <Op slug="riagro">RIAGRO (droneagricole.ro)</Op></h2>
+      <h2>1. <Op slug="hylio-national">Hylio</Op></h2>
       <p>
-        Liderul incontestabil al pieței românești. Cu sediul în Brașov și acoperire națională, RIAGRO deține
-        un record impresionant: 1.000 de hectare tratate într-o singură noapte. Flotă de peste 20 de drone DJI
-        Agras și parteneriat oficial cu producătorul.
+        The leading American-made, NDAA-compliant ag drone manufacturer and nationwide operator network.
+        Based in Houston, Hylio produces the AG-272 and supports federal and defense-adjacent buyers
+        requiring US-manufactured equipment.
       </p>
-      <h2>2. <Op slug="agridrone-romania">Agridrone România</Op></h2>
+      <h2>2. <Op slug="rantizo">Rantizo</Op></h2>
       <p>
-        Bucureștean, Agridrone România operează la nivel național cu echipe specializate pentru fiecare mare
-        regiune. Oferă pachete integrate: pulverizare, monitorizare NDVI și consultanță.
+        Iowa-based nationwide ag drone network with one of the largest operator fleets in America.
+        Strong coverage across the Corn Belt and Great Plains, with FAA Part 137 operations in
+        dozens of states.
       </p>
-      <h2>3. <Op slug="skygrid">SkyGrid</Op></h2>
+      <h2>3. <Op slug="agri-spray-drones">Agri Spray Drones</Op></h2>
       <p>
-        Cluj-Napoca. Unul dintre pionierii industriei, SkyGrid s-a făcut cunoscut prin tehnici inovative și
-        colaborarea cu cercetători. Specializat pe Transilvania.
+        Missouri-headquartered with a nationwide dealer and applicator network. Offers both
+        equipment sales and service applications for corn, soybean, and cotton fungicide programs.
       </p>
-      <h2>4. <Op slug="appia-drones">Appia Drones</Op></h2>
+      <h2>4. <Op slug="osprey-agri-drone-national">Osprey Agri Drones</Op></h2>
       <p>
-        Din Târgu Mureș, Appia Drones este singurul operator român care produce și drone proprii (ADT Falcon),
-        eligibile AFIR.
+        National operator network focused on the Southeast and mid-Atlantic. Multi-drone fleet
+        covering Virginia, the Carolinas, Georgia, Kentucky, and Tennessee.
       </p>
-      <h2>5. <Op slug="titan-machinery-drone">Titan Machinery România</Op></h2>
+      <h2>5. <Op slug="flyingag">FlyingAg</Op></h2>
       <p>
-        Divizie de drone a uneia dintre cele mai mari companii de utilaje agricole din România. Distribuție
-        DJI oficială.
+        Nebraska-based operator with deep Corn Belt coverage. Specializes in VT corn fungicide and
+        R3 soybean applications.
       </p>
-      <h2>6. <Op slug="landtech">LandTech</Op></h2>
-      <p>Spraying și închiriere drone agricole, o opțiune flexibilă pentru fermieri mici.</p>
-      <h2>7. <Op slug="agro-drona">Agro Drona</Op></h2>
-      <p>Cunoscut pentru productivitate ridicată: 20 ha/h în condiții optime.</p>
-      <h2>8. <Op slug="nik-ro">Nik-ro</Op></h2>
-      <p>Principalul distribuitor XAG în România, cu sediu la București.</p>
-      <h2>9. <Op slug="agronix">Agronix</Op></h2>
-      <p>Combină pulverizarea cu cursurile de formare, excelent pentru începători.</p>
-      <h2>10. <Op slug="hortidrones">Hortidrones</Op></h2>
-      <p>Specializat pe horticultură, livezi și viticultură.</p>
+      <h2>6. <Op slug="avary-drone">Avary Drone</Op></h2>
+      <p>
+        National network and marketplace connecting growers with vetted local operators across
+        the Southeast, Midwest, and mid-Atlantic.
+      </p>
+      <h2>7. <Op slug="texas-ag-drones">Texas Ag Drones</Op></h2>
+      <p>
+        One of the largest operations in Texas, covering cotton, sorghum, winter wheat, and
+        brush control across the Rolling Plains and South Texas.
+      </p>
+      <h2>8. <Op slug="pegasus-robotics-ag">Pegasus Robotics</Op></h2>
+      <p>
+        Atlanta-headquartered platform combining advanced ag drone technology with commercial
+        application services across the Southeast.
+      </p>
+      <h2>9. <Op slug="kdb-land-and-air">KDB Land and Air</Op></h2>
+      <p>
+        Multi-state operator serving Alabama, Georgia, and Florida row-crop and peanut producers
+        with full-season fungicide and defoliant programs.
+      </p>
+      <h2>10. <Op slug="talos-drones-ag">Talos Drones</Op></h2>
+      <p>
+        High-capacity operator covering the Gulf Coast and Delta, specializing in large-acreage
+        rice, cotton, and soybean applications.
+      </p>
       <p className="mt-6">
-        Vezi lista completă cu <Link href="/operatori" className="text-green-700 hover:underline font-medium">toți operatorii din România</Link>.
+        See the full list of <Link href="/operatori" className="text-green-700 hover:underline font-medium">all verified US operators</Link>.
       </p>
     </div>
   ),
@@ -66,22 +82,37 @@ export const blogContent: Record<string, ReactNode> = {
   'top-5-moldova': (
     <div className="space-y-5">
       <p>
-        Republica Moldova are o piață de drone agricole mai mică decât cea a României, dar în creștere rapidă.
-        Programele UNDP și EU4Moldova au accelerat adoptarea tehnologiei în ultimii 3 ani.
+        The US agricultural drone industry is organized around distinct regional markets — the
+        Corn Belt, Mississippi Delta, Southeast, Great Plains, and Pacific Northwest. Here are
+        the leading operators serving each.
       </p>
-      <h2>1. <Op slug="dron-assistance-moldova">DRON Assistance (DroneAgro.md)</Op></h2>
+      <h2>Southeast — <Op slug="osprey-agri-drone-national">Osprey Agri Drones</Op></h2>
       <p>
-        Lider absolut. 16 drone de pulverizare, 14 piloți certificați, centre regionale în Edineț, Căușeni,
-        Bălți, Comrat și Ungheni. Susținut de UNDP Moldova.
+        Multi-state fleet covering Virginia, the Carolinas, Georgia, Tennessee, and Kentucky.
+        Core services: corn VT fungicide, soybean R3, peanut late-season disease programs.
       </p>
-      <h2>2. <Op slug="bosal-solutions">BOSAL Solutions</Op></h2>
-      <p>Distribuitor oficial DJI Moldova. Service complet și cursuri de pilotaj.</p>
-      <h2>3. <Op slug="agrodron-md">AgroDron.md</Op></h2>
-      <p>Servicii de pulverizare și consultanță pentru ferme moldovenești de dimensiuni medii.</p>
-      <h2>4. <Op slug="dronex-md">DroneX Moldova</Op></h2>
-      <p>Furnizor multi-sector cu divizie agricolă confirmată.</p>
+      <h2>Corn Belt — <Op slug="rantizo">Rantizo</Op></h2>
+      <p>
+        Iowa-headquartered with the largest operator network across Illinois, Iowa, Indiana,
+        Ohio, and Missouri. Specializes in corn and soybean programs.
+      </p>
+      <h2>Mississippi Delta — <Op slug="agri-spray-drones-leland">Agri Spray Drones Leland</Op></h2>
+      <p>
+        Delta-based location of the Agri Spray Drones network serving rice, soybean, and cotton
+        producers across the Yazoo-Mississippi Delta.
+      </p>
+      <h2>Great Plains — <Op slug="texas-ag-drones">Texas Ag Drones</Op></h2>
+      <p>
+        Largest Texas-based operation, handling cotton defoliation, grain sorghum, winter wheat,
+        and rangeland brush control.
+      </p>
+      <h2>Gulf Coast — <Op slug="talos-drones-ag">Talos Drones</Op></h2>
+      <p>
+        High-capacity heavy-lift spray drones for large-acreage rice and cotton across Louisiana,
+        Mississippi, and Arkansas.
+      </p>
       <p className="mt-6">
-        Vezi toți operatorii din <Link href="/moldova" className="text-green-700 hover:underline font-medium">Republica Moldova</Link>.
+        Browse <Link href="/operatori" className="text-green-700 hover:underline font-medium">all US operators</Link> by state.
       </p>
     </div>
   ),
