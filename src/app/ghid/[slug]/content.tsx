@@ -569,53 +569,99 @@ export const guideContent: Record<string, ReactNode> = {
   'subventii-moldova-aipa': (
     <div className="space-y-6">
       <p>
-        Agenția de Intervenție și Plăți pentru Agricultură (<ExtLink href="https://aipa.gov.md">AIPA</ExtLink>)
-        oferă subvenții pentru achiziția de drone agricole în Republica Moldova prin Fondul Național de
-        Dezvoltare a Agriculturii și Mediului Rural (FNDAMR).
+        Beyond federal USDA programs, many states offer their own grants, loans, and cost-share
+        programs for agricultural technology — including drones. This guide covers the most
+        significant state-level funding opportunities available to US drone operators and farmers
+        in 2026, organized by region.
       </p>
 
-      <h2>Programul principal: Anexa 3</h2>
+      <h2>Midwest — Corn Belt states</h2>
+      <ul>
+        <li>
+          <strong>Iowa — Beginning Farmer Tax Credit:</strong> Iowa resident farmers who purchase
+          agricultural equipment from a qualifying seller may receive a state income tax credit of
+          up to 5% of sale price. Contact the{' '}
+          <ExtLink href="https://www.iada.iowa.gov">Iowa Agricultural Development Authority (IADA)</ExtLink>.
+        </li>
+        <li>
+          <strong>Illinois — IDOA Ag Technology Grants:</strong> The Illinois Department of
+          Agriculture periodically opens grant rounds for precision agriculture equipment including
+          drones. Awards typically $5,000–25,000 per applicant.
+        </li>
+        <li>
+          <strong>Indiana — ISDA Beginning Farmer Loan Program:</strong> Below-market interest rate
+          loans up to $500,000 for beginning farmers purchasing equipment. Drones and accessories
+          are eligible capital items.
+        </li>
+        <li>
+          <strong>Ohio — OAQDA Ag-LINK Loans:</strong> Ohio Agricultural Linked Deposit Program
+          offers interest rate reductions of 3% on eligible equipment loans through participating
+          lenders.
+        </li>
+      </ul>
+
+      <h2>South — Cotton Belt and Delta states</h2>
+      <ul>
+        <li>
+          <strong>Texas — TADB Ag Loan Program:</strong> Texas Agricultural Finance Authority loans
+          up to $500,000 at reduced rates for new or expanding ag operations purchasing equipment.
+        </li>
+        <li>
+          <strong>Mississippi — MAFES / MSU Extension grants:</strong> Mississippi State University
+          Extension periodically offers cost-share programs for precision agriculture adoption on
+          row-crop farms through USDA partnerships.
+        </li>
+        <li>
+          <strong>Arkansas — ADFA Rural Development Loans:</strong> Arkansas Development Finance
+          Authority offers below-market financing for farm equipment in rural counties.
+        </li>
+      </ul>
+
+      <h2>West — Specialty crop and wine states</h2>
+      <ul>
+        <li>
+          <strong>California — CDFA SWEEP Program:</strong> State Water Efficiency and Enhancement
+          Program. Drone sprayers that demonstrably reduce water use qualify for grants up to
+          $200,000. Particularly relevant for vineyard and orchard operators in water-stressed regions.
+        </li>
+        <li>
+          <strong>California — CDFA Specialty Crop Block Grants:</strong> Annual federal pass-through
+          grants for projects that enhance competitiveness of California specialty crops — precision
+          application technology qualifies.
+        </li>
+        <li>
+          <strong>Washington — WSU Precision Ag Initiative:</strong> Washington State University
+          Extension offers subsidized training and equipment demonstration programs for drone
+          applicators in tree fruit and wine grape production.
+        </li>
+        <li>
+          <strong>Oregon — ODA Ag Development Fund:</strong> Oregon Department of Agriculture loans
+          for beginning farmers purchasing crop protection equipment including drones.
+        </li>
+      </ul>
+
+      <h2>How to stack multiple funding sources</h2>
       <p>
-        Fermierii moldoveni pot beneficia de o subvenție de <strong>50% din costul dronei agricole</strong>,
-        plafonată la 200.000 MDL (~10.000 EUR) per beneficiar. Programul este finanțat parțial de UE prin
-        <ExtLink href="https://www.eu4moldova.md">EU4Moldova</ExtLink>.
+        The most effective approach is to combine federal USDA EQIP cost-share with a state loan
+        program. Example: EQIP covers 45% of a $28,000 T50 package ($12,600), an IADA Beginning
+        Farmer loan at below-market rate finances the remaining $15,400. Effective out-of-pocket
+        cost in year one can be near zero if revenue from service applications covers loan payments.
       </p>
 
-      <h2>Eligibilitate</h2>
+      <h2>Tips for state program applications</h2>
       <ul>
-        <li>Gospodărie țărănească sau SRL agricol înregistrat în Moldova</li>
-        <li>Cifra de afaceri &lt; 5 mil. MDL</li>
-        <li>Activitate agricolă de minim 12 luni</li>
-        <li>Fără datorii la buget</li>
+        <li>Apply to USDA EQIP first — state programs often require proof of federal application</li>
+        <li>Contact your state Department of Agriculture early in the calendar year — budgets are limited and sign-up windows close fast</li>
+        <li>Your state's land-grant university Extension office often has a precision agriculture specialist who knows every current program available locally</li>
+        <li>Farm Bureau membership can give access to additional member-only loan programs and grant alerts</li>
       </ul>
 
-      <h2>Documente necesare</h2>
-      <ol>
-        <li>Cerere la biroul regional AIPA</li>
-        <li>Plan de afaceri simplificat</li>
-        <li>Ofertă de la un dealer autorizat</li>
-        <li>Copie CUI / extras ONRC (Moldova)</li>
-        <li>Certificat ANSA pentru tratamente fitosanitare</li>
-      </ol>
-
-      <h2>Dealeri autorizați în Moldova</h2>
+      <h2>Official resources</h2>
       <ul>
-        <li><a href="/operatori/bosal-solutions" className="text-green-700 hover:underline font-medium">BOSAL Solutions</a>: dealer oficial DJI</li>
-        <li><a href="/operatori/dron-assistance-moldova" className="text-green-700 hover:underline font-medium">DRON Assistance</a>: vânzări + servicii integrate</li>
-      </ul>
-
-      <h2>Sfaturi</h2>
-      <ul>
-        <li>Depune cererea în primele luni ale anului (bugetul se epuizează rapid)</li>
-        <li>Folosește consultanți AIPA acreditați</li>
-        <li>Asigură-te că drona are certificat ANSA pentru aplicarea pesticidelor</li>
-      </ul>
-
-      <h2>Resurse oficiale</h2>
-      <ul>
-        <li><ExtLink href="https://aipa.gov.md">AIPA: Subvenții agricole Moldova</ExtLink></li>
-        <li><ExtLink href="https://www.eu4moldova.md">EU4Moldova: Programul UE</ExtLink></li>
-        <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii și Industriei Alimentare</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives">USDA NRCS: EQIP (federal baseline)</ExtLink></li>
+        <li><ExtLink href="https://www.farmers.gov/loans">Farmers.gov: Loan and Grant Finder</ExtLink></li>
+        <li><ExtLink href="https://www.nasda.org/members">NASDA: State Agriculture Department Contacts</ExtLink></li>
+        <li><ExtLink href="https://www.extension.org">eXtension: Land-Grant University Resources</ExtLink></li>
       </ul>
     </div>
   ),
@@ -623,54 +669,71 @@ export const guideContent: Record<string, ReactNode> = {
   'legislatie-ansa-moldova': (
     <div className="space-y-6">
       <p>
-        Operarea dronelor agricole în Republica Moldova este reglementată de <strong>ANSA</strong> (Agenția Națională
-        pentru Siguranța Alimentelor) și de Autoritatea Aeronautică Civilă a Moldovei (AAC). Spre deosebire de
-        România (care aplică regulamentul EASA), Moldova are propriul cadru legislativ adaptat.
+        Crop protection regulations govern what products drone operators can apply, at what rates,
+        and under what conditions. This guide covers the EPA and state-level crop protection
+        regulatory framework that every US ag drone operator must understand in 2026 — from
+        pesticide label law to buffer zone requirements and recordkeeping.
       </p>
 
-      <h2>Cadrul legal de bază</h2>
-      <ul>
-        <li><strong>Hotărârea Guvernului nr. 647/2020</strong>: regulamentul general pentru UAS în Moldova</li>
-        <li><strong>ANSA</strong>: autorizează aplicarea produselor fitosanitare cu drona</li>
-        <li><strong>AAC Moldova</strong>: înregistrarea și licențierea operatorilor de zbor comercial</li>
-      </ul>
-
-      <h2>Autorizarea ANSA pentru tratamente fitosanitare</h2>
+      <h2>The pesticide label is federal law (FIFRA)</h2>
       <p>
-        Orice operator care dorește să aplice pesticide, fungicide sau fertilizatori cu drona în Moldova
-        trebuie să obțină autorizare de la ANSA. Documentele necesare:
+        Under the Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA), the pesticide label
+        is a legally binding document. Violating label directions — including application method,
+        rate, timing, or target crop — is a federal violation. Key label elements drone operators
+        must check before every application:
       </p>
       <ul>
-        <li>Cerere tip ANSA</li>
-        <li>Certificat de înregistrare a dronei la AAC</li>
-        <li>Licență pilot (sau certificat de competență)</li>
-        <li>Contractul cu producătorul/importatorul de drone</li>
-        <li>Lista produselor fitosanitare autorizate în Moldova</li>
+        <li><strong>Application method:</strong> verify the label permits aerial or UAS application — not all products do</li>
+        <li><strong>Rate and volume:</strong> some labels specify minimum carrier volume (gallons/acre) that ULV drone applications may fall below — check for aerial ULV allowances</li>
+        <li><strong>Restricted Entry Interval (REI):</strong> how long workers must stay out of treated fields after application</li>
+        <li><strong>Pre-Harvest Interval (PHI):</strong> minimum days between application and harvest — critical for specialty crops</li>
+        <li><strong>Buffer zones:</strong> many labels require setbacks from water bodies, inhabited structures, or non-target areas</li>
       </ul>
 
-      <h2>Înregistrarea dronei la AAC Moldova</h2>
-      <p>Toate aparatele de zbor cu greutatea peste 250 g trebuie înregistrate. Taxele sunt simbolice (200–500 MDL).</p>
+      <h2>Restricted Use Pesticides (RUPs)</h2>
+      <p>
+        RUPs may only be purchased and applied by a certified commercial pesticide applicator or
+        under their direct supervision. Most common ag drone applications (fungicides, herbicides,
+        insecticides) include products classified as RUPs. Always verify classification before
+        accepting an application job — applying an RUP without a license is a federal violation.
+      </p>
 
-      <h2>Zone restricționate</h2>
+      <h2>Drift management requirements</h2>
       <ul>
-        <li>5 km în jurul aeroporturilor (Chișinău, Bălți, Cahul)</li>
-        <li>Zonele de frontieră (fâșia de 5 km)</li>
-        <li>Zonele Transnistria</li>
+        <li>Drone applications are generally lower-drift than manned aerial but still subject to label drift restrictions</li>
+        <li>Wind speed limits: most labels restrict application above 10–15 mph; check specific product labels</li>
+        <li>Temperature inversions (calm, still air at night) can concentrate drift — many operators avoid applications in those conditions</li>
+        <li>Notify adjacent organic or sensitive crop neighbors before applications where label requires it</li>
       </ul>
 
-      <h2>Diferențe față de România (AACR/EASA)</h2>
+      <h2>Recordkeeping requirements</h2>
+      <p>
+        Federal law (FIFRA) requires commercial applicators to maintain application records for
+        all RUPs for a minimum of 2 years. Best practice is to keep records for all applications,
+        RUP or not. Required fields:
+      </p>
       <ul>
-        <li>Moldova nu aplică regulamentul european EASA: are cadru propriu</li>
-        <li>Nu există clasele Open/Specific/Certified ca în UE</li>
-        <li>Autorizarea ANSA pentru pesticide este obligatorie (în RO este MADR)</li>
-        <li>Produsele fitosanitare trebuie să fie pe lista ANSA, nu EFSA</li>
+        <li>Date and location of application (GPS coordinates or field description)</li>
+        <li>Product name, EPA registration number, and amount applied</li>
+        <li>Crop treated and total acreage</li>
+        <li>Name and license number of applicator</li>
+        <li>Weather conditions at time of application</li>
       </ul>
 
-      <h2>Resurse oficiale</h2>
+      <h2>State crop protection regulations</h2>
+      <p>
+        Each state maintains its own list of registered pesticides, additional label requirements,
+        and notification rules. Some states (e.g. California, New York) have stricter restrictions
+        than federal requirements — always check your state Department of Agriculture before
+        applying any product in a new state.
+      </p>
+
+      <h2>Official resources</h2>
       <ul>
-        <li><ExtLink href="https://ansa.gov.md">ANSA: Agenția Națională pentru Siguranța Alimentelor</ExtLink></li>
-        <li><ExtLink href="https://www.caa.md">AAC Moldova: Autoritatea Aeronautică Civilă</ExtLink></li>
-        <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii Moldova</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/pesticides">EPA: Pesticides Program</ExtLink></li>
+        <li><ExtLink href="https://www.epa.gov/safepestcontrol/label-review-manual">EPA: Label Review Manual</ExtLink></li>
+        <li><ExtLink href="https://www.cdms.net">CDMS: Pesticide Label Database</ExtLink></li>
+        <li><ExtLink href="https://www.nasda.org/members">NASDA: State Ag Department Contacts</ExtLink></li>
       </ul>
     </div>
   ),
@@ -678,64 +741,75 @@ export const guideContent: Record<string, ReactNode> = {
   'cum-sa-devii-operator-moldova': (
     <div className="space-y-6">
       <p>
-        Piața de drone agricole din Republica Moldova este la început, dar crește rapid. Fermele mari de viticultură
-        (100.000+ ha) și câmpurile de cereale din nordul și centrul țării reprezintă o oportunitate reală. În 2026,
-        mai puțin de 5% din suprafața agricolă este tratată cu drone: restul este piața ta.
+        The Southeast US — Alabama, Georgia, Florida, Mississippi, Louisiana, South Carolina, and
+        North Carolina — is one of the fastest-growing markets for agricultural drone services in
+        2026. Cotton defoliation, peanut late-season disease programs, soybean white mold, and
+        rice blast are driving explosive demand. This guide is for operators starting or expanding
+        a drone spraying business in the Southeast.
       </p>
 
-      <h2>1. Înțelege piața moldovenească</h2>
+      <h2>1. Understand the Southeast market</h2>
       <ul>
-        <li>1,8 milioane ha teren agricol (câmpuri de cereale, viță de vie, livezi)</li>
-        <li>100.000+ ha de viticultură: principala piață pentru drone</li>
-        <li>Prețuri: 170–240 MDL/ha (€8.50–12/ha)</li>
-        <li>Principali clienți: exploatații mari 200–2000 ha, vinării, asociații agricole</li>
+        <li>40+ million acres of cropland across the 7-state Southeast region</li>
+        <li>Primary demand: cotton defoliation (Aug–Oct), peanut late cercospora (Jul–Sep), soybean R3 fungicide (Jul–Aug), rice blast (Jul–Aug)</li>
+        <li>Rates: $14–17/acre for row crops; $25–35/acre for peanuts and specialty crops</li>
+        <li>Key clients: 500–5,000-acre cotton and peanut producers, rice farms in the Mississippi Delta, orchard and blueberry operations in GA/FL/NC</li>
+        <li>Season length: April–October with peak demand July–September</li>
       </ul>
 
-      <h2>2. Forma juridică</h2>
+      <h2>2. State licensing priorities for Southeast operators</h2>
       <ul>
-        <li><strong>SRL</strong>: forma recomandată, capital minim 5.400 MDL</li>
-        <li><strong>Î.I.</strong> (Întreprindere Individuală): pentru operatori singuri, mai simplu fiscal</li>
-        <li>Înregistrare la <ExtLink href="https://egov.md">ASP (Agenția Servicii Publice)</ExtLink>, online sau la ghișeu</li>
+        <li><strong>Multi-state licensing is essential</strong> — most Southeast operators cover 2–4 states. Each state requires its own Commercial Pesticide Applicator License, though many have reciprocity agreements with neighbors.</li>
+        <li>Alabama, Georgia, Florida, and Mississippi all have active reciprocity — check with each state DOA before applying.</li>
+        <li>North Carolina and South Carolina have a joint reciprocity program for licensed applicators.</li>
       </ul>
 
-      <h2>3. Autorizările necesare</h2>
+      <h2>3. Equipment recommendations for Southeast conditions</h2>
       <ul>
-        <li>Înregistrare dronă la <strong>AAC Moldova</strong></li>
-        <li>Autorizare <strong>ANSA</strong> pentru aplicarea produselor fitosanitare</li>
-        <li>Curs pilot (cursuri disponibile în Chișinău și Cluj pentru cetățenii moldoveni)</li>
+        <li><strong>DJI Agras T50 or T100:</strong> best fit for large-acreage cotton and soybean. Heat and humidity are hard on batteries — plan for reduced flight times in July–August vs. manufacturer specs.</li>
+        <li><strong>Spray system setup:</strong> flat-fan nozzles for cotton defoliant; hollow-cone nozzles for fungicide canopy penetration in soybeans and peanuts.</li>
+        <li><strong>Logistics:</strong> portable generator + fast charger setup is critical — Southeast fields are often remote with no grid power nearby.</li>
       </ul>
 
-      <h2>4. Finanțarea: subvenție AIPA 50%</h2>
+      <h2>4. Finding clients in the Southeast</h2>
+      <ul>
+        <li>Introduce yourself to local co-op agronomists and independent crop consultants — they are the primary referral source for drone services in the region</li>
+        <li>Attend state commodity group meetings: Alabama Cotton Producers, Georgia Peanut Commission, Mississippi Soybean Promotion Board</li>
+        <li>List your operation in the{' '}
+          <a href="/adauga-operator" className="text-green-700 hover:underline font-medium">US Ag Drone Directory</a>{' '}
+          — growers across the Southeast actively search by state
+        </li>
+        <li>Partner with established operators like{' '}
+          <a href="/operatori/osprey-agri-drone-national" className="text-green-700 hover:underline font-medium">Osprey Agri Drones</a> or{' '}
+          <a href="/operatori/kdb-land-and-air" className="text-green-700 hover:underline font-medium">KDB Land and Air</a>{' '}
+          for subcontracting during peak season
+        </li>
+      </ul>
+
+      <h2>5. Peak season logistics</h2>
       <p>
-        Cel mai important avantaj față de alte piețe: AIPA subvenționează 50% din prețul dronei, cu plafon
-        200.000 MDL (~€10.000). O dronă DJI T25P costă ~€45.000 → plătești €22.500, AIPA returnează €10.000.
+        July–September is the highest-pressure window: cotton defoliation, soybean R3, and peanut
+        programs all overlap. Successful Southeast operators book their calendar by June 1 and often
+        operate 7 days a week during the 6-week peak. Planning tips:
       </p>
       <ul>
-        <li>Depune cerere la AIPA înainte de achiziție</li>
-        <li>Drona trebuie să fie pe lista echipamentelor eligibile</li>
-        <li>Plata se face după achiziție și prezentarea facturilor</li>
+        <li>Pre-book fields in May — offer early-commitment discounts to lock in your calendar</li>
+        <li>Keep a waitlist — cancellations are rare but last-minute additions are common in peak weeks</li>
+        <li>Have a backup pilot or second operator for equipment failures during peak demand</li>
+        <li>Monitor Tar Spot and Southern Rust forecasts from{' '}
+          <ExtLink href="https://corn.ipmpipe.org">Corn IPM PIPE</ExtLink>{' '}
+          and{' '}
+          <ExtLink href="https://sbr.ipmpipe.org">SBR PIPE</ExtLink>{' '}
+          — disease alerts drive surge demand
+        </li>
       </ul>
 
-      <h2>5. Primii clienți</h2>
+      <h2>Official resources</h2>
       <ul>
-        <li>Contactează direct vinăriile mari (Purcari, Cricova, Mileștii Mici, Château Vartely)</li>
-        <li>Asociațiile agricole din nordul Moldovei (Bălți, Edineț, Soroca)</li>
-        <li>Postează pe platformele agricole locale și grupurile Facebook de fermieri</li>
-        <li>Colaborează cu DRON Assistance pentru subcontractare la început</li>
-      </ul>
-
-      <h2>6. Concurența</h2>
-      <p>
-        Principalii operatori activi: DRON Assistance (lider național), BOSAL Solutions, AgroDron.md.
-        Piața are loc pentru mulți operatori noi, în special în zonele rurale și raioanele de sud.
-      </p>
-
-      <h2>Resurse oficiale Moldova</h2>
-      <ul>
-        <li><ExtLink href="https://aipa.gov.md">AIPA: Subvenții pentru echipamente</ExtLink></li>
-        <li><ExtLink href="https://ansa.gov.md">ANSA: Autorizare fitosanitară</ExtLink></li>
-        <li><ExtLink href="https://asp.gov.md">ASP: Înregistrare firmă</ExtLink></li>
-        <li><ExtLink href="https://maia.gov.md">Ministerul Agriculturii Moldova</ExtLink></li>
+        <li><ExtLink href="https://www.faa.gov/uas/commercial_operators">FAA: Commercial UAS Operators</ExtLink></li>
+        <li><ExtLink href="https://www.agaviation.org">NAAA: National Agricultural Aviation Association</ExtLink></li>
+        <li><ExtLink href="https://corn.ipmpipe.org">Corn IPM PIPE: Tar Spot & Southern Rust Tracker</ExtLink></li>
+        <li><ExtLink href="https://www.nrcs.usda.gov/contact/find-a-service-center">USDA: Find Your Local Service Center</ExtLink></li>
       </ul>
     </div>
   ),
