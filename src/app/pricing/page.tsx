@@ -150,7 +150,150 @@ export default function PricingPage() {
           </Link>
         </section>
 
-        {/* Sections 2-9 continue below. Rendered in batch 2. */}
+        {/* SECTION 2: Rates by Region */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Regional pricing: what you will pay in your area</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm bg-white border border-gray-200 rounded-xl overflow-hidden">
+              <thead className="bg-green-50">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Region</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Rate Range</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Why</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { region: 'Corn Belt (IA, IL, IN, OH, eastern NE)', rate: '$12 to $17', why: 'Most competitive market. Large flat fields. Growing operator supply drives compression.', href: '/regions/corn-belt' },
+                  { region: 'Great Plains (KS, NE, ND, SD, OK, TX panhandle)', rate: '$12 to $16', why: 'Large open acreage. Fewer operators than Corn Belt.', href: '/regions/great-plains' },
+                  { region: 'Mississippi Delta (AR, LA, MS, MO bootheel)', rate: '$14 to $18', why: 'Strong manned aerial applicator competition. Rice paddy complexity.', href: '/regions/mississippi-delta' },
+                  { region: 'California (specialty crops)', rate: '$15 to $35', why: 'Orchards, vineyards, steep terrain. CDPR compliance overhead.', href: '/regions/california' },
+                  { region: 'Southeast (GA, AL, SC, NC, FL)', rate: '$16 to $28', why: 'Variable terrain. Mixed crop types. Higher chemical costs.', href: '/regions/southeast' },
+                  { region: 'Pacific Northwest (WA, OR, ID)', rate: '$14 to $20', why: 'Row crops at the low end, orchards and vineyards at the high end.', href: null },
+                  { region: 'Northeast (PA, NY, VA, MD)', rate: '$15 to $25', why: 'Smaller irregular fields. Fewer operators.', href: null },
+                ].map((row) => (
+                  <tr key={row.region}>
+                    <td className="px-4 py-3 font-medium text-gray-900">
+                      {row.href ? (
+                        <Link href={row.href} className="text-green-700 hover:underline">{row.region}</Link>
+                      ) : (
+                        row.region
+                      )}
+                    </td>
+                    <td className="px-4 py-3 text-green-700 font-semibold whitespace-nowrap">{row.rate}</td>
+                    <td className="px-4 py-3 text-xs text-gray-600 leading-relaxed">{row.why}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* SECTION 3: Rates by Crop */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">What drone spraying costs on your crop</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm bg-white border border-gray-200 rounded-xl overflow-hidden">
+              <thead className="bg-green-50">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Crop</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Rate ($/acre)</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Notes</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { crop: 'Corn', rate: '$14 to $17', notes: "VT/R1 tall-crop fungicide commands 15 to 25% premium over flat crops. Beck's 2025 PFR shows $27.26 ROI per acre for drone fungicide on corn.", href: '/crops/corn' },
+                  { crop: 'Soybeans', rate: '$12 to $16', notes: 'Standard Midwest baseline. Most price-competitive crop.', href: '/crops/soybeans' },
+                  { crop: 'Wheat', rate: '$12 to $16', notes: 'Similar to soybean rates. Lower canopy complexity.', href: '/crops/wheat' },
+                  { crop: 'Cotton', rate: '$14 to $18', notes: 'Defoliant rates run higher than mid-season insecticide.', href: '/crops/cotton' },
+                  { crop: 'Rice', rate: '$15 to $20', notes: 'Delta region. Wet field conditions add complexity.', href: '/crops/rice' },
+                  { crop: 'Orchards', rate: '$15 to $21', notes: 'Higher GPA requirements. Complex flight paths. CA almond and walnut primary.', href: '/crops/orchards' },
+                  { crop: 'Vineyards', rate: '$18 to $30', notes: 'Steep terrain, trellis systems, 8 to 12 passes per season.', href: '/crops/grapes' },
+                  { crop: 'Specialty vegetables', rate: '$20 to $40', notes: 'Higher frequency. Specialty formulations. Smaller fields.', href: null },
+                ].map((row) => (
+                  <tr key={row.crop}>
+                    <td className="px-4 py-3 font-medium text-gray-900">
+                      {row.href ? (
+                        <Link href={row.href} className="text-green-700 hover:underline">{row.crop}</Link>
+                      ) : (
+                        row.crop
+                      )}
+                    </td>
+                    <td className="px-4 py-3 text-green-700 font-semibold whitespace-nowrap">{row.rate}</td>
+                    <td className="px-4 py-3 text-xs text-gray-600 leading-relaxed">{row.notes}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* SECTION 4: Minimum Charges and Extra Fees */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Minimums, travel charges, and hidden costs</h2>
+          <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+            <p>
+              <strong className="text-gray-900">Minimum acreage.</strong> Most operators set a 10 to 25 acre minimum for standard service calls. Some will serve smaller plots at elevated per-acre rates. University of Missouri research shows farmer ownership of a drone only beats custom hire at roughly 980 acres per year, which is why small-acreage jobs carry surcharges.
+            </p>
+            <p>
+              <strong className="text-gray-900">Travel and mobilization.</strong> Trip charges vary widely. Broken-up or hard-to-reach fields typically add $5 to $10 per acre to base pricing. Some operators charge flat mobilization fees ($50 to $150), others use per-mile rates. Large contiguous fields get the lowest rates; scattered small parcels push toward the upper end.
+            </p>
+            <p>
+              <strong className="text-gray-900">Generator fuel.</strong> Drone operations absorb generator diesel for battery charging rather than itemizing it. Iowa State survey estimates diesel at $3.66 per gallon for 2025/2026. Generator fuel cost runs roughly $0.37 to $0.48 per acre, typically built into the base rate.
+            </p>
+            <p>
+              <strong className="text-gray-900">Chemical cost.</strong> All rates on this page are application only. Chemical products are an additional cost, either supplied by the farmer or purchased through the operator. Fungicide products run $8 to $25 per acre for the chemical itself, depending on active ingredient and rate.
+            </p>
+          </div>
+        </section>
+
+        {/* SECTION 5: Historical Trend */}
+        <section className="mb-10">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">How drone spraying rates have changed: 2022 to 2026</h2>
+          <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+            The defining pricing story is rate compression driven by operator supply growth.
+          </p>
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-sm bg-white border border-gray-200 rounded-xl overflow-hidden">
+              <thead className="bg-green-50">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Year</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Midwest Drone Rate</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Manned Aerial Rate</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">Context</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {[
+                  { year: '2022', drone: '$22 to $25/acre', air: '$10 to $13/acre', ctx: 'Early adopter pricing; few operators' },
+                  { year: '2024', drone: '$15 to $18/acre', air: '$11 to $13/acre', ctx: 'MU Extension benchmark $16/acre' },
+                  { year: '2026', drone: '$12 to $17/acre', air: '$12/acre (Iowa State)', ctx: 'First Iowa State drone category: $12.50 avg' },
+                ].map((row) => (
+                  <tr key={row.year}>
+                    <td className="px-4 py-3 font-semibold text-gray-900">{row.year}</td>
+                    <td className="px-4 py-3 text-green-700 font-medium">{row.drone}</td>
+                    <td className="px-4 py-3 text-gray-700">{row.air}</td>
+                    <td className="px-4 py-3 text-xs text-gray-600">{row.ctx}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+            <p>
+              Midwest rates dropped roughly 30 to 45 percent in three years. Several forces drove this. SweetWater Technologies alone scaled from 32,000 acres in 2022 to an estimated 200,000 by end of 2025. The NAAA 2025 industry survey found 13 percent of aerial application operations now include UAS, up from 5 percent in 2024. The American Spray Drone Coalition reported 10.3 million US acres sprayed by drones in 2024, roughly 2.5 times the 2023 figure.
+            </p>
+            <p>
+              At current rates, some operators report barely clearing $5 per acre profit. Specialty crop markets (orchards, vineyards, vegetables) remain less compressed at $18 to $40 per acre.
+            </p>
+            <p>
+              Offsetting downward pressure, cumulative tariffs on Chinese drones reached 170 percent by April 2025. A DJI Agras T50 that sold for roughly $18,000 pre-tariff could effectively cost $25,000 or more post-tariff, narrowing the price gap with US-made alternatives.
+            </p>
+          </div>
+        </section>
+
+        {/* Sections 6-9 land in batch 3. */}
 
         {/* Author card */}
         <AuthorCard />
