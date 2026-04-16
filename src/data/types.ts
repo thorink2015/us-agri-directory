@@ -122,6 +122,22 @@ export interface DroneModel {
   highlightFeature?: string;
 }
 
+export interface ServiceDefinition {
+  slug: string;
+  name: string;
+  description: string;
+  longDescription: string;
+  aeoBlock: string;
+  priceMinUsd: number;
+  priceMaxUsd: number;
+  priceUnit?: string;
+  icon?: string;
+  keywords?: string[];
+  authorityLinks: { label: string; url: string }[];
+  faqs?: { question: string; answer: string }[];
+  lastReviewedAt?: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;

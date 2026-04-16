@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${service.name} Services | Agricultural Drone Operators US 2026`,
     description: service.aeoBlock.slice(0, 155),
     alternates: { canonical: `/services/${params.slug}` },
-    keywords: service.keywords.join(', '),
+    keywords: service.keywords?.join(', '),
     openGraph: {
       title: `${service.name} | US Agricultural Drone Directory`,
       description: service.description,
@@ -45,7 +45,7 @@ export default function ServicePage({ params }: Props) {
   const service = getServiceBySlug(params.slug as ServiceType);
   if (!service) notFound();
 
-  const serviceOps = operators.filter((op) => op.services.includes(service.slug));
+  const serviceOps = operators.filter((op) => op.services.includes(service.slug as ServiceType));
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -83,7 +83,7 @@ export default function ServicePage({ params }: Props) {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: service.faqs.map((faq) => ({
+    mainEntity: (service.faqs ?? []).map((faq) => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
@@ -199,7 +199,7 @@ export default function ServicePage({ params }: Props) {
       <div className="mb-8">
         <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Also searched as</p>
         <div className="flex flex-wrap gap-2">
-          {service.keywords.map((kw) => (
+          {(service.keywords ?? []).map((kw) => (
             <span key={kw} className="px-2.5 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
               {kw}
             </span>
@@ -212,7 +212,7 @@ export default function ServicePage({ params }: Props) {
         <h2 className="text-xl font-bold text-gray-900 mb-4">
           Frequently asked questions
         </h2>
-        <FAQAccordion faqs={service.faqs} />
+        <FAQAccordion faqs={service.faqs ?? []} />
       </div>
 
       {/* Internal links to calculators */}

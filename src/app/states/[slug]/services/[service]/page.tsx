@@ -41,11 +41,11 @@ export default function CountyServicePage({ params }: Props) {
   if (!county || !service) notFound();
 
   const allCountyOps = getOperatorsByCounty(county.slug);
-  const serviceOps = allCountyOps.filter((op) => op.services.includes(service.slug));
+  const serviceOps = allCountyOps.filter((op) => op.services.includes(service.slug as ServiceType));
   const displayOps = serviceOps.length > 0 ? serviceOps : allCountyOps;
 
   const faqs = [
-    ...service.faqs,
+    ...(service.faqs ?? []),
     {
       question: `How many operators offer ${service.name.toLowerCase()} in ${county.name}?`,
       answer:
