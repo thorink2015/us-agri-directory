@@ -9,7 +9,7 @@ Last updated: 2026-04-16
 ## Project identity
 
 - **Site name:** US Ag Drone Directory
-- **Production domain:** `https://usagdronedirectory.com`
+- **Production domain:** `https://agdronedirectory.com` (migrated from usagdronedirectory.com on 2026-04-16)
 - **Repo:** `thorink2015/usss-terra`
 - **Working branch:** `claude/add-drone-operators-directory-T0YnN`
   - **Never push to other branches without explicit user approval.**
@@ -47,15 +47,19 @@ Last updated: 2026-04-16
 
 | Name | Purpose | Status |
 |---|---|---|
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 tracking | To be replaced with Plausible |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 tracking | **Set to `G-9TG0D7BHZV`** (Stream ID 14379568618, agdronedirectory.com) |
+| `NEXT_PUBLIC_GSC_VERIFICATION` | Google Search Console HTML meta tag | Awaiting Eugen to add property + get code |
+| `NEXT_PUBLIC_BING_VERIFICATION` | Bing Webmaster msvalidate.01 meta tag | Awaiting Eugen |
+| `NEXT_PUBLIC_YANDEX_VERIFICATION` | Yandex Webmaster meta tag | Awaiting Eugen |
+| `NEXT_PUBLIC_BAIDU_VERIFICATION` | Baidu Webmaster meta tag | Optional — set if Chinese traffic desired |
 | `NEXT_PUBLIC_FORMSPREE_ID` | Contact form endpoint | Set |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Plausible Analytics site ID | **Not yet set — blocked on Eugen** |
 
 ## Schema @id anchors (every JSON-LD on the site references these)
 
-- Organization: `https://usagdronedirectory.com/#organization`
-- Person (Eugen): `https://usagdronedirectory.com/about#eugen`
-- WebSite: `https://usagdronedirectory.com/#website`
+- Organization: `https://agdronedirectory.com/#organization`
+- Person (Eugen): `https://agdronedirectory.com/about#eugen`
+- WebSite: `https://agdronedirectory.com/#website`
 
 These are canonicalized in `src/data/author.ts` via `AUTHOR.personId`
 and `AUTHOR.organizationId` getters.

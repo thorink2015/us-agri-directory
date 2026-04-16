@@ -29,6 +29,15 @@
 - **Organizational:** Added `/_research/` folder with 13 research + planning docs
 - **Organizational:** Added `/_memory/` folder (this one) + CLAUDE.md rewrite
 
+## 2026-04-16 — Domain migration + GA4 + search engine setup
+
+- Domain migrated from `usagdronedirectory.com` → `agdronedirectory.com` across all 27 source files
+- GA4 stream G-9TG0D7BHZV wired to agdronedirectory.com (hostname guards updated)
+- layout.tsx: added Yandex + Baidu verification env-var slots alongside existing Google/Bing
+- scripts/check-cloudflare.sh: full zone audit script for Cloudflare
+- Cloudflare creds saved to .env.cloudflare.local (gitignored)
+- Netlify env vars still needed: NEXT_PUBLIC_GA_MEASUREMENT_ID=G-9TG0D7BHZV, GSC/Bing/Yandex verification codes
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
