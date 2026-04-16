@@ -43,8 +43,9 @@ See `_research/README.md` for what's uploaded and what's missing.
 
 ## Ready to build when unblocked
 
-- Homepage full rewrite (needs research-05 keyword map + approval gate)
-- `/pricing` pillar rewrite (needs research-04 + research-05)
+- ✅ Homepage full rewrite — shipped 2026-04-16
+- ✅ `/pricing` pillar rewrite — shipped 2026-04-16
+- ✅ All 6 tool pages SEO/AEO treatment — shipped 2026-04-16
 - `/regulations` hub + FAA sub-page + EPA sub-page (needs research-01, research-02)
 - State page template + 50 state pages (needs research-03 + **hard approval gate** per build-plan Session 11)
 - Grants / insurance / training pages (needs research-04)

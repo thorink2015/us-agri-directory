@@ -51,6 +51,22 @@
 - Fixed dead link: `/guides/fonduri-afir-drone` → `/guides` in roi-calculator/page.tsx
 - Updated memory: project-facts.md (IndexNow key, branch record), session-history.md
 
+## 2026-04-16 — Tools SEO + Pricing page + Homepage v2 + Nav (PR #21, merged)
+
+- **Types:** `DroneModel` + `Region` interfaces added to `src/data/types.ts`
+- **Drone page:** `drones/[slug]/page.tsx` — specs table, AEO block, FAQPage/BreadcrumbList/Article schemas, Byline, AuthorCard
+- **Region page:** `regions/[slug]/page.tsx` — sprayWindows table, keyInsights, FAQAccordion, schemas
+- **Nav:** flat 8-item nav + Tools dropdown (3 calculators); SearchBar with state+service dropdowns
+- **Homepage:** full 12-section rewrite — 5 schemas, 50-state grid, 35+ internal links
+- **Pricing:** full 9-section pillar rewrite — service/regional/crop rate tables, fees, history, drone vs alternatives, USDA cost-share, FAQ, authority links
+- **Tools index `/tools`:** AEO block, FAQAccordion, 4 schemas (BreadcrumbList/ItemList/FAQPage/WebPage)
+- **Spray cost calculator:** rebuilt PriceCalculator — 50-state dropdown, regional multipliers, low/high range, passes, chemical toggle; full page SEO (4 schemas, Byline, AuthorCard, FAQAccordion)
+- **ROI calculator:** full page SEO — new H1, AEO, 4 schemas, MU Extension explainer, FAQAccordion
+- **Coverage calculator:** full page SEO — new H1, AEO, 4 schemas, FAQAccordion
+- **Acreage converter:** rebuilt HectareCalculator from Romanian → English (acres/ha/sqft/sqm/sections); full page SEO
+- **Drone comparison:** fixed broken `@/data/drone-models` import; spec table from live drone-model.ts data, 4-scenario guide, FAQAccordion (5 Q&As)
+- **Treatment calendar:** new H1, AEO, 4 schemas, booking deadlines on each entry, crop link chips, FAQAccordion
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
