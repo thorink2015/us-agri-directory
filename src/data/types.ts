@@ -108,18 +108,37 @@ export interface DroneModel {
   slug: string;
   name: string;
   manufacturer: string;
-  tankCapacityL: number;
-  coverageHaPerHour: number;
-  haPerDay?: number;
-  flowRateLPerMin?: number;
-  workWidthM?: number;
-  spreadingCapacityKg?: number;
-  weightKg?: number;
-  ipRating?: string;
-  priceUsdMin?: number;
-  priceUsdMax?: number;
-  ndaaCompliant?: boolean;
-  highlightFeature?: string;
+  countryOfManufacture: string;
+  ndaaCompliant: boolean;
+  status: 'active' | 'discontinued';
+  description: string;
+  longDescription: string;
+  aeoBlock: string;
+  specs: {
+    emptyWeightKg: number | null;
+    emptyWeightLbs: number | null;
+    mtowKg: number | null;
+    mtowLbs: number | null;
+    tankLiters: number | null;
+    tankGallons: number | null;
+    granularCapacityLiters: number | null;
+    granularCapacityKg: number | null;
+    swathWidthMeters: string | null;
+    swathWidthFeet: string | null;
+    maxFlowRateLMin: string | null;
+    battery: string | null;
+    batteryWh: number | null;
+    chargeTimeMin: string | null;
+    maxWindMs: number | null;
+    maxWindMph: number | null;
+    ipRating: string | null;
+  };
+  msrpUsd: string;
+  usDealerPresence: string;
+  bestFor: string;
+  authorityLinks: { label: string; url: string }[];
+  faqs: { question: string; answer: string }[];
+  lastReviewedAt: string;
 }
 
 export interface ServiceDefinition {
