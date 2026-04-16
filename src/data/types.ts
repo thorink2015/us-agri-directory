@@ -151,7 +151,7 @@ export interface Region {
   aeoBlock: string;
   priceRangeUsd: string;
   primaryCrops: string[];
-  sprayWindows: { crop: string; months: number[]; stage: string }[];
+  sprayWindows: { crop: string; months: string; stage: string }[];
   keyInsights: string[];
   authorityLinks: { label: string; url: string }[];
   faqs: { question: string; answer: string }[];
