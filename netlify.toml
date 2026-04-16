@@ -40,8 +40,8 @@
 
 # www → non-www redirect (enforce canonical domain)
 [[redirects]]
-  from = "https://www.terradron.ro/*"
-  to = "https://terradron.ro/:splat"
+  from = "https://www.agdronedirectory.com/*"
+  to = "https://agdronedirectory.com/:splat"
   status = 301
   force = true
 
