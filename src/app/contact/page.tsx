@@ -1,57 +1,54 @@
 import { Metadata } from 'next';
-import { Mail, MessageSquare } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
-import Link from 'next/link';
+import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact | US Ag Drone Directory',
-  description: 'Contact the US Ag Drone Directory team with questions, suggestions, or to add or update a listing.',
+  description:
+    'Get in touch with US Ag Drone Directory — submit your listing, ask a question, or send us feedback.',
   alternates: { canonical: '/contact' },
 };
 
 export default function ContactPage() {
   return (
-    <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: 'Contact' }]} />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-3">Contact</h1>
-      <p className="text-gray-600 mb-8">
-        Have a question or suggestion? Reach us by email.
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">Contact Us</h1>
+      <p className="text-gray-600 mb-10">
+        Use the forms below to submit your listing or to get in touch with our team.
       </p>
 
-      <div className="space-y-4 mb-8">
-        <div className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
-          <Mail className="w-6 h-6 text-green-600 flex-shrink-0" />
-          <div>
-            <div className="font-semibold text-gray-900 mb-1">General inquiries</div>
-            <a href="mailto:contact@agdronedirectory.com" className="text-green-700 hover:underline text-sm">
-              contact@agdronedirectory.com
-            </a>
-          </div>
-        </div>
+      <div className="grid grid-cols-1 gap-10">
 
-        <div className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl">
-          <MessageSquare className="w-6 h-6 text-green-600 flex-shrink-0" />
-          <div>
-            <div className="font-semibold text-gray-900 mb-1">Add or update a listing</div>
-            <p className="text-sm text-gray-600 mb-2">
-              If you&apos;re an operator or have corrections to an existing listing, use the dedicated form.
+        {/* Submit to directory */}
+        <section className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <div className="mb-5">
+            <span className="inline-block text-xs font-semibold text-green-700 bg-green-50 border border-green-200 px-2.5 py-1 rounded-full mb-2">
+              For operators
+            </span>
+            <h2 className="text-xl font-bold text-gray-900">Submit to the Directory</h2>
+            <p className="text-sm text-gray-600 mt-1">
+              Are you a certified ag drone operator? Get listed for free. We review and publish within 48 hours.
             </p>
-            <Link
-              href="/list-your-business"
-              className="text-sm text-green-700 font-medium hover:underline"
-            >
-              Operator listing form →
-            </Link>
           </div>
-        </div>
-      </div>
+          <ContactForm type="listing" />
+        </section>
 
-      <div className="bg-gray-50 border border-gray-200 rounded-xl p-5">
-        <h2 className="font-semibold text-gray-900 mb-2">Response time</h2>
-        <p className="text-sm text-gray-600">
-          We respond to emails within 48 business hours. New listing submissions are reviewed and published within the same window.
-        </p>
+        {/* General contact */}
+        <section className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <div className="mb-5">
+            <span className="inline-block text-xs font-semibold text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-1 rounded-full mb-2">
+              General
+            </span>
+            <h2 className="text-xl font-bold text-gray-900">Send Us a Message</h2>
+            <p className="text-sm text-gray-600 mt-1">
+              Questions, corrections, partnerships, or feedback — we respond within 48 business hours.
+            </p>
+          </div>
+          <ContactForm type="contact" />
+        </section>
+
       </div>
     </div>
   );

@@ -2,12 +2,32 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Plane, ChevronDown } from 'lucide-react';
+import { Plane, ChevronDown, Send } from 'lucide-react';
 import { counties } from '@/data/counties';
 import { AUTHOR, SITE } from '@/data/author';
 
+const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
+
 export default function Footer() {
   const [showAll, setShowAll] = useState(false);
+  const [subscribed, setSubscribed] = useState(false);
+  const [subLoading, setSubLoading] = useState(false);
+
+  async function handleSubscribe(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubLoading(true);
+    const data = Object.fromEntries(new FormData(e.currentTarget));
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ ...data, _subject: 'Newsletter subscription' }),
+      });
+      if (res.ok) setSubscribed(true);
+    } finally {
+      setSubLoading(false);
+    }
+  }
 
   return (
     <footer className="bg-green-900 text-white mt-16">
@@ -67,6 +87,37 @@ export default function Footer() {
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
             </ul>
+          </div>
+        </div>
+
+        {/* Newsletter subscribe */}
+        <div className="border-t border-green-800 pt-8 pb-6 mb-0">
+          <div className="max-w-lg">
+            <h3 className="font-semibold text-white mb-1">Stay updated</h3>
+            <p className="text-sm text-green-300 mb-3">
+              New operators, pricing updates, and FAA regulatory changes — delivered to your inbox.
+            </p>
+            {subscribed ? (
+              <p className="text-sm text-yellow-400 font-medium">You&apos;re subscribed. Thank you!</p>
+            ) : (
+              <form onSubmit={handleSubscribe} className="flex gap-2">
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="your@email.com"
+                  className="flex-1 px-3 py-2 rounded-lg text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 min-w-0"
+                />
+                <button
+                  type="submit"
+                  disabled={subLoading}
+                  className="flex items-center gap-1.5 px-4 py-2 bg-yellow-400 text-gray-900 font-semibold text-sm rounded-lg hover:bg-yellow-300 transition-colors disabled:opacity-60 whitespace-nowrap"
+                >
+                  <Send className="w-3.5 h-3.5" />
+                  {subLoading ? 'Sending…' : 'Subscribe'}
+                </button>
+              </form>
+            )}
           </div>
         </div>
 
