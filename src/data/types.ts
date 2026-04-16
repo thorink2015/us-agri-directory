@@ -141,6 +141,23 @@ export interface DroneModel {
   lastReviewedAt: string;
 }
 
+export interface Region {
+  slug: string;
+  name: string;
+  states: string[];
+  stateSlugs: string[];
+  description: string;
+  longDescription: string;
+  aeoBlock: string;
+  priceRangeUsd: string;
+  primaryCrops: string[];
+  sprayWindows: { crop: string; months: number[]; stage: string }[];
+  keyInsights: string[];
+  authorityLinks: { label: string; url: string }[];
+  faqs: { question: string; answer: string }[];
+  lastReviewedAt: string;
+}
+
 export interface ServiceDefinition {
   slug: string;
   name: string;
