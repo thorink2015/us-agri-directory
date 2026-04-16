@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { Search, Filter, X, ChevronDown, ChevronUp, SlidersHorizontal, ArrowUpDown } from 'lucide-react';
 import { Operator, SERVICE_LABELS, ServiceType } from '@/data/types';
 import { County } from '@/data/types';
-import { DRONE_NAME_MAP } from '@/data/drone-models';
+import { DRONE_NAME_MAP } from '@/data/drone-model';
 import OperatorCard from '@/components/operators/OperatorCard';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 

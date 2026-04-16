@@ -3,7 +3,7 @@ import { operators } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
 import { services } from '@/data/services';
-import { droneModels } from '@/data/drone-models';
+import { drones as droneModels } from '@/data/drone-model';
 import { regions } from '@/data/regions';
 import { SERVICE_LABELS } from '@/data/types';
 

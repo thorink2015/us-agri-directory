@@ -10,7 +10,7 @@ import {
 import { operators, getOperatorBySlug } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { CROP_NAME_MAP } from '@/data/crops';
-import { DRONE_NAME_MAP } from '@/data/drone-models';
+import { DRONE_NAME_MAP } from '@/data/drone-model';
 import { SERVICE_LABELS } from '@/data/types';
 import { formatPrice, getStateAbbr } from '@/lib/utils';
 import { buildOperatorMetadata } from '@/lib/seo';
