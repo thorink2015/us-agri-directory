@@ -53,7 +53,7 @@ export default function ContactForm({ type }: Props) {
         <p className="text-sm text-gray-600">
           {type === 'contact'
             ? "We'll respond within 48 business hours."
-            : 'We'll review and publish your listing within 48 hours.'}
+            : "We'll review and publish your listing within 48 hours."}
         </p>
       </div>
     );
