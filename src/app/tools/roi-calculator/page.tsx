@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ag Drone Buy vs. Hire ROI Calculator',
     description: 'Find your drone investment break-even point with real 2026 US market rates.',
-    url: 'https://usagdronedirectory.com/tools/roi-calculator',
+    url: 'https://agdronedirectory.com/tools/roi-calculator',
   },
 };
 
@@ -56,9 +56,9 @@ export default function ROICalculatorPage() {
             applicationCategory: 'BusinessApplication',
             operatingSystem: 'Web',
             description: 'Calculate break-even and annual ROI for buying an agricultural drone versus hiring an operator. Uses 2026 US market rates.',
-            url: 'https://usagdronedirectory.com/tools/roi-calculator',
+            url: 'https://agdronedirectory.com/tools/roi-calculator',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-            publisher: { '@type': 'Organization', name: 'US Ag Drone Directory', url: 'https://usagdronedirectory.com' },
+            publisher: { '@type': 'Organization', name: 'US Ag Drone Directory', url: 'https://agdronedirectory.com' },
           }),
         }}
       />
@@ -69,9 +69,9 @@ export default function ROICalculatorPage() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-              { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://usagdronedirectory.com/tools' },
-              { '@type': 'ListItem', position: 3, name: 'ROI Calculator', item: 'https://usagdronedirectory.com/tools/roi-calculator' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://agdronedirectory.com' },
+              { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://agdronedirectory.com/tools' },
+              { '@type': 'ListItem', position: 3, name: 'ROI Calculator', item: 'https://agdronedirectory.com/tools/roi-calculator' },
             ],
           }),
         }}

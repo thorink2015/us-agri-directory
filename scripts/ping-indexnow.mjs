@@ -13,12 +13,12 @@
  * GitHub Action / serverless function invoking this script.
  *
  * Key verification: IndexNow serves expects the key to be hosted at
- * https://usagdronedirectory.com/{KEY}.txt — already in /public.
+ * https://agdronedirectory.com/{KEY}.txt — already in /public.
  *
  * Docs: https://www.indexnow.org/documentation
  */
 
-const HOST = 'usagdronedirectory.com';
+const HOST = 'agdronedirectory.com';
 const KEY = 'fda036483ac24950a15f668bc047a4bf';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const SITEMAP_URL = `https://${HOST}/sitemap.xml`;

@@ -75,7 +75,7 @@ This is non-negotiable. Documented in `_memory/known-issues.md`.
 See `_memory/project-facts.md` for the authoritative version. Quick
 reference:
 
-- **Site:** US Ag Drone Directory — `https://usagdronedirectory.com`
+- **Site:** US Ag Drone Directory — `https://agdronedirectory.com`
 - **Author:** Eugen (founder + editor). Canonical identity in `src/data/author.ts`
 - **Stack:** Next.js 14 App Router, TypeScript, Tailwind, Netlify
 - **Data:** TypeScript in `src/data/` — no database
