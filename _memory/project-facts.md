@@ -4,7 +4,7 @@
 > facts are learned. Keep entries short; link to source files instead
 > of duplicating content.
 
-Last updated: 2026-04-15
+Last updated: 2026-04-16
 
 ## Project identity
 
@@ -34,6 +34,14 @@ Last updated: 2026-04-15
   fallback until the file is uploaded.
 - **Public email:** `eugen@usagdronedirectory.com` (unconfirmed — Eugen
   should verify this address is actually monitored before launch)
+
+## Cloudflare account
+
+- **Zone ID:** `4ef2d92cf7fc7fc3a77fab5f02fd6d9d`
+- **Account ID:** `6e0bb81b1001dd62f0acd077858aa822`
+- **API Token & Origin CA Key:** stored in `.env.cloudflare.local` (gitignored — never commit)
+- **New domain being set up:** `agdronedirectory.com` (2026-04-16 — user asked to verify CF settings)
+- **Audit script:** `scripts/check-cloudflare.sh` — reads credentials from `.env.cloudflare.local`
 
 ## Environment variables (set in Netlify dashboard)
 
