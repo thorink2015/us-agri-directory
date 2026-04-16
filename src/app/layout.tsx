@@ -58,7 +58,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+        )}
         <link rel="dns-prefetch" href="https://formspree.io" />
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50">

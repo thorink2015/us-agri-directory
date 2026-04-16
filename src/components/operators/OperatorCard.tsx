@@ -102,7 +102,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
             <div className="text-sm font-bold text-green-700">
               {operator.priceMinUsd
                 ? formatPrice(operator.priceMinUsd, operator.priceMaxUsd)
-                : <span className="text-gray-400 font-normal text-xs">Price on request</span>}
+                : <span className="text-gray-500 font-normal text-xs">Price on request</span>}
             </div>
             <div className="flex items-center gap-2 text-[11px] text-gray-500">
               {operator.haTreated && operator.haTreated >= 1000 && (
@@ -121,7 +121,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
                 </span>
               )}
               {(operator.certFAAPart107 || operator.certFAAPart137) && (
-                <span title="FAA Certified" className="text-green-600 font-semibold text-[10px]">
+                <span title="FAA Certified" className="text-green-800 font-semibold text-[10px]">
                   FAA
                 </span>
               )}
