@@ -28,7 +28,7 @@ module.exports = {
       console.log('[indexnow-plugin] Done.');
     } catch (err) {
       // Warn but don't fail the deploy if IndexNow ping fails
-      utils.build.failPlugin('IndexNow ping failed — check the error above.', { error: err });
+      console.warn('[indexnow-plugin] IndexNow ping failed (deploy still succeeded):', err.message);
     }
   },
 };
