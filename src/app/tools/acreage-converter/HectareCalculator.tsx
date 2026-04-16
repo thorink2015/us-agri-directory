@@ -1,44 +1,59 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Ruler } from 'lucide-react';
 
-type Unit = 'ha' | 'ari' | 'm2' | 'km2' | 'acres' | 'pogoane';
+type Unit = 'acres' | 'hectares' | 'sqft' | 'sqmeters' | 'sections';
 
-const TO_M2: Record<Unit, number> = {
-  ha: 10000,
-  ari: 100,
-  m2: 1,
-  km2: 1_000_000,
-  acres: 4046.86,
-  pogoane: 5000,
+const TO_SQM: Record<Unit, number> = {
+  acres:    4046.8564224,
+  hectares: 10000,
+  sqft:     0.09290304,
+  sqmeters: 1,
+  sections: 2589988.110336, // 640 acres
 };
 
 const UNIT_LABELS: Record<Unit, string> = {
-  ha: 'Hectare (ha)',
-  ari: 'Ari (a)',
-  m2: 'Metri pătrați (m²)',
-  km2: 'Kilometri pătrați (km²)',
-  acres: 'Acri',
-  pogoane: 'Pogoane (RO)',
+  acres:    'Acres',
+  hectares: 'Hectares (ha)',
+  sqft:     'Square Feet (sq ft)',
+  sqmeters: 'Square Meters (m²)',
+  sections: 'Sections (640 ac)',
 };
 
-export default function HectareCalculator() {
-  const [value, setValue] = useState(1);
-  const [unit, setUnit] = useState<Unit>('ha');
+const UNITS: Unit[] = ['acres', 'hectares', 'sqft', 'sqmeters', 'sections'];
 
-  const m2 = value * TO_M2[unit];
+function formatNum(n: number): string {
+  if (n >= 1_000_000) return n.toLocaleString('en-US', { maximumFractionDigits: 2 });
+  if (n >= 1000)      return n.toLocaleString('en-US', { maximumFractionDigits: 3 });
+  if (n >= 1)         return n.toLocaleString('en-US', { maximumFractionDigits: 4 });
+  return n.toLocaleString('en-US', { maximumFractionDigits: 6 });
+}
 
-  const conversions: { unit: Unit; value: number }[] = (
-    ['ha', 'ari', 'm2', 'km2', 'acres', 'pogoane'] as Unit[]
-  )
-    .filter((u) => u !== unit)
-    .map((u) => ({ unit: u, value: m2 / TO_M2[u] }));
+export default function AcreageConverter() {
+  const [value, setValue] = useState(160);
+  const [inputStr, setInputStr] = useState('160');
+  const [fromUnit, setFromUnit] = useState<Unit>('acres');
+  const [toUnit, setToUnit] = useState<Unit>('hectares');
 
-  function format(n: number) {
-    if (n >= 1000) return n.toLocaleString('ro', { maximumFractionDigits: 2 });
-    if (n >= 1) return n.toFixed(2);
-    return n.toFixed(4);
+  const sqm = useMemo(() => value * TO_SQM[fromUnit], [value, fromUnit]);
+
+  const allConversions = useMemo(
+    () =>
+      UNITS.filter((u) => u !== fromUnit).map((u) => ({
+        unit: u,
+        label: UNIT_LABELS[u],
+        value: sqm / TO_SQM[u],
+      })),
+    [sqm, fromUnit],
+  );
+
+  const primaryResult = useMemo(() => sqm / TO_SQM[toUnit], [sqm, toUnit]);
+
+  function handleValueInput(val: string) {
+    setInputStr(val);
+    const n = parseFloat(val);
+    if (!isNaN(n) && n >= 0) setValue(n);
   }
 
   return (
@@ -47,44 +62,70 @@ export default function HectareCalculator() {
         <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
           <Ruler className="w-5 h-5 text-blue-700" />
         </div>
-        <h2 className="font-bold text-gray-900">Conversie suprafețe</h2>
+        <h2 className="font-bold text-gray-900 text-lg">Farm Acreage Converter</h2>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        {/* Value input */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Valoare</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Value</label>
           <input
             type="number"
-            value={value}
-            onChange={(e) => setValue(Math.max(0, Number(e.target.value) || 0))}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-100 focus:outline-none"
+            value={inputStr}
+            min={0}
+            onChange={(e) => handleValueInput(e.target.value)}
+            className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-100 focus:outline-none"
           />
         </div>
+
+        {/* From unit */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Unitate</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">From</label>
           <select
-            value={unit}
-            onChange={(e) => setUnit(e.target.value as Unit)}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-100 focus:outline-none"
+            value={fromUnit}
+            onChange={(e) => setFromUnit(e.target.value as Unit)}
+            className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-100 focus:outline-none"
           >
-            {(Object.keys(UNIT_LABELS) as Unit[]).map((u) => (
-              <option key={u} value={u}>
-                {UNIT_LABELS[u]}
-              </option>
+            {UNITS.map((u) => (
+              <option key={u} value={u}>{UNIT_LABELS[u]}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* To unit */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">To</label>
+          <select
+            value={toUnit}
+            onChange={(e) => setToUnit(e.target.value as Unit)}
+            className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-100 focus:outline-none"
+          >
+            {UNITS.filter((u) => u !== fromUnit).map((u) => (
+              <option key={u} value={u}>{UNIT_LABELS[u]}</option>
             ))}
           </select>
         </div>
       </div>
 
+      {/* Primary result */}
       <div className="bg-gradient-to-br from-blue-50 to-white border border-blue-200 rounded-xl p-5 mb-4">
-        <div className="text-xs text-gray-600 uppercase tracking-wide mb-1">
-          {value} {UNIT_LABELS[unit]} echivalează cu:
+        <div className="text-xs text-gray-500 uppercase tracking-wide mb-1">
+          {formatNum(value)} {UNIT_LABELS[fromUnit]} =
         </div>
-        <div className="grid grid-cols-2 gap-3 mt-3">
-          {conversions.map((c) => (
+        <div className="text-3xl font-bold text-blue-700">
+          {formatNum(primaryResult)}
+        </div>
+        <div className="text-sm text-gray-600 mt-0.5">{UNIT_LABELS[toUnit]}</div>
+      </div>
+
+      {/* All conversions */}
+      <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">All equivalents</div>
+        <div className="grid grid-cols-2 gap-3">
+          {allConversions.map((c) => (
             <div key={c.unit} className="flex flex-col">
-              <span className="text-xs text-gray-500">{UNIT_LABELS[c.unit]}</span>
-              <span className="font-bold text-gray-900">{format(c.value)}</span>
+              <span className="text-xs text-gray-500">{c.label}</span>
+              <span className="font-bold text-gray-900 text-sm">{formatNum(c.value)}</span>
             </div>
           ))}
         </div>
