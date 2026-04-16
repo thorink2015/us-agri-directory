@@ -12,14 +12,14 @@
  * Or integrate into Netlify post-deploy via a Build Hook that triggers a
  * GitHub Action / serverless function invoking this script.
  *
- * Key verification: IndexNow serves expects the key to be hosted at
- * https://agdronedirectory.com/{KEY}.txt — already in /public.
+ * Key verification: IndexNow expects the key to be hosted at
+ * https://agdronedirectory.com/199aa73a01c74f6786948b45aaec2d17.txt — already in /public.
  *
  * Docs: https://www.indexnow.org/documentation
  */
 
 const HOST = 'agdronedirectory.com';
-const KEY = 'fda036483ac24950a15f668bc047a4bf';
+const KEY = '199aa73a01c74f6786948b45aaec2d17';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const SITEMAP_URL = `https://${HOST}/sitemap.xml`;
 const ENDPOINT = 'https://api.indexnow.org/IndexNow';
