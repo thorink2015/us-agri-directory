@@ -14,17 +14,21 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  metadataBase: new URL('https://usagdronedirectory.com'),
+  metadataBase: new URL('https://agdronedirectory.com'),
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
     other: {
       'msvalidate.01': process.env.NEXT_PUBLIC_BING_VERIFICATION ?? '',
+      ...(process.env.NEXT_PUBLIC_BAIDU_VERIFICATION
+        ? { 'baidu-site-verification': process.env.NEXT_PUBLIC_BAIDU_VERIFICATION }
+        : {}),
     },
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://usagdronedirectory.com',
+    url: 'https://agdronedirectory.com',
     siteName: 'US Ag Drone Directory',
     title: 'US Agricultural Drone Directory | Find Verified Drone Operators',
     description:
