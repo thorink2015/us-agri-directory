@@ -8,7 +8,7 @@ export const crops: Crop[] = [
     description:
       'Corn covers over 90 million US acres. Drone fungicide at the VT to R1 tassel stage is the single largest use case for agricultural drones in America.',
     longDescription:
-      'Corn is the largest crop in the United States at over 90 million acres, and drone fungicide application at the VT/R1 tassel stage is the number one use case for agricultural drones in America. Once corn exceeds six to eight feet, ground sprayers cannot clear the canopy without wheel-track damage that costs 3 to 6 bushels per acre in crushed rows. Drones solve this cleanly because they fly 8 to 15 feet above the canopy and never touch the ground. University trials are decisive on efficacy. Beck\'s Practical Farm Research across Iowa, Indiana, and Illinois showed drone-applied fungicide at 2 to 3 gallons per acre matched ground rig results at 15 to 20 gallons per acre, with an average yield response of 5 to 8 bushels over untreated corn. Iowa State and Purdue Extension confirm the finding for tar spot, gray leaf spot, and southern rust pressure years. Drone operators in the Corn Belt treat 300 to 600 acres per drone per day during the peak two-week VT/R1 window in late July, and most book up four to six weeks ahead. Tank mixes combining a strobilurin fungicide with an insecticide for western corn rootworm beetle or western bean cutworm are standard on high-value seed corn and stacked-trait fields.',
+      'Corn is the largest crop in the United States at over 90 million acres, and drone fungicide application at the VT/R1 tassel stage is the number one use case for agricultural drones in America. Once corn exceeds six to eight feet, ground sprayers cannot clear the canopy without wheel-track damage that costs 3 to 6 bushels per acre in crushed rows. Drones solve this cleanly because they fly 8 to 15 feet above the canopy and never touch the ground. University trials are decisive on efficacy. Beck\'s Practical Farm Research across Iowa, Indiana, and Illinois showed drone-applied fungicide at 2 to 3 gallons per acre matched ground rig results at 15 to 20 gallons per acre, with an average yield response of 5 to 8 bushels over untreated corn. Iowa State and Purdue Extension confirm the finding for tar spot, gray leaf spot, and southern rust pressure years. Drone operators in the Corn Belt treat 300 to 600 acres per drone per day on DJI Agras T50 or Hylio AG-272 class machines during the peak two-week VT/R1 window in late July, and most book up four to six weeks ahead. Tank mixes combining a strobilurin fungicide with an insecticide for western corn rootworm beetle or western bean cutworm are standard on high-value seed corn and stacked-trait fields.',
     aeoBlock:
       'Drone fungicide on corn costs $12 to $18 per acre and is the single largest use case for agricultural drones in America, covering over 90 million acres annually. The critical application window is the VT to R1 tassel stage in July and August, when corn is too tall for ground rigs and trampling damage from tractor passes costs 3 to 6 bushels per acre. University trials from Beck\'s Hybrids and Iowa State Extension show drone-applied fungicide at 2 to 3 gallons per acre matches ground rig efficacy at 15 to 20 gallons per acre, with an average yield response of 5 to 8 bushels per acre.',
     priceMinUsd: 12,
@@ -57,6 +57,11 @@ export const crops: Crop[] = [
         answer:
           'Most operators charge $12 to $18 per acre for application only, with the farmer supplying the chemical. Rates are lowest in dense Corn Belt counties where operator competition is strongest, and highest in fringe areas with long travel distances. Large-field discounts are common above 200 to 500 acres.',
       },
+      {
+        question: 'How far ahead should I book a drone operator for corn in my state?',
+        answer:
+          'Corn Belt operators book out 4 to 6 weeks before the VT/R1 window. Call by early June for late-July slots. Iowa, Illinois, and Indiana fill fastest; Ohio and Michigan have more late availability.',
+      },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -67,7 +72,7 @@ export const crops: Crop[] = [
     description:
       'Soybeans cover over 87 million US acres. Drone applications target white mold, frogeye leaf spot, and soybean aphids at the R2 to R3 growth stage.',
     longDescription:
-      'Soybeans cover more than 87 million US acres and are the second-largest drone spray market in America. The primary target is the R2 to R3 reproductive window in July and August, when canopy closure and soybean aphid, spider mite, and frogeye leaf spot pressure peak across the Corn Belt, Mid-South, and Mid-Atlantic. Purdue University trials confirmed drone applications at 2 and 5 gallons per acre were equally effective as ground equipment for frogeye leaf spot reduction, and University of Illinois Extension reports similar equivalence for white mold management in the northern soybean belt. The biggest economic argument for drone application on soybeans is avoiding the compaction and lodging damage caused by late-season ground rig passes, which University of Minnesota research puts at 4 to 6 percent yield loss on tall R3-stage canopies. Drone operators treating soybeans typically cover 250 to 500 acres per drone per day, with many running tank mixes of fungicide plus insecticide. Cover crop overseeding into standing soybeans in September and October has also become a major secondary use case, especially in states with USDA NRCS EQIP cost-share deadlines for cereal rye establishment.',
+      'Soybeans cover more than 87 million US acres and are the second-largest drone spray market in America. The primary target is the R2 to R3 reproductive window in July and August, when canopy closure and soybean aphid, spider mite, and frogeye leaf spot pressure peak across the Corn Belt, Mid-South, and Mid-Atlantic. Purdue University trials confirmed drone applications at 2 and 5 gallons per acre were equally effective as ground equipment for frogeye leaf spot reduction, and University of Illinois Extension reports similar equivalence for white mold management in the northern soybean belt. The biggest economic argument for drone application on soybeans is avoiding the compaction and lodging damage caused by late-season ground rig passes, which University of Minnesota research puts at 4 to 6 percent yield loss on tall R3-stage canopies. Drone operators treating soybeans typically cover 250 to 500 acres per drone per day on T40 or T50 class drones, with many running tank mixes of fungicide plus insecticide. Cover crop overseeding into standing soybeans in September and October has also become a major secondary use case, especially in states with USDA NRCS EQIP cost-share deadlines for cereal rye establishment.',
     aeoBlock:
       'Drone fungicide on soybeans costs $12 to $18 per acre and targets white mold, frogeye leaf spot, and soybean aphids at the R2 to R3 growth stage across 87 million US acres. Purdue University trials confirmed drone applications at 2 and 5 gallons per acre were equally effective as ground equipment for frogeye leaf spot reduction. Eliminating ground rig passes prevents the 4 to 6 percent yield loss from soil compaction and plant lodging in mature canopy.',
     priceMinUsd: 12,
@@ -116,6 +121,11 @@ export const crops: Crop[] = [
         answer:
           'Yes, and this is a fast-growing secondary use. Operators broadcast cereal rye, crimson clover, or ryegrass into R6 to R7 soybeans in late September and October, giving the cover crop 3 to 4 extra weeks of establishment before harvest frees the ground. USDA NRCS EQIP cost-share under Practice Standard 340 often covers 50 to 70 percent of the seeding cost.',
       },
+      {
+        question: 'How far ahead should I book a drone operator for soybeans in my state?',
+        answer:
+          'R2/R3 in mid-July books out 2 to 4 weeks ahead. Call in late June to secure your slot. Tight-window states like Iowa, Illinois, and Indiana book earliest; fringe states have more flexibility.',
+      },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -126,7 +136,7 @@ export const crops: Crop[] = [
     description:
       'Winter and spring wheat total about 45 million US acres. Drone fungicide at the T3 heading stage targets Fusarium head blight, stripe rust, and leaf rust.',
     longDescription:
-      'Winter and spring wheat total approximately 45 million US acres annually, with the Great Plains (Kansas, Oklahoma, Nebraska, North Dakota, South Dakota) and Pacific Northwest (Washington, Idaho) as the primary markets. The critical drone application window is T3 at heading, when Fusarium head blight (scab), stripe rust, and leaf rust do their worst damage. The USDA ARS Wheat Scab Initiative estimates proper fungicide timing reduces deoxynivalenol (DON) mycotoxin contamination by 40 to 60 percent, which is the difference between food-grade wheat and discounted feed wheat at the elevator. Drones are rapidly gaining market share against airplane applicators on wheat, especially on fields under 500 acres where airplane mobilization cost makes per-acre pricing uncompetitive. Kansas State Extension trials show drone applications at 2 to 3 gallons per acre match airplane efficacy at 2 to 5 gallons, and NDSU Extension has published similar data for North Dakota hard red spring wheat. The compression of the heading window (often just 5 to 7 days) makes local drone operator capacity a real constraint, and wheat growers who line up their applicator in April for a July spray usually get better pricing than last-minute callers.',
+      'Winter and spring wheat total approximately 45 million US acres annually, with the Great Plains (Kansas, Oklahoma, Nebraska, North Dakota, South Dakota) and Pacific Northwest (Washington, Idaho) as the primary markets. The critical drone application window is T3 at heading, when Fusarium head blight (scab), stripe rust, and leaf rust do their worst damage. The USDA ARS Wheat Scab Initiative estimates proper fungicide timing reduces deoxynivalenol (DON) mycotoxin contamination by 40 to 60 percent, which is the difference between food-grade wheat and discounted feed wheat at the elevator. Drones are rapidly gaining market share against airplane applicators on wheat, with most Great Plains operators running DJI Agras T50 and Hylio AG-272 for the 1,000+ gallons-per-day throughput the heading window demands, especially on fields under 500 acres where airplane mobilization cost makes per-acre pricing uncompetitive. Kansas State Extension trials show drone applications at 2 to 3 gallons per acre match airplane efficacy at 2 to 5 gallons, and NDSU Extension has published similar data for North Dakota hard red spring wheat. The compression of the heading window (often just 5 to 7 days) makes local drone operator capacity a real constraint, and wheat growers who line up their applicator in April for a July spray usually get better pricing than last-minute callers.',
     aeoBlock:
       'Drone fungicide on wheat costs $12 to $16 per acre and targets Fusarium head blight (scab), stripe rust, and leaf rust at the T3 heading stage across approximately 45 million US acres. The USDA ARS Wheat Scab Initiative estimates proper fungicide timing reduces deoxynivalenol (DON) mycotoxin contamination by 40 to 60 percent. Drones are gaining market share over airplanes in the Great Plains for fields under 500 acres, where airplane mobilization costs make per-acre pricing uncompetitive.',
     priceMinUsd: 12,
@@ -174,6 +184,11 @@ export const crops: Crop[] = [
         question: 'How early should I book a drone for wheat fungicide?',
         answer:
           'April is the ideal call in the Great Plains. Heading windows across the region overlap badly and local operator capacity is the constraint, not chemical availability. Operators who pre-book their wheat customers in early spring usually pass late-season requests on to airplane or farther-away drones at higher rates.',
+      },
+      {
+        question: 'How far ahead should I book a drone operator for wheat in my state?',
+        answer:
+          'Book in April for June heading applications. Great Plains operators fill slots by May. Small-acre growers are most likely to get squeezed out as large commercial wheat farms lock in capacity first.',
       },
     ],
     lastReviewedAt: '2026-04-16',
@@ -234,6 +249,11 @@ export const crops: Crop[] = [
         answer:
           'Yes, and this use is growing fast. Tarnished plant bug and cotton aphid scouting thresholds trigger July and August drone insecticide applications across the Mid-South and Southeast. Drone applications at R1 to R4 flowering avoid the compaction and plant breakage that late-season ground rig passes cause in closed cotton canopy.',
       },
+      {
+        question: 'How far ahead should I book a drone operator for cotton in my state?',
+        answer:
+          'Book in August for September and October defoliant runs. Mid-South capacity is the tightest in the country during defoliation season, when cotton, soybean pre-harvest, and cover crop seeding all compete for the same drones.',
+      },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -244,7 +264,7 @@ export const crops: Crop[] = [
     description:
       'Rice covers about 2.5 million US acres. Drone spraying is uniquely effective because flooded paddy fields make ground equipment impractical for most of the season.',
     longDescription:
-      'Rice is grown on approximately 2.5 million US acres in Arkansas, California, Louisiana, Mississippi, and Missouri. It is the single highest-density drone spray crop in America, because the flooded paddy conditions that define rice production make ground equipment impractical from flood-up through drain. Arkansas alone produces 1.2 million acres of rice and is effectively 100 percent aerial-treated for heading-stage fungicide. The University of Arkansas Extension reports 7 percent average yield improvement from fungicide applications timed at R4 to R6 for rice blast and sheath blight control. Drones have rapidly taken share from airplanes in rice over the past three years because they fly lower, produce less drift into sensitive neighboring soybeans, and cover small odd-shaped levee fields where airplane turnarounds are inefficient. LSU AgCenter trials in Louisiana also show drone herbicide applications for barnyardgrass control matching ground-rig efficacy pre-flood. Operators serving the Arkansas and Mississippi rice market commonly run fleets of 3 to 8 drones and treat 800 to 1,200 acres per day during the July and August peak heading window. Cal Poly research confirms similar performance for the California Sacramento Valley rice market, which runs a slightly later August and September calendar.',
+      'Rice is grown on approximately 2.5 million US acres in Arkansas, California, Louisiana, Mississippi, and Missouri. It is the single highest-density drone spray crop in America, because the flooded paddy conditions that define rice production make ground equipment impractical from flood-up through drain. Arkansas alone produces 1.2 million acres of rice and is effectively 100 percent aerial-treated for heading-stage fungicide. The University of Arkansas Extension reports 7 percent average yield improvement from fungicide applications timed at R4 to R6 for rice blast and sheath blight control. Drones have rapidly taken share from airplanes in rice over the past three years because they fly lower, produce less drift into sensitive neighboring soybeans, and cover small odd-shaped levee fields where airplane turnarounds are inefficient. LSU AgCenter trials in Louisiana also show drone herbicide applications for barnyardgrass control matching ground-rig efficacy pre-flood. Operators serving the Arkansas and Mississippi rice market commonly run fleets of 3 to 8 DJI Agras T50 drones and treat 800 to 1,200 acres per day during the July and August peak heading window. Cal Poly research confirms similar performance for the California Sacramento Valley rice market, which runs a slightly later August and September calendar.',
     aeoBlock:
       'Drone spraying on rice costs $14 to $22 per acre and is uniquely effective on the approximately 2.5 million acres grown in Arkansas, California, Louisiana, and Mississippi, where flooded paddy conditions make ground equipment impractical for most of the season. Fungicide applications for rice blast and sheath blight at heading (approximately R4 to R6 stage) show 7 percent average yield improvement in University of Arkansas Extension trials. Drones fly directly over standing water with no field contact, eliminating the primary limitation of all competing application methods.',
     priceMinUsd: 14,
@@ -293,6 +313,11 @@ export const crops: Crop[] = [
         answer:
           'Yes, in every rice-producing state. Arkansas requires a commercial pesticide applicator license plus an aerial sub-classification. California requires the Unmanned Pest Control Aircraft Pilot Certificate plus a QAC or QAL. Louisiana and Mississippi have slightly lighter requirements but still require an aerial applicator category endorsement. Your drone operator handles their own licensing, but you should ask to see certificates before booking.',
       },
+      {
+        question: 'How far ahead should I book a drone operator for rice in my state?',
+        answer:
+          'Book by May for July and August heading applications. Arkansas Grand Prairie operators fill first and often have no capacity for late callers by June. California rice has a later August to September window but books similarly fast given the smaller number of licensed operators.',
+      },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -303,7 +328,7 @@ export const crops: Crop[] = [
     description:
       'Vineyards cover roughly 1.2 million US acres. Drone spraying handles steep hillside applications where tractors cannot safely operate.',
     longDescription:
-      'Wine grape vineyards cover approximately 1.2 million US acres, concentrated in California (900,000 acres), Washington, Oregon, and New York. Drones have become the preferred spray platform on hillside blocks with slopes over 15 percent, where airblast sprayers either cannot operate safely or produce runoff that violates local water-quality rules. A typical California wine vineyard receives 8 to 12 fungicide passes per season for powdery mildew, downy mildew, and botrytis control, making per-acre spray spend the largest single chemical cost in grape production. Rotor downwash from a commercial spray drone penetrates the vine canopy and covers both upper and lower leaf surfaces, addressing the single biggest weakness of over-row airblast equipment. UC Davis Cooperative Extension research reports drone-applied fungicide on hillside vineyards reduces chemical runoff by 30 to 40 percent compared to conventional airblast sprayers. Per-acre rates are higher than row crops ($18 to $30 per acre) because hillside terrain, multiple passes per season, and required carrier volumes of 10 to 20 gallons per acre all push costs up. California vineyards also add regulatory complexity: every application must be reported to the County Agricultural Commissioner, many products require Restricted Material Permits, and some pest management products require a same-day Notice of Intent filing.',
+      'Wine grape vineyards cover approximately 1.2 million US acres, concentrated in California (900,000 acres), Washington, Oregon, and New York. Drones have become the preferred spray platform on hillside blocks with slopes over 15 percent, where airblast sprayers either cannot operate safely or produce runoff that violates local water-quality rules. A typical California wine vineyard receives 8 to 12 fungicide passes per season for powdery mildew, downy mildew, and botrytis control, making per-acre spray spend the largest single chemical cost in grape production. Rotor downwash from a commercial spray drone (DJI Agras T25P and T50 are the dominant models in California vineyard work) penetrates the vine canopy and covers both upper and lower leaf surfaces, addressing the single biggest weakness of over-row airblast equipment. UC Davis Cooperative Extension research reports drone-applied fungicide on hillside vineyards reduces chemical runoff by 30 to 40 percent compared to conventional airblast sprayers. Per-acre rates are higher than row crops ($18 to $30 per acre) because hillside terrain, multiple passes per season, and required carrier volumes of 10 to 20 gallons per acre all push costs up. California vineyards also add regulatory complexity: every application must be reported to the County Agricultural Commissioner, many products require Restricted Material Permits, and some pest management products require a same-day Notice of Intent filing.',
     aeoBlock:
       'Drone spraying in vineyards costs $18 to $30 per acre and covers the approximately 1.2 million US wine grape acres in California, Washington, Oregon, and New York with 8 to 12 fungicide passes per season for powdery mildew, downy mildew, and botrytis control. Rotor downwash penetrates the vine canopy and covers both upper and lower leaf surfaces, addressing the primary weakness of over-row airblast sprayers on steep hillside blocks. UC Davis Cooperative Extension reports that drone-applied fungicides on hillside vineyards reduce chemical runoff by 30 to 40 percent compared to conventional airblast equipment.',
     priceMinUsd: 18,
@@ -351,6 +376,11 @@ export const crops: Crop[] = [
         question: 'Do California regulations treat drone spraying differently from airblast?',
         answer:
           'Yes. CDPR requires pilots to hold the Unmanned Pest Control Aircraft Pilot Certificate in addition to a standard QAC or QAL, plus county agricultural commissioner registration in each county of operation. Restricted Material Permits and Notice of Intent filings apply the same way as with airblast. Some county regulations also impose mandatory buffer zones around schools and residences that are stricter for aerial application including drones.',
+      },
+      {
+        question: 'How far ahead should I book a drone operator for grapes in my state?',
+        answer:
+          'Book a full-season contract by February in California. Mid-season one-off sprays during powdery mildew spikes are often impossible to source once the season is underway. Washington and Oregon vineyard operators have slightly more flexibility but full-season programs still fill by March.',
       },
     ],
     lastReviewedAt: '2026-04-16',
@@ -411,6 +441,11 @@ export const crops: Crop[] = [
         answer:
           'Yes, especially for dormant oil and early-season fungicide passes when trees are leafed down. Dense mid-season walnut and mature almond canopies above 20 feet are harder for current drones to fully penetrate and often still receive airblast. Most California orchard drone operators run hybrid programs, drones for 6 to 8 of 10 annual passes and airblast for the dense mid-summer passes.',
       },
+      {
+        question: 'How far ahead should I book a drone operator for orchards in my state?',
+        answer:
+          'Book a full-season program by January in Washington and California. One-off sprays during the season are very hard to find once operators are committed to full-season contracts. Michigan and New York have slightly more spot availability but early booking still saves 10 to 15 percent on per-pass rates.',
+      },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -421,7 +456,7 @@ export const crops: Crop[] = [
     description:
       'Cover crop seeding by drone is one of the fastest-growing ag drone applications in the Midwest, with roughly 15 million acres planted annually.',
     longDescription:
-      'Cover crop seeding by drone is the fastest-growing ag drone service in the United States. Approximately 15 million US acres are planted to cover crops annually, with the Corn Belt, Chesapeake Bay watershed, and California dominating adoption. Drones broadcast cereal rye, annual ryegrass, crimson clover, hairy vetch, oats, and radishes into standing corn and soybeans 2 to 6 weeks before harvest, giving seed the extra establishment time that post-harvest ground seeding does not provide. USDA NRCS Cover Crop Practice Standard 340 and EQIP program rules make drone seeding eligible for federal cost-share payments, reducing effective per-acre cost to $5 to $8 in many states. Penn State Extension, Iowa State, and Ohio State Extension have all published data showing drone-seeded cover crops establish 3 to 4 weeks earlier than equivalent post-harvest ground seeding. The most common failure mode is dry conditions after seeding, which delay germination until fall rains arrive, and modern operators use radar forecast and soil moisture data to time applications ahead of expected precipitation. Drone capacity is a real constraint: the Corn Belt seeding window runs late August through mid-October, and most operators book their August and September slots by July. USDA FSA and state conservation districts often coordinate group contracts for cover crop drone seeding that can trim per-acre costs for participating farmers by 20 to 30 percent.',
+      'Cover crop seeding by drone is the fastest-growing ag drone service in the United States. Approximately 15 million US acres are planted to cover crops annually, with the Corn Belt, Chesapeake Bay watershed, and California dominating adoption. Drones broadcast cereal rye, annual ryegrass, crimson clover, hairy vetch, oats, and radishes into standing corn and soybeans 2 to 6 weeks before harvest, giving seed the extra establishment time that post-harvest ground seeding does not provide. USDA NRCS Cover Crop Practice Standard 340 and EQIP program rules make drone seeding eligible for federal cost-share payments, reducing effective per-acre cost to $5 to $8 in many states. Penn State Extension, Iowa State, and Ohio State Extension have all published data showing drone-seeded cover crops establish 3 to 4 weeks earlier than equivalent post-harvest ground seeding. The most common failure mode is dry conditions after seeding, which delay germination until fall rains arrive, and modern operators use radar forecast and soil moisture data to time applications ahead of expected precipitation. Drone capacity is a real constraint, with most Corn Belt cover crop seeders running T50 class drones at 200 to 400 acres per day of broadcast seeding: the Corn Belt seeding window runs late August through mid-October, and most operators book their August and September slots by July. USDA FSA and state conservation districts often coordinate group contracts for cover crop drone seeding that can trim per-acre costs for participating farmers by 20 to 30 percent.',
     aeoBlock:
       'Drone cover crop seeding costs $12 to $18 per acre and is the fastest-growing ag drone market in the US Midwest, with approximately 15 million acres planted to cover crops annually. Aerial seeding into standing corn and soybeans in August and September gives cereal rye and crimson clover 3 to 4 extra weeks of establishment compared to post-harvest ground seeding. USDA NRCS Cover Crop Practice Standard 340 provides cost-share payments for aerial seeding under EQIP, reducing effective farmer cost to $5 to $8 per acre in many states.',
     priceMinUsd: 12,
@@ -467,6 +502,11 @@ export const crops: Crop[] = [
         question: 'How far ahead do I need to book a drone operator for cover crop seeding?',
         answer:
           'In the Corn Belt, by late July or early August for September slots. The cover crop seeding window (late August through mid October) overlaps with corn fungicide mop-up and soybean pre-harvest work, so operator capacity is the real constraint. Late callers often end up either paying premium rates or getting pushed into post-harvest ground seeding alternatives.',
+      },
+      {
+        question: 'How far ahead should I book a drone operator for cover crops in my state?',
+        answer:
+          'Book by late July or early August for September seeding slots in the Corn Belt. Capacity runs out by early August most years as operators fill their windows with confirmed orders. Chesapeake watershed states have more operator availability and can sometimes book into September.',
       },
     ],
     lastReviewedAt: '2026-04-16',
