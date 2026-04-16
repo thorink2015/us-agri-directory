@@ -1,0 +1,6 @@
+{
+  "name": "netlify-plugin-indexnow-ping",
+  "version": "1.0.0",
+  "description": "Auto-ping IndexNow after every production deploy",
+  "main": "index.js"
+}

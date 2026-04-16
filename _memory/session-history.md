@@ -29,6 +29,28 @@
 - **Organizational:** Added `/_research/` folder with 13 research + planning docs
 - **Organizational:** Added `/_memory/` folder (this one) + CLAUDE.md rewrite
 
+## 2026-04-16 — Domain fix + accessibility + search engine setup
+
+- **Domain:** replaced `usagdronedirectory.com` → `agdronedirectory.com` across 31 src files, scripts, and memory files (production domain confirmed via Netlify)
+- **netlify.toml:** fixed www → non-www redirect (was pointing to `terradron.ro`)
+- **Accessibility:** FAA badge contrast 3.0:1→6.4:1, "Price on request" 2.2:1→4.6:1 (both now WCAG AA); removed Romanian text from CountyCard
+- **Performance:** browserslist bump (firefox≥92, safari≥15.4) removes ~11 KiB legacy polyfills; GTM preconnect now conditional
+- **Cloudflare:** added `scripts/check-cloudflare.sh` zone audit script
+- **PRs:** consolidated draft PRs #7 + #8 into #9; merged squash to `claude/add-drone-operators-directory-T0YnN`
+- **IndexNow:** Netlify Build Plugin auto-pings on every production deploy; 1130 URLs accepted HTTP 200 on first live run
+- **Yandex:** verified ✓
+- **Bing:** connected via Google Search Console import ✓
+
+## 2026-04-16 — Content cleanup + final audit
+
+- Deleted orphaned Romanian data: `regions-moldova.ts`, `wine-regions.ts`, `cities.ts`
+- Emptied `blog-posts.ts` (12 Romanian-slug posts removed) + `blog/content.tsx`
+- Emptied `guides.ts` (9 Romanian-slug guides removed) + `guides/content.tsx`
+- Removed `country:'RO'|'MD'` field from Guide interface; fixed guide page template (removed .country refs, fixed TerraDron.ro → agdronedirectory.com in JSON-LD)
+- Deleted 2 stale IndexNow key files (`fda036483ac24950a15f668bc047a4bf.txt`, `7e4a1f2b3c9d8e5f.txt`)
+- Fixed dead link: `/guides/fonduri-afir-drone` → `/guides` in roi-calculator/page.tsx
+- Updated memory: project-facts.md (IndexNow key, branch record), session-history.md
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

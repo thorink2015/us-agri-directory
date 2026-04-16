@@ -10,6 +10,10 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Auto-ping IndexNow after every successful production deploy
+[[plugins]]
+  package = "./netlify/plugins/indexnow"
+
 # Cache static assets aggressively
 [[headers]]
   for = "/_next/static/*"

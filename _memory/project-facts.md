@@ -12,6 +12,7 @@ Last updated: 2026-04-15
 - **Production domain:** `https://agdronedirectory.com`
 - **Repo:** `thorink2015/usss-terra`
 - **Working branch:** `claude/add-drone-operators-directory-T0YnN`
+  - **Domain submission branch:** `claude/setup-domain-submission-KXRq7` (open PRs for Netlify/IndexNow/SEO work)
   - **Never push to other branches without explicit user approval.**
 - **Main branch:** contains the OLD Romanian `droneagricol.ro` codebase
   plus research file uploads. Do NOT merge main → working branch.
@@ -54,10 +55,11 @@ and `AUTHOR.organizationId` getters.
 
 ## IndexNow
 
-- **Key file:** `/public/fda036483ac24950a15f668bc047a4bf.txt` (32-char hex)
-- **Ping script:** `npm run indexnow:ping` → `scripts/ping-indexnow.mjs`
-- **Second legacy key file** also exists at `/public/7e4a1f2b3c9d8e5f.txt`
-  — left in place for backward compat, not actively used
+- **Active key:** `199aa73a01c74f6786948b45aaec2d17`
+- **Key file:** `/public/199aa73a01c74f6786948b45aaec2d17.txt`
+- **Ping script:** `scripts/ping-indexnow.mjs` — auto-runs via Netlify Build Plugin on every production deploy
+- **Netlify plugin:** `netlify/plugins/indexnow/` — fires `onSuccess`, logs warning on failure (never fails the deploy)
+- **Last run result:** 1130 URLs submitted, HTTP 200 accepted (2026-04-16)
 
 ## Conventions Eugen cares about
 
