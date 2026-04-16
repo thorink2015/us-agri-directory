@@ -57,7 +57,7 @@ export default function BlogPostPage({ params }: Props) {
             publisher: {
               '@type': 'Organization',
               name: 'US Ag Drone Directory',
-              logo: { '@type': 'ImageObject', url: 'https://usagdronedirectory.com/opengraph-image' },
+              logo: { '@type': 'ImageObject', url: 'https://agdronedirectory.com/opengraph-image' },
             },
             keywords: post.tags.join(', '),
           }),

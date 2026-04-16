@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'US Agricultural Drone Regions | US Ag Drone Directory',
     description:
       'Regional hubs covering the Corn Belt, Great Plains, Delta, California, and Southeast. Browse operators by region.',
-    url: 'https://usagdronedirectory.com/regions',
+    url: 'https://agdronedirectory.com/regions',
   },
 };
 
@@ -22,8 +22,8 @@ export default function RegionsIndexPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-      { '@type': 'ListItem', position: 2, name: 'Regions', item: 'https://usagdronedirectory.com/regions' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://agdronedirectory.com' },
+      { '@type': 'ListItem', position: 2, name: 'Regions', item: 'https://agdronedirectory.com/regions' },
     ],
   };
 

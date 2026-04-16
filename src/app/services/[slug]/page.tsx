@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${service.name} | US Agricultural Drone Directory`,
       description: service.description,
-      url: `https://usagdronedirectory.com/services/${params.slug}`,
+      url: `https://agdronedirectory.com/services/${params.slug}`,
     },
   };
 }
@@ -94,9 +94,9 @@ export default function ServicePage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://usagdronedirectory.com/services' },
-      { '@type': 'ListItem', position: 3, name: service.name, item: `https://usagdronedirectory.com/services/${service.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://agdronedirectory.com' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://agdronedirectory.com/services' },
+      { '@type': 'ListItem', position: 3, name: service.name, item: `https://agdronedirectory.com/services/${service.slug}` },
     ],
   };
 

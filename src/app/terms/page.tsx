@@ -20,7 +20,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">1. Acceptance of terms</h2>
           <p className="leading-relaxed">
-            By accessing or using usagdronedirectory.com (&quot;the Site&quot;), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site. We reserve the right to modify these terms at any time. Continued use after changes constitutes acceptance.
+            By accessing or using agdronedirectory.com (&quot;the Site&quot;), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Site. We reserve the right to modify these terms at any time. Continued use after changes constitutes acceptance.
           </p>
         </section>
 
@@ -102,8 +102,8 @@ export default function TermsPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-3">11. Contact</h2>
           <p className="leading-relaxed">
             For questions about these Terms, contact us at:{' '}
-            <a href="mailto:contact@usagdronedirectory.com" className="text-green-700 hover:underline">
-              contact@usagdronedirectory.com
+            <a href="mailto:contact@agdronedirectory.com" className="text-green-700 hover:underline">
+              contact@agdronedirectory.com
             </a>
           </p>
         </section>
