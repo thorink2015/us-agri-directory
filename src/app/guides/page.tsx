@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function GuidesHubPage() {
-  const roGuides = guides.filter((g) => !g.country || g.country === 'RO');
-  const byCategory = (cat: string) => roGuides.filter((g) => g.category === cat);
+  const byCategory = (cat: string) => guides.filter((g) => g.category === cat);
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

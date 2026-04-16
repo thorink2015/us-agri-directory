@@ -18,14 +18,14 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return guides.filter((g) => !g.country || g.country === 'RO').map((g) => ({ slug: g.slug }));
+  return guides.map((g) => ({ slug: g.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guide = getGuideBySlug(params.slug);
-  if (!guide || guide.country === 'MD') return {};
+  if (!guide) return {};
   return {
-    title: `${guide.title} | TerraDron.ro`,
+    title: `${guide.title} | US Ag Drone Directory`,
     description: guide.description,
     alternates: { canonical: `/guides/${guide.slug}` },
     openGraph: {
@@ -39,12 +39,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default function GuidePage({ params }: Props) {
   const guide = getGuideBySlug(params.slug);
-  if (!guide || guide.country === 'MD') notFound();
+  if (!guide) notFound();
 
   const content = guideContent[guide.slug];
-  const otherGuides = guides
-    .filter((g) => g.slug !== guide.slug && (!g.country || g.country === 'RO'))
-    .slice(0, 3);
+  const otherGuides = guides.filter((g) => g.slug !== guide.slug).slice(0, 3);
   const categoryMeta = GUIDE_CATEGORIES[guide.category];
 
   return (
@@ -59,11 +57,11 @@ export default function GuidePage({ params }: Props) {
             description: guide.description,
             datePublished: guide.lastUpdated,
             dateModified: guide.lastUpdated,
-            author: { '@type': 'Organization', name: 'TerraDron.ro' },
+            author: { '@type': 'Organization', name: 'US Ag Drone Directory' },
             publisher: {
               '@type': 'Organization',
-              name: 'TerraDron.ro',
-              logo: { '@type': 'ImageObject', url: 'https://terradron.ro/opengraph-image' },
+              name: 'US Ag Drone Directory',
+              logo: { '@type': 'ImageObject', url: 'https://agdronedirectory.com/opengraph-image' },
             },
           }),
         }}
@@ -129,4 +127,3 @@ export default function GuidePage({ params }: Props) {
     </>
   );
 }
-

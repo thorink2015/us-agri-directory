@@ -112,7 +112,7 @@ export default function ROICalculatorPage() {
           <p className="text-gray-600">
             USDA EQIP Practice Code 595 (Precision Land Management) can cover 40 to 90% of drone purchase cost for eligible farmers.
             Funded operators report effective purchase costs as low as $4,000 to $8,000 for a T50-class drone, dramatically improving ROI.
-            See <Link href="/guides/fonduri-afir-drone" className="text-green-700 hover:underline">USDA EQIP funding guide</Link> for eligibility and application steps.
+            See our <Link href="/guides" className="text-green-700 hover:underline">guides section</Link> for eligibility and application steps.
           </p>
         </div>
       </section>
