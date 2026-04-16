@@ -29,6 +29,16 @@
 - **Organizational:** Added `/_research/` folder with 13 research + planning docs
 - **Organizational:** Added `/_memory/` folder (this one) + CLAUDE.md rewrite
 
+## 2026-04-16 — Domain fix + accessibility + search engine setup
+
+- **Domain:** replaced `usagdronedirectory.com` → `agdronedirectory.com` across 31 src files, scripts, and memory files (production domain confirmed via Netlify)
+- **netlify.toml:** fixed www → non-www redirect (was pointing to `terradron.ro`)
+- **Accessibility:** FAA badge contrast 3.0:1→6.4:1, "Price on request" 2.2:1→4.6:1 (both now WCAG AA); removed Romanian text from CountyCard
+- **Performance:** browserslist bump (firefox≥92, safari≥15.4) removes ~11 KiB legacy polyfills; GTM preconnect now conditional
+- **Cloudflare:** added `scripts/check-cloudflare.sh` zone audit script
+- **PRs:** consolidated draft PRs #7 + #8 into #9; merged squash to `claude/add-drone-operators-directory-T0YnN`
+- **IndexNow:** pending — run `npm run indexnow:ping` after Netlify deploy completes
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
