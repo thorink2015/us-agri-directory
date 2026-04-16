@@ -78,7 +78,7 @@ routes, map over the data source (e.g. `regions.map(r => ({ url: ... }))`).
 domain `terradron.ro` / `droneagricol.ro`.
 **Fix:** Replace with the English slug (`/states`, `/operators`,
 `/crops`, `/services`, `/drones`, `/guides`, `/tools`, `/about`,
-`/pricing`, etc.) and `usagdronedirectory.com`. Scan with:
+`/pricing`, etc.) and `agdronedirectory.com`. Scan with:
 `Grep "(/judete|/operatori|/culturi|/servicii|/drone/|/unelte|/ghid|/despre|/preturi|/orase|/adauga-operator|terradron|droneagricol)"`
 
 ### Schema `@id` collisions

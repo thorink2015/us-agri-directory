@@ -20,7 +20,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">1. Who we are</h2>
           <p className="leading-relaxed">
-            US Ag Drone Directory (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates the website at usagdronedirectory.com. We provide a free directory connecting farmers with agricultural drone service operators across the United States.
+            US Ag Drone Directory (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) operates the website at agdronedirectory.com. We provide a free directory connecting farmers with agricultural drone service operators across the United States.
           </p>
         </section>
 
@@ -46,7 +46,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">4. Public listings</h2>
           <p className="leading-relaxed">
-            Information submitted for operator listings (business name, city/state, phone, email, website, services, and description) is published publicly on this website. By submitting a listing, you consent to this public display. If you wish to update or remove your listing, contact us at contact@usagdronedirectory.com.
+            Information submitted for operator listings (business name, city/state, phone, email, website, services, and description) is published publicly on this website. By submitting a listing, you consent to this public display. If you wish to update or remove your listing, contact us at contact@agdronedirectory.com.
           </p>
         </section>
 
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-bold text-gray-900 mb-3">8. Your rights</h2>
           <p className="leading-relaxed">
-            You have the right to request access to, correction of, or deletion of your personal information that we hold. To make such a request, email us at contact@usagdronedirectory.com. We will respond within 30 days.
+            You have the right to request access to, correction of, or deletion of your personal information that we hold. To make such a request, email us at contact@agdronedirectory.com. We will respond within 30 days.
           </p>
         </section>
 
@@ -96,8 +96,8 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-3">11. Contact</h2>
           <p className="leading-relaxed">
             For privacy-related questions or requests, contact us at:{' '}
-            <a href="mailto:contact@usagdronedirectory.com" className="text-green-700 hover:underline">
-              contact@usagdronedirectory.com
+            <a href="mailto:contact@agdronedirectory.com" className="text-green-700 hover:underline">
+              contact@agdronedirectory.com
             </a>
           </p>
         </section>

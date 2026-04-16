@@ -20,7 +20,7 @@ export default function GoogleAnalytics() {
       />
       <Script id="ga-init" strategy="afterInteractive">
         {`
-          if (window.location.hostname === 'usagdronedirectory.com') {
+          if (window.location.hostname === 'agdronedirectory.com') {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());

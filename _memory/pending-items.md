@@ -17,7 +17,7 @@ Last updated: 2026-04-15
 | `{{COUNTRY_REGION}}` | Canonical bio in `/about` | Awaiting |
 | `{{FIELD_OF_STUDY}}` | Canonical bio in `/about` | Awaiting |
 | Author photo | `/public/images/eugen-author.jpg` | Awaiting upload (initial-letter avatar fallback active) |
-| Public email | `AUTHOR.publicEmail` — currently `eugen@usagdronedirectory.com` | Needs confirmation |
+| Public email | `AUTHOR.publicEmail` — currently `eugen@agdronedirectory.com` | Needs confirmation |
 
 ## Blocked on research files
 

@@ -33,7 +33,7 @@ export default async function Image() {
           fontSize: 18,
           letterSpacing: 1,
         }}>
-          usagdronedirectory.com
+          agdronedirectory.com
         </div>
 
         {/* Main logo */}

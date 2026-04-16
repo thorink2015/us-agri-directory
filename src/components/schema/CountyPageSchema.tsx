@@ -13,7 +13,7 @@ export default function CountyPageSchema({ county, operators: ops, faqs }: Props
     '@type': 'CollectionPage',
     name: `Agricultural Drone Operators in ${county.name}`,
     description: `Complete list of agricultural drone operators in ${county.name}. ${ops.length} operators available.`,
-    url: `https://usagdronedirectory.com/states/${county.slug}`,
+    url: `https://agdronedirectory.com/states/${county.slug}`,
     mainEntity: {
       '@type': 'ItemList',
       name: `Agricultural Drone Operators in ${county.name}`,
@@ -24,7 +24,7 @@ export default function CountyPageSchema({ county, operators: ops, faqs }: Props
         item: {
           '@type': 'LocalBusiness',
           name: op.name,
-          url: `https://usagdronedirectory.com/operators/${op.slug}`,
+          url: `https://agdronedirectory.com/operators/${op.slug}`,
           telephone: op.phone,
           address: {
             '@type': 'PostalAddress',
@@ -40,9 +40,9 @@ export default function CountyPageSchema({ county, operators: ops, faqs }: Props
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-      { '@type': 'ListItem', position: 2, name: 'States', item: 'https://usagdronedirectory.com/states' },
-      { '@type': 'ListItem', position: 3, name: county.name, item: `https://usagdronedirectory.com/states/${county.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://agdronedirectory.com' },
+      { '@type': 'ListItem', position: 2, name: 'States', item: 'https://agdronedirectory.com/states' },
+      { '@type': 'ListItem', position: 3, name: county.name, item: `https://agdronedirectory.com/states/${county.slug}` },
     ],
   };
 

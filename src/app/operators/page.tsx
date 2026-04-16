@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'All Ag Drone Operators | US Agricultural Drone Directory',
     description: 'Find verified drone spraying operators across all 50 states. Compare rates, equipment, and certifications.',
-    url: 'https://usagdronedirectory.com/operators',
+    url: 'https://agdronedirectory.com/operators',
   },
 };
 

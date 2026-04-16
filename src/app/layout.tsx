@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  metadataBase: new URL('https://usagdronedirectory.com'),
+  metadataBase: new URL('https://agdronedirectory.com'),
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
     other: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://usagdronedirectory.com',
+    url: 'https://agdronedirectory.com',
     siteName: 'US Ag Drone Directory',
     title: 'US Agricultural Drone Directory | Find Verified Drone Operators',
     description:
