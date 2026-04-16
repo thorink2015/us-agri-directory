@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: 'Agricultural Drone Glossary | US Ag Drone Directory',
     description:
       'The complete glossary of agricultural drone terminology: FAA regulations, spray application, drone hardware, and ag business terms.',
-    url: 'https://usagdronedirectory.com/glossary',
+    url: 'https://agdronedirectory.com/glossary',
   },
 };
 
@@ -48,13 +48,13 @@ export default function GlossaryPage() {
     '@context': 'https://schema.org',
     '@type': 'DefinedTermSet',
     name: 'US Agricultural Drone Glossary',
-    url: 'https://usagdronedirectory.com/glossary',
+    url: 'https://agdronedirectory.com/glossary',
     hasDefinedTerm: glossaryTerms.map((t) => ({
       '@type': 'DefinedTerm',
-      '@id': `https://usagdronedirectory.com/glossary#${t.slug}`,
+      '@id': `https://agdronedirectory.com/glossary#${t.slug}`,
       name: t.term,
       description: t.definition,
-      inDefinedTermSet: 'https://usagdronedirectory.com/glossary',
+      inDefinedTermSet: 'https://agdronedirectory.com/glossary',
     })),
   };
 
@@ -62,8 +62,8 @@ export default function GlossaryPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-      { '@type': 'ListItem', position: 2, name: 'Glossary', item: 'https://usagdronedirectory.com/glossary' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://agdronedirectory.com' },
+      { '@type': 'ListItem', position: 2, name: 'Glossary', item: 'https://agdronedirectory.com/glossary' },
     ],
   };
 

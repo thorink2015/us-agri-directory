@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'US Agricultural Drone Directory | Find Drone Operators Near Your Farm',
     description: 'Verified ag drone operators in all 50 states. Compare rates, check FAA certifications, and book the right pilot for your fields.',
-    url: 'https://usagdronedirectory.com',
+    url: 'https://agdronedirectory.com',
   },
 };
 import {

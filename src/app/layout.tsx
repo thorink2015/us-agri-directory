@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  metadataBase: new URL('https://usagdronedirectory.com'),
+  metadataBase: new URL('https://agdronedirectory.com'),
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
     other: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://usagdronedirectory.com',
+    url: 'https://agdronedirectory.com',
     siteName: 'US Ag Drone Directory',
     title: 'US Agricultural Drone Directory | Find Verified Drone Operators',
     description:
@@ -58,7 +58,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <link rel="preconnect" href="https://www.googletagmanager.com" />
+        )}
         <link rel="dns-prefetch" href="https://formspree.io" />
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50">

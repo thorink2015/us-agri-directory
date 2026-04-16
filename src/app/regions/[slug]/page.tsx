@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${region.name} Agricultural Drone Services | US Ag Drone Directory`,
       description: region.tagline,
-      url: `https://usagdronedirectory.com/regions/${region.slug}`,
+      url: `https://agdronedirectory.com/regions/${region.slug}`,
     },
   };
 }
@@ -52,9 +52,9 @@ export default function RegionPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-      { '@type': 'ListItem', position: 2, name: 'Regions', item: 'https://usagdronedirectory.com/regions' },
-      { '@type': 'ListItem', position: 3, name: region.name, item: `https://usagdronedirectory.com/regions/${region.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://agdronedirectory.com' },
+      { '@type': 'ListItem', position: 2, name: 'Regions', item: 'https://agdronedirectory.com/regions' },
+      { '@type': 'ListItem', position: 3, name: region.name, item: `https://agdronedirectory.com/regions/${region.slug}` },
     ],
   };
 

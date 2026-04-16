@@ -7,7 +7,7 @@ import { droneModels } from '@/data/drone-models';
 import { regions } from '@/data/regions';
 import { SERVICE_LABELS } from '@/data/types';
 
-const BASE_URL = 'https://usagdronedirectory.com';
+const BASE_URL = 'https://agdronedirectory.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

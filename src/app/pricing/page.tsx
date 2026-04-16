@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ag Drone Spraying Prices 2026 | $12–$35/acre | US Ag Drone Directory',
     description: 'How much does drone spraying cost? Complete tables by crop, field size, and service type — all in USD per acre.',
-    url: 'https://usagdronedirectory.com/pricing',
+    url: 'https://agdronedirectory.com/pricing',
   },
 };
 
@@ -56,8 +56,8 @@ export default function PricingPage() {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-      { '@type': 'ListItem', position: 2, name: 'Drone Spraying Prices', item: 'https://usagdronedirectory.com/pricing' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://agdronedirectory.com' },
+      { '@type': 'ListItem', position: 2, name: 'Drone Spraying Prices', item: 'https://agdronedirectory.com/pricing' },
     ],
   };
 
