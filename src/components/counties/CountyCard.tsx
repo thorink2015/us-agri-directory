@@ -42,7 +42,7 @@ export default function CountyCard({ county }: CountyCardProps) {
       </div>
 
       {operatorCount === 0 && (
-        <p className="text-xs text-amber-600 mt-2">Fii primul operator din acest județ</p>
+        <p className="text-xs text-amber-600 mt-2">Be the first operator in this state</p>
       )}
     </Link>
   );

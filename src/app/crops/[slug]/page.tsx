@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: Props) {
     openGraph: {
       title: `Drone Spraying for ${crop.name} | US Ag Drone Directory`,
       description: `$${crop.priceMinUsd}–$${crop.priceMaxUsd}/acre, treatment calendar, key pests, and verified operators across all 50 states.`,
-      url: `https://usagdronedirectory.com/crops/${crop.slug}`,
+      url: `https://agdronedirectory.com/crops/${crop.slug}`,
     },
   };
 }
@@ -74,9 +74,9 @@ export default function CropPage({ params }: Props) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-      { '@type': 'ListItem', position: 2, name: 'Crops', item: 'https://usagdronedirectory.com/crops' },
-      { '@type': 'ListItem', position: 3, name: crop.name, item: `https://usagdronedirectory.com/crops/${crop.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://agdronedirectory.com' },
+      { '@type': 'ListItem', position: 2, name: 'Crops', item: 'https://agdronedirectory.com/crops' },
+      { '@type': 'ListItem', position: 3, name: crop.name, item: `https://agdronedirectory.com/crops/${crop.slug}` },
     ],
   };
 

@@ -36,6 +36,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Grok', allow: '/' },                  // Grok alias
       { userAgent: 'Timpibot', allow: '/' },              // Timpi search (AI search index)
     ],
-    sitemap: 'https://usagdronedirectory.com/sitemap.xml',
+    sitemap: 'https://agdronedirectory.com/sitemap.xml',
   };
 }

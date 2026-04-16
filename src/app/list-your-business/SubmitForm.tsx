@@ -30,7 +30,7 @@ export default function SubmitForm() {
       if (res.ok) {
         setSubmitted(true);
       } else {
-        setError('Something went wrong. Please email us directly at contact@usagdronedirectory.com');
+        setError('Something went wrong. Please email us directly at contact@agdronedirectory.com');
       }
     } catch {
       setError('Network error. Please try again.');

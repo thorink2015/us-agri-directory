@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ag Drone Coverage Time Calculator',
     description: 'How long does it take to spray 500 acres by drone? Get a time estimate with real drone performance data.',
-    url: 'https://usagdronedirectory.com/tools/coverage-calculator',
+    url: 'https://agdronedirectory.com/tools/coverage-calculator',
   },
 };
 
@@ -55,9 +55,9 @@ export default function CoverageCalculatorPage() {
             applicationCategory: 'BusinessApplication',
             operatingSystem: 'Web',
             description: 'Estimate drone spray job duration by acreage, drone model, application rate, field shape, and fleet size.',
-            url: 'https://usagdronedirectory.com/tools/coverage-calculator',
+            url: 'https://agdronedirectory.com/tools/coverage-calculator',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-            publisher: { '@type': 'Organization', name: 'US Ag Drone Directory', url: 'https://usagdronedirectory.com' },
+            publisher: { '@type': 'Organization', name: 'US Ag Drone Directory', url: 'https://agdronedirectory.com' },
           }),
         }}
       />
@@ -68,9 +68,9 @@ export default function CoverageCalculatorPage() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://usagdronedirectory.com' },
-              { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://usagdronedirectory.com/tools' },
-              { '@type': 'ListItem', position: 3, name: 'Coverage Time Calculator', item: 'https://usagdronedirectory.com/tools/coverage-calculator' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://agdronedirectory.com' },
+              { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://agdronedirectory.com/tools' },
+              { '@type': 'ListItem', position: 3, name: 'Coverage Time Calculator', item: 'https://agdronedirectory.com/tools/coverage-calculator' },
             ],
           }),
         }}

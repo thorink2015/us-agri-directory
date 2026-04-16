@@ -9,7 +9,7 @@ Last updated: 2026-04-15
 ## Project identity
 
 - **Site name:** US Ag Drone Directory
-- **Production domain:** `https://usagdronedirectory.com`
+- **Production domain:** `https://agdronedirectory.com`
 - **Repo:** `thorink2015/usss-terra`
 - **Working branch:** `claude/add-drone-operators-directory-T0YnN`
   - **Never push to other branches without explicit user approval.**
@@ -32,7 +32,7 @@ Last updated: 2026-04-15
 - **Photo:** expected at `/public/images/eugen-author.jpg` (400×400+).
   Components (`Byline`, `AuthorCard`) render an initial-letter avatar
   fallback until the file is uploaded.
-- **Public email:** `eugen@usagdronedirectory.com` (unconfirmed — Eugen
+- **Public email:** `eugen@agdronedirectory.com` (unconfirmed — Eugen
   should verify this address is actually monitored before launch)
 
 ## Environment variables (set in Netlify dashboard)
@@ -45,9 +45,9 @@ Last updated: 2026-04-15
 
 ## Schema @id anchors (every JSON-LD on the site references these)
 
-- Organization: `https://usagdronedirectory.com/#organization`
-- Person (Eugen): `https://usagdronedirectory.com/about#eugen`
-- WebSite: `https://usagdronedirectory.com/#website`
+- Organization: `https://agdronedirectory.com/#organization`
+- Person (Eugen): `https://agdronedirectory.com/about#eugen`
+- WebSite: `https://agdronedirectory.com/#website`
 
 These are canonicalized in `src/data/author.ts` via `AUTHOR.personId`
 and `AUTHOR.organizationId` getters.

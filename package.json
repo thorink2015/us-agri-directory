@@ -20,8 +20,8 @@
   "browserslist": {
     "production": [
       "chrome >= 93",
-      "firefox >= 90",
-      "safari >= 15",
+      "firefox >= 92",
+      "safari >= 15.4",
       "edge >= 93",
       "not dead"
     ],
