@@ -89,6 +89,7 @@ export interface Crop {
   name: string;
   nameRo: string;             // English display name
   description: string;
+  longDescription: string;    // long-form body copy (150-250 words)
   aeoBlock: string;           // 2-3 sentence definitive answer for AI engines, contains a number
   priceMinUsd: number;        // min per-acre rate (USD)
   priceMaxUsd: number;        // max per-acre rate (USD)
@@ -99,6 +100,7 @@ export interface Crop {
   uvlNormLHa?: string;        // carrier volume per acre (gpa)
   yieldGainPct?: number;
   authorityLinks: { label: string; url: string }[];
+  faqs?: { question: string; answer: string }[];  // 4-5 crop-specific FAQs
   lastReviewedAt?: string;    // ISO date (YYYY-MM-DD) of last editorial review
 }
 
