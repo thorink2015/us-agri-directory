@@ -32,13 +32,14 @@ See `_research/README.md` for what's uploaded and what's missing.
 
 ## Blocked on external account setup (Eugen handles)
 
-- Verify domain in Google Search Console + submit sitemap
-- Verify domain in Bing Webmaster Tools + register IndexNow key there
+- ✅ Yandex Webmaster — verified
+- ✅ Bing Webmaster Tools — connected via Google import (auto-verified + sitemap imported)
+- ✅ IndexNow — auto-pings on every production deploy (1130 URLs, HTTP 200)
+- Google Search Console — verify domain + submit sitemap `https://agdronedirectory.com/sitemap.xml`
 - Sign up for Plausible Analytics → share domain ID so we can wire
   `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` and swap out GA4
 - Sign up for rank tracker (SerpRobot or Wincher) with 50 seed keywords
 - Set up Cloudflare for performance + bot management
-- (Optional) Netlify post-deploy hook to auto-run `npm run indexnow:ping`
 
 ## Ready to build when unblocked
 
