@@ -8,8 +8,8 @@
 
 export const SITE = {
   name: 'US Ag Drone Directory',
-  domain: 'https://usagdronedirectory.com',
-  logoUrl: 'https://usagdronedirectory.com/images/logo.png',
+  domain: 'https://agdronedirectory.com',
+  logoUrl: 'https://agdronedirectory.com/images/logo.png',
 };
 
 export const AUTHOR = {
@@ -24,11 +24,11 @@ export const AUTHOR = {
   jobTitle: 'Founder and Editor',
 
   // Media
-  photoUrl: 'https://usagdronedirectory.com/images/eugen-author.jpg', // TODO: upload real headshot
+  photoUrl: 'https://agdronedirectory.com/images/eugen-author.jpg', // TODO: upload real headshot
   photoAlt: 'Eugen, Founder and Editor of US Ag Drone Directory',
 
   // Contact
-  publicEmail: 'eugen@usagdronedirectory.com', // TODO: confirm real address
+  publicEmail: 'eugen@agdronedirectory.com', // TODO: confirm real address
 
   // Social (for Person schema sameAs array + author card)
   linkedin: '{{LINKEDIN_URL}}',           // TODO: https://linkedin.com/in/...
