@@ -1,151 +1,312 @@
-export interface Region {
-  slug: string;
-  name: string;
-  tagline: string;
-  stateSlugs: string[];      // county slugs in this region
-  primaryCrops: string[];    // crop slugs
-  totalAcres: number;        // approximate total ag acres
-  icon: string;
-  aeoBlock: string;          // 2-3 sentence AEO answer with numbers
-  description: string;
-  keyInsights: string[];     // 3-5 bullet regional insights
-  sprayWindow: string;       // e.g. "May through September"
-  authorityLinks: { label: string; url: string }[];
-}
+import { Region } from './types';
 
 export const regions: Region[] = [
   {
     slug: 'corn-belt',
     name: 'Corn Belt',
-    tagline: 'The heart of US drone fungicide: 180M acres of corn and soybeans',
-    stateSlugs: ['iowa', 'illinois', 'indiana', 'ohio', 'missouri'],
-    primaryCrops: ['corn', 'soybeans', 'cover-crops'],
-    totalAcres: 115000000,
-    icon: '🌽',
-    aeoBlock:
-      'The Corn Belt — Iowa, Illinois, Indiana, Ohio, and Missouri — is the largest agricultural drone services market in America, with over 115 million acres of corn and soybeans treated annually. Drone fungicide application at the VT/R1 corn stage and R2/R3 soybean stage dominates demand in July and August. Average drone spray rates in the region range from $12 to $18 per acre for application only, with farmer-supplied chemical.',
+    states: ['Iowa', 'Illinois', 'Indiana', 'Ohio', 'Missouri', 'Michigan', 'Wisconsin', 'Minnesota', 'Kentucky', 'Tennessee'],
+    stateSlugs: ['iowa', 'illinois', 'indiana', 'ohio', 'missouri', 'michigan', 'wisconsin', 'minnesota', 'kentucky', 'tennessee'],
     description:
-      'The Corn Belt spans from eastern Nebraska across Iowa, Illinois, Indiana, and Ohio, dipping into northern Missouri. This region grows roughly two-thirds of US corn and soybeans on deep prairie soils. Drone spraying solves two critical issues here: tall corn fungicide at the VT/R1 tassel stage (when plants exceed 8 feet and ground rigs cannot clear the canopy), and wet-field applications during persistent spring and summer rains when soil is too soft for tractors. Cover crop overseeding into standing corn and soybeans is the second-largest use case, driven by USDA NRCS cost-share under EQIP.',
+      'The Corn Belt is the largest and most competitive ag drone market in the United States, anchored by corn fungicide at VT/R1, soybean fungicide at R2/R3, and cover crop seeding from August through October.',
+    longDescription:
+      'The Corn Belt stretches from Ohio through Iowa and covers the densest concentration of agricultural drone activity in the United States. Over 90 million acres of corn and 87 million acres of soybeans drive the core demand: drone fungicide at VT/R1 tassel stage on corn (July) and at R2/R3 on soybeans (July to August) are the two highest-volume spray windows in American agriculture. Cover crop seeding by drone from late August through mid-October is the fastest-growing secondary service, with USDA NRCS EQIP cost-share payments of $25 to $55 per acre making drone seeding economically attractive in every Corn Belt state. Iowa, Illinois, and Indiana are the three most competitive markets, with the 2026 Iowa State Custom Rate Survey establishing the first standardized university benchmark at $12.50 per acre average for drone spraying. Operator supply has grown rapidly, with per-acre rates compressing 30 to 45 percent from 2022 to 2026. Most operators run DJI Agras T50 and Hylio AG-272 class machines, treating 300 to 600 acres per drone per day during peak windows. The flat terrain and large contiguous fields make the Corn Belt the easiest geography for drone spray operations, which is why it attracts the most new operators and has the most aggressive pricing.',
+    aeoBlock:
+      'Corn Belt drone spraying rates run $12 to $17 per acre, the lowest in the US due to flat terrain, large fields, and growing operator supply. The 2026 Iowa State Custom Rate Survey established the first university benchmark at $12.50 per acre average. Peak spray windows are corn fungicide at VT/R1 in July, soybean fungicide at R2/R3 in July to August, and cover crop seeding from late August through mid-October.',
+    priceRangeUsd: '$12 to $17',
+    primaryCrops: ['Corn', 'Soybeans', 'Wheat', 'Cover Crops'],
+    sprayWindows: [
+      { crop: 'Corn fungicide', months: 'Mid-July to early August', stage: 'VT/R1 tassel' },
+      { crop: 'Soybean fungicide', months: 'Mid-July to mid-August', stage: 'R2/R3 bloom to pod' },
+      { crop: 'Cover crop seeding', months: 'Late August to mid-October', stage: 'Into standing corn/soybeans' },
+      { crop: 'Wheat heading fungicide', months: 'Late May to mid-June', stage: 'T3 heading' },
+    ],
     keyInsights: [
-      'VT/R1 corn fungicide in late July delivers 5–8 bushel yield response (Beck\'s Hybrids trials) and is the single largest drone spray use case in the US.',
-      'Cover crop overseeding into standing corn (August) gives cereal rye 3–4 extra weeks of establishment vs. post-harvest ground seeding.',
-      'Wet-year scenarios (2018, 2019, 2023) pushed Corn Belt drone adoption ahead of other regions — ground rigs simply couldn\'t access fields.',
-      'Iowa leads the region in operator density with the highest number of Part 137-certified commercial drone operators.',
-      'Fields under 500 acres favor drones economically over airplane application due to mobilization cost.',
+      'Iowa, Illinois, and Indiana are the three most competitive drone spray markets in the US, with pricing at or below the national floor.',
+      'Corn Belt operators book 4 to 6 weeks ahead of the VT/R1 window. Call by early June for late-July slots.',
+      'Cover crop seeding is the fastest-growing drone service here, with USDA NRCS EQIP paying $25 to $55 per acre that often covers 50 to 70 percent of the total cost.',
+      'Rate compression from $22 to $25 per acre in 2022 to $12 to $17 in 2026 has squeezed operator margins. Some Midwest markets are approaching profitability floors.',
     ],
-    sprayWindow: 'May through October, peaking in July–August',
     authorityLinks: [
-      { label: 'Iowa State Extension: Corn Disease Management', url: 'https://crops.extension.iastate.edu/corn' },
-      { label: 'Purdue Extension: Field Crops IPM', url: 'https://extension.entm.purdue.edu/fieldcropsipm' },
-      { label: 'USDA NASS: Corn Acreage by State', url: 'https://www.nass.usda.gov/Charts_and_Maps/Field_Crops/cornac.php' },
+      { label: 'Iowa State Extension: Custom Rate Survey 2026', url: 'https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf' },
+      { label: 'Purdue Extension: Corn and Soybean IPM', url: 'https://extension.entm.purdue.edu/fieldcropsipm' },
+      { label: 'Midwest Cover Crops Council', url: 'https://mccc.msu.edu' },
     ],
+    faqs: [
+      {
+        question: 'What does drone spraying cost in the Corn Belt?',
+        answer:
+          'The 2026 Iowa State Custom Rate Survey puts the average at $12.50 per acre, with a range of $8 to $16. Illinois and Indiana are similar. Ohio and Michigan tend to run $1 to $3 higher because of fewer operators and smaller average field sizes.',
+      },
+      {
+        question: 'When is the busiest drone spray period in the Corn Belt?',
+        answer:
+          'The last two weeks of July through the first week of August, when corn VT/R1 fungicide and soybean R2/R3 fungicide overlap. Operators who also do cover crop seeding run a second peak from late August through September. Book 4 to 6 weeks ahead for July slots.',
+      },
+      {
+        question: 'Is cover crop seeding by drone popular in the Midwest?',
+        answer:
+          'Yes, it is the fastest-growing ag drone service in the region. Drone seeding into standing corn and soybeans gives cover crops 3 to 4 extra weeks of establishment compared to post-harvest ground seeding. USDA NRCS EQIP cost-share under Practice Standard 340 reduces net farmer cost to $5 to $12 per acre in most Corn Belt states.',
+      },
+      {
+        question: 'Which states in the Corn Belt have the most drone operators?',
+        answer:
+          'Iowa, Illinois, and Indiana lead in operator density. Ohio and Missouri are growing fast. Wisconsin and Minnesota have moderate operator presence with higher per-acre rates. Kentucky and Tennessee are at the southern edge with fewer dedicated row crop drone operators.',
+      },
+      {
+        question: 'Are Corn Belt drone spray rates still dropping?',
+        answer:
+          'Yes, but the rate of compression is slowing. Midwest rates dropped roughly 30 to 45 percent from 2022 to 2026, and some operators report barely clearing $5 per acre profit at current rates. Further compression is limited by the floor of generator fuel, battery wear, and labor costs.',
+      },
+    ],
+    lastReviewedAt: '2026-04-16',
   },
   {
     slug: 'great-plains',
     name: 'Great Plains',
-    tagline: 'Wheat country: 45M acres of hard red winter and spring wheat',
-    stateSlugs: ['kansas', 'nebraska', 'north-dakota', 'south-dakota', 'minnesota', 'montana', 'wyoming', 'colorado'],
-    primaryCrops: ['wheat', 'corn', 'soybeans', 'cover-crops'],
-    totalAcres: 320000000,
-    icon: '🌾',
-    aeoBlock:
-      'The Great Plains — from Kansas to North Dakota and west to Montana — contain over 45 million acres of wheat plus expanding corn and soybean production under irrigation. Drone fungicide applications at the T3 heading stage target Fusarium head blight and stripe rust, and are gaining market share over airplane application for fields under 500 acres. Average drone spray rates in the region range from $12 to $16 per acre for wheat and $14 to $18 for row crops.',
+    states: ['Kansas', 'Nebraska', 'North Dakota', 'South Dakota', 'Montana', 'Wyoming', 'Colorado', 'Oklahoma', 'New Mexico', 'Texas'],
+    stateSlugs: ['kansas', 'nebraska', 'north-dakota', 'south-dakota', 'montana', 'wyoming', 'colorado', 'oklahoma', 'new-mexico', 'texas'],
     description:
-      'The Great Plains span the semi-arid heart of North America, from the Nebraska Sandhills to the rolling wheat country of Kansas and out to the dryland cropping systems of Montana. Wheat dominates in the west and north; corn and soybeans expand eastward under center-pivot irrigation. Drone applications are displacing airplane fungicide work on smaller and irregularly-shaped fields where airplane mobilization cost makes per-acre pricing uncompetitive. Heavy clay soils and limited access roads in North Dakota and South Dakota also push operators toward drone solutions when ground rigs can\'t travel.',
-    keyInsights: [
-      'T3 heading-stage fungicide on wheat reduces DON mycotoxin contamination by 40–60% (USDA ARS Wheat Scab Initiative) and is the primary drone spray use case in wheat country.',
-      'Irrigated Nebraska and Kansas corn benefits from drone applications that avoid soil compaction in saturated pivot circles.',
-      'North Dakota and South Dakota operator density is growing fastest in the US, driven by wet springs and limited field access for ground rigs.',
-      'Grasshopper and army cutworm outbreaks trigger emergency drone insecticide work across the region in June and July.',
-      'Kansas State and NDSU extension actively support drone adoption with applied research on droplet size and carrier volume.',
+      'The Great Plains is a wheat and cotton powerhouse where wind resistance and vast acreage define drone operations. Drones are rapidly taking market share from airplane applicators on sub-500-acre wheat fields.',
+    longDescription:
+      'The Great Plains stretches from the Texas panhandle through the Dakotas and Montana, covering the US wheat belt, cotton country in Texas and Oklahoma, and vast cattle ranch acreage with emerging drone applications. Approximately 45 million acres of winter and spring wheat drive the primary spray demand, with the T3 heading window for Fusarium head blight and stripe rust fungicide arriving in late May through late June depending on latitude. Drones are gaining market share over airplane applicators on wheat fields under 500 acres, where airplane mobilization costs make per-acre pricing uncompetitive. Kansas, Nebraska, and the Dakotas are the core wheat markets. Texas adds 5 to 6 million acres of cotton, with drone defoliant applications growing fast in the Rolling Plains and South Texas. Wind is the defining operational factor: daily averages exceed 15 mph across much of the region for half the year, making the Hylio AG-272 (rated at 25 mph sustained) and XAG P100 Pro (22 mph) more practical than DJI models rated at 13.4 mph. Per-acre rates run $12 to $16 for wheat and row crops, with cotton and specialty applications higher.',
+    aeoBlock:
+      'Great Plains drone spraying costs $12 to $16 per acre on wheat and row crops, with cotton defoliant at $14 to $18. Approximately 45 million acres of wheat anchor the market, with the T3 heading window in May through June as the peak spray period. Wind resistance is a defining equipment factor: Hylio AG-272 (25 mph) and XAG P100 Pro (22 mph) outperform DJI (13.4 mph) in this region.',
+    priceRangeUsd: '$12 to $16',
+    primaryCrops: ['Wheat', 'Cotton', 'Corn', 'Sorghum', 'Soybeans'],
+    sprayWindows: [
+      { crop: 'Wheat heading fungicide', months: 'Late May to late June', stage: 'T3 heading (varies by latitude)' },
+      { crop: 'Cotton defoliant', months: 'September to October', stage: '60%+ open bolls' },
+      { crop: 'Corn fungicide', months: 'July to early August', stage: 'VT/R1' },
+      { crop: 'Cover crop seeding', months: 'August to October', stage: 'Into standing crops' },
     ],
-    sprayWindow: 'April through September, peaking in May–July',
+    keyInsights: [
+      'Wind is the single biggest operational constraint. DJI T50 is grounded above 13.4 mph, which happens most afternoons in KS, NE, ND, and OK. Hylio AG-272 and XAG P100 Pro handle 22 to 25 mph.',
+      'Wheat heading windows are only 5 to 7 days. Operators who pre-book in April get the best rates; late callers often miss the window entirely.',
+      'Drones compete directly with airplane applicators on wheat. Drones win on fields under 500 acres; airplanes win above 1,000 acres.',
+      'Texas cotton adds a separate demand peak in September and October, with drone defoliant gaining share over airplanes because of drift control near sensitive soybean fields.',
+    ],
     authorityLinks: [
       { label: 'Kansas State Extension: Wheat Disease Management', url: 'https://www.bookstore.ksre.ksu.edu/pubs/EP130.pdf' },
       { label: 'NDSU Extension: Wheat Production', url: 'https://www.ndsu.edu/agriculture/ag-hub/ag-topics/crop-production/crops/wheat' },
-      { label: 'USDA ARS Wheat Scab Initiative', url: 'https://www.scabusa.org' },
+      { label: 'Texas A&M AgriLife Extension: Cotton', url: 'https://cottonbugs.tamu.edu' },
     ],
+    faqs: [
+      {
+        question: 'What does drone spraying cost in the Great Plains?',
+        answer:
+          'Wheat and row crop applications run $12 to $16 per acre. Cotton defoliant in Texas and Oklahoma runs $14 to $18. Large flat acreage pushes rates lower than specialty crop regions, but fewer operators than the Corn Belt means less aggressive pricing pressure.',
+      },
+      {
+        question: 'Can DJI drones handle the wind in Kansas and the Dakotas?',
+        answer:
+          'DJI Agras T50 is rated for 13.4 mph (6 m/s) maximum wind. Daily averages across the Great Plains exceed this threshold most afternoons from March through October. Operators running DJI spray at dawn and early morning. Those running Hylio AG-272 (25 mph) or XAG P100 Pro (22 mph) have wider daily operating windows.',
+      },
+      {
+        question: 'When is the wheat spray window in Kansas versus North Dakota?',
+        answer:
+          'Kansas wheat hits T3 heading in late May to early June. Nebraska and South Dakota arrive 1 to 2 weeks later. North Dakota spring wheat heads in late June to early July. The window is 5 to 7 days long regardless of latitude, which is why booking ahead is critical.',
+      },
+      {
+        question: 'Are airplane applicators cheaper than drones on Great Plains wheat?',
+        answer:
+          'On fields above 1,000 acres, yes. Airplanes fly 300 to 800 acres per hour and amortize mobilization costs over large acreage. On fields under 500 acres, drones win because airplane mobilization costs push per-acre rates above $14 to $16. The crossover point depends on proximity to the nearest airstrip and time of season.',
+      },
+      {
+        question: 'Is cover crop seeding by drone common in the Great Plains?',
+        answer:
+          'Growing but less established than in the Corn Belt. Kansas, Nebraska, and the Dakotas have NRCS EQIP programs that cover drone seeding. Wind is a limiting factor for broadcast accuracy. Most Great Plains cover crop seeding still happens post-harvest by drill, though drone seeding into standing crops is expanding year over year.',
+      },
+    ],
+    lastReviewedAt: '2026-04-16',
   },
   {
-    slug: 'delta',
+    slug: 'mississippi-delta',
     name: 'Mississippi Delta',
-    tagline: 'Cotton, rice, and soybeans on soft alluvial soils',
-    stateSlugs: ['mississippi', 'arkansas', 'louisiana'],
-    primaryCrops: ['cotton', 'rice', 'soybeans'],
-    totalAcres: 33000000,
-    icon: '🌿',
-    aeoBlock:
-      'The Mississippi Delta — Arkansas, Mississippi, and Louisiana — is the highest-value drone spray market per acre in the US, driven by rice, cotton, and soybeans grown on soft alluvial soils that frequently prevent ground rig access. Drone defoliant on cotton and blast/sheath blight fungicide on rice are the dominant late-season uses, priced at $14 to $22 per acre. Arkansas is the #1 US rice producer at 1.2 million acres, nearly all of which is fungicide-treated at heading.',
+    states: ['Arkansas', 'Louisiana', 'Mississippi', 'Missouri (Bootheel)'],
+    stateSlugs: ['arkansas', 'louisiana', 'mississippi', 'missouri'],
     description:
-      'The Mississippi Delta stretches from the bootheel of Missouri through eastern Arkansas, western Mississippi, and northern Louisiana. Soft alluvial soils in the Delta flood easily and stay saturated through much of the growing season — which is exactly why drone spraying has the highest adoption rate of any US region. Rice is grown under flood for most of its cycle, making ground rigs essentially unusable. Cotton defoliation in September and October often happens on too-wet ground for tractors. Soybean R3 fungicide and insecticide applications fill out the schedule. Delta operators typically run larger fleets and treat more acres per year than any other region.',
-    keyInsights: [
-      'Arkansas rice (1.2M acres) is the single highest-density drone spray market in the US — nearly 100% of rice receives aerial fungicide treatment.',
-      'Cotton defoliation in September–October on soft Delta soils is impossible for ground rigs, making drones and airplanes the only options.',
-      'Mississippi State and LSU AgCenter have published the most applied drone-application research in the US.',
-      'Neighboring non-target crops (organic soybeans, sensitive vegetables) often rule out airplane application, giving drones a unique advantage.',
-      'Tank-mix herbicide + fungicide + insecticide passes are common in the Delta and require expert tank-mix compatibility knowledge.',
+      'The Delta is where drones and manned aerial applicators compete head to head on rice, cotton, and soybeans. Flooded rice paddies make drones uniquely effective for the 2.5 million acres that ground rigs cannot reach.',
+    longDescription:
+      'The Mississippi Delta stretches from the Missouri Bootheel through Arkansas, Mississippi, and Louisiana, and is the most aerial-application-intensive ag region in the United States. Rice (2.5 million acres, concentrated in Arkansas), cotton (major acreage across all four states), and soybeans anchor the crop mix. The Delta defined aerial application long before drones arrived: manned airplane operators have served this flat, flooded landscape for decades, and drone operators compete directly with that established infrastructure. Drones have found their strongest niche in rice, where flooded paddy conditions make ground equipment impractical from flood-up through drain. Arkansas alone produces 1.2 million acres of rice that is effectively 100 percent aerial-treated for heading-stage fungicide. University of Arkansas Extension reports 7 percent average yield improvement from drone fungicide at R4 to R6. Delta fleet operators commonly run 3 to 8 DJI Agras T50 drones and treat 800 to 1,200 acres per day during the July and August rice heading peak. Cotton defoliant in September and October is the second major drone opportunity, especially on soft Delta soils where ground rigs cannot operate. Per-acre rates run $14 to $18, held moderate by strong manned aerial competition.',
+    aeoBlock:
+      'Delta drone spraying costs $14 to $18 per acre across rice, cotton, and soybeans. Arkansas 1.2 million acres of rice is effectively 100 percent aerial-treated, with drones taking rapid share from airplanes due to lower drift and better access to small levee fields. University of Arkansas Extension reports 7 percent average yield improvement from heading-stage fungicide on rice.',
+    priceRangeUsd: '$14 to $18',
+    primaryCrops: ['Rice', 'Cotton', 'Soybeans', 'Corn'],
+    sprayWindows: [
+      { crop: 'Rice heading fungicide', months: 'July to August', stage: 'R4 to R6' },
+      { crop: 'Cotton defoliant', months: 'September to October', stage: '60%+ open bolls' },
+      { crop: 'Soybean fungicide', months: 'July to August', stage: 'R2/R3' },
+      { crop: 'Rice herbicide pre-flood', months: 'May to June', stage: 'Pre-flood' },
     ],
-    sprayWindow: 'March through October, peaking June–September',
+    keyInsights: [
+      'Manned aerial applicator competition is stronger here than anywhere else in the US, which keeps drone pricing moderate at $14 to $18 per acre.',
+      'Rice is the drone sweet spot: flooded fields make ground equipment impossible, and drones outcompete airplanes on drift control near sensitive soybean borders.',
+      'Delta fleet operators run 3 to 8 drone crews, treating 800 to 1,200 acres per day during rice heading peak.',
+      'Cotton defoliant timing (September to October) hits when Delta soils are still saturated from summer flooding, blocking ground rigs and creating demand for aerial application.',
+    ],
     authorityLinks: [
       { label: 'University of Arkansas Extension: Rice Production', url: 'https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice' },
-      { label: 'Mississippi State Extension: Cotton Pest Management', url: 'https://extension.msstate.edu/agriculture/crops/cotton' },
       { label: 'LSU AgCenter: Rice Disease Management', url: 'https://www.lsuagcenter.com/topics/crops/rice' },
+      { label: 'Mississippi State Extension: Cotton', url: 'https://extension.msstate.edu/agriculture/crops/cotton' },
     ],
+    faqs: [
+      {
+        question: 'Why use drones instead of airplanes in the Delta?',
+        answer:
+          'Drift control. Delta rice and cotton fields share borders with dicamba-sensitive and 2,4-D-sensitive soybeans. State regulators tighten aerial drift rules every year. Drones flying 8 to 15 feet above canopy hold drift within a tighter corridor than airplanes at 50 to 100 feet. On small levee rice fields, drones also handle turns more efficiently.',
+      },
+      {
+        question: 'What does drone spraying cost in Arkansas and Mississippi?',
+        answer:
+          'Rice and cotton applications run $14 to $18 per acre. Large blocks over 500 acres sometimes negotiate closer to $12 to $14. Manned airplane competition keeps a ceiling on drone pricing in this region.',
+      },
+      {
+        question: 'How many acres can a Delta drone crew treat per day on rice?',
+        answer:
+          'Fleet operators with 3 to 8 DJI Agras T50 drones routinely treat 800 to 1,200 acres per day during the July and August rice heading window. Single-drone operators cover 200 to 400 acres per day.',
+      },
+      {
+        question: 'Do I need a special state license to spray rice in Arkansas?',
+        answer:
+          'Yes. Arkansas requires a commercial pesticide applicator license plus an aerial sub-classification. Louisiana requires an aerial applicator category endorsement. Mississippi has similar requirements. Your drone operator handles their own licensing, but ask to see certificates before booking.',
+      },
+      {
+        question: 'Is drone spraying growing or shrinking in the Delta?',
+        answer:
+          'Growing, especially on rice and cotton. NAAA 2025 survey data shows UAS adoption among aerial applicators jumped from 5 to 13 percent in one year nationally, with the Delta leading adoption because of the rice niche. The question is not whether drones replace airplanes, but how fast they take share on sub-500-acre fields and drift-sensitive borders.',
+      },
+    ],
+    lastReviewedAt: '2026-04-16',
   },
   {
     slug: 'california',
     name: 'California',
-    tagline: 'Vineyards, orchards, and high-value specialty crops',
+    states: ['California'],
     stateSlugs: ['california'],
-    primaryCrops: ['grapes', 'orchards', 'rice'],
-    totalAcres: 25000000,
-    icon: '🍇',
-    aeoBlock:
-      'California is the highest-value-per-acre drone spray market in the US, with approximately 900,000 acres of wine grapes, 1.2 million acres of tree nuts and orchards, and 500,000 acres of rice. Hillside vineyard applications for powdery mildew and downy mildew, plus orchard canopy penetration, drive drone demand at $18 to $35 per acre. California also has the most complex regulatory layer in the US — every application must be reported to the County Agricultural Commissioner and comply with CDPR restricted-materials rules.',
     description:
-      'California accounts for nearly half the value of US specialty crop production and has the most stringent pesticide regulations of any state. Drone spraying is uniquely suited to California because of the state\'s hillside vineyards (where tractors cannot safely operate), dense high-value orchards (almonds, pistachios, walnuts), and flooded rice fields in the Sacramento Valley. The California Department of Pesticide Regulation (CDPR) has specific drone aerial application rules that are stricter than federal FAA/EPA requirements, including mandatory Restricted Material Permits for many products and daily Notice of Intent filings. Commercial drone operators in California must hold both the state QAC (Qualified Applicator Certificate) with aerial subcategory, and the county agricultural commissioner registration for each county of operation.',
+      'California is the highest-value drone spray market in the US, driven by 900,000 acres of wine grapes, 1.5 million acres of almonds and tree nuts, and the strictest pesticide regulations in the country.',
+    longDescription:
+      'California is the highest-value and most complex drone spray market in the United States. Approximately 900,000 acres of wine grapes in Napa, Sonoma, Paso Robles, Lodi, and the Central Coast receive 8 to 12 fungicide passes per season for powdery mildew, downy mildew, and botrytis. Almonds (1.5 million acres), pistachios, walnuts, citrus, and stone fruit add millions more acres of orchard drone opportunity. Per-acre rates are the highest in the country at $15 to $35, driven by steep vineyard terrain, dense orchard canopy, complex flight paths, and the regulatory burden of California Department of Pesticide Regulation (CDPR) compliance. Every application must be reported to the County Agricultural Commissioner, many products require Restricted Material Permits, and some require same-day Notice of Intent filing. Operators must hold the CDPR Unmanned Pest Control Aircraft Pilot Certificate in addition to a standard Qualified Applicator Certificate or License (QAC/QAL). DJI Agras T25P and T50 are the dominant vineyard platforms. UC Davis Cooperative Extension reports drone-applied fungicide on hillside vineyards reduces chemical runoff by 30 to 40 percent compared to conventional airblast. The Central Valley almond and pistachio market is growing fast for early-season dormant oil and fungicide passes.',
+    aeoBlock:
+      'California drone spraying costs $15 to $35 per acre, the highest in the US, driven by vineyard and orchard complexity plus CDPR regulatory requirements. Operators must hold the CDPR Unmanned Pest Control Aircraft Pilot Certificate plus QAC/QAL, FAA Part 107, and FAA Part 137. UC Davis Extension reports drone application reduces chemical runoff by 30 to 40 percent on hillside vineyards compared to conventional airblast sprayers.',
+    priceRangeUsd: '$15 to $35',
+    primaryCrops: ['Wine Grapes', 'Almonds', 'Pistachios', 'Walnuts', 'Citrus', 'Stone Fruit', 'Vegetables'],
+    sprayWindows: [
+      { crop: 'Vineyard fungicide', months: 'March to September', stage: '8 to 12 passes bud break through veraison' },
+      { crop: 'Almond dormant oil', months: 'January to February', stage: 'Dormant' },
+      { crop: 'Almond/pistachio fungicide', months: 'March to June', stage: 'Bloom through hull split' },
+      { crop: 'Citrus insecticide', months: 'April to August', stage: 'Various' },
+    ],
     keyInsights: [
-      'Hillside Napa and Sonoma vineyards are the premier drone application market in the US — ground equipment cannot safely operate on slopes above 15%.',
-      'Almond, pistachio, and walnut orchards (1.2M+ acres) use drones for canopy fungicide and early-season dormant applications.',
-      'California Restricted Material Permits and daily Notice of Intent filings add regulatory complexity beyond federal FAA/EPA rules.',
-      'Sacramento Valley rice (500K+ acres) receives heavy drone fungicide at heading for rice blast and sheath blight.',
-      'UC Davis Cooperative Extension research shows drone application reduces chemical runoff by 30–40% vs. conventional airblast sprayers on hillsides.',
+      'Per-acre rates are 2 to 3 times higher than Corn Belt rates because of vineyard slopes, orchard canopy density, and CDPR compliance overhead.',
+      'Hillside vineyard blocks with slopes over 15 percent cannot safely use tractor airblast sprayers. Drones are the only ground-alternative spray method for these blocks.',
+      'Every application must be reported to the County Agricultural Commissioner. Some products require Restricted Material Permits and same-day Notice of Intent filings.',
+      'Organic vineyard and orchard spraying (sulfur, copper hydroxide, Regalia) is one of the fastest-growing drone niches in California.',
     ],
-    sprayWindow: 'February through November, peaking March–August',
     authorityLinks: [
-      { label: 'California Department of Pesticide Regulation', url: 'https://www.cdpr.ca.gov' },
-      { label: 'UC IPM: Vineyard and Orchard Pest Management', url: 'https://ipm.ucanr.edu/agriculture' },
-      { label: 'UC Davis Cooperative Extension: Drone Applications', url: 'https://ucanr.edu' },
+      { label: 'California Department of Pesticide Regulation (CDPR)', url: 'https://www.cdpr.ca.gov' },
+      { label: 'UC Davis Cooperative Extension: Vineyard Pest Management', url: 'https://ipm.ucanr.edu/agriculture/grape' },
+      { label: 'UC IPM: Apple and Pear Pest Management', url: 'https://ipm.ucanr.edu/agriculture/apple' },
     ],
+    faqs: [
+      {
+        question: 'What extra licenses do drone operators need in California?',
+        answer:
+          'Beyond FAA Part 107 and Part 137, California requires the CDPR Unmanned Pest Control Aircraft Pilot Certificate plus either a Qualified Applicator Certificate (QAC) for certified operators or Qualified Applicator License (QAL) for licensed business owners. County Agricultural Commissioner registration is required in each county of operation.',
+      },
+      {
+        question: 'Why is California drone spraying so much more expensive?',
+        answer:
+          'Three factors: terrain complexity (steep vineyard slopes, dense orchard canopy), regulatory overhead (CDPR reporting, Restricted Material Permits, Notice of Intent filings), and the high number of passes per season (8 to 12 on grapes, 6 to 10 on tree fruit). Corn Belt operators spray flat fields 1 to 2 times per season; California operators spray complex terrain 8 to 12 times.',
+      },
+      {
+        question: 'Can drones spray organic vineyards in California?',
+        answer:
+          'Yes, and this is a fast-growing niche. OMRI-approved sulfur, copper hydroxide, Regalia, and other organic products apply well by drone at 10 to 20 gpa carrier. Some organic growers prefer drones specifically because lower drift and targeted coverage reduce impact on cover crops and beneficial insects between vine rows.',
+      },
+      {
+        question: 'When should I book a drone operator for my California vineyard?',
+        answer:
+          'Full-season contracts should be signed by January or February for the March through September spray program. Mid-season one-off sprays during powdery mildew spikes are nearly impossible to source without a pre-existing operator relationship. Multi-year contracts with a dedicated operator can trim 10 to 15 percent off spot pricing.',
+      },
+      {
+        question: 'Are drones replacing airblast sprayers in California orchards?',
+        answer:
+          'Partially. Drones handle 6 to 8 of 10 annual orchard passes well, especially dormant oil, early-season fungicide, and late-season insecticide. Dense mid-summer canopy on mature almond and walnut trees above 20 feet still often requires supplemental airblast for full coverage. Most California orchard drone operators run hybrid programs combining both methods.',
+      },
+    ],
+    lastReviewedAt: '2026-04-16',
   },
   {
     slug: 'southeast',
     name: 'Southeast',
-    tagline: 'Cotton, peanuts, and specialty crops from Georgia to North Carolina',
-    stateSlugs: ['georgia', 'alabama', 'tennessee', 'south-carolina', 'north-carolina', 'virginia', 'florida'],
-    primaryCrops: ['cotton', 'soybeans', 'corn', 'orchards'],
-    totalAcres: 55000000,
-    icon: '🌾',
-    aeoBlock:
-      'The Southeast — Georgia, Alabama, Florida, Tennessee, and the Carolinas — combines cotton, peanuts, soybeans, and specialty crops across roughly 55 million agricultural acres. Drone spraying targets cotton defoliation, peanut fungicide at pegging, soybean R3 fungicide, and citrus greening management in Florida. Rates run $14 to $22 per acre, and operator demand is driven by the region\'s irregular field shapes, rolling topography, and frequent summer rainfall that limits ground rig access.',
+    states: ['Georgia', 'Alabama', 'Florida', 'South Carolina', 'North Carolina', 'Virginia', 'West Virginia'],
+    stateSlugs: ['georgia', 'alabama', 'florida', 'south-carolina', 'north-carolina', 'virginia', 'west-virginia'],
     description:
-      'The Southeast is a diverse agricultural region spanning from Virginia peanuts and tobacco down to Florida citrus and south Georgia cotton. Field shapes here are smaller and more irregular than the Corn Belt, driven by historical land-use patterns and the region\'s rolling topography. Drone applications fill gaps where ground equipment is impractical and airplane mobilization is uneconomic. Cotton defoliation in October, peanut fungicide at R3/R4, and fall cover crop overseeding into corn and soybeans are the top three drone use cases. Florida citrus greening (HLB) management has also emerged as a specialty use, with operators applying nutritional cocktails and targeted insecticides for Asian citrus psyllid control.',
+      'The Southeast is a mixed-crop region where cotton, peanuts, tobacco, peaches, blueberries, and citrus create diverse drone demand at $16 to $28 per acre.',
+    longDescription:
+      'The Southeast spans Georgia through Virginia and features the most diverse crop mix of any US drone spray region. Cotton and peanuts in Georgia and Alabama, tobacco in the Carolinas and Virginia, peaches in Georgia and South Carolina, blueberries in Georgia and Florida, and citrus in Florida each create distinct spray windows and drone application requirements. Per-acre rates run $16 to $28, higher than Corn Belt and Great Plains because of variable terrain, mixed crop types, higher chemical costs, and fewer operators per acre. The Southeast also has a growing drone application niche in forestry and pine plantation management. Georgia and North Carolina lead in operator density. Florida citrus presents a specialized opportunity with Asian citrus psyllid management requiring frequent low-volume insecticide applications across large acreage. Tobacco applications in the Carolinas and Virginia target blue mold and black shank, with drone access solving the problem of driving through waist-high tobacco in mid-season. The region is less price-competitive than the Midwest, which means operator margins are healthier but customer adoption is earlier-stage.',
+    aeoBlock:
+      'Southeast drone spraying costs $16 to $28 per acre across cotton, peanuts, tobacco, peaches, blueberries, and citrus. Georgia and North Carolina lead the region in operator density. The diverse crop mix creates year-round spray demand from Florida citrus in spring through cotton defoliant in fall, with higher margins than Corn Belt markets due to fewer operators and more complex crop requirements.',
+    priceRangeUsd: '$16 to $28',
+    primaryCrops: ['Cotton', 'Peanuts', 'Tobacco', 'Peaches', 'Blueberries', 'Citrus', 'Soybeans'],
+    sprayWindows: [
+      { crop: 'Cotton mid-season insecticide', months: 'July to August', stage: 'R1 to R4 flowering' },
+      { crop: 'Cotton defoliant', months: 'September to October', stage: '60%+ open bolls' },
+      { crop: 'Tobacco fungicide', months: 'June to August', stage: 'Topping through harvest' },
+      { crop: 'Peach/blueberry fungicide', months: 'March to July', stage: 'Bloom through pre-harvest' },
+      { crop: 'Citrus insecticide (FL)', months: 'March to August', stage: 'New flush growth' },
+    ],
     keyInsights: [
-      'Georgia cotton (1M+ acres) is the largest single-state cotton drone market east of the Mississippi.',
-      'Peanut R3/R4 fungicide applications across Georgia, Alabama, and Florida (1.5M peanut acres) favor drones on wet August ground.',
-      'Florida citrus greening management pushes operators into nutritional and targeted psyllid applications in orchards.',
-      'Tennessee and the Carolinas have fragmented field shapes that make ground rigs inefficient and airplanes uneconomic.',
-      'UGA and NC State extension actively publish drone trial data for cotton and peanut systems.',
+      'The Southeast crop diversity means operators who can serve multiple crop types (row crops plus orchards plus specialty) have stronger year-round utilization than single-crop specialists.',
+      'Fewer operators per acre than the Corn Belt means less pricing pressure, healthier margins, and more opportunity for new entrants.',
+      'Florida citrus (Asian citrus psyllid management) is a growing niche requiring frequent, precise, low-volume insecticide applications that drones handle well.',
+      'Tobacco in the Carolinas and Virginia is a high-value crop where drone access solves the problem of mid-season ground rig damage to waist-high plants.',
     ],
-    sprayWindow: 'April through November, peaking July–October',
     authorityLinks: [
-      { label: 'University of Georgia Extension: Cotton Production', url: 'https://site.extension.uga.edu/colquittag/cotton' },
-      { label: 'NC State Extension: Peanut Production', url: 'https://peanut.ces.ncsu.edu' },
-      { label: 'University of Florida IFAS: Citrus Greening', url: 'https://crec.ifas.ufl.edu/extension/greening' },
+      { label: 'University of Georgia Extension: Cotton and Peanut Pest Management', url: 'https://extension.uga.edu/topic-areas/field-crops.html' },
+      { label: 'NC State Extension: Tobacco Production', url: 'https://tobacco.ces.ncsu.edu' },
+      { label: 'University of Florida IFAS: Citrus Pest Management', url: 'https://crec.ifas.ufl.edu' },
     ],
+    faqs: [
+      {
+        question: 'What does drone spraying cost in the Southeast?',
+        answer:
+          'Typical rates run $16 to $28 per acre depending on crop and terrain. Cotton and soybean applications are at the lower end ($16 to $20). Peach, blueberry, tobacco, and citrus applications run higher ($20 to $28) because of canopy complexity, smaller field sizes, and more passes per season.',
+      },
+      {
+        question: 'Is the Southeast a good market for new drone operators?',
+        answer:
+          'Yes, because operator density is lower than the Corn Belt, margins are healthier, and the diverse crop mix allows year-round work rather than a single 3-week peak season. Operators who can serve both row crops and specialty crops have the strongest business model here.',
+      },
+      {
+        question: 'Can drones spray tobacco effectively?',
+        answer:
+          'Yes. Tobacco plants reach waist height by mid-season, making ground sprayer access damaging. Drones apply blue mold and black shank fungicides at R1 through harvest without touching the crop. North Carolina and Virginia tobacco growers increasingly prefer drone application over backpack sprayers for large acreage.',
+      },
+      {
+        question: 'Is drone spraying growing in Florida citrus?',
+        answer:
+          'Yes, driven by Asian citrus psyllid management. The psyllid vector for citrus greening disease requires frequent low-volume insecticide applications (every 2 to 4 weeks during new flush growth) across large grove acreage. Drones handle this more precisely and with less drift than airblast sprayers, especially near residential areas.',
+      },
+      {
+        question: 'What are the main regulatory differences in the Southeast?',
+        answer:
+          'Each state has its own commercial pesticide applicator licensing. Georgia, North Carolina, and Virginia require specific aerial applicator categories. Florida requires a separate license for each of 24 pest control categories. Alabama and South Carolina have lighter requirements. Check your state department of agriculture for exact categories.',
+      },
+    ],
+    lastReviewedAt: '2026-04-16',
   },
 ];
 
+export const regionBySlug: Record<string, Region> = Object.fromEntries(
+  regions.map((r) => [r.slug, r])
+);
+
 export function getRegionBySlug(slug: string): Region | undefined {
-  return regions.find((r) => r.slug === slug);
+  return regionBySlug[slug];
 }
+
+export const REGION_NAME_MAP: Record<string, string> = Object.fromEntries(
+  regions.map((r) => [r.slug, r.name])
+);
