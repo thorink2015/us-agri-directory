@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import {
   CheckCircle, ArrowRight, Calculator, Clock, DollarSign, Shield,
   ShieldCheck, MapPin, Sprout, Droplets, Map as MapIcon, Radar, Settings, ShoppingCart,
@@ -163,6 +164,11 @@ export default function HomePage() {
 
   return (
     <>
+      <Script
+        id="avantlink-verify"
+        src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=7f2a5dd0e8c0a0d88c8f463171c14e1a35737fe2"
+        strategy="afterInteractive"
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
