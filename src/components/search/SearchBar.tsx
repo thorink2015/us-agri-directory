@@ -4,20 +4,15 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Search, MapPin } from 'lucide-react';
 import { counties } from '@/data/counties';
-import { services } from '@/data/services';
 
 export default function SearchBar() {
   const [state, setState] = useState('');
-  const [service, setService] = useState('');
   const router = useRouter();
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (state) {
-      const qs = service ? `?service=${service}` : '';
-      router.push(`/states/${state}${qs}`);
-    } else if (service) {
-      router.push(`/services/${service}`);
+      router.push(`/states/${state}`);
     } else {
       router.push('/operators');
     }
@@ -40,26 +35,12 @@ export default function SearchBar() {
           ))}
         </select>
       </div>
-      <div className="relative flex-1">
-        <label htmlFor="service-select" className="sr-only">Select service type</label>
-        <select
-          id="service-select"
-          value={service}
-          onChange={(e) => setService(e.target.value)}
-          className="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl text-gray-700 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent appearance-none cursor-pointer"
-        >
-          <option value="">All services...</option>
-          {services.map((s) => (
-            <option key={s.slug} value={s.slug}>{s.name}</option>
-          ))}
-        </select>
-      </div>
       <button
         type="submit"
         className="flex items-center justify-center gap-2 px-6 py-3.5 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition-colors text-sm whitespace-nowrap"
       >
         <Search className="w-4 h-4" />
-        Search Operators
+        Find Operators
       </button>
     </form>
   );

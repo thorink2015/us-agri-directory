@@ -113,6 +113,41 @@
   - Post 10: `/blog/first-1000-acres-drone-operator` — MU Extension break-even math, 5 customer-acquisition channels, cover crop revenue bridge, drone #2 timing
 - Drop-folder `_research/blog-posts-6-10.md` removed post-integration.
 
+## 2026-04-17 — Homepage V1 design revert (batch 1 of 3)
+
+- **Batch 1 (top half of page):** reverted hero/AEO/stats/trust/services to V1 visual language while preserving V2 SEO content (5 JSON-LD blocks, FAQ, metadata).
+  - Hero: restored V1 H1 ("Find a Drone Spraying Service Near Your Farm" with gold accent on "Drone Spraying Service") and V1 subhead, dropped V2's 3 inline bullet stats
+  - `SearchBar`: removed the service-type dropdown; now single state dropdown + "Find Operators" button
+  - AEO block: removed Byline (photo + byline + updated date) from homepage — author still on /about and in schema
+  - Stats row: added Lucide SVG icons (ShieldCheck, MapPin, Sprout, DollarSign) above each number; added source line
+  - New "Why farmers use this directory" section with 4 trust cards and green circle checkmark icons
+  - Services: replaced emoji icons with Lucide (Droplets, Sprout, Map, Radar, Settings, ShoppingCart); all 6 cards link to `/services/[slug]` using the real slug set
+- Pushed to branch `claude/revert-homepage-design-v1-ZYGY0` (not main — branch specified by session)
+- Build: `npm run build` zero errors
+- Batches 2 and 3 cover sections below Services (crops, tools, FAQ, drones, blog, CTA)
+
+## 2026-04-17 — Homepage V1 design revert (batch 2 of 3)
+
+- **Batch 2 (middle sections):** reordered and rebuilt crops, operators, states, how-it-works.
+  - Crops: repositioned above operators, H2 changed to "Drone services by crop type" with subhead "Find operators with hands-on experience in your production system"; card layout unchanged
+  - Featured operators: new section with 3 `OperatorCard`s (capped via `getFeaturedOperators().slice(0,3)`), right-aligned "View all operators" link
+  - States: replaced the full region-grouped 50-state grid with a compact 8-card row sorted by operator count; full 50-state grid still lives on `/states` and in footer
+  - How it works: restored V1's 3-step section (Search your area / Compare operators / Contact and book) with green "Step N" badges, circle icons, and "Find an Operator" CTA
+- Build: `npm run build` zero errors (1214 pages generated)
+- Batch 3 covers tools, FAQ, drones, blog, newsletter + operator CTA, footer
+
+## 2026-04-17 — Homepage V1 design revert (batch 3 of 3)
+
+- **Batch 3 (final sections):** tools expansion, blog wiring, newsletter band, footer byline removal.
+  - Tools section: expanded from 3 to 6 cards in a 3-col grid (Spray Cost, ROI, Coverage Time, Acreage Converter, Drone Comparison, Treatment Calendar); each links to `/tools/[slug]`; Lucide icons (Ruler, GitCompare, CalendarDays)
+  - Blog section: replaced hardcoded 3-post list with live `blogPosts` data sorted by `publishedAt` desc (top 3); each card links to `/blog/[slug]`
+  - Newsletter: new compact section between blog and operator CTA (Mail icon + label + email input + Subscribe button, posts to `/newsletter`)
+  - Footer byline: removed the visible "Edited by Eugen" strip from the homepage (AUTHOR still in schema + on `/about`); removed unused `LAST_REVIEWED` constant and `AUTHOR` import
+  - FAQ content / Popular drones / Operator CTA unchanged (already matched spec)
+- Verification: no `--`/`—`/`–` on the page; no "Edited by"/author-photo references; FAQPage schema intact; 16 `Link href` declarations (52+ rendered links after iteration)
+- Build: `npm run build` zero errors (1214 pages)
+- Pushed to `claude/revert-homepage-design-v1-ZYGY0`; draft PR #32 updated, marked ready for review
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
