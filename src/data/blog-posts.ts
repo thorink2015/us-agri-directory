@@ -20,6 +20,38 @@ import { BlogPost } from './types';
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'faa-part-137-drone-guide',
+    title: 'How to Get FAA Part 137 for Agricultural Drone Spraying',
+    description:
+      'FAA Part 137 takes 90 to 180 days. The exact process: operations manual, 44807 petition, training records, and common mistakes that delay approval.',
+    category: 'guide',
+    publishedAt: '2026-04-16',
+    author: 'Eugen',
+    readMinutes: 9,
+    tags: ['FAA', 'Part 137', 'Section 44807', 'regulations', 'ag aviation'],
+    relatedServices: ['consultancy', 'training'],
+    content: 'faa-part-137-drone-guide',
+    aeoBlock:
+      'FAA Part 137 Agricultural Aircraft Operator Certificate is required for any commercial aerial pesticide application by drone. The process takes 90 to 180 days from complete submission. Drones over 55 lbs require a Section 44807 exemption filed concurrently. Consultant packages at $2,500 to $4,500 shorten the timeline by 60 to 120 days by avoiding revision cycles on the operations manual.',
+    faqs: [
+      {
+        question: 'Can I start spraying while Part 137 is pending?',
+        answer:
+          'No. You cannot perform commercial aerial pesticide application until Part 137 is approved and in hand. Spraying under Part 107 alone is a federal violation.',
+      },
+      {
+        question: 'Do I need a separate 44807 for each drone model?',
+        answer:
+          'The 44807 exemption covers your operation, not a specific serial number, but it does reference the drone type. Adding a different model may require an amendment. Adding another unit of the same model does not.',
+      },
+      {
+        question: 'What happens if FAA rejects my application?',
+        answer:
+          'Outright rejection is rare. More commonly, FAA requests revisions to your operations manual or additional documentation. Address the specific feedback and resubmit. Consultants experience near-100 percent eventual approval rates.',
+      },
+    ],
+  },
+  {
     slug: 'corn-fungicide-drone-spraying-guide',
     title: 'Corn Fungicide by Drone: What the University Data Actually Shows',
     description:
