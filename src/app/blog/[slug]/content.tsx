@@ -2,6 +2,86 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 export const blogContent: Record<string, ReactNode> = {
+  'ndaa-chinese-drones-what-farmers-need-to-know': (
+    <>
+      <h2>What NDAA actually does</h2>
+      <p>
+        Restricts federal agencies from purchasing or using drones from designated foreign
+        manufacturers (DJI, XAG) under Sections 889 and 848. It does NOT ban private purchase or
+        use. It does NOT affect private farm contracts. Full text and affected lists on the{' '}
+        <Link href="/regulations/ndaa-compliance">NDAA compliance page</Link>.
+      </p>
+
+      <h2>Who IS affected</h2>
+      <p>
+        Federal agencies. State agencies using federal funds. University researchers on federal
+        grants. Operators bidding USDA, NRCS, or state-funded spray contracts. If you receive
+        federal money for the work, NDAA compliance may be required.
+      </p>
+
+      <h2>Who is NOT affected</h2>
+      <p>
+        Farmers hiring drone operators for private contracts. Farmers buying their own DJI drone for
+        own-farm use. Operators working exclusively private farm contracts. This is the vast
+        majority of the US ag drone market.
+      </p>
+
+      <h2>The tariff reality</h2>
+      <p>
+        170 percent cumulative tariff on Chinese drones by April 2025. Drones explicitly excluded
+        from the April 12 electronics tariff exemptions. The{' '}
+        <Link href="/drones/dji-agras-t50">DJI T50</Link> moved from $18,000 pre-tariff to $22,000
+        to $28,000 post-tariff. Tariff trajectory is unpredictable; budget accordingly.
+      </p>
+
+      <h2>Pending legislation</h2>
+      <p>
+        The Countering CCP Drones Act would add DJI to the FCC Covered List, potentially restricting
+        communications capabilities. Excluded from FY2025 NDAA but active in subsequent legislative
+        cycles. Not law yet as of April 2026.
+      </p>
+
+      <h2>US-made alternatives</h2>
+      <p>
+        <Link href="/drones/hylio-ag-272">Hylio AG-272</Link> ($55,000 to $75,000): fully NDAA
+        compliant, manufactured in Richmond, TX. Pyka Pelican 2 ($550,000): fixed-wing, Alameda, CA.
+        Talos T60X ($17,899): US-branded, manufacturing origin unconfirmed. Compare full specs side
+        by side in the <Link href="/tools/drone-comparison">drone comparison tool</Link>.
+      </p>
+
+      <h2>The mixed-fleet strategy</h2>
+      <p>
+        Many operators run DJI for private farm work (lower cost per unit) and Hylio for federal or
+        state contracts (NDAA compliance). Two platforms, two sets of training, but access to all
+        customer segments. The full platform trade-offs are in our{' '}
+        <Link href="/buyers-guide">drone buyers guide</Link>.
+      </p>
+
+      <h2>What farmers should do</h2>
+      <p>
+        If you are hiring a drone operator for private farm spraying, DJI versus Hylio does not
+        matter to you. Ask about certifications (Part 107, Part 137, state license) not drone brand.
+        If you are buying your own drone with EQIP cost-share from federal funds, check with your
+        local NRCS office whether NDAA compliance is required for your specific grant. Our{' '}
+        <Link href="/services/sales">sales directory</Link> lists both DJI dealers and Hylio
+        distributors.
+      </p>
+
+      <h2>Authority sources</h2>
+      <ul>
+        <li>
+          <a href="https://www.diu.mil/blue-uas" target="_blank" rel="noopener noreferrer">
+            Defense Innovation Unit &mdash; Blue UAS Cleared List
+          </a>
+        </li>
+        <li>
+          <a href="https://www.congress.gov" target="_blank" rel="noopener noreferrer">
+            Congress.gov &mdash; Countering CCP Drones Act status
+          </a>
+        </li>
+      </ul>
+    </>
+  ),
   'drone-spraying-pricing-trends-2026': (
     <>
       <h2>The data</h2>

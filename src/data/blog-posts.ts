@@ -20,6 +20,38 @@ import { BlogPost } from './types';
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'ndaa-chinese-drones-what-farmers-need-to-know',
+    title: 'The DJI Question: NDAA, Tariffs, and What It Means for Your Farm',
+    description:
+      'DJI drones are legal but face 170% tariffs and pending legislation. What NDAA means, who is affected, and when to consider US-made alternatives.',
+    category: 'legislation',
+    publishedAt: '2026-04-16',
+    author: 'Eugen',
+    readMinutes: 8,
+    tags: ['NDAA', 'DJI', 'Hylio', 'tariffs', 'Countering CCP Drones Act'],
+    relatedServices: ['sales'],
+    content: 'ndaa-chinese-drones-what-farmers-need-to-know',
+    aeoBlock:
+      'DJI agricultural drones remain legal to purchase and operate in the US as of April 2026 but face 170 percent cumulative tariffs, FY2025 NDAA Section 1709 security review requirements, and the pending Countering CCP Drones Act. NDAA restrictions apply only to federal agency procurement, not private commercial use. Farmers hiring drone operators for private contracts are not affected by NDAA regardless of which drone the operator flies.',
+    faqs: [
+      {
+        question: 'Will DJI get banned?',
+        answer:
+          'Unknown. As of April 2026, DJI is legal to purchase and operate. The Countering CCP Drones Act is active but not yet law. Tariffs are the more immediate financial impact on the US market.',
+      },
+      {
+        question: 'Should I wait to buy a drone until NDAA is resolved?',
+        answer:
+          'If you work only private farm contracts, buy now based on current pricing and your ROI calculation. If you plan to bid federal or state work, buy Hylio now so you are NDAA-compliant from day one.',
+      },
+      {
+        question: 'Does the drone my operator uses affect my crop insurance?',
+        answer:
+          'No. USDA RMA crop insurance is not affected by the drone manufacturer used for application. Coverage depends on proper application per product label, not equipment brand.',
+      },
+    ],
+  },
+  {
     slug: 'drone-spraying-pricing-trends-2026',
     title: 'Why Drone Spraying Rates Dropped 30 to 45 Percent in Three Years',
     description:
