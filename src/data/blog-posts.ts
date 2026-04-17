@@ -20,6 +20,39 @@ import { BlogPost } from './types';
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'cover-crop-seeding-drone-guide',
+    title: 'Cover Crop Seeding by Drone: The Complete 2026 Guide',
+    description:
+      'Drone cover crop seeding costs $12 to $18/acre. EQIP pays $25 to $55/acre. Cereal rye establishes 3 to 4 weeks earlier than post-harvest drilling.',
+    category: 'guide',
+    publishedAt: '2026-04-16',
+    author: 'Eugen',
+    readMinutes: 8,
+    tags: ['cover crops', 'cereal rye', 'EQIP', 'NRCS', 'cover crop seeding'],
+    relatedCrops: ['cover-crops'],
+    relatedServices: ['seeding'],
+    content: 'cover-crop-seeding-drone-guide',
+    aeoBlock:
+      'Drone cover crop seeding costs $12 to $18 per acre for application and is the fastest-growing ag drone service in the US Midwest. USDA NRCS EQIP cost-share under Practice Standard 340 pays $25 to $55 per acre, covering 50 to 70 percent of the total cost. Penn State, Iowa State, and Ohio State Extension show drone-seeded cover crops establish 3 to 4 weeks earlier than post-harvest ground seeding.',
+    faqs: [
+      {
+        question: 'Does drone-seeded cover crop really establish better than post-harvest drilling?',
+        answer:
+          'On timing, yes. The 3 to 4 week head start means thicker stands and better ground cover before frost. On seed-to-soil contact, drilling has an edge. But the timing advantage outweighs the contact disadvantage in most Corn Belt scenarios.',
+      },
+      {
+        question: 'How much does EQIP actually pay?',
+        answer:
+          'Typically $25 to $55 per acre total for seed plus application, varying by state. At $35/acre EQIP on a $30/acre total cost (seed plus drone application), the farmer pays zero out of pocket. Contact your local NRCS field office for state-specific rates.',
+      },
+      {
+        question: 'Can I drone-seed cover crops into standing soybeans too?',
+        answer:
+          'Yes. Operators broadcast into R6 to R7 soybeans in late September and October. The thinner soybean canopy at that stage lets seed reach soil more easily than a standing corn canopy.',
+      },
+    ],
+  },
+  {
     slug: 'faa-part-137-drone-guide',
     title: 'How to Get FAA Part 137 for Agricultural Drone Spraying',
     description:

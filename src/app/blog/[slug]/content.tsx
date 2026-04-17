@@ -2,6 +2,103 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 export const blogContent: Record<string, ReactNode> = {
+  'cover-crop-seeding-drone-guide': (
+    <>
+      <h2>Why drones for cover crops</h2>
+      <p>
+        The math is simple: drone seeding into standing corn and soybeans in late August or September
+        gives cereal rye, clover, and ryegrass 3 to 4 extra weeks of establishment compared to
+        waiting for harvest and then drilling. That extra time is the difference between a full
+        stand by November and a patchy stand that overwinters poorly.
+      </p>
+
+      <h2>Best species for drone seeding</h2>
+      <ul>
+        <li><strong>Cereal rye</strong> &mdash; the workhorse, establishes reliably</li>
+        <li><strong>Annual ryegrass</strong> &mdash; fast germination</li>
+        <li><strong>Crimson clover</strong> &mdash; nitrogen fixation</li>
+        <li><strong>Hairy vetch</strong> &mdash; nitrogen fixation plus biomass</li>
+        <li><strong>Oats</strong> &mdash; winter-kill in northern states, leaving a mulch mat</li>
+        <li><strong>Radishes</strong> &mdash; compaction relief</li>
+        <li><strong>Brassicas</strong> &mdash; quick canopy</li>
+      </ul>
+      <p>
+        Avoid soybeans and peas &mdash; too large for drone hoppers and seed is damaged on impact.
+      </p>
+
+      <h2>Timing by region</h2>
+      <p>
+        Corn Belt: late August through mid-October. Time around corn canopy senescence so seed reaches
+        soil. <Link href="/states/iowa">Iowa</Link> and Illinois operators run August 20 through
+        September 15 for corn fields. <Link href="/states/ohio">Ohio</Link> and Indiana extend into
+        early October. Southern states: October through November.
+      </p>
+
+      <h2>Seed rates</h2>
+      <ul>
+        <li>Cereal rye: 50 to 60 lbs/acre</li>
+        <li>Annual ryegrass: 15 to 25 lbs/acre</li>
+        <li>Crimson clover: 15 to 20 lbs/acre</li>
+      </ul>
+      <p>
+        Mixes vary. Drone hopper capacity limits per-load acreage, so operators refill frequently.
+      </p>
+
+      <h2>EQIP cost-share</h2>
+      <p>
+        Practice Standard 340 pays $25 to $55/acre total (seed plus application) in most states. Some
+        states layer RCPP for 80 to 100 percent coverage. Net farmer cost after cost-share typically
+        lands at $5 to $12/acre. Contact your local NRCS field office for state-specific rates and
+        application windows (usually November through January for the following season). Full
+        program detail on the <Link href="/grants-and-subsidies">grants and subsidies</Link> page.
+      </p>
+
+      <h2>Booking</h2>
+      <p>
+        Book by late July or early August for September slots. Corn Belt operator capacity fills by
+        early August most years. The cover crop window overlaps with corn fungicide mop-up, so
+        operators are stretched thin. <Link href="/pricing">Current per-acre rates by region</Link>{' '}
+        and the <Link href="/tools/treatment-calendar">treatment calendar</Link> help lock in timing
+        ahead of the rush.
+      </p>
+
+      <h2>What can go wrong</h2>
+      <p>
+        Dry conditions after seeding delay germination &mdash; timing seed ahead of expected rain
+        solves this. A dense corn canopy can block seed from reaching soil; best results are when
+        corn leaves are beginning to senesce within a week of seeding.
+      </p>
+
+      <h2>See also</h2>
+      <p>
+        <Link href="/crops/cover-crops">Cover crops crop page</Link> &middot;{' '}
+        <Link href="/services/seeding">Drone cover-crop seeding services</Link> &middot;{' '}
+        <Link href="/states/pennsylvania">Pennsylvania</Link>
+      </p>
+
+      <h2>Authority sources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            USDA NRCS Cover Crop Practice Standard 340
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://mccc.msu.edu/covercroptool"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Midwest Cover Crops Council species selection tool
+          </a>
+        </li>
+      </ul>
+    </>
+  ),
   'faa-part-137-drone-guide': (
     <>
       <h2>What Part 137 actually is</h2>
