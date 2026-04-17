@@ -80,6 +80,12 @@ routes, map over the data source (e.g. `regions.map(r => ({ url: ... }))`).
 **Cause:** `regions/page.tsx` referenced three fields that weren't declared in the `Region` interface in `types.ts`.
 **Fix:** Add fields to interface (optional), populate in `regions.ts`, add nullish fallbacks in template. Run `npm run build` locally before pushing to catch this class of error early.
 
+### 2026-04-17 — Unused import fails Netlify build (ESLint error-level)
+**Symptom:** Netlify build fails with "Deploy failed" in ~27s. Local `next build` shows `Error: 'X' is defined but never used. @typescript-eslint/no-unused-vars`.
+**Cause:** `next/typescript` ESLint preset treats `@typescript-eslint/no-unused-vars` as **error** (not warn). With `eslint: { ignoreDuringBuilds: false }` in `next.config.mjs`, any unused import/variable kills the build.
+**Fix:** Remove the unused import. Run `./node_modules/.bin/next build` locally to catch all ESLint errors before pushing.
+**Prevention:** Always run the local build before pushing changes that add new imports.
+
 ## Data / content gotchas
 
 ### Romanian URLs in canonicals or internal links

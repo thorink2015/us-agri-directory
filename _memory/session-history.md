@@ -83,6 +83,12 @@
 - **Netlify branch fix:** Production branch changed from `claude/add-drone-operators-directory-T0YnN` → `main` in Netlify dashboard. All future merges to `main` now auto-deploy.
 - PRs #22 (state pages) and #23 (build fix) both merged to `main`.
 
+## 2026-04-17 — Build fix: ESLint + TypeScript errors (PR #26, merged)
+
+- **Root cause:** `BookOpen` unused import in `states/[slug]/page.tsx` — `@typescript-eslint/no-unused-vars` is error-level in `next/typescript`, blocking every Netlify build since PR #22.
+- **Also fixed:** `state.regionName` → `state.region` in `FallbackStatePage` (County type has `.region`); removed erroneous `agriculturalLandHa?`/`vineyardHa?` from `StateData` interface.
+- **Verified:** local `next build` passes cleanly — 1192 static pages, 0 errors.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
