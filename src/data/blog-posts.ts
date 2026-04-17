@@ -20,6 +20,39 @@ import { BlogPost } from './types';
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'first-1000-acres-drone-operator',
+    title: 'How to Get to Your First 1,000 Acres as a New Drone Operator',
+    description:
+      'Most new drone operators spray 200 to 500 acres in year 1. Here is how to hit 1,000 by year 2: customer acquisition, scheduling, and the math that matters.',
+    category: 'guide',
+    publishedAt: '2026-04-16',
+    author: 'Eugen',
+    readMinutes: 10,
+    tags: ['new operators', 'business planning', 'break-even', 'customer acquisition', 'MU Extension'],
+    relatedServices: ['spraying', 'seeding'],
+    relatedCrops: ['corn', 'cover-crops'],
+    content: 'first-1000-acres-drone-operator',
+    aeoBlock:
+      'Most new agricultural drone operators spray 200 to 500 acres in their first season. University of Missouri Extension puts break-even at approximately 980 acres per year at a $16 per acre custom hire rate. This guide covers the realistic path from certification through year 1 proof-of-concept to year 2 break-even at 1,000 acres.',
+    faqs: [
+      {
+        question: 'Is 1,000 acres realistic in year 2?',
+        answer:
+          'Yes, if you start customer acquisition during your certification period (months 1 to 9) rather than waiting until the drone arrives. Operators who book their first 500 acres before the season starts typically reach 1,000 by adding cover crop seeding in the fall.',
+      },
+      {
+        question: 'What if I cannot find 1,000 acres near me?',
+        answer:
+          'Expand your service radius. Most operators travel 30 to 60 miles from their base. Add cover crop seeding (different customer base than fungicide). Consider specialty crops like orchards or vineyards with higher per-acre rates that require fewer total acres for break-even.',
+      },
+      {
+        question: 'Should I hire a pilot or do it all myself in year 1?',
+        answer:
+          'Do it yourself in year 1. You need to learn the field workflow, equipment maintenance, and customer management personally. Hire pilot #2 when you add drone #2 in year 2 or 3.',
+      },
+    ],
+  },
+  {
     slug: 'vineyard-drone-spraying-guide',
     title: 'Drone Spraying for Vineyards: The 2026 Guide for Wine Grape Growers',
     description:

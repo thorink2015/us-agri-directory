@@ -2,6 +2,119 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 export const blogContent: Record<string, ReactNode> = {
+  'first-1000-acres-drone-operator': (
+    <>
+      <h2>The year 1 reality check</h2>
+      <p>
+        200 to 500 acres. $3,000 to $7,500 gross revenue at $15/acre average. This does NOT cover
+        your $35,000 to $55,000 equipment investment. Year 1 is proof-of-concept: prove you can do
+        the work, build 5 to 10 customer relationships, and learn your local market. If you are
+        still deciding on the platform, read the{' '}
+        <Link href="/buyers-guide">drone buyers guide</Link> first.
+      </p>
+
+      <h2>The 1,000-acre math</h2>
+      <p>
+        At $15/acre and 1,000 acres: $15,000 gross revenue. MU Extension ownership cost at 1,000
+        acres: $12,270/year. Net: $2,730. Thin, but positive. At 1,500 acres: $22,500 gross, roughly
+        $10,000 ownership cost (cost per acre drops with volume), $12,500 net. That is where the
+        business becomes real. Plug your own numbers into the{' '}
+        <Link href="/tools/roi-calculator">ROI calculator</Link>.
+      </p>
+
+      <h2>Customer acquisition: the 5 sources</h2>
+      <ol>
+        <li>
+          <strong>Personal network:</strong> farmers you know. Ask for their VT/R1 fungicide or
+          cover crop seeding work. 50 to 200 acres from 2 to 3 farmers.
+        </li>
+        <li>
+          <strong>Crop consultants:</strong> agronomists recommend applicators. Build 2 to 3
+          consultant relationships. 100 to 300 acres from referrals.
+        </li>
+        <li>
+          <strong>NRCS field office:</strong> get on the cover crop seeding referral list. 100 to
+          300 acres from EQIP-enrolled farmers. Full program detail on the{' '}
+          <Link href="/grants-and-subsidies">grants and subsidies</Link> page.
+        </li>
+        <li>
+          <strong>Extension events:</strong> county farm bureau meetings, field days. Live demos
+          convert. 50 to 200 acres from new contacts.
+        </li>
+        <li>
+          <strong>This directory:</strong> list for free at{' '}
+          <Link href="/list-your-business">list your business</Link>. Farmers search by state and
+          crop.
+        </li>
+      </ol>
+
+      <h2>Scheduling the peak window</h2>
+      <p>
+        Corn VT/R1 is 2 to 3 weeks long. At 40 to 60 acres per flight hour on a single T50, that is
+        300 to 600 acres per day maximum. To hit 1,000 acres in the window, you need 2 to 3 spray
+        days. Weather will cost you 1 to 2 days. Budget for a 5-day spray window and line up 1,000
+        to 1,200 acres of commitments. Use the{' '}
+        <Link href="/tools/coverage-calculator">coverage calculator</Link> to size your commitments
+        against your fleet.
+      </p>
+
+      <h2>The cover crop bridge</h2>
+      <p>
+        <Link href="/services/seeding">Cover crop seeding</Link> (August to October) extends your
+        revenue season by 6 to 8 weeks. At $15/acre and 300 to 500 additional acres, that is $4,500
+        to $7,500 in revenue from the same equipment during a less competitive window. Many
+        operators reach 1,000 total acres by combining 600{' '}
+        <Link href="/services/spraying">fungicide</Link> acres in July with 400{' '}
+        <Link href="/crops/cover-crops">cover crop</Link> acres in September.
+      </p>
+
+      <h2>Year 2 growth levers</h2>
+      <ul>
+        <li>Repeat customers (80 percent retention is typical)</li>
+        <li>Referrals from year 1 (each satisfied farmer tells 2 to 3 neighbors)</li>
+        <li>Expanded geography (add neighboring counties)</li>
+        <li>Add services (mapping, monitoring alongside spraying)</li>
+        <li>Price appropriately (do not undercut yourself &mdash; year 1 customers know your work)</li>
+      </ul>
+
+      <h2>When to add drone #2</h2>
+      <p>
+        When you consistently turn away work during peak. Do not add capacity before demand exists.
+        Most operators add drone #2 in year 2 or 3. A second T50 adds $25,000 to $30,000 in cost but
+        doubles daily throughput. Budget scenarios in the{' '}
+        <Link href="/pricing">2026 pricing guide</Link>.
+      </p>
+
+      <h2>See also</h2>
+      <p>
+        <Link href="/start-a-drone-business">Start a drone business</Link> &middot;{' '}
+        <Link href="/crops/corn">Corn crop page</Link> &middot;{' '}
+        <Link href="/crops/cover-crops">Cover crops</Link>
+      </p>
+
+      <h2>Authority sources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://extension.missouri.edu/publications/g1274"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            University of Missouri Extension G1274 &mdash; Custom Rates for Farm Services
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Iowa State Extension &mdash; Custom Rate Survey
+          </a>
+        </li>
+      </ul>
+    </>
+  ),
   'vineyard-drone-spraying-guide': (
     <>
       <h2>Why drones work on vineyards</h2>
