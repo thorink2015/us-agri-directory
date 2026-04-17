@@ -73,7 +73,7 @@ const HOW_IT_WORKS = [
 const DRONE_CARDS = [
   { name: 'DJI Agras T50', tank: '40L', price: '$22K to $28K', ndaa: false, slug: 'dji-agras-t50' },
   { name: 'DJI Agras T100', tank: '100L', price: 'Contact dealer', ndaa: false, slug: 'dji-agras-t100' },
-  { name: 'Hylio AG-272', tank: '68L', price: '$55K to $75K est.', ndaa: true, slug: 'hylio-ag272' },
+  { name: 'Hylio AG-272', tank: '68L', price: '$55K to $75K est.', ndaa: true, slug: 'hylio-ag-272' },
   { name: 'Talos T60X', tank: '50L', price: 'From $17,899', ndaa: null, slug: 'talos-t60x' },
 ];
 
