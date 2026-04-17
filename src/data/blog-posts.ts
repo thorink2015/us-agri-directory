@@ -20,6 +20,39 @@ import { BlogPost } from './types';
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'drone-spraying-rice-guide',
+    title: 'Why Rice Is the Perfect Crop for Drone Spraying',
+    description:
+      'Rice is 100% aerial treated. Drones are taking rapid share from airplanes in AR, LA, MS. 7% yield gain from heading fungicide. Rates $14 to $22/acre.',
+    category: 'guide',
+    publishedAt: '2026-04-16',
+    author: 'Eugen',
+    readMinutes: 9,
+    tags: ['rice', 'Mississippi Delta', 'Arkansas', 'fungicide', 'rice blast'],
+    relatedCrops: ['rice'],
+    relatedServices: ['spraying'],
+    content: 'drone-spraying-rice-guide',
+    aeoBlock:
+      'Rice is the highest-density drone spray crop in America at approximately 2.5 million US acres, with Arkansas alone producing 1.2 million acres that are effectively 100 percent aerial treated at heading stage. University of Arkansas Extension reports 7 percent average yield improvement from drone fungicide at R4 to R6 for rice blast and sheath blight. Delta fleet operators run 3 to 8 DJI Agras T50 drones treating 800 to 1,200 acres per day.',
+    faqs: [
+      {
+        question: 'Why not just use airplanes on rice like we always have?',
+        answer:
+          'Drift. Delta rice borders dicamba-sensitive soybeans. Drones at 8 to 15 ft hold tighter drift corridors than airplanes at 50 to 100 ft. On small levee fields, drones also handle turns more efficiently than fixed-wing aircraft.',
+      },
+      {
+        question: 'How many drones does a rice fleet need?',
+        answer:
+          'A 500-acre rice farm can be served by a single T50 in 1 to 2 days. Large operations (2,000+ acres) need 3 to 8 drones with multiple pilots to complete heading-stage fungicide within the 5 to 7 day application window.',
+      },
+      {
+        question: 'Can drones also apply herbicide on rice pre-flood?',
+        answer:
+          'Yes. LSU AgCenter trials show drone herbicide for barnyardgrass pre-flood matches ground rig efficacy at 3 to 5 gpa. Many operators combine pre-flood herbicide and heading-stage fungicide into a full-season rice program.',
+      },
+    ],
+  },
+  {
     slug: 'ndaa-chinese-drones-what-farmers-need-to-know',
     title: 'The DJI Question: NDAA, Tariffs, and What It Means for Your Farm',
     description:

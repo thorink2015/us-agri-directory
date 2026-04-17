@@ -2,6 +2,93 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 export const blogContent: Record<string, ReactNode> = {
+  'drone-spraying-rice-guide': (
+    <>
+      <h2>Why rice is different</h2>
+      <p>
+        Flooded paddy conditions make ground equipment impractical from flood-up through drain.{' '}
+        <Link href="/crops/rice">Rice</Link> is the one crop where aerial application is not
+        optional &mdash; it is the only method. This makes rice the highest-intensity drone market
+        per acre in the US.
+      </p>
+
+      <h2>Where</h2>
+      <p>
+        <Link href="/states/arkansas">Arkansas</Link> (1.2M acres, #1), California&apos;s Sacramento
+        Valley, <Link href="/states/louisiana">Louisiana</Link>,{' '}
+        <Link href="/states/mississippi">Mississippi</Link>, and the Missouri Bootheel. Arkansas
+        alone is effectively 100 percent aerial-treated for heading-stage fungicide. The full
+        regional profile sits on the{' '}
+        <Link href="/regions/mississippi-delta">Mississippi Delta</Link> hub.
+      </p>
+
+      <h2>The drone advantage over airplanes on rice</h2>
+      <p>
+        Lower drift (8 to 15 ft above canopy vs 50 to 100 ft). Better access to small, odd-shaped
+        levee fields. Drift matters because Delta rice borders dicamba-sensitive soybeans. State
+        regulators tighten drift rules every year. Drones hold tighter corridors.
+      </p>
+
+      <h2>Yield data</h2>
+      <p>
+        University of Arkansas Extension: 7 percent average yield improvement from fungicide at R4
+        to R6 (late boot through full heading) for rice blast and sheath blight. LSU AgCenter
+        trials: drone herbicide applications for barnyardgrass control pre-flood match ground rig
+        efficacy.
+      </p>
+
+      <h2>Fleet operations</h2>
+      <p>
+        Delta rice operators do not run single drones. Typical operations: 3 to 8 DJI T50 drones,
+        2 to 4 pilots, trailer-mounted mixing and charging stations, 800 to 1,200 acres per day
+        during the July and August heading peak. Large crews turn over 10,000+ acres per season.
+      </p>
+
+      <h2>Pricing</h2>
+      <p>
+        $14 to $18/acre in the Arkansas Grand Prairie and wider Delta. Large blocks over 500 acres:
+        $12 to $14. California rice: $18 to $22 (tighter CDPR restricted-material permit rules,
+        fewer operators). Regional breakdown and per-service tables in the{' '}
+        <Link href="/pricing">2026 pricing guide</Link>.
+      </p>
+
+      <h2>Licensing</h2>
+      <p>
+        Arkansas: pilot authorization on the license, CAT invalid, no reciprocity. Louisiana:
+        mandatory LSU AgCenter Drone Safety Program. Mississippi: evolving drone regs. California:
+        CDPR Unmanned Pest Control Aircraft Pilot Certificate.
+      </p>
+
+      <h2>Booking</h2>
+      <p>
+        Book by May for the July/August heading window. Arkansas Grand Prairie fills first. Use our{' '}
+        <Link href="/services/spraying">spraying directory</Link> to filter for rice-experienced
+        operators in your state.
+      </p>
+
+      <h2>Authority sources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            University of Arkansas Extension &mdash; Rice
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.lsuagcenter.com/topics/crops/rice"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LSU AgCenter &mdash; Rice
+          </a>
+        </li>
+      </ul>
+    </>
+  ),
   'ndaa-chinese-drones-what-farmers-need-to-know': (
     <>
       <h2>What NDAA actually does</h2>
