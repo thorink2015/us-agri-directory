@@ -91,6 +91,28 @@
 - **`/glossary`:** expanded from 55 to 62 terms (Buffer Zone, CSP, Hull Insurance, IP Rating, MTOW, NDVI, NDRE); added `relatedLink` internal pointers on EQIP/Part 107/Part 137/Part 44807/NDAA/CSP/Hull Insurance; added WebPage schema alongside existing DefinedTermSet + BreadcrumbList.
 - Drop-folder spec `_research/about-contact-listing-glossary-spec.md` removed post-integration.
 
+## 2026-04-17 — Blog posts 1-5 batch
+
+- **Template upgrade:** `src/app/blog/[slug]/page.tsx` rewritten to emit Article + BreadcrumbList + conditional FAQPage JSON-LD with AUTHOR.personId / organizationId @id refs; renders AEO block, Byline, FAQAccordion, AuthorCard, related articles.
+- **BlogPost interface:** `aeoBlock?`, `faqs?` fields added in `src/data/types.ts`.
+- **5 guide posts shipped** (all 2026-04-16, author Eugen, category guide):
+  - Post 1: `/blog/corn-fungicide-drone-spraying-guide` — VT/R1 timing, Beck's PFR trial data, drone vs ground rig economics
+  - Post 2: `/blog/faa-part-137-drone-guide` — 7-step process, 44807 exemption, DIY vs consultant
+  - Post 3: `/blog/cover-crop-seeding-drone-guide` — species list, timing by region, EQIP Practice 340 cost-share
+  - Post 4: `/blog/dji-vs-hylio-which-spray-drone` — T50 vs AG-272 price/tank/wind/NDAA/dealer/swarm
+  - Post 5: `/blog/drone-spraying-state-license-guide` — 50-state baseline, 6 drone-specific credential states, reciprocity
+- Drop-folder `_research/blog-posts-1-5.md` removed post-integration.
+
+## 2026-04-17 — Blog posts 6-10 batch
+
+- 5 more posts shipped on the same template (Article + BreadcrumbList + FAQPage schema, AEO block, Byline, AuthorCard):
+  - Post 6: `/blog/drone-spraying-pricing-trends-2026` — 30-45% rate compression 2022→2026, Iowa State $12.50 benchmark, profitability floor math
+  - Post 7: `/blog/ndaa-chinese-drones-what-farmers-need-to-know` — NDAA scope, 170% tariffs, Countering CCP Drones Act status, US alternatives, mixed-fleet strategy (category: legislation)
+  - Post 8: `/blog/drone-spraying-rice-guide` — Arkansas Delta 100% aerial, UArk 7% yield response at R4-R6, fleet ops, state licensing quirks
+  - Post 9: `/blog/vineyard-drone-spraying-guide` — UC Davis hillside runoff data, 8-12 pass program, California CDPR overhead, organic niche, T25P/T50 fit
+  - Post 10: `/blog/first-1000-acres-drone-operator` — MU Extension break-even math, 5 customer-acquisition channels, cover crop revenue bridge, drone #2 timing
+- Drop-folder `_research/blog-posts-6-10.md` removed post-integration.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

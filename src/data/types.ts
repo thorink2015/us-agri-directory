@@ -233,4 +233,6 @@ export interface BlogPost {
   relatedServices?: ServiceType[];
   content: string;
   featuredImage?: string;
+  aeoBlock?: string;
+  faqs?: { question: string; answer: string }[];
 }
