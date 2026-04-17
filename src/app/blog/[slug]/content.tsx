@@ -2,6 +2,90 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 export const blogContent: Record<string, ReactNode> = {
+  'vineyard-drone-spraying-guide': (
+    <>
+      <h2>Why drones work on vineyards</h2>
+      <p>
+        Hillside blocks above 15 percent slope: airblast sprayers are unsafe or impossible. Rotor
+        downwash covers both upper and lower leaf surfaces &mdash; the key weakness of over-row
+        airblast. 30 to 40 percent reduction in chemical runoff on hillside blocks (UC Davis).
+        Organic vineyard spraying (sulfur, copper hydroxide, Regalia) is a fast-growing niche. Full
+        crop context on the <Link href="/crops/grapes">grapes page</Link>.
+      </p>
+
+      <h2>Where</h2>
+      <p>
+        <Link href="/states/california">California</Link> (900K acres): Napa, Sonoma, Paso Robles,
+        Lodi, Central Coast. <Link href="/states/washington">Washington</Link> (60K acres): Columbia
+        Valley, Walla Walla. <Link href="/states/oregon">Oregon</Link> (35K acres): Willamette
+        Valley. <Link href="/states/new-york">New York</Link> (35K acres): Finger Lakes, Long
+        Island. Virginia (4K acres): Piedmont, Shenandoah Valley. Regional profile on the{' '}
+        <Link href="/regions/california">California hub</Link>.
+      </p>
+
+      <h2>The pass count</h2>
+      <p>
+        8 to 12 fungicide passes per season from bud break (March) through veraison (August).
+        Powdery mildew alone triggers 6 to 9 sprays on susceptible varieties. This is why per-acre
+        annual cost is so much higher than row crops.
+      </p>
+
+      <h2>Pricing</h2>
+      <p>
+        $18 to $30/acre per pass. Hillside premium blocks up to $35. A full-season 10-pass program
+        at $24 average: $240/acre/year. Vineyards over 100 acres negotiate rate floors. Multi-year
+        contracts trim 10 to 15 percent. Full per-service rates in the{' '}
+        <Link href="/pricing">2026 pricing guide</Link>.
+      </p>
+
+      <h2>California regulatory complexity</h2>
+      <p>
+        CDPR Unmanned Pest Control Aircraft Pilot Certificate. County Agricultural Commissioner
+        registration per county. Restricted Material Permits. Same-day Notice of Intent for some
+        products. Every application must be reported. This overhead is why California rates run
+        higher than anywhere else.
+      </p>
+
+      <h2>Organic vineyards</h2>
+      <p>
+        OMRI-approved products apply well by drone at 10 to 20 gpa. Some organic growers prefer
+        drones specifically for reduced drift and lower impact on cover crops and beneficial insects
+        between rows. Growing niche.
+      </p>
+
+      <h2>Equipment fit</h2>
+      <p>
+        DJI T25P and T50 are dominant. T25P is sized for tighter row spacing. T50 handles larger
+        blocks. Both deliver the 10 to 20 gpa carrier volumes required for vineyard work.
+      </p>
+
+      <h2>Booking</h2>
+      <p>
+        Full-season contracts by January or February. Mid-season one-off sprays during mildew spikes
+        are nearly impossible to source. Multi-year commitments get priority and better rates.
+        Filter the <Link href="/services/spraying">spraying directory</Link> for vineyard-experienced
+        operators in your appellation.
+      </p>
+
+      <h2>Authority sources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://ipm.ucanr.edu/agriculture/grape/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            UC IPM &mdash; Grape pest management
+          </a>
+        </li>
+        <li>
+          <a href="https://www.cdpr.ca.gov" target="_blank" rel="noopener noreferrer">
+            California Department of Pesticide Regulation
+          </a>
+        </li>
+      </ul>
+    </>
+  ),
   'drone-spraying-rice-guide': (
     <>
       <h2>Why rice is different</h2>

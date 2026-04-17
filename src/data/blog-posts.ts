@@ -20,6 +20,39 @@ import { BlogPost } from './types';
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'vineyard-drone-spraying-guide',
+    title: 'Drone Spraying for Vineyards: The 2026 Guide for Wine Grape Growers',
+    description:
+      'Vineyard drone spraying costs $18 to $30/acre per pass. 8 to 12 passes per season. UC Davis: 30 to 40% less chemical runoff on hillside blocks.',
+    category: 'guide',
+    publishedAt: '2026-04-16',
+    author: 'Eugen',
+    readMinutes: 9,
+    tags: ['vineyards', 'wine grapes', 'powdery mildew', 'hillside spraying', 'organic'],
+    relatedCrops: ['grapes'],
+    relatedServices: ['spraying'],
+    content: 'vineyard-drone-spraying-guide',
+    aeoBlock:
+      'Vineyard drone spraying costs $18 to $30 per acre per pass, with 8 to 12 passes per season for powdery mildew, downy mildew, and botrytis control on approximately 1.2 million US wine grape acres. UC Davis Cooperative Extension reports drone-applied fungicide on hillside vineyards reduces chemical runoff by 30 to 40 percent compared to conventional airblast. Full-season programs run $180 to $300 per acre per year.',
+    faqs: [
+      {
+        question: 'Is drone spraying really better than airblast for vineyards?',
+        answer:
+          'On hillside blocks, yes. Safer on steep slopes, better leaf coverage via downwash, 30 to 40 percent less runoff. On flat vineyards with wide rows, airblast remains competitive. Many growers use both.',
+      },
+      {
+        question: 'How much is a full-season vineyard drone program?',
+        answer:
+          '$180 to $300 per acre per year at 8 to 12 passes. Compare this to total airblast cost including labor, fuel, tractor depreciation, and compaction. Many growers find it breaks even or favors drones once all costs are counted.',
+      },
+      {
+        question: 'Can drones handle dense canopy in mid-summer?',
+        answer:
+          'T50 and T25P downwash penetrates most VSP-trained canopy. Very dense Geneva Double Curtain or sprawl-trained vines may need supplemental airblast for complete mid-season coverage.',
+      },
+    ],
+  },
+  {
     slug: 'drone-spraying-rice-guide',
     title: 'Why Rice Is the Perfect Crop for Drone Spraying',
     description:
