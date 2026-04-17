@@ -50,6 +50,14 @@ export const glossaryTerms: GlossaryTerm[] = [
 
   // ─── B ───────────────────────────────────────────────────────────────────
   {
+    term: 'Buffer Zone',
+    slug: 'buffer-zone',
+    category: 'application',
+    definition:
+      'A required setback distance between the spray application area and sensitive sites — water bodies, schools, residences, neighboring crops, or organic fields. Set by the product label and sometimes by state or county rule.',
+    relatedTerms: ['drift', 'spray-drift-management'],
+  },
+  {
     term: 'Boom Width',
     slug: 'boom-width',
     category: 'hardware',
@@ -82,6 +90,15 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition:
       'The number of acres a drone can spray per hour of flight time, typically 20–40 acres per hour for commercial agricultural drones. Actual daily output depends on battery swaps, tank refills, and turnaround time.',
     relatedTerms: ['swath'],
+  },
+  {
+    term: 'CSP (Conservation Stewardship Program)',
+    slug: 'csp',
+    category: 'business',
+    definition:
+      'A USDA NRCS program that pays landowners for conservation performance, including precision pesticide application and cover crop practices that can be delivered by drone. Often stacked on top of EQIP for larger total cost-share.',
+    relatedTerms: ['eqip', 'nrcs'],
+    relatedLink: { label: 'Grants & subsidies for ag drones', href: '/grants-and-subsidies' },
   },
   {
     term: 'COA (Certificate of Authorization)',
@@ -130,7 +147,8 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'eqip',
     category: 'business',
     definition:
-      'A USDA NRCS cost-share program that reimburses farmers for conservation practices, including drone-applied cover crop seeding and precision pesticide application. Typical payments cover 50–75% of eligible costs.',
+      'A USDA NRCS cost-share program that reimburses farmers for conservation practices, including drone-applied cover crop seeding (Practice Standard 340) and drone equipment purchases (Practice Code 595). Typical payments cover 50–75% of eligible costs.',
+    relatedLink: { label: 'Grants & subsidies for ag drones', href: '/grants-and-subsidies' },
   },
 
   // ─── F ───────────────────────────────────────────────────────────────────
@@ -193,7 +211,24 @@ export const glossaryTerms: GlossaryTerm[] = [
     relatedTerms: ['spreader'],
   },
 
+  // ─── H ───────────────────────────────────────────────────────────────────
+  {
+    term: 'Hull Insurance',
+    slug: 'hull-insurance',
+    category: 'business',
+    definition:
+      'Insurance covering physical damage to the drone itself from crashes, weather, or fire. Typically runs $500 to $2,000 per year per drone, and is separate from liability and pollution coverage.',
+    relatedLink: { label: 'Drone insurance guide', href: '/insurance' },
+  },
+
   // ─── I ───────────────────────────────────────────────────────────────────
+  {
+    term: 'IP Rating',
+    slug: 'ip-rating',
+    category: 'hardware',
+    definition:
+      'Ingress Protection rating measuring dust and water resistance. IP55 means protected against dust and low-pressure water jets; IPX6K (on drones like the XAG P100 Pro) means protected against high-pressure water for safer wash-down.',
+  },
   {
     term: 'IPM (Integrated Pest Management)',
     slug: 'ipm',
@@ -229,6 +264,14 @@ export const glossaryTerms: GlossaryTerm[] = [
       'Software that converts a field boundary and application parameters into an automated flight path for a spray drone. Major ag drone brands ship their own mission planners (DJI Agras, XAG One, Hylio AgraSync).',
   },
   {
+    term: 'MTOW (Maximum Takeoff Weight)',
+    slug: 'mtow',
+    category: 'hardware',
+    definition:
+      'The maximum weight of the drone including payload, battery, and fuel. MTOW determines the FAA regulatory category — drones over 55 pounds require a Section 44807 exemption in addition to Part 107 and Part 137.',
+    relatedTerms: ['part-44807'],
+  },
+  {
     term: 'MPH (Miles Per Hour)',
     slug: 'mph',
     category: 'application',
@@ -238,11 +281,28 @@ export const glossaryTerms: GlossaryTerm[] = [
 
   // ─── N ───────────────────────────────────────────────────────────────────
   {
+    term: 'NDVI (Normalized Difference Vegetation Index)',
+    slug: 'ndvi',
+    category: 'agronomic',
+    definition:
+      'A spectral index computed from drone multispectral imagery that correlates with plant vigor and biomass. High NDVI indicates dense, healthy canopy; low NDVI flags stress, disease, or nutrient deficiency before symptoms are visible.',
+    relatedTerms: ['ndre', 'scouting'],
+  },
+  {
+    term: 'NDRE (Normalized Difference Red Edge)',
+    slug: 'ndre',
+    category: 'agronomic',
+    definition:
+      'A vegetation index using the red-edge spectral band, more sensitive than NDVI for detecting stress in dense canopy crops like mature corn or orchards. Common on multispectral drone sensors such as MicaSense and DJI P4M.',
+    relatedTerms: ['ndvi', 'scouting'],
+  },
+  {
     term: 'NDAA Compliance',
     slug: 'ndaa-compliance',
     category: 'regulatory',
     definition:
       'Section 848 of the National Defense Authorization Act restricts federal agencies from procuring drones made in covered foreign countries. NDAA-compliant drones (such as Hylio and Skydio models) are required for USDA-funded programs and government contracts.',
+    relatedLink: { label: 'NDAA compliance explained', href: '/regulations/ndaa-compliance' },
   },
   {
     term: 'NRCS (Natural Resources Conservation Service)',
@@ -269,6 +329,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition:
       'The FAA regulation (14 CFR Part 107) governing commercial small drone operations under 55 pounds. Every pilot-in-command of a commercial ag drone must hold a Remote Pilot Certificate issued under Part 107.',
     relatedTerms: ['part-137', 'remote-pilot-certificate'],
+    relatedLink: { label: 'FAA Part 107 guide', href: '/regulations/faa-part-107' },
   },
   {
     term: 'Part 137',
@@ -277,6 +338,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     definition:
       'The FAA regulation (14 CFR Part 137) governing agricultural aircraft operations — any aircraft dispensing pesticides, seed, or other agricultural products. Commercial drone spray operators need a Part 137 Agricultural Aircraft Operator certificate in addition to Part 107.',
     relatedTerms: ['part-107', 'aao'],
+    relatedLink: { label: 'FAA Part 137 guide', href: '/regulations/faa-part-137' },
   },
   {
     term: 'Part 137 Private',
@@ -292,6 +354,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     category: 'regulatory',
     definition:
       'An FAA exemption required to fly drones over 55 pounds, which includes most commercial spray drones (DJI Agras T50, T100, Hylio AG-272). Exemption is typically granted for 2 years and must be renewed.',
+    relatedLink: { label: 'FAA Part 137 & 44807 guide', href: '/regulations/faa-part-137' },
   },
   {
     term: 'PPE (Personal Protective Equipment)',

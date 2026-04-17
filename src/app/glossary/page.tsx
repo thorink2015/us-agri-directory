@@ -58,6 +58,16 @@ export default function GlossaryPage() {
     })),
   };
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Agricultural Drone Glossary',
+    url: 'https://agdronedirectory.com/glossary',
+    description: `Plain-English definitions of ${glossaryTerms.length}+ agricultural drone terms used across FAA regulations, EPA pesticide rules, drone hardware, and farm business.`,
+    isPartOf: { '@id': 'https://agdronedirectory.com/#organization' },
+    mainEntity: { '@id': 'https://agdronedirectory.com/glossary#termset' },
+  };
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -70,6 +80,7 @@ export default function GlossaryPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <Breadcrumb items={[{ label: 'Glossary' }]} />
