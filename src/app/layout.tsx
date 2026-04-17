@@ -73,7 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="impact-site-verification" content="9797c758-df9e-4dff-9f78-73f66157b2d5" />
+        <meta name="google-adsense-account" content="ca-pub-1300213627244453" />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <link rel="preconnect" href="https://www.googletagmanager.com" />
         )}
