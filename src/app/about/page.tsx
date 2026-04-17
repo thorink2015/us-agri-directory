@@ -2,8 +2,27 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Mail, ExternalLink, AlertTriangle, BookOpen, Users, CheckCircle } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import FAQAccordion from '@/components/ui/FAQAccordion';
 import { operators } from '@/data/operators';
 import { AUTHOR, SITE, personSchema, organizationSchema } from '@/data/author';
+
+const FAQS = [
+  {
+    question: 'Is this directory really free for operators?',
+    answer:
+      'Yes. Listing is free. No commission, no booking fee. We may offer optional premium features (featured placement) in the future but basic listings will always be free, permanently.',
+  },
+  {
+    question: 'How do you make money?',
+    answer:
+      'Currently, the directory is not monetized. Future revenue may include premium operator listings, manufacturer partnerships, and educational resources. The directory will never charge farmers for access or take commissions on jobs.',
+  },
+  {
+    question: 'How often is information updated?',
+    answer:
+      'Pricing data is reviewed quarterly, regulatory data is updated when rules change, and operator listings are continuously refreshed as new operators apply and existing ones update their information. Every content page displays a "last reviewed" date.',
+  },
+];
 
 export const metadata: Metadata = {
   title: `About ${SITE.name} | Founded and Edited by ${AUTHOR.firstName}`,
@@ -31,11 +50,35 @@ export default function AboutPage() {
     ],
   };
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: `About ${SITE.name}`,
+    url: `${SITE.domain}/about`,
+    description: `${SITE.name} is a single-author directory founded and edited by ${AUTHOR.firstName}.`,
+    isPartOf: { '@id': `${SITE.domain}/#organization` },
+    about: { '@id': AUTHOR.personId },
+    mainEntity: { '@id': AUTHOR.personId },
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
 
       <Breadcrumb items={[{ label: 'About' }]} />
 
@@ -233,7 +276,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 8. Contact */}
+      {/* 8. FAQ */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Frequently asked questions</h2>
+        <FAQAccordion faqs={FAQS} />
+      </section>
+
+      {/* 9. Contact */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact</h2>
         <p className="text-gray-700 leading-relaxed mb-3">
