@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { MapPin, Wheat, TrendingUp, Users, Shield, BookOpen, DollarSign } from 'lucide-react';
+import { MapPin, Wheat, TrendingUp, Users, Shield, DollarSign } from 'lucide-react';
 import { Metadata } from 'next';
 import { counties, getCountyBySlug, getAdjacentCounties, getCountyOperatorCount } from '@/data/counties';
 import { getOperatorsByCounty } from '@/data/operators';
