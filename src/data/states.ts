@@ -912,6 +912,156 @@ export const stateData: StateData[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+
+  // ─── SOUTH DAKOTA ────────────────────────────────────────────────────────
+  {
+    slug: 'south-dakota',
+    name: 'South Dakota',
+    abbreviation: 'SD',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'South Dakota DANR',
+    licensingAgencyUrl: 'https://danr.sd.gov/Agriculture/Inspection/Pesticide/ApplicatorsDealers/default.aspx',
+    aerialCategory: 'Category 17: Aerial Application (General + Category G + Category 17)',
+    examsRequired: 'Core Category G + Category 17 + 1 use category. License $35/2yr.',
+    examFees: '$35 license for 2 years.',
+    uniqueRules: [
+      'Class 3 Medical certificate may be required.',
+      'Remote ID compliance required since September 2023.',
+      'SDSU Extension publishes a detailed drone pesticide application guide (P-00354).',
+    ],
+    reciprocityStates: ['MT', 'ND', 'MN', 'IA', 'NE', 'WY'],
+    renewalCycle: '2-year cycle via recertification classes or online course.',
+    ceRequirements: 'Recertification every 2 years via classes or online.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: 'https://extension.sdstate.edu/sites/default/files/2025-09/P-00354-v2.pdf',
+    extensionUrl: 'https://extension.sdstate.edu',
+    topCrops: [
+      { slug: 'corn', name: 'Corn', acreage: '5.6M acres', notes: 'Eastern SD' },
+      { slug: 'soybeans', name: 'Soybeans', acreage: '5.1M acres', notes: 'Strong growth area' },
+      { slug: 'wheat', name: 'Wheat', acreage: '2.2M acres', notes: 'Spring and winter wheat' },
+      { slug: 'cover-crops', name: 'Cover Crops', acreage: 'Growing', notes: 'EQIP participation' },
+    ],
+    rateRange: '$12 to $16/acre',
+    statsRate: '$12 to $16/acre',
+    statsTopCrop: 'Corn',
+    sprayWindows: [],
+    neighboringStates: ['north-dakota', 'minnesota', 'iowa', 'nebraska', 'wyoming', 'montana'],
+    aeoBlock:
+      'South Dakota requires Category 17 (Aerial Application) with a $35 license fee for 2 years, one of the lowest cost structures in the region. SDSU Extension publishes a comprehensive drone guide (P-00354). Rates run $12 to $16 per acre across 5.6 million acres of corn and 5.1 million acres of soybeans.',
+    licensingDetails:
+      'South Dakota pesticide licensing is administered by the Department of Agriculture and Natural Resources (DANR) under Category 17 (Aerial Application). Applicators need Core Category G (General) plus Category 17 plus at least one use category. License fees are $35 for 2 years, one of the lowest fee structures in the Great Plains.\n\nRemote ID compliance has been required since September 2023 for all commercial UAS operations. SDSU Extension publishes a comprehensive drone pesticide application guide (P-00354, updated September 2025). Recertification is required every 2 years via classes or online course. Reciprocity exists with MT, ND, MN, IA, NE, and WY.',
+    authorityLinks: [
+      { label: 'SD DANR Pesticide Applicators', url: 'https://danr.sd.gov/Agriculture/Inspection/Pesticide/ApplicatorsDealers/default.aspx' },
+      { label: 'SDSU Extension Drone Guide P-00354', url: 'https://extension.sdstate.edu/sites/default/files/2025-09/P-00354-v2.pdf' },
+      { label: 'SDSU Extension', url: 'https://extension.sdstate.edu' },
+    ],
+    faqs: [
+      { question: 'What does drone spraying cost in South Dakota?', answer: '$12 to $16 per acre for row crops. Eastern SD (corn/soybean) is competitive with Iowa pricing. Western SD wheat fields are larger with slightly lower rates.' },
+      { question: 'What license do I need in South Dakota?', answer: 'FAA Part 107, Part 137, and DANR commercial applicator license with Category G (General) + Category 17 (Aerial Application) + at least one use category. License is $35 for 2 years.' },
+      { question: 'Is there a drone-specific guide for South Dakota?', answer: 'Yes. SDSU Extension publishes P-00354 "Drone Pesticide Application Guide" (updated September 2025), covering all state and federal requirements in one document.' },
+      { question: 'Does South Dakota require Remote ID?', answer: 'Yes, since September 2023 for all commercial UAS operations, consistent with the FAA Remote ID rule.' },
+      { question: 'Does South Dakota have reciprocal licensing?', answer: 'Yes, with MT, ND, MN, IA, NE, and WY.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── MONTANA ─────────────────────────────────────────────────────────────
+  {
+    slug: 'montana',
+    name: 'Montana',
+    abbreviation: 'MT',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'Montana Department of Agriculture (MDA)',
+    licensingAgencyUrl: 'https://agr.mt.gov',
+    aerialCategory: 'Category 18: Aerial Applicator',
+    examsRequired: 'Core + Category 18 + 1 use-site category (3 exams). Exams free at MDA field offices. License $85/yr.',
+    examFees: 'Exams free at MDA field offices. License $85/yr.',
+    uniqueRules: [
+      'Exams are free at MDA field offices, unusual nationally.',
+      'Large ranch acreage creates demand for pasture and rangeland drone applications.',
+    ],
+    reciprocityStates: ['ND', 'SD', 'WY', 'NE'],
+    renewalCycle: '5-year cycle.',
+    ceRequirements: '12 credits per category per 5-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://www.montana.edu/extension',
+    topCrops: [
+      { slug: 'wheat', name: 'Wheat', acreage: '5.2M acres', notes: 'Spring and winter wheat. #2 wheat state.' },
+      { slug: 'corn', name: 'Corn', acreage: '200K acres', notes: 'Limited, eastern MT only' },
+    ],
+    rateRange: '$12 to $18/acre',
+    statsRate: '$12 to $18/acre',
+    statsTopCrop: 'Wheat',
+    sprayWindows: [],
+    neighboringStates: ['north-dakota', 'south-dakota', 'wyoming', 'idaho'],
+    aeoBlock:
+      'Montana is the #2 US wheat state at 5.2 million acres, with Category 18 (Aerial Applicator) licensing and free exams at MDA field offices. Rates run $12 to $18 per acre. Large ranch acreage creates additional demand for pasture and rangeland drone applications beyond row crop spraying.',
+    licensingDetails:
+      'Montana pesticide licensing is administered by the Montana Department of Agriculture (MDA) under Category 18 (Aerial Applicator). Applicators take Core plus Category 18 plus one use-site category — 3 exams total. Exams are administered free of charge at MDA field offices, which is unusual nationally. The annual license fee is $85.\n\nRenewal is on a 5-year cycle with 12 CE credits per category required. Large ranch and rangeland acreage in Montana creates demand for pasture applications beyond standard row crop work. Reciprocity exists with ND, SD, WY, and NE, with a Montana rules exam required.',
+    authorityLinks: [
+      { label: 'Montana Department of Agriculture', url: 'https://agr.mt.gov' },
+      { label: 'Montana State University Extension', url: 'https://www.montana.edu/extension' },
+    ],
+    faqs: [
+      { question: 'What does drone spraying cost in Montana?', answer: 'Wheat applications run $12 to $16 per acre. Pasture and rangeland work runs $15 to $18 due to remote field access and travel distances.' },
+      { question: 'Are Montana licensing exams really free?', answer: 'Yes. MDA administers exams at field offices at no charge, which is unusual nationally. The license itself is $85 per year.' },
+      { question: 'When is wheat heading in Montana?', answer: 'Winter wheat heads in late May to early June. Spring wheat heads in late June to early July, overlapping with North Dakota timing.' },
+      { question: 'Is there drone demand beyond wheat in Montana?', answer: 'Yes. Pasture and rangeland applications (brush control, spot herbicide treatment) on large ranch operations are an emerging niche. Drones access remote terrain that ground rigs cannot reach efficiently.' },
+      { question: 'Does Montana have reciprocal licensing?', answer: 'Yes, with ND, SD, WY, and NE. Must pass MT rules exam.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── WYOMING ─────────────────────────────────────────────────────────────
+  {
+    slug: 'wyoming',
+    name: 'Wyoming',
+    abbreviation: 'WY',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'Wyoming Department of Agriculture',
+    licensingAgencyUrl: 'https://agriculture.wy.gov',
+    aerialCategory: 'Aerial Application (WY Admin Code Ch. 28, Sec. 28-5, explicitly includes UAS)',
+    examsRequired: 'Core + Aerial + use category.',
+    examFees: 'Contact WDA for current fees.',
+    uniqueRules: [
+      'Aerial application category explicitly includes UAS in the administrative code.',
+      'Smallest agricultural state in the Great Plains by crop acreage.',
+    ],
+    reciprocityStates: ['MT', 'NE', 'SD', 'CO'],
+    renewalCycle: '3-year cycle.',
+    ceRequirements: 'Contact WDA for current CE requirements.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://www.uwyo.edu/uwe',
+    topCrops: [
+      { slug: 'wheat', name: 'Wheat', acreage: '300K acres', notes: 'Limited acreage' },
+    ],
+    rateRange: '$14 to $20/acre',
+    statsRate: '$14 to $20/acre',
+    statsTopCrop: 'Wheat',
+    sprayWindows: [],
+    neighboringStates: ['montana', 'south-dakota', 'nebraska', 'colorado'],
+    aeoBlock:
+      'Wyoming explicitly includes UAS in its aerial application administrative code (Ch. 28, Sec. 28-5). Agricultural crop acreage is the smallest in the Great Plains, but ranch and rangeland applications create niche drone demand. Rates run $14 to $20 per acre.',
+    licensingDetails:
+      'Wyoming pesticide licensing is administered by the Wyoming Department of Agriculture (WDA). The aerial application category in Wyoming Administrative Code Chapter 28, Section 28-5 explicitly includes UAS — one of the cleaner drone inclusions in any state code. Applicators take Core plus Aerial plus a use category.\n\nWyoming has the smallest agricultural crop acreage in the Great Plains, but large ranch and rangeland operations create niche drone demand for pasture applications, brush control, and spot herbicide treatment. Renewal is on a 3-year cycle. Reciprocity exists with MT, NE, SD, and CO.',
+    authorityLinks: [
+      { label: 'Wyoming Department of Agriculture', url: 'https://agriculture.wy.gov' },
+      { label: 'University of Wyoming Extension', url: 'https://www.uwyo.edu/uwe' },
+    ],
+    faqs: [
+      { question: 'Is there much drone spray demand in Wyoming?', answer: 'Limited for row crops. Primary demand is rangeland and pasture applications on large ranch operations, plus some wheat and sugar beet work. Rates are higher due to remote locations and travel distances.' },
+      { question: 'Does Wyoming aerial licensing explicitly cover drones?', answer: 'Yes. WY Admin Code Chapter 28, Section 28-5 explicitly includes UAS in the aerial application definition.' },
+      { question: 'What does drone spraying cost in Wyoming?', answer: '$14 to $20 per acre. Higher than neighboring states due to small fields, remote locations, and few operators.' },
+      { question: 'Does Wyoming have reciprocal licensing?', answer: 'Yes, with MT, NE, SD, and CO.' },
+      { question: 'What crops drive drone demand in Wyoming?', answer: 'Wheat (300K acres), sugar beets in the Big Horn Basin, and alfalfa hay. Rangeland brush control and spot herbicide treatment on cattle ranches are growing applications.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
 ];
 
 export function getStateData(slug: string): StateData | undefined {
