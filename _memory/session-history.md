@@ -83,6 +83,14 @@
 - **Netlify branch fix:** Production branch changed from `claude/add-drone-operators-directory-T0YnN` → `main` in Netlify dashboard. All future merges to `main` now auto-deploy.
 - PRs #22 (state pages) and #23 (build fix) both merged to `main`.
 
+## 2026-04-17 — About / Contact / List-your-business / Glossary batch
+
+- **`/about`:** added 3-question FAQ (free listing, monetization, update cadence) + AboutPage + FAQPage JSON-LD on top of existing E-E-A-T structure
+- **`/contact`:** ContactPage + BreadcrumbList schema, Open Graph metadata, @id link to organization node
+- **`/list-your-business`:** rewritten with AEO block, `What you get` / `Requirements` / `How it works` H2 sections, 3-question FAQ, WebPage + FAQPage + BreadcrumbList schema. SubmitForm now renders checkbox grids for crops (from `crops.ts`) and drone models (from `drone-model.ts`), replacing the free-text drones field.
+- **`/glossary`:** expanded from 55 to 62 terms (Buffer Zone, CSP, Hull Insurance, IP Rating, MTOW, NDVI, NDRE); added `relatedLink` internal pointers on EQIP/Part 107/Part 137/Part 44807/NDAA/CSP/Hull Insurance; added WebPage schema alongside existing DefinedTermSet + BreadcrumbList.
+- Drop-folder spec `_research/about-contact-listing-glossary-spec.md` removed post-integration.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
