@@ -111,6 +111,10 @@ export async function generateMetadata(): Promise<Metadata> {
       description: `${operatorCount}+ verified ag drone operators across all 50 states. Compare rates and contact directly.`,
       url: SITE.domain,
     },
+    other: {
+      'impact-site-verification': '9797c758-df9e-4dff-9f78-73f66157b2d5',
+      'fo-verify': '31657e9a-7be1-4648-8bec-7cab903551d5',
+    },
   };
 }
 
