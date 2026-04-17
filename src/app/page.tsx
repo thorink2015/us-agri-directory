@@ -1,19 +1,56 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { CheckCircle, ArrowRight, Calculator, Clock, DollarSign, Shield } from 'lucide-react';
+import {
+  CheckCircle, ArrowRight, Calculator, Clock, DollarSign, Shield,
+  ShieldCheck, MapPin, Sprout, Droplets, Map as MapIcon, Radar, Settings, ShoppingCart,
+} from 'lucide-react';
 import { operators } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
-import { services } from '@/data/services';
+import { getServiceBySlug } from '@/data/services';
 import { AUTHOR, SITE, organizationSchema, personSchema } from '@/data/author';
 import SearchBar from '@/components/search/SearchBar';
 import FAQAccordion from '@/components/ui/FAQAccordion';
-import Byline from '@/components/author/Byline';
 
 const LAST_REVIEWED = '2026-04-16';
 const TIER1_STATES = new Set(['iowa', 'illinois', 'indiana', 'texas', 'california', 'arkansas', 'kansas', 'nebraska', 'ohio', 'north-carolina']);
 
-const SERVICE_SLUGS = ['spraying', 'seeding', 'mapping', 'monitoring', 'spreading', 'sales'];
+const SERVICE_CARDS = [
+  { slug: 'spraying', icon: Droplets, label: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', price: '$12 to $22/acre' },
+  { slug: 'seeding', icon: Sprout, label: 'Cover Crop Seeding', desc: 'Broadcast cereal rye, ryegrass, and clover blends', price: '$12 to $18/acre' },
+  { slug: 'mapping', icon: MapIcon, label: 'Aerial Mapping', desc: 'NDVI maps, orthomosaics, and prescription files', price: '$2 to $8/acre' },
+  { slug: 'monitoring', icon: Radar, label: 'Crop Monitoring', desc: 'Pest pressure, disease, stress identification', price: '$3 to $10/acre' },
+  { slug: 'spreading', icon: Settings, label: 'Granular Spreading', desc: 'Urea, gypsum, lime, and cover crop seed', price: '$10 to $18/acre' },
+  { slug: 'sales', icon: ShoppingCart, label: 'Drone Sales', desc: 'New and used ag drones from authorized dealers', price: '$18K to $75K' },
+];
+
+const TRUST_CARDS = [
+  {
+    title: 'Verified operators only',
+    desc: "Every listed operator holds a valid FAA Part 107 certificate and Part 137 agricultural exemption. We confirm credentials so you don't have to chase paperwork.",
+  },
+  {
+    title: 'Search by crop and location',
+    desc: 'Filter operators by your state, county, crop type, and service needed. Whether you grow corn in Iowa or grapes in Napa, find someone who knows your operation.',
+  },
+  {
+    title: 'Transparent pricing',
+    desc: 'See estimated per-acre rates before you reach out. No guessing, no surprise quotes. Know what drone spraying costs in your area before you pick up the phone.',
+  },
+  {
+    title: 'Direct contact',
+    desc: 'Reach operators directly by phone, email, or web form. No intermediaries, no platform fees, no commission taken from either side.',
+  },
+];
+
+const TOP_STATES = [
+  { label: 'Iowa', slug: 'iowa' },
+  { label: 'Texas', slug: 'texas' },
+  { label: 'California', slug: 'california' },
+  { label: 'Illinois', slug: 'illinois' },
+  { label: 'Arkansas', slug: 'arkansas' },
+  { label: 'Kansas', slug: 'kansas' },
+];
 
 const DRONE_CARDS = [
   { name: 'DJI Agras T50', tank: '40L', price: '$22K to $28K', ndaa: false, slug: 'dji-agras-t50' },
@@ -62,10 +99,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function HomePage() {
   const operatorCount = operators.length;
   const stateCount = new Set(operators.flatMap((op) => op.counties)).size;
-
-  const featuredServices = SERVICE_SLUGS
-    .map((slug) => services.find((s) => s.slug === slug))
-    .filter(Boolean) as typeof services;
 
   // Group counties by region for the state grid
   const regionMap = new Map<string, typeof counties>();
@@ -125,30 +158,23 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-sm px-4 py-1.5 rounded-full mb-6 border border-white/20">
             <CheckCircle className="w-4 h-4 text-yellow-400" />
-            {operatorCount} verified operators | {stateCount} states
+            {operatorCount}+ verified ag drone operators listed
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-balance">
-            Drone Spraying Services<br />
-            <span className="text-yellow-400">Across All 50 States</span>
+            Find a <span className="text-yellow-400">Drone Spraying Service</span>
+            <br />Near Your Farm
           </h1>
 
           <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-            The US directory of verified agricultural drone operators. Search by state, crop, or service type. Every operator listed holds FAA Part 107 and Part 137 credentials. No booking fees, no commissions. Contact operators directly.
+            Search verified ag drone operators across all 50 states. Compare services, check credentials, and book the right pilot for your fields.
           </p>
 
           <SearchBar />
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-green-200">
             <span className="text-green-300 font-medium">Top states:</span>
-            {[
-              { label: 'Iowa', slug: 'iowa' },
-              { label: 'Texas', slug: 'texas' },
-              { label: 'California', slug: 'california' },
-              { label: 'Illinois', slug: 'illinois' },
-              { label: 'Arkansas', slug: 'arkansas' },
-              { label: 'Kansas', slug: 'kansas' },
-            ].map((s, i) => (
+            {TOP_STATES.map((s, i) => (
               <span key={s.slug} className="flex items-center gap-x-3">
                 {i > 0 && <span className="text-green-600">|</span>}
                 <Link href={`/states/${s.slug}`} className="hover:text-white underline underline-offset-2">
@@ -172,33 +198,93 @@ export default function HomePage() {
               US agricultural drone spraying covered an estimated 10.3 million acres in 2024, with per-acre rates ranging from $12 on flat Midwest row crops to $35 on California hillside vineyards. The 2026 Iowa State Custom Rate Survey established the first university benchmark at $12.50 per acre average for drone application. This directory lists {operatorCount}+ operators across all 50 states with FAA Part 107 and Part 137 credentials verified.
             </p>
           </div>
-          <Byline lastUpdated={LAST_REVIEWED} />
         </div>
       </section>
 
       {/* SECTION 3: Stats Row */}
       <section className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: `${operatorCount}+`, label: 'Verified operators' },
-              { value: stateCount.toString(), label: 'States covered' },
-              { value: '10.3M+', label: 'Acres drone-sprayed in 2024' },
-              { value: '$12.50/acre', label: 'Iowa State 2026 avg rate' },
-            ].map((stat) => (
-              <div key={stat.label} className="flex flex-col items-center gap-1">
-                <div className="text-3xl font-bold text-green-800">{stat.value}</div>
-                <div className="text-sm text-gray-500">{stat.label}</div>
-              </div>
-            ))}
+              { icon: ShieldCheck, value: `${operatorCount}+`, label: 'Verified operators' },
+              { icon: MapPin, value: stateCount.toString(), label: 'States covered' },
+              { icon: Sprout, value: '10.3M+', label: 'Acres drone-sprayed in 2024' },
+              { icon: DollarSign, value: '$12.50/acre', label: 'Iowa State 2026 avg rate' },
+            ].map((stat) => {
+              const Icon = stat.icon;
+              return (
+                <div key={stat.label} className="flex flex-col items-center gap-1">
+                  <Icon className="w-6 h-6 text-green-600 mb-1" />
+                  <div className="text-3xl font-bold text-green-800">{stat.value}</div>
+                  <div className="text-sm text-gray-500">{stat.label}</div>
+                </div>
+              );
+            })}
           </div>
-          <p className="text-center text-xs text-gray-400 mt-4">
+          <p className="text-center text-xs text-gray-400 mt-6">
             Acreage: American Spray Drone Coalition. Pricing: Iowa State Extension 2026 Custom Rate Survey.
           </p>
         </div>
       </section>
 
-      {/* SECTION 4: Browse by State */}
+      {/* SECTION 4: Why Farmers Use This Directory */}
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Why farmers use this directory</h2>
+          <p className="text-gray-500 text-center mb-10">Everything you need to find and hire the right drone applicator</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {TRUST_CARDS.map((card) => (
+              <div key={card.title} className="flex flex-col p-5 bg-white rounded-xl border border-gray-200 hover:border-green-300 hover:shadow-sm transition-all">
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                  <CheckCircle className="w-5 h-5 text-green-700" />
+                </div>
+                <h3 className="font-bold text-gray-900 text-sm mb-2">{card.title}</h3>
+                <p className="text-xs text-gray-600 leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: Services */}
+      <section className="py-14 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-8 gap-4">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">Drone services for every operation</h2>
+              <p className="text-gray-500 mt-1">From corn fungicide to vineyard treatments and aerial imaging</p>
+            </div>
+            <Link href="/services" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
+              All services <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {SERVICE_CARDS.map((card) => {
+              const Icon = card.icon;
+              const service = getServiceBySlug(card.slug);
+              const displayName = service?.name ?? card.label;
+              return (
+                <Link
+                  key={card.slug}
+                  href={`/services/${card.slug}`}
+                  className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl hover:border-green-300 hover:shadow-sm transition-all group"
+                >
+                  <div className="w-11 h-11 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-green-700" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900 group-hover:text-green-700 text-sm mb-1">{displayName}</div>
+                    <div className="text-xs text-green-700 font-medium mb-1">{card.price}</div>
+                    <div className="text-xs text-gray-500 leading-relaxed">{card.desc}</div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6: Browse by State */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
@@ -240,40 +326,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 5: Browse by Service */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">Agricultural drone services</h2>
-              <p className="text-gray-500 mt-1">From row crop fungicide to vineyard treatments and precision mapping</p>
-            </div>
-            <Link href="/services" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors">
-              All services <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {featuredServices.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                className="flex gap-4 p-5 bg-white border border-gray-200 rounded-xl hover:border-green-300 hover:shadow-sm transition-all group"
-              >
-                <div className="text-3xl flex-shrink-0">{s.icon}</div>
-                <div>
-                  <div className="font-semibold text-gray-900 group-hover:text-green-700 text-sm mb-1">{s.name}</div>
-                  <div className="text-xs text-green-700 font-medium mb-1">
-                    ${s.priceMinUsd}{s.priceMaxUsd ? ` to $${s.priceMaxUsd}` : '+'}/{s.priceUnit ?? 'acre'}
-                  </div>
-                  <div className="text-xs text-gray-500 leading-relaxed">{s.description.slice(0, 90)}...</div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6: Browse by Crop */}
+      {/* SECTION 7: Browse by Crop */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Operators by crop</h2>

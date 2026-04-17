@@ -113,6 +113,19 @@
   - Post 10: `/blog/first-1000-acres-drone-operator` — MU Extension break-even math, 5 customer-acquisition channels, cover crop revenue bridge, drone #2 timing
 - Drop-folder `_research/blog-posts-6-10.md` removed post-integration.
 
+## 2026-04-17 — Homepage V1 design revert (batch 1 of 3)
+
+- **Batch 1 (top half of page):** reverted hero/AEO/stats/trust/services to V1 visual language while preserving V2 SEO content (5 JSON-LD blocks, FAQ, metadata).
+  - Hero: restored V1 H1 ("Find a Drone Spraying Service Near Your Farm" with gold accent on "Drone Spraying Service") and V1 subhead, dropped V2's 3 inline bullet stats
+  - `SearchBar`: removed the service-type dropdown; now single state dropdown + "Find Operators" button
+  - AEO block: removed Byline (photo + byline + updated date) from homepage — author still on /about and in schema
+  - Stats row: added Lucide SVG icons (ShieldCheck, MapPin, Sprout, DollarSign) above each number; added source line
+  - New "Why farmers use this directory" section with 4 trust cards and green circle checkmark icons
+  - Services: replaced emoji icons with Lucide (Droplets, Sprout, Map, Radar, Settings, ShoppingCart); all 6 cards link to `/services/[slug]` using the real slug set
+- Pushed to branch `claude/revert-homepage-design-v1-ZYGY0` (not main — branch specified by session)
+- Build: `npm run build` zero errors
+- Batches 2 and 3 cover sections below Services (crops, tools, FAQ, drones, blog, CTA)
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
