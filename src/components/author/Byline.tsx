@@ -20,24 +20,8 @@ function formatDate(iso: string): string {
  * Drives E-E-A-T author signal and visible "last updated" date.
  */
 export default function Byline({ lastUpdated }: Props) {
-  const hasPhoto = !AUTHOR.photoUrl.includes('{{');
-
   return (
-    <div className="flex items-center gap-3 mb-4 pb-4 border-b border-gray-200">
-      {hasPhoto ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={AUTHOR.photoUrl}
-          alt={AUTHOR.photoAlt}
-          width={40}
-          height={40}
-          className="w-10 h-10 rounded-full object-cover flex-shrink-0"
-        />
-      ) : (
-        <div className="w-10 h-10 rounded-full bg-green-100 flex-shrink-0 flex items-center justify-center text-sm font-bold text-green-700">
-          {AUTHOR.firstName[0]}
-        </div>
-      )}
+    <div className="mb-4 pb-4 border-b border-gray-200">
       <div className="text-sm text-gray-600">
         By{' '}
         <Link href="/about" className="font-semibold text-gray-900 hover:text-green-700 hover:underline">

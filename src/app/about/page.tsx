@@ -38,7 +38,6 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   const verifiedCount = operators.filter((op) => op.verified).length;
-  const hasPhoto = !AUTHOR.photoUrl.includes('{{');
   const hasLinkedin = !AUTHOR.linkedin.includes('{{');
 
   const breadcrumbSchema = {
@@ -129,44 +128,26 @@ export default function AboutPage() {
           <Users className="w-6 h-6 text-green-600" /> Who runs this site
         </h2>
         <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <div className="flex items-start gap-5">
-            {hasPhoto ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={AUTHOR.photoUrl}
-                alt={AUTHOR.photoAlt}
-                width={96}
-                height={96}
-                className="w-24 h-24 rounded-full object-cover flex-shrink-0"
-              />
-            ) : (
-              <div className="w-24 h-24 rounded-full bg-green-100 flex-shrink-0 flex items-center justify-center text-3xl font-bold text-green-700">
-                {AUTHOR.firstName[0]}
-              </div>
+          <div className="text-xl font-bold text-gray-900">{AUTHOR.fullName}</div>
+          <div className="text-sm text-green-700 font-medium mb-3">{AUTHOR.jobTitle}</div>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">{AUTHOR.bio}</p>
+          <div className="flex flex-wrap gap-4 text-sm">
+            {hasLinkedin && (
+              <a
+                href={AUTHOR.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
+              >
+                <ExternalLink className="w-4 h-4" /> LinkedIn
+              </a>
             )}
-            <div className="flex-1">
-              <div className="text-xl font-bold text-gray-900">{AUTHOR.fullName}</div>
-              <div className="text-sm text-green-700 font-medium mb-3">{AUTHOR.jobTitle}</div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">{AUTHOR.bio}</p>
-              <div className="flex flex-wrap gap-4 text-sm">
-                {hasLinkedin && (
-                  <a
-                    href={AUTHOR.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
-                  >
-                    <ExternalLink className="w-4 h-4" /> LinkedIn
-                  </a>
-                )}
-                <a
-                  href={`mailto:${AUTHOR.publicEmail}`}
-                  className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
-                >
-                  <Mail className="w-4 h-4" /> {AUTHOR.publicEmail}
-                </a>
-              </div>
-            </div>
+            <a
+              href={`mailto:${AUTHOR.publicEmail}`}
+              className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
+            >
+              <Mail className="w-4 h-4" /> {AUTHOR.publicEmail}
+            </a>
           </div>
         </div>
       </section>
