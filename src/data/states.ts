@@ -1520,6 +1520,156 @@ export const stateData: StateData[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+
+  // ─── SOUTH CAROLINA ──────────────────────────────────────────────────────
+  {
+    slug: 'south-carolina',
+    name: 'South Carolina',
+    abbreviation: 'SC',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'Clemson University Department of Pesticide Regulation',
+    licensingAgencyUrl: 'https://www.clemson.edu/public/regulatory/pesticide-regulation',
+    aerialCategory: 'Category 11: Aerial Applicator',
+    examsRequired: 'Core ($75) + Category 11 ($50). License $50. $50K spray insurance required.',
+    examFees: 'Core $75. Category 11 $50. License $50.',
+    uniqueRules: [
+      '$50,000 spray insurance required.',
+      'Licensing administered by Clemson University, not a state agency.',
+      '$50 reciprocal fee for out-of-state operators.',
+    ],
+    reciprocityStates: ['AL', 'GA', 'FL', 'NC', 'TN', 'VA'],
+    renewalCycle: '5-year cycle',
+    ceRequirements: 'CCUs vary by category per 5-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://www.clemson.edu/extension',
+    topCrops: [
+      { slug: 'cotton', name: 'Cotton', acreage: '250K acres', notes: 'Coastal plain' },
+      { slug: 'soybeans', name: 'Soybeans', acreage: '350K acres', notes: 'Pee Dee region' },
+    ],
+    rateRange: '$16 to $24/acre',
+    statsRate: '$16 to $24/acre',
+    statsTopCrop: 'Cotton',
+    sprayWindows: [],
+    neighboringStates: ['north-carolina', 'georgia'],
+    aeoBlock:
+      'South Carolina pesticide licensing is administered by Clemson University Department of Pesticide Regulation, with Category 11 (Aerial Applicator) and $50,000 spray insurance required. Reciprocity available with 13 states at $50. Rates run $16 to $24 per acre on cotton and soybeans.',
+    licensingDetails:
+      'South Carolina is unique nationally in delegating pesticide applicator regulation to Clemson University Department of Pesticide Regulation rather than a state agriculture department. Category 11 (Aerial Applicator) requires passing both the Core exam ($75) and the Category 11 exam ($50), plus a $50 license fee. Operators must carry $50,000 spray insurance.\n\nRenewal is on a 5-year cycle with Continuing Certification Units (CCUs) varying by category. Reciprocity is available with 13 states including AL, GA, FL, NC, TN, and VA at a $50 reciprocal fee for out-of-state operators.',
+    authorityLinks: [
+      { label: 'Clemson Pesticide Regulation', url: 'https://www.clemson.edu/public/regulatory/pesticide-regulation' },
+      { label: 'Clemson Extension', url: 'https://www.clemson.edu/extension' },
+    ],
+    faqs: [
+      { question: 'Why does Clemson handle pesticide licensing?', answer: 'South Carolina delegates pesticide applicator regulation to Clemson University Department of Pesticide Regulation rather than a state agriculture department. Exams, licensing, and enforcement all run through Clemson.' },
+      { question: 'What insurance is required?', answer: '$50,000 spray insurance minimum. This is lower than Ohio ($100K/$300K) but still a mandatory requirement.' },
+      { question: 'What does drone spraying cost in South Carolina?', answer: '$16 to $24 per acre. Cotton and soybean applications in the coastal plain and Pee Dee region.' },
+      { question: 'Does South Carolina have reciprocal licensing?', answer: 'Yes, with 13 states including AL, GA, FL, NC, TN, VA. $50 reciprocal fee.' },
+      { question: 'What crops drive drone demand?', answer: 'Cotton (250K acres) and soybeans (350K acres) are primary. Peach orchards and tobacco add specialty demand.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── NORTH CAROLINA ───────────────────────────────────────────────────────
+  {
+    slug: 'north-carolina',
+    name: 'North Carolina',
+    abbreviation: 'NC',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'NC Department of Agriculture and Consumer Services',
+    licensingAgencyUrl: 'https://www.ncagr.gov',
+    aerialCategory: 'Aerial Methods category + specialty category. Aircraft inspection $25/aircraft.',
+    examsRequired: 'Core ($50) + Aerial Methods ($50) + specialty ($20 each). License $75/yr.',
+    examFees: 'Core/Aerial $50 each. Specialty $20. License $75/yr. Aircraft inspection $25.',
+    uniqueRules: [
+      'Aircraft inspection fee of $25 per aircraft.',
+      '3 exams minimum: Core, Aerial Methods, and at least one specialty category.',
+    ],
+    reciprocityStates: ['KY', 'SC', 'TN', 'VA'],
+    renewalCycle: '2-year cycle for aerial certification',
+    ceRequirements: '4 hours per 2-year cycle (aerial certification).',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://www.ces.ncsu.edu',
+    topCrops: [
+      { slug: 'soybeans', name: 'Soybeans', acreage: '1.6M acres', notes: 'Coastal plain' },
+      { slug: 'corn', name: 'Corn', acreage: '900K acres', notes: 'Eastern NC' },
+      { slug: 'cotton', name: 'Cotton', acreage: '350K acres', notes: 'Southern NC' },
+    ],
+    rateRange: '$16 to $25/acre',
+    statsRate: '$16 to $25/acre',
+    statsTopCrop: 'Soybeans',
+    sprayWindows: [],
+    neighboringStates: ['south-carolina', 'virginia', 'tennessee', 'georgia'],
+    aeoBlock:
+      'North Carolina requires Core, Aerial Methods, and specialty exams with a $25 per-aircraft inspection fee. Rates run $16 to $25 per acre across 1.6 million acres of soybeans, 900K acres of corn, and high-value tobacco in the Piedmont and Coastal Plain.',
+    licensingDetails:
+      'North Carolina pesticide licensing is administered by the NC Department of Agriculture and Consumer Services (NCDA&CS). Aerial operators must pass a minimum of 3 exams: Core ($50), Aerial Methods ($50), and at least one specialty use-category exam ($20 each). The annual commercial license fee is $75, and each aircraft in your fleet requires a $25 inspection fee.\n\nRenewal is on a 2-year cycle with 4 CE hours required per cycle for aerial certification. Reciprocity exists with KY, SC, TN, and VA. The shorter list compared to Midwest states reflects North Carolina\'s focus on Southeastern state compacts.',
+    authorityLinks: [
+      { label: 'NCDA&CS Pesticide Section', url: 'https://www.ncagr.gov' },
+      { label: 'NC State Extension', url: 'https://www.ces.ncsu.edu' },
+    ],
+    faqs: [
+      { question: 'What does drone spraying cost in North Carolina?', answer: 'Row crops run $16 to $20 per acre. Tobacco and specialty crops run $22 to $25. Eastern NC coastal plain has the most demand.' },
+      { question: 'What is the aircraft inspection fee?', answer: 'NC charges $25 per aircraft for inspection. Each drone in your fleet needs a separate inspection.' },
+      { question: 'What crops drive drone demand in North Carolina?', answer: 'Soybeans (1.6M acres), corn (900K acres), cotton (350K acres), and tobacco. Sweet potatoes in the Sandhills are an emerging niche.' },
+      { question: 'Does NC have reciprocal licensing?', answer: 'Yes, with KY, SC, TN, and VA. Limited compared to Midwest states.' },
+      { question: 'Is tobacco a good drone spray market?', answer: 'Yes. Tobacco plants reach waist height by mid-season, making ground sprayer access damaging. Blue mold and black shank fungicides apply well by drone without crop damage.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── VIRGINIA ─────────────────────────────────────────────────────────────
+  {
+    slug: 'virginia',
+    name: 'Virginia',
+    abbreviation: 'VA',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'Virginia Department of Agriculture and Consumer Services (VDACS)',
+    licensingAgencyUrl: 'https://www.vdacs.virginia.gov',
+    aerialCategory: 'Category 11: Aerial Pesticide Application',
+    examsRequired: 'Core + Category 11. Application $25 (non-refundable). Renewal fee eliminated 2022.',
+    examFees: '$25 application (non-refundable). Renewal fee eliminated in 2022.',
+    uniqueRules: [
+      'Must provide FAA Part 107 + Part 137 documentation to VDACS.',
+      'Renewal fee was eliminated in 2022, making Virginia one of the cheapest states for ongoing licensing.',
+    ],
+    reciprocityStates: ['KY', 'NC', 'SC', 'WV', 'MD', 'DE'],
+    renewalCycle: 'Biennial (every 2 years)',
+    ceRequirements: '1 recertification session per category per 2-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://ext.vt.edu',
+    topCrops: [
+      { slug: 'soybeans', name: 'Soybeans', acreage: '550K acres', notes: 'Eastern VA' },
+      { slug: 'corn', name: 'Corn', acreage: '400K acres', notes: 'Shenandoah Valley' },
+      { slug: 'grapes', name: 'Grapes', acreage: '4K acres', notes: 'Growing wine industry' },
+    ],
+    rateRange: '$16 to $26/acre',
+    statsRate: '$16 to $26/acre',
+    statsTopCrop: 'Soybeans',
+    sprayWindows: [],
+    neighboringStates: ['north-carolina', 'west-virginia', 'kentucky', 'maryland'],
+    aeoBlock:
+      'Virginia requires Category 11 (Aerial Pesticide Application) with a $25 non-refundable application and no renewal fee (eliminated 2022). Rates run $16 to $26 per acre across soybeans, corn, tobacco, and a growing vineyard industry. Reciprocity with multiple neighboring states.',
+    licensingDetails:
+      'Virginia aerial pesticide licensing is administered by VDACS under Category 11 (Aerial Pesticide Application). Virginia requires applicants to provide FAA Part 107 and Part 137 documentation directly to VDACS as part of certification — one of the few states that formally verifies FAA credentials. The initial application fee is $25 (non-refundable); Virginia eliminated its renewal fee in 2022, making it among the cheapest ongoing licensing stacks nationally.\n\nRenewal is biennial, requiring attendance at one recertification session per category. Reciprocity is available with KY, NC, SC, WV, MD, and DE at $70 for a 2-year reciprocal certificate.',
+    authorityLinks: [
+      { label: 'VDACS Pesticide Licensing', url: 'https://www.vdacs.virginia.gov' },
+      { label: 'Virginia Tech Extension', url: 'https://ext.vt.edu' },
+    ],
+    faqs: [
+      { question: 'What does drone spraying cost in Virginia?', answer: 'Row crops $16 to $20 per acre. Tobacco $22 to $26. Vineyard work $24 to $30. Virginia rates are higher than the Corn Belt due to smaller fields and fewer operators.' },
+      { question: 'Is there really no renewal fee?', answer: 'Correct. Virginia eliminated the renewal fee in 2022. You pay a $25 non-refundable application once, then attend biennial recertification sessions. One of the cheapest ongoing licensing structures nationally.' },
+      { question: 'Is the Virginia wine industry a drone opportunity?', answer: 'Growing. Approximately 4,000 acres of vineyards across the state, primarily in the Piedmont and Shenandoah Valley. Hillside blocks and small field sizes make drones more practical than airblast in many Virginia vineyards.' },
+      { question: 'Does Virginia have reciprocal licensing?', answer: 'Yes, with KY, NC, SC, WV, MD, and DE. Reciprocal certificate is $70 for 2 years.' },
+      { question: 'What FAA documentation does VDACS require?', answer: 'You must provide both FAA Part 107 and Part 137 documentation to VDACS as part of your aerial applicator certification. VDACS verifies these at the state level.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
 ];
 
 export function getStateData(slug: string): StateData | undefined {
