@@ -1670,6 +1670,54 @@ export const stateData: StateData[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+
+  // ─── WEST VIRGINIA ────────────────────────────────────────────────────────
+  {
+    slug: 'west-virginia',
+    name: 'West Virginia',
+    abbreviation: 'WV',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'West Virginia Department of Agriculture',
+    licensingAgencyUrl: 'https://agriculture.wv.gov',
+    aerialCategory: 'Category 14: Aerial',
+    examsRequired: 'Core + Category 14. Contact WV DOA for fees.',
+    examFees: 'Contact WV DOA at (304) 558-2209.',
+    uniqueRules: [
+      'Smallest agricultural acreage in the Southeast region.',
+      'Mountainous terrain creates niche drone opportunities where ground equipment cannot operate.',
+    ],
+    reciprocityStates: ['KY', 'OH', 'PA', 'VA', 'MD'],
+    renewalCycle: '3-year cycle',
+    ceRequirements: '20 CCUs per category per 3-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://extension.wvu.edu',
+    topCrops: [
+      { slug: 'corn', name: 'Corn', acreage: '50K acres', notes: 'Valley bottoms' },
+    ],
+    rateRange: '$18 to $28/acre',
+    statsRate: '$18 to $28/acre',
+    statsTopCrop: 'Corn',
+    sprayWindows: [],
+    neighboringStates: ['virginia', 'kentucky', 'ohio', 'pennsylvania', 'maryland'],
+    aeoBlock:
+      'West Virginia requires Category 14 (Aerial) with 20 CCUs per category per 3-year cycle. Agricultural acreage is the smallest in the Southeast, but mountainous terrain creates niche drone opportunities on steep pastures, orchards, and hay fields where ground equipment cannot operate. Rates run $18 to $28 per acre.',
+    licensingDetails:
+      'West Virginia aerial pesticide licensing falls under Category 14 (Aerial), administered by the West Virginia Department of Agriculture. Applicants must pass the Core exam plus the Category 14 exam; fees are not published online and must be confirmed by calling WV DOA at (304) 558-2209. Renewal is on a 3-year cycle requiring 20 CCUs per category.\n\nReciprocity exists with KY, OH, PA, VA, and MD. West Virginia has the smallest total agricultural acreage in the Southeast, but its mountainous topography creates specialized drone opportunities — steep pastures, small apple and peach orchards, and hay fields in valley bottoms where ground rigs and airplanes both struggle.',
+    authorityLinks: [
+      { label: 'WV Department of Agriculture', url: 'https://agriculture.wv.gov' },
+      { label: 'WVU Extension', url: 'https://extension.wvu.edu' },
+    ],
+    faqs: [
+      { question: 'Is there much drone spray demand in West Virginia?', answer: 'Limited in total acreage but niche opportunities exist on steep pastures, small apple and peach orchards, and hay fields in mountain valleys where ground rigs cannot safely operate.' },
+      { question: 'What does drone spraying cost in West Virginia?', answer: '$18 to $28 per acre. Higher than neighboring states due to small field sizes, steep terrain, and very few operators.' },
+      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137, and WV DOA Category 14 (Aerial). Contact WV DOA at (304) 558-2209 for current fees and exam schedule.' },
+      { question: 'Does West Virginia have reciprocal licensing?', answer: 'Yes, with KY, OH, PA, VA, and MD. Contact WV DOA for procedures.' },
+      { question: 'What makes West Virginia different from neighboring states?', answer: 'Terrain. West Virginia is almost entirely mountainous, which limits total ag acreage but makes drones the only practical aerial application method on many properties. Ground rigs and airplanes are both impractical on steep valley farms.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
 ];
 
 export function getStateData(slug: string): StateData | undefined {
