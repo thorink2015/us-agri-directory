@@ -1370,6 +1370,156 @@ export const stateData: StateData[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+
+  // ─── ALABAMA ─────────────────────────────────────────────────────────────
+  {
+    slug: 'alabama',
+    name: 'Alabama',
+    abbreviation: 'AL',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'Alabama Department of Agriculture and Industries',
+    licensingAgencyUrl: 'https://agi.alabama.gov',
+    aerialCategory: 'Aerial category with insurance requirement. Custom Business License for aerial for-hire.',
+    examsRequired: 'Core + category exams. Contact ADAI for fees.',
+    examFees: 'Contact ADAI for current fees.',
+    uniqueRules: [
+      'Insurance required for aerial mode.',
+      'Custom Business License required for for-hire aerial operations.',
+    ],
+    reciprocityStates: ['FL', 'GA', 'IN', 'LA', 'MS', 'OH', 'SC', 'TN'],
+    renewalCycle: '3 to 5 year cycle (varies by category).',
+    ceRequirements: 'Contact ADAI for current CE requirements.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://www.aces.edu',
+    topCrops: [
+      { slug: 'cotton', name: 'Cotton', acreage: '450K acres', notes: 'Central and southern AL' },
+      { slug: 'soybeans', name: 'Soybeans', acreage: '350K acres', notes: 'Northern AL' },
+      { slug: 'corn', name: 'Corn', acreage: '300K acres', notes: 'Northern AL' },
+    ],
+    rateRange: '$16 to $24/acre',
+    statsRate: '$16 to $24/acre',
+    statsTopCrop: 'Cotton',
+    sprayWindows: [],
+    neighboringStates: ['mississippi', 'tennessee', 'georgia', 'florida'],
+    aeoBlock:
+      'Alabama requires insurance and a Custom Business License for for-hire aerial drone operations. Cotton (450K acres) is the primary crop, with rates of $16 to $24 per acre. Reciprocity with 8 states including FL, GA, MS, and TN.',
+    licensingDetails:
+      'Alabama pesticide licensing is administered by the Alabama Department of Agriculture and Industries (ADAI). Aerial applicators require the standard Core and category exams plus proof of insurance for the aerial mode. Commercial for-hire operators must also obtain a Custom Business License from ADAI.\n\nContact ADAI directly for current exam fees and CE requirements, as specific rates were unverified at time of publication. Renewal cycles vary by category (3 to 5 years). Reciprocity exists with FL, GA, IN, LA, MS, OH, SC, and TN.',
+    authorityLinks: [
+      { label: 'Alabama Department of Agriculture and Industries', url: 'https://agi.alabama.gov' },
+      { label: 'Alabama Cooperative Extension System', url: 'https://www.aces.edu' },
+    ],
+    faqs: [
+      { question: 'What does drone spraying cost in Alabama?', answer: '$16 to $24 per acre. Cotton defoliant and mid-season insecticide at the high end, soybean fungicide at the low end.' },
+      { question: 'What is the Custom Business License?', answer: 'Alabama requires a separate Custom Business License for aerial for-hire operations. This is in addition to individual applicator certification.' },
+      { question: 'What crops drive drone demand in Alabama?', answer: 'Cotton (450K acres) in central and southern Alabama, soybeans and corn in northern Alabama. Peanut and pecan operations add specialty demand.' },
+      { question: 'Does Alabama have reciprocal licensing?', answer: 'Yes, with FL, GA, IN, LA, MS, OH, SC, and TN. One of the broader reciprocity lists in the Southeast.' },
+      { question: 'Is Alabama a good market for new drone operators?', answer: 'Moderate. Lower operator density than the Corn Belt means less competition but also smaller total acreage. Operators who serve both cotton and specialty crops have the best year-round utilization.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── GEORGIA ─────────────────────────────────────────────────────────────
+  {
+    slug: 'georgia',
+    name: 'Georgia',
+    abbreviation: 'GA',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'Georgia Department of Agriculture (GDA)',
+    licensingAgencyUrl: 'https://agr.georgia.gov',
+    aerialCategory: 'Category 34: Aerial Methods. Recognizes both Part 107 and Part 137.',
+    examsRequired: 'Core + site category + Category 34 (FAA proof required). $45/exam. $90 license. 70% passing.',
+    examFees: '$45/exam. $90 license.',
+    uniqueRules: [
+      'Category 34 requires proof of FAA certification (Part 107 and/or Part 137).',
+      'Category 34 has 0 CE hours (CE comes from site categories).',
+      'Pesticide Contractor License required.',
+    ],
+    reciprocityStates: ['AL', 'FL', 'SC', 'TN', 'NC'],
+    renewalCycle: '5-year cycle.',
+    ceRequirements: 'Category 34 = 0 CE hours. CE earned through site categories.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://extension.uga.edu',
+    topCrops: [
+      { slug: 'cotton', name: 'Cotton', acreage: '1.2M acres', notes: '#2 cotton state' },
+      { slug: 'soybeans', name: 'Soybeans', acreage: '200K acres', notes: 'Southern GA' },
+    ],
+    rateRange: '$16 to $26/acre',
+    statsRate: '$16 to $26/acre',
+    statsTopCrop: 'Cotton',
+    sprayWindows: [],
+    neighboringStates: ['alabama', 'florida', 'south-carolina', 'north-carolina', 'tennessee'],
+    aeoBlock:
+      'Georgia is the #2 US cotton state at 1.2 million acres, with Category 34 (Aerial Methods) requiring FAA proof and a Pesticide Contractor License. Rates run $16 to $26 per acre. Peanuts, pecans, and blueberries add specialty crop demand beyond cotton.',
+    licensingDetails:
+      'Georgia pesticide licensing is administered by the Georgia Department of Agriculture (GDA). Category 34 (Aerial Methods) covers drone application and uniquely requires proof of FAA certification (Part 107 and/or Part 137) at the state level — most states do not formally verify FAA credentials. Exams are $45 each with a $90 license fee on a 5-year cycle.\n\nCategory 34 carries zero CE hours of its own; continuing education must be earned through site categories. A Pesticide Contractor License is required for the business entity in addition to individual certification. Reciprocity exists with AL, FL, SC, TN, and NC.',
+    authorityLinks: [
+      { label: 'Georgia Department of Agriculture', url: 'https://agr.georgia.gov' },
+      { label: 'University of Georgia Extension', url: 'https://extension.uga.edu' },
+    ],
+    faqs: [
+      { question: 'What does drone spraying cost in Georgia?', answer: 'Cotton defoliant runs $16 to $22 per acre. Pecan and blueberry orchard work runs $22 to $26. Row crop fungicide at the lower end.' },
+      { question: 'Does Georgia require FAA proof for state licensing?', answer: 'Yes. Category 34 (Aerial Methods) requires you to show FAA Part 107 and/or Part 137 documentation as part of the state certification. This is unusual; most states do not formally verify FAA credentials.' },
+      { question: 'What is the Pesticide Contractor License?', answer: 'Georgia requires commercial operators to hold both individual applicator certification and a Pesticide Contractor License for the business entity.' },
+      { question: 'What specialty crops use drones in Georgia?', answer: 'Peanuts (800K acres), pecans (180K acres), and blueberries (25K acres) all have growing drone adoption. Peach orchards in central Georgia are an emerging niche.' },
+      { question: 'Does Georgia have reciprocal licensing?', answer: 'Yes, with any EPA-approved state. Special agreement with Mississippi. Contact GDA for specific procedures.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── FLORIDA ─────────────────────────────────────────────────────────────
+  {
+    slug: 'florida',
+    name: 'Florida',
+    abbreviation: 'FL',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'Florida Department of Agriculture and Consumer Services (FDACS)',
+    licensingAgencyUrl: 'https://www.fdacs.gov',
+    aerialCategory: 'Aerial Pest Control (Ch. 487 F.S.)',
+    examsRequired: 'Core + Aerial + site category. No exam fee. $250 commercial license.',
+    examFees: 'No exam fee. $250 commercial license.',
+    uniqueRules: [
+      'All aircraft including drones must register annually with FDACS.',
+      'Insurance or surety bond required.',
+      'No exam fee is unusual nationally.',
+      '24 separate pest control categories; operators must certify in each relevant one.',
+    ],
+    reciprocityStates: ['AL', 'GA', 'SC'],
+    renewalCycle: '4-year cycle.',
+    ceRequirements: '4 Core + 16 Aerial CEU per 4-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://ifas.ufl.edu',
+    topCrops: [
+      { slug: 'orchards', name: 'Citrus', acreage: '375K acres', notes: 'Asian citrus psyllid management' },
+    ],
+    rateRange: '$18 to $28/acre',
+    statsRate: '$18 to $28/acre',
+    statsTopCrop: 'Citrus',
+    sprayWindows: [],
+    neighboringStates: ['georgia', 'alabama'],
+    aeoBlock:
+      'Florida requires Aerial Pest Control certification under Chapter 487 with no exam fee but a $250 commercial license and annual aircraft registration with FDACS. Citrus (375K acres) drives the primary drone demand, with Asian citrus psyllid management requiring frequent low-volume insecticide applications. Rates run $18 to $28 per acre.',
+    licensingDetails:
+      'Florida pesticide licensing is administered by the Florida Department of Agriculture and Consumer Services (FDACS) under Aerial Pest Control (Chapter 487 F.S.). Florida does not charge exam fees — the $250 commercial license is the main upfront cost. All aircraft including drones must register annually with FDACS, and insurance or a surety bond is required.\n\nFlorida has 24 separate pest control categories, the most granular category system in the US. Operators must certify in each relevant category. Renewal is on a 4-year cycle with 4 Core and 16 Aerial CEUs required. Reciprocity exists with AL, GA, and SC.',
+    authorityLinks: [
+      { label: 'FDACS Pesticide Licensing', url: 'https://www.fdacs.gov' },
+      { label: 'UF/IFAS Extension', url: 'https://ifas.ufl.edu' },
+    ],
+    faqs: [
+      { question: 'What does drone spraying cost in Florida?', answer: '$18 to $28 per acre. Citrus insecticide at the high end, row crop and pasture applications at the low end.' },
+      { question: 'Do I need to register my drone with FDACS?', answer: 'Yes. All aircraft including drones must register annually with FDACS for aerial pesticide application. This is in addition to FAA registration.' },
+      { question: 'Is there really no exam fee in Florida?', answer: 'Correct. FDACS does not charge for pesticide applicator exams. The $250 commercial license fee is the main cost.' },
+      { question: 'What is the Asian citrus psyllid opportunity?', answer: 'The psyllid transmits citrus greening disease. Management requires frequent (every 2 to 4 weeks) low-volume insecticide applications during new flush growth. Drones handle this more precisely than airblast sprayers, especially near residential areas.' },
+      { question: 'How many pest control categories does Florida have?', answer: '24 separate categories. Operators must certify in each relevant one. This is the most granular category system in the US.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
 ];
 
 export function getStateData(slug: string): StateData | undefined {
