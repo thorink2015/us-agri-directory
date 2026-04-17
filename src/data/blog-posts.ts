@@ -20,6 +20,38 @@ import { BlogPost } from './types';
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'dji-vs-hylio-which-spray-drone',
+    title: 'DJI Agras T50 vs Hylio AG-272: The 2026 Comparison',
+    description:
+      'DJI T50: $22K to $28K, 40L, not NDAA. Hylio AG-272: $55K to $75K, 68L, NDAA compliant. Full comparison for commercial operators.',
+    category: 'guide',
+    publishedAt: '2026-04-16',
+    author: 'Eugen',
+    readMinutes: 9,
+    tags: ['DJI Agras T50', 'Hylio AG-272', 'NDAA', 'spray drone comparison', 'buyers guide'],
+    relatedServices: ['sales'],
+    content: 'dji-vs-hylio-which-spray-drone',
+    aeoBlock:
+      'The DJI Agras T50 ($22,000 to $28,000 post-tariff, 40L tank) and Hylio AG-272 ($55,000 to $75,000 estimated, 68L tank) are the two most common commercial spray drones in the US. DJI offers lower cost and a larger dealer network. Hylio offers NDAA compliance, US manufacturing in Richmond, Texas, and 25 mph wind resistance versus DJI 13.4 mph. Most operators choose based on whether they need NDAA compliance and how much wind they face.',
+    faqs: [
+      {
+        question: 'Can I run both DJI and Hylio in the same fleet?',
+        answer:
+          'Yes. Different ground stations and software, so pilot training covers both. This is common among operators who serve both private farm and government-funded contracts.',
+      },
+      {
+        question: 'Is DJI going to get banned?',
+        answer:
+          'As of April 2026, DJI remains legal to purchase and operate in the US. The Countering CCP Drones Act was excluded from FY2025 NDAA but remains active in future legislative cycles. The 170 percent tariff is the more immediate impact on the US market.',
+      },
+      {
+        question: 'Which drone holds value better for resale?',
+        answer:
+          'DJI has a larger used market. The T40 (superseded by T50) trades at significant discounts. Hylio resale data is limited due to a smaller installed base.',
+      },
+    ],
+  },
+  {
     slug: 'cover-crop-seeding-drone-guide',
     title: 'Cover Crop Seeding by Drone: The Complete 2026 Guide',
     description:

@@ -2,6 +2,98 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 export const blogContent: Record<string, ReactNode> = {
+  'dji-vs-hylio-which-spray-drone': (
+    <>
+      <h2>The two-drone market</h2>
+      <p>
+        DJI controls roughly 80 percent of the US ag drone market. Hylio is the leading US-made
+        alternative. Every other platform is a distant third. Your first drone purchase in 2026 is
+        almost certainly one of these two, and our <Link href="/buyers-guide">buyers guide</Link>{' '}
+        covers the full fleet-building checklist.
+      </p>
+
+      <h2>Price</h2>
+      <p>
+        <Link href="/drones/dji-agras-t50">DJI T50</Link>: $18,000 pre-tariff, $22,000 to $28,000
+        post-tariff (170 percent cumulative tariff).{' '}
+        <Link href="/drones/hylio-ag-272">Hylio AG-272</Link>: MSRP not published, estimated $55,000
+        to $75,000. The tariff narrowed the gap from 3x to 4x down to 2x to 3x. Run your numbers in
+        the <Link href="/tools/roi-calculator">ROI calculator</Link>.
+      </p>
+
+      <h2>Tank and payload</h2>
+      <p>
+        T50: 40L liquid, 50 kg granular. AG-272: 68L liquid, 101 kg granular. The AG-272 holds 70
+        percent more liquid per flight, meaning fewer refill stops. Swath width and flow rate
+        differences play out in the <Link href="/tools/drone-comparison">drone comparison tool</Link>.
+      </p>
+
+      <h2>Wind</h2>
+      <p>
+        This is the sleeper spec. T50: rated 13.4 mph (6 m/s). AG-272: rated 25 mph sustained, 40
+        mph gust. In Kansas, Oklahoma, Nebraska, and the Dakotas, daily wind exceeds 13.4 mph most
+        afternoons from March through October. T50 operators spray at dawn. AG-272 operators spray
+        all day.
+      </p>
+
+      <h2>NDAA compliance</h2>
+      <p>
+        T50: not compliant. AG-272: fully compliant (FY2019 Section 889, FY2020 Section 848,
+        certified by CEO Arthur Erickson October 2024). If you bid federal, state, or
+        university-funded work, you need Hylio. Private farm contracts have no NDAA requirement.
+        Full detail on the <Link href="/regulations/ndaa-compliance">NDAA compliance page</Link>.
+      </p>
+
+      <h2>Dealer and parts</h2>
+      <p>
+        DJI: dozens of US dealers, same-day parts in many regions. Hylio: direct from Richmond, TX
+        plus a distributor network. Smaller parts pipeline. Carry a spare parts kit during peak
+        season if running Hylio in remote areas. <Link href="/services/sales">Dealers and sales
+        partners</Link> are listed by region in our directory.
+      </p>
+
+      <h2>Battery and charging</h2>
+      <p>
+        T50: 9 to 12 minute charge (DB1560). AG-272: 25 to 30 minutes (14S 42 Ah LiPo). DJI&apos;s
+        faster charge means higher daily throughput per drone if battery rotation is your
+        bottleneck. Generator sizing and battery rotation count are covered in the buyers guide.
+      </p>
+
+      <h2>Swarm</h2>
+      <p>
+        AG-272 supports up to 3 units from a single GroundLink station. DJI does not offer native
+        multi-drone control from one controller. Swarm gives Hylio operators a throughput multiplier
+        without adding per-pilot cost.
+      </p>
+
+      <h2>The verdict</h2>
+      <p>
+        Buy DJI T50 if: private farm contracts only, you want lowest entry cost, fastest parts,
+        largest operator community. Buy Hylio AG-272 if: federal or state work, Great Plains wind
+        conditions, fleet scaling with swarm mode. Many operators run both. Plug either platform
+        into our <Link href="/pricing">2026 pricing guide</Link> to see per-acre margins at
+        your local rate.
+      </p>
+
+      <h2>Authority sources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://ag.dji.com/t50/specs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DJI Agras T50 official specifications
+          </a>
+        </li>
+        <li>
+          <a href="https://hyl.io" target="_blank" rel="noopener noreferrer">
+            Hylio official site
+          </a>
+        </li>
+      </ul>
+    </>
+  ),
   'cover-crop-seeding-drone-guide': (
     <>
       <h2>Why drones for cover crops</h2>
