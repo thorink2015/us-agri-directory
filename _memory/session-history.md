@@ -51,7 +51,32 @@
 - Fixed dead link: `/guides/fonduri-afir-drone` → `/guides` in roi-calculator/page.tsx
 - Updated memory: project-facts.md (IndexNow key, branch record), session-history.md
 
-## 2026-04-17 — Netlify deploy fix
+## 2026-04-16 — Tools SEO + Pricing page + Homepage v2 + Nav (PR #21, merged)
+
+- **Types:** `DroneModel` + `Region` interfaces added to `src/data/types.ts`
+- **Drone page:** `drones/[slug]/page.tsx` — specs table, AEO block, FAQPage/BreadcrumbList/Article schemas, Byline, AuthorCard
+- **Region page:** `regions/[slug]/page.tsx` — sprayWindows table, keyInsights, FAQAccordion, schemas
+- **Nav:** flat 8-item nav + Tools dropdown (3 calculators); SearchBar with state+service dropdowns
+- **Homepage:** full 12-section rewrite — 5 schemas, 50-state grid, 35+ internal links
+- **Pricing:** full 9-section pillar rewrite — service/regional/crop rate tables, fees, history, drone vs alternatives, USDA cost-share, FAQ, authority links
+- **Tools index `/tools`:** AEO block, FAQAccordion, 4 schemas (BreadcrumbList/ItemList/FAQPage/WebPage)
+- **Spray cost calculator:** rebuilt PriceCalculator — 50-state dropdown, regional multipliers, low/high range, passes, chemical toggle; full page SEO (4 schemas, Byline, AuthorCard, FAQAccordion)
+- **ROI calculator:** full page SEO — new H1, AEO, 4 schemas, MU Extension explainer, FAQAccordion
+- **Coverage calculator:** full page SEO — new H1, AEO, 4 schemas, FAQAccordion
+- **Acreage converter:** rebuilt HectareCalculator from Romanian → English (acres/ha/sqft/sqm/sections); full page SEO
+- **Drone comparison:** fixed broken `@/data/drone-models` import; spec table from live drone-model.ts data, 4-scenario guide, FAQAccordion (5 Q&As)
+- **Treatment calendar:** new H1, AEO, 4 schemas, booking deadlines on each entry, crop link chips, FAQAccordion
+
+## 2026-04-17 — State page template + 3 proof states (PR #22, merged)
+
+- **`src/data/types.ts`:** added `StateData` interface (28 fields)
+- **`src/data/states.ts`:** Iowa, Texas, California full data objects + `getStateData(slug)` helper
+- **`src/app/states/[slug]/page.tsx`:** dual-mode template — 11-section rich layout for proof states, fallback counties-based template for remaining 47 states
+- **`src/app/states/page.tsx`:** index updated with featured proof-state cards, AEO block, green-dot indicators, BreadcrumbList schema
+- **Fix:** wrapped spray windows section in conditional to handle empty `sprayWindows` arrays gracefully
+- **PR #22** merged to `main`
+
+## 2026-04-17 — Netlify deploy fix (PR #23, merged)
 
 - **Root cause found:** `regions/page.tsx` used `r.icon`, `r.tagline`, `r.totalAcres` — fields missing from the `Region` interface. TypeScript build error silently failed every Netlify deploy after PR #20 merged, freezing live site at `@5230f70` (Apr 16 13:06).
 - **Fix (PR #23):** Added `icon`, `tagline`, `totalAcres` to `Region` interface + populated all 5 regions + nullish fallbacks in template. Build now passes: 1192 static pages, 0 errors.
@@ -62,4 +87,4 @@
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
 2. Research files research-03, research-04, research-05 unblock regulations hub, grants pages, pricing rewrite, homepage rewrite
-3. State page template + 50 state pages (build-plan Session 11 — behind approval gate)
+3. Remaining 47 state data objects (Corn Belt / Great Plains / Delta+Southeast / West Coast+Mountain / Northeast batches) — **blocked on `research-03-state-licensing.md`**; template is ready and tested

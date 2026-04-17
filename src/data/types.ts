@@ -177,6 +177,46 @@ export interface ServiceDefinition {
   lastReviewedAt?: string;
 }
 
+export interface StateData {
+  slug: string;
+  name: string;
+  abbreviation: string;
+  regionSlug: string;          // e.g. 'corn-belt'
+  regionName: string;          // e.g. 'Corn Belt'
+  licensingAgency: string;     // e.g. 'IDALS'
+  licensingAgencyUrl: string;
+  aerialCategory: string;      // e.g. 'Category 11 (Aerial Application)'
+  examsRequired: string;
+  examFees: string;
+  uniqueRules: string[];
+  reciprocityStates: string[]; // abbreviated state names
+  renewalCycle: string;
+  ceRequirements: string;
+  droneSpecificCredential: boolean;
+  droneGuidanceUrl: string | null;
+  extensionUrl: string;
+  topCrops: {
+    slug: string;
+    name: string;
+    acreage: string;
+    notes: string;
+  }[];
+  rateRange: string;           // e.g. '$12 to $17/acre'
+  statsRate: string;
+  statsTopCrop: string;
+  sprayWindows: {
+    crop: string;
+    rateRange: string;
+    window: string;
+  }[];
+  neighboringStates: string[]; // slugs e.g. ['illinois', 'minnesota']
+  aeoBlock: string;
+  licensingDetails: string;    // long prose for the licensing section
+  authorityLinks: { label: string; url: string }[];
+  faqs: { question: string; answer: string }[];
+  lastReviewedAt: string;
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
