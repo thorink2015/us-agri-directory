@@ -1,17 +1,51 @@
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import ContactForm from './ContactForm';
+import { AUTHOR, SITE } from '@/data/author';
 
 export const metadata: Metadata = {
   title: 'Contact | US Ag Drone Directory',
   description:
     'Get in touch with US Ag Drone Directory — submit your listing, ask a question, or send us feedback.',
   alternates: { canonical: '/contact' },
+  openGraph: {
+    title: `Contact ${SITE.name}`,
+    description: 'Submit your listing, report a correction, or send partnership inquiries.',
+    url: `${SITE.domain}/contact`,
+  },
 };
 
 export default function ContactPage() {
+  const contactPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: `Contact ${SITE.name}`,
+    url: `${SITE.domain}/contact`,
+    description: 'Contact the US Agricultural Drone Directory team for listings, corrections, partnerships, or media inquiries.',
+    isPartOf: { '@id': `${SITE.domain}/#organization` },
+    mainEntity: {
+      '@type': 'Organization',
+      '@id': `${SITE.domain}/#organization`,
+      name: SITE.name,
+      email: AUTHOR.publicEmail,
+      url: SITE.domain,
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain },
+      { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE.domain}/contact` },
+    ],
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <Breadcrumb items={[{ label: 'Contact' }]} />
 
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Contact Us</h1>

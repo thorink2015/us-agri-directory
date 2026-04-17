@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { Send, CheckCircle } from 'lucide-react';
 import { counties } from '@/data/counties';
+import { crops } from '@/data/crops';
+import { drones } from '@/data/drone-model';
 import { SERVICE_LABELS } from '@/data/types';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
@@ -128,15 +130,41 @@ export default function SubmitForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1.5">
-          Drone models used
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Crops served
         </label>
-        <input
-          name="drones"
-          type="text"
-          placeholder="e.g. DJI Agras T50, Hylio AG-272"
-          className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-        />
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          {crops.map((c) => (
+            <label key={c.slug} className="flex items-center gap-2 text-sm cursor-pointer">
+              <input
+                type="checkbox"
+                name={`crop_${c.slug}`}
+                value={c.slug}
+                className="w-4 h-4 text-green-600 rounded"
+              />
+              <span className="text-gray-700">{c.name}</span>
+            </label>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Drone models operated
+        </label>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          {drones.map((d) => (
+            <label key={d.slug} className="flex items-center gap-2 text-sm cursor-pointer">
+              <input
+                type="checkbox"
+                name={`drone_${d.slug}`}
+                value={d.slug}
+                className="w-4 h-4 text-green-600 rounded"
+              />
+              <span className="text-gray-700">{d.name}</span>
+            </label>
+          ))}
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
