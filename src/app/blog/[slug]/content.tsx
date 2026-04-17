@@ -2,6 +2,89 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 export const blogContent: Record<string, ReactNode> = {
+  'drone-spraying-state-license-guide': (
+    <>
+      <h2>The baseline</h2>
+      <p>
+        Every state requires three things: <Link href="/regulations/faa-part-107">FAA Part 107</Link>,{' '}
+        <Link href="/regulations/faa-part-137">FAA Part 137</Link>, and a state commercial pesticide
+        applicator license with an aerial category endorsement. Beyond that baseline, everything
+        varies. Our <Link href="/regulations/state-licensing">state licensing hub</Link> tracks
+        every requirement.
+      </p>
+
+      <h2>Six states with drone-specific credentials</h2>
+      <ul>
+        <li>California: Unmanned Pest Control Aircraft Pilot Certificate (Apprentice / Journeyman)</li>
+        <li>North Dakota: standalone Unmanned Aerial Applicator License from the Aeronautics Commission</li>
+        <li>Arizona: Drone Pilot License (DPL), separate from manned aircraft</li>
+        <li>Michigan: MDARD-approved UAV training program required</li>
+        <li>Louisiana: mandatory LSU AgCenter Drone Safety Program before certification</li>
+        <li>Minnesota: MnDOT aircraft registration plus aerial endorsement</li>
+      </ul>
+
+      <h2>States with unique restrictions</h2>
+      <ul>
+        <li>Ohio: even private applicators need a commercial license for drones</li>
+        <li>Iowa: in-state aerial applicator consultant required</li>
+        <li>Oregon: 50 hours flight experience before APA license application</li>
+        <li>Arkansas: CAT license invalid for drones; ag crops only</li>
+        <li>Tennessee: $150 aircraft decal per drone</li>
+        <li>Vermont: 30-day public comment aerial permit</li>
+        <li>Maine: 80 percent passing score (highest nationally)</li>
+        <li>Connecticut: per-application aerial permit with $200 to $565 fees</li>
+      </ul>
+
+      <h2>Cheapest states to get licensed</h2>
+      <p>
+        South Dakota ($35 for two years), Indiana (free exams at Purdue, $45/year), Kentucky
+        ($10/exam, $25 license). If you are just testing the business model before committing, these
+        three are the lowest-friction paths to a legal first pass. Full business-launch sequence at{' '}
+        <Link href="/start-a-drone-business">start a drone business</Link>.
+      </p>
+
+      <h2>Most expensive states</h2>
+      <p>
+        New York ($100/exam, $450 for three years on the first category), California ($265 pilot
+        application + $115/exam + $320 QAC), Tennessee ($150 decal + $200 pilot + $150 exam
+        application).
+      </p>
+
+      <h2>Best reciprocity</h2>
+      <p>
+        Minnesota: 18 states. Pennsylvania: 25+ states. Worst: Arkansas and Hawaii (zero
+        reciprocity). Reciprocity usually requires the host state&apos;s laws-and-regulations exam
+        even when the core exam transfers. Pair your home state license with a well-reciprocating
+        neighbor for the widest operating region per dollar.
+      </p>
+
+      <h2>How to get started</h2>
+      <p>
+        Pick your home state first. The <Link href="/states">full state directory</Link> links to
+        the licensing page and operator listings for every state. Schedule the exam, schedule Part
+        107, then submit your Part 137 package. Study plans and test-prep providers live on the{' '}
+        <Link href="/training-and-certification">training and certification</Link> page.
+      </p>
+
+      <h2>Authority sources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.epa.gov/pesticide-worker-safety"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            EPA &mdash; Pesticide Worker Safety
+          </a>
+        </li>
+        <li>
+          <a href="https://npsec.us" target="_blank" rel="noopener noreferrer">
+            National Pesticide Safety Education Center
+          </a>
+        </li>
+      </ul>
+    </>
+  ),
   'dji-vs-hylio-which-spray-drone': (
     <>
       <h2>The two-drone market</h2>

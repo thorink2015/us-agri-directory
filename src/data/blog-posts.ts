@@ -20,6 +20,38 @@ import { BlogPost } from './types';
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'drone-spraying-state-license-guide',
+    title: 'What Pesticide License Do You Need to Spray by Drone in Your State?',
+    description:
+      'Every state requires a pesticide applicator license for drone spraying. Quick reference: aerial categories, exams, fees, and unique rules for all 50 states.',
+    category: 'guide',
+    publishedAt: '2026-04-16',
+    author: 'Eugen',
+    readMinutes: 9,
+    tags: ['state licensing', 'pesticide applicator', 'aerial category', 'reciprocity', 'regulations'],
+    relatedServices: ['training', 'consultancy'],
+    content: 'drone-spraying-state-license-guide',
+    aeoBlock:
+      'All 50 US states require a commercial pesticide applicator license with an aerial category endorsement for drone pesticide application. Requirements vary from 2 exams and $35 (South Dakota) to separate drone credentials, 50 hours flight experience, and over $500 in fees (Oregon, California). Six states have drone-specific credentials or mandatory drone training programs: California, North Dakota, Arizona, Michigan, Louisiana, and Minnesota.',
+    faqs: [
+      {
+        question: 'Which state is easiest to get licensed in?',
+        answer:
+          'Washington (2 exams, no standalone aerial category, WSDA confirms drones are legal wherever airblast is legal) or South Dakota ($35 two-year license, straightforward Category 17). Both can be completed in a single study cycle.',
+      },
+      {
+        question: 'Can I use my license across state lines?',
+        answer:
+          'Only with a reciprocity agreement. Minnesota recognizes 18 states. Pennsylvania has 25+ reciprocal partners. Many states require their own laws exam even with reciprocity. Arkansas and Hawaii grant zero reciprocity.',
+      },
+      {
+        question: 'Do I need a separate license for each state I work in?',
+        answer:
+          'Yes, unless reciprocity covers you. Most multi-state operators hold 3 to 5 state licenses covering their operating region. Start with your home state, then add neighbors as you expand.',
+      },
+    ],
+  },
+  {
     slug: 'dji-vs-hylio-which-spray-drone',
     title: 'DJI Agras T50 vs Hylio AG-272: The 2026 Comparison',
     description:
