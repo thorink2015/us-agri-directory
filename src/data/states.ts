@@ -2561,6 +2561,104 @@ export const stateData: StateData[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+
+  // ─── NEW HAMPSHIRE ────────────────────────────────────────────────────────
+  {
+    slug: 'new-hampshire',
+    name: 'New Hampshire',
+    abbreviation: 'NH',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'New Hampshire Division of Pesticide Control',
+    licensingAgencyUrl: 'https://www.agriculture.nh.gov',
+    aerialCategory: 'Category J: Aerial Application',
+    examsRequired: 'Core + Category J. Contact (603) 271-3550 for fees.',
+    examFees: 'Contact Division of Pesticide Control.',
+    uniqueRules: [
+      'Minimal agricultural acreage.',
+      'Primary drone opportunities in forestry and landscape pest management.',
+    ],
+    reciprocityStates: ['VT', 'MA', 'ME'],
+    renewalCycle: '5-year cycle',
+    ceRequirements: '12 credits per 5-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://extension.unh.edu',
+    topCrops: [
+      { slug: 'corn', name: 'Corn', acreage: '20K acres', notes: 'Dairy silage' },
+    ],
+    rateRange: '$22 to $32/acre',
+    statsRate: '$22 to $32/acre',
+    statsTopCrop: 'Corn',
+    sprayWindows: [],
+    neighboringStates: ['vermont', 'massachusetts', 'maine'],
+    aeoBlock:
+      'New Hampshire uses Category J (Aerial Application) with minimal agricultural crop acreage. Primary drone opportunities are forestry pest management, blueberry operations, and small apple orchards. Rates run $22 to $32 per acre.',
+    licensingDetails:
+      'New Hampshire aerial pesticide licensing is administered by the NH Division of Pesticide Control under Category J (Aerial Application). Fees and exam schedules should be confirmed directly with the Division at (603) 271-3550, as specifics are not published online. Renewal is on a 5-year cycle requiring 12 CE credits.\n\nReciprocity exists with VT, MA, and ME — positioning NH as part of a broader New England territory rather than a standalone market. Primary drone opportunities are forestry pest management, small apple orchards, blueberry operations, and landscape pest control.',
+    authorityLinks: [
+      { label: 'NH Division of Pesticide Control', url: 'https://www.agriculture.nh.gov' },
+      { label: 'UNH Extension', url: 'https://extension.unh.edu' },
+    ],
+    faqs: [
+      { question: 'Is there drone spray demand in New Hampshire?', answer: 'Limited. Forestry pest management, small apple orchards, blueberry operations, and landscape pest control are the main niches. Total crop acreage is very small.' },
+      { question: 'What does drone spraying cost?', answer: '$22 to $32 per acre. Small fields, hilly terrain, and very few operators push rates above the national average.' },
+      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137, and NH Division of Pesticide Control Core + Category J. Contact (603) 271-3550 for current fees and exam schedule.' },
+      { question: 'Does NH have reciprocal licensing?', answer: 'Yes, with VT, MA, and ME.' },
+      { question: 'Is NH practical for a drone spray business?', answer: 'Only as part of a broader New England territory. Most NH drone operators also serve VT, MA, and ME.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── MAINE ────────────────────────────────────────────────────────────────
+  {
+    slug: 'maine',
+    name: 'Maine',
+    abbreviation: 'ME',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'Maine Board of Pesticides Control (BPC)',
+    licensingAgencyUrl: 'https://www.maine.gov/dacf/php/pesticides/applicators/licensing.html',
+    aerialCategory: 'Category 11: Aerial Pest Control',
+    examsRequired: 'Core + Category 11. $10/exam. 80% passing (highest in the US). $105 license.',
+    examFees: '$10/exam. $105 license.',
+    uniqueRules: [
+      '80% passing score, the highest in the US.',
+      'Category 11 is not standalone; Master Applicator must be employed first.',
+      'Firm license $300 required.',
+      'Reciprocity for pest management emergencies only.',
+    ],
+    reciprocityStates: [],
+    renewalCycle: '3-year cycle',
+    ceRequirements: 'Operator: 6 credits per 3 years. Master: 9 credits per 3 years.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://extension.umaine.edu',
+    topCrops: [
+      { slug: 'orchards', name: 'Blueberries', acreage: '44K acres', notes: '#1 wild blueberry state' },
+    ],
+    rateRange: '$20 to $32/acre',
+    statsRate: '$20 to $32/acre',
+    statsTopCrop: 'Blueberries',
+    sprayWindows: [],
+    neighboringStates: ['new-hampshire'],
+    aeoBlock:
+      'Maine requires the highest exam passing score in the US at 80 percent for Category 11 (Aerial Pest Control), and a Master Applicator must be employed by the firm before aerial certification is issued. Wild blueberry operations (44K acres, #1 nationally) are the primary drone opportunity. Rates run $20 to $32 per acre.',
+    licensingDetails:
+      'Maine aerial pesticide licensing is administered by the Maine Board of Pesticides Control (BPC) under Category 11 (Aerial Pest Control). Maine has the highest exam passing threshold in the US at 80 percent — above the 70 percent national standard and 75 percent in Vermont. Category 11 is not standalone; a Master Applicator must be employed by the firm before Category 11 certification can be issued to individual operators. Exam fees are $10 each, with a $105 operator license and $300 firm license required.\n\nMaine has no standard reciprocity — reciprocal licensing is granted only for pest management emergencies. Renewal is on a 3-year cycle: 6 CE credits for operators, 9 for Master Applicators. Wild blueberries (44K acres, #1 nationally) are the primary drone market.',
+    authorityLinks: [
+      { label: 'Maine Board of Pesticides Control', url: 'https://www.maine.gov/dacf/php/pesticides/applicators/licensing.html' },
+      { label: 'UMaine Extension', url: 'https://extension.umaine.edu' },
+    ],
+    faqs: [
+      { question: 'Why is Maine passing score 80%?', answer: 'Maine BPC sets the passing threshold at 80 percent, compared to 70 percent in most states and 75 percent in Vermont. This is the highest exam standard in the US for aerial pesticide applicators.' },
+      { question: 'What is the Master Applicator requirement?', answer: 'Maine requires a Master Applicator to be employed by the firm before Category 11 aerial certification can be issued to individual operators. Master certification requires 9 CE credits per 3-year cycle versus 6 for standard operators.' },
+      { question: 'Are wild blueberries a drone opportunity?', answer: 'Yes. Maine grows 44K acres of wild blueberries, the most in the US. Aerial fungicide and insecticide applications during bloom and fruit set are standard practice. Drones handle the small, irregular field shapes better than manned aircraft.' },
+      { question: 'Does Maine have reciprocal licensing?', answer: 'Emergency only, for pest management emergencies. No standard reciprocity. All operators must test in Maine.' },
+      { question: 'What does drone spraying cost in Maine?', answer: '$20 to $32 per acre. Blueberry operations and apple orchards at the high end. Very limited row crop acreage.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
 ];
 
 export function getStateData(slug: string): StateData | undefined {
