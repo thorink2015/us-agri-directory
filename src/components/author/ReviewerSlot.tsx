@@ -1,5 +1,5 @@
 /**
- * ReviewerSlot — deferred E-E-A-T reviewer credit.
+ * ReviewerSlot, deferred E-E-A-T reviewer credit.
  *
  * Renders nothing until a real reviewer is secured and data is passed.
  * This component is dropped into content page templates NOW so reviewer

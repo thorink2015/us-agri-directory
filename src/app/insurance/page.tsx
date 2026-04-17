@@ -158,7 +158,7 @@ export default function InsurancePage() {
                 <a href={ins.url} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline font-medium">
                   {ins.name}
                 </a>
-                <span className="text-gray-700"> — {ins.note}</span>
+                <span className="text-gray-700">, {ins.note}</span>
               </li>
             ))}
           </ul>

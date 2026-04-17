@@ -34,7 +34,7 @@ export default function OperatorSchema({ operator }: Props) {
     })),
     sameAs: [operator.website, operator.facebook].filter(Boolean),
     priceRange: operator.priceMinUsd
-      ? `$${operator.priceMinUsd}–${operator.priceMaxUsd || operator.priceMinUsd}/acre`
+      ? `$${operator.priceMinUsd} to ${operator.priceMaxUsd || operator.priceMinUsd}/acre`
       : undefined,
     foundingDate: operator.founded?.toString(),
   };

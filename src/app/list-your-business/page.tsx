@@ -111,7 +111,7 @@ export default function ListYourBusinessPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-3">What you get</h2>
           <ul className="list-disc pl-5 space-y-1 not-prose text-sm">
             <li>A dedicated profile page visible to farmers searching by state, crop, and service</li>
-            <li>Your contact details (phone, email, website) displayed directly to farmers — no middleman</li>
+            <li>Your contact details (phone, email, website) displayed directly to farmers, no middleman</li>
             <li>No commission on jobs booked through the directory</li>
             <li>Inclusion in state, crop, service, and drone-model filtered search results</li>
             <li>A verified badge once your FAA and state credentials are confirmed</li>
@@ -134,7 +134,7 @@ export default function ListYourBusinessPage() {
             <li>Fill out the form below with your business details and credentials</li>
             <li>We verify FAA Part 107, Part 137, and state pesticide license (typically 3 to 5 business days)</li>
             <li>Your listing goes live on the directory and is indexed in state, crop, and service search</li>
-            <li>Farmers find you and contact you directly — no booking fees or commissions</li>
+            <li>Farmers find you and contact you directly, no booking fees or commissions</li>
           </ol>
         </div>
       </section>

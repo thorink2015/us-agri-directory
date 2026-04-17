@@ -151,7 +151,7 @@ export default function TrainingAndCertificationPage() {
                 <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline font-medium">
                   {p.name}
                 </a>
-                <span className="text-gray-700"> — {p.note}</span>
+                <span className="text-gray-700">, {p.note}</span>
               </li>
             ))}
           </ul>

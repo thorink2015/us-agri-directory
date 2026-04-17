@@ -84,7 +84,7 @@ export default function AboutPage() {
       {/* 1. H1 */}
       <h1 className="text-3xl font-bold text-gray-900 mb-4">About {SITE.name}</h1>
 
-      {/* 2. AEO block — what the site is, who runs it, why it exists (contains a number) */}
+      {/* 2. AEO block, what the site is, who runs it, why it exists (contains a number) */}
       <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
         <p className="text-sm text-gray-700 leading-relaxed">
           {SITE.name} is a single-author directory of {operators.length}+ agricultural drone operators
@@ -92,7 +92,7 @@ export default function AboutPage() {
           is independently reviewed against FAA Part 107 and Part 137 records, and every regulatory or
           pricing page on this site cites primary sources from the FAA, EPA, USDA, or land-grant
           university extension. The directory exists to give US farmers one trusted place to find
-          verified ag drone operators, regulations, and pricing — without middlemen, commissions, or paywalls.
+          verified ag drone operators, regulations, and pricing, without middlemen, commissions, or paywalls.
         </p>
       </div>
 
@@ -103,7 +103,7 @@ export default function AboutPage() {
           <p>
             The US agricultural drone services market is growing at over 30% per year. But farmers
             searching for a local spray operator found generic search results, equipment retailers,
-            and outdated forum threads — not service providers. Operators, on the other side, had no
+            and outdated forum threads, not service providers. Operators, on the other side, had no
             cost-effective way to reach the farmers in their coverage area.
           </p>
           <p>
@@ -116,7 +116,7 @@ export default function AboutPage() {
           <p>
             This site is free for operators to list, free for farmers to use, and will remain that way.
             It is not a lead-generation marketplace, not an affiliate network, and not a software
-            vendor. It is a directory — researched, verified, and maintained by one person who cares
+            vendor. It is a directory, researched, verified, and maintained by one person who cares
             about getting the facts right.
           </p>
         </div>
@@ -161,8 +161,8 @@ export default function AboutPage() {
           <div className="flex gap-3">
             <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
             <p>
-              <strong>Primary sources only.</strong> Every regulatory fact on this site — FAA Part 107 and
-              Part 137 requirements, EPA FIFRA labeling, state pesticide licensing, USDA program rules —
+              <strong>Primary sources only.</strong> Every regulatory fact on this site, FAA Part 107 and
+              Part 137 requirements, EPA FIFRA labeling, state pesticide licensing, USDA program rules
               cites its primary source directly. No secondary aggregators, no unverified forum posts.
             </p>
           </div>
@@ -208,7 +208,7 @@ export default function AboutPage() {
               <span className="text-amber-600 flex-shrink-0">•</span>
               <span>
                 I am <strong>not a licensed Part 137 Agricultural Aircraft Operator</strong> and I do not
-                hold a US state pesticide applicator license. I research and write about the regulations —
+                hold a US state pesticide applicator license. I research and write about the regulations
                 I don&apos;t perform commercial applications.
               </span>
             </li>
@@ -235,7 +235,7 @@ export default function AboutPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">How operators get listed</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Listing a drone-spraying business on {SITE.name} is — and will remain — <strong>completely
+          Listing a drone-spraying business on {SITE.name} is, and will remain, <strong>completely
           free</strong> for operators anywhere in the United States. There are no commissions, no referral
           fees, and no features hidden behind a paywall. Basic listings are free, permanently.
         </p>

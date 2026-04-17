@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props) {
     alternates: { canonical: `/crops/${params.slug}` },
     openGraph: {
       title: `Drone Spraying for ${crop.name} | US Ag Drone Directory`,
-      description: `$${crop.priceMinUsd}–$${crop.priceMaxUsd}/acre, treatment calendar, key pests, and verified operators across all 50 states.`,
+      description: `$${crop.priceMinUsd} to $${crop.priceMaxUsd}/acre, treatment calendar, key pests, and verified operators across all 50 states.`,
       url: `https://agdronedirectory.com/crops/${crop.slug}`,
     },
   };
@@ -48,7 +48,7 @@ export default function CropPage({ params }: Props) {
   const faqs = [
     {
       question: `How much does drone spraying cost for ${crop.name.toLowerCase()}?`,
-      answer: `The typical rate for drone spraying on ${crop.name.toLowerCase()} is $${crop.priceMinUsd}–$${crop.priceMaxUsd} per acre for application only — the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base, and product type. Larger fields (500+ acres) often qualify for lower per-acre rates.`,
+      answer: `The typical rate for drone spraying on ${crop.name.toLowerCase()} is $${crop.priceMinUsd} to $${crop.priceMaxUsd} per acre for application only, the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base, and product type. Larger fields (500+ acres) often qualify for lower per-acre rates.`,
     },
     {
       question: `When is the best time to spray ${crop.name.toLowerCase()} by drone?`,
@@ -119,7 +119,7 @@ export default function CropPage({ params }: Props) {
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="flex items-center gap-1.5 bg-green-100 text-green-800 px-3 py-1 rounded-full">
               <TrendingUp className="w-3.5 h-3.5" />
-              ${crop.priceMinUsd}–${crop.priceMaxUsd}/acre
+              ${crop.priceMinUsd} to ${crop.priceMaxUsd}/acre
             </span>
             {crop.haUS && (
               <span className="flex items-center gap-1.5 bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
@@ -131,7 +131,7 @@ export default function CropPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Byline — E-E-A-T signal, drives Google "last updated" parsing */}
+      {/* Byline, E-E-A-T signal, drives Google "last updated" parsing */}
       <Byline lastUpdated={lastReviewed} />
 
       {/* AEO block */}
@@ -293,7 +293,7 @@ export default function CropPage({ params }: Props) {
         </div>
       )}
 
-      {/* Author card — E-E-A-T footer */}
+      {/* Author card, E-E-A-T footer */}
       <AuthorCard />
     </div>
     </>

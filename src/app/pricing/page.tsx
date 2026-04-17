@@ -338,7 +338,7 @@ export default function PricingPage() {
             </table>
           </div>
           <p className="text-sm text-gray-700 mt-4 leading-relaxed">
-            For tall-crop fungicide on corn at VT stage, drones are often the only viable option: ground rigs cause canopy damage and airplanes cannot target the upper canopy with enough carrier volume. The Beck&apos;s 2025 Practical Farm Research data shows a $27.26 per-acre ROI on drone-applied fungicide in corn — justifying the premium over ground application.
+            For tall-crop fungicide on corn at VT stage, drones are often the only viable option: ground rigs cause canopy damage and airplanes cannot target the upper canopy with enough carrier volume. The Beck&apos;s 2025 Practical Farm Research data shows a $27.26 per-acre ROI on drone-applied fungicide in corn, justifying the premium over ground application.
           </p>
           <div className="mt-4 flex gap-3 flex-wrap">
             <Link href="/tools/roi-calculator" className="inline-flex items-center gap-2 px-4 py-2 bg-green-700 text-white font-medium rounded-lg hover:bg-green-800 transition-colors text-sm">
@@ -355,13 +355,13 @@ export default function PricingPage() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">USDA cost-share programs that offset drone spraying costs</h2>
           <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
             <p>
-              <strong className="text-gray-900">EQIP Practice 595 — Integrated Pest Management.</strong> USDA NRCS Environmental Quality Incentives Program (EQIP) Practice 595 provides cost-share payments for adopting precision pest management, which can include drone-applied inputs when documented as reducing chemical use. Payment rates vary by state; typical range is $15 to $35 per acre for qualifying IPM practices.
+              <strong className="text-gray-900">EQIP Practice 595, Integrated Pest Management.</strong> USDA NRCS Environmental Quality Incentives Program (EQIP) Practice 595 provides cost-share payments for adopting precision pest management, which can include drone-applied inputs when documented as reducing chemical use. Payment rates vary by state; typical range is $15 to $35 per acre for qualifying IPM practices.
             </p>
             <p>
-              <strong className="text-gray-900">EQIP Practice 340 — Cover and Green Manure Crop.</strong> NRCS Practice 340 supports cover crop establishment, including aerial seeding. Drone cover crop seeding qualifies in states where NRCS has approved aerial establishment as an approved method. Cost-share typically covers 50 to 75 percent of the establishment cost.
+              <strong className="text-gray-900">EQIP Practice 340, Cover and Green Manure Crop.</strong> NRCS Practice 340 supports cover crop establishment, including aerial seeding. Drone cover crop seeding qualifies in states where NRCS has approved aerial establishment as an approved method. Cost-share typically covers 50 to 75 percent of the establishment cost.
             </p>
             <p>
-              <strong className="text-gray-900">FSA Microloans and Operating Loans.</strong> USDA Farm Service Agency (FSA) microloans (up to $50,000) and regular operating loans can finance drone equipment purchases. These are not cost-share but low-interest financing that reduces ownership cost — relevant to the buy-vs-hire decision at higher acreage volumes.
+              <strong className="text-gray-900">FSA Microloans and Operating Loans.</strong> USDA Farm Service Agency (FSA) microloans (up to $50,000) and regular operating loans can finance drone equipment purchases. These are not cost-share but low-interest financing that reduces ownership cost, relevant to the buy-vs-hire decision at higher acreage volumes.
             </p>
             <p>
               State-level programs supplement federal cost-share in several major ag states. Iowa, Illinois, Indiana, and Minnesota have run targeted cover crop programs that explicitly list drone seeding as an eligible establishment method.

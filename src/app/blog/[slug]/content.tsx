@@ -933,7 +933,7 @@ export const blogContent: Record<string, ReactNode> = {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Iowa State Extension — Corn disease management
+            Iowa State Extension, Corn disease management
           </a>
         </li>
       </ul>

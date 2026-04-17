@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { AUTHOR } from '@/data/author';
 
 interface Props {
-  /** ISO date string (YYYY-MM-DD) — drives the <time datetime> attr for Google */
+  /** ISO date string (YYYY-MM-DD), drives the <time datetime> attr for Google */
   lastUpdated: string;
 }
 
@@ -16,7 +16,7 @@ function formatDate(iso: string): string {
 }
 
 /**
- * Byline — renders under H1 on every content page, above the AEO block.
+ * Byline, renders under H1 on every content page, above the AEO block.
  * Drives E-E-A-T author signal and visible "last updated" date.
  */
 export default function Byline({ lastUpdated }: Props) {

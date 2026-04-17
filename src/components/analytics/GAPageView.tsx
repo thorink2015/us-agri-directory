@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 /**
  * Fires a GA4 page_view event on every client-side route change.
- * Next.js App Router does client-side navigation between pages — without this,
+ * Next.js App Router does client-side navigation between pages, without this,
  * GA4 only records the first page load and misses all subsequent navigations.
  *
  * Add <GAPageView /> inside the root layout (after <GoogleAnalytics />).

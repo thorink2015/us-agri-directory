@@ -202,7 +202,7 @@ export default function RegionPage({ params }: Props) {
                   <span className="text-2xl">{crop.icon}</span>
                   <span className="font-semibold text-gray-900">{crop.name}</span>
                 </div>
-                <p className="text-xs text-gray-600">${crop.priceMinUsd}–${crop.priceMaxUsd}/acre</p>
+                <p className="text-xs text-gray-600">${crop.priceMinUsd} to ${crop.priceMaxUsd}/acre</p>
               </Link>
             ))}
           </div>

@@ -1,7 +1,7 @@
 import { SITE, personSchema, organizationSchema } from '@/data/author';
 
 export default function HomeSchema() {
-  // Canonical Organization + Person — @ids referenced by every Article schema
+  // Canonical Organization + Person, @ids referenced by every Article schema
   // on the site (crops, services, regions, guides). Single source of truth
   // is src/data/author.ts.
   const org = organizationSchema();

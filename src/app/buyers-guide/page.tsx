@@ -178,19 +178,19 @@ export default function BuyersGuidePage() {
                     <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.countryOfManufacture}</td>
                     <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.ndaaCompliant ? 'Yes' : 'No'}</td>
                     <td className="px-2 py-2 text-gray-700 whitespace-nowrap">
-                      {d.specs.tankLiters ? `${d.specs.tankLiters}L / ${d.specs.tankGallons} gal` : '—'}
+                      {d.specs.tankLiters ? `${d.specs.tankLiters}L / ${d.specs.tankGallons} gal` : '-'}
                     </td>
                     <td className="px-2 py-2 text-gray-700 whitespace-nowrap">
-                      {d.specs.granularCapacityKg ? `${d.specs.granularCapacityKg} kg` : '—'}
+                      {d.specs.granularCapacityKg ? `${d.specs.granularCapacityKg} kg` : '-'}
                     </td>
                     <td className="px-2 py-2 text-gray-700 whitespace-nowrap">
-                      {d.specs.mtowKg ? `${d.specs.mtowKg} kg (${d.specs.mtowLbs} lb)` : '—'}
+                      {d.specs.mtowKg ? `${d.specs.mtowKg} kg (${d.specs.mtowLbs} lb)` : '-'}
                     </td>
-                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.swathWidthFeet ? `${d.specs.swathWidthFeet} ft` : '—'}</td>
-                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.maxFlowRateLMin ? `${d.specs.maxFlowRateLMin} L/min` : '—'}</td>
-                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.chargeTimeMin ? `${d.specs.chargeTimeMin} min` : '—'}</td>
-                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.maxWindMph ? `${d.specs.maxWindMph} mph` : '—'}</td>
-                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.ipRating || '—'}</td>
+                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.swathWidthFeet ? `${d.specs.swathWidthFeet} ft` : '-'}</td>
+                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.maxFlowRateLMin ? `${d.specs.maxFlowRateLMin} L/min` : '-'}</td>
+                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.chargeTimeMin ? `${d.specs.chargeTimeMin} min` : '-'}</td>
+                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.maxWindMph ? `${d.specs.maxWindMph} mph` : '-'}</td>
+                    <td className="px-2 py-2 text-gray-700 whitespace-nowrap">{d.specs.ipRating || '-'}</td>
                     <td className="px-2 py-2 text-gray-700">{d.msrpUsd}</td>
                   </tr>
                 ))}

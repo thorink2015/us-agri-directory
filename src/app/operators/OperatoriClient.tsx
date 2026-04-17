@@ -20,7 +20,7 @@ const SORT_LABELS: Record<SortOption, string> = {
   price_asc: 'Price: low → high',
   price_desc: 'Price: high → low',
   ha_desc: 'Acres treated ↓',
-  name_asc: 'Name A–Z',
+  name_asc: 'Name A to Z',
 };
 
 export default function OperatoriClient({ operators, counties }: Props) {
@@ -238,7 +238,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
                     min={0}
                     max={100}
                   />
-                  <span className="text-gray-400 text-xs">–</span>
+                  <span className="text-gray-400 text-xs">-</span>
                   <input
                     type="number"
                     placeholder="Max"

@@ -6,7 +6,7 @@ import { AUTHOR, SITE } from '@/data/author';
 export const metadata: Metadata = {
   title: 'Contact | US Ag Drone Directory',
   description:
-    'Get in touch with US Ag Drone Directory — submit your listing, ask a question, or send us feedback.',
+    'Get in touch with US Ag Drone Directory, submit your listing, ask a question, or send us feedback.',
   alternates: { canonical: '/contact' },
   openGraph: {
     title: `Contact ${SITE.name}`,
@@ -77,7 +77,7 @@ export default function ContactPage() {
             </span>
             <h2 className="text-xl font-bold text-gray-900">Send Us a Message</h2>
             <p className="text-sm text-gray-600 mt-1">
-              Questions, corrections, partnerships, or feedback — we respond within 48 business hours.
+              Questions, corrections, partnerships, or feedback, we respond within 48 business hours.
             </p>
           </div>
           <ContactForm type="contact" />

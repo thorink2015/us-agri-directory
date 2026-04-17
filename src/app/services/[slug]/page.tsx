@@ -247,7 +247,7 @@ export default function ServicePage({ params }: Props) {
         </div>
       </div>
 
-      {/* Author card — E-E-A-T footer */}
+      {/* Author card, E-E-A-T footer */}
       <AuthorCard />
     </div>
   );

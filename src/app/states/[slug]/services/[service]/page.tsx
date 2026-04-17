@@ -51,7 +51,7 @@ export default function CountyServicePage({ params }: Props) {
       answer:
         serviceOps.length > 0
           ? `There ${serviceOps.length === 1 ? 'is' : 'are'} ${serviceOps.length} operator${serviceOps.length !== 1 ? 's' : ''} offering ${service.name.toLowerCase()} drone services in ${county.name}: ${serviceOps.map((o) => o.name).join(', ')}.`
-          : `We don't currently have operators specialized in ${service.name.toLowerCase()} listed directly in ${county.name}. Many national operators cover multiple states — contact them for availability.`,
+          : `We don't currently have operators specialized in ${service.name.toLowerCase()} listed directly in ${county.name}. Many national operators cover multiple states, contact them for availability.`,
     },
   ];
 

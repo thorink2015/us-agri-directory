@@ -22,7 +22,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'agl',
     category: 'application',
     definition:
-      'Altitude measured from the ground directly below the aircraft, not from sea level. Agricultural spray drones typically operate at 6–15 feet AGL to minimize drift while maintaining coverage.',
+      'Altitude measured from the ground directly below the aircraft, not from sea level. Agricultural spray drones typically operate at 6 to 15 feet AGL to minimize drift while maintaining coverage.',
   },
   {
     term: 'Airspace Authorization',
@@ -37,7 +37,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'application-rate',
     category: 'application',
     definition:
-      'The volume of spray mixture applied per acre, typically expressed in gallons per acre (gpa). Agricultural drones usually apply 2–5 gpa, compared to 10–20 gpa for ground sprayers.',
+      'The volume of spray mixture applied per acre, typically expressed in gallons per acre (gpa). Agricultural drones usually apply 2 to 5 gpa, compared to 10 to 20 gpa for ground sprayers.',
     relatedTerms: ['gpa', 'ulv'],
   },
   {
@@ -54,7 +54,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'buffer-zone',
     category: 'application',
     definition:
-      'A required setback distance between the spray application area and sensitive sites — water bodies, schools, residences, neighboring crops, or organic fields. Set by the product label and sometimes by state or county rule.',
+      'A required setback distance between the spray application area and sensitive sites, water bodies, schools, residences, neighboring crops, or organic fields. Set by the product label and sometimes by state or county rule.',
     relatedTerms: ['drift', 'spray-drift-management'],
   },
   {
@@ -62,7 +62,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'boom-width',
     category: 'hardware',
     definition:
-      'The effective spray swath produced by the drone\'s nozzles, typically 20–33 feet for modern agricultural drones. Wider boom width increases coverage rate but requires higher drone hover altitude to achieve even distribution.',
+      'The effective spray swath produced by the drone\'s nozzles, typically 20 to 33 feet for modern agricultural drones. Wider boom width increases coverage rate but requires higher drone hover altitude to achieve even distribution.',
     relatedTerms: ['swath'],
   },
   {
@@ -80,7 +80,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'carrier-volume',
     category: 'application',
     definition:
-      'The water (or other liquid) used to dilute and deliver the active ingredient, measured in gallons per acre. Drone operators minimize carrier volume (2–5 gpa) to reduce refill trips while maintaining efficacy.',
+      'The water (or other liquid) used to dilute and deliver the active ingredient, measured in gallons per acre. Drone operators minimize carrier volume (2 to 5 gpa) to reduce refill trips while maintaining efficacy.',
     relatedTerms: ['gpa', 'application-rate'],
   },
   {
@@ -88,7 +88,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'coverage-rate',
     category: 'application',
     definition:
-      'The number of acres a drone can spray per hour of flight time, typically 20–40 acres per hour for commercial agricultural drones. Actual daily output depends on battery swaps, tank refills, and turnaround time.',
+      'The number of acres a drone can spray per hour of flight time, typically 20 to 40 acres per hour for commercial agricultural drones. Actual daily output depends on battery swaps, tank refills, and turnaround time.',
     relatedTerms: ['swath'],
   },
   {
@@ -122,7 +122,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'droplet-size',
     category: 'application',
     definition:
-      'The diameter of spray droplets, measured in microns. Drone applications typically target medium to coarse droplets (250–400 microns) to balance canopy penetration against drift risk.',
+      'The diameter of spray droplets, measured in microns. Drone applications typically target medium to coarse droplets (250 to 400 microns) to balance canopy penetration against drift risk.',
     relatedTerms: ['drift'],
   },
   {
@@ -147,7 +147,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'eqip',
     category: 'business',
     definition:
-      'A USDA NRCS cost-share program that reimburses farmers for conservation practices, including drone-applied cover crop seeding (Practice Standard 340) and drone equipment purchases (Practice Code 595). Typical payments cover 50–75% of eligible costs.',
+      'A USDA NRCS cost-share program that reimburses farmers for conservation practices, including drone-applied cover crop seeding (Practice Standard 340) and drone equipment purchases (Practice Code 595). Typical payments cover 50 to 75% of eligible costs.',
     relatedLink: { label: 'Grants & subsidies for ag drones', href: '/grants-and-subsidies' },
   },
 
@@ -165,7 +165,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'fifra',
     category: 'regulatory',
     definition:
-      'The Federal Insecticide, Fungicide, and Rodenticide Act — the primary federal law governing pesticide use in the US. FIFRA requires applicators to follow every restriction on the pesticide label, including aerial-specific limits.',
+      'The Federal Insecticide, Fungicide, and Rodenticide Act, the primary federal law governing pesticide use in the US. FIFRA requires applicators to follow every restriction on the pesticide label, including aerial-specific limits.',
     relatedTerms: ['epa-fifra', 'label-rate'],
   },
   {
@@ -190,7 +190,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'gpa',
     category: 'application',
     definition:
-      'The standard US measure of spray carrier volume. Agricultural drones typically operate at 2–5 gpa; ground rigs use 10–20 gpa; airplanes often use 1–3 gpa.',
+      'The standard US measure of spray carrier volume. Agricultural drones typically operate at 2 to 5 gpa; ground rigs use 10 to 20 gpa; airplanes often use 1 to 3 gpa.',
     relatedTerms: ['carrier-volume', 'application-rate'],
   },
   {
@@ -268,7 +268,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'mtow',
     category: 'hardware',
     definition:
-      'The maximum weight of the drone including payload, battery, and fuel. MTOW determines the FAA regulatory category — drones over 55 pounds require a Section 44807 exemption in addition to Part 107 and Part 137.',
+      'The maximum weight of the drone including payload, battery, and fuel. MTOW determines the FAA regulatory category, drones over 55 pounds require a Section 44807 exemption in addition to Part 107 and Part 137.',
     relatedTerms: ['part-44807'],
   },
   {
@@ -276,7 +276,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'mph',
     category: 'application',
     definition:
-      'The US measure of drone flight speed during spraying, typically 10–25 mph. Faster speeds increase coverage rate but reduce droplet deposition uniformity.',
+      'The US measure of drone flight speed during spraying, typically 10 to 25 mph. Faster speeds increase coverage rate but reduce droplet deposition uniformity.',
   },
 
   // ─── N ───────────────────────────────────────────────────────────────────
@@ -317,7 +317,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'nozzle',
     category: 'hardware',
     definition:
-      'The orifice that atomizes spray liquid into droplets of a specific size and pattern. Modern ag drones use rotary atomizers or pressure-swirl nozzles optimized for 2–5 gpa application rates.',
+      'The orifice that atomizes spray liquid into droplets of a specific size and pattern. Modern ag drones use rotary atomizers or pressure-swirl nozzles optimized for 2 to 5 gpa application rates.',
     relatedTerms: ['droplet-size'],
   },
 
@@ -336,7 +336,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'part-137',
     category: 'regulatory',
     definition:
-      'The FAA regulation (14 CFR Part 137) governing agricultural aircraft operations — any aircraft dispensing pesticides, seed, or other agricultural products. Commercial drone spray operators need a Part 137 Agricultural Aircraft Operator certificate in addition to Part 107.',
+      'The FAA regulation (14 CFR Part 137) governing agricultural aircraft operations, any aircraft dispensing pesticides, seed, or other agricultural products. Commercial drone spray operators need a Part 137 Agricultural Aircraft Operator certificate in addition to Part 107.',
     relatedTerms: ['part-107', 'aao'],
     relatedLink: { label: 'FAA Part 137 guide', href: '/regulations/faa-part-137' },
   },
@@ -434,7 +434,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'swath',
     category: 'application',
     definition:
-      'The effective width of a single drone pass, typically 20–33 feet on commercial ag drones. Swath alignment and overlap (usually 10–15%) determine whether a field receives uniform coverage or has streaks and skips.',
+      'The effective width of a single drone pass, typically 20 to 33 feet on commercial ag drones. Swath alignment and overlap (usually 10 to 15%) determine whether a field receives uniform coverage or has streaks and skips.',
     relatedTerms: ['boom-width'],
   },
 
@@ -451,7 +451,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'trust',
     category: 'regulatory',
     definition:
-      'A free FAA knowledge test for recreational drone flyers. TRUST is not sufficient for commercial ag operations — commercial operators must hold a Part 107 Remote Pilot Certificate.',
+      'A free FAA knowledge test for recreational drone flyers. TRUST is not sufficient for commercial ag operations, commercial operators must hold a Part 107 Remote Pilot Certificate.',
     relatedTerms: ['part-107'],
   },
 
@@ -520,7 +520,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     slug: 'work-width',
     category: 'application',
     definition:
-      'Synonym for swath — the effective spray width of a single drone pass. Manufacturer-stated work width is based on label-rate droplet size at recommended altitude.',
+      'Synonym for swath, the effective spray width of a single drone pass. Manufacturer-stated work width is based on label-rate droplet size at recommended altitude.',
     relatedTerms: ['swath'],
   },
 ];
