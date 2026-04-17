@@ -51,6 +51,13 @@
 - Fixed dead link: `/guides/fonduri-afir-drone` → `/guides` in roi-calculator/page.tsx
 - Updated memory: project-facts.md (IndexNow key, branch record), session-history.md
 
+## 2026-04-17 — Netlify deploy fix
+
+- **Root cause found:** `regions/page.tsx` used `r.icon`, `r.tagline`, `r.totalAcres` — fields missing from the `Region` interface. TypeScript build error silently failed every Netlify deploy after PR #20 merged, freezing live site at `@5230f70` (Apr 16 13:06).
+- **Fix (PR #23):** Added `icon`, `tagline`, `totalAcres` to `Region` interface + populated all 5 regions + nullish fallbacks in template. Build now passes: 1192 static pages, 0 errors.
+- **Netlify branch fix:** Production branch changed from `claude/add-drone-operators-directory-T0YnN` → `main` in Netlify dashboard. All future merges to `main` now auto-deploy.
+- PRs #22 (state pages) and #23 (build fix) both merged to `main`.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
