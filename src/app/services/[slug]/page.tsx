@@ -171,8 +171,8 @@ export default function ServicePage({ params }: Props) {
           <span className="text-sm font-normal text-gray-500 ml-2">({serviceOps.length})</span>
         </h2>
         <p className="text-sm text-gray-500 mb-4">
-          All operators are independently verified. <Link href="/operators" className="text-green-700 hover:underline">View all operators</Link> or{' '}
-          <Link href="/states" className="text-green-700 hover:underline">search by state</Link>.
+          All operators are independently verified. <Link href="/operators" className="text-green-700 underline">View all operators</Link> or{' '}
+          <Link href="/states" className="text-green-700 underline">search by state</Link>.
         </p>
 
         {serviceOps.length > 0 ? (

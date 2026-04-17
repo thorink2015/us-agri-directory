@@ -83,10 +83,11 @@ export default function SubmitForm() {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+        <label htmlFor="primary-state" className="block text-sm font-medium text-gray-700 mb-1.5">
           Primary state *
         </label>
         <select
+          id="primary-state"
           name="county"
           required
           className="w-full px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"

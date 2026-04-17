@@ -65,7 +65,7 @@ export default function BlogHub() {
             className="group bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-green-300 transition-all flex flex-col"
           >
             <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-              <span className="px-2 py-0.5 bg-gray-100 rounded-full font-medium">
+              <span className="px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full font-medium">
                 {BLOG_CATEGORY_LABELS[post.category]}
               </span>
               <span className="flex items-center gap-1">

@@ -202,7 +202,7 @@ function RichStatePage({ slug }: { slug: string }) {
           </div>
           <p className="text-xs text-gray-500 mt-2">
             Application only. Chemical cost is additional. Rates based on 2026 operator surveys and university extension data.{' '}
-            <Link href="/tools/spray-cost-calculator" className="text-green-700 hover:underline">Use the calculator for a detailed estimate →</Link>
+            <Link href="/tools/spray-cost-calculator" className="text-green-700 underline">Use the calculator for a detailed estimate →</Link>
           </p>
         </section>}
 
@@ -315,7 +315,7 @@ function RichStatePage({ slug }: { slug: string }) {
               <p className="text-gray-300 text-sm">Get quotes from verified operators. Free, no obligation.</p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/operators" className="px-5 py-2.5 bg-green-500 hover:bg-green-400 text-white rounded-lg text-sm font-semibold transition-colors">
+              <Link href="/operators" className="px-5 py-2.5 bg-green-700 hover:bg-green-800 text-white rounded-lg text-sm font-semibold transition-colors">
                 Search operators
               </Link>
               <Link href="/list-your-business" className="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white border border-white/30 rounded-lg text-sm font-semibold transition-colors">

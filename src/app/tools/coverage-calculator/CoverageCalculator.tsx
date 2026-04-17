@@ -95,9 +95,10 @@ export default function CoverageCalculator() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div className="sm:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Total acres</label>
+            <label htmlFor="cov-acres-range" className="block text-sm font-medium text-gray-700 mb-1">Total acres</label>
             <div className="flex gap-2 items-center">
               <input
+                id="cov-acres-range"
                 type="range"
                 min={10}
                 max={5000}
@@ -105,6 +106,7 @@ export default function CoverageCalculator() {
                 value={acres}
                 onChange={(e) => { setAcres(Number(e.target.value)); setAcresInput(e.target.value); }}
                 className="flex-1 accent-orange-600"
+                aria-label="Total acres"
               />
               <input
                 type="number"
@@ -122,8 +124,9 @@ export default function CoverageCalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Drone model</label>
+            <label htmlFor="cov-drone" className="block text-sm font-medium text-gray-700 mb-1">Drone model</label>
             <select
+              id="cov-drone"
               value={droneId}
               onChange={(e) => setDroneId(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-orange-500 focus:ring-2 focus:ring-orange-100 focus:outline-none"
@@ -135,8 +138,9 @@ export default function CoverageCalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Application rate</label>
+            <label htmlFor="cov-app-rate" className="block text-sm font-medium text-gray-700 mb-1">Application rate</label>
             <select
+              id="cov-app-rate"
               value={appRate}
               onChange={(e) => setAppRate(Number(e.target.value))}
               className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-orange-500 focus:ring-2 focus:ring-orange-100 focus:outline-none"
@@ -148,8 +152,9 @@ export default function CoverageCalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Field shape</label>
+            <label htmlFor="cov-shape" className="block text-sm font-medium text-gray-700 mb-1">Field shape</label>
             <select
+              id="cov-shape"
               value={shapeId}
               onChange={(e) => setShapeId(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-orange-500 focus:ring-2 focus:ring-orange-100 focus:outline-none"
@@ -161,10 +166,11 @@ export default function CoverageCalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="cov-fleet" className="block text-sm font-medium text-gray-700 mb-1">
               Fleet size: <span className="text-orange-700 font-bold">{fleet}</span>
             </label>
             <input
+              id="cov-fleet"
               type="range"
               min={1}
               max={5}
@@ -172,6 +178,7 @@ export default function CoverageCalculator() {
               value={fleet}
               onChange={(e) => setFleet(Number(e.target.value))}
               className="w-full accent-orange-600"
+              aria-label="Fleet size"
             />
             <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>1 drone</span><span>5 drones</span>
