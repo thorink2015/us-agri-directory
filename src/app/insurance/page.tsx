@@ -6,6 +6,7 @@ import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 const LAST_REVIEWED = '2026-04-17';
 
 const FAQS = [
@@ -155,7 +156,7 @@ export default function InsurancePage() {
           <ul className="list-disc pl-5 space-y-1">
             {INSURERS.map((ins) => (
               <li key={ins.name}>
-                <a href={ins.url} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline font-medium">
+                <a href={addUtm(ins.url, "service_provider")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline font-medium">
                   {ins.name}
                 </a>
                 <span className="text-gray-700">, {ins.note}</span>
@@ -178,17 +179,17 @@ export default function InsurancePage() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href="https://www.bwifly.com" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.bwifly.com", "service_provider")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 BWI Companies (aviation insurance broker)
               </a>
             </li>
             <li>
-              <a href="https://www.assuredpartners.com" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.assuredpartners.com", "service_provider")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 AssuredPartners Aerospace
               </a>
             </li>
             <li>
-              <a href="https://www.global-aero.com" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.global-aero.com", "service_provider")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 Global Aerospace
               </a>
             </li>

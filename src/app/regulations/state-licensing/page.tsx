@@ -7,6 +7,7 @@ import AuthorCard from '@/components/author/AuthorCard';
 import { counties } from '@/data/counties';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 const LAST_REVIEWED = '2026-04-17';
 
 const FAQS = [
@@ -157,17 +158,17 @@ export default function StateLicensingPage() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href="https://www.epa.gov/pesticide-worker-safety" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.epa.gov/pesticide-worker-safety", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 EPA: Pesticide Worker Safety and Certification
               </a>
             </li>
             <li>
-              <a href="https://npsec.us" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://npsec.us", "operator_profile")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 National Pesticide Safety Education Center (NPSEC)
               </a>
             </li>
             <li>
-              <a href="https://www.aapse.org" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.aapse.org", "operator_profile")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 American Association of Pesticide Safety Educators
               </a>
             </li>

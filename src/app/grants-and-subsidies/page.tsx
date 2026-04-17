@@ -6,6 +6,7 @@ import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 const LAST_REVIEWED = '2026-04-17';
 
 const FAQS = [
@@ -141,17 +142,17 @@ export default function GrantsAndSubsidiesPage() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 NRCS: EQIP Environmental Quality Incentives Program
               </a>
             </li>
             <li>
-              <a href="https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 NRCS: Cover Crop Practice Standard 340
               </a>
             </li>
             <li>
-              <a href="https://www.fsa.usda.gov" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.fsa.usda.gov", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 Farm Service Agency (FSA) Farm Loan Programs
               </a>
             </li>

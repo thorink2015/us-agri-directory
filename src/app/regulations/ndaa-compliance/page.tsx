@@ -6,6 +6,7 @@ import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 const LAST_REVIEWED = '2026-04-17';
 
 const FAQS = [
@@ -137,17 +138,17 @@ export default function NdaaCompliancePage() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href="https://www.diu.mil/blue-uas" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.diu.mil/blue-uas", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 DIU: Blue UAS list (DoD cleared platforms)
               </a>
             </li>
             <li>
-              <a href="https://www.congress.gov/bill/118th-congress/house-bill/2864" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.congress.gov/bill/118th-congress/house-bill/2864", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 Congress.gov: Countering CCP Drones Act text
               </a>
             </li>
             <li>
-              <a href="https://www.hyl.io" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.hyl.io", "drone_specs")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 Hylio: NDAA compliance sheet
               </a>
             </li>

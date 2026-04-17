@@ -16,6 +16,7 @@ import AuthorCard from '@/components/author/AuthorCard';
 import { getStateData } from '@/data/states';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 interface Props {
   params: { slug: string };
 }
@@ -355,7 +356,7 @@ function RichStatePage({ slug }: { slug: string }) {
             <Link href="/tools/spray-cost-calculator" className="text-green-700 hover:underline">Spray cost calculator →</Link>
             <Link href="/tools/treatment-calendar" className="text-green-700 hover:underline">Treatment calendar →</Link>
             {data.authorityLinks.map((link) => (
-              <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a key={link.url} href={addUtm(link.url, "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 {link.label} →
               </a>
             ))}
