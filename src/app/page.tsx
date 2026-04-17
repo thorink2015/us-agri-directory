@@ -3,17 +3,18 @@ import Link from 'next/link';
 import {
   CheckCircle, ArrowRight, Calculator, Clock, DollarSign, Shield,
   ShieldCheck, MapPin, Sprout, Droplets, Map as MapIcon, Radar, Settings, ShoppingCart,
+  Search, BarChart3,
 } from 'lucide-react';
-import { operators } from '@/data/operators';
+import { operators, getFeaturedOperators } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
 import { getServiceBySlug } from '@/data/services';
 import { AUTHOR, SITE, organizationSchema, personSchema } from '@/data/author';
 import SearchBar from '@/components/search/SearchBar';
+import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 
 const LAST_REVIEWED = '2026-04-16';
-const TIER1_STATES = new Set(['iowa', 'illinois', 'indiana', 'texas', 'california', 'arkansas', 'kansas', 'nebraska', 'ohio', 'north-carolina']);
 
 const SERVICE_CARDS = [
   { slug: 'spraying', icon: Droplets, label: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', price: '$12 to $22/acre' },
@@ -50,6 +51,24 @@ const TOP_STATES = [
   { label: 'Illinois', slug: 'illinois' },
   { label: 'Arkansas', slug: 'arkansas' },
   { label: 'Kansas', slug: 'kansas' },
+];
+
+const HOW_IT_WORKS = [
+  {
+    icon: Search,
+    title: 'Search your area',
+    desc: 'Enter your state, county, or zip code. Add your crop type and the service you need: fungicide spraying, cover crop seeding, or aerial mapping.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Compare operators',
+    desc: 'Browse operator profiles side by side. Review equipment, certifications, coverage area, per-acre rates, and farmer ratings.',
+  },
+  {
+    icon: CheckCircle,
+    title: 'Contact and book',
+    desc: 'Reach out directly to operators that fit your needs. Request quotes, ask questions, and schedule your application window.',
+  },
 ];
 
 const DRONE_CARDS = [
@@ -99,17 +118,11 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function HomePage() {
   const operatorCount = operators.length;
   const stateCount = new Set(operators.flatMap((op) => op.counties)).size;
-
-  // Group counties by region for the state grid
-  const regionMap = new Map<string, typeof counties>();
-  for (const county of counties) {
-    const list = regionMap.get(county.region) ?? [];
-    list.push(county);
-    regionMap.set(county.region, list);
-  }
-  const opsByState = Object.fromEntries(
-    counties.map((c) => [c.slug, operators.filter((op) => op.counties.includes(c.slug)).length])
-  );
+  const featuredOperators = getFeaturedOperators().slice(0, 3);
+  const topStatesByOps = counties
+    .map((c) => ({ ...c, count: operators.filter((op) => op.counties.includes(c.slug)).length }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 8);
 
   const websiteSchema = {
     '@context': 'https://schema.org',
@@ -284,52 +297,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 6: Browse by State */}
+      {/* SECTION 6: Crops */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">Find drone operators in your state</h2>
-              <p className="text-gray-500 mt-1">Active operators in all 50 states</p>
-            </div>
-            <Link href="/states" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors">
-              All states <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="space-y-6">
-            {Array.from(regionMap.entries()).map(([region, states]) => (
-              <div key={region}>
-                <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-3">{region}</p>
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
-                  {states.map((state) => {
-                    const count = opsByState[state.slug] ?? 0;
-                    const isTier1 = TIER1_STATES.has(state.slug);
-                    return (
-                      <Link
-                        key={state.slug}
-                        href={`/states/${state.slug}`}
-                        className={`relative flex flex-col items-center p-2 rounded-lg border text-center hover:border-green-400 hover:bg-green-50 transition-colors ${isTier1 ? 'border-green-200 bg-green-50/50' : 'border-gray-200 bg-white'}`}
-                      >
-                        <span className={`text-xs font-medium leading-tight ${isTier1 ? 'text-green-800' : 'text-gray-700'}`}>{state.name}</span>
-                        {count > 0 && (
-                          <span className={`mt-1 text-xs px-1.5 py-0.5 rounded-full ${count >= 10 ? 'bg-green-600 text-white' : count >= 5 ? 'bg-yellow-400 text-yellow-900' : 'bg-gray-200 text-gray-600'}`}>
-                            {count}
-                          </span>
-                        )}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7: Browse by Crop */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Operators by crop</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Drone services by crop type</h2>
           <p className="text-gray-500 mb-8">Find operators with hands-on experience in your production system</p>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {crops.map((crop) => {
@@ -358,7 +329,91 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 7: Tools */}
+      {/* SECTION 7: Featured Operators */}
+      <section className="py-14 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-8 gap-4">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">Featured operators this season</h2>
+              <p className="text-gray-500 mt-1">Verified, insured, and actively booking</p>
+            </div>
+            <Link href="/operators" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
+              View all operators <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {featuredOperators.map((op) => (
+              <OperatorCard key={op.slug} operator={op} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 8: States (compact) */}
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-8 gap-4">
+            <div>
+              <h2 className="text-2xl font-bold text-gray-900">Find drone services in your state</h2>
+              <p className="text-gray-500 mt-1">Top states by operator count</p>
+            </div>
+            <Link href="/states" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
+              All states <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+            {topStatesByOps.map((state) => (
+              <Link
+                key={state.slug}
+                href={`/states/${state.slug}`}
+                className="flex flex-col items-center p-3 bg-white border border-gray-200 rounded-xl hover:border-green-300 hover:shadow-sm transition-all group"
+              >
+                <span className="text-sm font-semibold text-gray-900 group-hover:text-green-700">{state.name}</span>
+                <span className="mt-1 text-xs text-gray-500">{state.count} operator{state.count === 1 ? '' : 's'}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 9: How It Works */}
+      <section className="py-14 bg-green-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">How it works</h2>
+          <p className="text-gray-500 text-center mb-12">Find the right drone applicator in 3 steps</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+            <div className="hidden md:block absolute top-10 left-1/3 right-1/3 h-0.5 bg-green-200 z-0" />
+            {HOW_IT_WORKS.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="relative bg-white rounded-2xl border border-gray-200 p-6 text-center shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-700 text-white text-xs font-bold px-3 py-0.5 rounded-full">
+                    Step {i + 1}
+                  </div>
+                  <div className="w-14 h-14 bg-green-50 border-2 border-green-200 rounded-2xl flex items-center justify-center mx-auto mb-4 mt-2">
+                    <Icon className="w-6 h-6 text-green-700" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2 text-lg">{item.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/operators"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition-colors"
+            >
+              Find an Operator <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 10: Tools */}
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Free tools for farmers and operators</h2>
@@ -404,7 +459,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 8: FAQ */}
+      {/* SECTION 11: FAQ */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">Common questions about drone spraying</h2>
@@ -418,7 +473,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 9: Popular Drones */}
+      {/* SECTION 12: Popular Drones */}
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
@@ -466,7 +521,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 10: Blog */}
+      {/* SECTION 13: Blog */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
@@ -499,7 +554,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 11: Operator CTA */}
+      {/* SECTION 14: Operator CTA */}
       <section className="py-14 bg-green-700 text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Are you a drone operator?</h2>
@@ -520,7 +575,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 12: Footer byline */}
+      {/* SECTION 15: Footer byline */}
       <div className="bg-white border-t border-gray-100 py-4">
         <p className="text-center text-xs text-gray-400">
           Edited by {AUTHOR.fullName}. Every page personally researched and updated. Last reviewed {LAST_REVIEWED}.

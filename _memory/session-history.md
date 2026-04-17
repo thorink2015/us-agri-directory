@@ -126,6 +126,16 @@
 - Build: `npm run build` zero errors
 - Batches 2 and 3 cover sections below Services (crops, tools, FAQ, drones, blog, CTA)
 
+## 2026-04-17 — Homepage V1 design revert (batch 2 of 3)
+
+- **Batch 2 (middle sections):** reordered and rebuilt crops, operators, states, how-it-works.
+  - Crops: repositioned above operators, H2 changed to "Drone services by crop type" with subhead "Find operators with hands-on experience in your production system"; card layout unchanged
+  - Featured operators: new section with 3 `OperatorCard`s (capped via `getFeaturedOperators().slice(0,3)`), right-aligned "View all operators" link
+  - States: replaced the full region-grouped 50-state grid with a compact 8-card row sorted by operator count; full 50-state grid still lives on `/states` and in footer
+  - How it works: restored V1's 3-step section (Search your area / Compare operators / Contact and book) with green "Step N" badges, circle icons, and "Find an Operator" CTA
+- Build: `npm run build` zero errors (1214 pages generated)
+- Batch 3 covers tools, FAQ, drones, blog, newsletter + operator CTA, footer
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
