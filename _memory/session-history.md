@@ -74,7 +74,7 @@
 - **`src/app/states/[slug]/page.tsx`:** dual-mode template — 11-section rich layout for proof states, fallback counties-based template for remaining 47 states
 - **`src/app/states/page.tsx`:** index updated with featured proof-state cards, AEO block, green-dot indicators, BreadcrumbList schema
 - **Fix:** wrapped spray windows section in conditional to handle empty `sprayWindows` arrays gracefully
-- **PR #22** open as draft on `claude/add-drone-model-context-NVSMF` → `main`, head `0a7d930`, 0 CI check runs (no CI configured), ready to flip to ready-for-review + merge
+- **PR #22** merged to `main` on 2026-04-17
 
 ## What's next (see pending-items.md for detail)
 
