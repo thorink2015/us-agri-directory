@@ -136,6 +136,18 @@
 - Build: `npm run build` zero errors (1214 pages generated)
 - Batch 3 covers tools, FAQ, drones, blog, newsletter + operator CTA, footer
 
+## 2026-04-17 — Homepage V1 design revert (batch 3 of 3)
+
+- **Batch 3 (final sections):** tools expansion, blog wiring, newsletter band, footer byline removal.
+  - Tools section: expanded from 3 to 6 cards in a 3-col grid (Spray Cost, ROI, Coverage Time, Acreage Converter, Drone Comparison, Treatment Calendar); each links to `/tools/[slug]`; Lucide icons (Ruler, GitCompare, CalendarDays)
+  - Blog section: replaced hardcoded 3-post list with live `blogPosts` data sorted by `publishedAt` desc (top 3); each card links to `/blog/[slug]`
+  - Newsletter: new compact section between blog and operator CTA (Mail icon + label + email input + Subscribe button, posts to `/newsletter`)
+  - Footer byline: removed the visible "Edited by Eugen" strip from the homepage (AUTHOR still in schema + on `/about`); removed unused `LAST_REVIEWED` constant and `AUTHOR` import
+  - FAQ content / Popular drones / Operator CTA unchanged (already matched spec)
+- Verification: no `--`/`—`/`–` on the page; no "Edited by"/author-photo references; FAQPage schema intact; 16 `Link href` declarations (52+ rendered links after iteration)
+- Build: `npm run build` zero errors (1214 pages)
+- Pushed to `claude/revert-homepage-design-v1-ZYGY0`; draft PR #32 updated, marked ready for review
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

@@ -3,18 +3,17 @@ import Link from 'next/link';
 import {
   CheckCircle, ArrowRight, Calculator, Clock, DollarSign, Shield,
   ShieldCheck, MapPin, Sprout, Droplets, Map as MapIcon, Radar, Settings, ShoppingCart,
-  Search, BarChart3,
+  Search, BarChart3, Ruler, GitCompare, CalendarDays, Mail,
 } from 'lucide-react';
 import { operators, getFeaturedOperators } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
 import { getServiceBySlug } from '@/data/services';
-import { AUTHOR, SITE, organizationSchema, personSchema } from '@/data/author';
+import { blogPosts } from '@/data/blog-posts';
+import { SITE, organizationSchema, personSchema } from '@/data/author';
 import SearchBar from '@/components/search/SearchBar';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
-
-const LAST_REVIEWED = '2026-04-16';
 
 const SERVICE_CARDS = [
   { slug: 'spraying', icon: Droplets, label: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', price: '$12 to $22/acre' },
@@ -123,6 +122,9 @@ export default function HomePage() {
     .map((c) => ({ ...c, count: operators.filter((op) => op.counties.includes(c.slug)).length }))
     .sort((a, b) => b.count - a.count)
     .slice(0, 8);
+  const latestBlogPosts = [...blogPosts]
+    .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
+    .slice(0, 3);
 
   const websiteSchema = {
     '@context': 'https://schema.org',
@@ -417,8 +419,8 @@ export default function HomePage() {
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Free tools for farmers and operators</h2>
-          <p className="text-gray-500 mb-8">Instant calculators for spray cost, ROI, and coverage time</p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <p className="text-gray-500 mb-8">Instant calculators for spray cost, ROI, coverage time, and more</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
                 href: '/tools/spray-cost-calculator',
@@ -429,7 +431,7 @@ export default function HomePage() {
               {
                 href: '/tools/roi-calculator',
                 icon: Calculator,
-                title: 'Buy vs. Hire ROI Calculator',
+                title: 'Buy vs Hire ROI Calculator',
                 desc: 'Compare owning a drone versus hiring a custom operator. Includes USDA EQIP cost-share and financing scenarios.',
               },
               {
@@ -437,6 +439,24 @@ export default function HomePage() {
                 icon: Clock,
                 title: 'Coverage Time Estimator',
                 desc: 'How long will it take to spray your fields? Enter acres, drone model, and application rate.',
+              },
+              {
+                href: '/tools/acreage-converter',
+                icon: Ruler,
+                title: 'Acreage Converter',
+                desc: 'Convert between acres, hectares, square meters, and square feet. Quick field-size math for quotes and reports.',
+              },
+              {
+                href: '/tools/drone-comparison',
+                icon: GitCompare,
+                title: 'Drone Comparison Tool',
+                desc: 'Compare DJI Agras, Hylio, Talos, and XAG models side by side on tank, price, NDAA status, and throughput.',
+              },
+              {
+                href: '/tools/treatment-calendar',
+                icon: CalendarDays,
+                title: 'Treatment Calendar',
+                desc: 'Monthly spray windows for corn, soybeans, wheat, vineyards, and orchards across US growing regions.',
               },
             ].map((tool) => {
               const Icon = tool.icon;
@@ -451,7 +471,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="font-bold text-gray-900 group-hover:text-green-700 mb-2">{tool.title}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed flex-1">{tool.desc}</p>
-                  <span className="mt-4 text-sm text-green-700 font-medium group-hover:underline">Open tool</span>
+                  <span className="mt-4 text-sm text-green-700 font-medium group-hover:underline">Use tool</span>
                 </Link>
               );
             })}
@@ -534,19 +554,15 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {[
-              { href: '/pricing', title: '2026 Drone Spraying Pricing Guide', date: '2026-04-01', excerpt: 'Per-acre rates by crop, state, and service type. Includes Iowa State Extension Custom Rate Survey data.' },
-              { href: '/regulations/faa-part-137', title: 'How to Get FAA Part 137 for Drone Spraying', date: '2026-03-15', excerpt: 'Step-by-step guide to the FAA Part 137 Agricultural Aircraft Operator Certificate for drone applicators.' },
-              { href: '/start-a-drone-business', title: 'How to Start a Drone Spraying Business', date: '2026-02-20', excerpt: 'Licensing, equipment costs, insurance, and first-season pricing for new ag drone operators.' },
-            ].map((post) => (
+            {latestBlogPosts.map((post) => (
               <Link
-                key={post.href}
-                href={post.href}
+                key={post.slug}
+                href={`/blog/${post.slug}`}
                 className="bg-white border border-gray-200 rounded-xl p-5 hover:border-green-300 hover:shadow-sm transition-all group"
               >
-                <time className="text-xs text-gray-400">{post.date}</time>
+                <time className="text-xs text-gray-400">{post.publishedAt}</time>
                 <h3 className="font-semibold text-gray-900 group-hover:text-green-700 mt-1 mb-2 leading-snug">{post.title}</h3>
-                <p className="text-sm text-gray-500 leading-relaxed">{post.excerpt}</p>
+                <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">{post.description}</p>
                 <span className="mt-3 inline-block text-xs text-green-700 font-medium group-hover:underline">Read more</span>
               </Link>
             ))}
@@ -554,7 +570,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 14: Operator CTA */}
+      {/* SECTION 14: Newsletter */}
+      <section className="py-12 bg-white border-t border-b border-gray-100">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center">
+              <Mail className="w-6 h-6 text-green-700" />
+            </div>
+            <div className="flex-1 text-center sm:text-left">
+              <h2 className="text-lg font-bold text-gray-900">Get drone spraying updates for your region</h2>
+              <p className="text-sm text-gray-500 mt-1">Short monthly briefings. No spam. Unsubscribe anytime.</p>
+            </div>
+            <form
+              action="/newsletter"
+              method="post"
+              className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto"
+            >
+              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
+              <input
+                id="newsletter-email"
+                type="email"
+                name="email"
+                required
+                placeholder="you@farm.com"
+                className="flex-1 sm:w-64 px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              />
+              <button
+                type="submit"
+                className="px-5 py-2.5 bg-green-700 text-white text-sm font-semibold rounded-xl hover:bg-green-800 transition-colors whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 15: Operator CTA */}
       <section className="py-14 bg-green-700 text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Are you a drone operator?</h2>
@@ -574,13 +626,6 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
-
-      {/* SECTION 15: Footer byline */}
-      <div className="bg-white border-t border-gray-100 py-4">
-        <p className="text-center text-xs text-gray-400">
-          Edited by {AUTHOR.fullName}. Every page personally researched and updated. Last reviewed {LAST_REVIEWED}.
-        </p>
-      </div>
     </>
   );
 }
