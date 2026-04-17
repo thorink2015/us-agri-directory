@@ -69,6 +69,17 @@ schema) + `Calculator.tsx` (client, for interactive state).
 **Fix:** Add the URL pattern to `src/app/sitemap.ts`. For dynamic
 routes, map over the data source (e.g. `regions.map(r => ({ url: ... }))`).
 
+### 2026-04-17 — Netlify production branch pointed at stale working branch
+**Symptom:** Merges to `main` don't trigger Netlify deploys. Live site stays frozen at old commit.
+**Cause:** Netlify "Production branch" was set to `claude/add-drone-operators-directory-T0YnN` (the original working branch), not `main`. Every PR was merged into `main` but Netlify never saw those commits.
+**Fix:** Netlify dashboard → Project configuration → Build & deploy → Branches → change Production branch to `main` → Save.
+**Prevention:** After any project-level branch rename or migration, verify Netlify's production branch matches the branch receiving PR merges.
+
+### 2026-04-17 — Region interface missing icon/tagline/totalAcres fields
+**Symptom:** TypeScript build error: `Property 'icon' does not exist on type 'Region'` in `regions/page.tsx`. Netlify build fails silently; live site freezes.
+**Cause:** `regions/page.tsx` referenced three fields that weren't declared in the `Region` interface in `types.ts`.
+**Fix:** Add fields to interface (optional), populate in `regions.ts`, add nullish fallbacks in template. Run `npm run build` locally before pushing to catch this class of error early.
+
 ## Data / content gotchas
 
 ### Romanian URLs in canonicals or internal links

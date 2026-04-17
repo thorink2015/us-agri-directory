@@ -67,14 +67,21 @@
 - **Drone comparison:** fixed broken `@/data/drone-models` import; spec table from live drone-model.ts data, 4-scenario guide, FAQAccordion (5 Q&As)
 - **Treatment calendar:** new H1, AEO, 4 schemas, booking deadlines on each entry, crop link chips, FAQAccordion
 
-## 2026-04-17 — State page template + 3 proof states (PR #22, draft)
+## 2026-04-17 — State page template + 3 proof states (PR #22, merged)
 
 - **`src/data/types.ts`:** added `StateData` interface (28 fields)
 - **`src/data/states.ts`:** Iowa, Texas, California full data objects + `getStateData(slug)` helper
 - **`src/app/states/[slug]/page.tsx`:** dual-mode template — 11-section rich layout for proof states, fallback counties-based template for remaining 47 states
 - **`src/app/states/page.tsx`:** index updated with featured proof-state cards, AEO block, green-dot indicators, BreadcrumbList schema
 - **Fix:** wrapped spray windows section in conditional to handle empty `sprayWindows` arrays gracefully
-- **PR #22** open as draft on `claude/add-drone-model-context-NVSMF` → `main`, head `0a7d930`, 0 CI check runs (no CI configured), ready to flip to ready-for-review + merge
+- **PR #22** merged to `main`
+
+## 2026-04-17 — Netlify deploy fix (PR #23, merged)
+
+- **Root cause found:** `regions/page.tsx` used `r.icon`, `r.tagline`, `r.totalAcres` — fields missing from the `Region` interface. TypeScript build error silently failed every Netlify deploy after PR #20 merged, freezing live site at `@5230f70` (Apr 16 13:06).
+- **Fix (PR #23):** Added `icon`, `tagline`, `totalAcres` to `Region` interface + populated all 5 regions + nullish fallbacks in template. Build now passes: 1192 static pages, 0 errors.
+- **Netlify branch fix:** Production branch changed from `claude/add-drone-operators-directory-T0YnN` → `main` in Netlify dashboard. All future merges to `main` now auto-deploy.
+- PRs #22 (state pages) and #23 (build fix) both merged to `main`.
 
 ## What's next (see pending-items.md for detail)
 

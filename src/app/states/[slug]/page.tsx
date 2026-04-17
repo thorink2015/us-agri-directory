@@ -422,7 +422,7 @@ function FallbackStatePage({ slug }: { slug: string }) {
             { icon: TrendingUp, value: formatAcres(state.agriculturalLandHa), label: 'Agricultural land' },
             { icon: Wheat, value: cropNames.slice(0, 2).join(', '), label: 'Main crops' },
             ...(state.vineyardHa ? [{ icon: MapPin, value: formatAcres(state.vineyardHa), label: 'Vineyard acreage' }] : [
-              { icon: MapPin, value: state.region, label: 'Region' },
+              { icon: MapPin, value: state.regionName, label: 'Region' },
             ]),
           ].map((stat) => (
             <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">

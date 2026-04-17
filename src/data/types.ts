@@ -215,6 +215,8 @@ export interface StateData {
   authorityLinks: { label: string; url: string }[];
   faqs: { question: string; answer: string }[];
   lastReviewedAt: string;
+  agriculturalLandHa?: number;
+  vineyardHa?: number;
 }
 
 export interface BlogPost {
