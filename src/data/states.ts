@@ -2018,6 +2018,100 @@ export const stateData: StateData[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+
+  // ─── ALASKA ───────────────────────────────────────────────────────────────
+  {
+    slug: 'alaska',
+    name: 'Alaska',
+    abbreviation: 'AK',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'Alaska Department of Environmental Conservation (DEC)',
+    licensingAgencyUrl: 'https://dec.alaska.gov',
+    aerialCategory: 'Contact DEC. FAA Part 107 required. Liability insurance required.',
+    examsRequired: 'Contact DEC for current exam requirements.',
+    examFees: 'Contact DEC.',
+    uniqueRules: [
+      'Minimal agricultural crop acreage.',
+      'Primary opportunities in forestry, mosquito control, and invasive species management.',
+      'Remote locations add significant logistics cost.',
+    ],
+    reciprocityStates: [],
+    renewalCycle: 'Contact DEC',
+    ceRequirements: 'Contact DEC.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://www.uaf.edu/ces',
+    topCrops: [],
+    rateRange: '$25 to $50/acre',
+    statsRate: '$25 to $50/acre',
+    statsTopCrop: 'Forestry',
+    sprayWindows: [],
+    neighboringStates: [],
+    aeoBlock:
+      'Alaska has minimal agricultural crop acreage with drone opportunities primarily in forestry, mosquito control, and invasive species management. Remote locations drive rates of $25 to $50 per acre. Contact Alaska DEC for current licensing requirements.',
+    licensingDetails:
+      'Alaska aerial pesticide licensing is administered by the Alaska Department of Environmental Conservation (DEC). FAA Part 107 and liability insurance are required. Specific exam requirements, fees, and renewal cycles should be confirmed directly with DEC, as Alaska\'s drone pesticide rules are less codified than the contiguous states.\n\nAlaska has minimal agricultural crop acreage. Drone opportunities center on forestry pest management, municipal mosquito control programs, and invasive species treatment on state and federal public lands. Remote logistical overhead drives rates significantly above national averages.',
+    authorityLinks: [
+      { label: 'Alaska DEC Pesticide Program', url: 'https://dec.alaska.gov' },
+      { label: 'UAF Cooperative Extension', url: 'https://www.uaf.edu/ces' },
+    ],
+    faqs: [
+      { question: 'Is there agricultural drone demand in Alaska?', answer: 'Very limited for traditional crops. Opportunities exist in forestry pest management, mosquito control programs, and invasive species treatment on public lands.' },
+      { question: 'What does drone spraying cost in Alaska?', answer: '$25 to $50 per acre. Remote logistics, short growing season, and limited operator base drive rates far above the national average.' },
+      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137, liability insurance, and Alaska DEC pesticide certification. Contact DEC directly for current exam and fee requirements.' },
+      { question: 'Is Alaska practical for a drone spray business?', answer: 'Only as a specialized niche. Total addressable acreage is too small for a standalone ag drone business. Operators typically combine drone work with other aviation or pest control services.' },
+      { question: 'Does Alaska have reciprocal licensing?', answer: 'Not documented. Contact DEC.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── HAWAII ───────────────────────────────────────────────────────────────
+  {
+    slug: 'hawaii',
+    name: 'Hawaii',
+    abbreviation: 'HI',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'Hawaii Department of Agriculture, Division of Animal and Biocontrol (DAB)',
+    licensingAgencyUrl: 'https://dab.hawaii.gov/pi/pest',
+    aerialCategory: 'Category 4: Aerial Pest Control. RUP Aerial Permit (Form P-23) also required.',
+    examsRequired: 'Core + Category 4. $50/exam. $100 initial cert card.',
+    examFees: '$50/exam. $100 initial certification card.',
+    uniqueRules: [
+      'RUP Aerial Permit (Form P-23) required for restricted-use aerial applications, separate from applicator certification.',
+      'RUP buffer zones apply.',
+      '75% cap on online CE credits.',
+    ],
+    reciprocityStates: [],
+    renewalCycle: '5-year cycle',
+    ceRequirements: 'CET credits vary. 75% online cap.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://www.ctahr.hawaii.edu',
+    topCrops: [],
+    rateRange: '$20 to $40/acre',
+    statsRate: '$20 to $40/acre',
+    statsTopCrop: 'Coffee/Macadamia',
+    sprayWindows: [],
+    neighboringStates: [],
+    aeoBlock:
+      'Hawaii requires Category 4 (Aerial Pest Control) plus a separate RUP Aerial Permit (Form P-23) for restricted-use applications. Primary drone markets are coffee, macadamia nut, tropical fruit, and invasive species management. Rates run $20 to $40 per acre.',
+    licensingDetails:
+      'Hawaii aerial pesticide licensing is administered by the Hawaii Department of Agriculture Division of Animal and Biocontrol (DAB) under Category 4 (Aerial Pest Control). Operators must pass Core ($50) and Category 4 ($50) exams, plus pay a $100 initial certification card fee. For restricted-use products, a separate RUP Aerial Permit (Form P-23) is required in addition to applicator certification. RUP buffer zones apply near residential areas, schools, and water bodies.\n\nRenewal is on a 5-year cycle with a 75% cap on online CE credits. No reciprocity with mainland states — all operators must test in Hawaii. Island logistics (equipment shipping, inter-island travel) add meaningful overhead to each job.',
+    authorityLinks: [
+      { label: 'Hawaii DAB Pesticide Program', url: 'https://dab.hawaii.gov/pi/pest' },
+      { label: 'UH CTAHR Extension', url: 'https://www.ctahr.hawaii.edu' },
+    ],
+    faqs: [
+      { question: 'What is the RUP Aerial Permit?', answer: 'Form P-23, a separate permit required for any aerial application of restricted-use pesticides in Hawaii. This is in addition to your Category 4 applicator certification. Standard permits are for individual applications.' },
+      { question: 'What crops use drones in Hawaii?', answer: 'Coffee (Big Island), macadamia nuts, tropical fruit (papaya, banana, pineapple), and seed corn operations on Maui and Molokai. Invasive species management on conservation lands is a growing niche.' },
+      { question: 'What does drone spraying cost in Hawaii?', answer: '$20 to $40 per acre. Island logistics (shipping equipment, inter-island travel) and small field sizes push rates well above mainland averages.' },
+      { question: 'Are there special buffer zone rules?', answer: 'Yes. Hawaii applies RUP buffer zones for aerial applications near residential areas, schools, and water bodies. These apply to drones as well as manned aircraft.' },
+      { question: 'Does Hawaii have reciprocal licensing?', answer: 'No. All operators must test in Hawaii regardless of mainland credentials.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
 ];
 
 export function getStateData(slug: string): StateData | undefined {
