@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { counties } from '@/data/counties';
 import CountyCard from '@/components/counties/CountyCard';
 import Breadcrumb from '@/components/layout/Breadcrumb';
-import { stateData } from '@/data/states';
 import { SITE } from '@/data/author';
 
 export const metadata: Metadata = {
@@ -76,7 +75,7 @@ export default function StatesPage() {
         {/* AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-10">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Drone spray rates across the US range from $12 per acre in the Corn Belt (Iowa benchmark) to $35 per acre in California for specialty crops. Every operator must hold FAA Part 107 and a state pesticide applicator license in the aerial category. Iowa, Texas, and California have detailed licensing and rate guides below — more states are added monthly.
+            Drone spray rates across the US range from $12 per acre in the Corn Belt (Iowa benchmark) to $50 per acre in Alaska for remote logistics work. Every operator must hold FAA Part 107 and a state pesticide applicator license in the aerial category. All 50 states now have detailed guides below covering state-specific licensing rules, reciprocity, seasonal spray windows, top crops, and 2026 rate ranges.
           </p>
         </div>
 
@@ -119,17 +118,9 @@ export default function StatesPage() {
                   {region}
                 </h3>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
-                  {regionStates.map((state) => {
-                    const hasRich = stateData.some((s) => s.slug === state.slug);
-                    return (
-                      <div key={state.slug} className="relative">
-                        <CountyCard county={state} />
-                        {hasRich && (
-                          <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-green-500" title="Full guide available" />
-                        )}
-                      </div>
-                    );
-                  })}
+                  {regionStates.map((state) => (
+                    <CountyCard key={state.slug} county={state} />
+                  ))}
                 </div>
               </div>
             );
