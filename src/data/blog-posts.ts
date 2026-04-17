@@ -20,6 +20,39 @@ import { BlogPost } from './types';
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: 'drone-spraying-pricing-trends-2026',
+    title: 'Why Drone Spraying Rates Dropped 30 to 45 Percent in Three Years',
+    description:
+      'Midwest drone spray rates fell from $22 to $25/acre in 2022 to $12 to $17 in 2026. Iowa State benchmark: $12.50/acre. What is driving compression.',
+    category: 'guide',
+    publishedAt: '2026-04-16',
+    author: 'Eugen',
+    readMinutes: 9,
+    tags: ['pricing', 'custom rates', 'market trends', 'Iowa State', 'ROI'],
+    relatedServices: ['spraying'],
+    relatedCrops: ['corn'],
+    content: 'drone-spraying-pricing-trends-2026',
+    aeoBlock:
+      'Midwest custom drone spray rates compressed from $22 to $25 per acre in 2022 to $12 to $17 in 2026, a 30 to 45 percent decline driven by rapid operator supply growth. The 2026 Iowa State Custom Rate Survey established the first university benchmark at $12.50 per acre average. At current rates, some operators report barely clearing $5 per acre profit, suggesting the market is approaching a pricing floor on row crops.',
+    faqs: [
+      {
+        question: 'Will rates keep dropping?',
+        answer:
+          'Unlikely for row crops. Margins are already thin at $12 to $17 per acre. Equipment costs are rising from tariffs. Expect stabilization or slight increases in 2027 as unprofitable operators exit.',
+      },
+      {
+        question: 'Are specialty crop rates also dropping?',
+        answer:
+          'Slower. Vineyard and orchard rates have compressed less because fewer operators serve these markets and the work is more complex. Expect $18 to $35 per acre to hold for the next 2 to 3 years.',
+      },
+      {
+        question: 'Should I start a drone business if rates are this low?',
+        answer:
+          'Yes, if you can reach 1,000+ acres per year by year 2 and diversify beyond row crops. No, if your only plan is corn and soybean fungicide in a saturated Corn Belt county.',
+      },
+    ],
+  },
+  {
     slug: 'drone-spraying-state-license-guide',
     title: 'What Pesticide License Do You Need to Spray by Drone in Your State?',
     description:

@@ -2,6 +2,97 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 export const blogContent: Record<string, ReactNode> = {
+  'drone-spraying-pricing-trends-2026': (
+    <>
+      <h2>The data</h2>
+      <p>
+        2022: $22 to $25/acre (early adopter pricing, few operators). 2024: $15 to $18/acre (MU
+        Extension benchmark $16). 2026: $12 to $17/acre (Iowa State&apos;s first drone category:
+        $12.50 average from 47 responses). Manned aerial: $12/acre in the same survey. Drones and
+        airplanes are now price-equivalent for the first time. Full rate tables by service and
+        region in the <Link href="/pricing">2026 pricing guide</Link>.
+      </p>
+
+      <h2>What drove compression</h2>
+      <p>
+        Operator supply exploded. SweetWater Technologies alone went from 32,000 acres in 2022 to an
+        estimated 200,000 by end of 2025. NAAA&apos;s 2025 survey: 13 percent of aerial application
+        operations now include UAS, up from 5 percent in 2024 &mdash; a 160 percent increase in one
+        year. The American Spray Drone Coalition counts 10.3 million US acres sprayed by drones in
+        2024, roughly 2.5x the 2023 figure.
+      </p>
+
+      <h2>Where rates are still high</h2>
+      <p>
+        Specialty crops remain less compressed. Vineyards: $18 to $30. Orchards: $15 to $21.
+        Specialty vegetables: $20 to $40. Fewer operators, more complex terrain, more passes per
+        season. Drone <Link href="/services/spraying">spraying services</Link> on specialty blocks
+        are where most of the margin left in the market actually lives.
+      </p>
+
+      <h2>The tariff counterpressure</h2>
+      <p>
+        A 170 percent cumulative tariff on Chinese drones by April 2025. The DJI T50 went from
+        $18,000 pre-tariff to $22,000 to $28,000 post-tariff. Higher equipment cost means operators
+        need higher per-acre revenue to maintain margins, but competitive pressure keeps rates low.
+        Squeeze from both sides.
+      </p>
+
+      <h2>The profitability floor</h2>
+      <p>
+        At a $12.50/acre average and MU Extension&apos;s ownership cost of $12.27/acre at 1,000
+        acres/year, the margin is $0.23 per acre. At $7.39 ownership cost at 4,000 acres/year,
+        margin is $5.11. Volume is the only path to profitability in row crops. Plug your numbers
+        into the <Link href="/tools/roi-calculator">ROI calculator</Link> before signing equipment
+        financing.
+      </p>
+
+      <h2>What this means for farmers</h2>
+      <p>
+        Rates are near bottom. Do not expect significantly cheaper drone spraying in 2027. Do expect
+        stable or slightly rising rates as marginal operators exit and tariffs increase equipment
+        replacement costs. Locking in multi-year rates with a reliable operator is worth more than
+        chasing the cheapest bid.
+      </p>
+
+      <h2>What this means for operators</h2>
+      <p>
+        Compete on volume and service quality, not on price. Diversify into specialty crops, cover
+        crop seeding, and mapping where margins are healthier. Build repeat customer relationships
+        that guarantee acreage before the season starts. The full business-launch playbook is at{' '}
+        <Link href="/start-a-drone-business">start a drone business</Link>.
+      </p>
+
+      <h2>See also</h2>
+      <p>
+        <Link href="/regions/corn-belt">Corn Belt regional hub</Link> &middot;{' '}
+        <Link href="/crops/corn">Corn crop page</Link> &middot;{' '}
+        <Link href="/services/spraying">Drone spraying service</Link>
+      </p>
+
+      <h2>Authority sources</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Iowa State Extension &mdash; Custom Rate Survey
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://extension.missouri.edu/publications/g1274"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            University of Missouri Extension G1274 &mdash; Custom Rates for Farm Services
+          </a>
+        </li>
+      </ul>
+    </>
+  ),
   'drone-spraying-state-license-guide': (
     <>
       <h2>The baseline</h2>
