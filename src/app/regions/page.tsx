@@ -48,7 +48,7 @@ export default function RegionsIndexPage() {
             className="group bg-white border border-gray-200 rounded-xl p-5 hover:border-green-400 hover:shadow-md transition-all"
           >
             <div className="flex items-start gap-3 mb-2">
-              <span className="text-3xl">{r.icon}</span>
+              <span className="text-3xl">{r.icon ?? '🌾'}</span>
               <div className="flex-1">
                 <div className="flex items-center justify-between gap-2">
                   <h2 className="text-lg font-bold text-gray-900 group-hover:text-green-700 transition-colors">
@@ -56,10 +56,10 @@ export default function RegionsIndexPage() {
                   </h2>
                   <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
                 </div>
-                <p className="text-sm text-gray-500">{r.stateSlugs.length} states · {(r.totalAcres / 1000000).toFixed(0)}M acres</p>
+                <p className="text-sm text-gray-500">{r.stateSlugs.length} states{r.totalAcres ? ` · ${(r.totalAcres / 1_000_000).toFixed(0)}M acres` : ''}</p>
               </div>
             </div>
-            <p className="text-sm text-gray-600 leading-relaxed">{r.tagline}</p>
+            <p className="text-sm text-gray-600 leading-relaxed">{r.tagline ?? r.description}</p>
           </Link>
         ))}
       </div>

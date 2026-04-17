@@ -144,6 +144,9 @@ export interface DroneModel {
 export interface Region {
   slug: string;
   name: string;
+  icon?: string;
+  tagline?: string;
+  totalAcres?: number;
   states: string[];
   stateSlugs: string[];
   description: string;

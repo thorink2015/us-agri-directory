@@ -4,6 +4,9 @@ export const regions: Region[] = [
   {
     slug: 'corn-belt',
     name: 'Corn Belt',
+    icon: '🌽',
+    tagline: 'Largest US ag-drone market — corn & soybean fungicide at scale.',
+    totalAcres: 177000000,
     states: ['Iowa', 'Illinois', 'Indiana', 'Ohio', 'Missouri', 'Michigan', 'Wisconsin', 'Minnesota', 'Kentucky', 'Tennessee'],
     stateSlugs: ['iowa', 'illinois', 'indiana', 'ohio', 'missouri', 'michigan', 'wisconsin', 'minnesota', 'kentucky', 'tennessee'],
     description:
@@ -63,6 +66,9 @@ export const regions: Region[] = [
   {
     slug: 'great-plains',
     name: 'Great Plains',
+    icon: '🌾',
+    tagline: 'Wheat, cotton & milo across wind-swept terrain — drones vs. airplanes.',
+    totalAcres: 210000000,
     states: ['Kansas', 'Nebraska', 'North Dakota', 'South Dakota', 'Montana', 'Wyoming', 'Colorado', 'Oklahoma', 'New Mexico', 'Texas'],
     stateSlugs: ['kansas', 'nebraska', 'north-dakota', 'south-dakota', 'montana', 'wyoming', 'colorado', 'oklahoma', 'new-mexico', 'texas'],
     description:
@@ -122,6 +128,9 @@ export const regions: Region[] = [
   {
     slug: 'mississippi-delta',
     name: 'Mississippi Delta',
+    icon: '🌊',
+    tagline: 'Rice & cotton heartland — flooded paddies where ground rigs cannot go.',
+    totalAcres: 35000000,
     states: ['Arkansas', 'Louisiana', 'Mississippi', 'Missouri (Bootheel)'],
     stateSlugs: ['arkansas', 'louisiana', 'mississippi', 'missouri'],
     description:
@@ -181,6 +190,9 @@ export const regions: Region[] = [
   {
     slug: 'california',
     name: 'California',
+    icon: '🍇',
+    tagline: 'Vineyards, orchards & specialty crops — the premium US drone market.',
+    totalAcres: 29000000,
     states: ['California'],
     stateSlugs: ['california'],
     description:
@@ -240,6 +252,9 @@ export const regions: Region[] = [
   {
     slug: 'southeast',
     name: 'Southeast',
+    icon: '🌿',
+    tagline: 'Cotton, peanuts & tobacco — diverse crops with healthier operator margins.',
+    totalAcres: 67000000,
     states: ['Georgia', 'Alabama', 'Florida', 'South Carolina', 'North Carolina', 'Virginia', 'West Virginia'],
     stateSlugs: ['georgia', 'alabama', 'florida', 'south-carolina', 'north-carolina', 'virginia', 'west-virginia'],
     description:
