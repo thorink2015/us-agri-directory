@@ -35,7 +35,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'US Ag Drone Directory — Find Verified Agricultural Drone Operators Near You',
+        alt: 'US Ag Drone Directory, Find Verified Agricultural Drone Operators Near You',
       },
     ],
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'US Ag Drone Directory — verified operators in all 50 states',
+        alt: 'US Ag Drone Directory, verified operators in all 50 states',
       },
     ],
   },
@@ -73,6 +73,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="impact-site-verification" content="9797c758-df9e-4dff-9f78-73f66157b2d5" />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <link rel="preconnect" href="https://www.googletagmanager.com" />
         )}

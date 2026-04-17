@@ -8,10 +8,10 @@ import { SITE } from '@/data/author';
 export const metadata: Metadata = {
   title: 'Drone Spraying by State: Licensing, Rates & Operators (2026) | Ag Drone Directory',
   description:
-    'Find agricultural drone operators, licensing requirements, and 2026 spray rates for all 50 US states. Iowa $12–$17, Texas $12–$20, California $18–$35/acre.',
+    'Find agricultural drone operators, licensing requirements, and 2026 spray rates for all 50 US states. Iowa $12 to $17, Texas $12 to $20, California $18 to $35/acre.',
   alternates: { canonical: '/states' },
   openGraph: {
-    title: 'Ag Drone Services by State — Licensing & Rates (2026)',
+    title: 'Ag Drone Services by State, Licensing & Rates (2026)',
     description: 'Browse verified operators, state licensing rules, and 2026 per-acre rates for all 50 states.',
     url: `${SITE.domain}/states`,
   },
@@ -23,7 +23,7 @@ const PROOF_STATES = [
   {
     slug: 'iowa',
     name: 'Iowa',
-    rateRange: '$12–$17/acre',
+    rateRange: '$12 to $17/acre',
     topCrop: 'Corn & Soybeans',
     agency: 'IDALS Cat. 11',
     badge: 'Corn Belt benchmark',
@@ -31,7 +31,7 @@ const PROOF_STATES = [
   {
     slug: 'texas',
     name: 'Texas',
-    rateRange: '$12–$20/acre',
+    rateRange: '$12 to $20/acre',
     topCrop: 'Cotton & Corn',
     agency: 'TDA Cat. 9',
     badge: 'Largest ag state',
@@ -39,7 +39,7 @@ const PROOF_STATES = [
   {
     slug: 'california',
     name: 'California',
-    rateRange: '$18–$35/acre',
+    rateRange: '$18 to $35/acre',
     topCrop: 'Grapes & Almonds',
     agency: 'CDPR',
     badge: 'Specialty crops',

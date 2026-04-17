@@ -64,7 +64,7 @@ const CALENDAR: Treatment[] = [
     month: 'April', monthNumber: 4,
     crops: [
       { crop: 'Vineyards', treatment: 'First powdery and downy mildew fungicide', urgency: 'high', bookBy: 'March 1' },
-      { crop: 'Winter Wheat', treatment: 'T2 fungicide at flag leaf — scab and stripe rust', urgency: 'high', bookBy: 'March 1' },
+      { crop: 'Winter Wheat', treatment: 'T2 fungicide at flag leaf, scab and stripe rust', urgency: 'high', bookBy: 'March 1' },
       { crop: 'Corn', treatment: 'Pre-emerge herbicide application', urgency: 'high', bookBy: 'March 1' },
       { crop: 'Orchards', treatment: 'Codling moth and scab fungicide program begins', urgency: 'medium', bookBy: 'March 1' },
     ],
@@ -73,7 +73,7 @@ const CALENDAR: Treatment[] = [
     month: 'May', monthNumber: 5,
     crops: [
       { crop: 'Vineyards', treatment: 'Downy mildew and powdery mildew 2-week spray program', urgency: 'high', bookBy: 'April 1' },
-      { crop: 'Winter Wheat', treatment: 'T3 fungicide at heading — Fusarium head blight. Book by April.', urgency: 'high', bookBy: 'April 1' },
+      { crop: 'Winter Wheat', treatment: 'T3 fungicide at heading, Fusarium head blight. Book by April.', urgency: 'high', bookBy: 'April 1' },
       { crop: 'Rice', treatment: 'Pre-emerge herbicide for barnyardgrass control', urgency: 'high', bookBy: 'April 1' },
       { crop: 'Soybeans', treatment: 'Pre-emerge herbicide if planting this month', urgency: 'medium', bookBy: 'April 1' },
     ],
@@ -81,7 +81,7 @@ const CALENDAR: Treatment[] = [
   {
     month: 'June', monthNumber: 6,
     crops: [
-      { crop: 'Vineyards', treatment: 'Continue mildew fungicide program (every 10–14 days)', urgency: 'high', bookBy: 'May 1' },
+      { crop: 'Vineyards', treatment: 'Continue mildew fungicide program (every 10 to 14 days)', urgency: 'high', bookBy: 'May 1' },
       { crop: 'Corn', treatment: 'Post-emerge herbicide + early insecticide for rootworm', urgency: 'high', bookBy: 'May 1' },
       { crop: 'Orchards', treatment: 'Codling moth and brown rot fungicide', urgency: 'high', bookBy: 'May 1' },
       { crop: 'Cotton', treatment: 'Early season herbicide + plant bug insecticide', urgency: 'medium', bookBy: 'May 1' },
@@ -90,8 +90,8 @@ const CALENDAR: Treatment[] = [
   {
     month: 'July', monthNumber: 7,
     crops: [
-      { crop: 'Corn', treatment: 'VT/R1 fungicide — Tar Spot, Gray Leaf Spot, Southern Rust', urgency: 'high', bookBy: 'June 1' },
-      { crop: 'Soybeans', treatment: 'R3 fungicide — White Mold and Frogeye Leaf Spot', urgency: 'high', bookBy: 'June 1' },
+      { crop: 'Corn', treatment: 'VT/R1 fungicide, Tar Spot, Gray Leaf Spot, Southern Rust', urgency: 'high', bookBy: 'June 1' },
+      { crop: 'Soybeans', treatment: 'R3 fungicide, White Mold and Frogeye Leaf Spot', urgency: 'high', bookBy: 'June 1' },
       { crop: 'Rice', treatment: 'Blast and sheath blight fungicide', urgency: 'high', bookBy: 'June 1' },
       { crop: 'Vineyards', treatment: 'Final preventive fungicide applications', urgency: 'medium', bookBy: 'June 1' },
     ],
@@ -118,7 +118,7 @@ const CALENDAR: Treatment[] = [
     month: 'October', monthNumber: 10,
     crops: [
       { crop: 'Winter Wheat', treatment: 'Post-emerge herbicide after establishment', urgency: 'medium', bookBy: 'September 1' },
-      { crop: 'Cover Crops', treatment: 'Final seeding window before frost — Great Plains', urgency: 'high', bookBy: 'September 1' },
+      { crop: 'Cover Crops', treatment: 'Final seeding window before frost, Great Plains', urgency: 'high', bookBy: 'September 1' },
       { crop: 'Orchards', treatment: 'Post-harvest copper spray for disease prevention', urgency: 'medium', bookBy: 'September 1' },
     ],
   },

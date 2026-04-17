@@ -2,7 +2,7 @@ import { BlogPost } from './types';
 
 /**
  * Blog posts for the US Ag Drone Directory.
- * Content is written and fed in separately — add entries here when ready.
+ * Content is written and fed in separately, add entries here when ready.
  * The [slug]/page.tsx template handles rendering automatically.
  *
  * Example entry:

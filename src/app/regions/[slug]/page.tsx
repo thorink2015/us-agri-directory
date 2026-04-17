@@ -13,6 +13,7 @@ import { crops as cropsData } from '@/data/crops';
 import { operators } from '@/data/operators';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 interface Props {
   params: { slug: string };
 }
@@ -202,7 +203,7 @@ export default function RegionPage({ params }: Props) {
                   <span className="text-2xl">{crop.icon}</span>
                   <span className="font-semibold text-gray-900">{crop.name}</span>
                 </div>
-                <p className="text-xs text-gray-600">${crop.priceMinUsd}–${crop.priceMaxUsd}/acre</p>
+                <p className="text-xs text-gray-600">${crop.priceMinUsd} to ${crop.priceMaxUsd}/acre</p>
               </Link>
             ))}
           </div>
@@ -235,7 +236,7 @@ export default function RegionPage({ params }: Props) {
               {region.authorityLinks.map((link) => (
                 <a
                   key={link.url}
-                  href={link.url}
+                  href={addUtm(link.url, "authority_link")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-green-700 hover:underline"

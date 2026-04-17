@@ -107,7 +107,7 @@ export const drones: DroneModel[] = [
     bestFor: 'High-volume commercial operators replacing manned aircraft on 2,000+ acre operations, large rice and cotton acreage, fleet operators',
     authorityLinks: [
       { label: 'DJI Agras T100 Official Specs', url: 'https://ag.dji.com/t100/specs' },
-      { label: 'DJI 2025 New Product Announcement', url: 'https://ag.dji.com/newsroom/ag-news--en-new-product-2025' },
+      { label: 'DJI 2025 New Product Announcement', url: 'https://ag.dji.com/newsroom' },
       { label: 'FAA Section 44807 Exemption Pathway', url: 'https://www.faa.gov/uas/advanced_operations' },
     ],
     faqs: [

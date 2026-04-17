@@ -16,6 +16,7 @@ import AuthorCard from '@/components/author/AuthorCard';
 import { getStateData } from '@/data/states';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 interface Props {
   params: { slug: string };
 }
@@ -109,7 +110,7 @@ function RichStatePage({ slug }: { slug: string }) {
       )}
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* 1 — Breadcrumb + H1 + Byline */}
+        {/* 1, Breadcrumb + H1 + Byline */}
         <Breadcrumb items={[{ label: 'States', href: '/states' }, { label: data.name }]} />
 
         <div className="flex items-center gap-2 text-green-700 text-sm font-medium mb-2">
@@ -123,12 +124,12 @@ function RichStatePage({ slug }: { slug: string }) {
 
         <Byline lastUpdated={data.lastReviewedAt} />
 
-        {/* 2 — AEO block */}
+        {/* 2, AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">{data.aeoBlock}</p>
         </div>
 
-        {/* 3 — Stats row */}
+        {/* 3, Stats row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
           {[
             { icon: Users, value: ops.length > 0 ? `${ops.length}` : '0', label: 'Listed operators' },
@@ -144,7 +145,7 @@ function RichStatePage({ slug }: { slug: string }) {
           ))}
         </div>
 
-        {/* 4 — Operator grid */}
+        {/* 4, Operator grid */}
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Drone operators serving {data.name}
@@ -174,7 +175,7 @@ function RichStatePage({ slug }: { slug: string }) {
           )}
         </section>
 
-        {/* 5 — Spray windows / rates table */}
+        {/* 5, Spray windows / rates table */}
         {data.sprayWindows.length > 0 && <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             2026 spray windows and rates in {data.name}
@@ -205,7 +206,7 @@ function RichStatePage({ slug }: { slug: string }) {
           </p>
         </section>}
 
-        {/* 6 — Licensing section */}
+        {/* 6, Licensing section */}
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             Drone spraying licensing in {data.name}
@@ -262,7 +263,7 @@ function RichStatePage({ slug }: { slug: string }) {
           )}
         </section>
 
-        {/* 7 — Top crops */}
+        {/* 7, Top crops */}
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Top crops for drone spraying in {data.name}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -281,7 +282,7 @@ function RichStatePage({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* 8 — Region link */}
+        {/* 8, Region link */}
         <section className="mb-10">
           <div className="bg-green-50 border border-green-200 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
@@ -300,13 +301,13 @@ function RichStatePage({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* 9 — FAQ */}
+        {/* 9, FAQ */}
         <section className="mb-10">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Drone spraying in {data.name} — frequently asked questions</h2>
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Drone spraying in {data.name}, frequently asked questions</h2>
           <FAQAccordion faqs={data.faqs} />
         </section>
 
-        {/* 10 — CTA */}
+        {/* 10, CTA */}
         <section className="mb-10">
           <div className="bg-gray-900 text-white rounded-xl p-6 flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
             <div>
@@ -324,7 +325,7 @@ function RichStatePage({ slug }: { slug: string }) {
           </div>
         </section>
 
-        {/* 11 — Internal links */}
+        {/* 11, Internal links */}
         <section className="mb-10">
           <h2 className="text-lg font-bold text-gray-900 mb-4">Neighboring states</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
@@ -355,7 +356,7 @@ function RichStatePage({ slug }: { slug: string }) {
             <Link href="/tools/spray-cost-calculator" className="text-green-700 hover:underline">Spray cost calculator →</Link>
             <Link href="/tools/treatment-calendar" className="text-green-700 hover:underline">Treatment calendar →</Link>
             {data.authorityLinks.map((link) => (
-              <a key={link.url} href={link.url} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a key={link.url} href={addUtm(link.url, "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 {link.label} →
               </a>
             ))}

@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: '*',
         allow: '/',
       },
-      // ── AI crawlers — explicit allow for citation advantage ──────────────
+      // ── AI crawlers, explicit allow for citation advantage ──────────────
       { userAgent: 'GPTBot', allow: '/' },                // OpenAI / ChatGPT training
       { userAgent: 'OAI-SearchBot', allow: '/' },         // OpenAI SearchGPT
       { userAgent: 'ChatGPT-User', allow: '/' },          // ChatGPT browsing mode

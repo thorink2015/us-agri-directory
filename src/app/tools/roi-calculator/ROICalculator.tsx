@@ -126,7 +126,7 @@ export default function ROICalculator() {
                 aria-label="Annual acres (direct entry)"
               />
             </div>
-            <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+            <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>100</span><span>10,000 acres</span>
             </div>
           </div>
@@ -168,7 +168,7 @@ export default function ROICalculator() {
               onChange={(e) => setEqipPct(Number(e.target.value))}
               className="w-full accent-emerald-600"
             />
-            <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+            <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>0%</span><span>75%</span>
             </div>
           </div>
@@ -186,7 +186,7 @@ export default function ROICalculator() {
               onChange={(e) => setInterestRate(Number(e.target.value))}
               className="w-full accent-gray-500"
             />
-            <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+            <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>0%</span><span>15%</span>
             </div>
           </div>
@@ -204,7 +204,7 @@ export default function ROICalculator() {
               onChange={(e) => setHireRate(Number(e.target.value))}
               className="w-full accent-green-700"
             />
-            <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+            <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>$8</span><span>$40</span>
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function ROICalculator() {
               onChange={(e) => setBatteries(Number(e.target.value))}
               className="w-full accent-gray-500"
             />
-            <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+            <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>2</span><span>8</span>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function ROICalculator() {
               onChange={(e) => setBatteryCost(Number(e.target.value))}
               className="w-full accent-gray-500"
             />
-            <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+            <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>$500</span><span>$3,000</span>
             </div>
           </div>

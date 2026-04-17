@@ -91,7 +91,7 @@ export default function GlossaryPage() {
       </div>
       <p className="text-lg text-gray-600 mb-6 leading-relaxed">
         Plain-English definitions of {glossaryTerms.length}+ terms used in US agricultural drone
-        operations — FAA regulations, EPA pesticide rules, application technique, hardware, and business terminology.
+        operations, FAA regulations, EPA pesticide rules, application technique, hardware, and business terminology.
       </p>
 
       {/* A-Z quick nav */}

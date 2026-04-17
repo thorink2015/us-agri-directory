@@ -40,12 +40,12 @@ export const legalFAQs: FAQ[] = [
   {
     question: 'Is drone spraying legal in my state?',
     answer:
-      'Yes, agricultural drone spraying is legal in all 50 states. Operators must hold an FAA Part 107 Remote Pilot Certificate and an FAA Part 137 Agricultural Aircraft Operator Certificate. Most states also require a state pesticide applicator license with an aerial category. Requirements vary by state — check your state\'s page on this directory for specifics.',
+      'Yes, agricultural drone spraying is legal in all 50 states. Operators must hold an FAA Part 107 Remote Pilot Certificate and an FAA Part 137 Agricultural Aircraft Operator Certificate. Most states also require a state pesticide applicator license with an aerial category. Requirements vary by state, check your state\'s page on this directory for specifics.',
   },
   {
     question: 'What certifications does a drone spray operator need?',
     answer:
-      'Every operator must hold: (1) FAA Part 107 Remote Pilot Certificate — passes the Unmanned Aircraft General knowledge exam and renews every 24 months; (2) FAA Part 137 Agricultural Aircraft Operator Certificate — authorizes dispensing chemicals from a drone; (3) a state pesticide applicator license with an aerial endorsement; (4) active liability insurance. For drones over 55 pounds loaded, a Section 44807 exemption is also required.',
+      'Every operator must hold: (1) FAA Part 107 Remote Pilot Certificate, passes the Unmanned Aircraft General knowledge exam and renews every 24 months; (2) FAA Part 137 Agricultural Aircraft Operator Certificate, authorizes dispensing chemicals from a drone; (3) a state pesticide applicator license with an aerial endorsement; (4) active liability insurance. For drones over 55 pounds loaded, a Section 44807 exemption is also required.',
   },
   {
     question: 'How much does it cost to get FAA certified for drone spraying?',

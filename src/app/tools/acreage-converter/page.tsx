@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     'Convert between acres, hectares, square feet, square meters, and sections instantly. Built for farmers and ag professionals working with field measurements.',
   alternates: { canonical: '/tools/acreage-converter' },
   openGraph: {
-    title: 'Farm Acreage Converter — Acres, Hectares, Sq Ft & Sections',
+    title: 'Farm Acreage Converter, Acres, Hectares, Sq Ft & Sections',
     description: '1 acre = 0.4047 hectares = 43,560 sq ft. Instant conversion for all common US and international agricultural land measurements.',
     url: `${SITE.domain}/tools/acreage-converter`,
   },
@@ -119,7 +119,7 @@ export default function AcreageConverterPage() {
         <section className="mt-10 space-y-4">
           <h2 className="text-xl font-bold text-gray-900">How this works</h2>
           <p className="text-sm text-gray-700 leading-relaxed">
-            All conversions use standard USGS and NIST factors. One acre was historically defined as the amount of land a yoke of oxen could plow in one day. The international acre used in the US equals exactly 4,046.8564224 square meters — the value used in this converter.
+            All conversions use standard USGS and NIST factors. One acre was historically defined as the amount of land a yoke of oxen could plow in one day. The international acre used in the US equals exactly 4,046.8564224 square meters, the value used in this converter.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed">
             Sections (640 acres, or one square mile) are the standard survey unit from the US Public Land Survey System used across the Midwest and West. A quarter section (160 acres) is the standard homestead size from the Homestead Act of 1862 and remains the benchmark field size used by USDA reporting, crop insurance, and custom hire rate surveys including the Iowa State Extension Custom Rate Survey.

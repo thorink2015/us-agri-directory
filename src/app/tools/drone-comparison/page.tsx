@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/tools/drone-comparison' },
   openGraph: {
     title: 'Compare Agricultural Spray Drones Side by Side (2026)',
-    description: 'DJI T50 vs Hylio AG-272 vs T100 — tank capacity, NDAA status, MSRP, wind rating, and best use case compared.',
+    description: 'DJI T50 vs Hylio AG-272 vs T100, tank capacity, NDAA status, MSRP, wind rating, and best use case compared.',
     url: `${SITE.domain}/tools/drone-comparison`,
   },
 };
@@ -75,7 +75,7 @@ export default function DroneComparisonPage() {
     '@type': 'Article',
     headline: 'Compare Agricultural Spray Drones Side by Side (2026)',
     description:
-      'The US ag drone market in 2026 is led by the DJI Agras T50 ($22,000–$28,000 post-tariff, 40L tank) and the Hylio AG-272 (estimated $55,000–$75,000, 68L tank, NDAA compliant). Full spec comparison for 7 models.',
+      'The US ag drone market in 2026 is led by the DJI Agras T50 ($22,000 to $28,000 post-tariff, 40L tank) and the Hylio AG-272 (estimated $55,000 to $75,000, 68L tank, NDAA compliant). Full spec comparison for 7 models.',
     url: `${SITE.domain}/tools/drone-comparison`,
     mainEntityOfPage: `${SITE.domain}/tools/drone-comparison`,
     datePublished: '2026-01-01',
@@ -150,7 +150,7 @@ export default function DroneComparisonPage() {
                   <td className="p-4 text-gray-600 text-xs">
                     {drone.manufacturer}
                     <br />
-                    <span className="text-gray-400">{drone.countryOfManufacture}</span>
+                    <span className="text-gray-600">{drone.countryOfManufacture}</span>
                   </td>
                   <td className="p-4 text-center">
                     {drone.ndaaCompliant ? (

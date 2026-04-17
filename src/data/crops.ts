@@ -23,7 +23,7 @@ export const crops: Crop[] = [
       'Southern Rust (Puccinia polysora)',
       'Corn Rootworm (Diabrotica)',
     ],
-    uvlNormLHa: '2–5 gpa',
+    uvlNormLHa: '2 to 5 gpa',
     yieldGainPct: 8,
     authorityLinks: [
       { label: 'Iowa State Extension: Corn Disease Management', url: 'https://crops.extension.iastate.edu/corn' },
@@ -87,7 +87,7 @@ export const crops: Crop[] = [
       'Brown Stem Rot',
       'Sudden Death Syndrome',
     ],
-    uvlNormLHa: '2–5 gpa',
+    uvlNormLHa: '2 to 5 gpa',
     yieldGainPct: 6,
     authorityLinks: [
       { label: 'Purdue Extension: Soybean Disease Management', url: 'https://extension.entm.purdue.edu/fieldcropsipm/soybeans.html' },
@@ -151,7 +151,7 @@ export const crops: Crop[] = [
       'Wheat Streak Mosaic Virus',
       'Hessian Fly',
     ],
-    uvlNormLHa: '2–5 gpa',
+    uvlNormLHa: '2 to 5 gpa',
     yieldGainPct: 5,
     authorityLinks: [
       { label: 'USDA ARS Wheat Scab Initiative (scabusa.org)', url: 'https://www.scabusa.org' },
@@ -215,7 +215,7 @@ export const crops: Crop[] = [
       'Whitefly (Bemisia tabaci)',
       'Boll Weevil',
     ],
-    uvlNormLHa: '2–5 gpa',
+    uvlNormLHa: '2 to 5 gpa',
     yieldGainPct: 5,
     authorityLinks: [
       { label: 'Mississippi State Extension: Cotton Pest Management', url: 'https://extension.msstate.edu/agriculture/crops/cotton' },
@@ -279,7 +279,7 @@ export const crops: Crop[] = [
       'Barnyardgrass (Echinochloa crus-galli)',
       'Rice Stink Bug',
     ],
-    uvlNormLHa: '2–5 gpa',
+    uvlNormLHa: '2 to 5 gpa',
     yieldGainPct: 7,
     authorityLinks: [
       { label: 'University of Arkansas Extension: Rice Production', url: 'https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice' },
@@ -343,7 +343,7 @@ export const crops: Crop[] = [
       'Grape Berry Moth (Paralobesia viteana)',
       'Leafhoppers',
     ],
-    uvlNormLHa: '10–20 gpa',
+    uvlNormLHa: '10 to 20 gpa',
     yieldGainPct: 0,
     authorityLinks: [
       { label: 'UC Davis Cooperative Extension: Vineyard Pest Management', url: 'https://ipm.ucanr.edu/agriculture/grape' },
@@ -407,7 +407,7 @@ export const crops: Crop[] = [
       'Brown Rot (Monilinia fructicola)',
       'Peach Leaf Curl',
     ],
-    uvlNormLHa: '8–15 gpa',
+    uvlNormLHa: '8 to 15 gpa',
     yieldGainPct: 0,
     authorityLinks: [
       { label: 'Washington State University Extension: Tree Fruit Pest Management', url: 'https://treefruit.wsu.edu' },
@@ -469,7 +469,7 @@ export const crops: Crop[] = [
       'Slug damage on cereal rye',
       'Delayed germination in dry conditions',
     ],
-    uvlNormLHa: '36–80 lbs/acre',
+    uvlNormLHa: '36 to 80 lbs/acre',
     yieldGainPct: 0,
     authorityLinks: [
       { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340' },

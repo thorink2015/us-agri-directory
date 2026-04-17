@@ -6,6 +6,7 @@ import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 const LAST_REVIEWED = '2026-04-17';
 
 const FAQS = [
@@ -247,22 +248,22 @@ export default function StartADroneBusinessPage() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href="https://extension.missouri.edu/publications/g1274" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://extension.missouri.edu/publications/g1274", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 University of Missouri Extension: Custom Rate and Break-even Analysis
               </a>
             </li>
             <li>
-              <a href="https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 Iowa State Extension: 2026 Custom Rate Survey
               </a>
             </li>
             <li>
-              <a href="https://www.faa.gov/uas/advanced_operations/agricultural" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.faa.gov/uas/advanced_operations/agricultural", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 FAA: Agricultural Operations (Part 137)
               </a>
             </li>
             <li>
-              <a href="https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 NRCS: Environmental Quality Incentives Program (EQIP)
               </a>
             </li>

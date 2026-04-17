@@ -35,7 +35,7 @@ export default function RegionsIndexPage() {
 
       <h1 className="text-3xl font-bold text-gray-900 mb-3">US Agricultural Drone Regions</h1>
       <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-        American agriculture is built around distinct farming regions — each with its own crop mix, spray timing,
+        American agriculture is built around distinct farming regions, each with its own crop mix, spray timing,
         and drone demand drivers. Pick a region below to see operator options, dominant crops, and regional
         application windows.
       </p>

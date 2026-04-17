@@ -254,7 +254,7 @@ export default function OperatorPage({ params }: Props) {
               </section>
             )}
 
-            {/* Coverage — US states */}
+            {/* Coverage, US states */}
             {coveredStates.length > 0 && (
               <section className="bg-white border border-gray-200 rounded-xl p-6">
                 <h2 className="font-bold text-gray-900 mb-4 text-lg">

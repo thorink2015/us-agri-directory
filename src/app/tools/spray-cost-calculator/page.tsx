@@ -119,10 +119,10 @@ export default function SprayCostPage() {
         <section className="mt-10 space-y-4">
           <h2 className="text-xl font-bold text-gray-900">How we calculated this</h2>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Rates are based on the 2026 Iowa State Custom Rate Survey ($12.50/acre average, $8 to $16 range) with crop-specific adjustments from University of Missouri Extension G1274, Indiana Prairie Farmer operator data, and regional pricing analysis. The Corn Belt (IA, IL, IN, OH, MO, MI, WI, MN) is the baseline market — the most competitive with the highest operator density. Regional multipliers (0.95× for Great Plains, 1.4× for California) reflect differences in operator supply, terrain complexity, field size, and regulatory overhead.
+            Rates are based on the 2026 Iowa State Custom Rate Survey ($12.50/acre average, $8 to $16 range) with crop-specific adjustments from University of Missouri Extension G1274, Indiana Prairie Farmer operator data, and regional pricing analysis. The Corn Belt (IA, IL, IN, OH, MO, MI, WI, MN) is the baseline market, the most competitive with the highest operator density. Regional multipliers (0.95× for Great Plains, 1.4× for California) reflect differences in operator supply, terrain complexity, field size, and regulatory overhead.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Vineyard and orchard rates reflect UC Davis and Washington State University extension data on specialty crop application requirements. The chemical cost estimates when &ldquo;Operator supplies&rdquo; is selected are midpoints from commodity pricing ranges by product category. Calculator provides estimates only — contact operators directly for actual quotes.
+            Vineyard and orchard rates reflect UC Davis and Washington State University extension data on specialty crop application requirements. The chemical cost estimates when &ldquo;Operator supplies&rdquo; is selected are midpoints from commodity pricing ranges by product category. Calculator provides estimates only, contact operators directly for actual quotes.
           </p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/pricing" className="text-green-700 text-sm font-medium hover:underline">

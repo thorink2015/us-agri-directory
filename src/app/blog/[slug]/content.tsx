@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
 
+import { addUtm } from '@/lib/utm';
 export const blogContent: Record<string, ReactNode> = {
   'first-1000-acres-drone-operator': (
     <>
@@ -96,7 +97,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href="https://extension.missouri.edu/publications/g1274"
+            href={addUtm("https://extension.missouri.edu/publications/g1274", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -105,7 +106,7 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href="https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf"
+            href={addUtm("https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -184,7 +185,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href="https://ipm.ucanr.edu/agriculture/grape/"
+            href={addUtm("https://ipm.ucanr.edu/agriculture/grape/", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -192,7 +193,7 @@ export const blogContent: Record<string, ReactNode> = {
           </a>
         </li>
         <li>
-          <a href="https://www.cdpr.ca.gov" target="_blank" rel="noopener noreferrer">
+          <a href={addUtm("https://www.cdpr.ca.gov", "authority_link")} target="_blank" rel="noopener noreferrer">
             California Department of Pesticide Regulation
           </a>
         </li>
@@ -267,7 +268,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href="https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice/"
+            href={addUtm("https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice/", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -276,7 +277,7 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href="https://www.lsuagcenter.com/topics/crops/rice"
+            href={addUtm("https://www.lsuagcenter.com/topics/crops/rice", "operator_profile")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -354,12 +355,12 @@ export const blogContent: Record<string, ReactNode> = {
       <h2>Authority sources</h2>
       <ul>
         <li>
-          <a href="https://www.diu.mil/blue-uas" target="_blank" rel="noopener noreferrer">
+          <a href={addUtm("https://www.diu.mil/blue-uas", "authority_link")} target="_blank" rel="noopener noreferrer">
             Defense Innovation Unit &mdash; Blue UAS Cleared List
           </a>
         </li>
         <li>
-          <a href="https://www.congress.gov" target="_blank" rel="noopener noreferrer">
+          <a href={addUtm("https://www.congress.gov", "authority_link")} target="_blank" rel="noopener noreferrer">
             Congress.gov &mdash; Countering CCP Drones Act status
           </a>
         </li>
@@ -438,7 +439,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href="https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf"
+            href={addUtm("https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -447,7 +448,7 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href="https://extension.missouri.edu/publications/g1274"
+            href={addUtm("https://extension.missouri.edu/publications/g1274", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -525,7 +526,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href="https://www.epa.gov/pesticide-worker-safety"
+            href={addUtm("https://www.epa.gov/pesticide-worker-safety", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -533,7 +534,7 @@ export const blogContent: Record<string, ReactNode> = {
           </a>
         </li>
         <li>
-          <a href="https://npsec.us" target="_blank" rel="noopener noreferrer">
+          <a href={addUtm("https://npsec.us", "operator_profile")} target="_blank" rel="noopener noreferrer">
             National Pesticide Safety Education Center
           </a>
         </li>
@@ -617,7 +618,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href="https://ag.dji.com/t50/specs"
+            href={addUtm("https://ag.dji.com/t50/specs", "drone_specs")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -625,7 +626,7 @@ export const blogContent: Record<string, ReactNode> = {
           </a>
         </li>
         <li>
-          <a href="https://hyl.io" target="_blank" rel="noopener noreferrer">
+          <a href={addUtm("https://hyl.io", "drone_specs")} target="_blank" rel="noopener noreferrer">
             Hylio official site
           </a>
         </li>
@@ -710,7 +711,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href="https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340"
+            href={addUtm("https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -719,7 +720,7 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href="https://mccc.msu.edu/covercroptool"
+            href={addUtm("https://mccc.msu.edu/covercroptool", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -825,7 +826,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href="https://www.faa.gov/uas/advanced_operations/agricultural"
+            href={addUtm("https://www.faa.gov/uas/advanced_operations/agricultural", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -834,7 +835,7 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href="https://www.faa.gov/newsroom/ag-operations"
+            href={addUtm("https://www.faa.gov/newsroom/ag-operations", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -920,7 +921,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href="https://www.beckshybrids.com/Resources/Practical-Farm-Research"
+            href={addUtm("https://www.beckshybrids.com/Resources/Practical-Farm-Research", "operator_profile")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -929,11 +930,11 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href="https://crops.extension.iastate.edu/corn"
+            href={addUtm("https://crops.extension.iastate.edu/corn", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
-            Iowa State Extension — Corn disease management
+            Iowa State Extension, Corn disease management
           </a>
         </li>
       </ul>

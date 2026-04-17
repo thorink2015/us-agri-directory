@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Plane, ChevronDown, Send } from 'lucide-react';
 import { counties } from '@/data/counties';
-import { AUTHOR, SITE } from '@/data/author';
+import { SITE } from '@/data/author';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
 
@@ -74,7 +74,6 @@ export default function Footer() {
               <li><Link href="/crops" className="hover:text-white transition-colors">Browse by Crop</Link></li>
               <li><Link href="/drones" className="hover:text-white transition-colors">Drone Models</Link></li>
               <li><Link href="/list-your-business" className="hover:text-white transition-colors">List Your Business</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
             </ul>
           </div>
 
@@ -95,7 +94,7 @@ export default function Footer() {
           <div className="max-w-lg">
             <h3 className="font-semibold text-white mb-1">Stay updated</h3>
             <p className="text-sm text-green-300 mb-3">
-              New operators, pricing updates, and FAA regulatory changes — delivered to your inbox.
+              New operators, pricing updates, and FAA regulatory changes, delivered to your inbox.
             </p>
             {subscribed ? (
               <p className="text-sm text-yellow-400 font-medium">You&apos;re subscribed. Thank you!</p>
@@ -168,11 +167,7 @@ export default function Footer() {
         {/* Canonical Eugen credit (E-E-A-T footer signal) */}
         <div className="border-t border-green-800 mt-4 pt-5 text-sm text-green-200 text-center">
           <p className="mb-2">
-            © 2026 {SITE.name}. Edited by{' '}
-            <Link href="/about" className="text-white hover:text-yellow-300 transition-colors font-medium">
-              {AUTHOR.fullName}
-            </Link>
-            . Every page personally researched and updated.
+            © 2026 {SITE.name}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-green-300">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>

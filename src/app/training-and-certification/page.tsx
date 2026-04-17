@@ -6,6 +6,7 @@ import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 const LAST_REVIEWED = '2026-04-17';
 
 const FAQS = [
@@ -148,10 +149,10 @@ export default function TrainingAndCertificationPage() {
           <ul className="list-disc pl-5 space-y-1">
             {PROVIDERS.map((p) => (
               <li key={p.name}>
-                <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline font-medium">
+                <a href={addUtm(p.url, "service_provider")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline font-medium">
                   {p.name}
                 </a>
-                <span className="text-gray-700"> — {p.note}</span>
+                <span className="text-gray-700">, {p.note}</span>
               </li>
             ))}
           </ul>
@@ -176,17 +177,17 @@ export default function TrainingAndCertificationPage() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href="https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 FAA: Become a Drone Pilot
               </a>
             </li>
             <li>
-              <a href="https://npsec.us" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://npsec.us", "service_provider")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 National Pesticide Safety Education Center (NPSEC)
               </a>
             </li>
             <li>
-              <a href="https://www.dronepilotgroundschool.com" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.dronepilotgroundschool.com", "service_provider")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 Drone Pilot Ground School (Part 107 prep)
               </a>
             </li>

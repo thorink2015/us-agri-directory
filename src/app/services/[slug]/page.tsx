@@ -13,6 +13,7 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 
+import { addUtm } from '@/lib/utm';
 // Fallback last-reviewed date for service pages. Bump when content reviewed.
 const SERVICE_LAST_REVIEWED = '2026-04-01';
 
@@ -136,7 +137,7 @@ export default function ServicePage({ params }: Props) {
             <span className="text-sm text-gray-700">
               Typical rate:{' '}
               <span className="font-semibold text-green-700">{formatPrice(service.priceMinUsd, service.priceMaxUsd)}</span>
-              {' '}<span className="text-gray-400">({service.priceUnit})</span>
+              {' '}<span className="text-gray-600">({service.priceUnit})</span>
             </span>
           </div>
         )}
@@ -150,7 +151,7 @@ export default function ServicePage({ params }: Props) {
             {service.authorityLinks.map((link) => (
               <a
                 key={link.url}
-                href={link.url}
+                href={addUtm(link.url, "authority_link")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-green-700 hover:underline"
@@ -247,7 +248,7 @@ export default function ServicePage({ params }: Props) {
         </div>
       </div>
 
-      {/* Author card — E-E-A-T footer */}
+      {/* Author card, E-E-A-T footer */}
       <AuthorCard />
     </div>
   );

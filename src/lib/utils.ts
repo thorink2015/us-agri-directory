@@ -8,11 +8,11 @@ export function cn(...inputs: ClassValue[]) {
 export function formatPrice(min?: number, max?: number, currency = 'USD'): string {
   if (!min && !max) return 'Price on request';
   if (currency === 'USD') {
-    if (min && max) return `$${min}–$${max}/acre`;
+    if (min && max) return `$${min} to $${max}/acre`;
     if (min) return `from $${min}/acre`;
     return `up to $${max}/acre`;
   }
-  if (min && max) return `${min}–${max} ${currency}/acre`;
+  if (min && max) return `${min} to ${max} ${currency}/acre`;
   if (min) return `from ${min} ${currency}/acre`;
   return `up to ${max} ${currency}/acre`;
 }

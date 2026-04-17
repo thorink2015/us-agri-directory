@@ -6,6 +6,7 @@ import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 const LAST_REVIEWED = '2026-04-17';
 
 const FAQS = [
@@ -109,7 +110,7 @@ export default function FaaPart107Page() {
 
           <h2 className="text-xl font-bold text-gray-900">How to get Part 107</h2>
           <p>
-            The path is a single knowledge exam: 60 multiple-choice questions, 70 percent passing, 2-hour time limit, $175 at PSI testing centers. There is no flight test. Typical study time is 2 to 4 weeks using the free <a href="https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA Remote Pilot study guide</a> and sample test questions. Paid courses from Drone Pilot Ground School, Pilot Institute, and King Schools run $150 to $300 and typically include a pass guarantee. After passing, create an IACRA account, submit Form 8710-13, and receive a temporary certificate within 10 business days. The permanent card arrives by mail in 4 to 6 weeks.
+            The path is a single knowledge exam: 60 multiple-choice questions, 70 percent passing, 2-hour time limit, $175 at PSI testing centers. There is no flight test. Typical study time is 2 to 4 weeks using the free <a href={addUtm("https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA Remote Pilot study guide</a> and sample test questions. Paid courses from Drone Pilot Ground School, Pilot Institute, and King Schools run $150 to $300 and typically include a pass guarantee. After passing, create an IACRA account, submit Form 8710-13, and receive a temporary certificate within 10 business days. The permanent card arrives by mail in 4 to 6 weeks.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">What Part 107 does NOT authorize</h2>
@@ -124,7 +125,7 @@ export default function FaaPart107Page() {
 
           <h2 className="text-xl font-bold text-gray-900">Part 107 waivers for ag drone operators</h2>
           <p>
-            The most common waivers requested by ag drone operators are: night operations (no longer required since April 2021 rule change if anti-collision lighting is installed), BVLOS for large field spraying (still requires case-by-case waiver), operations over people (Category 1-4 drones may qualify without a waiver), and altitude above 400 ft AGL (rare for ag work, occasionally requested for mountain orchards). Waivers are submitted through the <a href="https://www.faa.gov/uas/commercial_operators/part_107_waivers" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA DroneZone portal</a> and typically take 60 to 90 days for review.
+            The most common waivers requested by ag drone operators are: night operations (no longer required since April 2021 rule change if anti-collision lighting is installed), BVLOS for large field spraying (still requires case-by-case waiver), operations over people (Category 1-4 drones may qualify without a waiver), and altitude above 400 ft AGL (rare for ag work, occasionally requested for mountain orchards). Waivers are submitted through the <a href={addUtm("https://www.faa.gov/uas/commercial_operators/part_107_waivers", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA DroneZone portal</a> and typically take 60 to 90 days for review.
           </p>
         </section>
 
@@ -133,17 +134,17 @@ export default function FaaPart107Page() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href="https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 FAA: Become a Drone Pilot
               </a>
             </li>
             <li>
-              <a href="https://www.faa.gov/uas/commercial_operators/part_107" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.faa.gov/uas/commercial_operators/part_107", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 FAA: Part 107 Overview
               </a>
             </li>
             <li>
-              <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.ecfr.gov/current/title-14/chapter-I/subchapter-F/part-107", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 14 CFR Part 107 (full regulation text)
               </a>
             </li>

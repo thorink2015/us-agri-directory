@@ -11,6 +11,7 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 
+import { addUtm } from '@/lib/utm';
 interface Props {
   params: { slug: string };
 }
@@ -162,7 +163,7 @@ export default function DronePage({ params }: Props) {
               {drone.authorityLinks.map((link) => (
                 <a
                   key={link.url}
-                  href={link.url}
+                  href={addUtm(link.url, "drone_specs")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm text-green-700 hover:underline"

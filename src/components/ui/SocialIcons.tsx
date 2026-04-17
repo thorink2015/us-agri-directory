@@ -3,7 +3,7 @@
  * Using inline SVGs avoids dependency on lucide-react version that
  * doesn't include brand icons (1.8.0).
  *
- * All paths are generic social glyphs — accessible, monochrome, and fast.
+ * All paths are generic social glyphs, accessible, monochrome, and fast.
  */
 
 interface IconProps {

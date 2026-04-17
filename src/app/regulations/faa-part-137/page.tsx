@@ -6,6 +6,7 @@ import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { AUTHOR, SITE } from '@/data/author';
 
+import { addUtm } from '@/lib/utm';
 const LAST_REVIEWED = '2026-04-17';
 
 const FAQS = [
@@ -138,17 +139,17 @@ export default function FaaPart137Page() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href="https://www.faa.gov/uas/advanced_operations/agricultural" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.faa.gov/uas/advanced_operations/agricultural", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 FAA: Agricultural Operations
               </a>
             </li>
             <li>
-              <a href="https://www.faa.gov/newsroom/ag-operations" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.faa.gov/newsroom/ag-operations", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 FAA Newsroom: Ag Operations updates
               </a>
             </li>
             <li>
-              <a href="https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-137" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.ecfr.gov/current/title-14/chapter-I/subchapter-G/part-137", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 14 CFR Part 137 (full regulation text)
               </a>
             </li>

@@ -161,7 +161,7 @@ export default function PriceCalculator() {
               aria-label="Acres (direct entry)"
             />
           </div>
-          <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+          <div className="flex justify-between text-xs text-gray-600 mt-0.5">
             <span>10</span><span>10,000 acres</span>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default function PriceCalculator() {
             onChange={(e) => setPasses(Number(e.target.value))}
             className="w-full accent-green-700"
           />
-          <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+          <div className="flex justify-between text-xs text-gray-600 mt-0.5">
             <span>1</span><span>15</span>
           </div>
         </div>
@@ -211,7 +211,7 @@ export default function PriceCalculator() {
       <div className="bg-gradient-to-br from-green-50 to-white border border-green-200 rounded-xl p-5 mb-3">
         <div className="text-sm text-gray-600 mb-1">Estimated per-acre rate ({state.name})</div>
         <div className="text-3xl font-bold text-green-700 mb-1">
-          ${results.low.toFixed(2)} – ${results.high.toFixed(2)}
+          ${results.low.toFixed(2)} to ${results.high.toFixed(2)}
         </div>
         {operatorChemical && (
           <div className="text-xs text-gray-500 mb-2">
@@ -221,7 +221,7 @@ export default function PriceCalculator() {
         <div className="border-t border-green-200 pt-3 mt-2">
           <div className="text-sm text-gray-600">Total for {acres.toLocaleString()} acres × {passes} pass{passes > 1 ? 'es' : ''}</div>
           <div className="text-2xl font-bold text-gray-900 mt-0.5">
-            {fmt(results.totalLow)} – {fmt(results.totalHigh)}
+            {fmt(results.totalLow)}, {fmt(results.totalHigh)}
           </div>
         </div>
       </div>

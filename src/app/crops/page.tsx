@@ -34,7 +34,7 @@ export default function CropsPage() {
               </h2>
               <p className="text-sm text-gray-600 line-clamp-2">{crop.description}</p>
               <div className="mt-2 flex items-center gap-3 text-xs text-gray-500">
-                <span className="font-medium text-green-700">${crop.priceMinUsd}–${crop.priceMaxUsd}/acre</span>
+                <span className="font-medium text-green-700">${crop.priceMinUsd} to ${crop.priceMaxUsd}/acre</span>
                 {crop.haUS && (
                   <span>{(crop.haUS / 1000000).toFixed(0)}M+ acres in the US</span>
                 )}

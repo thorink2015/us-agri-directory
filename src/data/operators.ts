@@ -183,7 +183,7 @@ export const operators: Operator[] = [
     shortName: 'Crop Hawk',
     tagline: 'Indiana & Ohio corn-soybean specialist',
     description:
-      'Crop Hawk Drone Services covers Indiana, Ohio, and Michigan with a 3-drone fleet. Our core business is fungicide application on corn at VT/R1 and soybean applications at R2–R3. We also offer cover crop seeding programs starting in August. Operated by a fourth-generation farm family that understands your operation from the ground up.',
+      'Crop Hawk Drone Services covers Indiana, Ohio, and Michigan with a 3-drone fleet. Our core business is fungicide application on corn at VT/R1 and soybean applications at R2 to R3. We also offer cover crop seeding programs starting in August. Operated by a fourth-generation farm family that understands your operation from the ground up.',
     country: 'US',
     counties: ['indiana', 'ohio', 'michigan', 'illinois', 'kentucky'],
     city: 'Lafayette',
@@ -215,7 +215,7 @@ export const operators: Operator[] = [
     shortName: 'Southern Skies',
     tagline: 'Georgia & Southeast cotton defoliation expert',
     description:
-      'Southern Skies Ag Drone specializes in cotton defoliation, peanut desiccation, and corn fungicide across Georgia, Alabama, Florida, and South Carolina. Our 5-drone fleet handles soft Delta soils and sensitive neighboring crops where airplane applicators decline to fly. Defoliant season (Sept–Oct) books fast — reserve your window in July.',
+      'Southern Skies Ag Drone specializes in cotton defoliation, peanut desiccation, and corn fungicide across Georgia, Alabama, Florida, and South Carolina. Our 5-drone fleet handles soft Delta soils and sensitive neighboring crops where airplane applicators decline to fly. Defoliant season (Sept to Oct) books fast, reserve your window in July.',
     country: 'US',
     counties: ['georgia', 'alabama', 'florida', 'south-carolina', 'north-carolina', 'tennessee'],
     city: 'Valdosta',
@@ -280,7 +280,7 @@ export const operators: Operator[] = [
     shortName: 'Heartland',
     tagline: 'Illinois soybean & corn · 100 acres/day',
     description:
-      'Heartland Drone Co. is an Illinois-based drone applicator serving corn and soybean producers across the upper Midwest. Single-operator, 2-drone setup capable of 100+ acres per day. We keep our overhead low and pass the savings to you — flat rate $14/acre for any field over 40 acres, no trip fee within 60 miles of Peoria.',
+      'Heartland Drone Co. is an Illinois-based drone applicator serving corn and soybean producers across the upper Midwest. Single-operator, 2-drone setup capable of 100+ acres per day. We keep our overhead low and pass the savings to you, flat rate $14/acre for any field over 40 acres, no trip fee within 60 miles of Peoria.',
     country: 'US',
     counties: ['illinois', 'iowa', 'wisconsin', 'minnesota', 'missouri'],
     city: 'Peoria',
@@ -311,7 +311,7 @@ export const operators: Operator[] = [
     slug: 'osprey-agri-drone-national',
     name: 'Osprey Agri Drones',
     shortName: 'Osprey Agri Drones',
-    tagline: 'National ag drone operator network – SE & mid-Atlantic focus',
+    tagline: 'National ag drone operator network, SE & mid-Atlantic focus',
     description:
       'Osprey Agri Drones is a national agricultural drone operator network with strong coverage across the Southeast and mid-Atlantic. The company coordinates multi-state fleet deployment for corn, soybean, cotton, peanut, and rice applications, offering operators in Virginia, North Carolina, South Carolina, Georgia, Tennessee, Kentucky, and beyond.',
     country: 'US',
@@ -348,7 +348,7 @@ export const operators: Operator[] = [
     slug: 'talos-drones-ag',
     name: 'Talos Drones',
     shortName: 'Talos Drones',
-    tagline: 'High-capacity ag drone application – Southeast & Gulf Coast',
+    tagline: 'High-capacity ag drone application, Southeast & Gulf Coast',
     description:
       'Talos Drones operates high-capacity agricultural drone platforms across the Southeast and Gulf Coast, specializing in large-acreage rice, cotton, and soybean applications. The company uses heavy-lift spray drones for efficient coverage of Delta and coastal plain farmland, with crews available across Louisiana, Mississippi, Arkansas, and the surrounding region.',
     country: 'US',
@@ -366,7 +366,7 @@ export const operators: Operator[] = [
     slug: 'volitant-technologies',
     name: 'Volitant Technologies',
     shortName: 'Volitant',
-    tagline: 'Drone ag technology & application services – Southeast US',
+    tagline: 'Drone ag technology & application services, Southeast US',
     description:
       'Volitant Technologies provides agricultural drone application services and precision technology solutions to row-crop and specialty crop producers across the Southeast. The company combines drone spraying with data analytics and remote sensing to deliver prescription-based applications for fungicide, herbicide, and fertilizer programs.',
     country: 'US',
@@ -459,7 +459,7 @@ export const operators: Operator[] = [
   },
   {
     slug: 'osprey-va',
-    name: 'Osprey Agri Drones – Virginia Division',
+    name: 'Osprey Agri Drones, Virginia Division',
     shortName: 'Osprey VA',
     tagline: 'Osprey network coverage for Virginia & mid-Atlantic producers',
     description:
@@ -496,9 +496,9 @@ export const operators: Operator[] = [
   },
   {
     slug: 'virginia-tech-drone-ag',
-    name: 'Virginia Tech School of Plant and Environmental Sciences – Drone Program',
+    name: 'Virginia Tech School of Plant and Environmental Sciences, Drone Program',
     shortName: 'Virginia Tech Drone Ag',
-    tagline: 'Land-grant UAS precision ag research & Extension – Blacksburg VA',
+    tagline: 'Land-grant UAS precision ag research & Extension, Blacksburg VA',
     description:
       'Virginia Tech\'s School of Plant and Environmental Sciences operates a drone precision agriculture program conducting applied research on UAV-based spraying, remote sensing, and variable-rate application. The program delivers producer workshops, Extension field days, and FAA Part 107 training across Virginia in partnership with county Extension offices.',
     country: 'US',
@@ -553,7 +553,7 @@ export const operators: Operator[] = [
     slug: 'elevation-aerial-application-va',
     name: 'Elevation Aerial Application',
     shortName: 'Elevation Aerial',
-    tagline: 'Virginia drone ag application – grain, orchards & vineyards',
+    tagline: 'Virginia drone ag application, grain, orchards & vineyards',
     description:
       'Elevation Aerial Application provides drone spraying services to grain, orchard, and vineyard producers across Virginia. The company is equipped for steep-terrain orchard and vineyard applications in the Blue Ridge foothills and Appalachian highlands, as well as flat-ground corn and soybean fungicide programs in the Piedmont and Tidewater regions.',
     country: 'US',
@@ -573,7 +573,7 @@ export const operators: Operator[] = [
     slug: 'tsu-drones-program',
     name: 'Tennessee State University DRONEs Program',
     shortName: 'TSU DRONEs',
-    tagline: 'HBCU drone ag research & outreach – Nashville TN',
+    tagline: 'HBCU drone ag research & outreach, Nashville TN',
     description:
       'Tennessee State University\'s DRONEs (Drone Research, Outreach, Navigation, and Education) Program is an HBCU-based initiative delivering drone agriculture research, pilot training, and Extension outreach to Tennessee farmers, with emphasis on serving historically underserved and limited-resource producers. The program offers FAA Part 107 prep courses, precision ag workshops, and applied field research.',
     country: 'US',
@@ -644,11 +644,11 @@ export const operators: Operator[] = [
   },
   {
     slug: 'knox-farmers-coop-drone',
-    name: 'Knox County Farmers Cooperative – Drone Services',
+    name: 'Knox County Farmers Cooperative, Drone Services',
     shortName: 'Knox Farmers Coop',
     tagline: 'East Tennessee cooperative drone application program',
     description:
-      'Knox County Farmers Cooperative offers drone spraying services to cooperative members across east Tennessee, covering corn, soybean, and tobacco fungicide and herbicide applications. The coop leverages its existing agronomic and input relationships to provide bundled drone application scheduling, scouting, and product supply to member farms.',
+      'Knox County Farmers Cooperative offers drone spraying services to cooperative members across east Tennessee, covering corn, soybean, and tobacco fungicide and herbicide applications. The coop uses its existing agronomic and input relationships to bundle drone application scheduling, scouting, and product supply for member farms.',
     country: 'US',
     counties: ['tennessee', 'virginia', 'north-carolina'],
     city: 'Knoxville',
@@ -775,7 +775,7 @@ export const operators: Operator[] = [
     slug: 'nc-state-extension-drone',
     name: 'NC State Extension Precision Agriculture',
     shortName: 'NC State Ag Drones',
-    tagline: 'Land-grant drone research & farmer education – Raleigh NC',
+    tagline: 'Land-grant drone research & farmer education, Raleigh NC',
     description:
       'NC State University Extension Precision Agriculture program delivers drone education, demonstration, and research services to North Carolina farmers. County agents and specialists conduct field days, FAA Part 107 workshops, and applied research on drone-based fungicide and herbicide efficacy for tobacco, cotton, corn, and soybeans.',
     country: 'US',
@@ -795,7 +795,7 @@ export const operators: Operator[] = [
     slug: 'msu-agricultural-autonomy',
     name: 'Mississippi State University Agricultural Autonomy Lab',
     shortName: 'MSU Ag Autonomy',
-    tagline: 'Land-grant drone research & Extension training – Starkville MS',
+    tagline: 'Land-grant drone research & Extension training, Starkville MS',
     description:
       'The MSU Agricultural Autonomy Lab conducts applied research on unmanned aerial systems for precision agriculture, including drone-based spraying efficacy, remote sensing, and crop scouting. The lab partners with MSU Extension to deliver producer workshops across Mississippi on FAA regulations, drone integration, and agronomic applications.',
     country: 'US',
@@ -830,7 +830,7 @@ export const operators: Operator[] = [
   // ── SOUTHEAST BATCH 16: Mississippi part 1 ──────────────────────────────
   {
     slug: 'agri-spray-drones-leland',
-    name: 'Agri Spray Drones – Leland MS',
+    name: 'Agri Spray Drones, Leland MS',
     shortName: 'Agri Spray Leland',
     tagline: 'Mississippi Delta rice & soybean drone spraying',
     description:
@@ -942,7 +942,7 @@ export const operators: Operator[] = [
     slug: 'lsu-agcenter-drone',
     name: 'LSU AgCenter Precision Agriculture',
     shortName: 'LSU AgCenter',
-    tagline: 'LSU Extension drone research & producer education – Baton Rouge',
+    tagline: 'LSU Extension drone research & producer education, Baton Rouge',
     description:
       'The LSU AgCenter Precision Agriculture program conducts applied drone research and farmer training across Louisiana. Extension agents and researchers evaluate drone-applied fungicides on rice and soybeans, run UAV mapping demonstrations, and provide county-level workshops to help producers integrate drone technology into their operations.',
     country: 'US',
@@ -960,7 +960,7 @@ export const operators: Operator[] = [
     slug: 'lsua-drone-training',
     name: 'LSUA Drone Training Center',
     shortName: 'LSUA Drones',
-    tagline: 'FAA Part 107 & ag drone pilot training – Alexandria LA',
+    tagline: 'FAA Part 107 & ag drone pilot training, Alexandria LA',
     description:
       'Louisiana State University of Alexandria operates a drone training center offering FAA Part 107 ground school and agricultural drone pilot certification courses. Programs are tailored for producers, agronomists, and aspiring commercial operators across central Louisiana, covering sUAS regulations, precision ag applications, and hands-on flight training.',
     country: 'US',
@@ -980,7 +980,7 @@ export const operators: Operator[] = [
     slug: 'uk-martin-gatton-drone',
     name: 'University of Kentucky Martin-Gatton College of Agriculture',
     shortName: 'UK Ag Drone Program',
-    tagline: 'Land-grant drone research, training & extension – Lexington KY',
+    tagline: 'Land-grant drone research, training & extension, Lexington KY',
     description:
       'The Martin-Gatton College of Agriculture, Food and Environment at the University of Kentucky operates a drone research and extension program focused on precision agriculture for Kentucky grain, tobacco, and forage producers. The program conducts field trials, trains producers in drone scouting and application, and partners with county Extension offices statewide.',
     country: 'US',
@@ -998,7 +998,7 @@ export const operators: Operator[] = [
     slug: 'western-ky-aerial-spraying',
     name: 'Western Kentucky Aerial Spraying',
     shortName: 'WKY Aerial',
-    tagline: 'Corn, soybean & wheat fungicide – Bowling Green area',
+    tagline: 'Corn, soybean & wheat fungicide, Bowling Green area',
     description:
       'Western Kentucky Aerial Spraying provides drone fungicide and herbicide services to row-crop producers across the Pennyroyal and south-central Kentucky. The operator specializes in corn and soybean VT/R3 applications and wheat T3 fungicide timing, offering rapid scheduling and competitive per-acre pricing.',
     country: 'US',
@@ -1049,7 +1049,7 @@ export const operators: Operator[] = [
   },
   {
     slug: 'osprey-ky',
-    name: 'Osprey Agri Drones – Kentucky Division',
+    name: 'Osprey Agri Drones, Kentucky Division',
     shortName: 'Osprey KY',
     tagline: 'Osprey network coverage for Kentucky producers',
     description:
@@ -1128,7 +1128,7 @@ export const operators: Operator[] = [
     shortName: 'UGA Tifton',
     tagline: 'Tifton GA · Drone Dock autonomous refueling research + extension education',
     description:
-      'University of Georgia Tifton campus research lab developing the Drone Dock — an autonomous refueling and reloading station for large ag drones. Led by Extension Precision Ag Specialist Simer Virk, who frequently presents at field days. Key research hub for peanuts, pecans, peaches, blueberries, and row crops in Georgia.',
+      'University of Georgia Tifton campus research lab developing the Drone Dock, an autonomous refueling and reloading station for large ag drones. Led by Extension Precision Ag Specialist Simer Virk, who frequently presents at field days. Key research hub for peanuts, pecans, peaches, blueberries, and row crops in Georgia.',
     country: 'US',
     counties: ['georgia'],
     city: 'Tifton',
@@ -1185,7 +1185,7 @@ export const operators: Operator[] = [
     shortName: 'Flint River Drone Works',
     tagline: 'Sylvester GA · drone services in major peanut & cotton region',
     description:
-      'Drone services company based in Sylvester, GA (Worth County) — a major peanut and cotton growing area in Southwest Georgia. Limited public information available. Listed on Facebook.',
+      'Drone services company based in Sylvester, GA (Worth County), a major peanut and cotton growing area in Southwest Georgia. Limited public information available. Listed on Facebook.',
     country: 'US',
     counties: ['georgia'],
     city: 'Sylvester',
@@ -1287,7 +1287,7 @@ export const operators: Operator[] = [
     shortName: 'FL Keys Mosquito',
     tagline: 'FL Keys government · drone larvicide in remote salt marshes since 2019',
     description:
-      'Monroe County / Florida Keys government agency using customized drones carrying 7–8 lbs of larvicide to treat small, hard-to-reach parcels in remote salt marshes. Founded drone program 2019 under Executive Director Andrea Leal. Too confined for helicopters but impractical to reach on foot across the Florida Keys.',
+      'Monroe County / Florida Keys government agency using customized drones carrying 7 to 8 lbs of larvicide to treat small, hard-to-reach parcels in remote salt marshes. Founded drone program 2019 under Executive Director Andrea Leal. Too confined for helicopters but impractical to reach on foot across the Florida Keys.',
     country: 'US',
     counties: ['florida'],
     city: 'Key West',
@@ -1377,7 +1377,7 @@ export const operators: Operator[] = [
   {
     slug: 'florida-drone-spray',
     name: 'Florida Drone Spray',
-    tagline: 'South FL · 200–700 acres/day per drone near Lake Okeechobee',
+    tagline: 'South FL · 200 to 700 acres/day per drone near Lake Okeechobee',
     description:
       'South Florida ag drone spraying operator near Lake Okeechobee founded 2024 by Alex Peterson. Operates EAVision J150 drones (20-gallon tank with LiDAR radar mapping) covering 200 to 700 acres per day per drone. Services: fertilizers, fungicides, herbicides, and insecticides for South Florida agricultural crops.',
     country: 'US',
@@ -1707,9 +1707,9 @@ export const operators: Operator[] = [
   {
     slug: 'coastal-agriculture-services',
     name: 'Coastal Agriculture Services',
-    tagline: 'AL · comprehensive drone application across row crops, forestry & aquatics',
+    tagline: 'AL · full-service drone application across row crops, forestry & aquatics',
     description:
-      'Alabama-based operator founded 2023 offering comprehensive drone aerial application across row crops, forestry, pastures, and invasive species. Covers AL, GA, MS, FL, TN, AR, and KY. Services include cotton, peanuts, corn, soybeans, hay, loblolly pine, orchards, vegetables, and aquatic weed management plus multispectral imaging.',
+      'Alabama-based operator founded 2023 offering full-service drone aerial application across row crops, forestry, pastures, and invasive species. Covers AL, GA, MS, FL, TN, AR, and KY. Services include cotton, peanuts, corn, soybeans, hay, loblolly pine, orchards, vegetables, and aquatic weed management plus multispectral imaging.',
     country: 'US',
     counties: ['alabama', 'georgia', 'mississippi', 'florida', 'tennessee', 'arkansas', 'kentucky'],
     city: 'Coastal Alabama',
@@ -2068,9 +2068,9 @@ export const operators: Operator[] = [
   {
     slug: 'dropcopter',
     name: 'Dropcopter',
-    tagline: "World's first drone pollination service · 25–50% yield increase",
+    tagline: "World's first drone pollination service · 25 to 50% yield increase",
     description:
-      "World's first commercial drone pollination service, founded 2017 in Syracuse, NY by Adam Fine and Matt Koball. Custom hexacopter fleet of 6 drones covers 40 acres/hour. Third-party studies show 25–50% yield increase. Won $500K Grow-NY prize and $250K GENIUS NY investment. First commercial apple pollination at Beak and Skiff orchard.",
+      "World's first commercial drone pollination service, founded 2017 in Syracuse, NY by Adam Fine and Matt Koball. Custom hexacopter fleet of 6 drones covers 40 acres/hour. Third-party studies show 25 to 50% yield increase. Won $500K Grow-NY prize and $250K GENIUS NY investment. First commercial apple pollination at Beak and Skiff orchard.",
     country: 'US',
     counties: ['new-york', 'california'],
     city: 'Syracuse',
@@ -2238,7 +2238,7 @@ export const operators: Operator[] = [
   },
   {
     slug: 'usar-drone-team',
-    name: 'U.S.A.R. Drone Team — Agra Spray Team',
+    name: 'U.S.A.R. Drone Team, Agra Spray Team',
     shortName: 'USAR Agra Spray',
     tagline: 'NJ veteran nonprofit · ag spraying + veteran drone career training',
     description:

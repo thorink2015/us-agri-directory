@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'US Agricultural Drone Spraying Regulations (2026)',
     description:
-      'FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance — the three-credential stack required for commercial ag drone spraying.',
+      'FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance, the three-credential stack required for commercial ag drone spraying.',
     url: `${SITE.domain}/regulations`,
   },
 };
