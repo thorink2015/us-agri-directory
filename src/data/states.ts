@@ -402,7 +402,7 @@ export const stateData: StateData[] = [
       'Even private applicators must hold a commercial license with Category C-1 to apply any pesticide by drone, including on their own property.',
       'Aerial insurance requirements: $100,000 property damage per occurrence, $100,000 bodily injury per person, $300,000 bodily injury per occurrence.',
       'Certain products prohibited for drone application: Enlist, Acuron (atrazine formulations), Xtend Max (dicamba formulations).',
-      'ODA publishes a comprehensive FAQ: "Ohio Requirements for Unmanned Aerial Vehicle Pesticide Applications."',
+      'ODA publishes a detailed FAQ: "Ohio Requirements for Unmanned Aerial Vehicle Pesticide Applications."',
     ],
     reciprocityStates: ['AL', 'FL', 'GA', 'IL', 'IN', 'LA', 'MI', 'MN'],
     renewalCycle: '3-year cycle.',
@@ -948,9 +948,9 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['north-dakota', 'minnesota', 'iowa', 'nebraska', 'wyoming', 'montana'],
     aeoBlock:
-      'South Dakota requires Category 17 (Aerial Application) with a $35 license fee for 2 years, one of the lowest cost structures in the region. SDSU Extension publishes a comprehensive drone guide (P-00354). Rates run $12 to $16 per acre across 5.6 million acres of corn and 5.1 million acres of soybeans.',
+      'South Dakota requires Category 17 (Aerial Application) with a $35 license fee for 2 years, one of the lowest cost structures in the region. SDSU Extension publishes a detailed drone guide (P-00354). Rates run $12 to $16 per acre across 5.6 million acres of corn and 5.1 million acres of soybeans.',
     licensingDetails:
-      'South Dakota pesticide licensing is administered by the Department of Agriculture and Natural Resources (DANR) under Category 17 (Aerial Application). Applicators need Core Category G (General) plus Category 17 plus at least one use category. License fees are $35 for 2 years, one of the lowest fee structures in the Great Plains.\n\nRemote ID compliance has been required since September 2023 for all commercial UAS operations. SDSU Extension publishes a comprehensive drone pesticide application guide (P-00354, updated September 2025). Recertification is required every 2 years via classes or online course. Reciprocity exists with MT, ND, MN, IA, NE, and WY.',
+      'South Dakota pesticide licensing is administered by the Department of Agriculture and Natural Resources (DANR) under Category 17 (Aerial Application). Applicators need Core Category G (General) plus Category 17 plus at least one use category. License fees are $35 for 2 years, one of the lowest fee structures in the Great Plains.\n\nRemote ID compliance has been required since September 2023 for all commercial UAS operations. SDSU Extension publishes a detailed drone pesticide application guide (P-00354, updated September 2025). Recertification is required every 2 years via classes or online course. Reciprocity exists with MT, ND, MN, IA, NE, and WY.',
     authorityLinks: [
       { label: 'SD DANR Pesticide Applicators', url: 'https://danr.sd.gov/Agriculture/Inspection/Pesticide/ApplicatorsDealers/default.aspx' },
       { label: 'SDSU Extension Drone Guide P-00354', url: 'https://extension.sdstate.edu/sites/default/files/2025-09/P-00354-v2.pdf' },
@@ -2126,7 +2126,7 @@ export const stateData: StateData[] = [
     examsRequired: 'Core ($50) + Category 25 ($10). Business license $35/yr. Annual renewal $40.',
     examFees: 'Core $50. Cat 25 $10. Business $35/yr. Renewal $40.',
     uniqueRules: [
-      'Penn State Extension publishes comprehensive drone licensing guide.',
+      'Penn State Extension publishes a detailed drone licensing guide.',
       'Category 25 is a clean aerial applicator category.',
       'Broad reciprocity with 25+ states.',
     ],
@@ -2150,7 +2150,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Pennsylvania uses Category 25 (Aerial Applicator) with reciprocity across 25+ states, one of the broadest networks in the US. Rates run $15 to $24 per acre across 1.3 million acres of corn, 600K acres of soybeans, and a growing cover crop seeding market driven by Chesapeake Bay watershed conservation incentives.',
     licensingDetails:
-      'Pennsylvania aerial pesticide licensing is administered by the Pennsylvania Department of Agriculture (PDA) under Category 25 (Aerial Applicator). The exam fees are among the lowest in the Northeast: Core at $50 and Category 25 at just $10. Business license is $35/yr with a $40 annual renewal. The 3-year certification cycle requires 6 Core and 10 Category 25 CE credits. Penn State Extension publishes a comprehensive drone licensing guide.\n\nPennsylvania maintains reciprocity with 25+ states including DE, FL, IN, IA, MD, NJ, NY, OH, VA, WV, and WI, one of the broadest reciprocity networks nationally. Chesapeake Bay watershed conservation programs provide strong cost-share incentives for cover crops in SE Pennsylvania, driving growing drone seeding demand.',
+      'Pennsylvania aerial pesticide licensing is administered by the Pennsylvania Department of Agriculture (PDA) under Category 25 (Aerial Applicator). The exam fees are among the lowest in the Northeast: Core at $50 and Category 25 at just $10. Business license is $35/yr with a $40 annual renewal. The 3-year certification cycle requires 6 Core and 10 Category 25 CE credits. Penn State Extension publishes a detailed drone licensing guide.\n\nPennsylvania maintains reciprocity with 25+ states including DE, FL, IN, IA, MD, NJ, NY, OH, VA, WV, and WI, one of the broadest reciprocity networks nationally. Chesapeake Bay watershed conservation programs provide strong cost-share incentives for cover crops in SE Pennsylvania, driving growing drone seeding demand.',
     authorityLinks: [
       { label: 'Pennsylvania Department of Agriculture', url: 'https://www.agriculture.pa.gov' },
       { label: 'Penn State Extension', url: 'https://extension.psu.edu' },

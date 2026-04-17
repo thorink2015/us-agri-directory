@@ -648,7 +648,7 @@ export const operators: Operator[] = [
     shortName: 'Knox Farmers Coop',
     tagline: 'East Tennessee cooperative drone application program',
     description:
-      'Knox County Farmers Cooperative offers drone spraying services to cooperative members across east Tennessee, covering corn, soybean, and tobacco fungicide and herbicide applications. The coop leverages its existing agronomic and input relationships to provide bundled drone application scheduling, scouting, and product supply to member farms.',
+      'Knox County Farmers Cooperative offers drone spraying services to cooperative members across east Tennessee, covering corn, soybean, and tobacco fungicide and herbicide applications. The coop uses its existing agronomic and input relationships to bundle drone application scheduling, scouting, and product supply for member farms.',
     country: 'US',
     counties: ['tennessee', 'virginia', 'north-carolina'],
     city: 'Knoxville',
@@ -1707,9 +1707,9 @@ export const operators: Operator[] = [
   {
     slug: 'coastal-agriculture-services',
     name: 'Coastal Agriculture Services',
-    tagline: 'AL · comprehensive drone application across row crops, forestry & aquatics',
+    tagline: 'AL · full-service drone application across row crops, forestry & aquatics',
     description:
-      'Alabama-based operator founded 2023 offering comprehensive drone aerial application across row crops, forestry, pastures, and invasive species. Covers AL, GA, MS, FL, TN, AR, and KY. Services include cotton, peanuts, corn, soybeans, hay, loblolly pine, orchards, vegetables, and aquatic weed management plus multispectral imaging.',
+      'Alabama-based operator founded 2023 offering full-service drone aerial application across row crops, forestry, pastures, and invasive species. Covers AL, GA, MS, FL, TN, AR, and KY. Services include cotton, peanuts, corn, soybeans, hay, loblolly pine, orchards, vegetables, and aquatic weed management plus multispectral imaging.',
     country: 'US',
     counties: ['alabama', 'georgia', 'mississippi', 'florida', 'tennessee', 'arkansas', 'kentucky'],
     city: 'Coastal Alabama',
