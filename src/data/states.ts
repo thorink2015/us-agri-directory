@@ -1872,6 +1872,152 @@ export const stateData: StateData[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+
+  // ─── NEVADA ───────────────────────────────────────────────────────────────
+  {
+    slug: 'nevada',
+    name: 'Nevada',
+    abbreviation: 'NV',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'Nevada Department of Agriculture (NDA)',
+    licensingAgencyUrl: 'https://agri.nv.gov',
+    aerialCategory: 'Core + Laws + Category (3 exams)',
+    examsRequired: 'Core + Laws + Category. $50/initial exam. Business license $250/yr.',
+    examFees: '$50/initial exam. $250/yr business license.',
+    uniqueRules: [
+      'Business license at $250/yr.',
+      'Very limited agricultural acreage.',
+    ],
+    reciprocityStates: [],
+    renewalCycle: '4-year cycle (certified); annual (licensed pest control)',
+    ceRequirements: '12 CEUs per 4-year cycle (certified). 6 CEUs/yr (licensed).',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://extension.unr.edu',
+    topCrops: [],
+    rateRange: '$18 to $30/acre',
+    statsRate: '$18 to $30/acre',
+    statsTopCrop: 'Alfalfa',
+    sprayWindows: [],
+    neighboringStates: ['california', 'oregon', 'idaho', 'utah', 'arizona'],
+    aeoBlock:
+      'Nevada has minimal agricultural crop acreage with rates of $18 to $30 per acre. Primary drone opportunities are alfalfa hay in the northern valleys and ranch rangeland applications. Business license is $250 per year.',
+    licensingDetails:
+      'Nevada aerial pesticide licensing is administered by the Nevada Department of Agriculture (NDA) under a 3-exam structure: Core, Laws, and the relevant use category, at $50 per initial exam. Commercial operators also pay a $250/yr business license fee. Renewal is on a 4-year cycle for certified applicators (12 CEUs) or annual for licensed pest control operators (6 CEUs/yr).\n\nNevada has very limited agricultural crop acreage. Primary drone opportunities are alfalfa hay in the northern valleys, ranch rangeland brush control, and some irrigated grain operations near Fallon and Elko. No reciprocity agreements are documented — contact NDA for current status.',
+    authorityLinks: [
+      { label: 'Nevada Department of Agriculture', url: 'https://agri.nv.gov' },
+      { label: 'UNR Extension', url: 'https://extension.unr.edu' },
+    ],
+    faqs: [
+      { question: 'Is there drone spray demand in Nevada?', answer: 'Very limited for traditional agriculture. Alfalfa hay in northern Nevada, ranch rangeland, and some cannabis cultivation are the main opportunities.' },
+      { question: 'What does drone spraying cost in Nevada?', answer: '$18 to $30 per acre. Higher than neighboring states due to remote locations, small acreage, and very few operators.' },
+      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137, and NDA certification with Core + Laws + Category exams. $50 per exam. $250/yr business license.' },
+      { question: 'Does Nevada have reciprocal licensing?', answer: 'Not documented. Contact NDA.' },
+      { question: 'Is Nevada worth entering as a drone spray market?', answer: 'Only as a secondary market for operators based in neighboring states (CA, ID, UT). The total addressable acreage is too small to support a Nevada-only drone spray business.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── UTAH ─────────────────────────────────────────────────────────────────
+  {
+    slug: 'utah',
+    name: 'Utah',
+    abbreviation: 'UT',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'Utah Department of Agriculture and Food (UDAF)',
+    licensingAgencyUrl: 'https://ag.utah.gov/pesticides/apply-or-renew',
+    aerialCategory: 'Category 11: Aerial Application. "Special qualifications" for aerial beyond standard exam.',
+    examsRequired: 'Core + Category 11 + use category (3 exams). License $65/3yr. $15 per additional category.',
+    examFees: '$65 license for 3 years. $15 per additional category.',
+    uniqueRules: [
+      '"Special qualifications" required for aerial category beyond standard exam.',
+      'Must carry license at all times during application.',
+      'Aerial Application Study Guide published by UDAF.',
+    ],
+    reciprocityStates: ['CO', 'ID', 'NV'],
+    renewalCycle: '3-year cycle',
+    ceRequirements: '24 CEUs per 3-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: 'https://ag.utah.gov/documents/AerialApplicationStudyGuide.pdf',
+    extensionUrl: 'https://extension.usu.edu',
+    topCrops: [
+      { slug: 'wheat', name: 'Wheat', acreage: '200K acres', notes: 'Northern UT' },
+    ],
+    rateRange: '$16 to $25/acre',
+    statsRate: '$16 to $25/acre',
+    statsTopCrop: 'Wheat',
+    sprayWindows: [],
+    neighboringStates: ['idaho', 'wyoming', 'colorado', 'nevada', 'arizona'],
+    aeoBlock:
+      'Utah requires "special qualifications" for Category 11 (Aerial Application) beyond the standard exam, with a published Aerial Application Study Guide. License is $65 for 3 years. Primary drone markets are alfalfa, wheat, and fruit orchards in northern Utah. Rates run $16 to $25 per acre.',
+    licensingDetails:
+      'Utah aerial pesticide licensing is administered by the Utah Department of Agriculture and Food (UDAF) under Category 11 (Aerial Application). Operators must pass 3 exams: Core, Category 11, and a relevant use-category exam. Category 11 requires "special qualifications" beyond the standard exam — details are in the UDAF Aerial Application Study Guide. The 3-year license fee is $65, with $15 per additional category. Operators must carry their license at all times during application.\n\nRenewal is on a 3-year cycle with 24 CEUs required. Reciprocity exists with CO, ID, and NV.',
+    authorityLinks: [
+      { label: 'UDAF Pesticide Licensing', url: 'https://ag.utah.gov/pesticides/apply-or-renew' },
+      { label: 'UDAF Aerial Study Guide', url: 'https://ag.utah.gov/documents/AerialApplicationStudyGuide.pdf' },
+      { label: 'USU Extension', url: 'https://extension.usu.edu' },
+    ],
+    faqs: [
+      { question: 'What are the "special qualifications" for aerial in Utah?', answer: 'UDAF requires additional qualifications beyond the standard Category 11 exam for aerial applicators. Details are in the UDAF Aerial Application Study Guide. Contact UDAF for current specifics.' },
+      { question: 'What does drone spraying cost in Utah?', answer: '$16 to $25 per acre. Higher than the Great Plains due to smaller fields and mountainous terrain limiting operational efficiency.' },
+      { question: 'What crops use drones in Utah?', answer: 'Alfalfa hay (600K acres), wheat (200K acres), tart cherries in Utah County, and sweet corn in Cache Valley. Ranch rangeland is a secondary market.' },
+      { question: 'Does Utah have reciprocal licensing?', answer: 'General provision for reciprocity. Contact UDAF for specific states.' },
+      { question: 'Is there a study guide for the aerial exam?', answer: 'Yes. UDAF publishes an Aerial Application Study Guide available at ag.utah.gov.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── ARIZONA ──────────────────────────────────────────────────────────────
+  {
+    slug: 'arizona',
+    name: 'Arizona',
+    abbreviation: 'AZ',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'Arizona Department of Agriculture (AZDA)',
+    licensingAgencyUrl: 'https://agriculture.az.gov',
+    aerialCategory: 'Drone Pilot License (DPL), separate from Agricultural Aircraft Pilot License (AAP)',
+    examsRequired: 'DPL exam (flight procedures, calibration, sensitive areas) + Commercial Applicator Certification (PUC) + Custom Applicator License (CAL $100/yr if for-hire). DPL $50/yr.',
+    examFees: 'DPL $50/yr. CAL $100/yr for for-hire work.',
+    uniqueRules: [
+      'Arizona has a dedicated Drone Pilot License (DPL), separate from the manned Aircraft Pilot License.',
+      'Operating without DPL is a nonserious violation under R3-3-502.',
+      'Tribal lands may require additional operational permissions beyond state licensing.',
+      'DPL requires valid FAA Part 107.',
+    ],
+    reciprocityStates: [],
+    renewalCycle: 'Annual (DPL)',
+    ceRequirements: 'Contact AZDA.',
+    droneSpecificCredential: true,
+    droneGuidanceUrl: 'https://agriculture.az.gov',
+    extensionUrl: 'https://extension.arizona.edu',
+    topCrops: [
+      { slug: 'cotton', name: 'Cotton', acreage: '150K acres', notes: 'Pima and Maricopa counties' },
+    ],
+    rateRange: '$16 to $28/acre',
+    statsRate: '$16 to $28/acre',
+    statsTopCrop: 'Cotton',
+    sprayWindows: [],
+    neighboringStates: ['california', 'nevada', 'utah', 'new-mexico'],
+    aeoBlock:
+      'Arizona requires a dedicated Drone Pilot License (DPL) at $50 per year, separate from the manned Agricultural Aircraft Pilot License. Operating without DPL is a regulatory violation. Cotton (150K acres), citrus, and date palms drive drone demand. Tribal lands may require additional operational permissions.',
+    licensingDetails:
+      'Arizona is one of the few states with a dedicated Drone Pilot License (DPL), entirely separate from the manned Agricultural Aircraft Pilot License (AAP). The DPL exam covers flight procedures, calibration, and operations near sensitive areas; the fee is $50 per year (annual renewal). For-hire operators also need a Commercial Applicator Certification (PUC) and a Custom Applicator License (CAL) at $100/yr. The DPL requires a valid FAA Part 107. Operating without a DPL is a nonserious regulatory violation under R3-3-502.\n\nArizona has extensive tribal lands where additional operational permissions beyond state licensing may be required. No reciprocity agreements are documented for the DPL.',
+    authorityLinks: [
+      { label: 'Arizona Department of Agriculture', url: 'https://agriculture.az.gov' },
+      { label: 'University of Arizona Extension', url: 'https://extension.arizona.edu' },
+    ],
+    faqs: [
+      { question: 'What is the Arizona Drone Pilot License?', answer: 'A dedicated credential separate from the manned aircraft pilot license. It requires valid FAA Part 107, a written exam on flight procedures, calibration, and operations near sensitive areas, and $50 annual fee. Operating without it is a violation under R3-3-502.' },
+      { question: 'What does drone spraying cost in Arizona?', answer: '$16 to $28 per acre. Cotton defoliant and citrus insecticide at the high end. Desert terrain and heat limit daily spray windows to early morning hours.' },
+      { question: 'Do tribal lands require extra permissions?', answer: 'Potentially, yes. Arizona extensive tribal lands may require additional operational permissions beyond state DOA licensing. Contact the relevant tribal authority before scheduling work on tribal land.' },
+      { question: 'What crops use drones in Arizona?', answer: 'Cotton (150K acres in Pima and Maricopa counties), citrus in the Salt River Valley, date palms in Yuma, and irrigated alfalfa.' },
+      { question: 'Does Arizona have reciprocal licensing?', answer: 'Not documented for the DPL. Contact AZDA.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
 ];
 
 export function getStateData(slug: string): StateData | undefined {
