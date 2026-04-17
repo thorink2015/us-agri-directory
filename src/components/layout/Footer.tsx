@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Plane, ChevronDown, Send } from 'lucide-react';
 import { counties } from '@/data/counties';
-import { AUTHOR, SITE } from '@/data/author';
+import { SITE } from '@/data/author';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
 
@@ -168,11 +168,7 @@ export default function Footer() {
         {/* Canonical Eugen credit (E-E-A-T footer signal) */}
         <div className="border-t border-green-800 mt-4 pt-5 text-sm text-green-200 text-center">
           <p className="mb-2">
-            © 2026 {SITE.name}. Edited by{' '}
-            <Link href="/about" className="text-white hover:text-yellow-300 transition-colors font-medium">
-              {AUTHOR.fullName}
-            </Link>
-            . Every page personally researched and updated.
+            © 2026 {SITE.name}
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-green-300">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
