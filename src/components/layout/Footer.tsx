@@ -74,7 +74,6 @@ export default function Footer() {
               <li><Link href="/crops" className="hover:text-white transition-colors">Browse by Crop</Link></li>
               <li><Link href="/drones" className="hover:text-white transition-colors">Drone Models</Link></li>
               <li><Link href="/list-your-business" className="hover:text-white transition-colors">List Your Business</Link></li>
-              <li><Link href="/about" className="hover:text-white transition-colors">About</Link></li>
             </ul>
           </div>
 
