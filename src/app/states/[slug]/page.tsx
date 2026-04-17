@@ -175,7 +175,7 @@ function RichStatePage({ slug }: { slug: string }) {
         </section>
 
         {/* 5 — Spray windows / rates table */}
-        <section className="mb-10">
+        {data.sprayWindows.length > 0 && <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
             2026 spray windows and rates in {data.name}
           </h2>
@@ -203,7 +203,7 @@ function RichStatePage({ slug }: { slug: string }) {
             Application only. Chemical cost is additional. Rates based on 2026 operator surveys and university extension data.{' '}
             <Link href="/tools/spray-cost-calculator" className="text-green-700 hover:underline">Use the calculator for a detailed estimate →</Link>
           </p>
-        </section>
+        </section>}
 
         {/* 6 — Licensing section */}
         <section className="mb-10">
