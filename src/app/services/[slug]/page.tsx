@@ -137,7 +137,7 @@ export default function ServicePage({ params }: Props) {
             <span className="text-sm text-gray-700">
               Typical rate:{' '}
               <span className="font-semibold text-green-700">{formatPrice(service.priceMinUsd, service.priceMaxUsd)}</span>
-              {' '}<span className="text-gray-400">({service.priceUnit})</span>
+              {' '}<span className="text-gray-600">({service.priceUnit})</span>
             </span>
           </div>
         )}

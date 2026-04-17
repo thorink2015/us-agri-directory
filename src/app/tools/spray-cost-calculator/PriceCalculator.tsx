@@ -161,7 +161,7 @@ export default function PriceCalculator() {
               aria-label="Acres (direct entry)"
             />
           </div>
-          <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+          <div className="flex justify-between text-xs text-gray-600 mt-0.5">
             <span>10</span><span>10,000 acres</span>
           </div>
         </div>
@@ -180,7 +180,7 @@ export default function PriceCalculator() {
             onChange={(e) => setPasses(Number(e.target.value))}
             className="w-full accent-green-700"
           />
-          <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+          <div className="flex justify-between text-xs text-gray-600 mt-0.5">
             <span>1</span><span>15</span>
           </div>
         </div>

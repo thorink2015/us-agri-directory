@@ -225,7 +225,7 @@ export default function HomePage() {
               );
             })}
           </div>
-          <p className="text-center text-xs text-gray-400 mt-6">
+          <p className="text-center text-xs text-gray-600 mt-6">
             Acreage: American Spray Drone Coalition. Pricing: Iowa State Extension 2026 Custom Rate Survey.
           </p>
         </div>
@@ -504,15 +504,15 @@ export default function HomePage() {
                 <div className="font-semibold text-sm text-gray-900 group-hover:text-green-700 mb-3">{drone.name}</div>
                 <div className="space-y-1.5 text-xs text-gray-600">
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Tank</span>
+                    <span className="text-gray-600">Tank</span>
                     <span className="font-medium">{drone.tank}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Price</span>
+                    <span className="text-gray-600">Price</span>
                     <span className="font-medium">{drone.price}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-gray-400">NDAA</span>
+                    <span className="text-gray-600">NDAA</span>
                     {drone.ndaa === true ? (
                       <span className="inline-flex items-center gap-0.5 text-blue-700 font-medium">
                         <Shield className="w-3 h-3" /> Yes
@@ -520,7 +520,7 @@ export default function HomePage() {
                     ) : drone.ndaa === false ? (
                       <span className="text-gray-500">No</span>
                     ) : (
-                      <span className="text-gray-400">TBC</span>
+                      <span className="text-gray-600">TBC</span>
                     )}
                   </div>
                 </div>
@@ -549,7 +549,7 @@ export default function HomePage() {
                 href={`/blog/${post.slug}`}
                 className="bg-white border border-gray-200 rounded-xl p-5 hover:border-green-300 hover:shadow-sm transition-all group"
               >
-                <time className="text-xs text-gray-400">{post.publishedAt}</time>
+                <time className="text-xs text-gray-600">{post.publishedAt}</time>
                 <h3 className="font-semibold text-gray-900 group-hover:text-green-700 mt-1 mb-2 leading-snug">{post.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">{post.description}</p>
                 <span className="mt-3 inline-block text-xs text-green-700 font-medium group-hover:underline">Read more</span>

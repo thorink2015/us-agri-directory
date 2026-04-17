@@ -116,7 +116,7 @@ export default function CoverageCalculator() {
                 aria-label="Acres (direct entry)"
               />
             </div>
-            <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+            <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>10</span><span>5,000 acres</span>
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function CoverageCalculator() {
               onChange={(e) => setFleet(Number(e.target.value))}
               className="w-full accent-orange-600"
             />
-            <div className="flex justify-between text-xs text-gray-400 mt-0.5">
+            <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>1 drone</span><span>5 drones</span>
             </div>
           </div>

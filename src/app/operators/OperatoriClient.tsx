@@ -238,7 +238,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
                     min={0}
                     max={100}
                   />
-                  <span className="text-gray-400 text-xs">-</span>
+                  <span className="text-gray-500 text-xs">-</span>
                   <input
                     type="number"
                     placeholder="Max"
@@ -391,7 +391,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
         <div className="text-center py-20 bg-white rounded-xl border border-gray-200">
           <Filter className="w-14 h-14 text-gray-200 mx-auto mb-4" />
           <p className="text-gray-700 text-lg font-medium mb-1">No operators found</p>
-          <p className="text-gray-400 text-sm mb-5">Try adjusting or clearing your filters</p>
+          <p className="text-gray-600 text-sm mb-5">Try adjusting or clearing your filters</p>
           <button
             onClick={clearFilters}
             className="px-5 py-2 bg-green-700 text-white text-sm font-medium rounded-lg hover:bg-green-800 transition-colors"

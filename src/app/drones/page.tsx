@@ -47,11 +47,11 @@ export default function DronePage() {
             <div className="grid grid-cols-2 gap-2 mb-3">
               <div className="bg-gray-50 rounded-lg p-2.5 text-center">
                 <div className="text-sm font-bold text-gray-900">{drone.specs.tankLiters}L</div>
-                <div className="text-xs text-gray-400">Tank</div>
+                <div className="text-xs text-gray-600">Tank</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-2.5 text-center">
                 <div className="text-sm font-bold text-gray-900">{drone.specs.maxWindMph} mph</div>
-                <div className="text-xs text-gray-400">Max wind</div>
+                <div className="text-xs text-gray-600">Max wind</div>
               </div>
             </div>
 

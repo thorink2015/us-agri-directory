@@ -190,7 +190,7 @@ export default function CropPage({ params }: Props) {
                 className={`p-2 rounded-lg text-center text-xs font-medium ${
                   active
                     ? 'bg-green-600 text-white'
-                    : 'bg-gray-100 text-gray-400'
+                    : 'bg-gray-100 text-gray-600'
                 }`}
               >
                 {month}

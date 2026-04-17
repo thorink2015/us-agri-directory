@@ -150,7 +150,7 @@ export default function DroneComparisonPage() {
                   <td className="p-4 text-gray-600 text-xs">
                     {drone.manufacturer}
                     <br />
-                    <span className="text-gray-400">{drone.countryOfManufacture}</span>
+                    <span className="text-gray-600">{drone.countryOfManufacture}</span>
                   </td>
                   <td className="p-4 text-center">
                     {drone.ndaaCompliant ? (
