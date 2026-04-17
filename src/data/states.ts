@@ -1062,6 +1062,154 @@ export const stateData: StateData[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+
+  // ─── COLORADO ────────────────────────────────────────────────────────────
+  {
+    slug: 'colorado',
+    name: 'Colorado',
+    abbreviation: 'CO',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'Colorado Department of Agriculture (CDA)',
+    licensingAgencyUrl: 'https://ag.colorado.gov',
+    aerialCategory: 'Category 114: Aerial Pest Control (explicitly includes UAV)',
+    examsRequired: 'Core + Category 114 + site category. $41.50/exam. $350/yr business license.',
+    examFees: '$41.50/exam. $350/yr business license.',
+    uniqueRules: [
+      'Category 114 explicitly includes UAV.',
+      'Business license at $350/yr is among the higher state fees.',
+    ],
+    reciprocityStates: ['NE', 'WY', 'NM'],
+    renewalCycle: '3-year cycle.',
+    ceRequirements: '7 core + 1 per category per 3-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://extension.colostate.edu',
+    topCrops: [
+      { slug: 'corn', name: 'Corn', acreage: '1.3M acres', notes: 'Eastern CO irrigated' },
+      { slug: 'wheat', name: 'Wheat', acreage: '2.2M acres', notes: 'Eastern plains winter wheat' },
+    ],
+    rateRange: '$13 to $18/acre',
+    statsRate: '$13 to $18/acre',
+    statsTopCrop: 'Wheat',
+    sprayWindows: [],
+    neighboringStates: ['nebraska', 'kansas', 'wyoming', 'new-mexico', 'oklahoma'],
+    aeoBlock:
+      'Colorado uses Category 114 (Aerial Pest Control) which explicitly includes UAV, with a $350 per year business license among the higher state fees nationally. Rates run $13 to $18 per acre across 2.2 million acres of wheat and 1.3 million acres of irrigated corn on the eastern plains.',
+    licensingDetails:
+      'Colorado pesticide licensing is administered by the Colorado Department of Agriculture (CDA) under Category 114 (Aerial Pest Control), which explicitly includes UAV. Applicators take Core plus Category 114 plus a site category at $41.50 per exam. The commercial pesticide business license is $350 per year, among the higher annual fees nationally.\n\nContinuing education is 7 core hours plus 1 hour per category per 3-year cycle. Eastern plains wheat and irrigated corn drive the primary demand. Reciprocity exists with NE, WY, and NM.',
+    authorityLinks: [
+      { label: 'Colorado Department of Agriculture', url: 'https://ag.colorado.gov' },
+      { label: 'Colorado State University Extension', url: 'https://extension.colostate.edu' },
+    ],
+    faqs: [
+      { question: 'Does Colorado aerial licensing cover drones?', answer: 'Yes. Category 114 (Aerial Pest Control) explicitly includes UAV. No separate drone credential needed beyond the standard aerial category.' },
+      { question: 'What does drone spraying cost in Colorado?', answer: '$13 to $18 per acre. Eastern plains wheat and corn get competitive rates. Mountain and western slope applications are higher due to terrain and travel.' },
+      { question: 'Is the $350 business license annual?', answer: 'Yes. CDA requires a $350 per year commercial pesticide applicator business license, which is in addition to individual applicator certification fees.' },
+      { question: 'When is peak spray season in Colorado?', answer: 'Wheat heading in late May to early June on the eastern plains. Corn VT/R1 in July. Mountain agriculture has a compressed season from June through August.' },
+      { question: 'Does Colorado have reciprocal licensing?', answer: 'Yes, with NE, WY, and NM. Contact CDA for current procedures.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── OKLAHOMA ────────────────────────────────────────────────────────────
+  {
+    slug: 'oklahoma',
+    name: 'Oklahoma',
+    abbreviation: 'OK',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'Oklahoma Department of Agriculture, Food, and Forestry (ODAFF)',
+    licensingAgencyUrl: 'https://ag.ok.gov',
+    aerialCategory: 'Aerial category under ODAFF. FAA Part 137 must be filed with the Board before aerial license is issued.',
+    examsRequired: 'Core + category exams. 70% passing. $50 total initial. $100/category/yr license.',
+    examFees: '$50 initial certification. $100/category/yr license.',
+    uniqueRules: [
+      'FAA Part 137 must be filed with the Oklahoma Board before aerial license is issued (OK Statutes 2-3-82).',
+      'Late renewal doubles fees + $100 penalty after 30 days.',
+      '5-year recertification per category.',
+    ],
+    reciprocityStates: ['AR', 'IN', 'KS', 'LA', 'MN', 'NE', 'NM', 'TX'],
+    renewalCycle: 'Annual cycle (Oct 1 or Jan 1 depending on company name). 5-year recertification.',
+    ceRequirements: 'CEUs or re-exam per 5-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://extension.okstate.edu',
+    topCrops: [
+      { slug: 'wheat', name: 'Wheat', acreage: '4.5M acres', notes: 'Winter wheat. Heading late May.' },
+      { slug: 'cotton', name: 'Cotton', acreage: '600K acres', notes: 'Southwestern OK' },
+      { slug: 'corn', name: 'Corn', acreage: '400K acres', notes: 'Panhandle irrigated' },
+    ],
+    rateRange: '$12 to $18/acre',
+    statsRate: '$12 to $18/acre',
+    statsTopCrop: 'Wheat',
+    sprayWindows: [],
+    neighboringStates: ['kansas', 'texas', 'arkansas', 'colorado', 'new-mexico'],
+    aeoBlock:
+      'Oklahoma requires FAA Part 137 to be filed with the state Board before issuing an aerial license under OK Statutes 2-3-82. Winter wheat (4.5 million acres) drives primary demand with heading in late May. Rates run $12 to $18 per acre, with cotton defoliant in southwestern OK as a secondary market.',
+    licensingDetails:
+      'Oklahoma pesticide licensing is administered by the Oklahoma Department of Agriculture, Food, and Forestry (ODAFF). A unique Oklahoma requirement: FAA Part 137 must be filed with the Oklahoma Board before an aerial applicator license is issued, under OK Statutes 2-3-82. This is a pre-filing step, not just a credential verification.\n\nInitial certification is $50 with a $100 per category per year license fee. Late renewal more than 30 days past due doubles fees plus adds a $100 penalty. Annual renewal is required with 5-year recertification via CEUs or re-exam. Reciprocity exists with AR, IN, KS, LA, MN, NE, NM, and TX.',
+    authorityLinks: [
+      { label: 'Oklahoma Department of Agriculture, Food, and Forestry', url: 'https://ag.ok.gov' },
+      { label: 'Oklahoma State University Extension', url: 'https://extension.okstate.edu' },
+    ],
+    faqs: [
+      { question: 'What is the Oklahoma Part 137 filing requirement?', answer: 'ODAFF requires your FAA Part 137 Agricultural Aircraft Operator Certificate to be filed with the Oklahoma Board before they will issue your aerial applicator license. This is a pre-filing step, not just a credential check.' },
+      { question: 'What does drone spraying cost in Oklahoma?', answer: 'Wheat runs $12 to $16 per acre. Cotton defoliant in southwestern OK runs $14 to $18. Wind is a significant operational constraint statewide.' },
+      { question: 'What happens if I renew late in Oklahoma?', answer: 'Late renewal doubles your fees plus a $100 penalty if more than 30 days past due. Plan renewal well ahead of your anniversary date.' },
+      { question: 'Does Oklahoma have reciprocal licensing?', answer: 'Yes, with AR, IN, KS, LA, MN, NE, NM, and TX. Contact ODAFF for current requirements.' },
+      { question: 'When is peak spray season in Oklahoma?', answer: 'Wheat heading in late May. Cotton mid-season insecticide July to August. Cotton defoliant September to October. Wind conditions limit daily windows much of the year.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── NEW MEXICO ──────────────────────────────────────────────────────────
+  {
+    slug: 'new-mexico',
+    name: 'New Mexico',
+    abbreviation: 'NM',
+    regionSlug: 'great-plains',
+    regionName: 'Great Plains',
+    licensingAgency: 'New Mexico Department of Agriculture (NMDA)',
+    licensingAgencyUrl: 'https://www.nmda.nmsu.edu',
+    aerialCategory: 'Core + site/pest category (no separate aerial category)',
+    examsRequired: 'Core + 1 site/pest category. $55/exam. License $75/yr.',
+    examFees: '$55/exam. $75/yr license.',
+    uniqueRules: [
+      'No separate aerial category. Drone operators certify in the relevant use category.',
+      'Annual renewal with 4 CEUs per year.',
+    ],
+    reciprocityStates: ['CO', 'OK', 'TX'],
+    renewalCycle: 'Annual renewal.',
+    ceRequirements: '4 CEUs per year.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://extension.nmsu.edu',
+    topCrops: [
+      { slug: 'cotton', name: 'Cotton', acreage: '50K acres', notes: 'Southern NM' },
+    ],
+    rateRange: '$15 to $22/acre',
+    statsRate: '$15 to $22/acre',
+    statsTopCrop: 'Cotton',
+    sprayWindows: [],
+    neighboringStates: ['texas', 'oklahoma', 'colorado', 'arizona'],
+    aeoBlock:
+      'New Mexico has no separate aerial applicator category. Drone operators certify in the relevant use category with Core exam plus category at $55 per exam. Agricultural drone demand centers on pecan orchards, chile, and ranch operations in southern New Mexico. Rates run $15 to $22 per acre.',
+    licensingDetails:
+      'New Mexico pesticide licensing is administered by the New Mexico Department of Agriculture (NMDA). Unlike most states, NMDA does not maintain a separate aerial applicator category — drone operators certify in the relevant use category (e.g., agricultural pest control), and the same license covers aerial application. Exams are $55 each with a $75 per year license fee.\n\nAnnual renewal is required with 4 CEUs per year. Agricultural drone demand in New Mexico centers on pecan orchards in the Mesilla Valley, chile in southern NM, and ranch and rangeland operations. Reciprocity may be available with CO, OK, and TX on a case-by-case basis.',
+    authorityLinks: [
+      { label: 'New Mexico Department of Agriculture', url: 'https://www.nmda.nmsu.edu' },
+      { label: 'NMSU Extension', url: 'https://extension.nmsu.edu' },
+    ],
+    faqs: [
+      { question: 'Does New Mexico have an aerial applicator category?', answer: 'No. Unlike most states, NMDA does not maintain a separate aerial category. Drone operators certify in the relevant use category (e.g., agricultural pest control) and the same license covers aerial application.' },
+      { question: 'What crops use drone spraying in New Mexico?', answer: 'Pecan orchards in the Mesilla Valley, chile in southern NM, cotton, and ranch/rangeland operations. Row crop acreage is limited compared to other Great Plains states.' },
+      { question: 'What does drone spraying cost in New Mexico?', answer: '$15 to $22 per acre. Higher than the Corn Belt due to small field sizes, remote locations, and few operators. Pecan orchard work commands premium rates.' },
+      { question: 'Does New Mexico have reciprocal licensing?', answer: 'Case-by-case basis. CO, OK, and TX operators may only need the NM laws exam. Contact NMDA.' },
+      { question: 'Is there much drone operator competition in New Mexico?', answer: 'Very little. Low agricultural acreage and small operator density mean less pricing pressure but also longer travel distances between jobs.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
 ];
 
 export function getStateData(slug: string): StateData | undefined {
