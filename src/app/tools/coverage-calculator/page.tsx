@@ -30,7 +30,7 @@ const FAQS = [
 export const metadata: Metadata = {
   title: 'Drone Coverage Time Calculator | How Long to Spray Your Fields',
   description:
-    'How long to drone-spray your fields? Enter acres, drone model, and application rate. Includes battery swaps, refills, and single-day feasibility for 7 drone models.',
+    'How long to drone-spray your fields? Enter acres, drone model, and application rate. Includes battery swaps, refills, and single-day feasibility.',
   alternates: { canonical: '/tools/coverage-calculator' },
   openGraph: {
     title: 'How Long Will It Take to Spray Your Fields?',
@@ -108,7 +108,7 @@ export default function CoverageCalculatorPage() {
         {/* AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            A single DJI Agras T50 covers 40 to 60 acres per flight hour at 2 to 5 gallons per acre, treating 300 to 600 acres per day. Field shape, application rate, battery swap time, and tank refill logistics determine actual coverage. This calculator estimates total time including all stops for 7 drone models.
+            A single DJI Agras T50 covers 40 to 60 acres per flight hour at 2 to 5 gallons per acre, treating 300 to 600 acres per day. This calculator estimates total spray time including tank refills, battery swaps, and field shape adjustments for 7 drone models.
           </p>
         </div>
 
