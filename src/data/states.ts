@@ -2414,6 +2414,153 @@ export const stateData: StateData[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+
+  // ─── RHODE ISLAND ─────────────────────────────────────────────────────────
+  {
+    slug: 'rhode-island',
+    name: 'Rhode Island',
+    abbreviation: 'RI',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'Rhode Island DEM',
+    licensingAgencyUrl: 'https://dem.ri.gov',
+    aerialCategory: 'No specific aerial category. Separate DEM aerial application permit required.',
+    examsRequired: 'Core + use category + DEM aerial permit. Contact DEM at (401) 222-2781.',
+    examFees: 'Contact DEM.',
+    uniqueRules: [
+      'Separate DEM aerial application permit required in addition to applicator certification.',
+      'Smallest state. Minimal agricultural acreage.',
+    ],
+    reciprocityStates: ['NJ', 'CT', 'MA'],
+    renewalCycle: '5-year cycle',
+    ceRequirements: 'CE hours vary by license type.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://web.uri.edu/coopext',
+    topCrops: [],
+    rateRange: '$22 to $35/acre',
+    statsRate: '$22 to $35/acre',
+    statsTopCrop: 'Specialty Crops',
+    sprayWindows: [],
+    neighboringStates: ['massachusetts', 'connecticut'],
+    aeoBlock:
+      'Rhode Island requires a separate DEM aerial application permit in addition to standard applicator certification. Agricultural acreage is minimal. Drone opportunities are limited to small specialty farms, turf management, and landscape applications. Rates run $22 to $35 per acre.',
+    licensingDetails:
+      'Rhode Island aerial pesticide licensing is administered by the Rhode Island Department of Environmental Management (DEM). RI does not maintain a specific aerial category — instead, a separate DEM aerial application permit is required in addition to standard Core and use-category applicator certification. Specific fees and exam schedules should be confirmed directly with DEM at (401) 222-2781.\n\nRI operates on a 5-year renewal cycle with CE hours varying by license type. Reciprocity exists with NJ, CT, and MA. Total agricultural acreage is the smallest of any state — drone opportunities are limited to specialty vegetable farms, turf management, and landscape pest control, typically as part of a broader New England territory.',
+    authorityLinks: [
+      { label: 'Rhode Island DEM', url: 'https://dem.ri.gov' },
+      { label: 'URI Cooperative Extension', url: 'https://web.uri.edu/coopext' },
+    ],
+    faqs: [
+      { question: 'Is there drone spray demand in Rhode Island?', answer: 'Very limited. Small specialty vegetable farms, turf management, and landscape pest control are the primary opportunities. Total agricultural acreage is the smallest of any state.' },
+      { question: 'What does drone spraying cost?', answer: '$22 to $35 per acre. Small fields and few operators drive rates well above the national average.' },
+      { question: 'What is the DEM aerial permit?', answer: 'A separate permit from RI DEM required for any aerial pesticide application. This is in addition to your applicator certification. Contact DEM at (401) 222-2781.' },
+      { question: 'Does RI have reciprocal licensing?', answer: 'Limited. Confirm with DEM.' },
+      { question: 'Is RI practical for a drone spray business?', answer: 'Only as part of a broader New England territory covering CT, MA, and RI combined. Standalone RI operations are not viable due to minimal acreage.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── MASSACHUSETTS ────────────────────────────────────────────────────────
+  {
+    slug: 'massachusetts',
+    name: 'Massachusetts',
+    abbreviation: 'MA',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'Massachusetts MDAR',
+    licensingAgencyUrl: 'https://www.mass.gov/pesticide-examination-and-licensing',
+    aerialCategory: 'Category 11: Aerial Application',
+    examsRequired: 'Core + Aerial + category. $50/yr cert. $28 online exam. 2 years experience required.',
+    examFees: '$50/yr cert. $28 online exam.',
+    uniqueRules: [
+      '2 years practical experience required.',
+      'Insurance required: $100K/$300K bodily injury, $100K property. Must include chemical drift coverage.',
+      'Reciprocity at MDAR discretion (333 CMR 10.12).',
+    ],
+    reciprocityStates: ['CT', 'NY', 'NH', 'VT', 'RI'],
+    renewalCycle: '3-year cycle',
+    ceRequirements: '12 contact hours per 3-year cycle per category.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: null,
+    extensionUrl: 'https://ag.umass.edu/extension',
+    topCrops: [
+      { slug: 'orchards', name: 'Cranberries/Apples', acreage: '15K acres', notes: 'Cape Cod cranberry bogs, central MA apples' },
+    ],
+    rateRange: '$20 to $30/acre',
+    statsRate: '$20 to $30/acre',
+    statsTopCrop: 'Cranberries/Apples',
+    sprayWindows: [],
+    neighboringStates: ['connecticut', 'new-york', 'new-hampshire', 'vermont', 'rhode-island'],
+    aeoBlock:
+      'Massachusetts requires Category 11 (Aerial Application) with 2 years practical experience and insurance of $100K/$300K bodily injury plus $100K property including chemical drift coverage. Cranberry bogs and apple orchards are specialty drone niches. Rates run $20 to $30 per acre.',
+    licensingDetails:
+      'Massachusetts aerial pesticide licensing is administered by the Massachusetts Department of Agricultural Resources (MDAR) under Category 11 (Aerial Application). MA requires 2 years of practical experience before certification — one of the longer experience thresholds in the Northeast. Exam fees are $28 online with a $50/yr certification. Insurance is a defining barrier: $100,000/$300,000 bodily injury plus $100,000 property damage coverage is mandatory, and the policy must explicitly include chemical drift coverage, a separate endorsement most standard drone policies do not carry.\n\nRenewal is on a 3-year cycle with 12 contact hours per category. Reciprocity with CT, NY, NH, VT, and RI is granted at MDAR discretion under 333 CMR 10.12. Cranberry bogs on Cape Cod and central MA apple orchards are the primary specialty drone niches.',
+    authorityLinks: [
+      { label: 'MDAR Pesticide Licensing', url: 'https://www.mass.gov/pesticide-examination-and-licensing' },
+      { label: 'UMass Extension', url: 'https://ag.umass.edu/extension' },
+    ],
+    faqs: [
+      { question: 'What insurance is required in Massachusetts?', answer: '$100,000/$300,000 bodily injury and $100,000 property damage. Critically, the policy must explicitly include chemical drift coverage, which is a separate endorsement most standard drone policies do not carry.' },
+      { question: 'What does drone spraying cost in Massachusetts?', answer: '$20 to $30 per acre. Cranberry bog work and apple orchard spraying command premium rates. Row crop acreage is very limited.' },
+      { question: 'Are cranberry bogs a drone opportunity?', answer: 'Yes. Cape Cod cranberry operations use aerial applications for pest and disease management. Drones handle the small, irregularly shaped bogs better than manned aircraft.' },
+      { question: 'Does Massachusetts have reciprocal licensing?', answer: 'At MDAR discretion under 333 CMR 10.12. CT, NY, NH, VT, and RI operators may qualify. Contact MDAR.' },
+      { question: 'Is the 2-year experience requirement common?', answer: 'It is shared by MD and DE in the region but unusual nationally. Most states have no experience requirement beyond passing the exams.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
+
+  // ─── VERMONT ──────────────────────────────────────────────────────────────
+  {
+    slug: 'vermont',
+    name: 'Vermont',
+    abbreviation: 'VT',
+    regionSlug: 'southeast',
+    regionName: 'Southeast',
+    licensingAgency: 'Vermont Agency of Agriculture, Food and Markets',
+    licensingAgencyUrl: 'https://agriculture.vermont.gov',
+    aerialCategory: 'Category 11: Aerial. Plus mandatory Aerial Permit from the Secretary with 30-day public comment.',
+    examsRequired: 'Core + Category 11 + Aerial Permit application. $30/category/yr ($120 max). Retake $25. 75% passing.',
+    examFees: '$30/category/yr. $120 max. Retake $25. 75% passing (higher than most states).',
+    uniqueRules: [
+      'Aerial Permit required for all aerial applications (including drones) with 30-day public comment period.',
+      'Buffer distances set by the Secretary.',
+      'Must comply with VT Agency of Transportation rules.',
+      'Aerial exam must be taken in person.',
+      '75% passing score (higher than the 70% standard in most states).',
+    ],
+    reciprocityStates: ['NY', 'NJ', 'RI', 'PA'],
+    renewalCycle: '5-year cycle',
+    ceRequirements: '16 credits per 5-year cycle.',
+    droneSpecificCredential: false,
+    droneGuidanceUrl: 'https://agriculture.vermont.gov',
+    extensionUrl: 'https://www.uvm.edu/extension',
+    topCrops: [
+      { slug: 'corn', name: 'Corn', acreage: '85K acres', notes: 'Dairy silage corn' },
+      { slug: 'orchards', name: 'Apples', acreage: '3K acres', notes: 'Champlain Valley' },
+    ],
+    rateRange: '$20 to $30/acre',
+    statsRate: '$20 to $30/acre',
+    statsTopCrop: 'Corn',
+    sprayWindows: [],
+    neighboringStates: ['new-york', 'new-hampshire', 'massachusetts'],
+    aeoBlock:
+      'Vermont requires a mandatory Aerial Permit from the Secretary with a 30-day public comment period for all aerial applications including drones. The aerial exam requires 75 percent passing (above the national 70 percent standard) and must be taken in person. Rates run $20 to $30 per acre on limited agricultural acreage.',
+    licensingDetails:
+      'Vermont aerial pesticide licensing is administered by the Vermont Agency of Agriculture, Food and Markets under Category 11 (Aerial). Vermont is the most restrictive aerial permitting state in the Northeast: every aerial application — including drones — requires a mandatory Aerial Permit issued by the Secretary with a 30-day public comment period, and buffer distances are set per-permit by the Secretary. The aerial exam must be taken in person, and the passing score is 75 percent (above the 70 percent national standard). Category fees are $30/yr each with a $120 maximum cap, and retakes cost $25.\n\nThe renewal cycle is 5 years with 16 CE credits required. Reciprocity exists with NY, NJ, RI, and PA. Operators must also comply with Vermont Agency of Transportation rules during application.',
+    authorityLinks: [
+      { label: 'Vermont Agency of Agriculture', url: 'https://agriculture.vermont.gov' },
+      { label: 'UVM Extension', url: 'https://www.uvm.edu/extension' },
+    ],
+    faqs: [
+      { question: 'What is the Aerial Permit with public comment?', answer: 'Vermont requires a permit application for every aerial pesticide application, including drones, with a 30-day public comment period. Buffer distances are set by the Secretary. This is the most restrictive aerial permitting process in the Northeast.' },
+      { question: 'What does drone spraying cost in Vermont?', answer: '$20 to $30 per acre. Very limited acreage, small fields, and few operators push rates above neighboring states.' },
+      { question: 'Is the higher passing score difficult?', answer: '75 percent vs the national standard of 70 percent. Marginal difference but catches some test-takers who would pass in other states. The in-person exam requirement also adds a travel commitment.' },
+      { question: 'What crops use drones in Vermont?', answer: 'Dairy silage corn (85K acres), Champlain Valley apples, and specialty vegetables. Total acreage is very small.' },
+      { question: 'Does Vermont have reciprocal licensing?', answer: 'Yes, with NY, NJ, RI, and PA.' },
+    ],
+    lastReviewedAt: '2026-04-16',
+  },
 ];
 
 export function getStateData(slug: string): StateData | undefined {
