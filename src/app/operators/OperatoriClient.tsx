@@ -145,6 +145,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
             <input
               type="text"
               placeholder="Search by name, city..."
+              aria-label="Search operators by name or city"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-9 pr-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
@@ -155,6 +156,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
           <select
             value={selectedCounty}
             onChange={(e) => setSelectedCounty(e.target.value)}
+            aria-label="Filter by state"
             className="px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[150px]"
           >
             <option value="">All States</option>
@@ -167,6 +169,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
           <select
             value={selectedService}
             onChange={(e) => setSelectedService(e.target.value as ServiceType | '')}
+            aria-label="Filter by service"
             className="px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[160px]"
           >
             <option value="">All Services</option>
@@ -181,6 +184,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
+              aria-label="Sort operators"
               className="pl-9 pr-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[190px]"
             >
               {Object.entries(SORT_LABELS).map(([key, label]) => (

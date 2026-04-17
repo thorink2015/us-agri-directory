@@ -121,8 +121,8 @@ export default function CountyCropPage({ params }: Props) {
                 key={month}
                 className={`text-center py-2 rounded-lg text-xs font-medium ${
                   isActive
-                    ? 'bg-green-600 text-white'
-                    : 'bg-gray-100 text-gray-600'
+                    ? 'bg-green-700 text-white'
+                    : 'bg-gray-100 text-gray-700'
                 }`}
               >
                 {month}

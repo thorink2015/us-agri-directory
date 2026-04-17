@@ -54,7 +54,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Services</h3>
+            <h2 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Services</h2>
             <ul className="space-y-2 text-sm text-green-300">
               <li><Link href="/services/spraying" className="hover:text-white transition-colors">Drone Spraying</Link></li>
               <li><Link href="/services/seeding" className="hover:text-white transition-colors">Cover Crop Seeding</Link></li>
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* Directory */}
           <div>
-            <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Directory</h3>
+            <h2 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Directory</h2>
             <ul className="space-y-2 text-sm text-green-300">
               <li><Link href="/operators" className="hover:text-white transition-colors">All Operators</Link></li>
               <li><Link href="/states" className="hover:text-white transition-colors">Browse by State</Link></li>
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Company</h3>
+            <h2 className="font-semibold text-white mb-3 text-sm uppercase tracking-wide">Company</h2>
             <ul className="space-y-2 text-sm text-green-300">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
@@ -92,7 +92,7 @@ export default function Footer() {
         {/* Newsletter subscribe */}
         <div className="border-t border-green-800 pt-8 pb-6 mb-0">
           <div className="max-w-lg">
-            <h3 className="font-semibold text-white mb-1">Stay updated</h3>
+            <h2 className="font-semibold text-white mb-1">Stay updated</h2>
             <p className="text-sm text-green-300 mb-3">
               New operators, pricing updates, and FAA regulatory changes, delivered to your inbox.
             </p>

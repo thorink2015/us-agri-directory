@@ -110,7 +110,7 @@ export default function PrivacyPage() {
             <p className="leading-relaxed">
               Information submitted through the List Your Business form is published on the
               directory. If you want your listing updated or removed, email{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 hover:underline">
+              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 underline">
                 {CONTACT_EMAIL}
               </a>{' '}
               with subject &quot;Listing update&quot; or &quot;Listing removal.&quot;
@@ -122,7 +122,7 @@ export default function PrivacyPage() {
             <p className="leading-relaxed">
               You can request access to, correction of, or deletion of any personal data we hold
               by emailing{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 hover:underline">
+              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 underline">
                 {CONTACT_EMAIL}
               </a>
               . We respond within 30 days.
@@ -133,7 +133,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3">Contact</h2>
             <p className="leading-relaxed">
               Questions about this policy:{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 hover:underline">
+              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 underline">
                 {CONTACT_EMAIL}
               </a>
             </p>

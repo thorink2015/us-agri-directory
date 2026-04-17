@@ -103,11 +103,12 @@ export default function ROICalculator() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           <div className="sm:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="roi-acres" className="block text-sm font-medium text-gray-700 mb-1">
               Annual acres you plan to spray
             </label>
             <div className="flex gap-2 items-center">
               <input
+                id="roi-acres"
                 type="range"
                 min={100}
                 max={10000}
@@ -115,6 +116,7 @@ export default function ROICalculator() {
                 value={acres}
                 onChange={(e) => { setAcres(Number(e.target.value)); setAcresInput(e.target.value); }}
                 className="flex-1 accent-green-700"
+                aria-label="Annual acres"
               />
               <input
                 type="number"
@@ -132,8 +134,9 @@ export default function ROICalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Drone model</label>
+            <label htmlFor="roi-drone" className="block text-sm font-medium text-gray-700 mb-1">Drone model</label>
             <select
+              id="roi-drone"
               value={droneId}
               onChange={(e) => setDroneId(e.target.value)}
               className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-100 focus:outline-none"
@@ -145,8 +148,9 @@ export default function ROICalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">Ownership years</label>
+            <label htmlFor="roi-years" className="block text-sm font-medium text-gray-700 mb-1">Ownership years</label>
             <select
+              id="roi-years"
               value={years}
               onChange={(e) => setYears(Number(e.target.value))}
               className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:border-green-500 focus:ring-2 focus:ring-green-100 focus:outline-none"
@@ -156,10 +160,11 @@ export default function ROICalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="roi-eqip" className="block text-sm font-medium text-gray-700 mb-1">
               EQIP cost-share: <span className="text-emerald-700 font-bold">{eqipPct}%</span>
             </label>
             <input
+              id="roi-eqip"
               type="range"
               min={0}
               max={75}
@@ -167,6 +172,7 @@ export default function ROICalculator() {
               value={eqipPct}
               onChange={(e) => setEqipPct(Number(e.target.value))}
               className="w-full accent-emerald-600"
+              aria-label="EQIP cost-share percentage"
             />
             <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>0%</span><span>75%</span>
@@ -174,10 +180,11 @@ export default function ROICalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="roi-interest" className="block text-sm font-medium text-gray-700 mb-1">
               Interest rate: <span className="text-gray-700 font-bold">{interestRate}%</span>
             </label>
             <input
+              id="roi-interest"
               type="range"
               min={0}
               max={15}
@@ -185,6 +192,7 @@ export default function ROICalculator() {
               value={interestRate}
               onChange={(e) => setInterestRate(Number(e.target.value))}
               className="w-full accent-gray-500"
+              aria-label="Interest rate"
             />
             <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>0%</span><span>15%</span>
@@ -192,10 +200,11 @@ export default function ROICalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="roi-hire-rate" className="block text-sm font-medium text-gray-700 mb-1">
               Custom hire rate: <span className="text-green-700 font-bold">${hireRate}/acre</span>
             </label>
             <input
+              id="roi-hire-rate"
               type="range"
               min={8}
               max={40}
@@ -203,6 +212,7 @@ export default function ROICalculator() {
               value={hireRate}
               onChange={(e) => setHireRate(Number(e.target.value))}
               className="w-full accent-green-700"
+              aria-label="Custom hire rate per acre"
             />
             <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>$8</span><span>$40</span>
@@ -210,10 +220,11 @@ export default function ROICalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="roi-batteries" className="block text-sm font-medium text-gray-700 mb-1">
               Batteries included: <span className="text-gray-700 font-bold">{batteries}</span>
             </label>
             <input
+              id="roi-batteries"
               type="range"
               min={2}
               max={8}
@@ -221,6 +232,7 @@ export default function ROICalculator() {
               value={batteries}
               onChange={(e) => setBatteries(Number(e.target.value))}
               className="w-full accent-gray-500"
+              aria-label="Batteries included"
             />
             <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>2</span><span>8</span>
@@ -228,10 +240,11 @@ export default function ROICalculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="roi-battery-cost" className="block text-sm font-medium text-gray-700 mb-1">
               Battery cost each: <span className="text-gray-700 font-bold">{fmt(batteryCost)}</span>
             </label>
             <input
+              id="roi-battery-cost"
               type="range"
               min={500}
               max={3000}
@@ -239,6 +252,7 @@ export default function ROICalculator() {
               value={batteryCost}
               onChange={(e) => setBatteryCost(Number(e.target.value))}
               className="w-full accent-gray-500"
+              aria-label="Battery cost each"
             />
             <div className="flex justify-between text-xs text-gray-600 mt-0.5">
               <span>$500</span><span>$3,000</span>
