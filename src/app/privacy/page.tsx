@@ -5,7 +5,7 @@ import { SITE } from '@/data/author';
 export const metadata: Metadata = {
   title: 'Privacy Policy | US Ag Drone Directory',
   description:
-    'How we handle your data. No tracking cookies, no ads, no data sales. Plausible Analytics only.',
+    'How we handle your data. Google Analytics (GA4) for anonymous traffic stats. No ads, no behavioral profiling, no data sales.',
   alternates: { canonical: '/privacy' },
 };
 
@@ -19,7 +19,7 @@ export default function PrivacyPage() {
     name: 'Privacy Policy',
     url: `${SITE.domain}/privacy`,
     description:
-      'Privacy policy for US Ag Drone Directory. No tracking cookies, no ads, no data sales.',
+      'Privacy policy for US Ag Drone Directory. Google Analytics (GA4) for anonymous traffic stats, no ads, no data sales.',
     dateModified: '2026-04-17',
     publisher: { '@id': `${SITE.domain}/#organization` },
   };
@@ -67,14 +67,10 @@ export default function PrivacyPage() {
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">Analytics</h2>
-            <p className="leading-relaxed mb-3">
-              We use Plausible Analytics (plausible.io), a privacy-focused analytics tool that
-              does not use cookies, does not track individuals, and does not collect personal
-              data. Plausible is GDPR, CCPA, and PECR compliant. No consent banner is required
-              because no personal data is processed.
-            </p>
             <p className="leading-relaxed">
-              We do not use Google Analytics, Facebook Pixel, or any advertising trackers.
+              We use Google Analytics (GA4) for anonymous traffic statistics. GA4 uses first-party
+              cookies. We do not use advertising trackers, Facebook Pixel, or behavioral profiling
+              tools.
             </p>
           </section>
 
@@ -83,7 +79,6 @@ export default function PrivacyPage() {
             <ul className="list-disc pl-6 space-y-2">
               <li>We do not sell your data to anyone</li>
               <li>We do not share your data with advertisers</li>
-              <li>We do not use tracking cookies</li>
               <li>We do not build behavioral profiles</li>
               <li>We do not serve ads</li>
             </ul>
@@ -92,15 +87,16 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">Cookies</h2>
             <p className="leading-relaxed">
-              This site uses only strictly necessary cookies for site functionality (session
-              management if applicable). No marketing, analytics, or third-party cookies are used.
+              This site uses strictly necessary cookies for site functionality and first-party
+              cookies from Google Analytics (GA4) for anonymous traffic measurement. No marketing
+              or advertising cookies are used.
             </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">Third-party services</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Plausible Analytics (plausible.io): anonymous traffic statistics</li>
+              <li>Google Analytics (GA4): anonymous traffic statistics</li>
               <li>Netlify (netlify.com): hosting</li>
               <li>Cloudflare (cloudflare.com): CDN and security</li>
             </ul>
