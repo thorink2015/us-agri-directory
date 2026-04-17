@@ -7,7 +7,7 @@ const DRONE_MODELS = [
   { id: 'dji-t50',     name: 'DJI Agras T50',   tankGal: 10.6, flightMin: 8,  chargeMin: 10, swapMin: 3 },
   { id: 'dji-t100',    name: 'DJI Agras T100',  tankGal: 26.4, flightMin: 10, chargeMin: 9,  swapMin: 4 },
   { id: 'dji-t25',     name: 'DJI Agras T25',   tankGal: 5.3,  flightMin: 7,  chargeMin: 10, swapMin: 3 },
-  { id: 'hylio-ag272', name: 'Hylio AG-272',    tankGal: 18,   flightMin: 9,  chargeMin: 28, swapMin: 4 },
+  { id: 'hylio-ag-272', name: 'Hylio AG-272',    tankGal: 18,   flightMin: 9,  chargeMin: 28, swapMin: 4 },
   { id: 'hylio-ag230', name: 'Hylio AG-230',    tankGal: 8,    flightMin: 8,  chargeMin: 28, swapMin: 3 },
   { id: 'xag-p100',    name: 'XAG P100 Pro',    tankGal: 13.2, flightMin: 9,  chargeMin: 15, swapMin: 3 },
   { id: 'talos-t60x',  name: 'Talos T60X',      tankGal: 13.2, flightMin: 9,  chargeMin: 12, swapMin: 3 },

@@ -6,7 +6,7 @@ import { TrendingUp } from 'lucide-react';
 const DRONE_MODELS = [
   { id: 'dji-t50', name: 'DJI Agras T50', price: 25000 },
   { id: 'dji-t25', name: 'DJI Agras T25', price: 18000 },
-  { id: 'hylio-ag272', name: 'Hylio AG-272', price: 65000 },
+  { id: 'hylio-ag-272', name: 'Hylio AG-272', price: 65000 },
   { id: 'talos-t60x', name: 'Talos T60X', price: 18000 },
 ];
 
