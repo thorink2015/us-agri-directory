@@ -154,8 +154,8 @@ export const crops: Crop[] = [
     uvlNormLHa: '2 to 5 gpa',
     yieldGainPct: 5,
     authorityLinks: [
-      { label: 'USDA ARS Wheat Scab Initiative (scabusa.org)', url: 'https://www.scabusa.org' },
-      { label: 'Kansas State Extension: Wheat Disease Management', url: 'https://bookstore.ksre.ksu.edu/pubs/EP130.pdf' },
+      { label: 'USDA ARS Wheat Scab Initiative (scabusa.org)', url: 'https://scabusa.org' },
+      { label: 'Kansas State Extension: Wheat Disease Management', url: 'https://bookstore.ksre.ksu.edu/pubs/foliar-fungicide-efficacy-ratings-for-wheat-disease-management-2026_EP130.pdf' },
       { label: 'NDSU Extension: Wheat Production', url: 'https://www.ndsu.edu/agriculture//ag-hub/ag-topics/crop-production/crops/wheat' },
       { label: 'USDA NASS: Wheat Acreage and Production', url: 'https://www.nass.usda.gov/Charts_and_Maps/Field_Crops/' },
     ],
@@ -473,7 +473,7 @@ export const crops: Crop[] = [
     yieldGainPct: 0,
     authorityLinks: [
       { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340' },
-      { label: 'Midwest Cover Crops Council: Species Selection', url: 'https://midwestcovercrops.org/covercroptool' },
+      { label: 'Midwest Cover Crops Council: Species Selection', url: 'https://covercroptool.midwestcovercrops.org/covercroptool/' },
       { label: 'Penn State Extension: Aerial Cover Crop Seeding', url: 'https://extension.psu.edu/cover-crops' },
       { label: 'USDA EQIP Program Overview', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
     ],

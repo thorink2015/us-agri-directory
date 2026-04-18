@@ -626,7 +626,7 @@ export const blogContent: Record<string, ReactNode> = {
           </a>
         </li>
         <li>
-          <a href={addUtm("https://hyl.io", "drone_specs")} target="_blank" rel="noopener noreferrer">
+          <a href={addUtm("https://www.hyl.io", "drone_specs")} target="_blank" rel="noopener noreferrer">
             Hylio official site
           </a>
         </li>
@@ -720,7 +720,7 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href={addUtm("https://midwestcovercrops.org/covercroptool", "authority_link")}
+            href={addUtm("https://covercroptool.midwestcovercrops.org/covercroptool/", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -41,7 +41,7 @@ const COVERAGE = [
 ];
 
 const INSURERS = [
-  { name: 'BWI Companies', url: 'https://www.bwifly.com', note: 'Largest aviation insurance broker. Ag drone specialty division.' },
+  { name: 'BWI Companies', url: 'https://bwifly.com', note: 'Largest aviation insurance broker. Ag drone specialty division.' },
   { name: 'AssuredPartners Aerospace', url: 'https://www.assuredpartners.com', note: 'Broad aviation insurance. Ag drone endorsements.' },
   { name: 'Global Aerospace', url: 'https://www.global-aero.com', note: 'International aviation insurer with US ag drone coverage.' },
   { name: 'Skyward', url: 'https://www.skyward.io', note: 'Drone-specific insurance platform with online quoting.' },
@@ -190,7 +190,7 @@ export default function InsurancePage() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href={addUtm("https://www.bwifly.com", "service_provider")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://bwifly.com", "service_provider")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 BWI Companies (aviation insurance broker)
               </a>
             </li>
