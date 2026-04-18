@@ -389,7 +389,7 @@ export const blogContent: Record<string, ReactNode> = {
 
       <h2>Where rates are still high</h2>
       <p>
-        Specialty crops remain less compressed. Vineyards: $18 to $30. Orchards: $15 to $21.
+        Specialty crops remain less compressed. Vineyards: $18 to $30. Orchards: $20 to $35.
         Specialty vegetables: $20 to $40. Fewer operators, more complex terrain, more passes per
         season. Drone <Link href="/services/spraying">spraying services</Link> on specialty blocks
         are where most of the margin left in the market actually lives.
