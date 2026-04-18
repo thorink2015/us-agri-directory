@@ -39,10 +39,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/grants-and-subsidies' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'USDA Grants and Cost-Share Programs for Agricultural Drones',
     description:
       'EQIP 595 covers 40 to 90 percent on drone purchases. EQIP 340 covers cover crop seeding at $25 to $55 per acre. FSA loans at 6 to 9 percent.',
     url: `${SITE.domain}/grants-and-subsidies`,
+    siteName: SITE.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'USDA Grants and Cost-Share Programs for Agricultural Drones',
+      },
+    ],
   },
 };
 

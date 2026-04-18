@@ -54,7 +54,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'vineyard-drone-spraying-guide',
-    title: 'Drone Spraying for Vineyards: The 2026 Guide for Wine Grape Growers',
+    title: 'Drone Spraying for Vineyards: 2026 Wine Grape Guide',
     description:
       'Vineyard drone spraying costs $18 to $30/acre per pass. 8 to 12 passes per season. UC Davis: 30 to 40% less chemical runoff on hillside blocks.',
     category: 'guide',
@@ -120,7 +120,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'ndaa-chinese-drones-what-farmers-need-to-know',
-    title: 'The DJI Question: NDAA, Tariffs, and What It Means for Your Farm',
+    title: 'The DJI Question: NDAA, Tariffs, and Your Farm',
     description:
       'DJI drones are legal but face 170% tariffs and pending legislation. What NDAA means, who is affected, and when to consider US-made alternatives.',
     category: 'legislation',
@@ -152,7 +152,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'drone-spraying-pricing-trends-2026',
-    title: 'Why Drone Spraying Rates Dropped 30 to 45 Percent in Three Years',
+    title: 'Why Drone Spray Rates Dropped 30-45% in Three Years',
     description:
       'Midwest drone spray rates fell from $22 to $25/acre in 2022 to $12 to $17 in 2026. Iowa State benchmark: $12.50/acre. What is driving compression.',
     category: 'guide',
@@ -185,7 +185,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'drone-spraying-state-license-guide',
-    title: 'What Pesticide License Do You Need to Spray by Drone in Your State?',
+    title: 'What Pesticide License Do You Need to Spray by Drone?',
     description:
       'Every state requires a pesticide applicator license for drone spraying. Quick reference: aerial categories, exams, fees, and unique rules for all 50 states.',
     category: 'guide',
@@ -314,7 +314,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'corn-fungicide-drone-spraying-guide',
-    title: 'Corn Fungicide by Drone: What the University Data Actually Shows',
+    title: 'Corn Fungicide by Drone: What University Data Shows',
     description:
       'Drone fungicide on corn at VT/R1 costs $12 to $18/acre and yields 5 to 8 extra bushels. University trial data, timing guide, and how to book.',
     category: 'guide',

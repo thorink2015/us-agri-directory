@@ -155,9 +155,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/tools/treatment-calendar' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'When Should You Book Drone Spraying? Treatment Calendar',
     description: 'Monthly drone application windows by crop with booking deadlines. Corn VT/R1 peaks mid-to-late July. Book 4 to 6 weeks ahead.',
     url: `${SITE.domain}/tools/treatment-calendar`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Drone Spray Treatment Calendar',
+      },
+    ],
   },
 };
 

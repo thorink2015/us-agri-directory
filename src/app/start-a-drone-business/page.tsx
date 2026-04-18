@@ -72,10 +72,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/start-a-drone-business' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'How to Start an Agricultural Drone Spraying Business in 2026',
     description:
       '$15K to $80K startup, 6 to 9 month certification pathway, break-even at ~980 acres/yr. Complete 2026 guide to licensing, equipment, pricing, and first customers.',
     url: `${SITE.domain}/start-a-drone-business`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'How to Start an Agricultural Drone Spraying Business in 2026',
+      },
+    ],
   },
 };
 

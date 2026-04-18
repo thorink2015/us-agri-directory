@@ -49,10 +49,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/comparisons/drone-vs-airplane' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Drone Spraying vs Airplane: Which Is Right for Your Acreage?',
     description:
       'Iowa State 2026: drones $12.50/acre, airplanes $12.00/acre. Crossover at 500 to 1,000 acres. Drones take share on drift-sensitive and sub-500-acre fields.',
     url: `${SITE.domain}/comparisons/drone-vs-airplane`,
+    siteName: SITE.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Drone Spraying vs Airplane',
+      },
+    ],
   },
 };
 

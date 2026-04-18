@@ -53,10 +53,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/training-and-certification' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'Agricultural Drone Pilot Training and Certification Guide',
     description:
       'Complete pathway: Part 107 ($175), state pesticide license ($75 to $500), Part 137 + 44807 ($2,500 to $4,500). Total cost $3,500 to $6,000. Timeline 6 to 9 months.',
     url: `${SITE.domain}/training-and-certification`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Agricultural Drone Pilot Training and Certification Guide',
+      },
+    ],
   },
 };
 

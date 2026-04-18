@@ -39,10 +39,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/regulations/ndaa-compliance' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'NDAA Compliance: What Ag Drone Operators Need to Know',
     description:
       'DJI remains legal for private commercial use but excluded from federal contracts. Hylio AG-272, Pyka Pelican 2, and Blue UAS platforms are the NDAA-compliant alternatives.',
     url: `${SITE.domain}/regulations/ndaa-compliance`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'NDAA Compliance for Ag Drone Operators',
+      },
+    ],
   },
 };
 

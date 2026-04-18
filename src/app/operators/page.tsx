@@ -10,9 +10,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/operators' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'All Ag Drone Operators | US Agricultural Drone Directory',
     description: 'Find verified drone spraying operators across all 50 states. Compare rates, equipment, and certifications.',
     url: 'https://agdronedirectory.com/operators',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'All Ag Drone Operators',
+      },
+    ],
   },
 };
 

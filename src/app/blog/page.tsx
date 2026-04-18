@@ -9,6 +9,23 @@ export const metadata: Metadata = {
   description:
     'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies, and equipment comparisons.',
   alternates: { canonical: '/blog' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Ag Drone Blog: Lists, Guides & Industry News 2026',
+    description:
+      'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies, and equipment comparisons.',
+    url: 'https://agdronedirectory.com/blog',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'US Ag Drone Directory Blog',
+      },
+    ],
+  },
 };
 
 export default function BlogHub() {

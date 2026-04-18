@@ -42,10 +42,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/regulations/state-licensing' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'State Pesticide Applicator Licensing for Drone Operators',
     description:
       'California, North Dakota, and Arizona issue drone-specific credentials. Oregon requires 50 hours of flight experience. See every state licensing path.',
     url: `${SITE.domain}/regulations/state-licensing`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'State Pesticide Applicator Licensing for Drone Operators',
+      },
+    ],
   },
 };
 

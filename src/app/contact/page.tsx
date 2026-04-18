@@ -10,9 +10,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/contact' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: `Contact ${SITE.name}`,
     description: 'Submit your listing, report a correction, or send partnership inquiries.',
     url: `${SITE.domain}/contact`,
+    siteName: SITE.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: `Contact ${SITE.name}`,
+      },
+    ],
   },
 };
 

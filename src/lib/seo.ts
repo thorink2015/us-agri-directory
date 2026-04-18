@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { Operator } from '@/data/types';
 import { County } from '@/data/types';
 
-const SITE_URL = 'https://agdronedirectory.com';
-const SITE_NAME = 'US Ag Drone Directory';
+export const SITE_URL = 'https://agdronedirectory.com';
+export const SITE_NAME = 'US Ag Drone Directory';
 
 export function buildOperatorMetadata(operator: Operator): Metadata {
   const price = operator.priceMinUsd
@@ -12,8 +12,8 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
   const coverage = `Service area: ${operator.counties.length} state${operator.counties.length !== 1 ? 's' : ''}.`;
   const baseCity = operator.city.split(/[,(/]/)[0].trim();
   const fullTitle = `${operator.name}: Drone Spraying in ${baseCity}`;
-  const title = fullTitle.length > 60
-    ? `${operator.name.slice(0, 57).trim()}…`
+  const title = fullTitle.length > 55
+    ? `${operator.name.slice(0, 52).trim()}…`
     : fullTitle;
   const fullDesc = `${operator.name}, ag drone operator in ${baseCity}. ${price}${operator.services.length} services. ${coverage} Contact directly.`;
   const description = fullDesc.length > 160 ? `${fullDesc.slice(0, 157).trim()}…` : fullDesc;
@@ -27,11 +27,28 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
       url: `${SITE_URL}/operators/${operator.slug}`,
       siteName: SITE_NAME,
       type: 'website',
+      locale: 'en_US',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${operator.name}, agricultural drone operator in ${baseCity}`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${operator.name} | Ag Drone Services, ${operator.city}`,
       description: operator.description.slice(0, 155),
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${operator.name}, agricultural drone operator in ${baseCity}`,
+        },
+      ],
     },
   };
 }
@@ -49,11 +66,28 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
       url: `${SITE_URL}/states/${county.slug}`,
       siteName: SITE_NAME,
       type: 'website',
+      locale: 'en_US',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `Drone Spraying in ${county.name}`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `Drone Spraying in ${county.name} | Rates and Operators`,
       description: desc,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `Drone Spraying in ${county.name}`,
+        },
+      ],
     },
   };
 }

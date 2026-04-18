@@ -65,10 +65,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/regulations' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'US Agricultural Drone Spraying Regulations (2026)',
     description:
       'FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance, the three-credential stack required for commercial ag drone spraying.',
     url: `${SITE.domain}/regulations`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'US Agricultural Drone Spraying Regulations',
+      },
+    ],
   },
 };
 

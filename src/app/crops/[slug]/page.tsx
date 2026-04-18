@@ -29,14 +29,24 @@ export async function generateMetadata({ params }: Props) {
   const crop = getCropBySlug(params.slug);
   if (!crop) return {};
   return {
-    title: `${crop.name}: Drone Spraying Rates & Operators 2026`,
+    title: `${crop.name}: Drone Spraying Rates 2026`,
     description: crop.aeoBlock.slice(0, 155),
     alternates: { canonical: `/crops/${params.slug}` },
     openGraph: {
       type: 'website',
+      locale: 'en_US',
+      siteName: 'US Ag Drone Directory',
       title: `Drone Spraying for ${crop.name} | US Ag Drone Directory`,
       description: `$${crop.priceMinUsd} to $${crop.priceMaxUsd}/acre, treatment calendar, key pests, and verified operators across all 50 states.`,
       url: `https://agdronedirectory.com/crops/${crop.slug}`,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `Drone Spraying for ${crop.name}`,
+        },
+      ],
     },
   };
 }
