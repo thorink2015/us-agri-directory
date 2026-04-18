@@ -186,7 +186,7 @@ export default function StateLicensingPage() {
           <Link href="/regulations/faa-part-107" className="text-green-700 hover:underline">FAA Part 107</Link>
           <Link href="/regulations/faa-part-137" className="text-green-700 hover:underline">FAA Part 137</Link>
           <Link href="/regulations/ndaa-compliance" className="text-green-700 hover:underline">NDAA compliance</Link>
-          <Link href="/training" className="text-green-700 hover:underline">Training providers</Link>
+          <Link href="/training-and-certification" className="text-green-700 hover:underline">Training providers</Link>
           <Link href="/states" className="text-green-700 hover:underline">All state guides</Link>
           <Link href="/services/spraying" className="text-green-700 hover:underline">Drone spraying services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
