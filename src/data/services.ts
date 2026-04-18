@@ -15,7 +15,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '💧',
     authorityLinks: [
-      { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/newsroom/ag-operations' },
+      { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'EPA Pesticide Registration and Labeling', url: 'https://www.epa.gov/pesticide-labels' },
       { label: 'USDA NASS: Agricultural Chemical Use Surveys', url: 'https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use' },
     ],
@@ -251,7 +251,7 @@ export const services: ServiceDefinition[] = [
     icon: '🎓',
     authorityLinks: [
       { label: 'FAA Part 107 Knowledge Test Study Materials', url: 'https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot' },
-      { label: 'FAA Part 137 Certification Process', url: 'https://www.faa.gov/uas/advanced_operations/agricultural' },
+      { label: 'FAA Part 137 Certification Process for UAS', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'National Pesticide Safety Education Center (NPSEC)', url: 'https://npsec.us' },
     ],
     faqs: [
@@ -297,7 +297,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per week',
     icon: '🚁',
     authorityLinks: [
-      { label: 'FAA Part 137 Certification Requirements for Rented Drones', url: 'https://www.faa.gov/uas/advanced_operations/agricultural' },
+      { label: 'FAA Part 137 Requirements for Agricultural UAS', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'AUVSI Insurance and Risk Management for UAS Operators', url: 'https://www.auvsi.org' },
       { label: 'USDA Farm Service Agency: Equipment Cost-Share Programs', url: 'https://www.fsa.usda.gov' },
     ],
@@ -391,7 +391,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per hour or per package',
     icon: '📋',
     authorityLinks: [
-      { label: 'FAA Part 137 Agricultural Aircraft Operations Guidance', url: 'https://www.faa.gov/uas/advanced_operations/agricultural' },
+      { label: 'FAA Part 137 Agricultural UAS Operations Guidance', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'SBA Small Business Development Center Locator', url: 'https://www.sba.gov/local-assistance/find' },
       { label: 'National Agricultural Aviation Association (NAAA)', url: 'https://www.agaviation.org' },
     ],
@@ -438,7 +438,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '🚨',
     authorityLinks: [
-      { label: 'USDA APHIS Plant Pest and Disease Programs', url: 'https://www.aphis.usda.gov/aphis/ourfocus/planthealth' },
+      { label: 'USDA APHIS Plant Pest and Disease Programs', url: 'https://www.aphis.usda.gov/plant-pests-diseases' },
       { label: 'National Plant Diagnostic Network (NPDN)', url: 'https://www.npdn.org' },
       { label: 'USDA Climate Hubs: Weather and Climate Resources', url: 'https://www.climatehubs.usda.gov' },
     ],
