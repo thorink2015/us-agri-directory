@@ -18,15 +18,16 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const county = getCountyBySlug(params.slug);
   if (!county) return {};
+  const desc = `Verified agricultural drone operators serving ${county.name} farms. Compare services, coverage areas, and 2026 spray rates, then contact directly.`;
   return {
     title: `${county.name} Drone Operators: Rates & Contact`,
-    description: `Full list of agricultural drone operators in ${county.name}. Direct contact and estimated rates.`,
+    description: desc,
     alternates: { canonical: `/states/${params.slug}/operators` },
     openGraph: {
       type: 'website',
       locale: 'en_US',
       title: `${county.name} Drone Operators | US Ag Drone Directory`,
-      description: `Full list of agricultural drone operators in ${county.name}. Direct contact and estimated rates.`,
+      description: desc,
       url: `${SITE.domain}/states/${params.slug}/operators`,
       siteName: 'US Ag Drone Directory',
       images: [

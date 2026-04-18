@@ -6,16 +6,16 @@ export const SITE_URL = 'https://agdronedirectory.com';
 export const SITE_NAME = 'US Ag Drone Directory';
 
 export function buildOperatorMetadata(operator: Operator): Metadata {
-  const price = operator.priceMinUsd
-    ? `Rates from $${operator.priceMinUsd}/acre. `
-    : '';
-  const coverage = `Service area: ${operator.counties.length} state${operator.counties.length !== 1 ? 's' : ''}.`;
   const baseCity = operator.city.split(/[,(/]/)[0].trim();
   const fullTitle = `${operator.name}: Drone Spraying in ${baseCity}`;
   const title = fullTitle.length > 55
     ? `${operator.name.slice(0, 52).trim()}…`
     : fullTitle;
-  const fullDesc = `${operator.name}, ag drone operator in ${baseCity}. ${price}${operator.services.length} services. ${coverage} Contact directly.`;
+  const pricePart = operator.priceMinUsd ? `Rates from $${operator.priceMinUsd}/acre. ` : '';
+  const svcCount = operator.services.length;
+  const stateCount = operator.counties.length;
+  const locationPart = baseCity ? ` based in ${baseCity}` : '';
+  const fullDesc = `${operator.name}, professional agricultural drone operator${locationPart}. ${pricePart}Offers ${svcCount} service${svcCount !== 1 ? 's' : ''} across ${stateCount} state${stateCount !== 1 ? 's' : ''}. Get verified contact info and direct quotes.`;
   const description = fullDesc.length > 160 ? `${fullDesc.slice(0, 157).trim()}…` : fullDesc;
   return {
     title,
