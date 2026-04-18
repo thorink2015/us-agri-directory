@@ -9,6 +9,7 @@ import { formatPrice } from '@/lib/utils';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import { SITE } from '@/data/author';
 
 interface Props {
   params: { slug: string; crop: string };
@@ -30,6 +31,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: `Drone operators for ${crop.name.toLowerCase()} in ${county.name}. Rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre, contact verified operators directly.`,
     alternates: {
       canonical: `/states/${params.slug}/crops/${params.crop}`,
+    },
+    openGraph: {
+      type: 'website',
+      title: `${crop.name} Drone Spraying in ${county.name} | US Ag Drone Directory`,
+      description: `Drone operators for ${crop.name.toLowerCase()} in ${county.name}. Rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre, contact verified operators directly.`,
+      url: `${SITE.domain}/states/${params.slug}/crops/${params.crop}`,
+      siteName: 'US Ag Drone Directory',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${crop.name} drone spraying in ${county.name}`,
+        },
+      ],
     },
   };
 }

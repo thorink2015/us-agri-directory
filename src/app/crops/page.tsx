@@ -8,6 +8,22 @@ export const metadata: Metadata = {
   description:
     'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs, and equipment for every major US crop.',
   alternates: { canonical: '/crops' },
+  openGraph: {
+    type: 'website',
+    title: 'Drone Services by Crop: Corn, Soybeans, Cotton, Wheat',
+    description:
+      'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs, and equipment for every major US crop.',
+    url: 'https://agdronedirectory.com/crops',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Drone services by crop type',
+      },
+    ],
+  },
 };
 
 export default function CropsPage() {

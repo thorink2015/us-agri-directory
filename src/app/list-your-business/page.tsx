@@ -35,6 +35,15 @@ export const metadata: Metadata = {
     description:
       'Free listing for verified US agricultural drone operators. Review and publish within 3 to 5 business days.',
     url: `${SITE.domain}/list-your-business`,
+    siteName: SITE.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'List Your Agricultural Drone Business for Free',
+      },
+    ],
   },
 };
 

@@ -7,6 +7,22 @@ export const metadata: Metadata = {
   description:
     'How we handle your data. Google Analytics (GA4) for anonymous traffic stats. No ads, no behavioral profiling, no data sales.',
   alternates: { canonical: '/privacy' },
+  openGraph: {
+    type: 'website',
+    title: 'Privacy Policy | US Ag Drone Directory',
+    description:
+      'How we handle your data. Google Analytics (GA4) for anonymous traffic stats. No ads, no behavioral profiling, no data sales.',
+    url: `${SITE.domain}/privacy`,
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'US Ag Drone Directory Privacy Policy',
+      },
+    ],
+  },
 };
 
 const CONTACT_EMAIL = 'contact@agdronedirectory.com';

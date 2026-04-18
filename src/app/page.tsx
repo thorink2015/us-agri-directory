@@ -112,6 +112,15 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Find Drone Spraying Services Near You | US Ag Drone Directory',
       description: `${operatorCount}+ verified ag drone operators across all 50 states. Compare rates and contact directly.`,
       url: SITE.domain,
+      siteName: SITE.name,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: 'US Ag Drone Directory, Find Verified Agricultural Drone Operators Near You',
+        },
+      ],
     },
     other: {
       'impact-site-verification': '9797c758-df9e-4dff-9f78-73f66157b2d5',

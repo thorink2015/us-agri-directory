@@ -34,6 +34,15 @@ export const metadata: Metadata = {
     title: `About ${SITE.name}`,
     description: `Founded and edited by ${AUTHOR.firstName}. Every page personally researched and updated.`,
     url: `${SITE.domain}/about`,
+    siteName: SITE.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: `About ${SITE.name}`,
+      },
+    ],
   },
 };
 

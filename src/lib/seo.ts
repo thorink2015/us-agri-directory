@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { Operator } from '@/data/types';
 import { County } from '@/data/types';
 
-const SITE_URL = 'https://agdronedirectory.com';
-const SITE_NAME = 'US Ag Drone Directory';
+export const SITE_URL = 'https://agdronedirectory.com';
+export const SITE_NAME = 'US Ag Drone Directory';
 
 export function buildOperatorMetadata(operator: Operator): Metadata {
   const price = operator.priceMinUsd

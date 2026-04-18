@@ -10,6 +10,7 @@ import { formatPrice } from '@/lib/utils';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import { SITE } from '@/data/author';
 
 interface Props {
   params: { slug: string; service: string };
@@ -31,6 +32,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: `${service.name} drone services in ${county.name}. Compare rates from verified operators and contact them directly for your ${county.name} fields.`,
     alternates: {
       canonical: `/states/${params.slug}/services/${params.service}`,
+    },
+    openGraph: {
+      type: 'website',
+      title: `${service.name} in ${county.name} | US Ag Drone Directory`,
+      description: `${service.name} drone services in ${county.name}. Compare rates from verified operators and contact them directly for your ${county.name} fields.`,
+      url: `${SITE.domain}/states/${params.slug}/services/${params.service}`,
+      siteName: 'US Ag Drone Directory',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${service.name} in ${county.name}`,
+        },
+      ],
     },
   };
 }

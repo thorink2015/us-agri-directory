@@ -11,6 +11,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   purple: 'bg-purple-100 text-purple-800',
 };
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import { SITE } from '@/data/author';
 import { guideContent } from './content';
 
 interface Props {
@@ -33,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: guide.description,
       type: 'article',
       publishedTime: guide.lastUpdated,
+      url: `${SITE.domain}/guides/${guide.slug}`,
     },
   };
 }

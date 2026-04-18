@@ -15,6 +15,15 @@ export const metadata: Metadata = {
     description:
       'The complete glossary of agricultural drone terminology: FAA regulations, spray application, drone hardware, and ag business terms.',
     url: 'https://agdronedirectory.com/glossary',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Agricultural Drone Glossary',
+      },
+    ],
   },
 };
 

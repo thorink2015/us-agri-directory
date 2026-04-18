@@ -51,6 +51,15 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Drone Spraying Cost Per Acre (2026 Rates)',
       description: 'Rates by crop, region, and service type. First university benchmark: $12.50/acre from Iowa State 2026 Custom Rate Survey.',
       url: `${SITE.domain}/pricing`,
+      siteName: SITE.name,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: 'Drone Spraying Cost Per Acre 2026',
+        },
+      ],
     },
   };
 }
