@@ -37,7 +37,7 @@ const FAQS = [
 const AUTHORITY_LINKS = [
   { label: 'Iowa State Extension 2026 Custom Rate Survey', url: 'https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf' },
   { label: 'University of Missouri Extension G1274 Breakeven Analysis', url: 'https://extension.missouri.edu/publications/g1274' },
-  { label: 'American Spray Drone Coalition', url: 'https://www.rantizo.com/our-network' },
+  { label: 'American Spray Drone Coalition', url: 'https://www.rantizo.com/' },
   { label: 'USDA NRCS EQIP', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
 ];
 

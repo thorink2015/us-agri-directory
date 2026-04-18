@@ -269,7 +269,7 @@ export default function StartADroneBusinessPage() {
               </a>
             </li>
             <li>
-              <a href={addUtm("https://www.faa.gov/uas/advanced_operations/agricultural", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.faa.gov/uas/advanced_operations/dispensing_chemicals", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 FAA: Agricultural Operations (Part 137)
               </a>
             </li>

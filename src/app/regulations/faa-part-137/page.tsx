@@ -150,13 +150,8 @@ export default function FaaPart137Page() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href={addUtm("https://www.faa.gov/uas/advanced_operations/agricultural", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.faa.gov/uas/advanced_operations/dispensing_chemicals", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 FAA: Agricultural Operations
-              </a>
-            </li>
-            <li>
-              <a href={addUtm("https://www.faa.gov/newsroom/ag-operations", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
-                FAA Newsroom: Ag Operations updates
               </a>
             </li>
             <li>

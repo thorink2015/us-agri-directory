@@ -279,7 +279,7 @@ export const regions: Region[] = [
       'Tobacco in the Carolinas and Virginia is a high-value crop where drone access solves the problem of mid-season ground rig damage to waist-high plants.',
     ],
     authorityLinks: [
-      { label: 'University of Georgia Extension: Cotton and Peanut Pest Management', url: 'https://extension.uga.edu/topic-areas/field-crops.html' },
+      { label: 'University of Georgia Extension: Cotton and Peanut Pest Management', url: 'https://extension.uga.edu/' },
       { label: 'NC State Extension: Tobacco Production', url: 'https://tobacco.ces.ncsu.edu' },
       { label: 'University of Florida IFAS: Citrus Pest Management', url: 'https://crec.ifas.ufl.edu' },
     ],

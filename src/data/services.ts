@@ -109,7 +109,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '🗺️',
     authorityLinks: [
-      { label: 'FAA Part 107 Small UAS Operations', url: 'https://www.faa.gov/uas/commercial_operators/part_107' },
+      { label: 'FAA Part 107 Small UAS Operations', url: 'https://www.faa.gov/uas/commercial_operators' },
       { label: 'USDA NRCS Soil Survey Resources', url: 'https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/soil-survey' },
       { label: 'ASABE Standards for Aerial Sensor Data', url: 'https://www.asabe.org/Standards' },
     ],
@@ -346,7 +346,7 @@ export const services: ServiceDefinition[] = [
     authorityLinks: [
       { label: 'DJI Agricultural Drone Authorized Dealers', url: 'https://www.dji.com/agriculture/dealers' },
       { label: 'USDA NRCS EQIP Practice Code 595: Precision Agriculture', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
-      { label: 'US Department of Defense NDAA Compliance Drone List', url: 'https://www.diu.mil/blue-uas' },
+      { label: 'US Department of Defense NDAA Compliance Drone List', url: 'https://www.diu.mil/solutions/blue-uas' },
     ],
     faqs: [
       {
