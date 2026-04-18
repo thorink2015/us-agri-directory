@@ -4188,7 +4188,7 @@ export const operators: Operator[] = [
     featured: false,
     verified: false,
   },
-  // ── Batch 2 import (operators 90–179) ──────────────────────────────────
+  // ── Batch 2 import (operators 90-179) ──────────────────────────────────
   {
     slug: 'heinen-brothers-agra-services',
     name: 'Heinen Brothers Agra Services',
@@ -5676,7 +5676,7 @@ export const operators: Operator[] = [
     verified: false,
   },
 
-  // ── Batch 3 import (operators 180–259) ──────────────────────────────────
+  // ── Batch 3 import (operators 180-259) ──────────────────────────────────
   {
     slug: 'ag-drones-west',
     name: 'Ag Drones West',
