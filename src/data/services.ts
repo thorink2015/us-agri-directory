@@ -110,7 +110,7 @@ export const services: ServiceDefinition[] = [
     icon: '🗺️',
     authorityLinks: [
       { label: 'FAA Part 107 Small UAS Operations', url: 'https://www.faa.gov/uas/commercial_operators/part_107' },
-      { label: 'USDA NRCS Precision Agriculture Resources', url: 'https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/precision-agriculture' },
+      { label: 'USDA NRCS Soil Survey Resources', url: 'https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/soil-survey' },
       { label: 'ASABE Standards for Aerial Sensor Data', url: 'https://www.asabe.org/Standards' },
     ],
     faqs: [
@@ -156,8 +156,8 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre per flight',
     icon: '📡',
     authorityLinks: [
-      { label: 'USDA NIFA Precision Agriculture Research', url: 'https://www.nifa.usda.gov/topics/precision-agriculture' },
-      { label: 'Purdue Extension: Remote Sensing for Agriculture', url: 'https://www.extension.purdue.edu/anr/precision-agriculture' },
+      { label: 'USDA NIFA Precision and Sensor Technologies Programs', url: 'https://www.nifa.usda.gov/grants/programs/precision-geospatial-sensor-technologies-programs' },
+      { label: 'Purdue Extension: Field Crops and Precision Agriculture Resources', url: 'https://extension.purdue.edu/anr/_teams/field-crops/resources/index.html' },
       { label: 'USGS Earth Resources Observation and Science', url: 'https://www.usgs.gov/centers/eros' },
     ],
     faqs: [
