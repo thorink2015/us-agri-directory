@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props) {
   const crop = getCropBySlug(params.slug);
   if (!crop) return {};
   return {
-    title: `${crop.name}: Drone Spraying Rates & Operators 2026`,
+    title: `${crop.name}: Drone Spraying Rates 2026`,
     description: crop.aeoBlock.slice(0, 155),
     alternates: { canonical: `/crops/${params.slug}` },
     openGraph: {

@@ -12,8 +12,8 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
   const coverage = `Service area: ${operator.counties.length} state${operator.counties.length !== 1 ? 's' : ''}.`;
   const baseCity = operator.city.split(/[,(/]/)[0].trim();
   const fullTitle = `${operator.name}: Drone Spraying in ${baseCity}`;
-  const title = fullTitle.length > 60
-    ? `${operator.name.slice(0, 57).trim()}…`
+  const title = fullTitle.length > 55
+    ? `${operator.name.slice(0, 52).trim()}…`
     : fullTitle;
   const fullDesc = `${operator.name}, ag drone operator in ${baseCity}. ${price}${operator.services.length} services. ${coverage} Contact directly.`;
   const description = fullDesc.length > 160 ? `${fullDesc.slice(0, 157).trim()}…` : fullDesc;

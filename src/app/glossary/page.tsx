@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { glossaryTerms, GlossaryTerm } from '@/data/glossary';
 
 export const metadata: Metadata = {
-  title: 'Agricultural Drone Glossary 2026 | FAA, EPA & Spraying Terms',
+  title: 'Agricultural Drone Glossary: FAA, EPA & Spray Terms',
   description:
     'Plain-English definitions of 55+ agricultural drone terms: Part 107, Part 137, LAANC, FIFRA, GPA, ULV, RTK, and more. Updated for 2026 regulations.',
   alternates: { canonical: '/glossary' },
