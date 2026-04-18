@@ -59,11 +59,12 @@ const SUBPAGES = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Drone Spraying Regulations: FAA, State & Federal Requirements (2026)',
+  title: 'Drone Spraying Regulations: FAA, State & Federal 2026',
   description:
     'Complete guide to FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance for agricultural drone operators in 2026.',
   alternates: { canonical: '/regulations' },
   openGraph: {
+    type: 'website',
     title: 'US Agricultural Drone Spraying Regulations (2026)',
     description:
       'FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance, the three-credential stack required for commercial ag drone spraying.',

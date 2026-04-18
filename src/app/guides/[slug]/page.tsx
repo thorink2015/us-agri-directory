@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guide = getGuideBySlug(params.slug);
   if (!guide) return {};
   return {
-    title: `${guide.title} | US Ag Drone Directory`,
+    title: guide.title,
     description: guide.description,
     alternates: { canonical: `/guides/${guide.slug}` },
     openGraph: {

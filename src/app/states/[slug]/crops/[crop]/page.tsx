@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!county || !crop) return {};
 
   return {
-    title: `${crop.name} Drone Spraying in ${county.name} | Agricultural Drone Services 2026`,
+    title: `${crop.name} Drone Spraying in ${county.name}: 2026 Rates`,
     description: `Drone operators for ${crop.name.toLowerCase()} in ${county.name}. Rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre, contact verified operators directly.`,
     alternates: {
       canonical: `/states/${params.slug}/crops/${params.crop}`,

@@ -104,10 +104,11 @@ const FAQS = [
 export async function generateMetadata(): Promise<Metadata> {
   const operatorCount = operators.length;
   return {
-    title: 'Find Drone Spraying Services Near You | US Ag Drone Directory',
+    title: 'Find Drone Spraying Near You | US Ag Drone Directory',
     description: `Search ${operatorCount}+ verified ag drone operators in all 50 states. Compare per-acre rates from $12, check FAA credentials, and contact operators directly.`,
     alternates: { canonical: '/' },
     openGraph: {
+      type: 'website',
       title: 'Find Drone Spraying Services Near You | US Ag Drone Directory',
       description: `${operatorCount}+ verified ag drone operators across all 50 states. Compare rates and contact directly.`,
       url: SITE.domain,

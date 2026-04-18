@@ -36,11 +36,12 @@ const FAQS = [
 const SORTED_STATES = [...counties].sort((a, b) => a.name.localeCompare(b.name));
 
 export const metadata: Metadata = {
-  title: 'State Pesticide Applicator License for Drone Spraying: 50-State Guide',
+  title: 'State Pesticide Applicator License: 50-State Guide',
   description:
     'Every state requires a commercial pesticide applicator license for drone spraying. See aerial categories, exams, fees, and unique rules for all 50 states.',
   alternates: { canonical: '/regulations/state-licensing' },
   openGraph: {
+    type: 'website',
     title: 'State Pesticide Applicator Licensing for Drone Operators',
     description:
       'California, North Dakota, and Arizona issue drone-specific credentials. Oregon requires 50 hours of flight experience. See every state licensing path.',

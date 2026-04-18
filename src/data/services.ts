@@ -15,7 +15,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '💧',
     authorityLinks: [
-      { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/newsroom/ag-operations' },
+      { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'EPA Pesticide Registration and Labeling', url: 'https://www.epa.gov/pesticide-labels' },
       { label: 'USDA NASS: Agricultural Chemical Use Surveys', url: 'https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use' },
     ],
@@ -62,7 +62,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '🌱',
     authorityLinks: [
-      { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340' },
+      { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-ac-340-conservation-practice-standard' },
       { label: 'Midwest Cover Crops Council: Species Selection Tool', url: 'https://mccc.msu.edu/covercroptool' },
       { label: 'USDA EQIP Environmental Quality Incentives Program', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
     ],
@@ -110,7 +110,7 @@ export const services: ServiceDefinition[] = [
     icon: '🗺️',
     authorityLinks: [
       { label: 'FAA Part 107 Small UAS Operations', url: 'https://www.faa.gov/uas/commercial_operators/part_107' },
-      { label: 'USDA NRCS Precision Agriculture Resources', url: 'https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/precision-agriculture' },
+      { label: 'USDA NRCS Soil Survey Resources', url: 'https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/soil-survey' },
       { label: 'ASABE Standards for Aerial Sensor Data', url: 'https://www.asabe.org/Standards' },
     ],
     faqs: [
@@ -156,8 +156,8 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre per flight',
     icon: '📡',
     authorityLinks: [
-      { label: 'USDA NIFA Precision Agriculture Research', url: 'https://www.nifa.usda.gov/topics/precision-agriculture' },
-      { label: 'Purdue Extension: Remote Sensing for Agriculture', url: 'https://www.extension.purdue.edu/anr/precision-agriculture' },
+      { label: 'USDA NIFA Precision and Sensor Technologies Programs', url: 'https://www.nifa.usda.gov/grants/programs/precision-geospatial-sensor-technologies-programs' },
+      { label: 'Purdue Extension: Field Crops and Precision Agriculture Resources', url: 'https://extension.purdue.edu/anr/_teams/field-crops/resources/index.html' },
       { label: 'USGS Earth Resources Observation and Science', url: 'https://www.usgs.gov/centers/eros' },
     ],
     faqs: [
@@ -203,7 +203,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '⚙️',
     authorityLinks: [
-      { label: 'USDA NRCS Nutrient Management Standard 590', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/nutrient-management-ag-590' },
+      { label: 'USDA NRCS Nutrient Management Standard 590', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/nutrient-management-ac-590-conservation-practice-standard' },
       { label: 'Association of American Plant Food Control Officials (AAPFCO)', url: 'https://www.aapfco.org' },
       { label: 'The Fertilizer Institute: 4R Nutrient Stewardship', url: 'https://www.tfi.org/our-industry/stewardship/4r-nutrient-stewardship' },
     ],
@@ -251,7 +251,7 @@ export const services: ServiceDefinition[] = [
     icon: '🎓',
     authorityLinks: [
       { label: 'FAA Part 107 Knowledge Test Study Materials', url: 'https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot' },
-      { label: 'FAA Part 137 Certification Process', url: 'https://www.faa.gov/uas/advanced_operations/agricultural' },
+      { label: 'FAA Part 137 Certification Process for UAS', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'National Pesticide Safety Education Center (NPSEC)', url: 'https://npsec.us' },
     ],
     faqs: [
@@ -297,7 +297,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per week',
     icon: '🚁',
     authorityLinks: [
-      { label: 'FAA Part 137 Certification Requirements for Rented Drones', url: 'https://www.faa.gov/uas/advanced_operations/agricultural' },
+      { label: 'FAA Part 137 Requirements for Agricultural UAS', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'AUVSI Insurance and Risk Management for UAS Operators', url: 'https://www.auvsi.org' },
       { label: 'USDA Farm Service Agency: Equipment Cost-Share Programs', url: 'https://www.fsa.usda.gov' },
     ],
@@ -391,7 +391,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per hour or per package',
     icon: '📋',
     authorityLinks: [
-      { label: 'FAA Part 137 Agricultural Aircraft Operations Guidance', url: 'https://www.faa.gov/uas/advanced_operations/agricultural' },
+      { label: 'FAA Part 137 Agricultural UAS Operations Guidance', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'SBA Small Business Development Center Locator', url: 'https://www.sba.gov/local-assistance/find' },
       { label: 'National Agricultural Aviation Association (NAAA)', url: 'https://www.agaviation.org' },
     ],
@@ -438,7 +438,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '🚨',
     authorityLinks: [
-      { label: 'USDA APHIS Plant Pest and Disease Programs', url: 'https://www.aphis.usda.gov/aphis/ourfocus/planthealth' },
+      { label: 'USDA APHIS Plant Pest and Disease Programs', url: 'https://www.aphis.usda.gov/plant-pests-diseases' },
       { label: 'National Plant Diagnostic Network (NPDN)', url: 'https://www.npdn.org' },
       { label: 'USDA Climate Hubs: Weather and Climate Resources', url: 'https://www.climatehubs.usda.gov' },
     ],

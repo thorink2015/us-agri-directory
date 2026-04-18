@@ -5,9 +5,9 @@ import { guides, GUIDE_CATEGORIES } from '@/data/guides';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Ag Drone Guides 2026 | FAA Part 107, USDA Funding, Licensing',
+  title: 'Ag Drone Guides: FAA Part 107, USDA Funding, Licensing',
   description:
-    'Complete guides for agricultural drone operators in the United States: FAA regulations, USDA funding programs, pilot licensing, equipment selection, and business start-up.',
+    'Guides for US agricultural drone operators: FAA regulations, USDA funding, pilot licensing, equipment selection, and business start-up.',
   alternates: { canonical: '/guides' },
 };
 

@@ -9,9 +9,9 @@ import { formatPrice } from '@/lib/utils';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Agricultural Drone Services | Spraying, Seeding, Mapping & More',
+  title: 'Ag Drone Services: Spraying, Seeding, Mapping',
   description:
-    'Browse all agricultural drone services available through our directory: spraying, cover crop seeding, aerial mapping, crop scouting, pilot training, and equipment rental.',
+    'Browse all agricultural drone services: spraying, cover crop seeding, aerial mapping, crop scouting, pilot training, and equipment rental.',
   alternates: {
     canonical: '/services',
   },

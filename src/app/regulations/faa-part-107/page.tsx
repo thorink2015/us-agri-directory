@@ -33,11 +33,12 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'FAA Part 107 for Drone Spraying | Remote Pilot Certificate Guide',
+  title: 'FAA Part 107: Remote Pilot Certificate for Ag Drones',
   description:
     'How to get FAA Part 107 for agricultural drone spraying. Study time, exam format, cost, renewal, and what Part 107 does and does not authorize.',
   alternates: { canonical: '/regulations/faa-part-107' },
   openGraph: {
+    type: 'website',
     title: 'FAA Part 107: Remote Pilot Certificate for Ag Drone Operators',
     description:
       '60 questions, 70% passing, $175 at PSI testing centers. 2 to 4 weeks study. Does not authorize pesticide application on its own.',

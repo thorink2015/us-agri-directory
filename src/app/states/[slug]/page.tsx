@@ -29,10 +29,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const rich = getStateData(params.slug);
   if (rich) {
     return {
-      title: `Drone Spraying in ${rich.name}: Licensing, Rates & Operators (2026) | Ag Drone Directory`,
+      title: `Drone Spraying in ${rich.name}: Rates & Operators 2026`,
       description: `${rich.aeoBlock.slice(0, 155)}`,
       alternates: { canonical: `/states/${rich.slug}` },
       openGraph: {
+        type: 'website',
         title: `Agricultural Drone Spraying in ${rich.name} (2026)`,
         description: `Licensing, rates, top crops, and verified operators for ${rich.name}. ${rich.rateRange} per acre.`,
         url: `${SITE.domain}/states/${rich.slug}`,

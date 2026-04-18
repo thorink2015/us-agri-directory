@@ -49,11 +49,12 @@ const INSURERS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Drone Insurance for Ag Operators (2026) | Coverage Types & Costs',
+  title: 'Drone Insurance for Ag Operators: 2026 Costs & Coverage',
   description:
     'Ag drone operators need hull, liability, and chemical drift coverage. Premiums run $1,200 to $4,000/yr. Top insurers: BWI, AssuredPartners, Global Aerospace.',
   alternates: { canonical: '/insurance' },
   openGraph: {
+    type: 'website',
     title: 'Drone Insurance for Agricultural Spray Operators',
     description:
       'Hull ($500 to $2,000/yr), commercial liability ($1,000 to $3,000/yr for $1M), and chemical application/pollution ($600 to $2,000/yr). Part 137 lowers premiums.',

@@ -30,11 +30,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
 
   return {
-    title: `${service.name} Services | Agricultural Drone Operators US 2026`,
+    title: `${service.name}: US Operators & Rates 2026`,
     description: service.aeoBlock.slice(0, 155),
     alternates: { canonical: `/services/${params.slug}` },
     keywords: service.keywords?.join(', '),
     openGraph: {
+      type: 'website',
       title: `${service.name} | US Agricultural Drone Directory`,
       description: service.description,
       url: `https://agdronedirectory.com/services/${params.slug}`,

@@ -33,11 +33,12 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'USDA Grants & Cost-Share for Ag Drones (2026) | Ag Drone Directory',
+  title: 'USDA Grants & Cost-Share for Ag Drones: 2026 Guide',
   description:
     'USDA EQIP pays 40 to 90% on drone purchases. Cover crop seeding cost-share $25 to $55/acre. Full guide to federal programs for drone operators and farmers.',
   alternates: { canonical: '/grants-and-subsidies' },
   openGraph: {
+    type: 'website',
     title: 'USDA Grants and Cost-Share Programs for Agricultural Drones',
     description:
       'EQIP 595 covers 40 to 90 percent on drone purchases. EQIP 340 covers cover crop seeding at $25 to $55 per acre. FSA loans at 6 to 9 percent.',

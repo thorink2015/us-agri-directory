@@ -26,10 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const region = getRegionBySlug(params.slug);
   if (!region) return {};
   return {
-    title: `${region.name} Drone Spraying: Operators, Crops & Rates 2026`,
+    title: `${region.name} Drone Spraying: 2026 Rates & Operators`,
     description: region.aeoBlock.slice(0, 155),
     alternates: { canonical: `/regions/${region.slug}` },
     openGraph: {
+      type: 'website',
       title: `${region.name} Agricultural Drone Services | US Ag Drone Directory`,
       description: region.aeoBlock.slice(0, 155),
       url: `${SITE.domain}/regions/${region.slug}`,

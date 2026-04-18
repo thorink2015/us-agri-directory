@@ -28,11 +28,12 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Drone Coverage Time Calculator | How Long to Spray Your Fields',
+  title: 'Drone Coverage Time Calculator: Spray Job Estimator',
   description:
     'How long to drone-spray your fields? Enter acres, drone model, and application rate. Includes battery swaps, refills, and single-day feasibility.',
   alternates: { canonical: '/tools/coverage-calculator' },
   openGraph: {
+    type: 'website',
     title: 'How Long Will It Take to Spray Your Fields?',
     description: 'Estimate drone spray job time including tank refills, battery swaps, and field shape adjustments for 7 drone models.',
     url: `${SITE.domain}/tools/coverage-calculator`,

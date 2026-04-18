@@ -149,11 +149,12 @@ const URGENCY_LABEL: Record<string, string> = {
 };
 
 export const metadata: Metadata = {
-  title: 'Drone Spray Treatment Calendar by Crop and State | When to Book',
+  title: 'Drone Spray Treatment Calendar: When to Book',
   description:
     'See exactly when to book drone spraying for your crop in your state. Monthly treatment windows for corn, soybeans, wheat, cotton, rice, grapes, and orchards.',
   alternates: { canonical: '/tools/treatment-calendar' },
   openGraph: {
+    type: 'website',
     title: 'When Should You Book Drone Spraying? Treatment Calendar',
     description: 'Monthly drone application windows by crop with booking deadlines. Corn VT/R1 peaks mid-to-late July. Book 4 to 6 weeks ahead.',
     url: `${SITE.domain}/tools/treatment-calendar`,

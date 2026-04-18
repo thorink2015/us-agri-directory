@@ -25,11 +25,12 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: `About ${SITE.name} | Founded and Edited by ${AUTHOR.firstName}`,
+  title: `About ${SITE.name}: Founded by ${AUTHOR.firstName}`,
   description:
-    `${SITE.name} is a single-author directory founded and edited by ${AUTHOR.firstName}. Every page is personally researched to connect US farmers with verified agricultural drone operators across all 50 states.`,
+    `${SITE.name}, a single-author directory founded by ${AUTHOR.firstName}. Every page personally researched to connect US farmers with verified ag drone operators.`,
   alternates: { canonical: '/about' },
   openGraph: {
+    type: 'website',
     title: `About ${SITE.name}`,
     description: `Founded and edited by ${AUTHOR.firstName}. Every page personally researched and updated.`,
     url: `${SITE.domain}/about`,
