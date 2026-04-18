@@ -3916,7 +3916,7 @@ export const operators: Operator[] = [
     slug: 'american-drone-llc',
     name: 'American Drone LLC',
     description:
-      'Wisconsin-based ag drone dealer and custom applicator. Offers wide range of DJI XAG and Talos drones. Hosts Midwest Drone Conference. Sells proprietary DRA surfactant.',
+      'Wisconsin-based ag drone dealer and custom applicator. Stocks DJI, XAG, and Talos drones. Hosts Midwest Drone Conference. Sells proprietary DRA surfactant.',
     country: 'US',
     counties: ['wisconsin'],
     city: 'Granton',
