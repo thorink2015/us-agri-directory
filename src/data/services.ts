@@ -62,7 +62,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '🌱',
     authorityLinks: [
-      { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340' },
+      { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-ac-340-conservation-practice-standard' },
       { label: 'Midwest Cover Crops Council: Species Selection Tool', url: 'https://mccc.msu.edu/covercroptool' },
       { label: 'USDA EQIP Environmental Quality Incentives Program', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
     ],
@@ -203,7 +203,7 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '⚙️',
     authorityLinks: [
-      { label: 'USDA NRCS Nutrient Management Standard 590', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/nutrient-management-ag-590' },
+      { label: 'USDA NRCS Nutrient Management Standard 590', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/nutrient-management-ac-590-conservation-practice-standard' },
       { label: 'Association of American Plant Food Control Officials (AAPFCO)', url: 'https://www.aapfco.org' },
       { label: 'The Fertilizer Institute: 4R Nutrient Stewardship', url: 'https://www.tfi.org/our-industry/stewardship/4r-nutrient-stewardship' },
     ],
