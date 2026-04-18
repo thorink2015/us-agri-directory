@@ -165,18 +165,20 @@ function RichStatePage({ slug }: { slug: string }) {
           {ops.length > 0 ? (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {ops.map((op) => (
+                {ops.slice(0, 12).map((op) => (
                   <OperatorCard key={op.slug} operator={op} />
                 ))}
               </div>
-              <div className="mt-5 text-right">
-                <Link
-                  href={`/states/${slug}/operators`}
-                  className="text-sm font-semibold text-green-700 hover:underline"
-                >
-                  View all operators in {data.name} &rarr;
-                </Link>
-              </div>
+              {ops.length > 12 && (
+                <div className="mt-5 text-right">
+                  <Link
+                    href={`/states/${slug}/operators`}
+                    className="text-sm font-semibold text-green-700 hover:underline"
+                  >
+                    View all {ops.length} operators in {data.name} &rarr;
+                  </Link>
+                </div>
+              )}
             </>
           ) : (
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center">
@@ -476,16 +478,18 @@ function FallbackStatePage({ slug }: { slug: string }) {
           {ops.length > 0 ? (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {ops.map((op) => <OperatorCard key={op.slug} operator={op} />)}
+                {ops.slice(0, 12).map((op) => <OperatorCard key={op.slug} operator={op} />)}
               </div>
-              <div className="mt-5 text-right">
-                <Link
-                  href={`/states/${state.slug}/operators`}
-                  className="text-sm font-semibold text-green-700 hover:underline"
-                >
-                  View all operators in {state.name} &rarr;
-                </Link>
-              </div>
+              {ops.length > 12 && (
+                <div className="mt-5 text-right">
+                  <Link
+                    href={`/states/${state.slug}/operators`}
+                    className="text-sm font-semibold text-green-700 hover:underline"
+                  >
+                    View all {ops.length} operators in {state.name} &rarr;
+                  </Link>
+                </div>
+              )}
             </>
           ) : (
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center">
