@@ -1,10 +1,15 @@
 import { Operator } from '@/data/types';
+import { SITE } from '@/data/author';
+import { getStateAbbr } from '@/lib/utils';
 
 interface Props {
   operator: Operator;
 }
 
+const FALLBACK_IMAGE = `${SITE.domain}/og-image.png`;
+
 export default function OperatorSchema({ operator }: Props) {
+  const addressRegion = getStateAbbr(operator.counties);
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
@@ -13,14 +18,14 @@ export default function OperatorSchema({ operator }: Props) {
     url: operator.website,
     telephone: operator.phone,
     email: operator.email,
-    address: operator.address
-      ? {
-          '@type': 'PostalAddress',
-          streetAddress: operator.address,
-          addressLocality: operator.city,
-          addressCountry: 'US',
-        }
-      : undefined,
+    image: FALLBACK_IMAGE,
+    address: {
+      '@type': 'PostalAddress',
+      ...(operator.address ? { streetAddress: operator.address } : {}),
+      addressLocality: operator.city,
+      addressRegion,
+      addressCountry: 'US',
+    },
     geo: operator.lat && operator.lng
       ? {
           '@type': 'GeoCoordinates',
