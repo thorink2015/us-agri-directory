@@ -28,7 +28,7 @@ export const services: ServiceDefinition[] = [
       {
         question: 'What does drone spraying cost per acre in 2026?',
         answer:
-          'National averages run $12 to $22 per acre for fungicide and insecticide applications on corn, soybeans, and wheat. Orchard, vineyard, and specialty crop work runs $18 to $35 per acre because of dense canopy and more passes per season. Minimum field size is typically 40 to 80 acres, with travel surcharges on fields more than 30 miles from the operator base.',
+          'National averages run $12 to $18 per acre for fungicide and insecticide applications on corn, soybeans, and wheat. Orchard, vineyard, and specialty crop work runs $18 to $35 per acre because of dense canopy and more passes per season. Minimum field size is typically 40 to 80 acres, with travel surcharges on fields more than 30 miles from the operator base.',
       },
       {
         question: 'Can drones spray dicamba, paraquat, or other restricted use pesticides?',
