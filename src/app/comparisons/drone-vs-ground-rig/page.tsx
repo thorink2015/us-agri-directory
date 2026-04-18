@@ -48,6 +48,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/comparisons/drone-vs-ground-rig' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Drone Spraying vs Ground Rig: Which Is Better for Your Fields?',
     description:
       'Ground rigs cost $9.35/acre but damage 3 to 6 bu/acre of tall corn. Drones at $12 to $18/acre cause zero compaction. Iowa State and MU Extension data.',

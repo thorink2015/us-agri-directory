@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/blog' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Ag Drone Blog: Lists, Guides & Industry News 2026',
     description:
       'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies, and equipment comparisons.',

@@ -48,6 +48,7 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: { canonical: '/pricing' },
     openGraph: {
       type: 'website',
+      locale: 'en_US',
       title: 'Drone Spraying Cost Per Acre (2026 Rates)',
       description: 'Rates by crop, region, and service type. First university benchmark: $12.50/acre from Iowa State 2026 Custom Rate Survey.',
       url: `${SITE.domain}/pricing`,

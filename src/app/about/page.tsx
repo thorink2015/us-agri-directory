@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/about' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: `About ${SITE.name}`,
     description: `Founded and edited by ${AUTHOR.firstName}. Every page personally researched and updated.`,
     url: `${SITE.domain}/about`,

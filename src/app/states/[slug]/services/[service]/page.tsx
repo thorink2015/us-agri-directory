@@ -35,6 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       type: 'website',
+      locale: 'en_US',
       title: `${service.name} in ${county.name} | US Ag Drone Directory`,
       description: `${service.name} drone services in ${county.name}. Compare rates from verified operators and contact them directly for your ${county.name} fields.`,
       url: `${SITE.domain}/states/${params.slug}/services/${params.service}`,

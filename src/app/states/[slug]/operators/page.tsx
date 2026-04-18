@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: { canonical: `/states/${params.slug}/operators` },
     openGraph: {
       type: 'website',
+      locale: 'en_US',
       title: `${county.name} Drone Operators | US Ag Drone Directory`,
       description: `Full list of agricultural drone operators in ${county.name}. Direct contact and estimated rates.`,
       url: `${SITE.domain}/states/${params.slug}/operators`,

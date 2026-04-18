@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/glossary' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Agricultural Drone Glossary | US Ag Drone Directory',
     description:
       'The complete glossary of agricultural drone terminology: FAA regulations, spray application, drone hardware, and ag business terms.',

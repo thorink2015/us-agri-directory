@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/terms' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Terms of Use | US Ag Drone Directory',
     description:
       'Terms governing use of the US Agricultural Drone Directory. Free access, no warranties on listings, operator responsibility.',

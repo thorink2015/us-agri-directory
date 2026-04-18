@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Commercial Ag Spray Drones: DJI, Hylio, XAG Specs',
     description:
       'Compare commercial ag spray drones used by US operators: DJI Agras T50, T25, T100, Hylio AG-272, XAG P100 Pro, Talos T60X. Specs and pricing.',

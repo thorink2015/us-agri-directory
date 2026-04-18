@@ -11,10 +11,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/regions' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'US Agricultural Drone Regions | US Ag Drone Directory',
     description:
       'Regional hubs covering the Corn Belt, Great Plains, Delta, California, and Southeast. Browse operators by region.',
     url: 'https://agdronedirectory.com/regions',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'US Agricultural Drone Regions',
+      },
+    ],
   },
 };
 

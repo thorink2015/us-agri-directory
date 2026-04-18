@@ -12,10 +12,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/tools' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'Free Agricultural Drone Tools & Calculators',
     description:
       'Six free calculators covering spray cost estimation, buy vs hire ROI, field coverage time, acreage conversion, drone comparison, and seasonal treatment planning.',
     url: `${SITE.domain}/tools`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Free Agricultural Drone Tools and Calculators',
+      },
+    ],
   },
 };
 

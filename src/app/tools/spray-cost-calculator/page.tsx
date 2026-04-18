@@ -34,9 +34,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/tools/spray-cost-calculator' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'How Much Will Drone Spraying Cost on Your Farm?',
     description: 'Instant estimate by crop, state, and number of passes. Based on 2026 Iowa State Extension data.',
     url: `${SITE.domain}/tools/spray-cost-calculator`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Drone Spraying Cost Calculator',
+      },
+    ],
   },
 };
 

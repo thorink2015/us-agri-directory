@@ -34,9 +34,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/tools/roi-calculator' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'Buy a Drone or Hire an Operator? Find Your Break-Even',
     description: 'MU Extension break-even at ~980 acres/year. EQIP cost-share can lower it to 600 acres. Model your specific situation.',
     url: `${SITE.domain}/tools/roi-calculator`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Buy vs Hire a Spray Drone ROI Calculator',
+      },
+    ],
   },
 };
 

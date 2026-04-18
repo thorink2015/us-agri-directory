@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/privacy' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Privacy Policy | US Ag Drone Directory',
     description:
       'How we handle your data. Google Analytics (GA4) for anonymous traffic stats. No ads, no behavioral profiling, no data sales.',

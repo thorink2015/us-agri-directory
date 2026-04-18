@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/crops' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Drone Services by Crop: Corn, Soybeans, Cotton, Wheat',
     description:
       'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs, and equipment for every major US crop.',

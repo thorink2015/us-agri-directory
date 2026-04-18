@@ -29,10 +29,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.description,
       type: 'article',
+      locale: 'en_US',
+      siteName: 'US Ag Drone Directory',
       publishedTime: post.publishedAt,
       authors: [post.author],
       tags: post.tags,
       url: `${SITE.domain}/blog/${post.slug}`,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
     },
   };
 }

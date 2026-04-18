@@ -45,9 +45,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/tools/drone-comparison' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'Compare Agricultural Spray Drones Side by Side (2026)',
     description: 'DJI T50 vs Hylio AG-272 vs T100, tank capacity, NDAA status, MSRP, wind rating, and best use case compared.',
     url: `${SITE.domain}/tools/drone-comparison`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Compare Agricultural Spray Drones',
+      },
+    ],
   },
 };
 

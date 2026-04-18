@@ -34,9 +34,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/tools/coverage-calculator' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'How Long Will It Take to Spray Your Fields?',
     description: 'Estimate drone spray job time including tank refills, battery swaps, and field shape adjustments for 7 drone models.',
     url: `${SITE.domain}/tools/coverage-calculator`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Drone Coverage Time Calculator',
+      },
+    ],
   },
 };
 

@@ -39,10 +39,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/regulations/faa-part-137' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'FAA Part 137: Agricultural Aircraft Operator Certificate for Drones',
     description:
       '90 to 180 day FAA approval timeline. Section 44807 exemption required for drones over 55 lbs. Operations manual and training records needed.',
     url: `${SITE.domain}/regulations/faa-part-137`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'FAA Part 137 Agricultural Aircraft Operator Certificate',
+      },
+    ],
   },
 };
 

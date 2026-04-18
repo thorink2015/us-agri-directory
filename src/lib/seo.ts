@@ -27,11 +27,28 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
       url: `${SITE_URL}/operators/${operator.slug}`,
       siteName: SITE_NAME,
       type: 'website',
+      locale: 'en_US',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${operator.name}, agricultural drone operator in ${baseCity}`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${operator.name} | Ag Drone Services, ${operator.city}`,
       description: operator.description.slice(0, 155),
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${operator.name}, agricultural drone operator in ${baseCity}`,
+        },
+      ],
     },
   };
 }
@@ -49,11 +66,28 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
       url: `${SITE_URL}/states/${county.slug}`,
       siteName: SITE_NAME,
       type: 'website',
+      locale: 'en_US',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `Drone Spraying in ${county.name}`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `Drone Spraying in ${county.name} | Rates and Operators`,
       description: desc,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `Drone Spraying in ${county.name}`,
+        },
+      ],
     },
   };
 }

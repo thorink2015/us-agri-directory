@@ -34,9 +34,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/tools/acreage-converter' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'Farm Acreage Converter, Acres, Hectares, Sq Ft & Sections',
     description: '1 acre = 0.4047 hectares = 43,560 sq ft. Instant conversion for all common US and international agricultural land measurements.',
     url: `${SITE.domain}/tools/acreage-converter`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Farm Acreage Converter',
+      },
+    ],
   },
 };
 

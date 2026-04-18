@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/guides' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Ag Drone Guides: FAA Part 107, USDA Funding, Licensing',
     description:
       'Guides for US agricultural drone operators: FAA regulations, USDA funding, pilot licensing, equipment selection, and business start-up.',

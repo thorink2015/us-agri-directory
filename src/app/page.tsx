@@ -109,6 +109,7 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: { canonical: '/' },
     openGraph: {
       type: 'website',
+      locale: 'en_US',
       title: 'Find Drone Spraying Services Near You | US Ag Drone Directory',
       description: `${operatorCount}+ verified ag drone operators across all 50 states. Compare rates and contact directly.`,
       url: SITE.domain,

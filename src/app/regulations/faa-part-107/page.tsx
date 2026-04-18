@@ -39,10 +39,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/regulations/faa-part-107' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'FAA Part 107: Remote Pilot Certificate for Ag Drone Operators',
     description:
       '60 questions, 70% passing, $175 at PSI testing centers. 2 to 4 weeks study. Does not authorize pesticide application on its own.',
     url: `${SITE.domain}/regulations/faa-part-107`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'FAA Part 107 Remote Pilot Certificate',
+      },
+    ],
   },
 };
 
