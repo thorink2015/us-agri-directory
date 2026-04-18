@@ -180,7 +180,7 @@ export default function RegulationsHubPage() {
         {/* Internal links */}
         <div className="mb-10 flex flex-wrap gap-x-4 gap-y-2 text-sm">
           <Link href="/states" className="text-green-700 hover:underline">State-by-state licensing</Link>
-          <Link href="/training" className="text-green-700 hover:underline">Training providers</Link>
+          <Link href="/training-and-certification" className="text-green-700 hover:underline">Training providers</Link>
           <Link href="/services/spraying" className="text-green-700 hover:underline">Drone spraying services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
           <Link href="/tools" className="text-green-700 hover:underline">Free tools and calculators</Link>

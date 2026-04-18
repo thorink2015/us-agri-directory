@@ -167,7 +167,7 @@ export default function FaaPart137Page() {
           <Link href="/regulations/faa-part-107" className="text-green-700 hover:underline">FAA Part 107</Link>
           <Link href="/regulations/state-licensing" className="text-green-700 hover:underline">State pesticide licensing</Link>
           <Link href="/regulations/ndaa-compliance" className="text-green-700 hover:underline">NDAA compliance</Link>
-          <Link href="/training" className="text-green-700 hover:underline">Training providers</Link>
+          <Link href="/training-and-certification" className="text-green-700 hover:underline">Training providers</Link>
           <Link href="/services/consultancy" className="text-green-700 hover:underline">Consultancy services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
           <Link href="/services/spraying" className="text-green-700 hover:underline">Drone spraying services</Link>

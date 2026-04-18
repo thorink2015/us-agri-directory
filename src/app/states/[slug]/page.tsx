@@ -217,7 +217,7 @@ function RichStatePage({ slug }: { slug: string }) {
             <div className="bg-white border border-gray-200 rounded-xl p-4">
               <div className="text-xs text-gray-500 mb-1">Licensing agency</div>
               <div className="font-semibold text-gray-900 text-sm">{data.licensingAgency}</div>
-              <Link href={data.licensingAgencyUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-green-700 hover:underline mt-1 block">
+              <Link href={addUtm(data.licensingAgencyUrl, "authority_link")} target="_blank" rel="noopener noreferrer" className="text-xs text-green-700 hover:underline mt-1 block">
                 Official site →
               </Link>
             </div>
