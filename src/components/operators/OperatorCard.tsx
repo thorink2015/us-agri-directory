@@ -27,6 +27,8 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
       itemScope
       itemType="https://schema.org/ProfessionalService"
     >
+      <meta itemProp="name" content={operator.name} />
+      <link itemProp="url" href={`/operators/${operator.slug}`} />
       {/* Header: icon + name + badges */}
       <header className="flex items-start gap-3 mb-2">
         <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:from-green-200 group-hover:to-green-100 transition-colors">
@@ -37,7 +39,6 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
             <Link
               href={`/operators/${operator.slug}`}
               className="font-bold text-gray-900 group-hover:text-green-700 transition-colors text-base leading-tight truncate"
-              itemProp="name"
               title={operator.name}
             >
               {displayName}

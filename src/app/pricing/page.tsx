@@ -205,12 +205,12 @@ export default function PricingPage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {[
-                  { crop: 'Corn', rate: '$14 to $17', notes: "VT/R1 tall-crop fungicide commands 15 to 25% premium over flat crops. Beck's 2025 PFR shows $27.26 ROI per acre for drone fungicide on corn.", href: '/crops/corn' },
-                  { crop: 'Soybeans', rate: '$12 to $16', notes: 'Standard Midwest baseline. Most price-competitive crop.', href: '/crops/soybeans' },
+                  { crop: 'Corn', rate: '$12 to $18', notes: "VT/R1 tall-crop fungicide commands 15 to 25% premium over flat crops. Beck's 2025 PFR shows $27.26 ROI per acre for drone fungicide on corn.", href: '/crops/corn' },
+                  { crop: 'Soybeans', rate: '$12 to $18', notes: 'Standard Midwest baseline. Most price-competitive crop.', href: '/crops/soybeans' },
                   { crop: 'Wheat', rate: '$12 to $16', notes: 'Similar to soybean rates. Lower canopy complexity.', href: '/crops/wheat' },
-                  { crop: 'Cotton', rate: '$14 to $18', notes: 'Defoliant rates run higher than mid-season insecticide.', href: '/crops/cotton' },
-                  { crop: 'Rice', rate: '$15 to $20', notes: 'Delta region. Wet field conditions add complexity.', href: '/crops/rice' },
-                  { crop: 'Orchards', rate: '$15 to $21', notes: 'Higher GPA requirements. Complex flight paths. CA almond and walnut primary.', href: '/crops/orchards' },
+                  { crop: 'Cotton', rate: '$14 to $20', notes: 'Defoliant rates run higher than mid-season insecticide.', href: '/crops/cotton' },
+                  { crop: 'Rice', rate: '$14 to $22', notes: 'Delta region. Wet field conditions add complexity.', href: '/crops/rice' },
+                  { crop: 'Orchards', rate: '$20 to $35', notes: 'Higher GPA requirements. Complex flight paths. CA almond and walnut primary.', href: '/crops/orchards' },
                   { crop: 'Vineyards', rate: '$18 to $30', notes: 'Steep terrain, trellis systems, 8 to 12 passes per season.', href: '/crops/grapes' },
                   { crop: 'Specialty vegetables', rate: '$20 to $40', notes: 'Higher frequency. Specialty formulations. Smaller fields.', href: null },
                 ].map((row) => (

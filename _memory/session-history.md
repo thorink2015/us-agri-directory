@@ -156,6 +156,22 @@
 - Appended 260 net-new operators in 3 batches of 90/90/80; total **131 → 391 operators**
 - Zero TypeScript errors; committed + pushed to `claude/restore-operator-batches-5Kuiz`; draft PR #38 created
 
+## 2026-04-18 — Master audit phase 4 content quality (branch claude/remove-garbage-files-aDHms)
+
+- **Step 1 dashes:** 3 hits in `src/data/operators.ts`; fixed 2 en-dashes in batch-import comments; left 1 real URL (`birkeys.com/--precision-farming-drones`)
+- **Step 2 Romanian:** zero hits across src/
+- **Step 3 AI patterns:** 2 operator descriptions reworded (`wide range of` → `Stocks`; `Comprehensive` → `Carries full`)
+- **Step 4 placeholders:** 5 `{{PLACEHOLDER}}` in `src/data/author.ts` intentionally pending Eugen's bio data; already defensively filtered at render (author.ts:56, about/page.tsx:42); no fabrication
+- **Step 5 operator count:** OG image `130+ verified operators` → dynamic `${operators.length}+` (now 391+)
+- **Step 6 pricing:** pricing page crop table aligned to `crops.ts` canonical (corn $12-$18, soybeans $12-$18, cotton $14-$20, rice $14-$22, orchards $20-$35). One blog post reference to orchards updated from `$15 to $21` → `$20 to $35`
+- **Step 7 drone specs:** services.ts sales description and aeoBlock had stale prices (T50 $18K-$25K, AG-272 $35K-$45K). Updated to canonical (T50 $22K-$28K post-tariff, AG-272 $55K-$75K). Tank (40L, 68L) and NDAA flags already consistent across buyers-guide, homepage, drone-model.ts
+- **Step 8 schema spot-check:** all 8 pages (homepage, iowa, corn, spraying, dji-agras-t50, blog-post-1, spray-cost-calculator, faa-part-107) emit correct JSON-LD types (Article/FAQPage/BreadcrumbList + WebSite/Organization/Person on homepage, SoftwareApplication on tools). No fixes needed.
+- **Step 9 Google Rich Results fixes:**
+  - Homepage featured operators: `itemProp="name"` on anchor was returning the href URL per HTML microdata rules. Added explicit `<meta itemProp="name" content={operator.name}>` inside the `<article>` and removed `itemProp="name"` from the `<Link>`. Verified rendered HTML now outputs business names (e.g. "AgriForce Drone Services LLC") not URLs.
+  - Operator pages: `OperatorSchema.tsx` now always emits `PostalAddress` with `addressLocality` (city), `addressRegion` (state abbreviation from `getStateAbbr(counties)`), `addressCountry: "US"`, and `streetAddress` when available.
+  - Operator pages: added `image` field with site-level fallback `${SITE.domain}/og-image.png`.
+- Commits on `claude/remove-garbage-files-aDHms`: b8135d2 (dashes), 26db07e (AI patterns), 4e3076c (dynamic count), ab54e37 (pricing), b9843a7 (drone specs), 44ad737 (Google schema)
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

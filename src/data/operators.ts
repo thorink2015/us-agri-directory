@@ -3916,7 +3916,7 @@ export const operators: Operator[] = [
     slug: 'american-drone-llc',
     name: 'American Drone LLC',
     description:
-      'Wisconsin-based ag drone dealer and custom applicator. Offers wide range of DJI XAG and Talos drones. Hosts Midwest Drone Conference. Sells proprietary DRA surfactant.',
+      'Wisconsin-based ag drone dealer and custom applicator. Stocks DJI, XAG, and Talos drones. Hosts Midwest Drone Conference. Sells proprietary DRA surfactant.',
     country: 'US',
     counties: ['wisconsin'],
     city: 'Granton',
@@ -4188,7 +4188,7 @@ export const operators: Operator[] = [
     featured: false,
     verified: false,
   },
-  // ── Batch 2 import (operators 90–179) ──────────────────────────────────
+  // ── Batch 2 import (operators 90-179) ──────────────────────────────────
   {
     slug: 'heinen-brothers-agra-services',
     name: 'Heinen Brothers Agra Services',
@@ -5676,7 +5676,7 @@ export const operators: Operator[] = [
     verified: false,
   },
 
-  // ── Batch 3 import (operators 180–259) ──────────────────────────────────
+  // ── Batch 3 import (operators 180-259) ──────────────────────────────────
   {
     slug: 'ag-drones-west',
     name: 'Ag Drones West',
@@ -5844,7 +5844,7 @@ export const operators: Operator[] = [
     slug: 'eas-drones',
     name: 'EAS Drones',
     description:
-      'Professional ag drone services with Part 107 and Part 137 certifications. Comprehensive liability coverage. Serves Utah and Idaho.',
+      'Ag drone services with Part 107 and Part 137 certifications. Carries full liability coverage. Serves Utah and Idaho.',
     country: 'US',
     counties: ['utah', 'idaho'],
     city: 'Utah (serves UT',
