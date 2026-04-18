@@ -670,7 +670,7 @@ export const stateData: StateData[] = [
     ceRequirements: '12 hours per 3-year cycle.',
     droneSpecificCredential: false,
     droneGuidanceUrl: null,
-    extensionUrl: 'https://www.uky.edu/ccd',
+    extensionUrl: 'https://ccd.ca.uky.edu/',
     topCrops: [
       { slug: 'corn', name: 'Corn', acreage: '1.4M acres', notes: 'Central Kentucky' },
       { slug: 'soybeans', name: 'Soybeans', acreage: '1.7M acres', notes: 'Western Kentucky concentration' },
@@ -687,7 +687,7 @@ export const stateData: StateData[] = [
       'Kentucky pesticide licensing is administered by the Kentucky Department of Agriculture (KDA) under Category 11 (Aerial Certification), which explicitly includes UAS. Category 11 is not standalone, it must be paired with at least one site category, making a minimum of 3 exams: Core, Category 11 and a site category. Exam fees are $10 each with a $25 license fee.\n\nA notable Kentucky rule: aerial certification is required for all pesticides applied by drone, including general-use products. This is stricter than most states, where certification is only required for restricted-use pesticides. Continuing education is 12 hours per 3-year renewal cycle. Reciprocity exists with IL, IN, OH, TN, VA and WV.',
     authorityLinks: [
       { label: 'KDA Pesticide Certification', url: 'https://www.kyagr.com/consumer/obtaining-certification.html' },
-      { label: 'UK Center for Crop Diversification', url: 'https://www.uky.edu/ccd' },
+      { label: 'UK Center for Crop Diversification', url: 'https://ccd.ca.uky.edu/' },
     ],
     faqs: [
       { question: 'What does drone spraying cost in Kentucky?', answer: 'Rates run $14 to $19 per acre, slightly above the core Corn Belt baseline due to fewer operators and more variable terrain. Western Kentucky is flatter and more competitive.' },
