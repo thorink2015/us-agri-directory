@@ -66,7 +66,7 @@ const TIMELINE = [
 ];
 
 export const metadata: Metadata = {
-  title: 'How to Start a Drone Spraying Business (2026 Guide) | Ag Drone Directory',
+  title: 'How to Start a Drone Spraying Business: 2026 Guide',
   description:
     'Step-by-step guide to starting a commercial ag drone spraying business. Licensing, equipment, costs, pricing, and first customers. $15K to $80K startup.',
   alternates: { canonical: '/start-a-drone-business' },

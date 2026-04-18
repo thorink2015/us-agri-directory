@@ -57,7 +57,7 @@ const ACCESSORIES = [
 ];
 
 export const metadata: Metadata = {
-  title: "Best Agricultural Spray Drones (2026 Buyer's Guide) | Ag Drone Directory",
+  title: "Best Agricultural Spray Drones: 2026 Buyer's Guide",
   description:
     'Compare DJI T50, T100, Hylio AG-272, XAG P100 Pro, and Talos T60X. Specs, pricing, NDAA status, and which drone fits your operation.',
   alternates: { canonical: '/buyers-guide' },

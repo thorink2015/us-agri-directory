@@ -6,7 +6,7 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 import { AUTHOR, SITE } from '@/data/author';
 
 export const metadata: Metadata = {
-  title: 'Free Agricultural Drone Tools & Calculators | Ag Drone Directory',
+  title: 'Free Agricultural Drone Tools & Calculators',
   description:
     'Six free tools for farmers and drone operators. Calculate spray costs, compare drones, estimate coverage time, plan treatment timing, and more.',
   alternates: { canonical: '/tools' },

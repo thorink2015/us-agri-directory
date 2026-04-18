@@ -42,7 +42,7 @@ const COMPARISON = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Drone Spraying vs Ground Rig: Cost, Speed & Yield Comparison | Ag Drone Directory',
+  title: 'Drone Spraying vs Ground Rig: Cost, Speed, Yield',
   description:
     'Drones cost $12 to $18/acre vs ground rigs at $9.35/acre. But ground rigs crush 3 to 6 bu/acre on tall corn. Full comparison with university data.',
   alternates: { canonical: '/comparisons/drone-vs-ground-rig' },

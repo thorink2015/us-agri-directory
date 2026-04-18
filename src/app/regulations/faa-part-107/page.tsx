@@ -33,7 +33,7 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'FAA Part 107 for Drone Spraying | Remote Pilot Certificate Guide',
+  title: 'FAA Part 107: Remote Pilot Certificate for Ag Drones',
   description:
     'How to get FAA Part 107 for agricultural drone spraying. Study time, exam format, cost, renewal, and what Part 107 does and does not authorize.',
   alternates: { canonical: '/regulations/faa-part-107' },

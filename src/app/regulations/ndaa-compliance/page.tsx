@@ -33,7 +33,7 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'NDAA Compliance for Ag Drones | DJI Ban, Blue UAS List & What It Means',
+  title: 'NDAA Compliance for Ag Drones: DJI, Blue UAS List',
   description:
     'What drone operators need to know about NDAA restrictions on Chinese drones. DJI status, Blue UAS list, Hylio compliance, and who is affected.',
   alternates: { canonical: '/regulations/ndaa-compliance' },

@@ -25,7 +25,7 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: `About ${SITE.name} | Founded and Edited by ${AUTHOR.firstName}`,
+  title: `About ${SITE.name}: Founded by ${AUTHOR.firstName}`,
   description:
     `${SITE.name} is a single-author directory founded and edited by ${AUTHOR.firstName}. Every page is personally researched to connect US farmers with verified agricultural drone operators across all 50 states.`,
   alternates: { canonical: '/about' },

@@ -149,7 +149,7 @@ const URGENCY_LABEL: Record<string, string> = {
 };
 
 export const metadata: Metadata = {
-  title: 'Drone Spray Treatment Calendar by Crop and State | When to Book',
+  title: 'Drone Spray Treatment Calendar: When to Book',
   description:
     'See exactly when to book drone spraying for your crop in your state. Monthly treatment windows for corn, soybeans, wheat, cotton, rice, grapes, and orchards.',
   alternates: { canonical: '/tools/treatment-calendar' },

@@ -28,7 +28,7 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Should I Buy a Spray Drone or Hire an Operator? ROI Calculator',
+  title: 'Buy vs Hire a Spray Drone: ROI Calculator',
   description:
     'Compare owning a spray drone versus hiring a custom operator. Includes USDA EQIP cost-share, financing, and break-even acreage from MU Extension data.',
   alternates: { canonical: '/tools/roi-calculator' },

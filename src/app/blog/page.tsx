@@ -5,7 +5,7 @@ import { blogPosts, BLOG_CATEGORY_LABELS } from '@/data/blog-posts';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Ag Drone Blog: Top Lists, Guides & Industry News 2026 | US Ag Drone Directory',
+  title: 'Ag Drone Blog: Lists, Guides & Industry News 2026',
   description:
     'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies, and equipment comparisons.',
   alternates: { canonical: '/blog' },

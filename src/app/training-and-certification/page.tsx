@@ -47,7 +47,7 @@ const PROVIDERS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Ag Drone Pilot Training & Certification Guide (2026) | Ag Drone Directory',
+  title: 'Ag Drone Pilot Training & Certification: 2026 Guide',
   description:
     'From Part 107 to Part 137 to state pesticide license: the complete training pathway for agricultural drone operators. Costs, timeline, and providers.',
   alternates: { canonical: '/training-and-certification' },

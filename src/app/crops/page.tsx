@@ -4,7 +4,7 @@ import { crops } from '@/data/crops';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Drone Services by Crop Type | Corn, Soybeans, Cotton, Wheat & More',
+  title: 'Drone Services by Crop: Corn, Soybeans, Cotton, Wheat',
   description:
     'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs, and equipment for every major US crop.',
   alternates: { canonical: '/crops' },

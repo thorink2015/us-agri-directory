@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { SITE } from '@/data/author';
 
 export const metadata: Metadata = {
-  title: 'Drone Spraying by State: Licensing, Rates & Operators (2026) | Ag Drone Directory',
+  title: 'Drone Spraying by State: Licensing & Rates 2026',
   description:
     'Find agricultural drone operators, licensing requirements, and 2026 spray rates for all 50 US states. Iowa $12 to $17, Texas $12 to $20, California $18 to $35/acre.',
   alternates: { canonical: '/states' },

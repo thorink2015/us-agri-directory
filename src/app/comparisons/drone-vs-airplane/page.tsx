@@ -43,7 +43,7 @@ const COMPARISON = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Drone Spraying vs Airplane: When Each Method Wins | Ag Drone Directory',
+  title: 'Drone Spraying vs Airplane: When Each Method Wins',
   description:
     'Drones cost $12.50/acre vs airplanes at $12/acre (Iowa State 2026). Drones win under 500 acres; airplanes win over 1,000. Full comparison.',
   alternates: { canonical: '/comparisons/drone-vs-airplane' },

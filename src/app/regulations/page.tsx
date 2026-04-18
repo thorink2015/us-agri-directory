@@ -59,7 +59,7 @@ const SUBPAGES = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Drone Spraying Regulations: FAA, State & Federal Requirements (2026)',
+  title: 'Drone Spraying Regulations: FAA, State & Federal 2026',
   description:
     'Complete guide to FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance for agricultural drone operators in 2026.',
   alternates: { canonical: '/regulations' },

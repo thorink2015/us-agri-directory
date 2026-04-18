@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const drone = getDroneBySlug(params.slug);
   if (!drone) return {};
   return {
-    title: `${drone.name} Specs, Price & US Operators 2026 | ${drone.manufacturer}`,
+    title: `${drone.name}: Specs, Price & US Operators 2026`,
     description: drone.aeoBlock.slice(0, 155),
     alternates: { canonical: `/drones/${params.slug}` },
     openGraph: {

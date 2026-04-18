@@ -33,7 +33,7 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'FAA Part 137 for Drone Spraying | Ag Aircraft Certificate Guide',
+  title: 'FAA Part 137 for Drone Spraying: Ag Aircraft Guide',
   description:
     'How to get FAA Part 137 and Section 44807 exemption for agricultural drone spraying. Timeline, operations manual, and what it covers.',
   alternates: { canonical: '/regulations/faa-part-137' },

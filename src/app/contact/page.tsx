@@ -4,7 +4,7 @@ import ContactForm from './ContactForm';
 import { AUTHOR, SITE } from '@/data/author';
 
 export const metadata: Metadata = {
-  title: 'Contact | US Ag Drone Directory',
+  title: 'Contact US Ag Drone Directory',
   description:
     'Get in touch with US Ag Drone Directory, submit your listing, ask a question, or send us feedback.',
   alternates: { canonical: '/contact' },

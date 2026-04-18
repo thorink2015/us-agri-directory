@@ -28,7 +28,7 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Acreage Converter for Farmers | Acres, Hectares, Square Feet & More',
+  title: 'Acreage Converter: Acres, Hectares, Sq Ft, Sections',
   description:
     'Convert between acres, hectares, square feet, square meters, and sections instantly. Built for farmers and ag professionals working with field measurements.',
   alternates: { canonical: '/tools/acreage-converter' },

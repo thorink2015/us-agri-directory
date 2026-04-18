@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const rich = getStateData(params.slug);
   if (rich) {
     return {
-      title: `Drone Spraying in ${rich.name}: Licensing, Rates & Operators (2026) | Ag Drone Directory`,
+      title: `Drone Spraying in ${rich.name}: Rates & Operators 2026`,
       description: `${rich.aeoBlock.slice(0, 155)}`,
       alternates: { canonical: `/states/${rich.slug}` },
       openGraph: {

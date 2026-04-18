@@ -28,7 +28,7 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Drone Spraying Cost Calculator (2026 Rates) | Ag Drone Directory',
+  title: 'Drone Spraying Cost Calculator: 2026 Rates',
   description:
     'Estimate your drone spraying cost per acre. Enter acres, crop, and state for a 2026 rate estimate based on Iowa State Extension and regional operator data.',
   alternates: { canonical: '/tools/spray-cost-calculator' },

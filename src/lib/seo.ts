@@ -10,8 +10,13 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
     ? `Rates from $${operator.priceMinUsd}/acre. `
     : '';
   const coverage = `Service area: ${operator.counties.length} state${operator.counties.length !== 1 ? 's' : ''}.`;
+  const baseCity = operator.city.split(/[,(/]/)[0].trim();
+  const fullTitle = `${operator.name}: Drone Spraying in ${baseCity}`;
+  const title = fullTitle.length > 60
+    ? `${operator.name.slice(0, 57).trim()}…`
+    : fullTitle;
   return {
-    title: `${operator.name} | Ag Drone Services ${operator.city} | Rates and Contact`,
+    title,
     description: `${operator.name}, agricultural drone operator based in ${operator.city}. ${price}${operator.services.length} services available. ${coverage} Contact directly.`,
     alternates: { canonical: `/operators/${operator.slug}` },
     openGraph: {
@@ -33,7 +38,7 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
   const crops = county.mainCrops.slice(0, 3).join(', ');
   const desc = `Find ${operatorCount} verified drone spraying operator${operatorCount !== 1 ? 's' : ''} in ${county.name}. Compare rates, check certifications, and hire an ag drone service for your ${crops} fields.`;
   return {
-    title: `Drone Spraying Services in ${county.name} | Ag Drone Directory`,
+    title: `${county.name} Drone Spraying: Rates & Operators 2026`,
     description: desc,
     alternates: { canonical: `/states/${county.slug}` },
     openGraph: {
@@ -54,8 +59,8 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'US Agricultural Drone Directory | Find Verified Drone Spraying Operators',
-    template: '%s | US Ag Drone Directory',
+    default: 'US Ag Drone Directory: Find Drone Spraying Operators',
+    template: '%s',
   },
   description:
     'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping, and scouting across all 50 states.',

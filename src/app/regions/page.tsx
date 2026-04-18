@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { regions } from '@/data/regions';
 
 export const metadata: Metadata = {
-  title: 'US Agricultural Drone Regions | Corn Belt, Delta, Great Plains & More',
+  title: 'US Ag Drone Regions: Corn Belt, Delta, Great Plains',
   description:
     'Browse agricultural drone services by US farming region: Corn Belt, Great Plains, Delta, California, and Southeast. Regional crops, timing, and operators.',
   alternates: { canonical: '/regions' },

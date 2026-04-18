@@ -39,7 +39,7 @@ const FAQS = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Compare Agricultural Spray Drones Side by Side | T50 vs AG-272 vs T100',
+  title: 'Compare Ag Spray Drones: T50 vs AG-272 vs T100',
   description:
     'Compare DJI Agras T50, T100, Hylio AG-272, XAG P100 Pro, and Talos T60X specs side by side. Tank size, price, NDAA, wind rating, and throughput.',
   alternates: { canonical: '/tools/drone-comparison' },

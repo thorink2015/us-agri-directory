@@ -36,7 +36,7 @@ const FAQS = [
 const SORTED_STATES = [...counties].sort((a, b) => a.name.localeCompare(b.name));
 
 export const metadata: Metadata = {
-  title: 'State Pesticide Applicator License for Drone Spraying: 50-State Guide',
+  title: 'State Pesticide Applicator License: 50-State Guide',
   description:
     'Every state requires a commercial pesticide applicator license for drone spraying. See aerial categories, exams, fees, and unique rules for all 50 states.',
   alternates: { canonical: '/regulations/state-licensing' },

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const county = getCountyBySlug(params.slug);
   if (!county) return {};
   return {
-    title: `Drone Operators in ${county.name} | Agricultural Drone Directory`,
+    title: `${county.name} Drone Operators: Rates & Contact`,
     description: `Full list of agricultural drone operators in ${county.name}. Direct contact and estimated rates.`,
     alternates: { canonical: `/states/${params.slug}/operators` },
   };
