@@ -63,7 +63,7 @@ export const services: ServiceDefinition[] = [
     icon: '🌱',
     authorityLinks: [
       { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-ac-340-conservation-practice-standard' },
-      { label: 'Midwest Cover Crops Council: Species Selection Tool', url: 'https://midwestcovercrops.org/covercroptool' },
+      { label: 'Midwest Cover Crops Council: Species Selection Tool', url: 'https://covercroptool.midwestcovercrops.org/covercroptool/' },
       { label: 'USDA EQIP Environmental Quality Incentives Program', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
     ],
     faqs: [
@@ -111,7 +111,7 @@ export const services: ServiceDefinition[] = [
     authorityLinks: [
       { label: 'FAA Part 107 Small UAS Operations', url: 'https://www.faa.gov/uas/commercial_operators' },
       { label: 'USDA NRCS Soil Survey Resources', url: 'https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/soil-survey' },
-      { label: 'ASABE Standards for Aerial Sensor Data', url: 'http://asabe.org/Standards' },
+      { label: 'ASABE Standards for Aerial Sensor Data', url: 'https://asabe.org/standards' },
     ],
     faqs: [
       {

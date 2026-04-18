@@ -32,7 +32,7 @@ export const regions: Region[] = [
     authorityLinks: [
       { label: 'Iowa State Extension: Custom Rate Survey 2026', url: 'https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf' },
       { label: 'Purdue Extension: Corn and Soybean IPM', url: 'https://ag.purdue.edu/department/entm/extension/field-crops-ipm/' },
-      { label: 'Midwest Cover Crops Council', url: 'https://mccc.msu.edu' },
+      { label: 'Midwest Cover Crops Council', url: 'https://midwestcovercrops.org' },
     ],
     faqs: [
       {
@@ -92,7 +92,7 @@ export const regions: Region[] = [
       'Texas cotton adds a separate demand peak in September and October, with drone defoliant gaining share over airplanes because of drift control near sensitive soybean fields.',
     ],
     authorityLinks: [
-      { label: 'Kansas State Extension: Wheat Disease Management', url: 'https://bookstore.ksre.ksu.edu/pubs/EP130.pdf' },
+      { label: 'Kansas State Extension: Wheat Disease Management', url: 'https://bookstore.ksre.ksu.edu/pubs/foliar-fungicide-efficacy-ratings-for-wheat-disease-management-2026_EP130.pdf' },
       { label: 'NDSU Extension: Wheat Production', url: 'https://www.ndsu.edu/agriculture//ag-hub/ag-topics/crop-production/crops/wheat' },
       { label: 'Texas A&M AgriLife Extension: Cotton', url: 'https://cottonbugs.tamu.edu' },
     ],

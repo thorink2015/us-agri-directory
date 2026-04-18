@@ -1,5 +1,16 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Plane, ArrowRight, Search } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Page Not Found | Ag Drone Directory',
+  description:
+    'The page you requested could not be found. Browse operators, states, crops and services on the US Ag Drone Directory.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function NotFound() {
   return (

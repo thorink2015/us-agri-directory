@@ -722,7 +722,7 @@ export const stateData: StateData[] = [
     ceRequirements: '18 points per 3-year cycle (Agriculture C01). Distribution and format restrictions apply.',
     droneSpecificCredential: false,
     droneGuidanceUrl: 'https://psep.tennessee.edu/pesticide-application-using-drones/',
-    extensionUrl: 'https://extension.tennessee.edu',
+    extensionUrl: 'https://utextension.tennessee.edu',
     topCrops: [
       { slug: 'corn', name: 'Corn', acreage: '800K acres', notes: 'West Tennessee' },
       { slug: 'soybeans', name: 'Soybeans', acreage: '1.5M acres', notes: '#1 crop' },
@@ -741,7 +741,7 @@ export const stateData: StateData[] = [
     authorityLinks: [
       { label: 'TDA Aerial Applicator License (UT PSEP)', url: 'https://psep.tennessee.edu/aerial-applicator-license/' },
       { label: 'UT PSEP: Pesticide Application Using Drones', url: 'https://psep.tennessee.edu/pesticide-application-using-drones/' },
-      { label: 'UT Extension', url: 'https://extension.tennessee.edu' },
+      { label: 'UT Extension', url: 'https://utextension.tennessee.edu' },
     ],
     faqs: [
       { question: 'What does it cost to get licensed for drone spraying in Tennessee?', answer: '$150 exam application, $15 AER exam fee, $200 pilot fee and $150 per aircraft decal. Each drone in your fleet needs its own $150 decal. Add $100K minimum liability insurance. Total entry cost for a single-drone operator is approximately $615 before insurance.' },
@@ -1894,7 +1894,7 @@ export const stateData: StateData[] = [
     ceRequirements: '12 CEUs per 4-year cycle (certified). 6 CEUs/yr (licensed).',
     droneSpecificCredential: false,
     droneGuidanceUrl: null,
-    extensionUrl: 'https://extension.unr.edu',
+    extensionUrl: 'https://extension.unr.edu/default.aspx',
     topCrops: [],
     rateRange: '$18 to $30/acre',
     statsRate: '$18 to $30/acre',
@@ -1907,7 +1907,7 @@ export const stateData: StateData[] = [
       'Nevada aerial pesticide licensing is administered by the Nevada Department of Agriculture (NDA) under a 3-exam structure: Core, Laws and the relevant use category, at $50 per initial exam. Commercial operators also pay a $250/yr business license fee. Renewal is on a 4-year cycle for certified applicators (12 CEUs) or annual for licensed pest control operators (6 CEUs/yr).\n\nNevada has very limited agricultural crop acreage. Primary drone opportunities are alfalfa hay in the northern valleys, ranch rangeland brush control and some irrigated grain operations near Fallon and Elko. No reciprocity agreements are documented, contact NDA for current status.',
     authorityLinks: [
       { label: 'Nevada Department of Agriculture', url: 'https://agri.nv.gov' },
-      { label: 'UNR Extension', url: 'https://extension.unr.edu' },
+      { label: 'UNR Extension', url: 'https://extension.unr.edu/default.aspx' },
     ],
     faqs: [
       { question: 'Is there drone spray demand in Nevada?', answer: 'Very limited for traditional agriculture. Alfalfa hay in northern Nevada, ranch rangeland and some cannabis cultivation are the main opportunities.' },
@@ -2288,7 +2288,7 @@ export const stateData: StateData[] = [
     ceRequirements: '8 Core + 16 per category per 5-year cycle.',
     droneSpecificCredential: false,
     droneGuidanceUrl: null,
-    extensionUrl: 'https://njaes.rutgers.edu',
+    extensionUrl: 'https://sebs.rutgers.edu/njaes',
     topCrops: [
       { slug: 'soybeans', name: 'Soybeans', acreage: '100K acres', notes: 'South Jersey' },
       { slug: 'corn', name: 'Corn', acreage: '80K acres', notes: 'South Jersey' },
@@ -2304,7 +2304,7 @@ export const stateData: StateData[] = [
       'New Jersey aerial pesticide licensing falls under Category 11 (Aerial Applicator), administered by the NJ Department of Environmental Protection (DEP). Category 11 requires 40 hours of documented on-the-job training before certification, one of the few states with a mandatory OJT requirement. At minimum 3 exams are needed: Core, Category 11 and one additional use category, at approximately $50 each. The annual license fee is approximately $100.\n\nRenewal is on a 5-year cycle with 8 Core and 16 per-category CE credits required. Reciprocity exists with NY, CT, IN, OH, PA, RI and VT. Dense population and small field sizes push rates above neighboring PA, and drift-sensitivity buffer requirements are more stringent near residential areas.',
     authorityLinks: [
       { label: 'NJ DEP Pesticide Control', url: 'https://www.nj.gov/dep/enforcement/pcp/' },
-      { label: 'Rutgers NJAES Extension', url: 'https://njaes.rutgers.edu' },
+      { label: 'Rutgers NJAES Extension', url: 'https://sebs.rutgers.edu/njaes' },
     ],
     faqs: [
       { question: 'What is the 40-hour OJT requirement?', answer: 'New Jersey requires 40 hours of on-the-job training specifically for Category 11 aerial certification. This must be documented under supervision before you can apply for the license.' },
