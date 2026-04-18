@@ -394,7 +394,7 @@ export const stateData: StateData[] = [
     regionSlug: 'corn-belt',
     regionName: 'Corn Belt',
     licensingAgency: 'Ohio Department of Agriculture (ODA)',
-    licensingAgencyUrl: 'https://agri.ohio.gov/',
+    licensingAgencyUrl: 'https://agri.ohio.gov/divisions/pesticide-regulation',
     aerialCategory: 'Category C-1 (commercial license required even for private applicators)',
     examsRequired: 'Core + Category C-1. License $35/yr. Business license $35.',
     examFees: '$35/yr license (exam fee included). Aerial insurance $100K/$300K required.',
@@ -408,7 +408,7 @@ export const stateData: StateData[] = [
     renewalCycle: '3-year cycle.',
     ceRequirements: '5 hours per 3-year cycle (min 1 hr Core, 0.5 hr per category).',
     droneSpecificCredential: false,
-    droneGuidanceUrl: 'https://agri.ohio.gov/',
+    droneGuidanceUrl: 'https://agri.ohio.gov/divisions/pesticide-regulation',
     extensionUrl: 'https://cfaes.osu.edu',
     topCrops: [
       { slug: 'corn', name: 'Corn', acreage: '3.4M acres', notes: 'Tar spot expanding west to east' },
@@ -426,7 +426,7 @@ export const stateData: StateData[] = [
     licensingDetails:
       'Ohio pesticide licensing is administered by the Ohio Department of Agriculture (ODA) under Category C-1. Ohio has the strictest private applicator rule in the US: every drone pesticide applicator, including farmers spraying their own land, must hold a commercial license with Category C-1. License fees are $35 per year, with exam fee included.\n\nOhio also mandates among the highest aerial insurance minimums in the country: $100,000 property damage per occurrence, $100,000 bodily injury per person and $300,000 bodily injury per occurrence. ODA explicitly prohibits drone application of Enlist, Acuron (atrazine formulations) and Xtend Max (dicamba formulations). Continuing education is 5 hours per 3-year cycle. Reciprocity exists with AL, FL, GA, IL, IN, LA, MI and MN.',
     authorityLinks: [
-      { label: 'ODA Pesticide Program', url: 'https://agri.ohio.gov/' },
+      { label: 'ODA Pesticide Program', url: 'https://agri.ohio.gov/divisions/pesticide-regulation' },
       { label: 'OSU Extension CFAES', url: 'https://cfaes.osu.edu' },
     ],
     faqs: [

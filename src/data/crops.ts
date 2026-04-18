@@ -349,7 +349,7 @@ export const crops: Crop[] = [
       { label: 'UC Davis Cooperative Extension: Vineyard Pest Management', url: 'https://ipm.ucanr.edu/agriculture/grape/' },
       { label: 'Washington State University Extension: Grape Production', url: 'https://extension.wsu.edu/' },
       { label: 'California Department of Pesticide Regulation', url: 'https://www.cdpr.ca.gov' },
-      { label: 'USDA NASS: Grape Bearing Acreage', url: 'https://www.nass.usda.gov/Charts_and_Maps/Fruits_and_Tree_Nuts/' },
+      { label: 'USDA NASS: Grape Bearing Acreage', url: 'https://www.nass.usda.gov/Statistics_by_Subject/?sector=CROPS' },
     ],
     faqs: [
       {

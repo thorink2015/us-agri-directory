@@ -136,7 +136,7 @@ export default function FaaPart107Page() {
 
           <h2 className="text-xl font-bold text-gray-900">Part 107 waivers for ag drone operators</h2>
           <p>
-            The most common waivers requested by ag drone operators are: night operations (no longer required since April 2021 rule change if anti-collision lighting is installed), BVLOS for large field spraying (still requires case-by-case waiver), operations over people (Category 1-4 drones may qualify without a waiver) and altitude above 400 ft AGL (rare for ag work, occasionally requested for mountain orchards). Waivers are submitted through the <a href={addUtm("https://www.faa.gov/uas/commercial_operators_waivers", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA DroneZone portal</a> and typically take 60 to 90 days for review.
+            The most common waivers requested by ag drone operators are: night operations (no longer required since April 2021 rule change if anti-collision lighting is installed), BVLOS for large field spraying (still requires case-by-case waiver), operations over people (Category 1-4 drones may qualify without a waiver) and altitude above 400 ft AGL (rare for ag work, occasionally requested for mountain orchards). Waivers are submitted through the <a href={addUtm("https://faadronezone-access.faa.gov/", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA DroneZone portal</a> and typically take 60 to 90 days for review.
           </p>
         </section>
 

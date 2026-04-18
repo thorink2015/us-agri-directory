@@ -246,7 +246,7 @@ export const drones: DroneModel[] = [
     authorityLinks: [
       { label: 'Hylio AG-272 Specs and Configurator', url: 'https://www.hyl.io/' },
       { label: 'Hylio Distributor Locator', url: 'https://www.hyl.io/distributor-locator' },
-      { label: 'DoD Blue UAS Cleared Drone List', url: 'https://www.diu.mil/solutions/blue-uas' },
+      { label: 'DoD Blue UAS Cleared Drone List', url: 'https://www.diu.mil/blue-uas-list' },
     ],
     faqs: [
       {

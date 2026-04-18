@@ -149,7 +149,7 @@ export default function NdaaCompliancePage() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href={addUtm("https://www.diu.mil/solutions/blue-uas", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.diu.mil/blue-uas-list", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 DIU: Blue UAS list (DoD cleared platforms)
               </a>
             </li>
