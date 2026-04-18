@@ -7,7 +7,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Commercial Ag Spray Drones: DJI, Hylio, XAG Specs',
   description:
-    'Compare commercial agricultural spray drones used by operators across the US: DJI Agras T50, T25, T100, Hylio AG-272, XAG P100 Pro, and Talos T60X. Specifications and pricing.',
+    'Compare commercial ag spray drones used by US operators: DJI Agras T50, T25, T100, Hylio AG-272, XAG P100 Pro, Talos T60X. Specs and pricing.',
   alternates: {
     canonical: '/drones',
   },

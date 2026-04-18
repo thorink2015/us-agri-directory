@@ -15,9 +15,11 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
   const title = fullTitle.length > 60
     ? `${operator.name.slice(0, 57).trim()}…`
     : fullTitle;
+  const fullDesc = `${operator.name}, ag drone operator in ${baseCity}. ${price}${operator.services.length} services. ${coverage} Contact directly.`;
+  const description = fullDesc.length > 160 ? `${fullDesc.slice(0, 157).trim()}…` : fullDesc;
   return {
     title,
-    description: `${operator.name}, agricultural drone operator based in ${operator.city}. ${price}${operator.services.length} services available. ${coverage} Contact directly.`,
+    description,
     alternates: { canonical: `/operators/${operator.slug}` },
     openGraph: {
       title: `${operator.name} | US Ag Drone Directory`,
@@ -63,7 +65,7 @@ export const defaultMetadata: Metadata = {
     template: '%s',
   },
   description:
-    'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping, and scouting across all 50 states.',
+    'The largest US ag drone directory. Find verified operators for spraying, seeding, mapping, and scouting across all 50 states.',
   keywords: [
     'drone spraying near me',
     'agricultural drone services',

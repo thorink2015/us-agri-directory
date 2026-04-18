@@ -8,7 +8,7 @@ import { SITE } from '@/data/author';
 export const metadata: Metadata = {
   title: 'Drone Spraying by State: Licensing & Rates 2026',
   description:
-    'Find agricultural drone operators, licensing requirements, and 2026 spray rates for all 50 US states. Iowa $12 to $17, Texas $12 to $20, California $18 to $35/acre.',
+    'Find ag drone operators, licensing, and 2026 spray rates for all 50 US states. Iowa $12-$17, Texas $12-$20, California $18-$35/acre.',
   alternates: { canonical: '/states' },
   openGraph: {
     title: 'Ag Drone Services by State, Licensing & Rates (2026)',
