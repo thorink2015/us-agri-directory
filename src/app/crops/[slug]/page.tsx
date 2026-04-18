@@ -261,11 +261,11 @@ export default function CropPage({ params }: Props) {
         <p className="text-sm font-semibold text-gray-700 mb-3">Related tools</p>
         <div className="flex flex-wrap gap-3">
           <Link href="/tools/spray-cost-calculator" className="text-sm text-green-700 hover:underline">Spray Cost Calculator</Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-400" aria-hidden="true">|</span>
           <Link href="/tools/roi-calculator" className="text-sm text-green-700 hover:underline">ROI Buy vs. Hire</Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-400" aria-hidden="true">|</span>
           <Link href="/tools/treatment-calendar" className="text-sm text-green-700 hover:underline">Treatment Calendar</Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-400" aria-hidden="true">|</span>
           <Link href="/pricing" className="text-sm text-green-700 hover:underline">Full Pricing Guide</Link>
         </div>
       </div>

@@ -111,7 +111,7 @@ export default function GlossaryPage() {
             ) : (
               <span
                 key={l}
-                className="w-7 h-7 flex items-center justify-center rounded-md text-sm font-medium text-gray-300 cursor-not-allowed"
+                className="w-7 h-7 flex items-center justify-center rounded-md text-sm font-medium text-gray-400 cursor-not-allowed"
               >
                 {l}
               </span>

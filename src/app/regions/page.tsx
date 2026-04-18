@@ -55,7 +55,7 @@ export default function RegionsIndexPage() {
                   <h2 className="text-lg font-bold text-gray-900 group-hover:text-green-700 transition-colors">
                     {r.name}
                   </h2>
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
+                  <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-green-600 transition-colors" />
                 </div>
                 <p className="text-sm text-gray-500">{r.stateSlugs.length} states{r.totalAcres ? ` · ${(r.totalAcres / 1_000_000).toFixed(0)}M acres` : ''}</p>
               </div>
