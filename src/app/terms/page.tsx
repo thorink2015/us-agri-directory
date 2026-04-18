@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { SITE } from '@/data/author';
+import MailtoLink from '@/components/ui/MailtoLink';
 
 export const metadata: Metadata = {
   title: 'Terms of Use | US Ag Drone Directory',
@@ -160,9 +161,9 @@ export default function TermsPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3">Contact</h2>
             <p className="leading-relaxed">
               Questions about these terms:{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 hover:underline">
+              <MailtoLink email={CONTACT_EMAIL} className="text-green-700 hover:underline">
                 {CONTACT_EMAIL}
-              </a>
+              </MailtoLink>
             </p>
           </section>
         </div>

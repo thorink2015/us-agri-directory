@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Mail, ExternalLink, AlertTriangle, BookOpen, Users, CheckCircle } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import MailtoLink from '@/components/ui/MailtoLink';
 import { operators } from '@/data/operators';
 import { AUTHOR, SITE, personSchema, organizationSchema } from '@/data/author';
 
@@ -153,12 +154,12 @@ export default function AboutPage() {
                 <ExternalLink className="w-4 h-4" /> LinkedIn
               </a>
             )}
-            <a
-              href={`mailto:${AUTHOR.publicEmail}`}
+            <MailtoLink
+              email={AUTHOR.publicEmail}
               className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
             >
               <Mail className="w-4 h-4" /> {AUTHOR.publicEmail}
-            </a>
+            </MailtoLink>
           </div>
         </div>
       </section>
@@ -282,12 +283,12 @@ export default function AboutPage() {
           directly or use the contact form.
         </p>
         <div className="flex flex-wrap gap-4 text-sm">
-          <a
-            href={`mailto:${AUTHOR.publicEmail}`}
+          <MailtoLink
+            email={AUTHOR.publicEmail}
             className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:text-green-700 transition-colors"
           >
             <Mail className="w-4 h-4 text-green-600" /> {AUTHOR.publicEmail}
-          </a>
+          </MailtoLink>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:text-green-700 transition-colors"
