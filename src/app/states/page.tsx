@@ -12,9 +12,19 @@ export const metadata: Metadata = {
   alternates: { canonical: '/states' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'Ag Drone Services by State, Licensing & Rates (2026)',
     description: 'Browse verified operators, state licensing rules and 2026 per-acre rates for all 50 states.',
     url: `${SITE.domain}/states`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Ag Drone Services by State',
+      },
+    ],
   },
 };
 

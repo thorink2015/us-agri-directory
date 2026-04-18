@@ -25,11 +25,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://agdronedirectory.com',
     siteName: 'US Ag Drone Directory',
     title: 'US Agricultural Drone Directory | Find Verified Drone Operators',
     description:
       'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping and scouting across all 50 states.',
+    // Note: no `url` here — inheriting would cause og:url to mismatch the
+    // canonical on child routes. Each page sets its own openGraph.url.
     images: [
       {
         url: '/opengraph-image',

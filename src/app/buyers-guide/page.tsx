@@ -63,10 +63,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/buyers-guide' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: "2026 Agricultural Spray Drone Buyer's Guide",
     description:
       'DJI Agras T50 ($22K-$28K post-tariff), Hylio AG-272 ($55K-$75K NDAA), DJI T100, XAG P100 Pro and Talos T60X side by side. Which drone fits your operation.',
     url: `${SITE.domain}/buyers-guide`,
+    siteName: SITE.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: "2026 Agricultural Spray Drone Buyer's Guide",
+      },
+    ],
   },
 };
 

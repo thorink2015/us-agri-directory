@@ -39,10 +39,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/regulations/ndaa-compliance' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'NDAA Compliance: What Ag Drone Operators Need to Know',
     description:
       'DJI remains legal for private commercial use but excluded from federal contracts. Hylio AG-272, Pyka Pelican 2 and Blue UAS platforms are the NDAA-compliant alternatives.',
     url: `${SITE.domain}/regulations/ndaa-compliance`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'NDAA Compliance for Ag Drone Operators',
+      },
+    ],
   },
 };
 
@@ -139,7 +149,7 @@ export default function NdaaCompliancePage() {
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
           <ul className="space-y-1 text-gray-600">
             <li>
-              <a href={addUtm("https://www.diu.mil/blue-uas", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.diu.mil/solutions/blue-uas", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 DIU: Blue UAS list (DoD cleared platforms)
               </a>
             </li>

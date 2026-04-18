@@ -7,6 +7,23 @@ export const metadata: Metadata = {
   description:
     'Terms governing use of the US Agricultural Drone Directory. Free access, no warranties on listings, operator responsibility.',
   alternates: { canonical: '/terms' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Terms of Use | US Ag Drone Directory',
+    description:
+      'Terms governing use of the US Agricultural Drone Directory. Free access, no warranties on listings, operator responsibility.',
+    url: `${SITE.domain}/terms`,
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'US Ag Drone Directory Terms of Use',
+      },
+    ],
+  },
 };
 
 const CONTACT_EMAIL = 'contact@agdronedirectory.com';

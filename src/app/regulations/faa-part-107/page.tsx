@@ -39,10 +39,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/regulations/faa-part-107' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'FAA Part 107: Remote Pilot Certificate for Ag Drone Operators',
     description:
       '60 questions, 70% passing, $175 at PSI testing centers. 2 to 4 weeks study. Does not authorize pesticide application on its own.',
     url: `${SITE.domain}/regulations/faa-part-107`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'FAA Part 107 Remote Pilot Certificate',
+      },
+    ],
   },
 };
 
@@ -126,7 +136,7 @@ export default function FaaPart107Page() {
 
           <h2 className="text-xl font-bold text-gray-900">Part 107 waivers for ag drone operators</h2>
           <p>
-            The most common waivers requested by ag drone operators are: night operations (no longer required since April 2021 rule change if anti-collision lighting is installed), BVLOS for large field spraying (still requires case-by-case waiver), operations over people (Category 1-4 drones may qualify without a waiver) and altitude above 400 ft AGL (rare for ag work, occasionally requested for mountain orchards). Waivers are submitted through the <a href={addUtm("https://www.faa.gov/uas/commercial_operators/part_107_waivers", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA DroneZone portal</a> and typically take 60 to 90 days for review.
+            The most common waivers requested by ag drone operators are: night operations (no longer required since April 2021 rule change if anti-collision lighting is installed), BVLOS for large field spraying (still requires case-by-case waiver), operations over people (Category 1-4 drones may qualify without a waiver) and altitude above 400 ft AGL (rare for ag work, occasionally requested for mountain orchards). Waivers are submitted through the <a href={addUtm("https://www.faa.gov/uas/commercial_operators_waivers", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA DroneZone portal</a> and typically take 60 to 90 days for review.
           </p>
         </section>
 
@@ -140,7 +150,7 @@ export default function FaaPart107Page() {
               </a>
             </li>
             <li>
-              <a href={addUtm("https://www.faa.gov/uas/commercial_operators/part_107", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
+              <a href={addUtm("https://www.faa.gov/uas/commercial_operators", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">
                 FAA: Part 107 Overview
               </a>
             </li>

@@ -17,7 +17,7 @@ export const services: ServiceDefinition[] = [
     authorityLinks: [
       { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'EPA Pesticide Registration and Labeling', url: 'https://www.epa.gov/pesticide-labels' },
-      { label: 'USDA NASS: Agricultural Chemical Use Surveys', url: 'https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use' },
+      { label: 'USDA NASS: Agricultural Chemical Use Surveys', url: 'https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/' },
     ],
     faqs: [
       {
@@ -63,7 +63,7 @@ export const services: ServiceDefinition[] = [
     icon: '🌱',
     authorityLinks: [
       { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-ac-340-conservation-practice-standard' },
-      { label: 'Midwest Cover Crops Council: Species Selection Tool', url: 'https://mccc.msu.edu/covercroptool' },
+      { label: 'Midwest Cover Crops Council: Species Selection Tool', url: 'https://midwestcovercrops.org/covercroptool' },
       { label: 'USDA EQIP Environmental Quality Incentives Program', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
     ],
     faqs: [
@@ -109,9 +109,9 @@ export const services: ServiceDefinition[] = [
     priceUnit: 'per acre',
     icon: '🗺️',
     authorityLinks: [
-      { label: 'FAA Part 107 Small UAS Operations', url: 'https://www.faa.gov/uas/commercial_operators/part_107' },
+      { label: 'FAA Part 107 Small UAS Operations', url: 'https://www.faa.gov/uas/commercial_operators' },
       { label: 'USDA NRCS Soil Survey Resources', url: 'https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/soil-survey' },
-      { label: 'ASABE Standards for Aerial Sensor Data', url: 'https://www.asabe.org/Standards' },
+      { label: 'ASABE Standards for Aerial Sensor Data', url: 'http://asabe.org/Standards' },
     ],
     faqs: [
       {
@@ -336,9 +336,9 @@ export const services: ServiceDefinition[] = [
     description:
       'New and used agricultural drone sales from authorized dealers of DJI Agras, Hylio, XAG, Guardian Agriculture and Pyka across the US.',
     longDescription:
-      'Agricultural drone sales in the US run through three primary channels: authorized DJI Agras dealers (HSE-UAV, Drone Nerds, AgriSpray Drones), US-manufactured Hylio direct and through resellers and XAG, Guardian Agriculture and Pyka through their own channel networks. 2026 dealer pricing on the DJI Agras T50 runs $22,000 to $28,000 post-tariff for the full ready-to-fly kit including batteries, generator and trailer setup (pre-tariff MSRP was approximately $18,000). Hylio AG-272 runs an estimated $55,000 to $75,000 with NDAA compliance as the primary differentiator for operators working federal, state or NDAA-restricted contracts. XAG P100 Pro pricing is quote-based through US dealers. Guardian Agriculture SC1 runs $250,000 to $350,000 for its larger autonomous platform and Pyka Pelican starts around $550,000 as a crewed-class alternative. Financing is available through manufacturer programs, farm credit associations and USDA FSA Farm Loan programs with 2 to 7 year terms and 10 to 25 percent down. USDA EQIP Practice Code 595 (Precision Agriculture) in many states offers 40 to 90 percent cost-share on drone purchases for qualifying farmers.',
+      'Agricultural drone sales in the US run through three primary channels: authorized DJI Agras dealers (HSE-UAV, Drone Nerds, AgriSpray Drones), US-manufactured Hylio direct and through resellers and XAG, Guardian Agriculture and Pyka through their own channel networks. 2026 post-tariff pricing on the DJI Agras T50 runs $22,000 to $28,000 for the full ready-to-fly kit including batteries, generator and trailer setup, up from $18,000 pre-tariff. Hylio AG-272 runs $55,000 to $75,000 with NDAA compliance as the primary differentiator for operators working federal, state or NDAA-restricted contracts. XAG P100 Pro sits at $22,000 to $28,000, Guardian Agriculture SC1 at $250,000 to $350,000 for its larger autonomous platform and Pyka Pelican in the $300,000 to $500,000 range as a crewed-class alternative. Financing is available through manufacturer programs, farm credit associations and USDA FSA Farm Loan programs with 2 to 7 year terms and 10 to 25 percent down. USDA EQIP Practice Code 595 (Precision Agriculture) in many states offers 40 to 90 percent cost-share on drone purchases for qualifying farmers.',
     aeoBlock:
-      'DJI Agras T50 ready-to-fly kits run $22,000 to $28,000 in 2026 post-tariff, Hylio AG-272 runs an estimated $55,000 to $75,000 with NDAA compliance and XAG P100 Pro pricing is quote-based through US dealers. USDA EQIP Practice Code 595 (Precision Agriculture) offers 40 to 90 percent cost-share on qualifying drone purchases in most states. Financing is available through manufacturer programs, farm credit and USDA FSA Farm Loans with 2 to 7 year terms.',
+      'DJI Agras T50 ready-to-fly kits sell for $22,000 to $28,000 post-tariff in 2026, Hylio AG-272 runs $55,000 to $75,000 with NDAA compliance and XAG P100 Pro is $22,000 to $28,000. USDA EQIP Practice Code 595 (Precision Agriculture) offers 40 to 90 percent cost-share on qualifying drone purchases in most states. Financing is available through manufacturer programs, farm credit and USDA FSA Farm Loans with 2 to 7 year terms.',
     priceMinUsd: 22000,
     priceMaxUsd: 75000,
     priceUnit: 'per drone',
@@ -346,7 +346,7 @@ export const services: ServiceDefinition[] = [
     authorityLinks: [
       { label: 'DJI Agricultural Drone Authorized Dealers', url: 'https://www.dji.com/agriculture/dealers' },
       { label: 'USDA NRCS EQIP Practice Code 595: Precision Agriculture', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
-      { label: 'US Department of Defense NDAA Compliance Drone List', url: 'https://www.diu.mil/blue-uas' },
+      { label: 'US Department of Defense NDAA Compliance Drone List', url: 'https://www.diu.mil/solutions/blue-uas' },
     ],
     faqs: [
       {

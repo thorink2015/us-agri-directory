@@ -185,7 +185,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href={addUtm("https://ipm.ucanr.edu/agriculture/grape/", "authority_link")}
+            href={addUtm("https://ipm.ucanr.edu/agriculture/grape//", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -268,7 +268,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href={addUtm("https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice/", "authority_link")}
+            href={addUtm("https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice//", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -355,7 +355,7 @@ export const blogContent: Record<string, ReactNode> = {
       <h2>Authority sources</h2>
       <ul>
         <li>
-          <a href={addUtm("https://www.diu.mil/blue-uas", "authority_link")} target="_blank" rel="noopener noreferrer">
+          <a href={addUtm("https://www.diu.mil/solutions/blue-uas", "authority_link")} target="_blank" rel="noopener noreferrer">
             Defense Innovation Unit &mdash; Blue UAS Cleared List
           </a>
         </li>
@@ -389,7 +389,7 @@ export const blogContent: Record<string, ReactNode> = {
 
       <h2>Where rates are still high</h2>
       <p>
-        Specialty crops remain less compressed. Vineyards: $18 to $30. Orchards: $15 to $21.
+        Specialty crops remain less compressed. Vineyards: $18 to $30. Orchards: $20 to $35.
         Specialty vegetables: $20 to $40. Fewer operators, more complex terrain, more passes per
         season. Drone <Link href="/services/spraying">spraying services</Link> on specialty blocks
         are where most of the margin left in the market actually lives.
@@ -720,7 +720,7 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href={addUtm("https://mccc.msu.edu/covercroptool", "authority_link")}
+            href={addUtm("https://midwestcovercrops.org/covercroptool", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -826,20 +826,11 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href={addUtm("https://www.faa.gov/uas/advanced_operations/agricultural", "authority_link")}
+            href={addUtm("https://www.faa.gov/uas/advanced_operations/dispensing_chemicals", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
             FAA &mdash; Agricultural Drone Operations
-          </a>
-        </li>
-        <li>
-          <a
-            href={addUtm("https://www.faa.gov/newsroom/ag-operations", "authority_link")}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            FAA Newsroom &mdash; Ag operations guidance
           </a>
         </li>
       </ul>
@@ -921,7 +912,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href={addUtm("https://www.beckshybrids.com/Resources/Practical-Farm-Research", "operator_profile")}
+            href={addUtm("https://www.beckshybrids.com/resources/practical-farm-research", "operator_profile")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -930,7 +921,7 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href={addUtm("https://crops.extension.iastate.edu/corn", "authority_link")}
+            href={addUtm("https://crops.extension.iastate.edu/", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >

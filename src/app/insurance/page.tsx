@@ -55,10 +55,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/insurance' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
     title: 'Drone Insurance for Agricultural Spray Operators',
     description:
       'Hull ($500 to $2,000/yr), commercial liability ($1,000 to $3,000/yr for $1M) and chemical application/pollution ($600 to $2,000/yr). Part 137 lowers premiums.',
     url: `${SITE.domain}/insurance`,
+    siteName: SITE.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Drone Insurance for Agricultural Spray Operators',
+      },
+    ],
   },
 };
 

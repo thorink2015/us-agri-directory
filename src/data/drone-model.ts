@@ -39,7 +39,7 @@ export const drones: DroneModel[] = [
     authorityLinks: [
       { label: 'DJI Agras T50 Official Specs', url: 'https://ag.dji.com/t50/specs' },
       { label: 'DJI Agriculture Dealer Locator', url: 'https://www.dji.com/where-to-buy/agriculture-dealers' },
-      { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/uas/advanced_operations/agricultural' },
+      { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
     ],
     faqs: [
       {
@@ -244,9 +244,9 @@ export const drones: DroneModel[] = [
     usDealerPresence: 'Direct and via distributor network at hyl.io/distributor-locator',
     bestFor: 'Operators needing NDAA compliance for federal/state contracts, Great Plains operations with high wind, fleet operators using swarm capability',
     authorityLinks: [
-      { label: 'Hylio AG-272 Specs and Configurator', url: 'https://hyl.io/' },
-      { label: 'Hylio Distributor Locator', url: 'https://hyl.io/distributor-locator' },
-      { label: 'DoD Blue UAS Cleared Drone List', url: 'https://www.diu.mil/blue-uas' },
+      { label: 'Hylio AG-272 Specs and Configurator', url: 'https://www.hyl.io/' },
+      { label: 'Hylio Distributor Locator', url: 'https://www.hyl.io/distributor-locator' },
+      { label: 'DoD Blue UAS Cleared Drone List', url: 'https://www.diu.mil/solutions/blue-uas' },
     ],
     faqs: [
       {
@@ -313,9 +313,9 @@ export const drones: DroneModel[] = [
     usDealerPresence: 'Direct and via distributor network',
     bestFor: 'Operators needing NDAA compliance at 200 to 400 acres per day, lower capital entry into US-manufactured hardware',
     authorityLinks: [
-      { label: 'Hylio AG-230 Specs', url: 'https://hyl.io/' },
-      { label: 'Hylio NDAA Compliance Documentation', url: 'https://hyl.io/' },
-      { label: 'Hylio Distributor Locator', url: 'https://hyl.io/distributor-locator' },
+      { label: 'Hylio AG-230 Specs', url: 'https://www.hyl.io/' },
+      { label: 'Hylio NDAA Compliance Documentation', url: 'https://www.hyl.io/' },
+      { label: 'Hylio Distributor Locator', url: 'https://www.hyl.io/distributor-locator' },
     ],
     faqs: [
       {
@@ -383,8 +383,8 @@ export const drones: DroneModel[] = [
     bestFor: 'Operators in rain-prone or high-wind environments, rice paddy operators, Delta and Gulf Coast markets',
     authorityLinks: [
       { label: 'XAG P100 Pro Official Specs', url: 'https://www.xa.com/en/p100pro/p100prospecs' },
-      { label: 'XAG Agriculture Solutions', url: 'https://www.xa.com/en/agriculture' },
-      { label: 'FAA Part 137 Agricultural Operations', url: 'https://www.faa.gov/uas/advanced_operations/agricultural' },
+      { label: 'XAG Agriculture Solutions', url: 'https://www.xa.com/en' },
+      { label: 'FAA Part 137 Agricultural Operations', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
     ],
     faqs: [
       {
@@ -453,7 +453,7 @@ export const drones: DroneModel[] = [
     authorityLinks: [
       { label: 'Talos T60X Product Page', url: 'https://talosdrones.com/products/talos-t60x-sprayer-drone' },
       { label: 'Talos Drones Dealer Network', url: 'https://talosdrones.com' },
-      { label: 'FAA Part 137 Certification', url: 'https://www.faa.gov/uas/advanced_operations/agricultural' },
+      { label: 'FAA Part 137 Certification', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
     ],
     faqs: [
       {

@@ -29,7 +29,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
       itemType="https://schema.org/ProfessionalService"
     >
       <meta itemProp="name" content={operator.name} />
-      <meta itemProp="url" content={`${SITE.domain}/operators/${operator.slug}`} />
+      <link itemProp="url" href={`/operators/${operator.slug}`} />
       <meta itemProp="image" content={`${SITE.domain}/og-image.png`} />
       <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
         <meta itemProp="addressLocality" content={operator.city} />

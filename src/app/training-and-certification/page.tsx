@@ -41,7 +41,6 @@ const TRACKS = [
 const PROVIDERS = [
   { name: 'Drone Pilot Ground School', url: 'https://www.dronepilotgroundschool.com', note: 'Part 107 exam prep. Online self-paced.' },
   { name: 'Rantizo Advisory', url: 'https://www.rantizo.com', note: 'Part 137 exemption consulting and full business setup.' },
-  { name: 'Precision Aerial Solutions', url: 'https://www.precisionaerial.com', note: 'Part 137 and state licensing bundles.' },
   { name: 'Part 137 Experts', url: 'https://www.part137experts.com', note: 'Focused on FAA exemption paperwork.' },
   { name: 'State extension universities', url: 'https://npsec.us', note: 'Pesticide applicator prep courses (Purdue, Iowa State, Nebraska, Mississippi State, NC State).' },
 ];
@@ -53,10 +52,20 @@ export const metadata: Metadata = {
   alternates: { canonical: '/training-and-certification' },
   openGraph: {
     type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
     title: 'Agricultural Drone Pilot Training and Certification Guide',
     description:
       'Complete pathway: Part 107 ($175), state pesticide license ($75 to $500), Part 137 + 44807 ($2,500 to $4,500). Total cost $3,500 to $6,000. Timeline 6 to 9 months.',
     url: `${SITE.domain}/training-and-certification`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Agricultural Drone Pilot Training and Certification Guide',
+      },
+    ],
   },
 };
 

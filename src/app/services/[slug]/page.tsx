@@ -36,9 +36,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: service.keywords?.join(', '),
     openGraph: {
       type: 'website',
+      locale: 'en_US',
+      siteName: 'US Ag Drone Directory',
       title: `${service.name} | US Agricultural Drone Directory`,
       description: service.description,
       url: `https://agdronedirectory.com/services/${params.slug}`,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: service.name,
+        },
+      ],
     },
   };
 }

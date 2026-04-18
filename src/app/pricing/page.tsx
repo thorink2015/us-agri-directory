@@ -37,7 +37,7 @@ const FAQS = [
 const AUTHORITY_LINKS = [
   { label: 'Iowa State Extension 2026 Custom Rate Survey', url: 'https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf' },
   { label: 'University of Missouri Extension G1274 Breakeven Analysis', url: 'https://extension.missouri.edu/publications/g1274' },
-  { label: 'American Spray Drone Coalition', url: 'https://www.rantizo.com/our-network' },
+  { label: 'American Spray Drone Coalition', url: 'https://www.rantizo.com/' },
   { label: 'USDA NRCS EQIP', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
 ];
 
@@ -48,9 +48,19 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: { canonical: '/pricing' },
     openGraph: {
       type: 'website',
+      locale: 'en_US',
       title: 'Drone Spraying Cost Per Acre (2026 Rates)',
       description: 'Rates by crop, region and service type. First university benchmark: $12.50/acre from Iowa State 2026 Custom Rate Survey.',
       url: `${SITE.domain}/pricing`,
+      siteName: SITE.name,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: 'Drone Spraying Cost Per Acre 2026',
+        },
+      ],
     },
   };
 }

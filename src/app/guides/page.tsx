@@ -9,6 +9,23 @@ export const metadata: Metadata = {
   description:
     'Guides for US agricultural drone operators: FAA regulations, USDA funding, pilot licensing, equipment selection and business start-up.',
   alternates: { canonical: '/guides' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Ag Drone Guides: FAA Part 107, USDA Funding, Licensing',
+    description:
+      'Guides for US agricultural drone operators: FAA regulations, USDA funding, pilot licensing, equipment selection, and business start-up.',
+    url: 'https://agdronedirectory.com/guides',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Agricultural drone guides',
+      },
+    ],
+  },
 };
 
 export default function GuidesHubPage() {

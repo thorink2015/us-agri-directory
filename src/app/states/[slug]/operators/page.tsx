@@ -4,6 +4,7 @@ import { counties, getCountyBySlug } from '@/data/counties';
 import { getOperatorsByCounty } from '@/data/operators';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
+import { SITE } from '@/data/author';
 import Link from 'next/link';
 
 interface Props {
@@ -17,10 +18,27 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const county = getCountyBySlug(params.slug);
   if (!county) return {};
+  const desc = `Verified agricultural drone operators serving ${county.name} farms. Compare services, coverage areas, and 2026 spray rates, then contact directly.`;
   return {
     title: `${county.name} Drone Operators: Rates & Contact`,
-    description: `Full list of agricultural drone operators in ${county.name}. Direct contact and estimated rates.`,
+    description: desc,
     alternates: { canonical: `/states/${params.slug}/operators` },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      title: `${county.name} Drone Operators | US Ag Drone Directory`,
+      description: desc,
+      url: `${SITE.domain}/states/${params.slug}/operators`,
+      siteName: 'US Ag Drone Directory',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${county.name} agricultural drone operators`,
+        },
+      ],
+    },
   };
 }
 
