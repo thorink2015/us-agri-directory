@@ -7,6 +7,7 @@ import {
 import { services } from '@/data/services';
 import { formatPrice } from '@/lib/utils';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import { SITE } from '@/data/author';
 
 export const metadata: Metadata = {
   title: 'Ag Drone Services: Spraying, Seeding, Mapping',
@@ -14,6 +15,23 @@ export const metadata: Metadata = {
     'Browse all agricultural drone services: spraying, cover crop seeding, aerial mapping, crop scouting, pilot training and equipment rental.',
   alternates: {
     canonical: '/services',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'US Ag Drone Directory',
+    title: 'Agricultural Drone Services in the US',
+    description:
+      'Browse all agricultural drone services: spraying, cover crop seeding, aerial mapping, crop scouting, pilot training and equipment rental.',
+    url: `${SITE.domain}/services`,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Agricultural Drone Services',
+      },
+    ],
   },
 };
 
