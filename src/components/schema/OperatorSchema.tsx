@@ -1,4 +1,6 @@
 import { Operator } from '@/data/types';
+import { SITE } from '@/data/author';
+import { getStateAbbr } from '@/lib/utils';
 
 interface Props {
   operator: Operator;
@@ -10,17 +12,17 @@ export default function OperatorSchema({ operator }: Props) {
     '@type': 'ProfessionalService',
     name: operator.name,
     description: operator.description,
-    url: operator.website,
+    url: `${SITE.domain}/operators/${operator.slug}`,
+    image: `${SITE.domain}/og-image.png`,
     telephone: operator.phone,
     email: operator.email,
-    address: operator.address
-      ? {
-          '@type': 'PostalAddress',
-          streetAddress: operator.address,
-          addressLocality: operator.city,
-          addressCountry: 'US',
-        }
-      : undefined,
+    address: {
+      '@type': 'PostalAddress',
+      ...(operator.address ? { streetAddress: operator.address } : {}),
+      addressLocality: operator.city,
+      addressRegion: getStateAbbr(operator.counties),
+      addressCountry: 'US',
+    },
     geo: operator.lat && operator.lng
       ? {
           '@type': 'GeoCoordinates',
