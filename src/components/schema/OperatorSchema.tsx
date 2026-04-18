@@ -1,7 +1,7 @@
 import { Operator } from '@/data/types';
 import { SITE } from '@/data/author';
 import { counties as countiesData } from '@/data/counties';
-import { getStateAbbr } from '@/lib/utils';
+import { getStateAbbr, normalizeSocialUrl } from '@/lib/utils';
 
 interface Props {
   operator: Operator;
@@ -17,12 +17,12 @@ export default function OperatorSchema({ operator }: Props) {
   const addressRegion = getStateAbbr(operator.counties);
   const canonicalUrl = `${SITE.domain}/operators/${operator.slug}`;
   const socialLinks = [
-    operator.website,
-    operator.facebook,
-    operator.instagram,
-    operator.linkedin,
-    operator.youtube,
-    operator.tiktok,
+    normalizeSocialUrl('website', operator.website),
+    normalizeSocialUrl('facebook', operator.facebook),
+    normalizeSocialUrl('instagram', operator.instagram),
+    normalizeSocialUrl('linkedin', operator.linkedin),
+    normalizeSocialUrl('youtube', operator.youtube),
+    normalizeSocialUrl('tiktok', operator.tiktok),
   ].filter((u): u is string => Boolean(u));
 
   const schema: Record<string, unknown> = {
