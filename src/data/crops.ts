@@ -27,8 +27,8 @@ export const crops: Crop[] = [
     yieldGainPct: 8,
     authorityLinks: [
       { label: 'Iowa State Extension: Corn Disease Management', url: 'https://crops.extension.iastate.edu/' },
-      { label: 'Purdue Extension: Corn Fungicide Timing', url: 'https://extension.entm.purdue.edu/fieldcropsipm/corn.html' },
-      { label: 'Beck\'s Practical Farm Research', url: 'https://www.beckshybrids.com/Resources/Practical-Farm-Research' },
+      { label: 'Purdue Extension: Corn Fungicide Timing', url: 'https://ag.purdue.edu/department/entm/extension/field-crops-ipm/' },
+      { label: 'Beck\'s Practical Farm Research', url: 'https://www.beckshybrids.com/resources/practical-farm-research' },
       { label: 'USDA NASS: Corn Acreage and Production', url: 'https://www.nass.usda.gov/Charts_and_Maps/Field_Crops/' },
     ],
     faqs: [
@@ -90,7 +90,7 @@ export const crops: Crop[] = [
     uvlNormLHa: '2 to 5 gpa',
     yieldGainPct: 6,
     authorityLinks: [
-      { label: 'Purdue Extension: Soybean Disease Management', url: 'https://extension.entm.purdue.edu/fieldcropsipm/soybeans.html' },
+      { label: 'Purdue Extension: Soybean Disease Management', url: 'https://ag.purdue.edu/department/entm/extension/field-crops-ipm/' },
       { label: 'University of Illinois Extension: Soybean Diseases', url: 'https://extension.illinois.edu/' },
       { label: 'University of Minnesota Extension: Soybean Production', url: 'https://extension.umn.edu/soybean' },
       { label: 'USDA NASS: Soybean Acreage', url: 'https://www.nass.usda.gov/Charts_and_Maps/Field_Crops/' },
@@ -155,8 +155,8 @@ export const crops: Crop[] = [
     yieldGainPct: 5,
     authorityLinks: [
       { label: 'USDA ARS Wheat Scab Initiative (scabusa.org)', url: 'https://www.scabusa.org' },
-      { label: 'Kansas State Extension: Wheat Disease Management', url: 'https://www.bookstore.ksre.ksu.edu/pubs/EP130.pdf' },
-      { label: 'NDSU Extension: Wheat Production', url: 'https://www.ndsu.edu/agriculture/ag-hub/ag-topics/crop-production/crops/wheat' },
+      { label: 'Kansas State Extension: Wheat Disease Management', url: 'https://bookstore.ksre.ksu.edu/pubs/EP130.pdf' },
+      { label: 'NDSU Extension: Wheat Production', url: 'https://www.ndsu.edu/agriculture//ag-hub/ag-topics/crop-production/crops/wheat' },
       { label: 'USDA NASS: Wheat Acreage and Production', url: 'https://www.nass.usda.gov/Charts_and_Maps/Field_Crops/' },
     ],
     faqs: [
@@ -219,7 +219,7 @@ export const crops: Crop[] = [
     yieldGainPct: 5,
     authorityLinks: [
       { label: 'Mississippi State Extension: Cotton Pest Management', url: 'https://extension.msstate.edu/agriculture/crops/cotton' },
-      { label: 'University of Arkansas Extension: Cotton', url: 'https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/cotton' },
+      { label: 'University of Arkansas Extension: Cotton', url: 'https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/cotton/' },
       { label: 'Texas A&M AgriLife Extension: Cotton Insects', url: 'https://cottonbugs.tamu.edu' },
       { label: 'USDA NASS: Cotton Production', url: 'https://www.nass.usda.gov/Charts_and_Maps/Field_Crops/' },
     ],
@@ -282,7 +282,7 @@ export const crops: Crop[] = [
     uvlNormLHa: '2 to 5 gpa',
     yieldGainPct: 7,
     authorityLinks: [
-      { label: 'University of Arkansas Extension: Rice Production', url: 'https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice' },
+      { label: 'University of Arkansas Extension: Rice Production', url: 'https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice/' },
       { label: 'LSU AgCenter: Rice Disease Management', url: 'https://www.lsuagcenter.com/topics/crops/rice' },
       { label: 'Mississippi State Extension: Rice', url: 'https://extension.msstate.edu/agriculture/crops/rice' },
       { label: 'USDA NASS: Rice Statistics', url: 'https://www.nass.usda.gov/Statistics_by_Subject/index.php?sector=CROPS' },
@@ -346,7 +346,7 @@ export const crops: Crop[] = [
     uvlNormLHa: '10 to 20 gpa',
     yieldGainPct: 0,
     authorityLinks: [
-      { label: 'UC Davis Cooperative Extension: Vineyard Pest Management', url: 'https://ipm.ucanr.edu/agriculture/grape' },
+      { label: 'UC Davis Cooperative Extension: Vineyard Pest Management', url: 'https://ipm.ucanr.edu/agriculture/grape/' },
       { label: 'Washington State University Extension: Grape Production', url: 'https://extension.wsu.edu/' },
       { label: 'California Department of Pesticide Regulation', url: 'https://www.cdpr.ca.gov' },
       { label: 'USDA NASS: Grape Bearing Acreage', url: 'https://www.nass.usda.gov/Charts_and_Maps/Fruits_and_Tree_Nuts/' },
@@ -411,7 +411,7 @@ export const crops: Crop[] = [
     yieldGainPct: 0,
     authorityLinks: [
       { label: 'Washington State University Extension: Tree Fruit Pest Management', url: 'https://treefruit.wsu.edu' },
-      { label: 'UC IPM: Apple and Pear Pest Management', url: 'https://ipm.ucanr.edu/agriculture/apple' },
+      { label: 'UC IPM: Apple and Pear Pest Management', url: 'https://ipm.ucanr.edu/agriculture/apple/' },
       { label: 'Cornell University Extension: Orchard IPM', url: 'https://www.nysipm.cornell.edu/agriculture/tree-fruit' },
       { label: 'Michigan State University Extension: Fruit', url: 'https://www.canr.msu.edu/fruit' },
     ],
@@ -473,7 +473,7 @@ export const crops: Crop[] = [
     yieldGainPct: 0,
     authorityLinks: [
       { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-340' },
-      { label: 'Midwest Cover Crops Council: Species Selection', url: 'https://mccc.msu.edu/covercroptool' },
+      { label: 'Midwest Cover Crops Council: Species Selection', url: 'https://midwestcovercrops.org/covercroptool' },
       { label: 'Penn State Extension: Aerial Cover Crop Seeding', url: 'https://extension.psu.edu/cover-crops' },
       { label: 'USDA EQIP Program Overview', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
     ],

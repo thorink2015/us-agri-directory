@@ -244,8 +244,8 @@ export const drones: DroneModel[] = [
     usDealerPresence: 'Direct and via distributor network at hyl.io/distributor-locator',
     bestFor: 'Operators needing NDAA compliance for federal/state contracts, Great Plains operations with high wind, fleet operators using swarm capability',
     authorityLinks: [
-      { label: 'Hylio AG-272 Specs and Configurator', url: 'https://hyl.io/' },
-      { label: 'Hylio Distributor Locator', url: 'https://hyl.io/distributor-locator' },
+      { label: 'Hylio AG-272 Specs and Configurator', url: 'https://www.hyl.io/' },
+      { label: 'Hylio Distributor Locator', url: 'https://www.hyl.io/distributor-locator' },
       { label: 'DoD Blue UAS Cleared Drone List', url: 'https://www.diu.mil/solutions/blue-uas' },
     ],
     faqs: [
@@ -313,9 +313,9 @@ export const drones: DroneModel[] = [
     usDealerPresence: 'Direct and via distributor network',
     bestFor: 'Operators needing NDAA compliance at 200 to 400 acres per day, lower capital entry into US-manufactured hardware',
     authorityLinks: [
-      { label: 'Hylio AG-230 Specs', url: 'https://hyl.io/' },
-      { label: 'Hylio NDAA Compliance Documentation', url: 'https://hyl.io/' },
-      { label: 'Hylio Distributor Locator', url: 'https://hyl.io/distributor-locator' },
+      { label: 'Hylio AG-230 Specs', url: 'https://www.hyl.io/' },
+      { label: 'Hylio NDAA Compliance Documentation', url: 'https://www.hyl.io/' },
+      { label: 'Hylio Distributor Locator', url: 'https://www.hyl.io/distributor-locator' },
     ],
     faqs: [
       {

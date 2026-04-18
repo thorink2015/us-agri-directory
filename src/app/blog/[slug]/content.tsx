@@ -185,7 +185,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href={addUtm("https://ipm.ucanr.edu/agriculture/grape/", "authority_link")}
+            href={addUtm("https://ipm.ucanr.edu/agriculture/grape//", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -268,7 +268,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href={addUtm("https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice/", "authority_link")}
+            href={addUtm("https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice//", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -720,7 +720,7 @@ export const blogContent: Record<string, ReactNode> = {
         </li>
         <li>
           <a
-            href={addUtm("https://mccc.msu.edu/covercroptool", "authority_link")}
+            href={addUtm("https://midwestcovercrops.org/covercroptool", "authority_link")}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -912,7 +912,7 @@ export const blogContent: Record<string, ReactNode> = {
       <ul>
         <li>
           <a
-            href={addUtm("https://www.beckshybrids.com/Resources/Practical-Farm-Research", "operator_profile")}
+            href={addUtm("https://www.beckshybrids.com/resources/practical-farm-research", "operator_profile")}
             target="_blank"
             rel="noopener noreferrer"
           >

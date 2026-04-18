@@ -31,7 +31,7 @@ export const regions: Region[] = [
     ],
     authorityLinks: [
       { label: 'Iowa State Extension: Custom Rate Survey 2026', url: 'https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf' },
-      { label: 'Purdue Extension: Corn and Soybean IPM', url: 'https://extension.entm.purdue.edu/fieldcropsipm' },
+      { label: 'Purdue Extension: Corn and Soybean IPM', url: 'https://ag.purdue.edu/department/entm/extension/field-crops-ipm/' },
       { label: 'Midwest Cover Crops Council', url: 'https://mccc.msu.edu' },
     ],
     faqs: [
@@ -92,8 +92,8 @@ export const regions: Region[] = [
       'Texas cotton adds a separate demand peak in September and October, with drone defoliant gaining share over airplanes because of drift control near sensitive soybean fields.',
     ],
     authorityLinks: [
-      { label: 'Kansas State Extension: Wheat Disease Management', url: 'https://www.bookstore.ksre.ksu.edu/pubs/EP130.pdf' },
-      { label: 'NDSU Extension: Wheat Production', url: 'https://www.ndsu.edu/agriculture/ag-hub/ag-topics/crop-production/crops/wheat' },
+      { label: 'Kansas State Extension: Wheat Disease Management', url: 'https://bookstore.ksre.ksu.edu/pubs/EP130.pdf' },
+      { label: 'NDSU Extension: Wheat Production', url: 'https://www.ndsu.edu/agriculture//ag-hub/ag-topics/crop-production/crops/wheat' },
       { label: 'Texas A&M AgriLife Extension: Cotton', url: 'https://cottonbugs.tamu.edu' },
     ],
     faqs: [
@@ -154,7 +154,7 @@ export const regions: Region[] = [
       'Cotton defoliant timing (September to October) hits when Delta soils are still saturated from summer flooding, blocking ground rigs and creating demand for aerial application.',
     ],
     authorityLinks: [
-      { label: 'University of Arkansas Extension: Rice Production', url: 'https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice' },
+      { label: 'University of Arkansas Extension: Rice Production', url: 'https://www.uaex.uada.edu/farm-ranch/crops-commercial-horticulture/rice/' },
       { label: 'LSU AgCenter: Rice Disease Management', url: 'https://www.lsuagcenter.com/topics/crops/rice' },
       { label: 'Mississippi State Extension: Cotton', url: 'https://extension.msstate.edu/agriculture/crops/cotton' },
     ],
@@ -217,8 +217,8 @@ export const regions: Region[] = [
     ],
     authorityLinks: [
       { label: 'California Department of Pesticide Regulation (CDPR)', url: 'https://www.cdpr.ca.gov' },
-      { label: 'UC Davis Cooperative Extension: Vineyard Pest Management', url: 'https://ipm.ucanr.edu/agriculture/grape' },
-      { label: 'UC IPM: Apple and Pear Pest Management', url: 'https://ipm.ucanr.edu/agriculture/apple' },
+      { label: 'UC Davis Cooperative Extension: Vineyard Pest Management', url: 'https://ipm.ucanr.edu/agriculture/grape/' },
+      { label: 'UC IPM: Apple and Pear Pest Management', url: 'https://ipm.ucanr.edu/agriculture/apple/' },
     ],
     faqs: [
       {

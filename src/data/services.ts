@@ -17,7 +17,7 @@ export const services: ServiceDefinition[] = [
     authorityLinks: [
       { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
       { label: 'EPA Pesticide Registration and Labeling', url: 'https://www.epa.gov/pesticide-labels' },
-      { label: 'USDA NASS: Agricultural Chemical Use Surveys', url: 'https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use' },
+      { label: 'USDA NASS: Agricultural Chemical Use Surveys', url: 'https://www.nass.usda.gov/Surveys/Guide_to_NASS_Surveys/Chemical_Use/' },
     ],
     faqs: [
       {
@@ -63,7 +63,7 @@ export const services: ServiceDefinition[] = [
     icon: '🌱',
     authorityLinks: [
       { label: 'USDA NRCS Cover Crop Practice Standard 340', url: 'https://www.nrcs.usda.gov/resources/guides-and-instructions/cover-crop-ac-340-conservation-practice-standard' },
-      { label: 'Midwest Cover Crops Council: Species Selection Tool', url: 'https://mccc.msu.edu/covercroptool' },
+      { label: 'Midwest Cover Crops Council: Species Selection Tool', url: 'https://midwestcovercrops.org/covercroptool' },
       { label: 'USDA EQIP Environmental Quality Incentives Program', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
     ],
     faqs: [
@@ -111,7 +111,7 @@ export const services: ServiceDefinition[] = [
     authorityLinks: [
       { label: 'FAA Part 107 Small UAS Operations', url: 'https://www.faa.gov/uas/commercial_operators' },
       { label: 'USDA NRCS Soil Survey Resources', url: 'https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soil/soil-survey' },
-      { label: 'ASABE Standards for Aerial Sensor Data', url: 'https://www.asabe.org/Standards' },
+      { label: 'ASABE Standards for Aerial Sensor Data', url: 'http://asabe.org/Standards' },
     ],
     faqs: [
       {
