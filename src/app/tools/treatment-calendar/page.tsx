@@ -172,20 +172,6 @@ export const metadata: Metadata = {
 };
 
 export default function TreatmentCalendarPage() {
-  const softwareSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Drone Spray Treatment Calendar',
-    applicationCategory: 'Agriculture',
-    operatingSystem: 'Web',
-    description:
-      'Monthly guide to optimal drone application timing for corn, soybeans, wheat, cotton, rice, vineyards and orchards across US growing regions, with booking deadline recommendations.',
-    url: `${SITE.domain}/tools/treatment-calendar`,
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@id': AUTHOR.personId },
-    publisher: { '@id': AUTHOR.organizationId },
-  };
-
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -223,7 +209,6 @@ export default function TreatmentCalendarPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

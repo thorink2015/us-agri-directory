@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import ContactForm from './ContactForm';
-import { AUTHOR, SITE } from '@/data/author';
+import { SITE } from '@/data/author';
 
 export const metadata: Metadata = {
   title: 'Contact US Ag Drone Directory',
@@ -33,14 +33,8 @@ export default function ContactPage() {
     name: `Contact ${SITE.name}`,
     url: `${SITE.domain}/contact`,
     description: 'Contact the US Agricultural Drone Directory team for listings, corrections, partnerships or media inquiries.',
-    isPartOf: { '@id': `${SITE.domain}/#organization` },
-    mainEntity: {
-      '@type': 'Organization',
-      '@id': `${SITE.domain}/#organization`,
-      name: SITE.name,
-      email: AUTHOR.publicEmail,
-      url: SITE.domain,
-    },
+    isPartOf: { '@id': `${SITE.domain}/#website` },
+    about: { '@id': `${SITE.domain}/#organization` },
   };
 
   const breadcrumbSchema = {

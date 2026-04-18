@@ -51,20 +51,6 @@ export const metadata: Metadata = {
 };
 
 export default function CoverageCalculatorPage() {
-  const softwareSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Drone Coverage Time Estimator',
-    applicationCategory: 'Agriculture',
-    operatingSystem: 'Web',
-    description:
-      'Estimate drone spray job duration by acreage, drone model, application rate, field shape and fleet size. Includes battery swaps, tank refills and single-day feasibility.',
-    url: `${SITE.domain}/tools/coverage-calculator`,
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@id': AUTHOR.personId },
-    publisher: { '@id': AUTHOR.organizationId },
-  };
-
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -102,7 +88,6 @@ export default function CoverageCalculatorPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
