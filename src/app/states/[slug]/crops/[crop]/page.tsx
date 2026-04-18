@@ -26,9 +26,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const crop = getCropBySlug(params.crop);
   if (!county || !crop) return {};
 
+  const desc = `Drone spraying operators for ${crop.name.toLowerCase()} in ${county.name}, 2026 rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}. Compare verified operators and contact directly for quotes.`;
   return {
     title: `${crop.name} Drone Spraying: ${county.name} 2026`,
-    description: `Drone operators for ${crop.name.toLowerCase()} in ${county.name}. Rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre, contact verified operators directly.`,
+    description: desc,
     alternates: {
       canonical: `/states/${params.slug}/crops/${params.crop}`,
     },
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: 'website',
       locale: 'en_US',
       title: `${crop.name} Drone Spraying in ${county.name} | US Ag Drone Directory`,
-      description: `Drone operators for ${crop.name.toLowerCase()} in ${county.name}. Rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre, contact verified operators directly.`,
+      description: desc,
       url: `${SITE.domain}/states/${params.slug}/crops/${params.crop}`,
       siteName: 'US Ag Drone Directory',
       images: [

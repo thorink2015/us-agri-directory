@@ -6,7 +6,7 @@ import { AUTHOR, SITE } from '@/data/author';
 export const metadata: Metadata = {
   title: 'Contact US Ag Drone Directory',
   description:
-    'Get in touch with US Ag Drone Directory, submit your listing, ask a question, or send us feedback.',
+    'Get in touch with US Ag Drone Directory. Submit your operator listing, ask a question, report a correction, or send partnership inquiries and feedback.',
   alternates: { canonical: '/contact' },
   openGraph: {
     type: 'website',
