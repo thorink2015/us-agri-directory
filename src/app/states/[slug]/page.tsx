@@ -4,7 +4,7 @@ import { MapPin, Wheat, TrendingUp, Users, Shield, DollarSign } from 'lucide-rea
 import { Metadata } from 'next';
 import { counties, getCountyBySlug, getAdjacentCounties, getCountyOperatorCount } from '@/data/counties';
 import { getOperatorsByCounty } from '@/data/operators';
-import { CROP_NAME_MAP } from '@/data/crops';
+import { CROP_NAME_MAP, crops as allCrops } from '@/data/crops';
 import { buildCountyMetadata } from '@/lib/seo';
 import { formatAcres } from '@/lib/utils';
 import Breadcrumb from '@/components/layout/Breadcrumb';
@@ -293,6 +293,22 @@ function RichStatePage({ slug }: { slug: string }) {
           </div>
         </section>
 
+        {/* 7b, All crop guides in this state */}
+        <section className="mb-10">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Drone spraying guides by crop in {data.name}</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+            {allCrops.map((crop) => (
+              <Link
+                key={crop.slug}
+                href={`/states/${slug}/crops/${crop.slug}`}
+                className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
+              >
+                {crop.name} in {data.name}
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* 8, Region link */}
         <section className="mb-10">
           <div className="bg-green-50 border border-green-200 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -481,6 +497,21 @@ function FallbackStatePage({ slug }: { slug: string }) {
                 <span key={crop} className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm text-gray-600">{crop}</span>
               )
             )}
+          </div>
+        </div>
+
+        <div className="mb-10">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Drone spraying guides by crop in {state.name}</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+            {allCrops.map((crop) => (
+              <Link
+                key={crop.slug}
+                href={`/states/${state.slug}/crops/${crop.slug}`}
+                className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
+              >
+                {crop.name} in {state.name}
+              </Link>
+            ))}
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { MapPin, CheckCircle } from 'lucide-react';
 import { counties, getCountyBySlug } from '@/data/counties';
-import { crops, getCropBySlug, CROP_NAME_MAP } from '@/data/crops';
+import { crops, getCropBySlug } from '@/data/crops';
 import { getOperatorsByCounty } from '@/data/operators';
 import { formatPrice } from '@/lib/utils';
 import Breadcrumb from '@/components/layout/Breadcrumb';
@@ -204,15 +204,15 @@ export default function CountyCropPage({ params }: Props) {
       <div className="mb-8">
         <h2 className="text-base font-semibold text-gray-900 mb-3">Other crops in {county.name}</h2>
         <div className="flex flex-wrap gap-2">
-          {county.mainCrops
-            .filter((c) => c !== crop.slug)
+          {crops
+            .filter((c) => c.slug !== crop.slug)
             .map((c) => (
               <Link
-                key={c}
-                href={`/states/${county.slug}/crops/${c}`}
+                key={c.slug}
+                href={`/states/${county.slug}/crops/${c.slug}`}
                 className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
               >
-                {CROP_NAME_MAP[c] || c}
+                {c.name} in {county.name}
               </Link>
             ))}
           <Link

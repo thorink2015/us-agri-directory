@@ -41,7 +41,6 @@ const TRACKS = [
 const PROVIDERS = [
   { name: 'Drone Pilot Ground School', url: 'https://www.dronepilotgroundschool.com', note: 'Part 107 exam prep. Online self-paced.' },
   { name: 'Rantizo Advisory', url: 'https://www.rantizo.com', note: 'Part 137 exemption consulting and full business setup.' },
-  { name: 'Precision Aerial Solutions', url: 'https://www.precisionaerial.com', note: 'Part 137 and state licensing bundles.' },
   { name: 'Part 137 Experts', url: 'https://www.part137experts.com', note: 'Focused on FAA exemption paperwork.' },
   { name: 'State extension universities', url: 'https://npsec.us', note: 'Pesticide applicator prep courses (Purdue, Iowa State, Nebraska, Mississippi State, NC State).' },
 ];
