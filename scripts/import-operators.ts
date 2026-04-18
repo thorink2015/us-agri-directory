@@ -21,7 +21,7 @@ const BATCH_FILES = [
   '_research/operators-batch-5b-pnw-ak-hi.md',
 ];
 
-const MAPPED_OUTPUT = path.join(ROOT, 'scripts/import-mapped.json');
+// (dry-run output path is constructed inline in main)
 
 type RawRow = Record<string, string>;
 type ServiceType =
@@ -415,15 +415,53 @@ export function mapToOperator(row: RawRow, sourceFile: string): MappedOperator |
 }
 
 // ---------------------------------------------------------------------------
+// Category filter
+// ---------------------------------------------------------------------------
+
+/**
+ * Return true for Operator / Dealer / Multi rows.
+ * Explicitly excludes Training, Manufacturer, Government, University, Extension.
+ * Also handles single-letter codes used by batch-4a (O / D / T / M).
+ */
+function categoryIncluded(cat: string): boolean {
+  const c = cat.toLowerCase().trim();
+
+  // Single-letter batch-4a codes
+  if (c === 'o' || c === 'd') return true;
+  if (c === 't' || c === 'm') return false;
+
+  // Exclusions take priority over partial matches
+  if (/\b(government|govt|university|univ\.|extension|training|manufacturer|research|platform|integrator|franchisor)\b/.test(c)) return false;
+
+  // Include if the string contains operator, dealer, or multi
+  return /operator|dealer|multi/.test(c);
+}
+
+// ---------------------------------------------------------------------------
+// Extract existing operator names from src/data/operators.ts
+// ---------------------------------------------------------------------------
+
+function loadExistingNames(): Set<string> {
+  const file = path.join(ROOT, 'src/data/operators.ts');
+  const src  = fs.readFileSync(file, 'utf-8');
+  const names = new Set<string>();
+  for (const m of src.matchAll(/\bname:\s*['"]([^'"]+)['"]/g)) {
+    names.add(m[1].toLowerCase().trim());
+  }
+  return names;
+}
+
+// ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
 
 function main() {
-  console.log('=== Operator batch import — step 2 of 3 ===\n');
+  console.log('=== Operator batch import — step 3 of 3 (dry run) ===\n');
 
+  // ── 1. Parse all batch files ──────────────────────────────────────────────
   const allMapped: MappedOperator[] = [];
   let totalRaw = 0;
-  let skipped  = 0;
+  let skippedNoName = 0;
 
   for (const rel of BATCH_FILES) {
     const full = path.join(ROOT, rel);
@@ -434,32 +472,70 @@ function main() {
     const rows = parseBatchFile(full);
     totalRaw += rows.length;
 
-    let fileOk = 0;
-    let fileBad = 0;
     for (const row of rows) {
       const op = mapToOperator(row, rel);
-      if (op) { allMapped.push(op); fileOk++; }
-      else { fileBad++; skipped++; }
+      if (op) allMapped.push(op);
+      else skippedNoName++;
     }
-
-    console.log(`[${name}]  rows=${rows.length}  mapped=${fileOk}  skipped(no name)=${fileBad}`);
   }
 
-  console.log(`\nTotal raw rows : ${totalRaw}`);
-  console.log(`Total mapped   : ${allMapped.length}`);
-  console.log(`Skipped        : ${skipped}`);
+  console.log(`Total parsed (all files)          : ${allMapped.length} of ${totalRaw} raw rows`);
 
-  // Sample output
-  console.log('\n=== Sample operators (first 2) ===\n');
-  for (const op of allMapped.slice(0, 2)) {
+  // ── 2. Category filter ────────────────────────────────────────────────────
+  // We need the raw category value, which mapToOperator currently doesn't
+  // preserve.  Re-derive it: match the row's category column from a second pass.
+  // Simpler: store category on MappedOperator via _cat during mapping.
+  // Since we can't change the type now, re-read to get category per operator.
+  // Instead, we re-parse inline and attach category to allMapped via index.
+
+  // Build category list in lock-step with allMapped by re-running the parse.
+  const categories: string[] = [];
+  for (const rel of BATCH_FILES) {
+    const full = path.join(ROOT, rel);
+    if (!fs.existsSync(full)) continue;
+    const rows = parseBatchFile(full);
+    for (const row of rows) {
+      const cat = clean(getCol(row, /^cat(egory)?$/i));
+      // Only add if mapToOperator would have succeeded (non-empty name)
+      const name = clean(getCol(row, /company.*(name|operator)/i, /^company$/i, /^name$/i));
+      if (name) categories.push(cat);
+    }
+  }
+
+  const afterCategory = allMapped.filter((_, i) => categoryIncluded(categories[i] ?? ''));
+  console.log(`After category filter (Op/Dealer/Multi): ${afterCategory.length}`);
+
+  // ── 3. Dedup vs existing operators.ts ─────────────────────────────────────
+  const existingNames = loadExistingNames();
+  console.log(`Existing operators in operators.ts : ${existingNames.size}`);
+
+  const afterExistingDedup = afterCategory.filter(
+    op => !existingNames.has(op.name.toLowerCase().trim())
+  );
+  console.log(`After dedup vs existing            : ${afterExistingDedup.length}`);
+
+  // ── 4. Internal dedup across batch files (keep first occurrence) ──────────
+  const seenNames = new Set<string>();
+  const final: MappedOperator[] = [];
+  for (const op of afterExistingDedup) {
+    const key = op.name.toLowerCase().trim();
+    if (!seenNames.has(key)) { seenNames.add(key); final.push(op); }
+  }
+  console.log(`After internal dedup (cross-batch) : ${final.length}  ← final new operators`);
+
+  // ── 5. Sample output ──────────────────────────────────────────────────────
+  console.log('\n=== Sample operators (first 3 from final list) ===\n');
+  for (const op of final.slice(0, 3)) {
     const { _src, ...display } = op;
     console.log(JSON.stringify(display, null, 2));
     console.log(`  [source: ${_src}]\n`);
   }
 
-  // Write JSON
-  fs.writeFileSync(MAPPED_OUTPUT, JSON.stringify(allMapped, null, 2));
-  console.log(`\nWrote ${allMapped.length} operators → ${MAPPED_OUTPUT}`);
+  // ── 6. Write dry-run JSON ─────────────────────────────────────────────────
+  const dryRunOutput = path.join(ROOT, 'scripts/import-dry-run.json');
+  fs.writeFileSync(dryRunOutput, JSON.stringify(final, null, 2));
+  console.log(`\nDry-run output (${final.length} new operators) → ${dryRunOutput}`);
+  console.log('operators.ts was NOT modified.');
 }
 
 main();

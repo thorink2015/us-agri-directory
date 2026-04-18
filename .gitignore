@@ -35,3 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 scripts/import-mapped.json
+scripts/import-dry-run.json
