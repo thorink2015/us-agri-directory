@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     'Convert between acres, hectares, square feet, square meters, and sections instantly. Built for farmers and ag professionals working with field measurements.',
   alternates: { canonical: '/tools/acreage-converter' },
   openGraph: {
+    type: 'website',
     title: 'Farm Acreage Converter, Acres, Hectares, Sq Ft & Sections',
     description: '1 acre = 0.4047 hectares = 43,560 sq ft. Instant conversion for all common US and international agricultural land measurements.',
     url: `${SITE.domain}/tools/acreage-converter`,

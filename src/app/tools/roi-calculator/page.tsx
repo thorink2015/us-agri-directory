@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     'Compare owning a spray drone versus hiring a custom operator. Includes USDA EQIP cost-share, financing, and break-even acreage from MU Extension data.',
   alternates: { canonical: '/tools/roi-calculator' },
   openGraph: {
+    type: 'website',
     title: 'Buy a Drone or Hire an Operator? Find Your Break-Even',
     description: 'MU Extension break-even at ~980 acres/year. EQIP cost-share can lower it to 600 acres. Model your specific situation.',
     url: `${SITE.domain}/tools/roi-calculator`,

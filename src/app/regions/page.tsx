@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     'Browse agricultural drone services by US farming region: Corn Belt, Great Plains, Delta, California, and Southeast. Regional crops, timing, and operators.',
   alternates: { canonical: '/regions' },
   openGraph: {
+    type: 'website',
     title: 'US Agricultural Drone Regions | US Ag Drone Directory',
     description:
       'Regional hubs covering the Corn Belt, Great Plains, Delta, California, and Southeast. Browse operators by region.',

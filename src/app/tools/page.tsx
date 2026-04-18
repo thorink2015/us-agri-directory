@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     'Six free tools for farmers and drone operators. Calculate spray costs, compare drones, estimate coverage time, plan treatment timing, and more.',
   alternates: { canonical: '/tools' },
   openGraph: {
+    type: 'website',
     title: 'Free Agricultural Drone Tools & Calculators',
     description:
       'Six free calculators covering spray cost estimation, buy vs hire ROI, field coverage time, acreage conversion, drone comparison, and seasonal treatment planning.',

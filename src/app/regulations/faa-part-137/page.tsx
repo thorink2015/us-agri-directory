@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     'How to get FAA Part 137 and Section 44807 exemption for agricultural drone spraying. Timeline, operations manual, and what it covers.',
   alternates: { canonical: '/regulations/faa-part-137' },
   openGraph: {
+    type: 'website',
     title: 'FAA Part 137: Agricultural Aircraft Operator Certificate for Drones',
     description:
       '90 to 180 day FAA approval timeline. Section 44807 exemption required for drones over 55 lbs. Operations manual and training records needed.',

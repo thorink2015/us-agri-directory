@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: `${rich.aeoBlock.slice(0, 155)}`,
       alternates: { canonical: `/states/${rich.slug}` },
       openGraph: {
+        type: 'website',
         title: `Agricultural Drone Spraying in ${rich.name} (2026)`,
         description: `Licensing, rates, top crops, and verified operators for ${rich.name}. ${rich.rateRange} per acre.`,
         url: `${SITE.domain}/states/${rich.slug}`,

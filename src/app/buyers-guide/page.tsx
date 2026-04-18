@@ -62,6 +62,7 @@ export const metadata: Metadata = {
     'Compare DJI T50, T100, Hylio AG-272, XAG P100 Pro, and Talos T60X. Specs, pricing, NDAA status, and which drone fits your operation.',
   alternates: { canonical: '/buyers-guide' },
   openGraph: {
+    type: 'website',
     title: "2026 Agricultural Spray Drone Buyer's Guide",
     description:
       'DJI Agras T50 ($22K-$28K post-tariff), Hylio AG-272 ($55K-$75K NDAA), DJI T100, XAG P100 Pro, and Talos T60X side by side. Which drone fits your operation.',

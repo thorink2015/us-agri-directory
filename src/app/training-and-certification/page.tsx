@@ -52,6 +52,7 @@ export const metadata: Metadata = {
     'From Part 107 to Part 137 to state pesticide license: the complete training pathway for agricultural drone operators. Costs, timeline, and providers.',
   alternates: { canonical: '/training-and-certification' },
   openGraph: {
+    type: 'website',
     title: 'Agricultural Drone Pilot Training and Certification Guide',
     description:
       'Complete pathway: Part 107 ($175), state pesticide license ($75 to $500), Part 137 + 44807 ($2,500 to $4,500). Total cost $3,500 to $6,000. Timeline 6 to 9 months.',

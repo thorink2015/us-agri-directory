@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     'Estimate your drone spraying cost per acre. Enter acres, crop, and state for a 2026 rate estimate based on Iowa State Extension and regional operator data.',
   alternates: { canonical: '/tools/spray-cost-calculator' },
   openGraph: {
+    type: 'website',
     title: 'How Much Will Drone Spraying Cost on Your Farm?',
     description: 'Instant estimate by crop, state, and number of passes. Based on 2026 Iowa State Extension data.',
     url: `${SITE.domain}/tools/spray-cost-calculator`,

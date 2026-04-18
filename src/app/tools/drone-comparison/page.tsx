@@ -44,6 +44,7 @@ export const metadata: Metadata = {
     'Compare DJI Agras T50, T100, Hylio AG-272, XAG P100 Pro, and Talos T60X specs side by side. Tank size, price, NDAA, wind rating, and throughput.',
   alternates: { canonical: '/tools/drone-comparison' },
   openGraph: {
+    type: 'website',
     title: 'Compare Agricultural Spray Drones Side by Side (2026)',
     description: 'DJI T50 vs Hylio AG-272 vs T100, tank capacity, NDAA status, MSRP, wind rating, and best use case compared.',
     url: `${SITE.domain}/tools/drone-comparison`,

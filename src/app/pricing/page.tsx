@@ -47,6 +47,7 @@ export async function generateMetadata(): Promise<Metadata> {
     description: 'Drone crop spraying costs $12 to $35 per acre in 2026. See rates by crop, region, and service type. First university benchmark: $12.50/acre from Iowa State.',
     alternates: { canonical: '/pricing' },
     openGraph: {
+      type: 'website',
       title: 'Drone Spraying Cost Per Acre (2026 Rates)',
       description: 'Rates by crop, region, and service type. First university benchmark: $12.50/acre from Iowa State 2026 Custom Rate Survey.',
       url: `${SITE.domain}/pricing`,

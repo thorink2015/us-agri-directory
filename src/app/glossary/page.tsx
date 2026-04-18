@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     'Plain-English definitions of 55+ agricultural drone terms: Part 107, Part 137, LAANC, FIFRA, GPA, ULV, RTK, and more. Updated for 2026 regulations.',
   alternates: { canonical: '/glossary' },
   openGraph: {
+    type: 'website',
     title: 'Agricultural Drone Glossary | US Ag Drone Directory',
     description:
       'The complete glossary of agricultural drone terminology: FAA regulations, spray application, drone hardware, and ag business terms.',

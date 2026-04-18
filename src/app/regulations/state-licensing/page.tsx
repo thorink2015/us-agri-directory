@@ -41,6 +41,7 @@ export const metadata: Metadata = {
     'Every state requires a commercial pesticide applicator license for drone spraying. See aerial categories, exams, fees, and unique rules for all 50 states.',
   alternates: { canonical: '/regulations/state-licensing' },
   openGraph: {
+    type: 'website',
     title: 'State Pesticide Applicator Licensing for Drone Operators',
     description:
       'California, North Dakota, and Arizona issue drone-specific credentials. Oregon requires 50 hours of flight experience. See every state licensing path.',

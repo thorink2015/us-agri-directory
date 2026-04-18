@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     `${SITE.name}, a single-author directory founded by ${AUTHOR.firstName}. Every page personally researched to connect US farmers with verified ag drone operators.`,
   alternates: { canonical: '/about' },
   openGraph: {
+    type: 'website',
     title: `About ${SITE.name}`,
     description: `Founded and edited by ${AUTHOR.firstName}. Every page personally researched and updated.`,
     url: `${SITE.domain}/about`,

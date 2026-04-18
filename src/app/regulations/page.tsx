@@ -64,6 +64,7 @@ export const metadata: Metadata = {
     'Complete guide to FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance for agricultural drone operators in 2026.',
   alternates: { canonical: '/regulations' },
   openGraph: {
+    type: 'website',
     title: 'US Agricultural Drone Spraying Regulations (2026)',
     description:
       'FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance, the three-credential stack required for commercial ag drone spraying.',

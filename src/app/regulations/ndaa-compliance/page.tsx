@@ -38,6 +38,7 @@ export const metadata: Metadata = {
     'What drone operators need to know about NDAA restrictions on Chinese drones. DJI status, Blue UAS list, Hylio compliance, and who is affected.',
   alternates: { canonical: '/regulations/ndaa-compliance' },
   openGraph: {
+    type: 'website',
     title: 'NDAA Compliance: What Ag Drone Operators Need to Know',
     description:
       'DJI remains legal for private commercial use but excluded from federal contracts. Hylio AG-272, Pyka Pelican 2, and Blue UAS platforms are the NDAA-compliant alternatives.',

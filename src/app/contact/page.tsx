@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'Get in touch with US Ag Drone Directory, submit your listing, ask a question, or send us feedback.',
   alternates: { canonical: '/contact' },
   openGraph: {
+    type: 'website',
     title: `Contact ${SITE.name}`,
     description: 'Submit your listing, report a correction, or send partnership inquiries.',
     url: `${SITE.domain}/contact`,

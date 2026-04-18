@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     'List your agricultural drone business for free. Reach US farmers searching for drone operators. No commission, no booking fee, no pay-for-placement.',
   alternates: { canonical: '/list-your-business' },
   openGraph: {
+    type: 'website',
     title: 'List Your Agricultural Drone Business for Free',
     description:
       'Free listing for verified US agricultural drone operators. Review and publish within 3 to 5 business days.',

@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Props) {
     description: crop.aeoBlock.slice(0, 155),
     alternates: { canonical: `/crops/${params.slug}` },
     openGraph: {
+      type: 'website',
       title: `Drone Spraying for ${crop.name} | US Ag Drone Directory`,
       description: `$${crop.priceMinUsd} to $${crop.priceMaxUsd}/acre, treatment calendar, key pests, and verified operators across all 50 states.`,
       url: `https://agdronedirectory.com/crops/${crop.slug}`,

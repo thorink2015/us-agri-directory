@@ -71,6 +71,7 @@ export const metadata: Metadata = {
     'Step-by-step guide to starting a commercial ag drone spraying business. Licensing, equipment, costs, pricing, and first customers. $15K to $80K startup.',
   alternates: { canonical: '/start-a-drone-business' },
   openGraph: {
+    type: 'website',
     title: 'How to Start an Agricultural Drone Spraying Business in 2026',
     description:
       '$15K to $80K startup, 6 to 9 month certification pathway, break-even at ~980 acres/yr. Complete 2026 guide to licensing, equipment, pricing, and first customers.',
