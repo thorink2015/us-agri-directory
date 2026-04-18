@@ -95,7 +95,7 @@ export default function Footer() {
           <div className="max-w-lg">
             <h2 className="font-semibold text-white mb-1">Stay updated</h2>
             <p className="text-sm text-green-300 mb-3">
-              New operators, pricing updates, and FAA regulatory changes, delivered to your inbox.
+              New operators, pricing updates and FAA regulatory changes, delivered to your inbox.
             </p>
             {subscribed ? (
               <p className="text-sm text-yellow-400 font-medium">You&apos;re subscribed. Thank you!</p>

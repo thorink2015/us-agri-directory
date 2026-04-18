@@ -44,13 +44,13 @@ const AUTHORITY_LINKS = [
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Drone Spraying Cost Per Acre: 2026 Rates Guide',
-    description: 'Drone crop spraying costs $12 to $35 per acre in 2026. See rates by crop, region, and service type. First university benchmark: $12.50/acre from Iowa State.',
+    description: 'Drone crop spraying costs $12 to $35 per acre in 2026. See rates by crop, region and service type. First university benchmark: $12.50/acre from Iowa State.',
     alternates: { canonical: '/pricing' },
     openGraph: {
       type: 'website',
       locale: 'en_US',
       title: 'Drone Spraying Cost Per Acre (2026 Rates)',
-      description: 'Rates by crop, region, and service type. First university benchmark: $12.50/acre from Iowa State 2026 Custom Rate Survey.',
+      description: 'Rates by crop, region and service type. First university benchmark: $12.50/acre from Iowa State 2026 Custom Rate Survey.',
       url: `${SITE.domain}/pricing`,
       siteName: SITE.name,
       images: [
@@ -81,7 +81,7 @@ export default function PricingPage() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'How Much Does Drone Crop Spraying Cost in 2026?',
-    description: 'Drone crop spraying costs $12 to $35 per acre in 2026. Complete rate guide by crop, region, service type, and USDA cost-share programs.',
+    description: 'Drone crop spraying costs $12 to $35 per acre in 2026. Complete rate guide by crop, region, service type and USDA cost-share programs.',
     url: `${SITE.domain}/pricing`,
     mainEntityOfPage: `${SITE.domain}/pricing`,
     datePublished: '2026-01-01',
@@ -243,7 +243,7 @@ export default function PricingPage() {
 
         {/* SECTION 4: Minimum Charges and Extra Fees */}
         <section className="mb-10">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Minimums, travel charges, and hidden costs</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Minimums, travel charges and hidden costs</h2>
           <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
             <p>
               <strong className="text-gray-900">Minimum acreage.</strong> Most operators set a 10 to 25 acre minimum for standard service calls. Some will serve smaller plots at elevated per-acre rates. University of Missouri research shows farmer ownership of a drone only beats custom hire at roughly 980 acres per year, which is why small-acreage jobs carry surcharges.
@@ -382,7 +382,7 @@ export default function PricingPage() {
               <strong className="text-gray-900">FSA Microloans and Operating Loans.</strong> USDA Farm Service Agency (FSA) microloans (up to $50,000) and regular operating loans can finance drone equipment purchases. These are not cost-share but low-interest financing that reduces ownership cost, relevant to the buy-vs-hire decision at higher acreage volumes.
             </p>
             <p>
-              State-level programs supplement federal cost-share in several major ag states. Iowa, Illinois, Indiana, and Minnesota have run targeted cover crop programs that explicitly list drone seeding as an eligible establishment method.
+              State-level programs supplement federal cost-share in several major ag states. Iowa, Illinois, Indiana and Minnesota have run targeted cover crop programs that explicitly list drone seeding as an eligible establishment method.
             </p>
           </div>
           <div className="mt-4">

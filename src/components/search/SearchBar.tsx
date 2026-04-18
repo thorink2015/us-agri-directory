@@ -21,7 +21,7 @@ export default function SearchBar() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full max-w-2xl mx-auto">
       <div className="relative flex-1">
-        <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none" />
+        <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
         <label htmlFor="state-select" className="sr-only">Select your state</label>
         <select
           id="state-select"

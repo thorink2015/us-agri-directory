@@ -8,14 +8,14 @@ import { SITE } from '@/data/author';
 export const metadata: Metadata = {
   title: 'Drone Spraying by State: Licensing & Rates 2026',
   description:
-    'Find ag drone operators, licensing, and 2026 spray rates for all 50 US states. Iowa $12-$17, Texas $12-$20, California $18-$35/acre.',
+    'Find ag drone operators, licensing and 2026 spray rates for all 50 US states. Iowa $12-$17, Texas $12-$20, California $18-$35/acre.',
   alternates: { canonical: '/states' },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     siteName: 'US Ag Drone Directory',
     title: 'Ag Drone Services by State, Licensing & Rates (2026)',
-    description: 'Browse verified operators, state licensing rules, and 2026 per-acre rates for all 50 states.',
+    description: 'Browse verified operators, state licensing rules and 2026 per-acre rates for all 50 states.',
     url: `${SITE.domain}/states`,
     images: [
       {
@@ -79,14 +79,14 @@ export default function StatesPage() {
             Agricultural Drone Spraying by State (2026)
           </h1>
           <p className="text-gray-600 max-w-3xl">
-            Licensing requirements, 2026 spray rates, and verified operators for all 50 US states. Select your state to see local licensing rules, seasonal spray windows, and operators serving your area.
+            Licensing requirements, 2026 spray rates and verified operators for all 50 US states. Select your state to see local licensing rules, seasonal spray windows and operators serving your area.
           </p>
         </div>
 
         {/* AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-10">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Drone spray rates across the US range from $12 per acre in the Corn Belt (Iowa benchmark) to $50 per acre in Alaska for remote logistics work. Every operator must hold FAA Part 107 and a state pesticide applicator license in the aerial category. All 50 states now have detailed guides below covering state-specific licensing rules, reciprocity, seasonal spray windows, top crops, and 2026 rate ranges.
+            Drone spray rates across the US range from $12 per acre in the Corn Belt (Iowa benchmark) to $50 per acre in Alaska for remote logistics work. Every operator must hold FAA Part 107 and a state pesticide applicator license in the aerial category. All 50 states now have detailed guides below covering state-specific licensing rules, reciprocity, seasonal spray windows, top crops and 2026 rate ranges.
           </p>
         </div>
 

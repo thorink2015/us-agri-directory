@@ -80,8 +80,8 @@ export default function TermsPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3">What this site is</h2>
             <p className="leading-relaxed">
               The US Agricultural Drone Directory is an informational resource and directory
-              listing agricultural drone operators, services, regulations, and related content.
-              We are not a booking platform, marketplace, or regulatory authority.
+              listing agricultural drone operators, services, regulations and related content.
+              We are not a booking platform, marketplace or regulatory authority.
             </p>
           </section>
 
@@ -99,7 +99,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">No warranty on content</h2>
             <p className="leading-relaxed">
-              Regulatory information, pricing data, and technical specifications are researched
+              Regulatory information, pricing data and technical specifications are researched
               from public sources and updated periodically. Laws and regulations change. Prices
               fluctuate. Drone specifications are updated by manufacturers. Always verify critical
               information with the relevant authority (FAA, state department of agriculture,
@@ -109,11 +109,11 @@ export default function TermsPage() {
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">
-              Not legal, financial, or agronomic advice
+              Not legal, financial or agronomic advice
             </h2>
             <p className="leading-relaxed">
-              Nothing on this site constitutes legal advice, financial advice, or agronomic
-              recommendations. Consult a licensed attorney, financial advisor, or certified crop
+              Nothing on this site constitutes legal advice, financial advice or agronomic
+              recommendations. Consult a licensed attorney, financial advisor or certified crop
               advisor for advice specific to your situation.
             </p>
           </section>
@@ -123,7 +123,7 @@ export default function TermsPage() {
             <p className="leading-relaxed">
               Operators who list on this directory are responsible for: maintaining valid FAA and
               state certifications, maintaining adequate insurance, complying with all federal,
-              state, and local regulations, and ensuring the accuracy of their listing
+              state, and local regulations and ensuring the accuracy of their listing
               information. We reserve the right to remove listings that contain inaccurate
               credential information.
             </p>
@@ -134,7 +134,7 @@ export default function TermsPage() {
             <p className="leading-relaxed">
               All content on this site (text, data compilations, page designs, logos) is owned by
               the US Agricultural Drone Directory unless otherwise attributed. You may link to
-              our pages. You may not scrape, reproduce, or republish our content without
+              our pages. You may not scrape, reproduce or republish our content without
               permission.
             </p>
           </section>
@@ -143,7 +143,7 @@ export default function TermsPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3">Limitation of liability</h2>
             <p className="leading-relaxed">
               The US Agricultural Drone Directory is not liable for any damages arising from the
-              use of this site, reliance on directory listings, or decisions made based on
+              use of this site, reliance on directory listings or decisions made based on
               content published here. Use at your own risk.
             </p>
           </section>

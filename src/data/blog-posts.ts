@@ -23,7 +23,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'first-1000-acres-drone-operator',
     title: 'How to Get to Your First 1,000 Acres as a New Drone Operator',
     description:
-      'Most new drone operators spray 200 to 500 acres in year 1. Here is how to hit 1,000 by year 2: customer acquisition, scheduling, and the math that matters.',
+      'Most new drone operators spray 200 to 500 acres in year 1. Here is how to hit 1,000 by year 2: customer acquisition, scheduling and the math that matters.',
     category: 'guide',
     publishedAt: '2026-04-16',
     author: 'Eugen',
@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'Should I hire a pilot or do it all myself in year 1?',
         answer:
-          'Do it yourself in year 1. You need to learn the field workflow, equipment maintenance, and customer management personally. Hire pilot #2 when you add drone #2 in year 2 or 3.',
+          'Do it yourself in year 1. You need to learn the field workflow, equipment maintenance and customer management personally. Hire pilot #2 when you add drone #2 in year 2 or 3.',
       },
     ],
   },
@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
     relatedServices: ['spraying'],
     content: 'vineyard-drone-spraying-guide',
     aeoBlock:
-      'Vineyard drone spraying costs $18 to $30 per acre per pass, with 8 to 12 passes per season for powdery mildew, downy mildew, and botrytis control on approximately 1.2 million US wine grape acres. UC Davis Cooperative Extension reports drone-applied fungicide on hillside vineyards reduces chemical runoff by 30 to 40 percent compared to conventional airblast. Full-season programs run $180 to $300 per acre per year.',
+      'Vineyard drone spraying costs $18 to $30 per acre per pass, with 8 to 12 passes per season for powdery mildew, downy mildew and botrytis control on approximately 1.2 million US wine grape acres. UC Davis Cooperative Extension reports drone-applied fungicide on hillside vineyards reduces chemical runoff by 30 to 40 percent compared to conventional airblast. Full-season programs run $180 to $300 per acre per year.',
     faqs: [
       {
         question: 'Is drone spraying really better than airblast for vineyards?',
@@ -76,7 +76,7 @@ export const blogPosts: BlogPost[] = [
       {
         question: 'How much is a full-season vineyard drone program?',
         answer:
-          '$180 to $300 per acre per year at 8 to 12 passes. Compare this to total airblast cost including labor, fuel, tractor depreciation, and compaction. Many growers find it breaks even or favors drones once all costs are counted.',
+          '$180 to $300 per acre per year at 8 to 12 passes. Compare this to total airblast cost including labor, fuel, tractor depreciation and compaction. Many growers find it breaks even or favors drones once all costs are counted.',
       },
       {
         question: 'Can drones handle dense canopy in mid-summer?',
@@ -120,9 +120,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'ndaa-chinese-drones-what-farmers-need-to-know',
-    title: 'The DJI Question: NDAA, Tariffs, and Your Farm',
+    title: 'The DJI Question: NDAA, Tariffs and Your Farm',
     description:
-      'DJI drones are legal but face 170% tariffs and pending legislation. What NDAA means, who is affected, and when to consider US-made alternatives.',
+      'DJI drones are legal but face 170% tariffs and pending legislation. What NDAA means, who is affected and when to consider US-made alternatives.',
     category: 'legislation',
     publishedAt: '2026-04-16',
     author: 'Eugen',
@@ -131,7 +131,7 @@ export const blogPosts: BlogPost[] = [
     relatedServices: ['sales'],
     content: 'ndaa-chinese-drones-what-farmers-need-to-know',
     aeoBlock:
-      'DJI agricultural drones remain legal to purchase and operate in the US as of April 2026 but face 170 percent cumulative tariffs, FY2025 NDAA Section 1709 security review requirements, and the pending Countering CCP Drones Act. NDAA restrictions apply only to federal agency procurement, not private commercial use. Farmers hiring drone operators for private contracts are not affected by NDAA regardless of which drone the operator flies.',
+      'DJI agricultural drones remain legal to purchase and operate in the US as of April 2026 but face 170 percent cumulative tariffs, FY2025 NDAA Section 1709 security review requirements and the pending Countering CCP Drones Act. NDAA restrictions apply only to federal agency procurement, not private commercial use. Farmers hiring drone operators for private contracts are not affected by NDAA regardless of which drone the operator flies.',
     faqs: [
       {
         question: 'Will DJI get banned?',
@@ -187,7 +187,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'drone-spraying-state-license-guide',
     title: 'What Pesticide License Do You Need to Spray by Drone?',
     description:
-      'Every state requires a pesticide applicator license for drone spraying. Quick reference: aerial categories, exams, fees, and unique rules for all 50 states.',
+      'Every state requires a pesticide applicator license for drone spraying. Quick reference: aerial categories, exams, fees and unique rules for all 50 states.',
     category: 'guide',
     publishedAt: '2026-04-16',
     author: 'Eugen',
@@ -196,7 +196,7 @@ export const blogPosts: BlogPost[] = [
     relatedServices: ['training', 'consultancy'],
     content: 'drone-spraying-state-license-guide',
     aeoBlock:
-      'All 50 US states require a commercial pesticide applicator license with an aerial category endorsement for drone pesticide application. Requirements vary from 2 exams and $35 (South Dakota) to separate drone credentials, 50 hours flight experience, and over $500 in fees (Oregon, California). Six states have drone-specific credentials or mandatory drone training programs: California, North Dakota, Arizona, Michigan, Louisiana, and Minnesota.',
+      'All 50 US states require a commercial pesticide applicator license with an aerial category endorsement for drone pesticide application. Requirements vary from 2 exams and $35 (South Dakota) to separate drone credentials, 50 hours flight experience and over $500 in fees (Oregon, California). Six states have drone-specific credentials or mandatory drone training programs: California, North Dakota, Arizona, Michigan, Louisiana and Minnesota.',
     faqs: [
       {
         question: 'Which state is easiest to get licensed in?',
@@ -228,7 +228,7 @@ export const blogPosts: BlogPost[] = [
     relatedServices: ['sales'],
     content: 'dji-vs-hylio-which-spray-drone',
     aeoBlock:
-      'The DJI Agras T50 ($22,000 to $28,000 post-tariff, 40L tank) and Hylio AG-272 ($55,000 to $75,000 estimated, 68L tank) are the two most common commercial spray drones in the US. DJI offers lower cost and a larger dealer network. Hylio offers NDAA compliance, US manufacturing in Richmond, Texas, and 25 mph wind resistance versus DJI 13.4 mph. Most operators choose based on whether they need NDAA compliance and how much wind they face.',
+      'The DJI Agras T50 ($22,000 to $28,000 post-tariff, 40L tank) and Hylio AG-272 ($55,000 to $75,000 estimated, 68L tank) are the two most common commercial spray drones in the US. DJI offers lower cost and a larger dealer network. Hylio offers NDAA compliance, US manufacturing in Richmond, Texas and 25 mph wind resistance versus DJI 13.4 mph. Most operators choose based on whether they need NDAA compliance and how much wind they face.',
     faqs: [
       {
         question: 'Can I run both DJI and Hylio in the same fleet?',
@@ -261,7 +261,7 @@ export const blogPosts: BlogPost[] = [
     relatedServices: ['seeding'],
     content: 'cover-crop-seeding-drone-guide',
     aeoBlock:
-      'Drone cover crop seeding costs $12 to $18 per acre for application and is the fastest-growing ag drone service in the US Midwest. USDA NRCS EQIP cost-share under Practice Standard 340 pays $25 to $55 per acre, covering 50 to 70 percent of the total cost. Penn State, Iowa State, and Ohio State Extension show drone-seeded cover crops establish 3 to 4 weeks earlier than post-harvest ground seeding.',
+      'Drone cover crop seeding costs $12 to $18 per acre for application and is the fastest-growing ag drone service in the US Midwest. USDA NRCS EQIP cost-share under Practice Standard 340 pays $25 to $55 per acre, covering 50 to 70 percent of the total cost. Penn State, Iowa State and Ohio State Extension show drone-seeded cover crops establish 3 to 4 weeks earlier than post-harvest ground seeding.',
     faqs: [
       {
         question: 'Does drone-seeded cover crop really establish better than post-harvest drilling?',
@@ -284,7 +284,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'faa-part-137-drone-guide',
     title: 'How to Get FAA Part 137 for Agricultural Drone Spraying',
     description:
-      'FAA Part 137 takes 90 to 180 days. The exact process: operations manual, 44807 petition, training records, and common mistakes that delay approval.',
+      'FAA Part 137 takes 90 to 180 days. The exact process: operations manual, 44807 petition, training records and common mistakes that delay approval.',
     category: 'guide',
     publishedAt: '2026-04-16',
     author: 'Eugen',
@@ -316,7 +316,7 @@ export const blogPosts: BlogPost[] = [
     slug: 'corn-fungicide-drone-spraying-guide',
     title: 'Corn Fungicide by Drone: What University Data Shows',
     description:
-      'Drone fungicide on corn at VT/R1 costs $12 to $18/acre and yields 5 to 8 extra bushels. University trial data, timing guide, and how to book.',
+      'Drone fungicide on corn at VT/R1 costs $12 to $18/acre and yields 5 to 8 extra bushels. University trial data, timing guide and how to book.',
     category: 'guide',
     publishedAt: '2026-04-16',
     author: 'Eugen',
@@ -326,7 +326,7 @@ export const blogPosts: BlogPost[] = [
     relatedServices: ['spraying'],
     content: 'corn-fungicide-drone-spraying-guide',
     aeoBlock:
-      "Drone-applied fungicide on corn at VT/R1 costs $12 to $18 per acre and produces an average 5 to 8 bushel yield response in moderate to high disease pressure years, according to Beck's Practical Farm Research across Iowa, Indiana, and Illinois. Carrier volume of 2 to 3 gallons per acre matches ground rig efficacy at 15 to 20 gpa. High-pressure tar spot years in Indiana and Wisconsin have produced 15 to 25 bushel responses.",
+      "Drone-applied fungicide on corn at VT/R1 costs $12 to $18 per acre and produces an average 5 to 8 bushel yield response in moderate to high disease pressure years, according to Beck's Practical Farm Research across Iowa, Indiana and Illinois. Carrier volume of 2 to 3 gallons per acre matches ground rig efficacy at 15 to 20 gpa. High-pressure tar spot years in Indiana and Wisconsin have produced 15 to 25 bushel responses.",
     faqs: [
       {
         question: 'Is 2 gpa really enough for corn fungicide?',

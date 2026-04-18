@@ -66,7 +66,7 @@ export default function CountyCropPage({ params }: Props) {
   const faqs = [
     {
       question: `How much does drone spraying for ${crop.name.toLowerCase()} cost in ${county.name}?`,
-      answer: `Drone spraying rates for ${crop.name.toLowerCase()} in ${county.name} typically run ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)} per acre for application only, the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base, and product type.`,
+      answer: `Drone spraying rates for ${crop.name.toLowerCase()} in ${county.name} typically run ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)} per acre for application only, the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base and product type.`,
     },
     {
       question: `When should I schedule drone applications for ${crop.name.toLowerCase()}?`,
@@ -74,7 +74,7 @@ export default function CountyCropPage({ params }: Props) {
     },
     {
       question: `What advantages does drone spraying offer for ${crop.name.toLowerCase()} vs. ground equipment?`,
-      answer: `Drone spraying on ${crop.name.toLowerCase()} offers several advantages: zero soil compaction, ability to operate when fields are too wet for tractors, GPS-guided uniform coverage at 95%+ accuracy, and the ability to treat small or irregularly shaped fields. It also reduces product waste by 20 to 30% compared to ground equipment.`,
+      answer: `Drone spraying on ${crop.name.toLowerCase()} offers several advantages: zero soil compaction, ability to operate when fields are too wet for tractors, GPS-guided uniform coverage at 95%+ accuracy and the ability to treat small or irregularly shaped fields. It also reduces product waste by 20 to 30% compared to ground equipment.`,
     },
   ];
 

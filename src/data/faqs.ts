@@ -7,12 +7,12 @@ export const pricingFAQs: FAQ[] = [
   {
     question: 'How much does drone spraying cost per acre?',
     answer:
-      'Most operators charge $12 to $18 per acre for application only, with the farmer supplying the chemical product. Rates vary by region, field size, terrain, and product type. Small or irregularly shaped fields typically cost more per acre than large, open tracts. Cover crop seeding runs in a similar range. These rates have dropped from $22 to $25 per acre just two years ago as more operators have entered the market.',
+      'Most operators charge $12 to $18 per acre for application only, with the farmer supplying the chemical product. Rates vary by region, field size, terrain and product type. Small or irregularly shaped fields typically cost more per acre than large, open tracts. Cover crop seeding runs in a similar range. These rates have dropped from $22 to $25 per acre just two years ago as more operators have entered the market.',
   },
   {
     question: 'How many acres can a drone spray per hour?',
     answer:
-      'A single commercial spray drone covers 20 to 50 acres per hour depending on the application rate, field layout, and drone model. Most operators using a DJI Agras T50 or Hylio AG-272 average 30 to 40 acres per hour in real-world conditions. Multiple-drone fleets increase throughput significantly.',
+      'A single commercial spray drone covers 20 to 50 acres per hour depending on the application rate, field layout and drone model. Most operators using a DJI Agras T50 or Hylio AG-272 average 30 to 40 acres per hour in real-world conditions. Multiple-drone fleets increase throughput significantly.',
   },
   {
     question: 'Should I buy a spray drone or hire a custom operator?',
@@ -27,12 +27,12 @@ export const pricingFAQs: FAQ[] = [
   {
     question: 'What is the difference between drone spraying and crop dusting?',
     answer:
-      'Drones fly 8 to 15 feet above the canopy, while crop dusters fly at 50 to 100 feet or higher. Drones produce less drift, can spray at night, handle small and irregular fields, and do not require a runway. Crop dusters cover more acres per hour and carry larger payloads, making them better for very large open fields. Drone spraying costs $12 to $18 per acre compared to around $12 per acre for airplane application.',
+      'Drones fly 8 to 15 feet above the canopy, while crop dusters fly at 50 to 100 feet or higher. Drones produce less drift, can spray at night, handle small and irregular fields and do not require a runway. Crop dusters cover more acres per hour and carry larger payloads, making them better for very large open fields. Drone spraying costs $12 to $18 per acre compared to around $12 per acre for airplane application.',
   },
   {
     question: 'What factors affect the per-acre price of drone spraying?',
     answer:
-      'Key factors include field size (larger fields get lower per-acre rates), terrain (irregular or hilly fields cost more), product type (viscous or corrosive products may add a surcharge), distance from the operator\'s base, and season timing. Fields over 200 acres can often negotiate rates toward $12 per acre, while small fields under 40 acres typically run toward $18 per acre.',
+      'Key factors include field size (larger fields get lower per-acre rates), terrain (irregular or hilly fields cost more), product type (viscous or corrosive products may add a surcharge), distance from the operator\'s base and season timing. Fields over 200 acres can often negotiate rates toward $12 per acre, while small fields under 40 acres typically run toward $18 per acre.',
   },
 ];
 
@@ -73,6 +73,6 @@ export const generalFAQs: FAQ[] = [
   {
     question: 'How do I list my drone business in this directory?',
     answer:
-      'Creating a listing is completely free. Click "List Your Business" on any page to fill out your profile: service area, equipment, certifications, and rates. Our team reviews the information and publishes your profile within 48 hours.',
+      'Creating a listing is completely free. Click "List Your Business" on any page to fill out your profile: service area, equipment, certifications and rates. Our team reviews the information and publishes your profile within 48 hours.',
   },
 ];

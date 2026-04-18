@@ -7,7 +7,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Ag Drone Blog: Lists, Guides & Industry News 2026',
   description:
-    'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies, and equipment comparisons.',
+    'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies and equipment comparisons.',
   alternates: { canonical: '/blog' },
   openGraph: {
     type: 'website',
@@ -43,7 +43,7 @@ export default function BlogHub() {
           Ag Drone Blog
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Operator rankings, application guides, legislation updates, and equipment comparisons for
+          Operator rankings, application guides, legislation updates and equipment comparisons for
           the US agricultural drone industry. Updated weekly.
         </p>
       </header>

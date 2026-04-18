@@ -27,7 +27,7 @@ const FAQS = [
   {
     question: 'Will drones replace crop duster airplanes?',
     answer:
-      'Not entirely. Large-acreage applications on flat terrain will continue to favor airplanes on throughput economics. Drones are taking share on sub-500-acre fields, drift-sensitive applications, tall-crop fungicide, and steep terrain where airplanes are impractical. The two methods will coexist, with drones growing share annually.',
+      'Not entirely. Large-acreage applications on flat terrain will continue to favor airplanes on throughput economics. Drones are taking share on sub-500-acre fields, drift-sensitive applications, tall-crop fungicide and steep terrain where airplanes are impractical. The two methods will coexist, with drones growing share annually.',
   },
 ];
 
@@ -119,7 +119,7 @@ export default function DroneVsAirplanePage() {
 
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            The 2026 Iowa State Custom Rate Survey puts drone application at $12.50 per acre average and manned aerial spraying at $12.00 per acre, making the two methods nearly price-equivalent for the first time. Drones win on fields under 500 acres (airplane mobilization costs push per-acre pricing higher), near drift-sensitive borders, and in wet conditions. Airplanes win above 1,000 acres on throughput (300 to 800 acres per hour versus 40 to 60 for a single drone).
+            The 2026 Iowa State Custom Rate Survey puts drone application at $12.50 per acre average and manned aerial spraying at $12.00 per acre, making the two methods nearly price-equivalent for the first time. Drones win on fields under 500 acres (airplane mobilization costs push per-acre pricing higher), near drift-sensitive borders and in wet conditions. Airplanes win above 1,000 acres on throughput (300 to 800 acres per hour versus 40 to 60 for a single drone).
           </p>
         </div>
 
@@ -175,7 +175,7 @@ export default function DroneVsAirplanePage() {
 
           <h2 className="text-xl font-bold text-gray-900">Market trend</h2>
           <p>
-            NAAA 2025 survey: 13 percent of aerial application operations now include UAS, up from 5 percent in 2024 (160 percent increase). American Spray Drone Coalition reported 10.3 million US acres sprayed by drones in 2024, roughly 2.5x the 2023 figure. Drones are not replacing airplanes entirely but are taking share steadily on sub-500-acre fields and drift-sensitive applications. The dominant model in the Midwest and Delta is now a mixed fleet: an ag aviation business running planes for large acreage and drones for borders, small fields, and makeup passes.
+            NAAA 2025 survey: 13 percent of aerial application operations now include UAS, up from 5 percent in 2024 (160 percent increase). American Spray Drone Coalition reported 10.3 million US acres sprayed by drones in 2024, roughly 2.5x the 2023 figure. Drones are not replacing airplanes entirely but are taking share steadily on sub-500-acre fields and drift-sensitive applications. The dominant model in the Midwest and Delta is now a mixed fleet: an ag aviation business running planes for large acreage and drones for borders, small fields and makeup passes.
           </p>
         </section>
 

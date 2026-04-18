@@ -18,10 +18,10 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 
 const SERVICE_CARDS = [
   { slug: 'spraying', icon: Droplets, label: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', price: '$12 to $22/acre' },
-  { slug: 'seeding', icon: Sprout, label: 'Cover Crop Seeding', desc: 'Broadcast cereal rye, ryegrass, and clover blends', price: '$12 to $18/acre' },
-  { slug: 'mapping', icon: MapIcon, label: 'Aerial Mapping', desc: 'NDVI maps, orthomosaics, and prescription files', price: '$2 to $8/acre' },
+  { slug: 'seeding', icon: Sprout, label: 'Cover Crop Seeding', desc: 'Broadcast cereal rye, ryegrass and clover blends', price: '$12 to $18/acre' },
+  { slug: 'mapping', icon: MapIcon, label: 'Aerial Mapping', desc: 'NDVI maps, orthomosaics and prescription files', price: '$2 to $8/acre' },
   { slug: 'monitoring', icon: Radar, label: 'Crop Monitoring', desc: 'Pest pressure, disease, stress identification', price: '$3 to $10/acre' },
-  { slug: 'spreading', icon: Settings, label: 'Granular Spreading', desc: 'Urea, gypsum, lime, and cover crop seed', price: '$10 to $18/acre' },
+  { slug: 'spreading', icon: Settings, label: 'Granular Spreading', desc: 'Urea, gypsum, lime and cover crop seed', price: '$10 to $18/acre' },
   { slug: 'sales', icon: ShoppingCart, label: 'Drone Sales', desc: 'New and used ag drones from authorized dealers', price: '$18K to $75K' },
 ];
 
@@ -32,7 +32,7 @@ const TRUST_CARDS = [
   },
   {
     title: 'Search by crop and location',
-    desc: 'Filter operators by your state, county, crop type, and service needed. Whether you grow corn in Iowa or grapes in Napa, find someone who knows your operation.',
+    desc: 'Filter operators by your state, county, crop type and service needed. Whether you grow corn in Iowa or grapes in Napa, find someone who knows your operation.',
   },
   {
     title: 'Transparent pricing',
@@ -40,7 +40,7 @@ const TRUST_CARDS = [
   },
   {
     title: 'Direct contact',
-    desc: 'Reach operators directly by phone, email, or web form. No intermediaries, no platform fees, no commission taken from either side.',
+    desc: 'Reach operators directly by phone, email or web form. No intermediaries, no platform fees, no commission taken from either side.',
   },
 ];
 
@@ -57,17 +57,17 @@ const HOW_IT_WORKS = [
   {
     icon: Search,
     title: 'Search your area',
-    desc: 'Enter your state, county, or zip code. Add your crop type and the service you need: fungicide spraying, cover crop seeding, or aerial mapping.',
+    desc: 'Enter your state, county or zip code. Add your crop type and the service you need: fungicide spraying, cover crop seeding or aerial mapping.',
   },
   {
     icon: BarChart3,
     title: 'Compare operators',
-    desc: 'Browse operator profiles side by side. Review equipment, certifications, coverage area, per-acre rates, and farmer ratings.',
+    desc: 'Browse operator profiles side by side. Review equipment, certifications, coverage area, per-acre rates and farmer ratings.',
   },
   {
     icon: CheckCircle,
     title: 'Contact and book',
-    desc: 'Reach out directly to operators that fit your needs. Request quotes, ask questions, and schedule your application window.',
+    desc: 'Reach out directly to operators that fit your needs. Request quotes, ask questions and schedule your application window.',
   },
 ];
 
@@ -85,7 +85,7 @@ const FAQS = [
   },
   {
     question: 'Is drone crop spraying legal in the United States?',
-    answer: 'Yes. Commercial drone spraying requires three credentials: FAA Part 107 remote pilot certificate, FAA Part 137 agricultural aircraft operator certificate, and a state commercial pesticide applicator license with aerial endorsement. Every operator in this directory holds all three.',
+    answer: 'Yes. Commercial drone spraying requires three credentials: FAA Part 107 remote pilot certificate, FAA Part 137 agricultural aircraft operator certificate and a state commercial pesticide applicator license with aerial endorsement. Every operator in this directory holds all three.',
   },
   {
     question: 'How many acres can a drone spray per day?',
@@ -105,7 +105,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const operatorCount = operators.length;
   return {
     title: 'Find Drone Spraying Near You | US Ag Drone Directory',
-    description: `Search ${operatorCount}+ verified ag drone operators in all 50 states. Compare per-acre rates from $12, check FAA credentials, and contact operators directly.`,
+    description: `Search ${operatorCount}+ verified ag drone operators in all 50 states. Compare per-acre rates from $12, check FAA credentials and contact operators directly.`,
     alternates: { canonical: '/' },
     openGraph: {
       type: 'website',
@@ -178,7 +178,7 @@ export default function HomePage() {
       <Script
         id="avantlink-verify"
         src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=7f2a5dd0e8c0a0d88c8f463171c14e1a35737fe2"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema()) }} />
@@ -203,7 +203,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-xl text-green-100 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Search verified ag drone operators across all 50 states. Compare services, check credentials, and book the right pilot for your fields.
+            Search verified ag drone operators across all 50 states. Compare services, check credentials and book the right pilot for your fields.
           </p>
 
           <SearchBar />
@@ -347,7 +347,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between mb-8 gap-4">
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Featured operators this season</h2>
-              <p className="text-gray-500 mt-1">Verified, insured, and actively booking</p>
+              <p className="text-gray-500 mt-1">Verified, insured and actively booking</p>
             </div>
             <Link href="/operators" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
               View all operators <ArrowRight className="w-4 h-4" />
@@ -429,14 +429,14 @@ export default function HomePage() {
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Free tools for farmers and operators</h2>
-          <p className="text-gray-500 mb-8">Instant calculators for spray cost, ROI, coverage time, and more</p>
+          <p className="text-gray-500 mb-8">Instant calculators for spray cost, ROI, coverage time and more</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {[
               {
                 href: '/tools/spray-cost-calculator',
                 icon: DollarSign,
                 title: 'Spray Cost Calculator',
-                desc: 'Enter your acres, crop, and state. Get an instant per-acre cost estimate with regional pricing data.',
+                desc: 'Enter your acres, crop and state. Get an instant per-acre cost estimate with regional pricing data.',
               },
               {
                 href: '/tools/roi-calculator',
@@ -448,25 +448,25 @@ export default function HomePage() {
                 href: '/tools/coverage-calculator',
                 icon: Clock,
                 title: 'Coverage Time Estimator',
-                desc: 'How long will it take to spray your fields? Enter acres, drone model, and application rate.',
+                desc: 'How long will it take to spray your fields? Enter acres, drone model and application rate.',
               },
               {
                 href: '/tools/acreage-converter',
                 icon: Ruler,
                 title: 'Acreage Converter',
-                desc: 'Convert between acres, hectares, square meters, and square feet. Quick field-size math for quotes and reports.',
+                desc: 'Convert between acres, hectares, square meters and square feet. Quick field-size math for quotes and reports.',
               },
               {
                 href: '/tools/drone-comparison',
                 icon: GitCompare,
                 title: 'Drone Comparison Tool',
-                desc: 'Compare DJI Agras, Hylio, Talos, and XAG models side by side on tank, price, NDAA status, and throughput.',
+                desc: 'Compare DJI Agras, Hylio, Talos and XAG models side by side on tank, price, NDAA status and throughput.',
               },
               {
                 href: '/tools/treatment-calendar',
                 icon: CalendarDays,
                 title: 'Treatment Calendar',
-                desc: 'Monthly spray windows for corn, soybeans, wheat, vineyards, and orchards across US growing regions.',
+                desc: 'Monthly spray windows for corn, soybeans, wheat, vineyards and orchards across US growing regions.',
               },
             ].map((tool) => {
               const Icon = tool.icon;

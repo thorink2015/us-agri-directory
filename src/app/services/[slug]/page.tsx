@@ -232,11 +232,11 @@ export default function ServicePage({ params }: Props) {
         <h2 className="font-semibold text-gray-900 mb-3 text-sm">Related tools</h2>
         <div className="flex flex-wrap gap-3">
           <Link href="/tools/spray-cost-calculator" className="text-sm text-green-700 hover:underline">Spray Cost Calculator</Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-400" aria-hidden="true">|</span>
           <Link href="/tools/roi-calculator" className="text-sm text-green-700 hover:underline">ROI Buy vs. Hire</Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-400" aria-hidden="true">|</span>
           <Link href="/tools/coverage-calculator" className="text-sm text-green-700 hover:underline">Coverage Time Estimator</Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-400" aria-hidden="true">|</span>
           <Link href="/pricing" className="text-sm text-green-700 hover:underline">Full Pricing Guide</Link>
         </div>
       </div>

@@ -13,7 +13,7 @@ const FAQS = [
   {
     question: 'How hard is the Part 107 exam?',
     answer:
-      'Pass rate is approximately 80 to 90 percent with 2 to 4 weeks of study. The hardest sections are airspace classification, sectional chart reading, and weather theory. Free study materials are available from FAA, plus paid courses from Drone Pilot Ground School and other providers.',
+      'Pass rate is approximately 80 to 90 percent with 2 to 4 weeks of study. The hardest sections are airspace classification, sectional chart reading and weather theory. Free study materials are available from FAA, plus paid courses from Drone Pilot Ground School and other providers.',
   },
   {
     question: 'Do I need Part 107 if I only spray my own farm?',
@@ -35,7 +35,7 @@ const FAQS = [
 export const metadata: Metadata = {
   title: 'FAA Part 107: Remote Pilot Certificate for Ag Drones',
   description:
-    'How to get FAA Part 107 for agricultural drone spraying. Study time, exam format, cost, renewal, and what Part 107 does and does not authorize.',
+    'How to get FAA Part 107 for agricultural drone spraying. Study time, exam format, cost, renewal and what Part 107 does and does not authorize.',
   alternates: { canonical: '/regulations/faa-part-107' },
   openGraph: {
     type: 'website',
@@ -116,27 +116,27 @@ export default function FaaPart107Page() {
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">What Part 107 covers</h2>
           <p>
-            Part 107 grants authority to operate a small unmanned aircraft (under 55 lbs) commercially in the US National Airspace System. It covers airspace rules (Class B through G), visual line of sight (VLOS) operations, weather minimums (3 statute miles visibility, 500 ft below clouds, 2000 ft horizontal), crew requirements (remote pilot-in-command plus optional visual observer), and the waiver process for operations outside standard rules. Maximum altitude is 400 ft AGL above ground or within 400 ft of a structure.
+            Part 107 grants authority to operate a small unmanned aircraft (under 55 lbs) commercially in the US National Airspace System. It covers airspace rules (Class B through G), visual line of sight (VLOS) operations, weather minimums (3 statute miles visibility, 500 ft below clouds, 2000 ft horizontal), crew requirements (remote pilot-in-command plus optional visual observer) and the waiver process for operations outside standard rules. Maximum altitude is 400 ft AGL above ground or within 400 ft of a structure.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">How to get Part 107</h2>
           <p>
-            The path is a single knowledge exam: 60 multiple-choice questions, 70 percent passing, 2-hour time limit, $175 at PSI testing centers. There is no flight test. Typical study time is 2 to 4 weeks using the free <a href={addUtm("https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA Remote Pilot study guide</a> and sample test questions. Paid courses from Drone Pilot Ground School, Pilot Institute, and King Schools run $150 to $300 and typically include a pass guarantee. After passing, create an IACRA account, submit Form 8710-13, and receive a temporary certificate within 10 business days. The permanent card arrives by mail in 4 to 6 weeks.
+            The path is a single knowledge exam: 60 multiple-choice questions, 70 percent passing, 2-hour time limit, $175 at PSI testing centers. There is no flight test. Typical study time is 2 to 4 weeks using the free <a href={addUtm("https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA Remote Pilot study guide</a> and sample test questions. Paid courses from Drone Pilot Ground School, Pilot Institute and King Schools run $150 to $300 and typically include a pass guarantee. After passing, create an IACRA account, submit Form 8710-13 and receive a temporary certificate within 10 business days. The permanent card arrives by mail in 4 to 6 weeks.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">What Part 107 does NOT authorize</h2>
           <p>
-            Part 107 is the foundation, not the full stack. It does not authorize: aerial pesticide application (requires Part 137 and a state license), operations of drones over 55 lbs (requires Section 44807 exemption), beyond visual line of sight (BVLOS) flight without a waiver, operations over non-participating people without a waiver or compliant platform, or flight above 400 ft AGL outside of controlled airspace with ATC authorization. Flying a spray drone with just Part 107 is a violation of both FAA and EPA rules.
+            Part 107 is the foundation, not the full stack. It does not authorize: aerial pesticide application (requires Part 137 and a state license), operations of drones over 55 lbs (requires Section 44807 exemption), beyond visual line of sight (BVLOS) flight without a waiver, operations over non-participating people without a waiver or compliant platform or flight above 400 ft AGL outside of controlled airspace with ATC authorization. Flying a spray drone with just Part 107 is a violation of both FAA and EPA rules.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Part 107 renewal</h2>
           <p>
-            Recurrent training is required every 24 months. The renewal is an online recurrent knowledge test (ALC-677 on FAA Safety Team website), free, takes approximately 1 hour. Passing the online module keeps the certificate current; no retest at PSI is required. The renewal focuses on regulatory updates, recent safety incidents, and airspace changes since the last test.
+            Recurrent training is required every 24 months. The renewal is an online recurrent knowledge test (ALC-677 on FAA Safety Team website), free, takes approximately 1 hour. Passing the online module keeps the certificate current; no retest at PSI is required. The renewal focuses on regulatory updates, recent safety incidents and airspace changes since the last test.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Part 107 waivers for ag drone operators</h2>
           <p>
-            The most common waivers requested by ag drone operators are: night operations (no longer required since April 2021 rule change if anti-collision lighting is installed), BVLOS for large field spraying (still requires case-by-case waiver), operations over people (Category 1-4 drones may qualify without a waiver), and altitude above 400 ft AGL (rare for ag work, occasionally requested for mountain orchards). Waivers are submitted through the <a href={addUtm("https://www.faa.gov/uas/commercial_operators_waivers", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA DroneZone portal</a> and typically take 60 to 90 days for review.
+            The most common waivers requested by ag drone operators are: night operations (no longer required since April 2021 rule change if anti-collision lighting is installed), BVLOS for large field spraying (still requires case-by-case waiver), operations over people (Category 1-4 drones may qualify without a waiver) and altitude above 400 ft AGL (rare for ag work, occasionally requested for mountain orchards). Waivers are submitted through the <a href={addUtm("https://www.faa.gov/uas/commercial_operators_waivers", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA DroneZone portal</a> and typically take 60 to 90 days for review.
           </p>
         </section>
 

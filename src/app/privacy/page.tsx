@@ -73,11 +73,11 @@ export default function PrivacyPage() {
             <p className="leading-relaxed mb-3">
               When you submit a listing through our List Your Business form, we collect the
               information you provide: business name, contact name, email, phone, website,
-              location, services, certifications, and drone models. This information is displayed
+              location, services, certifications and drone models. This information is displayed
               publicly on your operator listing page.
             </p>
             <p className="leading-relaxed">
-              When you use our contact form, we collect your name, email, and message content to
+              When you use our contact form, we collect your name, email and message content to
               respond to your inquiry.
             </p>
           </section>
@@ -86,7 +86,7 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3">Analytics</h2>
             <p className="leading-relaxed">
               We use Google Analytics (GA4) for anonymous traffic statistics. GA4 uses first-party
-              cookies. We do not use advertising trackers, Facebook Pixel, or behavioral profiling
+              cookies. We do not use advertising trackers, Facebook Pixel or behavioral profiling
               tools.
             </p>
           </section>
@@ -137,7 +137,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">Your rights</h2>
             <p className="leading-relaxed">
-              You can request access to, correction of, or deletion of any personal data we hold
+              You can request access to, correction of or deletion of any personal data we hold
               by emailing{' '}
               <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 underline">
                 {CONTACT_EMAIL}

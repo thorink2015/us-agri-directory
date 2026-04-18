@@ -1,5 +1,5 @@
 // ─── Single source of truth for author identity (E-E-A-T) ─────────────────
-// All bylines, Person schema, footer credit, and author cards reference
+// All bylines, Person schema, footer credit and author cards reference
 // this file. Do NOT paraphrase the bio elsewhere, import from here.
 //
 // TODO before launch: replace every {{PLACEHOLDER}} with a real value.
@@ -39,7 +39,7 @@ export const AUTHOR = {
     'Eugen is the founder and editor of US Ag Drone Directory. He grew up in an agricultural family in {{COUNTRY_REGION}}, studied {{FIELD_OF_STUDY}} at university, and has worked hands-on with agricultural drone technology in European markets. He built this directory after seeing how scattered and incomplete US ag drone information was for the farmers who need it most. Every page on this site is written or edited by him personally.',
 
   shortBio:
-    'Eugen is the founder and editor of US Ag Drone Directory. He built this directory to give US farmers a single trusted place to find verified ag drone operators, regulations, and pricing.',
+    'Eugen is the founder and editor of US Ag Drone Directory. He built this directory to give US farmers a single trusted place to find verified ag drone operators, regulations and pricing.',
 
   // Schema @id anchors
   get personId() {
@@ -83,7 +83,7 @@ export function organizationSchema() {
     logo: SITE.logoUrl,
     founder: { '@id': AUTHOR.personId },
     description:
-      'Directory of verified US agricultural drone operators, with regulations, pricing, and resources for farmers.',
+      'Directory of verified US agricultural drone operators, with regulations, pricing and resources for farmers.',
     sameAs: [], // TODO: add company LinkedIn + X when ready
   };
 }

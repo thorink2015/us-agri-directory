@@ -13,7 +13,7 @@ const FAQS = [
   {
     question: 'How much does it cost to start a drone spraying business?',
     answer:
-      '$35,000 to $55,000 for a realistic DJI T50 setup including drone, batteries, generator, trailer, certification, insurance, and business formation. USDA EQIP cost-share can reduce the drone cost by 40 to 90 percent, bringing effective entry to $20,000 to $40,000.',
+      '$35,000 to $55,000 for a realistic DJI T50 setup including drone, batteries, generator, trailer, certification, insurance and business formation. USDA EQIP cost-share can reduce the drone cost by 40 to 90 percent, bringing effective entry to $20,000 to $40,000.',
   },
   {
     question: 'How long until I make money?',
@@ -33,7 +33,7 @@ const FAQS = [
   {
     question: 'Do I need farming experience?',
     answer:
-      'Not legally, but practically yes. Understanding crop growth stages, spray timing, chemical products, and farmer decision-making is critical to winning and keeping customers. Operators with ag backgrounds convert customers faster and make fewer costly mistakes.',
+      'Not legally, but practically yes. Understanding crop growth stages, spray timing, chemical products and farmer decision-making is critical to winning and keeping customers. Operators with ag backgrounds convert customers faster and make fewer costly mistakes.',
   },
   {
     question: 'What is the biggest risk?',
@@ -68,7 +68,7 @@ const TIMELINE = [
 export const metadata: Metadata = {
   title: 'How to Start a Drone Spraying Business: 2026 Guide',
   description:
-    'Step-by-step guide to starting a commercial ag drone spraying business. Licensing, equipment, costs, pricing, and first customers. $15K to $80K startup.',
+    'Step-by-step guide to starting a commercial ag drone spraying business. Licensing, equipment, costs, pricing and first customers. $15K to $80K startup.',
   alternates: { canonical: '/start-a-drone-business' },
   openGraph: {
     type: 'website',
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     siteName: 'US Ag Drone Directory',
     title: 'How to Start an Agricultural Drone Spraying Business in 2026',
     description:
-      '$15K to $80K startup, 6 to 9 month certification pathway, break-even at ~980 acres/yr. Complete 2026 guide to licensing, equipment, pricing, and first customers.',
+      '$15K to $80K startup, 6 to 9 month certification pathway, break-even at ~980 acres/yr. Complete 2026 guide to licensing, equipment, pricing and first customers.',
     url: `${SITE.domain}/start-a-drone-business`,
     images: [
       {
@@ -95,7 +95,7 @@ export default function StartADroneBusinessPage() {
     '@type': 'Article',
     headline: 'How to Start an Agricultural Drone Spraying Business in 2026',
     description:
-      'Starting a commercial ag drone spraying business in the US requires $15,000 to $80,000 in startup capital, 6 to 9 months of certification, and three credentials: FAA Part 107, FAA Part 137, and a state pesticide applicator license.',
+      'Starting a commercial ag drone spraying business in the US requires $15,000 to $80,000 in startup capital, 6 to 9 months of certification and three credentials: FAA Part 107, FAA Part 137 and a state pesticide applicator license.',
     url: `${SITE.domain}/start-a-drone-business`,
     mainEntityOfPage: `${SITE.domain}/start-a-drone-business`,
     datePublished: '2026-01-01',
@@ -157,14 +157,14 @@ export default function StartADroneBusinessPage() {
 
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Starting a commercial agricultural drone spraying business in the US requires $15,000 to $80,000 in startup capital, 6 to 9 months of certification, and three credentials: FAA Part 107, FAA Part 137 with Section 44807 exemption, and a state commercial pesticide applicator license. The 2026 Iowa State Custom Rate Survey puts the average custom drone spray rate at $12.50 per acre, with University of Missouri Extension research showing operator break-even at approximately 980 acres per year.
+            Starting a commercial agricultural drone spraying business in the US requires $15,000 to $80,000 in startup capital, 6 to 9 months of certification and three credentials: FAA Part 107, FAA Part 137 with Section 44807 exemption and a state commercial pesticide applicator license. The 2026 Iowa State Custom Rate Survey puts the average custom drone spray rate at $12.50 per acre, with University of Missouri Extension research showing operator break-even at approximately 980 acres per year.
           </p>
         </div>
 
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">Is this business right for you?</h2>
           <p>
-            This business works for people with: agricultural background or direct connections to farmers, mechanical aptitude (you will maintain the drone yourself), tolerance for seasonal income (80 percent of revenue lands in 3 to 4 months), and $15,000 to $80,000 in startup capital. It does NOT work for people who expect year-round steady income from day one, have zero farming connections (cold-calling farmers without a network is extremely slow), want passive income (this is hands-on physical work in fields), or cannot wait 6 to 9 months for certification before earning revenue. The typical first-year trajectory: 6 to 9 months certifying, 200 to 500 acres in the first spray season, breaking even in year 2, and profitability by year 3 at 1,000+ acres per year.
+            This business works for people with: agricultural background or direct connections to farmers, mechanical aptitude (you will maintain the drone yourself), tolerance for seasonal income (80 percent of revenue lands in 3 to 4 months) and $15,000 to $80,000 in startup capital. It does NOT work for people who expect year-round steady income from day one, have zero farming connections (cold-calling farmers without a network is extremely slow), want passive income (this is hands-on physical work in fields) or cannot wait 6 to 9 months for certification before earning revenue. The typical first-year trajectory: 6 to 9 months certifying, 200 to 500 acres in the first spray season, breaking even in year 2 and profitability by year 3 at 1,000+ acres per year.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">What it actually costs to start</h2>
@@ -218,7 +218,7 @@ export default function StartADroneBusinessPage() {
 
           <h2 className="text-xl font-bold text-gray-900">Which drone to buy first</h2>
           <p>
-            <strong>DJI Agras T50 ($22,000 to $28,000 post-tariff):</strong> most operators start here. 40L tank, proven dealer network, fastest parts availability, largest operator community for troubleshooting. Not NDAA compliant. <strong>DJI Agras T25 ($16,000 to $20,000):</strong> lower entry cost, same spray quality as T50 (identical pump and nozzle). Best for farmer-operators spraying their own fields at 200 to 800 acres per year. Lower daily throughput limits commercial scalability. <strong>Talos T60X (from $17,899):</strong> lowest price point for a 50L-class drone, but undisclosed specs on battery, wind, and IP rating, and a shorter field track record. <strong>Hylio AG-272 ($55,000 to $75,000):</strong> buy this if you need NDAA compliance or work in high-wind environments (25 mph vs DJI 13.4 mph). Higher cost but US-made with no tariff exposure. Do NOT buy Pyka Pelican 2 ($550,000) as your first platform; it targets large commercial applicators <Link href="/comparisons/drone-vs-airplane" className="text-green-700 hover:underline">replacing manned aircraft</Link>, not startup operators. <Link href="/tools/drone-comparison" className="text-green-700 hover:underline">Compare all drones side by side</Link>.
+            <strong>DJI Agras T50 ($22,000 to $28,000 post-tariff):</strong> most operators start here. 40L tank, proven dealer network, fastest parts availability, largest operator community for troubleshooting. Not NDAA compliant. <strong>DJI Agras T25 ($16,000 to $20,000):</strong> lower entry cost, same spray quality as T50 (identical pump and nozzle). Best for farmer-operators spraying their own fields at 200 to 800 acres per year. Lower daily throughput limits commercial scalability. <strong>Talos T60X (from $17,899):</strong> lowest price point for a 50L-class drone, but undisclosed specs on battery, wind and IP rating and a shorter field track record. <strong>Hylio AG-272 ($55,000 to $75,000):</strong> buy this if you need NDAA compliance or work in high-wind environments (25 mph vs DJI 13.4 mph). Higher cost but US-made with no tariff exposure. Do NOT buy Pyka Pelican 2 ($550,000) as your first platform; it targets large commercial applicators <Link href="/comparisons/drone-vs-airplane" className="text-green-700 hover:underline">replacing manned aircraft</Link>, not startup operators. <Link href="/tools/drone-comparison" className="text-green-700 hover:underline">Compare all drones side by side</Link>.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">How to set your per-acre rates</h2>
@@ -226,12 +226,12 @@ export default function StartADroneBusinessPage() {
             National 2026 benchmarks: corn and soybean fungicide $12 to $17/acre in the Corn Belt; wheat heading $12 to $16/acre; cotton defoliant $14 to $20/acre; vineyard and orchard $18 to $35/acre; cover crop seeding $12 to $18/acre. Your pricing formula: calculate annual fixed costs (drone payment + insurance + maintenance + batteries + generator fuel), divide by realistic annual acreage, add $3 to $5/acre profit margin, compare to local competitors. University of Missouri Extension breakeven analysis: $12.27/acre at 1,000 acres/yr, $7.39/acre at 4,000 acres/yr. At $16/acre custom hire rate, break-even sits at roughly 980 acres per year.
           </p>
           <p>
-            Pricing mistakes to avoid: pricing below your fixed cost per acre to win customers (you will lose money), quoting a flat rate without accounting for field shape, distance, and crop complexity, not charging a minimum acreage (10 to 25 acre minimum is standard), and not adding a mobilization fee for fields more than 30 miles from your base. <Link href="/pricing" className="text-green-700 hover:underline">Full pricing data</Link> | <Link href="/tools/spray-cost-calculator" className="text-green-700 hover:underline">spray cost calculator</Link>.
+            Pricing mistakes to avoid: pricing below your fixed cost per acre to win customers (you will lose money), quoting a flat rate without accounting for field shape, distance and crop complexity, not charging a minimum acreage (10 to 25 acre minimum is standard) and not adding a mobilization fee for fields more than 30 miles from your base. <Link href="/pricing" className="text-green-700 hover:underline">Full pricing data</Link> | <Link href="/tools/spray-cost-calculator" className="text-green-700 hover:underline">spray cost calculator</Link>.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">How to get your first 500 acres</h2>
           <p>
-            <strong>Direct outreach</strong> (highest conversion): call local farmers you know. Ask if they hire aerial applicators for corn fungicide or cover crop seeding. Offer to do their first 40 to 80 acres at a competitive rate so they can see the results. Word of mouth from satisfied customers is the number-one growth driver. <strong>Crop consultant partnerships:</strong> local agronomists and crop consultants recommend spray applicators to their farmer clients. Build relationships with 2 to 3 consultants who cover your target geography. <strong>State extension events:</strong> attend county farm bureau meetings, state extension field days, and crop production conferences. Bring your drone. Live demonstrations convert skeptics faster than any brochure. <strong>NRCS field office partnerships:</strong> your local NRCS office administers EQIP cost-share for cover crop seeding and refers farmers to applicators; get on their referral list. <strong>List your business</strong> on this directory: <Link href="/list-your-business" className="text-green-700 hover:underline">list your business for free</Link> to reach farmers actively searching for drone operators in your state. What does NOT work well: cold calling, Facebook ads to farmers (low conversion), printed flyers, and bidding on large acreage before you have the throughput to deliver.
+            <strong>Direct outreach</strong> (highest conversion): call local farmers you know. Ask if they hire aerial applicators for corn fungicide or cover crop seeding. Offer to do their first 40 to 80 acres at a competitive rate so they can see the results. Word of mouth from satisfied customers is the number-one growth driver. <strong>Crop consultant partnerships:</strong> local agronomists and crop consultants recommend spray applicators to their farmer clients. Build relationships with 2 to 3 consultants who cover your target geography. <strong>State extension events:</strong> attend county farm bureau meetings, state extension field days and crop production conferences. Bring your drone. Live demonstrations convert skeptics faster than any brochure. <strong>NRCS field office partnerships:</strong> your local NRCS office administers EQIP cost-share for cover crop seeding and refers farmers to applicators; get on their referral list. <strong>List your business</strong> on this directory: <Link href="/list-your-business" className="text-green-700 hover:underline">list your business for free</Link> to reach farmers actively searching for drone operators in your state. What does NOT work well: cold calling, Facebook ads to farmers (low conversion), printed flyers and bidding on large acreage before you have the throughput to deliver.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">What your first spray season looks like</h2>

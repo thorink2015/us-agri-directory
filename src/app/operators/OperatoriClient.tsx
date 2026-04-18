@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Search, Filter, X, ChevronDown, ChevronUp, SlidersHorizontal, ArrowUpDown } from 'lucide-react';
 import { Operator, SERVICE_LABELS, ServiceType } from '@/data/types';
 import { County } from '@/data/types';
@@ -42,6 +42,10 @@ export default function OperatoriClient({ operators, counties }: Props) {
 
   // Sort
   const [sortBy, setSortBy] = useState<SortOption>('default');
+
+  // Pagination
+  const PAGE_SIZE = 20;
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filtered = useMemo(() => {
     let result = operators.filter((op) => {
@@ -98,6 +102,14 @@ export default function OperatoriClient({ operators, counties }: Props) {
     selectedDrone, priceMin, priceMax, sortBy,
   ]);
 
+  // Reset pagination when filters/sort change
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [search, selectedCounty, selectedService, priceMin, priceMax, selectedDrone, verifiedOnly, featuredOnly, certPart107, certPart137, ndaaOnly, sortBy]);
+
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+
   const hasBasicFilters = !!(search || selectedCounty || selectedService);
   const hasAdvancedFilters = !!(priceMin || priceMax || selectedDrone || verifiedOnly || featuredOnly || certPart107 || certPart137 || ndaaOnly);
   const hasFilters = hasBasicFilters || hasAdvancedFilters;
@@ -141,7 +153,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
         <div className="flex flex-wrap gap-3">
           {/* Search */}
           <div className="relative flex-1 min-w-[200px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
             <input
               type="text"
               placeholder="Search by name, city..."
@@ -180,7 +192,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
 
           {/* Sort */}
           <div className="relative">
-            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
@@ -386,10 +398,21 @@ export default function OperatoriClient({ operators, counties }: Props) {
           )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((op) => (
+            {visible.map((op) => (
               <OperatorCard key={op.slug} operator={op} />
             ))}
           </div>
+
+          {hasMore && (
+            <div className="text-center mt-8">
+              <button
+                onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}
+                className="px-6 py-3 bg-green-700 text-white text-sm font-medium rounded-lg hover:bg-green-800 transition-colors"
+              >
+                Load more ({filtered.length - visibleCount} remaining)
+              </button>
+            </div>
+          )}
         </>
       ) : (
         <div className="text-center py-20 bg-white rounded-xl border border-gray-200">

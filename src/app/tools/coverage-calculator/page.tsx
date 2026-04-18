@@ -13,7 +13,7 @@ const FAQS = [
   {
     question: 'Why does field shape affect spray time?',
     answer:
-      'Irregular and narrow fields require more turns, slower flight lines, and more overlap at edges. A square 160-acre field sprays 15 to 25 percent faster than the same acreage in an L-shaped or strip configuration.',
+      'Irregular and narrow fields require more turns, slower flight lines and more overlap at edges. A square 160-acre field sprays 15 to 25 percent faster than the same acreage in an L-shaped or strip configuration.',
   },
   {
     question: 'How many batteries do I need to spray all day?',
@@ -30,14 +30,14 @@ const FAQS = [
 export const metadata: Metadata = {
   title: 'Drone Coverage Time Calculator: Spray Job Estimator',
   description:
-    'How long to drone-spray your fields? Enter acres, drone model, and application rate. Includes battery swaps, refills, and single-day feasibility.',
+    'How long to drone-spray your fields? Enter acres, drone model and application rate. Includes battery swaps, refills and single-day feasibility.',
   alternates: { canonical: '/tools/coverage-calculator' },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     siteName: 'US Ag Drone Directory',
     title: 'How Long Will It Take to Spray Your Fields?',
-    description: 'Estimate drone spray job time including tank refills, battery swaps, and field shape adjustments for 7 drone models.',
+    description: 'Estimate drone spray job time including tank refills, battery swaps and field shape adjustments for 7 drone models.',
     url: `${SITE.domain}/tools/coverage-calculator`,
     images: [
       {
@@ -58,7 +58,7 @@ export default function CoverageCalculatorPage() {
     applicationCategory: 'Agriculture',
     operatingSystem: 'Web',
     description:
-      'Estimate drone spray job duration by acreage, drone model, application rate, field shape, and fleet size. Includes battery swaps, tank refills, and single-day feasibility.',
+      'Estimate drone spray job duration by acreage, drone model, application rate, field shape and fleet size. Includes battery swaps, tank refills and single-day feasibility.',
     url: `${SITE.domain}/tools/coverage-calculator`,
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     author: { '@id': AUTHOR.personId },
@@ -119,7 +119,7 @@ export default function CoverageCalculatorPage() {
         {/* AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            A single DJI Agras T50 covers 40 to 60 acres per flight hour at 2 to 5 gallons per acre, treating 300 to 600 acres per day. This calculator estimates total spray time including tank refills, battery swaps, and field shape adjustments for 7 drone models.
+            A single DJI Agras T50 covers 40 to 60 acres per flight hour at 2 to 5 gallons per acre, treating 300 to 600 acres per day. This calculator estimates total spray time including tank refills, battery swaps and field shape adjustments for 7 drone models.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export default function CoverageCalculatorPage() {
         <section className="mt-10 space-y-4">
           <h2 className="text-xl font-bold text-gray-900">How this works</h2>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Coverage rates are based on manufacturer specifications adjusted for real-world efficiency using field shape turn penalties: 5% for rectangular fields, 12% for irregular or L-shaped, and 20% for narrow strips or pivot corners. Battery times and refill windows reflect experienced operators with a two-person ground crew. Solo operators add 15 to 25% to total job time.
+            Coverage rates are based on manufacturer specifications adjusted for real-world efficiency using field shape turn penalties: 5% for rectangular fields, 12% for irregular or L-shaped and 20% for narrow strips or pivot corners. Battery times and refill windows reflect experienced operators with a two-person ground crew. Solo operators add 15 to 25% to total job time.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed">
             Conditions not in the calculator also affect job time. Winds above 10 mph require slower speeds and tighter spray parameters, reducing effective coverage by 15 to 30%. High temperatures (above 90°F) reduce battery life by 10 to 20%. Early morning starts (5:30 to 7:00 AM) improve both battery performance and spray efficacy.

@@ -9,7 +9,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         200 to 500 acres. $3,000 to $7,500 gross revenue at $15/acre average. This does NOT cover
         your $35,000 to $55,000 equipment investment. Year 1 is proof-of-concept: prove you can do
-        the work, build 5 to 10 customer relationships, and learn your local market. If you are
+        the work, build 5 to 10 customer relationships and learn your local market. If you are
         still deciding on the platform, read the{' '}
         <Link href="/buyers-guide">drone buyers guide</Link> first.
       </p>
@@ -300,7 +300,7 @@ export const blogContent: Record<string, ReactNode> = {
       <h2>Who IS affected</h2>
       <p>
         Federal agencies. State agencies using federal funds. University researchers on federal
-        grants. Operators bidding USDA, NRCS, or state-funded spray contracts. If you receive
+        grants. Operators bidding USDA, NRCS or state-funded spray contracts. If you receive
         federal money for the work, NDAA compliance may be required.
       </p>
 
@@ -570,7 +570,7 @@ export const blogContent: Record<string, ReactNode> = {
       <h2>Wind</h2>
       <p>
         This is the sleeper spec. T50: rated 13.4 mph (6 m/s). AG-272: rated 25 mph sustained, 40
-        mph gust. In Kansas, Oklahoma, Nebraska, and the Dakotas, daily wind exceeds 13.4 mph most
+        mph gust. In Kansas, Oklahoma, Nebraska and the Dakotas, daily wind exceeds 13.4 mph most
         afternoons from March through October. T50 operators spray at dawn. AG-272 operators spray
         all day.
       </p>
@@ -638,7 +638,7 @@ export const blogContent: Record<string, ReactNode> = {
       <h2>Why drones for cover crops</h2>
       <p>
         The math is simple: drone seeding into standing corn and soybeans in late August or September
-        gives cereal rye, clover, and ryegrass 3 to 4 extra weeks of establishment compared to
+        gives cereal rye, clover and ryegrass 3 to 4 extra weeks of establishment compared to
         waiting for harvest and then drilling. That extra time is the difference between a full
         stand by November and a patchy stand that overwinters poorly.
       </p>
@@ -744,7 +744,7 @@ export const blogContent: Record<string, ReactNode> = {
       <h2>Step 1: Get Part 107 first</h2>
       <p>
         Part 137 application references your Part 107. Get the pilot cert before submitting anything
-        else. Budget 2 to 4 weeks to study, take the exam, and receive the temporary certificate.
+        else. Budget 2 to 4 weeks to study, take the exam and receive the temporary certificate.
         Study plans and provider list live on our{' '}
         <Link href="/training-and-certification">training and certification</Link> page.
       </p>
@@ -769,7 +769,7 @@ export const blogContent: Record<string, ReactNode> = {
       <h2>Step 3: File the 44807 exemption petition (if drone exceeds 55 lbs)</h2>
       <p>
         Most commercial spray drones (DJI Agras T50 at 203 lbs MTOW, Hylio AG-272 at 399 lbs) exceed
-        55 lbs loaded. The petition describes the drone, operational limitations, and safety
+        55 lbs loaded. The petition describes the drone, operational limitations and safety
         mitigations. It is filed as part of the Part 137 package.
       </p>
 
@@ -849,7 +849,7 @@ export const blogContent: Record<string, ReactNode> = {
       <p>
         Beck&apos;s Practical Farm Research (IA, IN, IL): drone at 2 to 3 gpa matched ground at 15 to
         20 gpa, 5 to 8 bu/acre average yield response. Iowa State and Purdue Extension confirm for tar
-        spot, gray leaf spot, and southern rust. High-pressure tar spot years: 15 to 25 bu/acre
+        spot, gray leaf spot and southern rust. High-pressure tar spot years: 15 to 25 bu/acre
         response. Low-pressure years: 2 to 4 bu/acre. The ROI math works at any disease pressure above
         3 bu/acre response at $5/bu corn.
       </p>

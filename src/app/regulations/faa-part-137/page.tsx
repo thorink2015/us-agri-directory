@@ -28,14 +28,14 @@ const FAQS = [
   {
     question: 'Should I hire a consultant for Part 137?',
     answer:
-      'If you have no previous aviation certification experience, yes. Consultant packages ($2,500 to $4,500) include operations manual drafting, 44807 petition, and coaching through approval. DIY attempts average 30 to 90 days longer due to revision cycles.',
+      'If you have no previous aviation certification experience, yes. Consultant packages ($2,500 to $4,500) include operations manual drafting, 44807 petition and coaching through approval. DIY attempts average 30 to 90 days longer due to revision cycles.',
   },
 ];
 
 export const metadata: Metadata = {
   title: 'FAA Part 137 for Drone Spraying: Ag Aircraft Guide',
   description:
-    'How to get FAA Part 137 and Section 44807 exemption for agricultural drone spraying. Timeline, operations manual, and what it covers.',
+    'How to get FAA Part 137 and Section 44807 exemption for agricultural drone spraying. Timeline, operations manual and what it covers.',
   alternates: { canonical: '/regulations/faa-part-137' },
   openGraph: {
     type: 'website',
@@ -116,17 +116,17 @@ export default function FaaPart137Page() {
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">What Part 137 is</h2>
           <p>
-            14 CFR Part 137 is the agricultural aircraft operator certificate, originally written for manned aircraft (crop dusters and helicopters) and later interpreted by FAA to cover small unmanned aircraft systems (sUAS). Any person or business conducting aerial application of economic poison, seed, or other agricultural substance for hire or for their own agricultural operation must hold a Part 137 certificate. The certificate is issued by the local FAA Flight Standards District Office (FSDO) after review of the operations manual, training records, and any applicable exemption petitions.
+            14 CFR Part 137 is the agricultural aircraft operator certificate, originally written for manned aircraft (crop dusters and helicopters) and later interpreted by FAA to cover small unmanned aircraft systems (sUAS). Any person or business conducting aerial application of economic poison, seed or other agricultural substance for hire or for their own agricultural operation must hold a Part 137 certificate. The certificate is issued by the local FAA Flight Standards District Office (FSDO) after review of the operations manual, training records and any applicable exemption petitions.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Part 137 commercial vs. private</h2>
           <p>
-            FAA distinguishes commercial operators (spraying for hire or custom application work) from private operators (a farmer spraying only their own crops on land they own, lease, or rent). Private operators are eligible for a simplified Part 137 with reduced recordkeeping and no commercial-fleet airworthiness requirements. Commercial operators have the full Part 137 obligations including operations manual, crew training documentation, and maintenance records. The commercial certificate is the correct path for any operator who charges customers or sprays for neighbors.
+            FAA distinguishes commercial operators (spraying for hire or custom application work) from private operators (a farmer spraying only their own crops on land they own, lease or rent). Private operators are eligible for a simplified Part 137 with reduced recordkeeping and no commercial-fleet airworthiness requirements. Commercial operators have the full Part 137 obligations including operations manual, crew training documentation and maintenance records. The commercial certificate is the correct path for any operator who charges customers or sprays for neighbors.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">The Section 44807 exemption</h2>
           <p>
-            Section 44807 of the FAA Reauthorization Act allows FAA to grant exemptions for unmanned aircraft that fall outside standard Part 107 rules. Drones over 55 lbs and commercial spray operations with sUAS require a 44807 exemption as part of the Part 137 package. The exemption petition documents the specific aircraft, operations manual compliance, pilot training, and maintenance program. Most ag drones (DJI Agras T50 at 90+ lbs loaded, Hylio AG-272 at 140 lbs loaded, DJI T100 at 220 lbs loaded) cross the 55 lb threshold and therefore require 44807.
+            Section 44807 of the FAA Reauthorization Act allows FAA to grant exemptions for unmanned aircraft that fall outside standard Part 107 rules. Drones over 55 lbs and commercial spray operations with sUAS require a 44807 exemption as part of the Part 137 package. The exemption petition documents the specific aircraft, operations manual compliance, pilot training and maintenance program. Most ag drones (DJI Agras T50 at 90+ lbs loaded, Hylio AG-272 at 140 lbs loaded, DJI T100 at 220 lbs loaded) cross the 55 lb threshold and therefore require 44807.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">How to get Part 137</h2>
@@ -136,7 +136,7 @@ export default function FaaPart137Page() {
 
           <h2 className="text-xl font-bold text-gray-900">What the operations manual must include</h2>
           <p>
-            FAA requires the operations manual to cover: (1) crew training program and recurrent training schedule; (2) aircraft maintenance program with inspection intervals and service bulletins; (3) chemical handling and personal protective equipment procedures; (4) emergency procedures including lost-link, fly-away, and medical emergencies; (5) recordkeeping for flights, maintenance, chemical applications, and incident reports; (6) congested area operations plan if applicable; (7) weather minimums specific to sUAS; (8) crew fitness and duty time limits. Manuals typically run 60 to 120 pages. Templates are available from consultants and from FAA Advisory Circular AC 137-1 (manned operations, adapted for sUAS).
+            FAA requires the operations manual to cover: (1) crew training program and recurrent training schedule; (2) aircraft maintenance program with inspection intervals and service bulletins; (3) chemical handling and personal protective equipment procedures; (4) emergency procedures including lost-link, fly-away and medical emergencies; (5) recordkeeping for flights, maintenance, chemical applications and incident reports; (6) congested area operations plan if applicable; (7) weather minimums specific to sUAS; (8) crew fitness and duty time limits. Manuals typically run 60 to 120 pages. Templates are available from consultants and from FAA Advisory Circular AC 137-1 (manned operations, adapted for sUAS).
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Common mistakes that delay approval</h2>
