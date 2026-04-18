@@ -1,5 +1,6 @@
 import { Operator } from '@/data/types';
 import { SITE } from '@/data/author';
+import { counties as countiesData } from '@/data/counties';
 import { getStateAbbr } from '@/lib/utils';
 
 interface Props {
@@ -8,41 +9,57 @@ interface Props {
 
 const FALLBACK_IMAGE = `${SITE.domain}/og-image.png`;
 
+const stateNameMap: Record<string, string> = Object.fromEntries(
+  countiesData.map((c) => [c.slug, c.name]),
+);
+
 export default function OperatorSchema({ operator }: Props) {
   const addressRegion = getStateAbbr(operator.counties);
-  const schema = {
+  const canonicalUrl = `${SITE.domain}/operators/${operator.slug}`;
+  const socialLinks = [
+    operator.website,
+    operator.facebook,
+    operator.instagram,
+    operator.linkedin,
+    operator.youtube,
+    operator.tiktok,
+  ].filter((u): u is string => Boolean(u));
+
+  const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
+    '@id': canonicalUrl,
     name: operator.name,
     description: operator.description,
-    url: operator.website,
-    telephone: operator.phone,
-    email: operator.email,
+    url: canonicalUrl,
     image: FALLBACK_IMAGE,
     address: {
       '@type': 'PostalAddress',
       ...(operator.address ? { streetAddress: operator.address } : {}),
-      addressLocality: operator.city,
+      addressLocality: operator.city || 'United States',
       addressRegion,
       addressCountry: 'US',
     },
-    geo: operator.lat && operator.lng
-      ? {
-          '@type': 'GeoCoordinates',
-          latitude: operator.lat,
-          longitude: operator.lng,
-        }
-      : undefined,
     areaServed: operator.counties.map((c) => ({
-      '@type': 'AdministrativeArea',
-      name: c,
+      '@type': 'State',
+      name: stateNameMap[c] || c,
     })),
-    sameAs: [operator.website, operator.facebook].filter(Boolean),
     priceRange: operator.priceMinUsd
-      ? `$${operator.priceMinUsd} to ${operator.priceMaxUsd || operator.priceMinUsd}/acre`
-      : undefined,
-    foundingDate: operator.founded?.toString(),
+      ? `$${operator.priceMinUsd}-$${operator.priceMaxUsd || operator.priceMinUsd}`
+      : '$$',
   };
+
+  if (operator.phone) schema.telephone = operator.phone;
+  if (operator.email) schema.email = operator.email;
+  if (operator.lat && operator.lng) {
+    schema.geo = {
+      '@type': 'GeoCoordinates',
+      latitude: operator.lat,
+      longitude: operator.lng,
+    };
+  }
+  if (socialLinks.length > 0) schema.sameAs = socialLinks;
+  if (operator.founded) schema.foundingDate = operator.founded.toString();
 
   return (
     <script
