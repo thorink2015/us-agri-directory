@@ -18,7 +18,7 @@ const FAQS = [
   {
     question: 'Is it worth waiting for tariffs to change before buying DJI?',
     answer:
-      'Unpredictable. Tariffs could increase further, decrease, or stay flat. If you need the drone now, buy now and factor current pricing into your ROI calculation. Waiting typically costs you a spray season of revenue.',
+      'Unpredictable. Tariffs could increase further, decrease or stay flat. If you need the drone now, buy now and factor current pricing into your ROI calculation. Waiting typically costs you a spray season of revenue.',
   },
   {
     question: 'Can I start with a T25 and upgrade later?',
@@ -28,7 +28,7 @@ const FAQS = [
   {
     question: 'Should I buy new or used?',
     answer:
-      'New for your primary spray drone (warranty, latest firmware, dealer support). Used can work for a backup or second fleet drone if you can verify flight hours, battery cycles, and maintenance history. DJI T40s are available used at significant discounts since the T50 superseded them.',
+      'New for your primary spray drone (warranty, latest firmware, dealer support). Used can work for a backup or second fleet drone if you can verify flight hours, battery cycles and maintenance history. DJI T40s are available used at significant discounts since the T50 superseded them.',
   },
   {
     question: 'How many batteries do I really need?',
@@ -59,13 +59,13 @@ const ACCESSORIES = [
 export const metadata: Metadata = {
   title: "Best Agricultural Spray Drones: 2026 Buyer's Guide",
   description:
-    'Compare DJI T50, T100, Hylio AG-272, XAG P100 Pro, and Talos T60X. Specs, pricing, NDAA status, and which drone fits your operation.',
+    'Compare DJI T50, T100, Hylio AG-272, XAG P100 Pro and Talos T60X. Specs, pricing, NDAA status and which drone fits your operation.',
   alternates: { canonical: '/buyers-guide' },
   openGraph: {
     type: 'website',
     title: "2026 Agricultural Spray Drone Buyer's Guide",
     description:
-      'DJI Agras T50 ($22K-$28K post-tariff), Hylio AG-272 ($55K-$75K NDAA), DJI T100, XAG P100 Pro, and Talos T60X side by side. Which drone fits your operation.',
+      'DJI Agras T50 ($22K-$28K post-tariff), Hylio AG-272 ($55K-$75K NDAA), DJI T100, XAG P100 Pro and Talos T60X side by side. Which drone fits your operation.',
     url: `${SITE.domain}/buyers-guide`,
   },
 };
@@ -209,12 +209,12 @@ export default function BuyersGuidePage() {
 
           <h2 className="text-xl font-bold text-gray-900">NDAA compliance explained</h2>
           <p>
-            NDAA restricts federal agency procurement of drones from designated foreign manufacturers (DJI, XAG). Private farm contracts are NOT affected. Operators who bid federal, state, or university-funded work need NDAA-compliant hardware. The DoD Blue UAS list includes Hylio, Skydio, and Parrot. The Countering CCP Drones Act was excluded from FY2025 NDAA but remains active in future legislative cycles. Full detail on the <Link href="/regulations/ndaa-compliance" className="text-green-700 hover:underline">NDAA compliance page</Link>.
+            NDAA restricts federal agency procurement of drones from designated foreign manufacturers (DJI, XAG). Private farm contracts are NOT affected. Operators who bid federal, state or university-funded work need NDAA-compliant hardware. The DoD Blue UAS list includes Hylio, Skydio and Parrot. The Countering CCP Drones Act was excluded from FY2025 NDAA but remains active in future legislative cycles. Full detail on the <Link href="/regulations/ndaa-compliance" className="text-green-700 hover:underline">NDAA compliance page</Link>.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Financing options</h2>
           <p>
-            Manufacturer financing programs, farm credit associations, and USDA FSA Farm Loan Programs offer 2 to 7 year terms at 6 to 9 percent with 10 to 25 percent down. USDA EQIP Practice Code 595 cost-share (40 to 90 percent) can offset the purchase price. See <Link href="/grants-and-subsidies" className="text-green-700 hover:underline">grants and cost-share</Link> for application details. Use our <Link href="/tools/roi-calculator" className="text-green-700 hover:underline">ROI calculator</Link> to model ownership cost at your expected annual acreage.
+            Manufacturer financing programs, farm credit associations and USDA FSA Farm Loan Programs offer 2 to 7 year terms at 6 to 9 percent with 10 to 25 percent down. USDA EQIP Practice Code 595 cost-share (40 to 90 percent) can offset the purchase price. See <Link href="/grants-and-subsidies" className="text-green-700 hover:underline">grants and cost-share</Link> for application details. Use our <Link href="/tools/roi-calculator" className="text-green-700 hover:underline">ROI calculator</Link> to model ownership cost at your expected annual acreage.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">What to buy with the drone</h2>

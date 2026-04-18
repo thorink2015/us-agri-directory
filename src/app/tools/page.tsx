@@ -8,13 +8,13 @@ import { AUTHOR, SITE } from '@/data/author';
 export const metadata: Metadata = {
   title: 'Free Agricultural Drone Tools & Calculators',
   description:
-    'Six free tools for farmers and drone operators. Calculate spray costs, compare drones, estimate coverage time, plan treatment timing, and more.',
+    'Six free tools for farmers and drone operators. Calculate spray costs, compare drones, estimate coverage time, plan treatment timing and more.',
   alternates: { canonical: '/tools' },
   openGraph: {
     type: 'website',
     title: 'Free Agricultural Drone Tools & Calculators',
     description:
-      'Six free calculators covering spray cost estimation, buy vs hire ROI, field coverage time, acreage conversion, drone comparison, and seasonal treatment planning.',
+      'Six free calculators covering spray cost estimation, buy vs hire ROI, field coverage time, acreage conversion, drone comparison and seasonal treatment planning.',
     url: `${SITE.domain}/tools`,
   },
 };
@@ -28,7 +28,7 @@ const FAQS = [
   {
     question: 'Where does the data come from?',
     answer:
-      'Pricing data from the 2026 Iowa State Extension Custom Rate Survey, University of Missouri Extension G1274, and regional operator data. Drone specs from manufacturer sites (DJI, Hylio, XAG, Talos, Pyka). Treatment timing from university extension trial data (Iowa State, Purdue, Kansas State, University of Arkansas, UC Davis).',
+      'Pricing data from the 2026 Iowa State Extension Custom Rate Survey, University of Missouri Extension G1274 and regional operator data. Drone specs from manufacturer sites (DJI, Hylio, XAG, Talos, Pyka). Treatment timing from university extension trial data (Iowa State, Purdue, Kansas State, University of Arkansas, UC Davis).',
   },
   {
     question: 'Can I use these tools on my phone?',
@@ -41,7 +41,7 @@ const tools = [
   {
     slug: 'spray-cost-calculator',
     name: 'Spray Cost Calculator',
-    description: 'Estimate per-acre drone spraying cost by crop, state, and number of passes. Uses 2026 Iowa State Extension data.',
+    description: 'Estimate per-acre drone spraying cost by crop, state and number of passes. Uses 2026 Iowa State Extension data.',
     icon: Calculator,
     color: 'green',
     badge: 'Most popular',
@@ -57,7 +57,7 @@ const tools = [
   {
     slug: 'coverage-calculator',
     name: 'Coverage Time Estimator',
-    description: 'How long to spray your fields? Includes battery swaps, refill stops, and single-day feasibility for 7 drone models.',
+    description: 'How long to spray your fields? Includes battery swaps, refill stops and single-day feasibility for 7 drone models.',
     icon: Clock,
     color: 'orange',
     badge: null,
@@ -65,7 +65,7 @@ const tools = [
   {
     slug: 'acreage-converter',
     name: 'Acreage Converter',
-    description: 'Convert between acres, hectares, square feet, square meters, and sections instantly. Built for US agricultural work.',
+    description: 'Convert between acres, hectares, square feet, square meters and sections instantly. Built for US agricultural work.',
     icon: Ruler,
     color: 'blue',
     badge: null,
@@ -73,7 +73,7 @@ const tools = [
   {
     slug: 'drone-comparison',
     name: 'Drone Comparison Tool',
-    description: 'Compare DJI Agras, Hylio AG-272, XAG P100 Pro, and Talos T60X specs, pricing, and NDAA status side by side.',
+    description: 'Compare DJI Agras, Hylio AG-272, XAG P100 Pro and Talos T60X specs, pricing and NDAA status side by side.',
     icon: Zap,
     color: 'yellow',
     badge: null,
@@ -112,7 +112,7 @@ export default function ToolsHubPage() {
     '@type': 'ItemList',
     name: 'Free Agricultural Drone Tools and Calculators',
     description:
-      'Six free calculators for agricultural drone planning: spray cost estimation, buy vs hire ROI analysis, coverage time, acreage conversion, drone comparison, and seasonal treatment calendar.',
+      'Six free calculators for agricultural drone planning: spray cost estimation, buy vs hire ROI analysis, coverage time, acreage conversion, drone comparison and seasonal treatment calendar.',
     url: `${SITE.domain}/tools`,
     numberOfItems: 6,
     itemListElement: tools.map((t, i) => ({
@@ -139,7 +139,7 @@ export default function ToolsHubPage() {
     '@type': 'WebPage',
     name: 'Free Agricultural Drone Tools & Calculators',
     description:
-      'Six free calculators for agricultural drone planning covering spray cost, ROI, coverage time, acreage conversion, drone comparison, and treatment calendar.',
+      'Six free calculators for agricultural drone planning covering spray cost, ROI, coverage time, acreage conversion, drone comparison and treatment calendar.',
     url: `${SITE.domain}/tools`,
     author: { '@id': AUTHOR.personId },
     publisher: { '@id': AUTHOR.organizationId },
@@ -162,7 +162,7 @@ export default function ToolsHubPage() {
         {/* AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Six free calculators for agricultural drone planning: spray cost estimation using 2026 Iowa State Extension data, buy vs hire ROI analysis with USDA EQIP modeling, field coverage time estimation for 7 drone models, acreage unit conversion, side-by-side drone model comparison, and seasonal treatment calendar by crop and state.
+            Six free calculators for agricultural drone planning: spray cost estimation using 2026 Iowa State Extension data, buy vs hire ROI analysis with USDA EQIP modeling, field coverage time estimation for 7 drone models, acreage unit conversion, side-by-side drone model comparison and seasonal treatment calendar by crop and state.
           </p>
         </div>
 

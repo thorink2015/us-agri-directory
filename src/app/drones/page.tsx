@@ -21,7 +21,7 @@ export default function DronePage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Commercial Ag Spray Drones</h1>
         <p className="text-gray-600">
-          Compare the commercial spray drones used by operators in our directory. Specifications, pricing, and key features for each platform.
+          Compare the commercial spray drones used by operators in our directory. Specifications, pricing and key features for each platform.
         </p>
       </div>
 

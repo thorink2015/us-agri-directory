@@ -108,7 +108,7 @@ export default function DroneVsGroundRigPage() {
 
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Ground self-propelled sprayers cost $9.35 per acre (Iowa State 2026) versus $12 to $18 per acre for drone application. But ground rigs cause 3 to 6 bushels per acre of compaction and trampling loss on tall corn (University of Minnesota), cannot enter wet fields for days after rain, and top out at 6 to 8 feet of crop clearance. Drones eliminate all three limitations at a $3 to $9 per acre premium.
+            Ground self-propelled sprayers cost $9.35 per acre (Iowa State 2026) versus $12 to $18 per acre for drone application. But ground rigs cause 3 to 6 bushels per acre of compaction and trampling loss on tall corn (University of Minnesota), cannot enter wet fields for days after rain and top out at 6 to 8 feet of crop clearance. Drones eliminate all three limitations at a $3 to $9 per acre premium.
           </p>
         </div>
 
@@ -160,7 +160,7 @@ export default function DroneVsGroundRigPage() {
 
           <h2 className="text-xl font-bold text-gray-900">University research</h2>
           <p>
-            Beck&apos;s Practical Farm Research (IA, IN, IL): drone-applied fungicide at 2 to 3 gpa matched ground rig at 15 to 20 gpa with a 5 to 8 bushel per acre yield response. Iowa State Extension confirms equivalence at the lower carrier volume. Purdue Extension confirms equivalence for soybeans. The conclusion across all three programs: drone spray efficacy matches ground rigs when the nozzle, droplet size, and timing are correct per product label. Operators who fail in the field almost always fail on product labeling or calibration, not on platform choice.
+            Beck&apos;s Practical Farm Research (IA, IN, IL): drone-applied fungicide at 2 to 3 gpa matched ground rig at 15 to 20 gpa with a 5 to 8 bushel per acre yield response. Iowa State Extension confirms equivalence at the lower carrier volume. Purdue Extension confirms equivalence for soybeans. The conclusion across all three programs: drone spray efficacy matches ground rigs when the nozzle, droplet size and timing are correct per product label. Operators who fail in the field almost always fail on product labeling or calibration, not on platform choice.
           </p>
         </section>
 

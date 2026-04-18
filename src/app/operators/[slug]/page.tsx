@@ -288,7 +288,7 @@ export default function OperatorPage({ params }: Props) {
                   : <span className="text-xl">Contact for quote</span>}
               </div>
               {!operator.priceMinUsd && (
-                <p className="text-sm text-gray-500">Rates vary by crop, field size, and location</p>
+                <p className="text-sm text-gray-500">Rates vary by crop, field size and location</p>
               )}
               <p className="text-xs text-gray-500 mt-2">
                 * Chemical/product not included unless noted

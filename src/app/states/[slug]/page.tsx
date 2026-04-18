@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         type: 'website',
         title: `Agricultural Drone Spraying in ${rich.name} (2026)`,
-        description: `Licensing, rates, top crops, and verified operators for ${rich.name}. ${rich.rateRange} per acre.`,
+        description: `Licensing, rates, top crops and verified operators for ${rich.name}. ${rich.rateRange} per acre.`,
         url: `${SITE.domain}/states/${rich.slug}`,
       },
     };
@@ -290,7 +290,7 @@ function RichStatePage({ slug }: { slug: string }) {
               <div className="text-xs text-green-700 font-medium mb-0.5">Region</div>
               <div className="font-bold text-gray-900">{data.regionName}</div>
               <p className="text-sm text-gray-600 mt-1">
-                {data.name} is part of the {data.regionName} agricultural region. See rates, crops, and operators across the region.
+                {data.name} is part of the {data.regionName} agricultural region. See rates, crops and operators across the region.
               </p>
             </div>
             <Link
@@ -389,11 +389,11 @@ function FallbackStatePage({ slug }: { slug: string }) {
     },
     {
       question: `How much does drone spraying cost in ${state.name}?`,
-      answer: `Drone spraying rates in ${state.name} are in line with the national average of $12 to $18 per acre for application only. Rates vary based on field size, terrain, and crop type. Contact listed operators for exact quotes.`,
+      answer: `Drone spraying rates in ${state.name} are in line with the national average of $12 to $18 per acre for application only. Rates vary based on field size, terrain and crop type. Contact listed operators for exact quotes.`,
     },
     {
       question: `What crops are drone spraying used for in ${state.name}?`,
-      answer: `The main crops in ${state.name} that benefit from drone spraying include ${cropNames.join(', ')}. Drone application is especially valuable when fields are too wet for ground rigs, crops are too tall for tractor-mounted sprayers, or fields are small and irregular.`,
+      answer: `The main crops in ${state.name} that benefit from drone spraying include ${cropNames.join(', ')}. Drone application is especially valuable when fields are too wet for ground rigs, crops are too tall for tractor-mounted sprayers or fields are small and irregular.`,
     },
   ];
 

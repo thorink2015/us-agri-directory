@@ -15,12 +15,12 @@ const FAQS = [
   {
     question: 'How do you make money?',
     answer:
-      'Currently, the directory is not monetized. Future revenue may include premium operator listings, manufacturer partnerships, and educational resources. The directory will never charge farmers for access or take commissions on jobs.',
+      'Currently, the directory is not monetized. Future revenue may include premium operator listings, manufacturer partnerships and educational resources. The directory will never charge farmers for access or take commissions on jobs.',
   },
   {
     question: 'How often is information updated?',
     answer:
-      'Pricing data is reviewed quarterly, regulatory data is updated when rules change, and operator listings are continuously refreshed as new operators apply and existing ones update their information. Every content page displays a "last reviewed" date.',
+      'Pricing data is reviewed quarterly, regulatory data is updated when rules change and operator listings are continuously refreshed as new operators apply and existing ones update their information. Every content page displays a "last reviewed" date.',
   },
 ];
 
@@ -91,9 +91,9 @@ export default function AboutPage() {
           {SITE.name} is a single-author directory of {operators.length}+ agricultural drone operators
           across all 50 US states, founded and personally edited by {AUTHOR.firstName}. Every listing
           is independently reviewed against FAA Part 107 and Part 137 records, and every regulatory or
-          pricing page on this site cites primary sources from the FAA, EPA, USDA, or land-grant
+          pricing page on this site cites primary sources from the FAA, EPA, USDA or land-grant
           university extension. The directory exists to give US farmers one trusted place to find
-          verified ag drone operators, regulations, and pricing, without middlemen, commissions, or paywalls.
+          verified ag drone operators, regulations and pricing, without middlemen, commissions or paywalls.
         </p>
       </div>
 
@@ -111,13 +111,13 @@ export default function AboutPage() {
             I built {SITE.name} after spending years tracking the agricultural drone industry in
             European markets, where operator directories are more mature. The US market is larger and
             more fragmented, but the information problem is the same: farmers need a single trusted
-            place to find verified operators, compare pricing, and understand the FAA, EPA, and state
+            place to find verified operators, compare pricing and understand the FAA, EPA and state
             regulations that govern every application.
           </p>
           <p>
-            This site is free for operators to list, free for farmers to use, and will remain that way.
-            It is not a lead-generation marketplace, not an affiliate network, and not a software
-            vendor. It is a directory, researched, verified, and maintained by one person who cares
+            This site is free for operators to list, free for farmers to use and will remain that way.
+            It is not a lead-generation marketplace, not an affiliate network and not a software
+            vendor. It is a directory, researched, verified and maintained by one person who cares
             about getting the facts right.
           </p>
         </div>
@@ -180,7 +180,7 @@ export default function AboutPage() {
             <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
             <p>
               <strong>Pricing data.</strong> Per-acre rate ranges are compiled from operator surveys, public
-              quotes, USDA cost-of-production data, and direct interviews. Rates are reviewed each spray
+              quotes, USDA cost-of-production data and direct interviews. Rates are reviewed each spray
               season (spring and fall) and updated to reflect current market conditions.
             </p>
           </div>
@@ -218,14 +218,14 @@ export default function AboutPage() {
               <span>
                 This site is <strong>not legal advice</strong> and is not a law firm. FAA and EPA rules
                 change. State pesticide rules vary widely. Verify every regulatory requirement with the
-                FAA, EPA, and your state Department of Agriculture before operating commercially.
+                FAA, EPA and your state Department of Agriculture before operating commercially.
               </span>
             </li>
             <li className="flex gap-2">
               <span className="text-amber-600 flex-shrink-0">•</span>
               <span>
                 Operator listings are a good-faith review, not a guarantee. Always verify an
-                operator&apos;s current certifications, insurance, and references before hiring.
+                operator&apos;s current certifications, insurance and references before hiring.
               </span>
             </li>
           </ul>

@@ -30,7 +30,7 @@ const FAQS = [
 export const metadata: Metadata = {
   title: 'Buy vs Hire a Spray Drone: ROI Calculator',
   description:
-    'Compare owning a spray drone versus hiring a custom operator. Includes USDA EQIP cost-share, financing, and break-even acreage from MU Extension data.',
+    'Compare owning a spray drone versus hiring a custom operator. Includes USDA EQIP cost-share, financing and break-even acreage from MU Extension data.',
   alternates: { canonical: '/tools/roi-calculator' },
   openGraph: {
     type: 'website',
@@ -48,7 +48,7 @@ export default function ROICalculatorPage() {
     applicationCategory: 'Agriculture',
     operatingSystem: 'Web',
     description:
-      'Calculate break-even and annual ROI for buying an agricultural spray drone versus hiring an operator. Models USDA EQIP cost-share, financing, and variable acreage.',
+      'Calculate break-even and annual ROI for buying an agricultural spray drone versus hiring an operator. Models USDA EQIP cost-share, financing and variable acreage.',
     url: `${SITE.domain}/tools/roi-calculator`,
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     author: { '@id': AUTHOR.personId },
@@ -120,13 +120,13 @@ export default function ROICalculatorPage() {
         <section className="mt-10 space-y-4">
           <h2 className="text-xl font-bold text-gray-900">How the calculation works</h2>
           <p className="text-sm text-gray-700 leading-relaxed">
-            The calculator compares two annual cash flows: (1) what you currently pay operators to spray your fields, plus any revenue you could earn spraying for neighbors, minus (2) the full annual cost of owning and operating a spray drone. University of Missouri Extension G1274 provides the primary ownership cost framework, with annual operating costs modeled at $0.50/acre for battery wear, calibration, and consumables plus fixed costs for insurance ($1,200/year) and certifications ($400/year).
+            The calculator compares two annual cash flows: (1) what you currently pay operators to spray your fields, plus any revenue you could earn spraying for neighbors, minus (2) the full annual cost of owning and operating a spray drone. University of Missouri Extension G1274 provides the primary ownership cost framework, with annual operating costs modeled at $0.50/acre for battery wear, calibration and consumables plus fixed costs for insurance ($1,200/year) and certifications ($400/year).
           </p>
           <p className="text-sm text-gray-700 leading-relaxed">
             USDA EQIP Practice Code 595 (Precision Land Management) can cover 40 to 90 percent of drone purchase cost for eligible farmers, dramatically changing the break-even threshold. Funded operators report effective purchase costs as low as $4,000 to $8,000 for a T50-class drone after EQIP payments. Contact your local NRCS office to check current payment rates for your state.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed">
-            The break-even acreage cited in MU Extension G1274 assumes $16/acre custom hire rate, a $20,000 drone (T50-class), 3-year financing at 7% APR, and no EQIP cost-share. At the 2026 hire rate compression to $12 to $14/acre, break-even shifts upward toward 1,100 to 1,300 acres unless offset by EQIP.
+            The break-even acreage cited in MU Extension G1274 assumes $16/acre custom hire rate, a $20,000 drone (T50-class), 3-year financing at 7% APR and no EQIP cost-share. At the 2026 hire rate compression to $12 to $14/acre, break-even shifts upward toward 1,100 to 1,300 acres unless offset by EQIP.
           </p>
           <div className="flex flex-wrap gap-3 mt-2">
             <Link href="/pricing" className="text-green-700 text-sm font-medium hover:underline">

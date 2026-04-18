@@ -13,7 +13,7 @@ const FAQS = [
   {
     question: 'How accurate is this calculator?',
     answer:
-      'It uses 2026 university extension benchmarks and regional operator data. Actual quotes vary by field layout, distance from operator base, field accessibility, and time of season. Use this as a starting range, then contact operators for firm quotes.',
+      'It uses 2026 university extension benchmarks and regional operator data. Actual quotes vary by field layout, distance from operator base, field accessibility and time of season. Use this as a starting range, then contact operators for firm quotes.',
   },
   {
     question: 'Does this include the cost of the chemical product?',
@@ -23,19 +23,19 @@ const FAQS = [
   {
     question: 'Why does California cost so much more than Iowa?',
     answer:
-      'Terrain complexity (steep vineyard slopes, dense orchard canopy), CDPR regulatory overhead, and 8 to 12 spray passes per season versus 1 to 2 for Midwest row crops.',
+      'Terrain complexity (steep vineyard slopes, dense orchard canopy), CDPR regulatory overhead and 8 to 12 spray passes per season versus 1 to 2 for Midwest row crops.',
   },
 ];
 
 export const metadata: Metadata = {
   title: 'Drone Spraying Cost Calculator: 2026 Rates',
   description:
-    'Estimate your drone spraying cost per acre. Enter acres, crop, and state for a 2026 rate estimate based on Iowa State Extension and regional operator data.',
+    'Estimate your drone spraying cost per acre. Enter acres, crop and state for a 2026 rate estimate based on Iowa State Extension and regional operator data.',
   alternates: { canonical: '/tools/spray-cost-calculator' },
   openGraph: {
     type: 'website',
     title: 'How Much Will Drone Spraying Cost on Your Farm?',
-    description: 'Instant estimate by crop, state, and number of passes. Based on 2026 Iowa State Extension data.',
+    description: 'Instant estimate by crop, state and number of passes. Based on 2026 Iowa State Extension data.',
     url: `${SITE.domain}/tools/spray-cost-calculator`,
   },
 };
@@ -48,7 +48,7 @@ export default function SprayCostPage() {
     applicationCategory: 'Agriculture',
     operatingSystem: 'Web',
     description:
-      'Estimate drone crop spraying cost per acre by crop type, state, and number of passes. Uses 2026 Iowa State Custom Rate Survey data with regional adjustments.',
+      'Estimate drone crop spraying cost per acre by crop type, state and number of passes. Uses 2026 Iowa State Custom Rate Survey data with regional adjustments.',
     url: `${SITE.domain}/tools/spray-cost-calculator`,
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     author: { '@id': AUTHOR.personId },
@@ -109,7 +109,7 @@ export default function SprayCostPage() {
         {/* AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Drone crop spraying costs $12 to $35 per acre in 2026 depending on crop, region, and terrain. This calculator uses the 2026 Iowa State Custom Rate Survey benchmark of $12.50 per acre average plus regional and crop-specific adjustments from university extension data. Enter your acres, crop, and state for an instant estimate.
+            Drone crop spraying costs $12 to $35 per acre in 2026 depending on crop, region and terrain. This calculator uses the 2026 Iowa State Custom Rate Survey benchmark of $12.50 per acre average plus regional and crop-specific adjustments from university extension data. Enter your acres, crop and state for an instant estimate.
           </p>
         </div>
 
@@ -120,7 +120,7 @@ export default function SprayCostPage() {
         <section className="mt-10 space-y-4">
           <h2 className="text-xl font-bold text-gray-900">How we calculated this</h2>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Rates are based on the 2026 Iowa State Custom Rate Survey ($12.50/acre average, $8 to $16 range) with crop-specific adjustments from University of Missouri Extension G1274, Indiana Prairie Farmer operator data, and regional pricing analysis. The Corn Belt (IA, IL, IN, OH, MO, MI, WI, MN) is the baseline market, the most competitive with the highest operator density. Regional multipliers (0.95× for Great Plains, 1.4× for California) reflect differences in operator supply, terrain complexity, field size, and regulatory overhead.
+            Rates are based on the 2026 Iowa State Custom Rate Survey ($12.50/acre average, $8 to $16 range) with crop-specific adjustments from University of Missouri Extension G1274, Indiana Prairie Farmer operator data and regional pricing analysis. The Corn Belt (IA, IL, IN, OH, MO, MI, WI, MN) is the baseline market, the most competitive with the highest operator density. Regional multipliers (0.95× for Great Plains, 1.4× for California) reflect differences in operator supply, terrain complexity, field size and regulatory overhead.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed">
             Vineyard and orchard rates reflect UC Davis and Washington State University extension data on specialty crop application requirements. The chemical cost estimates when &ldquo;Operator supplies&rdquo; is selected are midpoints from commodity pricing ranges by product category. Calculator provides estimates only, contact operators directly for actual quotes.

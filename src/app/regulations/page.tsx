@@ -18,7 +18,7 @@ const FAQS = [
   {
     question: 'Is drone crop spraying legal in all 50 states?',
     answer:
-      'Yes. Every state has a pathway for licensed commercial drone pesticide application. The specific aerial category, exam requirements, fees, and unique rules vary significantly by state.',
+      'Yes. Every state has a pathway for licensed commercial drone pesticide application. The specific aerial category, exam requirements, fees and unique rules vary significantly by state.',
   },
   {
     question: 'Which agency do I contact first?',
@@ -61,13 +61,13 @@ const SUBPAGES = [
 export const metadata: Metadata = {
   title: 'Drone Spraying Regulations: FAA, State & Federal 2026',
   description:
-    'Complete guide to FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance for agricultural drone operators in 2026.',
+    'Complete guide to FAA Part 107, Part 137, state pesticide licensing and NDAA compliance for agricultural drone operators in 2026.',
   alternates: { canonical: '/regulations' },
   openGraph: {
     type: 'website',
     title: 'US Agricultural Drone Spraying Regulations (2026)',
     description:
-      'FAA Part 107, Part 137, state pesticide licensing, and NDAA compliance, the three-credential stack required for commercial ag drone spraying.',
+      'FAA Part 107, Part 137, state pesticide licensing and NDAA compliance, the three-credential stack required for commercial ag drone spraying.',
     url: `${SITE.domain}/regulations`,
   },
 };
@@ -78,7 +78,7 @@ export default function RegulationsHubPage() {
     '@type': 'WebPage',
     name: 'US Agricultural Drone Spraying Regulations',
     description:
-      'Commercial drone spraying requires FAA Part 107, FAA Part 137, and a state commercial pesticide applicator license. NDAA compliance is a fourth layer for federal and state-funded work.',
+      'Commercial drone spraying requires FAA Part 107, FAA Part 137 and a state commercial pesticide applicator license. NDAA compliance is a fourth layer for federal and state-funded work.',
     url: `${SITE.domain}/regulations`,
     author: { '@id': AUTHOR.personId },
     publisher: { '@id': AUTHOR.organizationId },
@@ -123,23 +123,23 @@ export default function RegulationsHubPage() {
         {/* AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Commercial drone spraying in the United States requires three credentials: FAA Part 107 remote pilot certificate, FAA Part 137 agricultural aircraft operator certificate (with Section 44807 exemption for drones over 55 lbs), and a state commercial pesticide applicator license with aerial category endorsement. NDAA compliance adds a fourth layer for operators working federal or state-funded contracts.
+            Commercial drone spraying in the United States requires three credentials: FAA Part 107 remote pilot certificate, FAA Part 137 agricultural aircraft operator certificate (with Section 44807 exemption for drones over 55 lbs) and a state commercial pesticide applicator license with aerial category endorsement. NDAA compliance adds a fourth layer for operators working federal or state-funded contracts.
           </p>
         </div>
 
         {/* Body overview */}
         <section className="prose prose-sm max-w-none mb-10 space-y-4 text-gray-700 leading-relaxed">
           <p>
-            Agricultural drone spraying is legal in all 50 states but operates under a layered regulatory framework with no single drone spray license. Three separate agencies govern the activity. The FAA controls airspace access and aircraft certification through Part 107 (pilot) and Part 137 (agricultural aircraft operations). The EPA governs pesticide product labels, which dictate carrier volume, droplet size, buffer zones, and wind limits. State departments of agriculture issue commercial pesticide applicator licenses with aerial category endorsements that vary significantly from state to state.
+            Agricultural drone spraying is legal in all 50 states but operates under a layered regulatory framework with no single drone spray license. Three separate agencies govern the activity. The FAA controls airspace access and aircraft certification through Part 107 (pilot) and Part 137 (agricultural aircraft operations). The EPA governs pesticide product labels, which dictate carrier volume, droplet size, buffer zones and wind limits. State departments of agriculture issue commercial pesticide applicator licenses with aerial category endorsements that vary significantly from state to state.
           </p>
           <p>
             Understanding where these layers overlap is critical. A valid Part 107 alone does not authorize commercial spraying. A state pesticide license alone does not authorize flight. Only the complete stack (Part 107 + Part 137 + state license) makes a commercial drone spray operation legal. This guide covers each layer with links to the primary source for every requirement.
           </p>
           <p>
-            Start at the state level. Most state departments of agriculture publish the pesticide applicator study manual online and offer the exam within 30 days of request. Submit your FAA Part 107 application in parallel; the online knowledge test is bookable within 2 to 4 weeks at PSI testing centers. Part 137 is the slowest step: an operations manual, training records, and a Section 44807 exemption petition are required, with FAA approval typically taking 90 to 180 days.
+            Start at the state level. Most state departments of agriculture publish the pesticide applicator study manual online and offer the exam within 30 days of request. Submit your FAA Part 107 application in parallel; the online knowledge test is bookable within 2 to 4 weeks at PSI testing centers. Part 137 is the slowest step: an operations manual, training records and a Section 44807 exemption petition are required, with FAA approval typically taking 90 to 180 days.
           </p>
           <p>
-            If your work includes federal contracts, USDA-funded research, or state programs tied to federal dollars, NDAA compliance becomes a fourth requirement. The practical effect is platform choice: DJI and XAG drones are legal in private commercial use but excluded from most federally funded work. Hylio AG-272, Hylio AG-230, and Pyka Pelican 2 are the primary NDAA-compliant spray platforms in 2026.
+            If your work includes federal contracts, USDA-funded research or state programs tied to federal dollars, NDAA compliance becomes a fourth requirement. The practical effect is platform choice: DJI and XAG drones are legal in private commercial use but excluded from most federally funded work. Hylio AG-272, Hylio AG-230 and Pyka Pelican 2 are the primary NDAA-compliant spray platforms in 2026.
           </p>
         </section>
 

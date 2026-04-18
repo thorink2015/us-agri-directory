@@ -7,13 +7,13 @@ import { regions } from '@/data/regions';
 export const metadata: Metadata = {
   title: 'US Ag Drone Regions: Corn Belt, Delta, Great Plains',
   description:
-    'Browse agricultural drone services by US farming region: Corn Belt, Great Plains, Delta, California, and Southeast. Regional crops, timing, and operators.',
+    'Browse agricultural drone services by US farming region: Corn Belt, Great Plains, Delta, California and Southeast. Regional crops, timing and operators.',
   alternates: { canonical: '/regions' },
   openGraph: {
     type: 'website',
     title: 'US Agricultural Drone Regions | US Ag Drone Directory',
     description:
-      'Regional hubs covering the Corn Belt, Great Plains, Delta, California, and Southeast. Browse operators by region.',
+      'Regional hubs covering the Corn Belt, Great Plains, Delta, California and Southeast. Browse operators by region.',
     url: 'https://agdronedirectory.com/regions',
   },
 };
@@ -37,7 +37,7 @@ export default function RegionsIndexPage() {
       <h1 className="text-3xl font-bold text-gray-900 mb-3">US Agricultural Drone Regions</h1>
       <p className="text-lg text-gray-600 mb-8 leading-relaxed">
         American agriculture is built around distinct farming regions, each with its own crop mix, spray timing,
-        and drone demand drivers. Pick a region below to see operator options, dominant crops, and regional
+        and drone demand drivers. Pick a region below to see operator options, dominant crops and regional
         application windows.
       </p>
 

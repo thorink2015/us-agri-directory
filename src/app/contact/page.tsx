@@ -6,12 +6,12 @@ import { AUTHOR, SITE } from '@/data/author';
 export const metadata: Metadata = {
   title: 'Contact US Ag Drone Directory',
   description:
-    'Get in touch with US Ag Drone Directory, submit your listing, ask a question, or send us feedback.',
+    'Get in touch with US Ag Drone Directory, submit your listing, ask a question or send us feedback.',
   alternates: { canonical: '/contact' },
   openGraph: {
     type: 'website',
     title: `Contact ${SITE.name}`,
-    description: 'Submit your listing, report a correction, or send partnership inquiries.',
+    description: 'Submit your listing, report a correction or send partnership inquiries.',
     url: `${SITE.domain}/contact`,
   },
 };
@@ -22,7 +22,7 @@ export default function ContactPage() {
     '@type': 'ContactPage',
     name: `Contact ${SITE.name}`,
     url: `${SITE.domain}/contact`,
-    description: 'Contact the US Agricultural Drone Directory team for listings, corrections, partnerships, or media inquiries.',
+    description: 'Contact the US Agricultural Drone Directory team for listings, corrections, partnerships or media inquiries.',
     isPartOf: { '@id': `${SITE.domain}/#organization` },
     mainEntity: {
       '@type': 'Organization',
@@ -78,7 +78,7 @@ export default function ContactPage() {
             </span>
             <h2 className="text-xl font-bold text-gray-900">Send Us a Message</h2>
             <p className="text-sm text-gray-600 mt-1">
-              Questions, corrections, partnerships, or feedback, we respond within 48 business hours.
+              Questions, corrections, partnerships or feedback, we respond within 48 business hours.
             </p>
           </div>
           <ContactForm type="contact" />

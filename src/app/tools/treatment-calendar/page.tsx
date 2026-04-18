@@ -22,12 +22,12 @@ const FAQS = [
   {
     question: 'Does this calendar account for my specific planting date?',
     answer:
-      'No. This shows typical windows based on state latitude averages. Your actual spray window depends on your planting date, variety maturity rating, and growing degree day accumulation. Adjust by 5 to 10 days for early or late planting.',
+      'No. This shows typical windows based on state latitude averages. Your actual spray window depends on your planting date, variety maturity rating and growing degree day accumulation. Adjust by 5 to 10 days for early or late planting.',
   },
   {
     question: 'Can I use this calendar for organic treatments?',
     answer:
-      'Yes. The growth stage timing is the same regardless of product type. Organic sulfur, copper, and biological products follow the same application windows as conventional fungicides and insecticides. The calendar shows when to spray, not what to spray.',
+      'Yes. The growth stage timing is the same regardless of product type. Organic sulfur, copper and biological products follow the same application windows as conventional fungicides and insecticides. The calendar shows when to spray, not what to spray.',
   },
 ];
 
@@ -151,7 +151,7 @@ const URGENCY_LABEL: Record<string, string> = {
 export const metadata: Metadata = {
   title: 'Drone Spray Treatment Calendar: When to Book',
   description:
-    'See exactly when to book drone spraying for your crop in your state. Monthly treatment windows for corn, soybeans, wheat, cotton, rice, grapes, and orchards.',
+    'See exactly when to book drone spraying for your crop in your state. Monthly treatment windows for corn, soybeans, wheat, cotton, rice, grapes and orchards.',
   alternates: { canonical: '/tools/treatment-calendar' },
   openGraph: {
     type: 'website',
@@ -169,7 +169,7 @@ export default function TreatmentCalendarPage() {
     applicationCategory: 'Agriculture',
     operatingSystem: 'Web',
     description:
-      'Monthly guide to optimal drone application timing for corn, soybeans, wheat, cotton, rice, vineyards, and orchards across US growing regions, with booking deadline recommendations.',
+      'Monthly guide to optimal drone application timing for corn, soybeans, wheat, cotton, rice, vineyards and orchards across US growing regions, with booking deadline recommendations.',
     url: `${SITE.domain}/tools/treatment-calendar`,
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     author: { '@id': AUTHOR.personId },
@@ -274,10 +274,10 @@ export default function TreatmentCalendarPage() {
         <section className="mb-10 space-y-3">
           <h2 className="text-xl font-bold text-gray-900">How this works</h2>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Treatment windows are based on crop growth stage, not fixed calendar dates. Actual timing varies by variety, planting date, latitude, and weather. Southern states hit each growth stage 2 to 4 weeks earlier than northern states. Corn VT/R1 typically arrives 10 to 14 days earlier in Georgia and Alabama than in Minnesota. The booking deadlines shown assume a 4 to 6 week lead time, which aligns with operator scheduling patterns in peak season (June through September).
+            Treatment windows are based on crop growth stage, not fixed calendar dates. Actual timing varies by variety, planting date, latitude and weather. Southern states hit each growth stage 2 to 4 weeks earlier than northern states. Corn VT/R1 typically arrives 10 to 14 days earlier in Georgia and Alabama than in Minnesota. The booking deadlines shown assume a 4 to 6 week lead time, which aligns with operator scheduling patterns in peak season (June through September).
           </p>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Dates shown are typical ranges based on university extension trial data from Iowa State, Purdue, Kansas State, University of Arkansas, and UC Davis. Always confirm timing with your agronomist or extension agent, especially in years with unusual planting delays or weather patterns.
+            Dates shown are typical ranges based on university extension trial data from Iowa State, Purdue, Kansas State, University of Arkansas and UC Davis. Always confirm timing with your agronomist or extension agent, especially in years with unusual planting delays or weather patterns.
           </p>
         </section>
 

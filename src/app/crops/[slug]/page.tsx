@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: Props) {
     openGraph: {
       type: 'website',
       title: `Drone Spraying for ${crop.name} | US Ag Drone Directory`,
-      description: `$${crop.priceMinUsd} to $${crop.priceMaxUsd}/acre, treatment calendar, key pests, and verified operators across all 50 states.`,
+      description: `$${crop.priceMinUsd} to $${crop.priceMaxUsd}/acre, treatment calendar, key pests and verified operators across all 50 states.`,
       url: `https://agdronedirectory.com/crops/${crop.slug}`,
     },
   };
@@ -50,7 +50,7 @@ export default function CropPage({ params }: Props) {
   const faqs = [
     {
       question: `How much does drone spraying cost for ${crop.name.toLowerCase()}?`,
-      answer: `The typical rate for drone spraying on ${crop.name.toLowerCase()} is $${crop.priceMinUsd} to $${crop.priceMaxUsd} per acre for application only, the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base, and product type. Larger fields (500+ acres) often qualify for lower per-acre rates.`,
+      answer: `The typical rate for drone spraying on ${crop.name.toLowerCase()} is $${crop.priceMinUsd} to $${crop.priceMaxUsd} per acre for application only, the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base and product type. Larger fields (500+ acres) often qualify for lower per-acre rates.`,
     },
     {
       question: `When is the best time to spray ${crop.name.toLowerCase()} by drone?`,
@@ -58,7 +58,7 @@ export default function CropPage({ params }: Props) {
     },
     {
       question: `What are the advantages of drone spraying vs. ground equipment for ${crop.name.toLowerCase()}?`,
-      answer: `Key advantages of drone application over ground equipment: (1) zero soil compaction, (2) can operate when fields are too wet for tractors, (3) high-precision GPS coverage with 95%+ uniformity, (4) can treat irregular or small fragmented fields, and (5) can spray tall crops like corn at full canopy. The main trade-off is a smaller tank size compared to pull-behind ground rigs.`,
+      answer: `Key advantages of drone application over ground equipment: (1) zero soil compaction, (2) can operate when fields are too wet for tractors, (3) high-precision GPS coverage with 95%+ uniformity, (4) can treat irregular or small fragmented fields and (5) can spray tall crops like corn at full canopy. The main trade-off is a smaller tank size compared to pull-behind ground rigs.`,
     },
   ];
 

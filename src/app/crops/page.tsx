@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 export const metadata: Metadata = {
   title: 'Drone Services by Crop: Corn, Soybeans, Cotton, Wheat',
   description:
-    'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs, and equipment for every major US crop.',
+    'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs and equipment for every major US crop.',
   alternates: { canonical: '/crops' },
 };
 
@@ -17,7 +17,7 @@ export default function CropsPage() {
 
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Drone spraying by crop type</h1>
       <p className="text-gray-600 mb-8">
-        Different crops need different approaches. Browse by crop to find operators with hands-on experience in your production system, plus application timing, typical per-acre rates, and equipment recommendations.
+        Different crops need different approaches. Browse by crop to find operators with hands-on experience in your production system, plus application timing, typical per-acre rates and equipment recommendations.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">

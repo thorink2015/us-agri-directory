@@ -38,14 +38,14 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
 
 export function buildCountyMetadata(county: County, operatorCount: number): Metadata {
   const crops = county.mainCrops.slice(0, 3).join(', ');
-  const desc = `Find ${operatorCount} verified drone spraying operator${operatorCount !== 1 ? 's' : ''} in ${county.name}. Compare rates, check certifications, and hire an ag drone service for your ${crops} fields.`;
+  const desc = `Find ${operatorCount} verified drone spraying operator${operatorCount !== 1 ? 's' : ''} in ${county.name}. Compare rates, check certifications and hire an ag drone service for your ${crops} fields.`;
   return {
     title: `${county.name} Drone Spraying: Rates & Operators 2026`,
     description: desc,
     alternates: { canonical: `/states/${county.slug}` },
     openGraph: {
       title: `Drone Spraying in ${county.name} | US Ag Drone Directory`,
-      description: `Verified ag drone operators in ${county.name}. Spraying, seeding, mapping, and scouting for ${crops} growers.`,
+      description: `Verified ag drone operators in ${county.name}. Spraying, seeding, mapping and scouting for ${crops} growers.`,
       url: `${SITE_URL}/states/${county.slug}`,
       siteName: SITE_NAME,
       type: 'website',
@@ -65,7 +65,7 @@ export const defaultMetadata: Metadata = {
     template: '%s',
   },
   description:
-    'The largest US ag drone directory. Find verified operators for spraying, seeding, mapping, and scouting across all 50 states.',
+    'The largest US ag drone directory. Find verified operators for spraying, seeding, mapping and scouting across all 50 states.',
   keywords: [
     'drone spraying near me',
     'agricultural drone services',

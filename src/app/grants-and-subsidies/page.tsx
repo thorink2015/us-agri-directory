@@ -13,7 +13,7 @@ const FAQS = [
   {
     question: 'Can I get EQIP money to buy a DJI T50?',
     answer:
-      'Yes, if your state lists drone equipment as an approved practice under EQIP 595. Payment rates vary from 40 to 90 percent. Beginning farmers, veterans, and socially disadvantaged producers qualify for higher rates. Apply through your local NRCS office.',
+      'Yes, if your state lists drone equipment as an approved practice under EQIP 595. Payment rates vary from 40 to 90 percent. Beginning farmers, veterans and socially disadvantaged producers qualify for higher rates. Apply through your local NRCS office.',
   },
   {
     question: 'Does EQIP pay for the drone or the spraying service?',
@@ -105,7 +105,7 @@ export default function GrantsAndSubsidiesPage() {
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">EQIP Practice Code 595 (Precision Agriculture)</h2>
           <p>
-            EQIP 595 covers drone equipment purchases directly. Payment rates vary by state from 40 to 90 percent of eligible cost. Apply through your local NRCS field office during the state application window, typically November through January for the following fiscal year. Beginning farmers, veteran farmers, and socially disadvantaged producers qualify for enhanced payment rates. Not all states list drones as an approved practice under 595; check with your state conservationist before assuming eligibility. The state technical guide (FOTG) is the authoritative reference for what is and is not covered in your state.
+            EQIP 595 covers drone equipment purchases directly. Payment rates vary by state from 40 to 90 percent of eligible cost. Apply through your local NRCS field office during the state application window, typically November through January for the following fiscal year. Beginning farmers, veteran farmers and socially disadvantaged producers qualify for enhanced payment rates. Not all states list drones as an approved practice under 595; check with your state conservationist before assuming eligibility. The state technical guide (FOTG) is the authoritative reference for what is and is not covered in your state.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">EQIP Cover Crop Practice Standard 340</h2>
@@ -125,12 +125,12 @@ export default function GrantsAndSubsidiesPage() {
 
           <h2 className="text-xl font-bold text-gray-900">Specialty Crop Block Grants</h2>
           <p>
-            State-administered Specialty Crop Block Grants (SCBG) fund competitive projects on specialty crop innovation. Several states funded drone spraying pilot projects on vineyards, orchards, and vegetable operations between 2024 and 2026. Awards typically range from $25,000 to $250,000 per project. Check your state department of agriculture for the current SCBG cycle and priority areas.
+            State-administered Specialty Crop Block Grants (SCBG) fund competitive projects on specialty crop innovation. Several states funded drone spraying pilot projects on vineyards, orchards and vegetable operations between 2024 and 2026. Awards typically range from $25,000 to $250,000 per project. Check your state department of agriculture for the current SCBG cycle and priority areas.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">State-level precision ag programs</h2>
           <p>
-            Nebraska Public Service Commission operates a Precision Ag Grant Program that funds drone acquisition for qualifying operations. Other states have emerging precision agriculture programs administered through extension services, state departments of agriculture, or broadband/rural development agencies. Availability, funding level, and eligibility rules change yearly; the state extension service is usually the single best starting point.
+            Nebraska Public Service Commission operates a Precision Ag Grant Program that funds drone acquisition for qualifying operations. Other states have emerging precision agriculture programs administered through extension services, state departments of agriculture or broadband/rural development agencies. Availability, funding level and eligibility rules change yearly; the state extension service is usually the single best starting point.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">How to apply</h2>

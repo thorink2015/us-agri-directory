@@ -55,9 +55,9 @@ export const stateData: StateData[] = [
     ],
     neighboringStates: ['illinois', 'minnesota', 'missouri', 'nebraska', 'south-dakota', 'wisconsin'],
     aeoBlock:
-      'Iowa is the benchmark state for US agricultural drone spraying, with the 2026 Iowa State Custom Rate Survey establishing the first university standard at $12.50 per acre average from 47 operator responses. Operators must hold FAA Part 107, Part 137, and an IDALS Category 11 (Aerial Application) license, plus Iowa uniquely requires an in-state aerial applicator consultant. Corn fungicide at VT/R1 and cover crop seeding are the two dominant drone services.',
+      'Iowa is the benchmark state for US agricultural drone spraying, with the 2026 Iowa State Custom Rate Survey establishing the first university standard at $12.50 per acre average from 47 operator responses. Operators must hold FAA Part 107, Part 137 and an IDALS Category 11 (Aerial Application) license, plus Iowa uniquely requires an in-state aerial applicator consultant. Corn fungicide at VT/R1 and cover crop seeding are the two dominant drone services.',
     licensingDetails:
-      'Iowa pesticide licensing is administered by IDALS (Iowa Department of Agriculture and Land Stewardship) under Category 11 (Aerial Application). Required exams are Core plus Category 11; the private license fee is $15 per exam on a 3-year cycle.\n\nIowa has the most distinctive licensing requirement in the US: every aerial applicator on agricultural land must work with an Iowa-resident aerial applicator consultant. The consultant must hold Category 11 certification plus a commercial license or dealer license. They meet with the operator in person daily, maintain a 3-year compliance checklist, and verify compliance with Iowa rules, FAA regulations, and Iowa DOT aircraft registration requirements.\n\nIowa DOT aircraft registration is required before any aerial application. Failure to register makes the pesticide applicator license inactive for that aircraft.\n\nReciprocity exists with IL, MN, MO, NE, SD, and WI, but Iowa residents cannot use reciprocal licensing from other states and must test in Iowa. Out-of-state operators holding reciprocal licenses may work in Iowa.\n\nRenewal is on a 3-year cycle. Annual C-CIC training or a re-exam is required.',
+      'Iowa pesticide licensing is administered by IDALS (Iowa Department of Agriculture and Land Stewardship) under Category 11 (Aerial Application). Required exams are Core plus Category 11; the private license fee is $15 per exam on a 3-year cycle.\n\nIowa has the most distinctive licensing requirement in the US: every aerial applicator on agricultural land must work with an Iowa-resident aerial applicator consultant. The consultant must hold Category 11 certification plus a commercial license or dealer license. They meet with the operator in person daily, maintain a 3-year compliance checklist and verify compliance with Iowa rules, FAA regulations and Iowa DOT aircraft registration requirements.\n\nIowa DOT aircraft registration is required before any aerial application. Failure to register makes the pesticide applicator license inactive for that aircraft.\n\nReciprocity exists with IL, MN, MO, NE, SD and WI, but Iowa residents cannot use reciprocal licensing from other states and must test in Iowa. Out-of-state operators holding reciprocal licenses may work in Iowa.\n\nRenewal is on a 3-year cycle. Annual C-CIC training or a re-exam is required.',
     authorityLinks: [
       { label: 'IDALS Pesticide Bureau', url: 'https://iowaagriculture.gov/pesticide-bureau' },
       { label: 'Iowa State Custom Rate Survey 2026', url: 'https://extension.iastate.edu/agdm/crops/pdf/a3-10.pdf' },
@@ -66,17 +66,17 @@ export const stateData: StateData[] = [
       {
         question: 'What does drone spraying cost in Iowa?',
         answer:
-          'The 2026 Iowa State Custom Rate Survey puts the average at $12.50/acre with a range of $8 to $16. This is the lowest benchmark in the country due to flat terrain, large fields, and high operator density.',
+          'The 2026 Iowa State Custom Rate Survey puts the average at $12.50/acre with a range of $8 to $16. This is the lowest benchmark in the country due to flat terrain, large fields and high operator density.',
       },
       {
         question: 'What licenses do I need to spray crops by drone in Iowa?',
         answer:
-          'FAA Part 107, FAA Part 137 (with Section 44807 exemption for drones over 55 lbs), and IDALS Category 11 (Aerial Application) commercial pesticide applicator license. Iowa also requires an in-state aerial applicator consultant, which is unique nationally.',
+          'FAA Part 107, FAA Part 137 (with Section 44807 exemption for drones over 55 lbs) and IDALS Category 11 (Aerial Application) commercial pesticide applicator license. Iowa also requires an in-state aerial applicator consultant, which is unique nationally.',
       },
       {
         question: 'What is the aerial applicator consultant requirement in Iowa?',
         answer:
-          'Iowa law requires every aerial applicator to work with an Iowa-resident consultant who holds Category 11 certification. The consultant meets with you daily in person, maintains compliance records for 3 years, and verifies you follow Iowa rules, FAA regulations, and Iowa DOT aircraft registration requirements.',
+          'Iowa law requires every aerial applicator to work with an Iowa-resident consultant who holds Category 11 certification. The consultant meets with you daily in person, maintains compliance records for 3 years and verifies you follow Iowa rules, FAA regulations and Iowa DOT aircraft registration requirements.',
       },
       {
         question: 'When is the busiest drone spray season in Iowa?',
@@ -86,7 +86,7 @@ export const stateData: StateData[] = [
       {
         question: 'Does Iowa have reciprocal licensing with neighboring states?',
         answer:
-          'Yes, with IL, MN, MO, NE, SD, and WI. However, Iowa residents cannot use reciprocal licensing from other states and must test in Iowa. Out-of-state operators can apply their reciprocal license to work in Iowa.',
+          'Yes, with IL, MN, MO, NE, SD and WI. However, Iowa residents cannot use reciprocal licensing from other states and must test in Iowa. Out-of-state operators can apply their reciprocal license to work in Iowa.',
       },
     ],
     lastReviewedAt: '2026-04-16',
@@ -107,7 +107,7 @@ export const stateData: StateData[] = [
     uniqueRules: [
       'Category 9 is not standalone, must also certify in at least one use category (1A Field Crop, 1C Pasture and Rangeland, etc.).',
       'Regulated herbicide counties: TDA designates counties where spray permits are required before applying regulated herbicides (primarily 2,4-D and dicamba). Operators must obtain permits before application in these counties.',
-      'CE: 5 CEUs annually for both commercial license and aerial category. Must include Laws and Regulations, Drift Minimization, and Pesticide Safety. Excess CEUs do not carry over.',
+      'CE: 5 CEUs annually for both commercial license and aerial category. Must include Laws and Regulations, Drift Minimization and Pesticide Safety. Excess CEUs do not carry over.',
     ],
     reciprocityStates: ['10 states, all must pass TDA Laws and Regulations exam regardless'],
     renewalCycle: 'Annual',
@@ -148,9 +148,9 @@ export const stateData: StateData[] = [
     ],
     neighboringStates: ['oklahoma', 'new-mexico', 'arkansas', 'louisiana'],
     aeoBlock:
-      'Texas is the largest agricultural state by acreage, with cotton (5 to 6 million acres), corn, wheat, sorghum, and cattle operations creating year-round drone demand. TDA requires Category 9 (Aerial Application) plus at least one additional use-category exam, making the minimum three exams. Regulated herbicide counties require spray permits, a restriction unique to Texas.',
+      'Texas is the largest agricultural state by acreage, with cotton (5 to 6 million acres), corn, wheat, sorghum and cattle operations creating year-round drone demand. TDA requires Category 9 (Aerial Application) plus at least one additional use-category exam, making the minimum three exams. Regulated herbicide counties require spray permits, a restriction unique to Texas.',
     licensingDetails:
-      'Texas pesticide licensing is administered by TDA (Texas Department of Agriculture) under Category 9 (Aerial Application). Unlike most states, Category 9 is not standalone, operators must also certify in at least one use category matching their work (1A Field Crop, 1C Pasture and Rangeland, etc.). Minimum 3 exams: General Standards, Category 9, and one use category. Each exam costs $64 through PSI/Metro testing centers. The commercial license costs $200/year.\n\nCE requirements are 5 CEUs annually for both the commercial license and the aerial category. Required topics include Laws and Regulations, Drift Minimization, and Pesticide Safety. Excess CEUs do not carry over.\n\nTexas maintains a list of regulated herbicide counties where spray permits are required before applying regulated herbicides (primarily 2,4-D and dicamba). This applies to all aerial application including drones. Operators must check the TDA regulated herbicide county list before booking work in unfamiliar counties.\n\nRecord keeping: operators must document product name, EPA reg number, application rate, FAA N-number, weather conditions, and spray permit (if applicable) for 2 years.\n\nTexas has reciprocal agreements with 10 states. All reciprocal applicants entering Texas must pass the TDA Laws and Regulations exam regardless of their home state license.',
+      'Texas pesticide licensing is administered by TDA (Texas Department of Agriculture) under Category 9 (Aerial Application). Unlike most states, Category 9 is not standalone, operators must also certify in at least one use category matching their work (1A Field Crop, 1C Pasture and Rangeland, etc.). Minimum 3 exams: General Standards, Category 9 and one use category. Each exam costs $64 through PSI/Metro testing centers. The commercial license costs $200/year.\n\nCE requirements are 5 CEUs annually for both the commercial license and the aerial category. Required topics include Laws and Regulations, Drift Minimization and Pesticide Safety. Excess CEUs do not carry over.\n\nTexas maintains a list of regulated herbicide counties where spray permits are required before applying regulated herbicides (primarily 2,4-D and dicamba). This applies to all aerial application including drones. Operators must check the TDA regulated herbicide county list before booking work in unfamiliar counties.\n\nRecord keeping: operators must document product name, EPA reg number, application rate, FAA N-number, weather conditions and spray permit (if applicable) for 2 years.\n\nTexas has reciprocal agreements with 10 states. All reciprocal applicants entering Texas must pass the TDA Laws and Regulations exam regardless of their home state license.',
     authorityLinks: [
       { label: 'TDA Pesticide Categories', url: 'https://www.texasagriculture.gov/Regulatory-Programs/Pesticides' },
       { label: 'Texas A&M AgriLife Drone Licensing Guide', url: 'https://www-aes.tamu.edu' },
@@ -243,9 +243,9 @@ export const stateData: StateData[] = [
     ],
     neighboringStates: ['oregon', 'nevada', 'arizona'],
     aeoBlock:
-      'California is the highest-value drone spray market in the US at $15 to $35 per acre, driven by 900,000 acres of wine grapes and 1.5 million acres of almonds. CDPR requires the Unmanned Pest Control Aircraft Pilot Certificate (Apprentice or Journeyman tier) in addition to a QAC or QAL, FAA Part 107, and Part 137. Every application must be reported to the County Agricultural Commissioner.',
+      'California is the highest-value drone spray market in the US at $15 to $35 per acre, driven by 900,000 acres of wine grapes and 1.5 million acres of almonds. CDPR requires the Unmanned Pest Control Aircraft Pilot Certificate (Apprentice or Journeyman tier) in addition to a QAC or QAL, FAA Part 107 and Part 137. Every application must be reported to the County Agricultural Commissioner.',
     licensingDetails:
-      'California has the most complex drone spray licensing stack in the US, administered by CDPR (California Department of Pesticide Regulation, under CalEPA).\n\nOperators need: (1) FAA Part 107, (2) FAA Part 137, (3) CDPR Unmanned Pest Control Aircraft Pilot Certificate (Apprentice or Journeyman tier, entirely separate from manned aircraft certification), and (4) a Qualified Applicator Certificate (QAC) for individuals or Qualified Applicator License (QAL) for business owners.\n\nThe Pilot Certificate has two tiers. Apprentice requires passing CDPR written and practical exams. Journeyman requires additional experience hours and a more advanced practical. Fee is $265 application plus $115 per exam at 70% passing score.\n\nCounty Agricultural Commissioner registration is required in each county where you operate, not just your home county. Restricted Material Permits must be obtained before each application where applicable. Some restricted materials also require same-day Notice of Intent filing.\n\nEvery pesticide application must be reported to the County Agricultural Commissioner. This statewide reporting requirement adds significant administrative overhead per job and is unique to California.\n\nRenewal is on a 2-year cycle. California does not participate in reciprocal licensing with other states.',
+      'California has the most complex drone spray licensing stack in the US, administered by CDPR (California Department of Pesticide Regulation, under CalEPA).\n\nOperators need: (1) FAA Part 107, (2) FAA Part 137, (3) CDPR Unmanned Pest Control Aircraft Pilot Certificate (Apprentice or Journeyman tier, entirely separate from manned aircraft certification) and (4) a Qualified Applicator Certificate (QAC) for individuals or Qualified Applicator License (QAL) for business owners.\n\nThe Pilot Certificate has two tiers. Apprentice requires passing CDPR written and practical exams. Journeyman requires additional experience hours and a more advanced practical. Fee is $265 application plus $115 per exam at 70% passing score.\n\nCounty Agricultural Commissioner registration is required in each county where you operate, not just your home county. Restricted Material Permits must be obtained before each application where applicable. Some restricted materials also require same-day Notice of Intent filing.\n\nEvery pesticide application must be reported to the County Agricultural Commissioner. This statewide reporting requirement adds significant administrative overhead per job and is unique to California.\n\nRenewal is on a 2-year cycle. California does not participate in reciprocal licensing with other states.',
     authorityLinks: [
       { label: 'CDPR Pesticide Licensing', url: 'https://www.cdpr.ca.gov' },
       { label: 'UC Davis Vineyard IPM', url: 'https://ipm.ucanr.edu/agriculture/grape' },
@@ -255,12 +255,12 @@ export const stateData: StateData[] = [
       {
         question: 'What does drone spraying cost in California?',
         answer:
-          '$15 to $35 per acre per pass, the highest in the US. A full-season 10-pass vineyard program runs $180 to $300 per acre per year. Rates reflect steep terrain, dense canopy, CDPR compliance overhead, and 8 to 12 passes per season.',
+          '$15 to $35 per acre per pass, the highest in the US. A full-season 10-pass vineyard program runs $180 to $300 per acre per year. Rates reflect steep terrain, dense canopy, CDPR compliance overhead and 8 to 12 passes per season.',
       },
       {
         question: 'What extra licenses do drone operators need in California?',
         answer:
-          'Beyond FAA Part 107 and Part 137, California requires the CDPR Unmanned Pest Control Aircraft Pilot Certificate (Apprentice or Journeyman), a QAC or QAL, and County Agricultural Commissioner registration in each county of operation. This is the most complex state licensing stack in the US.',
+          'Beyond FAA Part 107 and Part 137, California requires the CDPR Unmanned Pest Control Aircraft Pilot Certificate (Apprentice or Journeyman), a QAC or QAL and County Agricultural Commissioner registration in each county of operation. This is the most complex state licensing stack in the US.',
       },
       {
         question: 'Why is California so much more expensive than the Midwest?',
@@ -270,7 +270,7 @@ export const stateData: StateData[] = [
       {
         question: 'Can drones spray organic vineyards in California?',
         answer:
-          'Yes. OMRI-approved sulfur, copper hydroxide, Regalia, and other organic products apply well at 10 to 20 gpa carrier. Organic vineyard spraying is one of the fastest-growing drone niches in California because lower drift and targeted coverage reduce impact on cover crops and beneficial insects.',
+          'Yes. OMRI-approved sulfur, copper hydroxide, Regalia and other organic products apply well at 10 to 20 gpa carrier. Organic vineyard spraying is one of the fastest-growing drone niches in California because lower drift and targeted coverage reduce impact on cover crops and beneficial insects.',
       },
       {
         question: 'When should I book a drone operator for my California vineyard?',
@@ -318,16 +318,16 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Illinois ranks second nationally in corn (11M acres) and soybeans (10.5M acres), making it one of the highest-volume drone spray markets in the Corn Belt. Rates run $12 to $17 per acre. The Illinois Department of Agriculture requires an Aerial General Standards exam plus category certification, with mandatory re-testing every 3 years and no CE alternative.',
     licensingDetails:
-      'Illinois pesticide licensing is administered by the Illinois Department of Agriculture (IDA) under the Aerial General Standards credential. Applicators take two exams: the Aerial General Standards exam (100 questions, 70% passing), which replaces the standard Core exam, plus a category exam (50 questions, 70% passing). The commercial license is $300 for a 3-year term.\n\nIllinois is one of the few states with no continuing education option for aerial applicators. Certification must be maintained by passing both exams again every 3 years, there is no CE alternative. DriftWatch sensitive crop registry participation is recommended. Reciprocity exists with IA, IN, MO, WI, and KY.',
+      'Illinois pesticide licensing is administered by the Illinois Department of Agriculture (IDA) under the Aerial General Standards credential. Applicators take two exams: the Aerial General Standards exam (100 questions, 70% passing), which replaces the standard Core exam, plus a category exam (50 questions, 70% passing). The commercial license is $300 for a 3-year term.\n\nIllinois is one of the few states with no continuing education option for aerial applicators. Certification must be maintained by passing both exams again every 3 years, there is no CE alternative. DriftWatch sensitive crop registry participation is recommended. Reciprocity exists with IA, IN, MO, WI and KY.',
     authorityLinks: [
       { label: 'IDA Pesticide Certification and Licensing', url: 'https://agr.illinois.gov/pesticides/certification-and-licensing.html' },
       { label: 'Illinois Extension PSEP Special Licensing', url: 'https://extension.illinois.edu/psep/special-licensing' },
     ],
     faqs: [
       { question: 'What does drone spraying cost in Illinois?', answer: 'Rates run $12 to $17 per acre for corn and soybean applications, matching the Corn Belt baseline. Operator density is high, especially in central and western Illinois, keeping pricing competitive.' },
-      { question: 'What license do I need to spray by drone in Illinois?', answer: 'FAA Part 107, Part 137, and an IDA commercial applicator license with Aerial General Standards exam plus at least one category exam. The Aerial GS exam replaces the standard Core exam and is 100 questions at 70% passing.' },
+      { question: 'What license do I need to spray by drone in Illinois?', answer: 'FAA Part 107, Part 137 and an IDA commercial applicator license with Aerial General Standards exam plus at least one category exam. The Aerial GS exam replaces the standard Core exam and is 100 questions at 70% passing.' },
       { question: 'Does Illinois accept continuing education instead of re-testing?', answer: 'No. Illinois is one of the few states with no CE option for aerial applicators. You must pass the Aerial General Standards and category exams again every 3 years to maintain certification.' },
-      { question: 'Can I use my Iowa or Indiana license in Illinois?', answer: 'Illinois has reciprocal agreements with IA, IN, MO, WI, and KY. Contact IDA for current reciprocity requirements and any additional exams needed.' },
+      { question: 'Can I use my Iowa or Indiana license in Illinois?', answer: 'Illinois has reciprocal agreements with IA, IN, MO, WI and KY. Contact IDA for current reciprocity requirements and any additional exams needed.' },
       { question: 'When is the busiest drone spray season in Illinois?', answer: 'Late July through early August for corn VT/R1 fungicide, overlapping with soybean R2/R3. Cover crop seeding creates a second peak from late August through September. Book 4 to 6 weeks ahead.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -370,7 +370,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Indiana has 5.6 million acres of corn and 5.8 million acres of soybeans, with drone spraying rates of $12 to $17 per acre. The Office of Indiana State Chemist at Purdue administers free licensing exams, and IPRB Bulletin #143 provides specific drone regulatory guidance. Tar spot pressure in recent years has accelerated drone fungicide adoption.',
     licensingDetails:
-      'Indiana pesticide licensing is administered by the Office of Indiana State Chemist (OISC) at Purdue University under Category 11 (Aerial Application). Applicators take Core plus Category 11, with exams administered free of charge at Purdue, one of the lowest exam cost structures in the US. Business and applicator licenses are $45 per year each.\n\nIPRB Bulletin #143, published by the Indiana Pesticide Review Board, provides specific drone regulatory guidance and confirms that Category 11 covers unmanned aircraft systems. Indiana participates in the DriftWatch sensitive crop registry. Renewal is on a 5-year cycle with 20 CCH (Continuing Certification Hours) required. Reciprocity exists with IL, MI, OH, and KY.',
+      'Indiana pesticide licensing is administered by the Office of Indiana State Chemist (OISC) at Purdue University under Category 11 (Aerial Application). Applicators take Core plus Category 11, with exams administered free of charge at Purdue, one of the lowest exam cost structures in the US. Business and applicator licenses are $45 per year each.\n\nIPRB Bulletin #143, published by the Indiana Pesticide Review Board, provides specific drone regulatory guidance and confirms that Category 11 covers unmanned aircraft systems. Indiana participates in the DriftWatch sensitive crop registry. Renewal is on a 5-year cycle with 20 CCH (Continuing Certification Hours) required. Reciprocity exists with IL, MI, OH and KY.',
     authorityLinks: [
       { label: 'OISC Pesticide Programs', url: 'https://oisc.purdue.edu/pesticide/index.html' },
       { label: 'IPRB Bulletin #143: Drones for Pesticide Application', url: 'https://oisc.purdue.edu/pesticide/iprb/iprb_143_aerial.pdf' },
@@ -378,9 +378,9 @@ export const stateData: StateData[] = [
     ],
     faqs: [
       { question: 'What does drone spraying cost in Indiana?', answer: 'Rates run $12 to $17 per acre, consistent with the Corn Belt baseline. High tar spot pressure years push demand and can tighten operator availability in July.' },
-      { question: 'What license do I need in Indiana?', answer: 'FAA Part 107, Part 137, and OISC Category 11 (Aerial Application) commercial applicator license. Core and Category 11 exams are free at Purdue University.' },
+      { question: 'What license do I need in Indiana?', answer: 'FAA Part 107, Part 137 and OISC Category 11 (Aerial Application) commercial applicator license. Core and Category 11 exams are free at Purdue University.' },
       { question: 'What is IPRB Bulletin #143?', answer: 'The Indiana Pesticide Review Board published Bulletin #143 specifically addressing drones for pesticide application. It clarifies that Category 11 includes UAS and outlines the layered FAA and state requirements.' },
-      { question: 'Does Indiana have reciprocal licensing?', answer: 'Yes, with IL, MI, OH, and KY. Contact OISC for current reciprocity requirements.' },
+      { question: 'Does Indiana have reciprocal licensing?', answer: 'Yes, with IL, MI, OH and KY. Contact OISC for current reciprocity requirements.' },
       { question: 'When is peak drone spray season in Indiana?', answer: 'Late July through early August for corn and soybean fungicide. Tar spot outbreaks can trigger emergency demand in late July. Book by mid-June.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -424,15 +424,15 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Ohio requires even private applicators to hold a commercial license with Category C-1 for any drone pesticide application, the strictest private applicator rule in the US. Aerial insurance minimums of $100,000 property and $300,000 bodily injury apply. Rates run $13 to $18 per acre across 3.4 million acres of corn and 4.8 million acres of soybeans.',
     licensingDetails:
-      'Ohio pesticide licensing is administered by the Ohio Department of Agriculture (ODA) under Category C-1. Ohio has the strictest private applicator rule in the US: every drone pesticide applicator, including farmers spraying their own land, must hold a commercial license with Category C-1. License fees are $35 per year, with exam fee included.\n\nOhio also mandates among the highest aerial insurance minimums in the country: $100,000 property damage per occurrence, $100,000 bodily injury per person, and $300,000 bodily injury per occurrence. ODA explicitly prohibits drone application of Enlist, Acuron (atrazine formulations), and Xtend Max (dicamba formulations). Continuing education is 5 hours per 3-year cycle. Reciprocity exists with AL, FL, GA, IL, IN, LA, MI, and MN.',
+      'Ohio pesticide licensing is administered by the Ohio Department of Agriculture (ODA) under Category C-1. Ohio has the strictest private applicator rule in the US: every drone pesticide applicator, including farmers spraying their own land, must hold a commercial license with Category C-1. License fees are $35 per year, with exam fee included.\n\nOhio also mandates among the highest aerial insurance minimums in the country: $100,000 property damage per occurrence, $100,000 bodily injury per person and $300,000 bodily injury per occurrence. ODA explicitly prohibits drone application of Enlist, Acuron (atrazine formulations) and Xtend Max (dicamba formulations). Continuing education is 5 hours per 3-year cycle. Reciprocity exists with AL, FL, GA, IL, IN, LA, MI and MN.',
     authorityLinks: [
       { label: 'ODA Pesticide Program', url: 'https://agri.ohio.gov/divisions/plant-health/pesticides' },
       { label: 'OSU Extension CFAES', url: 'https://cfaes.osu.edu' },
     ],
     faqs: [
       { question: 'Can I spray my own farm by drone with a private applicator license in Ohio?', answer: 'No. Ohio uniquely requires a commercial license with Category C-1 for all drone pesticide applications, even on your own property. A private applicator license is not sufficient.' },
-      { question: 'What insurance do I need for drone spraying in Ohio?', answer: '$100,000 property damage per occurrence, $100,000 bodily injury per person, and $300,000 bodily injury per occurrence. These are among the highest state-mandated aerial insurance minimums nationally.' },
-      { question: 'Are any pesticides banned for drone application in Ohio?', answer: 'Yes. ODA specifically prohibits drone application of Enlist, Acuron (atrazine formulations), and Xtend Max (dicamba formulations) due to label restrictions and drift concerns.' },
+      { question: 'What insurance do I need for drone spraying in Ohio?', answer: '$100,000 property damage per occurrence, $100,000 bodily injury per person and $300,000 bodily injury per occurrence. These are among the highest state-mandated aerial insurance minimums nationally.' },
+      { question: 'Are any pesticides banned for drone application in Ohio?', answer: 'Yes. ODA specifically prohibits drone application of Enlist, Acuron (atrazine formulations) and Xtend Max (dicamba formulations) due to label restrictions and drift concerns.' },
       { question: 'What does drone spraying cost in Ohio?', answer: 'Rates run $13 to $18 per acre, slightly above the Iowa baseline because Ohio has fewer operators and more variable field sizes than western Corn Belt states.' },
       { question: 'Does Ohio have reciprocal licensing?', answer: 'Yes, with AL, FL, GA, IL, IN, LA, MI, MN and others. Contact ODA for current reciprocity requirements.' },
     ],
@@ -476,7 +476,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Missouri introduced Category 13 (commercial) and Category 23 (private) Aerial Pest Control licensing effective January 2025, explicitly including drones. The state covers 5.7 million acres of soybeans and 3.3 million acres of corn in northern Missouri, plus rice and cotton in the Bootheel. Rates run $12 to $18 per acre.',
     licensingDetails:
-      'Missouri pesticide licensing is administered by the Missouri Department of Agriculture (MDA). Effective January 1, 2025, Missouri introduced Category 13 (Aerial Pest Control, commercial and noncommercial) and Category 23 (Aerial Pest Control, private), both explicitly covering drone operations. Applicators take Core plus Category 13 or 23 plus a use category, with exams at $45 each through Pearson VUE and a $65 application fee.\n\nProvisional applicators (ages 16 to 17) are prohibited from aerial application. Recertification via training or re-exam is required every 3 years for all categories. Reciprocity exists with IA, IL, KS, NE, and AR.',
+      'Missouri pesticide licensing is administered by the Missouri Department of Agriculture (MDA). Effective January 1, 2025, Missouri introduced Category 13 (Aerial Pest Control, commercial and noncommercial) and Category 23 (Aerial Pest Control, private), both explicitly covering drone operations. Applicators take Core plus Category 13 or 23 plus a use category, with exams at $45 each through Pearson VUE and a $65 application fee.\n\nProvisional applicators (ages 16 to 17) are prohibited from aerial application. Recertification via training or re-exam is required every 3 years for all categories. Reciprocity exists with IA, IL, KS, NE and AR.',
     authorityLinks: [
       { label: 'MDA Pesticide Programs', url: 'https://agriculture.mo.gov/plants/pesticides' },
       { label: 'University of Missouri Extension', url: 'https://extension.missouri.edu' },
@@ -530,7 +530,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Michigan requires a MDARD-approved UAV training program as a de facto drone-specific credential, plus Core and Aerial Standard (AE) exams and a Private Aerial Business License (PABL). Rates run $14 to $22 per acre across 2.2 million acres of corn, 2.1 million acres of soybeans, and high-value tart cherry and apple orchards in western Michigan.',
     licensingDetails:
-      'Michigan pesticide licensing is administered by the Michigan Department of Agriculture and Rural Development (MDARD). Applicators need Core plus AE (Aerial Standard) plus use categories, with a 70% passing score. Before receiving AE certification, operators must complete an MDARD-approved UAV training program or document 200 hours of flight experience, a de facto drone-specific credential.\n\nA Private Aerial Business License (PABL) is required for the business entity in addition to individual certification. Operations require an in-state mix/load pad and mandatory DriftWatch sensitive crop registry participation. Reciprocal applicants from IN, MN, OH, and WI must also submit drone-specific training documentation to MDARD. Renewal is every 3 years via a flight efficiency clinic or re-examination.',
+      'Michigan pesticide licensing is administered by the Michigan Department of Agriculture and Rural Development (MDARD). Applicators need Core plus AE (Aerial Standard) plus use categories, with a 70% passing score. Before receiving AE certification, operators must complete an MDARD-approved UAV training program or document 200 hours of flight experience, a de facto drone-specific credential.\n\nA Private Aerial Business License (PABL) is required for the business entity in addition to individual certification. Operations require an in-state mix/load pad and mandatory DriftWatch sensitive crop registry participation. Reciprocal applicants from IN, MN, OH and WI must also submit drone-specific training documentation to MDARD. Renewal is every 3 years via a flight efficiency clinic or re-examination.',
     authorityLinks: [
       { label: 'MDARD Aerial Pesticide Applications', url: 'https://www.michigan.gov/mdard/licensing/pesticide/aerial-pesticide-applications' },
       { label: 'MSU Extension CANR', url: 'https://www.canr.msu.edu' },
@@ -539,7 +539,7 @@ export const stateData: StateData[] = [
       { question: 'Does Michigan require drone-specific training?', answer: 'Yes. MDARD requires completion of an approved UAV training program before issuing the AE (Aerial Standard) certification. This is one of the few states with a de facto drone-specific credential requirement.' },
       { question: 'What is the PABL requirement?', answer: 'A Private Aerial Business License (PABL) is required for all aerial pesticide application businesses in Michigan, including drone operators. This is in addition to individual applicator certification.' },
       { question: 'What does drone spraying cost in Michigan?', answer: 'Row crops run $14 to $18 per acre. Cherry and apple orchard work runs $18 to $22 because of canopy complexity and multiple passes. Western Michigan orchards command the highest rates.' },
-      { question: 'Can I use my Indiana or Ohio license in Michigan?', answer: 'Michigan has reciprocity with IN, MN, OH, and WI, but reciprocal applicants must still submit drone-specific training documentation to MDARD.' },
+      { question: 'Can I use my Indiana or Ohio license in Michigan?', answer: 'Michigan has reciprocity with IN, MN, OH and WI, but reciprocal applicants must still submit drone-specific training documentation to MDARD.' },
       { question: 'What is DriftWatch and do I need it?', answer: 'DriftWatch is a voluntary sensitive crop registry. Michigan requires aerial applicators to check DriftWatch before spraying to identify specialty crop fields (vineyards, orchards, organic) near the application zone.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -558,7 +558,7 @@ export const stateData: StateData[] = [
     examsRequired: 'Core + Category 9.9 + use categories.',
     examFees: 'Contact DATCP for current fees.',
     uniqueRules: [
-      'Category 9.9 explicitly covers "airplanes, helicopters, or unmanned aircraft systems (drones)."',
+      'Category 9.9 explicitly covers "airplanes, helicopters or unmanned aircraft systems (drones)."',
       'Supplementary certification, not standalone.',
     ],
     reciprocityStates: ['IA', 'IL', 'MI', 'MN'],
@@ -580,16 +580,16 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Wisconsin uses Category 9.9 (Aerial Applicator) which explicitly covers drones alongside airplanes and helicopters. Rates run $13 to $18 per acre across 3.9 million acres of corn and 1.9 million acres of soybeans. Cover crop drone seeding is expanding, with the Fox-Wolf Watershed Alliance running programs at $20 per acre.',
     licensingDetails:
-      'Wisconsin pesticide licensing is administered by DATCP (Department of Agriculture, Trade and Consumer Protection). Aerial applicators need Core plus Category 9.9 (Aerial Applicator) plus use categories. Category 9.9 is a supplementary certification under ATCP 29.28 and explicitly covers "airplanes, helicopters, or unmanned aircraft systems (drones)", one of the clearest drone inclusions in any state aerial category.\n\nRenewal is on a 5-year cycle with continuing education hours that vary by category. Reciprocity exists with IA, IL, MI, and MN. Contact DATCP for current fee schedule and reciprocity procedures.',
+      'Wisconsin pesticide licensing is administered by DATCP (Department of Agriculture, Trade and Consumer Protection). Aerial applicators need Core plus Category 9.9 (Aerial Applicator) plus use categories. Category 9.9 is a supplementary certification under ATCP 29.28 and explicitly covers "airplanes, helicopters or unmanned aircraft systems (drones)", one of the clearest drone inclusions in any state aerial category.\n\nRenewal is on a 5-year cycle with continuing education hours that vary by category. Reciprocity exists with IA, IL, MI and MN. Contact DATCP for current fee schedule and reciprocity procedures.',
     authorityLinks: [
       { label: 'Wisconsin DATCP', url: 'https://datcp.wi.gov' },
       { label: 'UW-Madison Extension', url: 'https://extension.wisc.edu' },
     ],
     faqs: [
-      { question: 'What aerial category covers drones in Wisconsin?', answer: 'Category 9.9 (Aerial Applicator) under ATCP 29.28. It explicitly covers airplanes, helicopters, and unmanned aircraft systems (drones) as a supplementary certification.' },
+      { question: 'What aerial category covers drones in Wisconsin?', answer: 'Category 9.9 (Aerial Applicator) under ATCP 29.28. It explicitly covers airplanes, helicopters and unmanned aircraft systems (drones) as a supplementary certification.' },
       { question: 'What does drone spraying cost in Wisconsin?', answer: 'Row crop rates run $13 to $18 per acre. Cover crop seeding runs $18 to $20. Slightly higher than Iowa due to fewer operators and more variable terrain in western and northern counties.' },
       { question: 'Is cover crop drone seeding popular in Wisconsin?', answer: 'Yes and growing. The Fox-Wolf Watershed Alliance has run pilot drone seeding programs, and NRCS EQIP cost-share makes it economically attractive across the state.' },
-      { question: 'Does Wisconsin have reciprocal licensing?', answer: 'Yes, with IA, IL, MI, and MN. Contact DATCP for current reciprocity procedures.' },
+      { question: 'Does Wisconsin have reciprocal licensing?', answer: 'Yes, with IA, IL, MI and MN. Contact DATCP for current reciprocity procedures.' },
       { question: 'When is peak drone spray season in Wisconsin?', answer: 'Late July through early August for corn and soybean fungicide. Wisconsin sits 1 to 2 weeks behind Iowa in timing due to northern latitude. Cover crop seeding runs September through early October.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -684,7 +684,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Kentucky Category 11 (Aerial Certification) explicitly includes UAS and requires pairing with a site category, making a minimum of 3 exams. Even general-use pesticides require aerial certification when applied by drone. Rates run $14 to $19 per acre across 1.7 million acres of soybeans and 1.4 million acres of corn.',
     licensingDetails:
-      'Kentucky pesticide licensing is administered by the Kentucky Department of Agriculture (KDA) under Category 11 (Aerial Certification), which explicitly includes UAS. Category 11 is not standalone, it must be paired with at least one site category, making a minimum of 3 exams: Core, Category 11, and a site category. Exam fees are $10 each with a $25 license fee.\n\nA notable Kentucky rule: aerial certification is required for all pesticides applied by drone, including general-use products. This is stricter than most states, where certification is only required for restricted-use pesticides. Continuing education is 12 hours per 3-year renewal cycle. Reciprocity exists with IL, IN, OH, TN, VA, and WV.',
+      'Kentucky pesticide licensing is administered by the Kentucky Department of Agriculture (KDA) under Category 11 (Aerial Certification), which explicitly includes UAS. Category 11 is not standalone, it must be paired with at least one site category, making a minimum of 3 exams: Core, Category 11 and a site category. Exam fees are $10 each with a $25 license fee.\n\nA notable Kentucky rule: aerial certification is required for all pesticides applied by drone, including general-use products. This is stricter than most states, where certification is only required for restricted-use pesticides. Continuing education is 12 hours per 3-year renewal cycle. Reciprocity exists with IL, IN, OH, TN, VA and WV.',
     authorityLinks: [
       { label: 'KDA Pesticide Certification', url: 'https://www.kyagr.com/consumer/obtaining-certification.html' },
       { label: 'UK Center for Crop Diversification', url: 'https://www.uky.edu/ccd' },
@@ -692,8 +692,8 @@ export const stateData: StateData[] = [
     faqs: [
       { question: 'What does drone spraying cost in Kentucky?', answer: 'Rates run $14 to $19 per acre, slightly above the core Corn Belt baseline due to fewer operators and more variable terrain. Western Kentucky is flatter and more competitive.' },
       { question: 'Do general-use pesticides require certification for drone application in Kentucky?', answer: 'Yes. Kentucky requires aerial certification for all pesticides applied by aircraft, including drones, regardless of whether the product is general-use or restricted-use. This catches some operators by surprise.' },
-      { question: 'Can I get Category 11 alone in Kentucky?', answer: 'No. Category 11 is not standalone. You must pair it with at least one site category (e.g., agricultural pest control), making the minimum 3 exams: Core, Category 11, and a site category.' },
-      { question: 'Does Kentucky have reciprocal licensing?', answer: 'Yes, with IL, IN, OH, TN, VA, and WV. Contact KDA for current procedures.' },
+      { question: 'Can I get Category 11 alone in Kentucky?', answer: 'No. Category 11 is not standalone. You must pair it with at least one site category (e.g., agricultural pest control), making the minimum 3 exams: Core, Category 11 and a site category.' },
+      { question: 'Does Kentucky have reciprocal licensing?', answer: 'Yes, with IL, IN, OH, TN, VA and WV. Contact KDA for current procedures.' },
       { question: 'What crops drive drone demand in Kentucky?', answer: 'Soybeans (1.7M acres) and corn (1.4M acres) are the primary markets. Soft red winter wheat adds a late May/June heading window. Tobacco in central Kentucky is a niche specialty crop opportunity.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -715,7 +715,7 @@ export const stateData: StateData[] = [
       'Each drone must carry a TDA aircraft decal at $150 each.',
       '$100,000 minimum liability insurance required.',
       'FAA Part 137 required and must be on file with TDA.',
-      'Three separate fees: exam application, AER exam, and pilot fee.',
+      'Three separate fees: exam application, AER exam and pilot fee.',
     ],
     reciprocityStates: ['AL', 'AR', 'GA', 'KY', 'LA', 'MS', 'MO', 'NC', 'SC'],
     renewalCycle: '3-year cycle.',
@@ -735,20 +735,20 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['kentucky', 'virginia', 'north-carolina', 'georgia', 'alabama', 'mississippi', 'arkansas', 'missouri'],
     aeoBlock:
-      'Tennessee requires a $150 aircraft decal per drone, $200 pilot fee, and $100,000 minimum liability insurance, making it the highest per-drone entry cost in the Corn Belt region. West Tennessee grows 500,000 acres of cotton and 1.5 million acres of soybeans. Rates run $14 to $20 per acre.',
+      'Tennessee requires a $150 aircraft decal per drone, $200 pilot fee and $100,000 minimum liability insurance, making it the highest per-drone entry cost in the Corn Belt region. West Tennessee grows 500,000 acres of cotton and 1.5 million acres of soybeans. Rates run $14 to $20 per acre.',
     licensingDetails:
-      'Tennessee pesticide licensing is administered by the Tennessee Department of Agriculture (TDA) via the UT PSEP program. Operators take Core plus category certification plus the AER (Aerial) licensing exam, with three separate fees: $150 exam application, $15 AER exam, and $200 pilot fee. Each drone in the fleet must carry its own TDA aircraft decal at $150 per decal.\n\nMinimum liability insurance of $100,000 is required, and FAA Part 137 certification must be on file with TDA before operations begin. Continuing education is 18 points per 3-year cycle under Agriculture C01, with distribution and format restrictions. Reciprocity covers certification only, TDA pilot fees and aircraft decals are still required for reciprocal applicants from AL, AR, GA, KY, LA, MS, MO, NC, and SC.',
+      'Tennessee pesticide licensing is administered by the Tennessee Department of Agriculture (TDA) via the UT PSEP program. Operators take Core plus category certification plus the AER (Aerial) licensing exam, with three separate fees: $150 exam application, $15 AER exam and $200 pilot fee. Each drone in the fleet must carry its own TDA aircraft decal at $150 per decal.\n\nMinimum liability insurance of $100,000 is required and FAA Part 137 certification must be on file with TDA before operations begin. Continuing education is 18 points per 3-year cycle under Agriculture C01, with distribution and format restrictions. Reciprocity covers certification only, TDA pilot fees and aircraft decals are still required for reciprocal applicants from AL, AR, GA, KY, LA, MS, MO, NC and SC.',
     authorityLinks: [
       { label: 'TDA Aerial Applicator License (UT PSEP)', url: 'https://psep.tennessee.edu/aerial-applicator-license' },
       { label: 'UT PSEP: Pesticide Application Using Drones', url: 'https://psep.tennessee.edu/pesticide-application-using-drones' },
       { label: 'UT Extension', url: 'https://extension.tennessee.edu' },
     ],
     faqs: [
-      { question: 'What does it cost to get licensed for drone spraying in Tennessee?', answer: '$150 exam application, $15 AER exam fee, $200 pilot fee, and $150 per aircraft decal. Each drone in your fleet needs its own $150 decal. Add $100K minimum liability insurance. Total entry cost for a single-drone operator is approximately $615 before insurance.' },
+      { question: 'What does it cost to get licensed for drone spraying in Tennessee?', answer: '$150 exam application, $15 AER exam fee, $200 pilot fee and $150 per aircraft decal. Each drone in your fleet needs its own $150 decal. Add $100K minimum liability insurance. Total entry cost for a single-drone operator is approximately $615 before insurance.' },
       { question: 'What does drone spraying cost in Tennessee?', answer: 'Rates run $14 to $20 per acre. West Tennessee (Delta-influenced) runs slightly higher due to cotton defoliant complexity. East Tennessee mountainous terrain adds difficulty for some operations.' },
       { question: 'Does each drone need a separate TDA decal?', answer: 'Yes. Each drone must carry its own TDA aircraft decal at $150 per decal. Multi-drone fleet operators should factor this into their annual fixed costs.' },
-      { question: 'Does Tennessee have reciprocal licensing?', answer: 'Yes, with AL, AR, GA, KY, LA, MS, MO, NC, and SC. Reciprocity covers certification only, not licensing. You still need TDA pilot fees and aircraft decals.' },
-      { question: 'What crops drive drone demand in Tennessee?', answer: 'Soybeans (1.5M acres) statewide, cotton (500K acres) in west Tennessee, corn (800K acres), and wheat (300K). West Tennessee shares Delta-style agriculture with Mississippi and Arkansas.' },
+      { question: 'Does Tennessee have reciprocal licensing?', answer: 'Yes, with AL, AR, GA, KY, LA, MS, MO, NC and SC. Reciprocity covers certification only, not licensing. You still need TDA pilot fees and aircraft decals.' },
+      { question: 'What crops drive drone demand in Tennessee?', answer: 'Soybeans (1.5M acres) statewide, cotton (500K acres) in west Tennessee, corn (800K acres) and wheat (300K). West Tennessee shares Delta-style agriculture with Mississippi and Arkansas.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -767,7 +767,7 @@ export const stateData: StateData[] = [
     examFees: '$45/exam. $50/category recert.',
     uniqueRules: [
       'No standalone aerial exam. Must submit a separate UAS Application to the Secretary of Agriculture for approval before any drone pesticide application.',
-      'UAS Application must include FAA registration certificate, Remote Pilot Certificate, drone make/model/serial, and Part 137 documentation.',
+      'UAS Application must include FAA registration certificate, Remote Pilot Certificate, drone make/model/serial and Part 137 documentation.',
       'Only certified commercial applicators may apply pesticides via UAS. Registered pest control technicians and uncertified applicators are ineligible.',
       'UAS policy implemented July 2022, expanded January 2023, revised April 7, 2025.',
     ],
@@ -791,18 +791,18 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Kansas is the top US wheat state at 7.5 million acres, with drone spraying rates of $12 to $16 per acre. KDA requires a separate UAS Application approved by the Secretary of Agriculture before any drone pesticide application, in addition to standard commercial applicator certification. The wheat heading window in late May to early June is the primary drone spray demand driver.',
     licensingDetails:
-      'Kansas pesticide licensing is administered by the Kansas Department of Agriculture (KDA). Unlike most states, Kansas has no standalone aerial exam, applicators take the General Standards exam plus use-specific category exams for their crop types. A separate UAS Application must be submitted to and approved by the Kansas Secretary of Agriculture before any drone pesticide application can begin.\n\nThe UAS Application must include FAA registration certificate, Remote Pilot Certificate, drone make/model/serial number, and Part 137 documentation. This UAS policy was implemented July 2022, expanded January 2023, and revised April 7, 2025. Only certified commercial applicators may apply pesticides via UAS, registered pest control technicians and uncertified applicators are ineligible. Reciprocity exists with IN, MN, MO, NE, OK, and TX, but the UAS Application is still required regardless of reciprocity.',
+      'Kansas pesticide licensing is administered by the Kansas Department of Agriculture (KDA). Unlike most states, Kansas has no standalone aerial exam, applicators take the General Standards exam plus use-specific category exams for their crop types. A separate UAS Application must be submitted to and approved by the Kansas Secretary of Agriculture before any drone pesticide application can begin.\n\nThe UAS Application must include FAA registration certificate, Remote Pilot Certificate, drone make/model/serial number and Part 137 documentation. This UAS policy was implemented July 2022, expanded January 2023 and revised April 7, 2025. Only certified commercial applicators may apply pesticides via UAS, registered pest control technicians and uncertified applicators are ineligible. Reciprocity exists with IN, MN, MO, NE, OK and TX, but the UAS Application is still required regardless of reciprocity.',
     authorityLinks: [
       { label: 'KDA Pesticide Applicator Licensing', url: 'https://www.agriculture.ks.gov/divisions-programs/pesticide-and-fertilizer/pesticide-applicator' },
       { label: 'KDA UAS (Drone) Policy', url: 'https://www.agriculture.ks.gov/divisions-programs/pesticide-and-fertilizer/unmanned-aircraft-systems' },
       { label: 'K-State Research and Extension', url: 'https://www.ksre.k-state.edu' },
     ],
     faqs: [
-      { question: 'What is the Kansas UAS Application?', answer: 'A separate application submitted to the Kansas Secretary of Agriculture that includes your FAA registration, Part 107, Part 137, and drone make/model/serial. You cannot spray by drone in Kansas without this pre-approval, even if you hold all other licenses.' },
+      { question: 'What is the Kansas UAS Application?', answer: 'A separate application submitted to the Kansas Secretary of Agriculture that includes your FAA registration, Part 107, Part 137 and drone make/model/serial. You cannot spray by drone in Kansas without this pre-approval, even if you hold all other licenses.' },
       { question: 'What does drone spraying cost in Kansas?', answer: 'Wheat and row crop applications run $12 to $16 per acre. Large flat acreage pushes rates toward the low end. Wind conditions often limit daily spray windows.' },
       { question: 'When is the wheat spray window in Kansas?', answer: 'T3 heading arrives in late May to early June, with a 5 to 7 day window. Book in April. Operators who wait until heading is visible often cannot find available capacity.' },
       { question: 'Can a pest control technician spray by drone in Kansas?', answer: 'No. KDA explicitly limits drone pesticide application to certified commercial applicators only. Registered pest control technicians and uncertified applicators are ineligible.' },
-      { question: 'Does Kansas have reciprocal licensing?', answer: 'Yes, with IN, MN, MO, NE, OK, and TX. The UAS Application is still required regardless of reciprocity.' },
+      { question: 'Does Kansas have reciprocal licensing?', answer: 'Yes, with IN, MN, MO, NE, OK and TX. The UAS Application is still required regardless of reciprocity.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -844,7 +844,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Nebraska classifies all drone pesticide application as aerial regardless of drone size, requiring Category 12 (Aerial Pest Control) and an Aerial Pesticide Business License. The NE PSC Precision Ag Grant Program provides funding for drone acquisition. Rates run $12 to $16 per acre across 9.8 million acres of corn.',
     licensingDetails:
-      'Nebraska pesticide licensing is administered by the Nebraska Department of Agriculture (NDA) under Category 12 (Aerial Pest Control). A key NDA policy: all drone pesticide application is classified as aerial regardless of drone size, even sub-55-lb drones require Category 12 and a Nebraska Aerial Pesticide Business License.\n\nExams are $55 each through Pearson VUE with a $90 license fee for 3 years. Recertification via training or re-exam is required every 3 years. The NE Public Service Commission Precision Ag Grant Program provides state funding for drone acquisition, separate from USDA EQIP. Reciprocity exists with WY, WA, ND, TX, SD, MT, MO, KS, MN, and MS.',
+      'Nebraska pesticide licensing is administered by the Nebraska Department of Agriculture (NDA) under Category 12 (Aerial Pest Control). A key NDA policy: all drone pesticide application is classified as aerial regardless of drone size, even sub-55-lb drones require Category 12 and a Nebraska Aerial Pesticide Business License.\n\nExams are $55 each through Pearson VUE with a $90 license fee for 3 years. Recertification via training or re-exam is required every 3 years. The NE Public Service Commission Precision Ag Grant Program provides state funding for drone acquisition, separate from USDA EQIP. Reciprocity exists with WY, WA, ND, TX, SD, MT, MO, KS, MN and MS.',
     authorityLinks: [
       { label: 'NDA Aerial Applicator License', url: 'https://nda.nebraska.gov/pesticide/aerial_license' },
       { label: 'University of Nebraska Extension', url: 'https://extension.unl.edu' },
@@ -853,7 +853,7 @@ export const stateData: StateData[] = [
       { question: 'Does Nebraska treat small drones differently from large ones?', answer: 'No. NDA classifies all drone pesticide application as aerial regardless of size. Even a sub-55-lb drone applying pesticide requires Category 12 and an Aerial Pesticide Business License.' },
       { question: 'What is the Nebraska Precision Ag Grant Program?', answer: 'The NE Public Service Commission offers grants to fund precision agriculture equipment including drones for farmers. This can offset purchase costs separately from USDA EQIP.' },
       { question: 'What does drone spraying cost in Nebraska?', answer: '$12 to $16 per acre for row crops. Large irrigated fields in central and western Nebraska get the lowest rates. Eastern Nebraska pricing is competitive with Iowa.' },
-      { question: 'Does Nebraska have reciprocal licensing?', answer: 'Yes, with WY, WA, ND, TX, SD, MT, MO, KS, MN, and MS. One of the broader reciprocity lists in the Great Plains.' },
+      { question: 'Does Nebraska have reciprocal licensing?', answer: 'Yes, with WY, WA, ND, TX, SD, MT, MO, KS, MN and MS. One of the broader reciprocity lists in the Great Plains.' },
       { question: 'When is peak spray season in Nebraska?', answer: 'Corn VT/R1 in late July. Wheat heading in early June in western NE. Cover crop seeding August through October.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -898,7 +898,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'North Dakota is the only US state with a formally separate Unmanned Aerial Applicator License, issued by the ND Aeronautics Commission ($200) in addition to NDSU pesticide certification. As of 2024, only 21 licensed unmanned aerial applicators served the state\'s 6.5 million acres of wheat and 5.8 million acres of soybeans. Rates run $12 to $17 per acre.',
     licensingDetails:
-      'North Dakota is the only US state with a formally separate Unmanned Aerial Applicator License, issued by the ND Aeronautics Commission in addition to NDSU pesticide certification. The process requires a Core Aerial exam plus a category exam through NDSU (~$10 exam + $25 NDSU certification), followed by a $200 Aeronautics Commission license.\n\nAll unmanned aircraft must be registered with the ND Aeronautics Commission before use, and applicators must report acreage treated to the Commission by December 1 annually. PAASS (Professional Aerial Applicators Support System) safety meeting attendance is required. As of 2024, only 21 licensed unmanned aerial applicators with 46 pilots and 37 aircraft served the state. Reciprocity exists with SD, MN, and MT.',
+      'North Dakota is the only US state with a formally separate Unmanned Aerial Applicator License, issued by the ND Aeronautics Commission in addition to NDSU pesticide certification. The process requires a Core Aerial exam plus a category exam through NDSU (~$10 exam + $25 NDSU certification), followed by a $200 Aeronautics Commission license.\n\nAll unmanned aircraft must be registered with the ND Aeronautics Commission before use, and applicators must report acreage treated to the Commission by December 1 annually. PAASS (Professional Aerial Applicators Support System) safety meeting attendance is required. As of 2024, only 21 licensed unmanned aerial applicators with 46 pilots and 37 aircraft served the state. Reciprocity exists with SD, MN and MT.',
     authorityLinks: [
       { label: 'ND Aeronautics Commission', url: 'https://aero.nd.gov' },
       { label: 'NDSU Agriculture and Extension', url: 'https://www.ndsu.edu/agriculture' },
@@ -950,7 +950,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'South Dakota requires Category 17 (Aerial Application) with a $35 license fee for 2 years, one of the lowest cost structures in the region. SDSU Extension publishes a detailed drone guide (P-00354). Rates run $12 to $16 per acre across 5.6 million acres of corn and 5.1 million acres of soybeans.',
     licensingDetails:
-      'South Dakota pesticide licensing is administered by the Department of Agriculture and Natural Resources (DANR) under Category 17 (Aerial Application). Applicators need Core Category G (General) plus Category 17 plus at least one use category. License fees are $35 for 2 years, one of the lowest fee structures in the Great Plains.\n\nRemote ID compliance has been required since September 2023 for all commercial UAS operations. SDSU Extension publishes a detailed drone pesticide application guide (P-00354, updated September 2025). Recertification is required every 2 years via classes or online course. Reciprocity exists with MT, ND, MN, IA, NE, and WY.',
+      'South Dakota pesticide licensing is administered by the Department of Agriculture and Natural Resources (DANR) under Category 17 (Aerial Application). Applicators need Core Category G (General) plus Category 17 plus at least one use category. License fees are $35 for 2 years, one of the lowest fee structures in the Great Plains.\n\nRemote ID compliance has been required since September 2023 for all commercial UAS operations. SDSU Extension publishes a detailed drone pesticide application guide (P-00354, updated September 2025). Recertification is required every 2 years via classes or online course. Reciprocity exists with MT, ND, MN, IA, NE and WY.',
     authorityLinks: [
       { label: 'SD DANR Pesticide Applicators', url: 'https://danr.sd.gov/Agriculture/Inspection/Pesticide/ApplicatorsDealers/default.aspx' },
       { label: 'SDSU Extension Drone Guide P-00354', url: 'https://extension.sdstate.edu/sites/default/files/2025-09/P-00354-v2.pdf' },
@@ -958,10 +958,10 @@ export const stateData: StateData[] = [
     ],
     faqs: [
       { question: 'What does drone spraying cost in South Dakota?', answer: '$12 to $16 per acre for row crops. Eastern SD (corn/soybean) is competitive with Iowa pricing. Western SD wheat fields are larger with slightly lower rates.' },
-      { question: 'What license do I need in South Dakota?', answer: 'FAA Part 107, Part 137, and DANR commercial applicator license with Category G (General) + Category 17 (Aerial Application) + at least one use category. License is $35 for 2 years.' },
+      { question: 'What license do I need in South Dakota?', answer: 'FAA Part 107, Part 137 and DANR commercial applicator license with Category G (General) + Category 17 (Aerial Application) + at least one use category. License is $35 for 2 years.' },
       { question: 'Is there a drone-specific guide for South Dakota?', answer: 'Yes. SDSU Extension publishes P-00354 "Drone Pesticide Application Guide" (updated September 2025), covering all state and federal requirements in one document.' },
       { question: 'Does South Dakota require Remote ID?', answer: 'Yes, since September 2023 for all commercial UAS operations, consistent with the FAA Remote ID rule.' },
-      { question: 'Does South Dakota have reciprocal licensing?', answer: 'Yes, with MT, ND, MN, IA, NE, and WY.' },
+      { question: 'Does South Dakota have reciprocal licensing?', answer: 'Yes, with MT, ND, MN, IA, NE and WY.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -1000,7 +1000,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Montana is the #2 US wheat state at 5.2 million acres, with Category 18 (Aerial Applicator) licensing and free exams at MDA field offices. Rates run $12 to $18 per acre. Large ranch acreage creates additional demand for pasture and rangeland drone applications beyond row crop spraying.',
     licensingDetails:
-      'Montana pesticide licensing is administered by the Montana Department of Agriculture (MDA) under Category 18 (Aerial Applicator). Applicators take Core plus Category 18 plus one use-site category, 3 exams total. Exams are administered free of charge at MDA field offices, which is unusual nationally. The annual license fee is $85.\n\nRenewal is on a 5-year cycle with 12 CE credits per category required. Large ranch and rangeland acreage in Montana creates demand for pasture applications beyond standard row crop work. Reciprocity exists with ND, SD, WY, and NE, with a Montana rules exam required.',
+      'Montana pesticide licensing is administered by the Montana Department of Agriculture (MDA) under Category 18 (Aerial Applicator). Applicators take Core plus Category 18 plus one use-site category, 3 exams total. Exams are administered free of charge at MDA field offices, which is unusual nationally. The annual license fee is $85.\n\nRenewal is on a 5-year cycle with 12 CE credits per category required. Large ranch and rangeland acreage in Montana creates demand for pasture applications beyond standard row crop work. Reciprocity exists with ND, SD, WY and NE, with a Montana rules exam required.',
     authorityLinks: [
       { label: 'Montana Department of Agriculture', url: 'https://agr.mt.gov' },
       { label: 'Montana State University Extension', url: 'https://www.montana.edu/extension' },
@@ -1010,7 +1010,7 @@ export const stateData: StateData[] = [
       { question: 'Are Montana licensing exams really free?', answer: 'Yes. MDA administers exams at field offices at no charge, which is unusual nationally. The license itself is $85 per year.' },
       { question: 'When is wheat heading in Montana?', answer: 'Winter wheat heads in late May to early June. Spring wheat heads in late June to early July, overlapping with North Dakota timing.' },
       { question: 'Is there drone demand beyond wheat in Montana?', answer: 'Yes. Pasture and rangeland applications (brush control, spot herbicide treatment) on large ranch operations are an emerging niche. Drones access remote terrain that ground rigs cannot reach efficiently.' },
-      { question: 'Does Montana have reciprocal licensing?', answer: 'Yes, with ND, SD, WY, and NE. Must pass MT rules exam.' },
+      { question: 'Does Montana have reciprocal licensing?', answer: 'Yes, with ND, SD, WY and NE. Must pass MT rules exam.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -1048,7 +1048,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Wyoming explicitly includes UAS in its aerial application administrative code (Ch. 28, Sec. 28-5). Agricultural crop acreage is the smallest in the Great Plains, but ranch and rangeland applications create niche drone demand. Rates run $14 to $20 per acre.',
     licensingDetails:
-      'Wyoming pesticide licensing is administered by the Wyoming Department of Agriculture (WDA). The aerial application category in Wyoming Administrative Code Chapter 28, Section 28-5 explicitly includes UAS, one of the cleaner drone inclusions in any state code. Applicators take Core plus Aerial plus a use category.\n\nWyoming has the smallest agricultural crop acreage in the Great Plains, but large ranch and rangeland operations create niche drone demand for pasture applications, brush control, and spot herbicide treatment. Renewal is on a 3-year cycle. Reciprocity exists with MT, NE, SD, and CO.',
+      'Wyoming pesticide licensing is administered by the Wyoming Department of Agriculture (WDA). The aerial application category in Wyoming Administrative Code Chapter 28, Section 28-5 explicitly includes UAS, one of the cleaner drone inclusions in any state code. Applicators take Core plus Aerial plus a use category.\n\nWyoming has the smallest agricultural crop acreage in the Great Plains, but large ranch and rangeland operations create niche drone demand for pasture applications, brush control and spot herbicide treatment. Renewal is on a 3-year cycle. Reciprocity exists with MT, NE, SD and CO.',
     authorityLinks: [
       { label: 'Wyoming Department of Agriculture', url: 'https://agriculture.wy.gov' },
       { label: 'University of Wyoming Extension', url: 'https://www.uwyo.edu/uwe' },
@@ -1056,9 +1056,9 @@ export const stateData: StateData[] = [
     faqs: [
       { question: 'Is there much drone spray demand in Wyoming?', answer: 'Limited for row crops. Primary demand is rangeland and pasture applications on large ranch operations, plus some wheat and sugar beet work. Rates are higher due to remote locations and travel distances.' },
       { question: 'Does Wyoming aerial licensing explicitly cover drones?', answer: 'Yes. WY Admin Code Chapter 28, Section 28-5 explicitly includes UAS in the aerial application definition.' },
-      { question: 'What does drone spraying cost in Wyoming?', answer: '$14 to $20 per acre. Higher than neighboring states due to small fields, remote locations, and few operators.' },
-      { question: 'Does Wyoming have reciprocal licensing?', answer: 'Yes, with MT, NE, SD, and CO.' },
-      { question: 'What crops drive drone demand in Wyoming?', answer: 'Wheat (300K acres), sugar beets in the Big Horn Basin, and alfalfa hay. Rangeland brush control and spot herbicide treatment on cattle ranches are growing applications.' },
+      { question: 'What does drone spraying cost in Wyoming?', answer: '$14 to $20 per acre. Higher than neighboring states due to small fields, remote locations and few operators.' },
+      { question: 'Does Wyoming have reciprocal licensing?', answer: 'Yes, with MT, NE, SD and CO.' },
+      { question: 'What crops drive drone demand in Wyoming?', answer: 'Wheat (300K acres), sugar beets in the Big Horn Basin and alfalfa hay. Rangeland brush control and spot herbicide treatment on cattle ranches are growing applications.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -1097,7 +1097,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Colorado uses Category 114 (Aerial Pest Control) which explicitly includes UAV, with a $350 per year business license among the higher state fees nationally. Rates run $13 to $18 per acre across 2.2 million acres of wheat and 1.3 million acres of irrigated corn on the eastern plains.',
     licensingDetails:
-      'Colorado pesticide licensing is administered by the Colorado Department of Agriculture (CDA) under Category 114 (Aerial Pest Control), which explicitly includes UAV. Applicators take Core plus Category 114 plus a site category at $41.50 per exam. The commercial pesticide business license is $350 per year, among the higher annual fees nationally.\n\nContinuing education is 7 core hours plus 1 hour per category per 3-year cycle. Eastern plains wheat and irrigated corn drive the primary demand. Reciprocity exists with NE, WY, and NM.',
+      'Colorado pesticide licensing is administered by the Colorado Department of Agriculture (CDA) under Category 114 (Aerial Pest Control), which explicitly includes UAV. Applicators take Core plus Category 114 plus a site category at $41.50 per exam. The commercial pesticide business license is $350 per year, among the higher annual fees nationally.\n\nContinuing education is 7 core hours plus 1 hour per category per 3-year cycle. Eastern plains wheat and irrigated corn drive the primary demand. Reciprocity exists with NE, WY and NM.',
     authorityLinks: [
       { label: 'Colorado Department of Agriculture', url: 'https://ag.colorado.gov' },
       { label: 'Colorado State University Extension', url: 'https://extension.colostate.edu' },
@@ -1107,7 +1107,7 @@ export const stateData: StateData[] = [
       { question: 'What does drone spraying cost in Colorado?', answer: '$13 to $18 per acre. Eastern plains wheat and corn get competitive rates. Mountain and western slope applications are higher due to terrain and travel.' },
       { question: 'Is the $350 business license annual?', answer: 'Yes. CDA requires a $350 per year commercial pesticide applicator business license, which is in addition to individual applicator certification fees.' },
       { question: 'When is peak spray season in Colorado?', answer: 'Wheat heading in late May to early June on the eastern plains. Corn VT/R1 in July. Mountain agriculture has a compressed season from June through August.' },
-      { question: 'Does Colorado have reciprocal licensing?', answer: 'Yes, with NE, WY, and NM. Contact CDA for current procedures.' },
+      { question: 'Does Colorado have reciprocal licensing?', answer: 'Yes, with NE, WY and NM. Contact CDA for current procedures.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -1119,7 +1119,7 @@ export const stateData: StateData[] = [
     abbreviation: 'OK',
     regionSlug: 'great-plains',
     regionName: 'Great Plains',
-    licensingAgency: 'Oklahoma Department of Agriculture, Food, and Forestry (ODAFF)',
+    licensingAgency: 'Oklahoma Department of Agriculture, Food and Forestry (ODAFF)',
     licensingAgencyUrl: 'https://ag.ok.gov',
     aerialCategory: 'Aerial category under ODAFF. FAA Part 137 must be filed with the Board before aerial license is issued.',
     examsRequired: 'Core + category exams. 70% passing. $50 total initial. $100/category/yr license.',
@@ -1148,16 +1148,16 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Oklahoma requires FAA Part 137 to be filed with the state Board before issuing an aerial license under OK Statutes 2-3-82. Winter wheat (4.5 million acres) drives primary demand with heading in late May. Rates run $12 to $18 per acre, with cotton defoliant in southwestern OK as a secondary market.',
     licensingDetails:
-      'Oklahoma pesticide licensing is administered by the Oklahoma Department of Agriculture, Food, and Forestry (ODAFF). A unique Oklahoma requirement: FAA Part 137 must be filed with the Oklahoma Board before an aerial applicator license is issued, under OK Statutes 2-3-82. This is a pre-filing step, not just a credential verification.\n\nInitial certification is $50 with a $100 per category per year license fee. Late renewal more than 30 days past due doubles fees plus adds a $100 penalty. Annual renewal is required with 5-year recertification via CEUs or re-exam. Reciprocity exists with AR, IN, KS, LA, MN, NE, NM, and TX.',
+      'Oklahoma pesticide licensing is administered by the Oklahoma Department of Agriculture, Food and Forestry (ODAFF). A unique Oklahoma requirement: FAA Part 137 must be filed with the Oklahoma Board before an aerial applicator license is issued, under OK Statutes 2-3-82. This is a pre-filing step, not just a credential verification.\n\nInitial certification is $50 with a $100 per category per year license fee. Late renewal more than 30 days past due doubles fees plus adds a $100 penalty. Annual renewal is required with 5-year recertification via CEUs or re-exam. Reciprocity exists with AR, IN, KS, LA, MN, NE, NM and TX.',
     authorityLinks: [
-      { label: 'Oklahoma Department of Agriculture, Food, and Forestry', url: 'https://ag.ok.gov' },
+      { label: 'Oklahoma Department of Agriculture, Food and Forestry', url: 'https://ag.ok.gov' },
       { label: 'Oklahoma State University Extension', url: 'https://extension.okstate.edu' },
     ],
     faqs: [
       { question: 'What is the Oklahoma Part 137 filing requirement?', answer: 'ODAFF requires your FAA Part 137 Agricultural Aircraft Operator Certificate to be filed with the Oklahoma Board before they will issue your aerial applicator license. This is a pre-filing step, not just a credential check.' },
       { question: 'What does drone spraying cost in Oklahoma?', answer: 'Wheat runs $12 to $16 per acre. Cotton defoliant in southwestern OK runs $14 to $18. Wind is a significant operational constraint statewide.' },
       { question: 'What happens if I renew late in Oklahoma?', answer: 'Late renewal doubles your fees plus a $100 penalty if more than 30 days past due. Plan renewal well ahead of your anniversary date.' },
-      { question: 'Does Oklahoma have reciprocal licensing?', answer: 'Yes, with AR, IN, KS, LA, MN, NE, NM, and TX. Contact ODAFF for current requirements.' },
+      { question: 'Does Oklahoma have reciprocal licensing?', answer: 'Yes, with AR, IN, KS, LA, MN, NE, NM and TX. Contact ODAFF for current requirements.' },
       { question: 'When is peak spray season in Oklahoma?', answer: 'Wheat heading in late May. Cotton mid-season insecticide July to August. Cotton defoliant September to October. Wind conditions limit daily windows much of the year.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -1194,18 +1194,18 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['texas', 'oklahoma', 'colorado', 'arizona'],
     aeoBlock:
-      'New Mexico has no separate aerial applicator category. Drone operators certify in the relevant use category with Core exam plus category at $55 per exam. Agricultural drone demand centers on pecan orchards, chile, and ranch operations in southern New Mexico. Rates run $15 to $22 per acre.',
+      'New Mexico has no separate aerial applicator category. Drone operators certify in the relevant use category with Core exam plus category at $55 per exam. Agricultural drone demand centers on pecan orchards, chile and ranch operations in southern New Mexico. Rates run $15 to $22 per acre.',
     licensingDetails:
-      'New Mexico pesticide licensing is administered by the New Mexico Department of Agriculture (NMDA). Unlike most states, NMDA does not maintain a separate aerial applicator category, drone operators certify in the relevant use category (e.g., agricultural pest control), and the same license covers aerial application. Exams are $55 each with a $75 per year license fee.\n\nAnnual renewal is required with 4 CEUs per year. Agricultural drone demand in New Mexico centers on pecan orchards in the Mesilla Valley, chile in southern NM, and ranch and rangeland operations. Reciprocity may be available with CO, OK, and TX on a case-by-case basis.',
+      'New Mexico pesticide licensing is administered by the New Mexico Department of Agriculture (NMDA). Unlike most states, NMDA does not maintain a separate aerial applicator category, drone operators certify in the relevant use category (e.g., agricultural pest control) and the same license covers aerial application. Exams are $55 each with a $75 per year license fee.\n\nAnnual renewal is required with 4 CEUs per year. Agricultural drone demand in New Mexico centers on pecan orchards in the Mesilla Valley, chile in southern NM and ranch and rangeland operations. Reciprocity may be available with CO, OK and TX on a case-by-case basis.',
     authorityLinks: [
       { label: 'New Mexico Department of Agriculture', url: 'https://www.nmda.nmsu.edu' },
       { label: 'NMSU Extension', url: 'https://extension.nmsu.edu' },
     ],
     faqs: [
       { question: 'Does New Mexico have an aerial applicator category?', answer: 'No. Unlike most states, NMDA does not maintain a separate aerial category. Drone operators certify in the relevant use category (e.g., agricultural pest control) and the same license covers aerial application.' },
-      { question: 'What crops use drone spraying in New Mexico?', answer: 'Pecan orchards in the Mesilla Valley, chile in southern NM, cotton, and ranch/rangeland operations. Row crop acreage is limited compared to other Great Plains states.' },
-      { question: 'What does drone spraying cost in New Mexico?', answer: '$15 to $22 per acre. Higher than the Corn Belt due to small field sizes, remote locations, and few operators. Pecan orchard work commands premium rates.' },
-      { question: 'Does New Mexico have reciprocal licensing?', answer: 'Case-by-case basis. CO, OK, and TX operators may only need the NM laws exam. Contact NMDA.' },
+      { question: 'What crops use drone spraying in New Mexico?', answer: 'Pecan orchards in the Mesilla Valley, chile in southern NM, cotton and ranch/rangeland operations. Row crop acreage is limited compared to other Great Plains states.' },
+      { question: 'What does drone spraying cost in New Mexico?', answer: '$15 to $22 per acre. Higher than the Corn Belt due to small field sizes, remote locations and few operators. Pecan orchard work commands premium rates.' },
+      { question: 'Does New Mexico have reciprocal licensing?', answer: 'Case-by-case basis. CO, OK and TX operators may only need the NM laws exam. Contact NMDA.' },
       { question: 'Is there much drone operator competition in New Mexico?', answer: 'Very little. Low agricultural acreage and small operator density mean less pricing pressure but also longer travel distances between jobs.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -1246,19 +1246,19 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['arkansas', 'louisiana', 'alabama', 'tennessee'],
     aeoBlock:
-      'Mississippi has 2.1 million acres of soybeans, 800K acres of corn, and 600K acres of cotton in the Delta, with rates of $14 to $18 per acre. MDAC requires Category 11 (Aerial Applicator) plus an Ag Aviation license. Drone-specific regulations are evolving, with a UAV FAQ published and rules under active development.',
+      'Mississippi has 2.1 million acres of soybeans, 800K acres of corn and 600K acres of cotton in the Delta, with rates of $14 to $18 per acre. MDAC requires Category 11 (Aerial Applicator) plus an Ag Aviation license. Drone-specific regulations are evolving, with a UAV FAQ published and rules under active development.',
     licensingDetails:
-      'Mississippi pesticide licensing is administered by the Mississippi Department of Agriculture and Commerce (MDAC) under Category 11 (Aerial Applicator), which also requires an Ag Aviation license. A written exam is required on a 3-year certification cycle. Exact exam fees are unverified, contact MDAC directly for current rates.\n\nDrone-specific regulations are still evolving. MDAC has published a UAV FAQ and applies hormone herbicide restrictions to aerial application. Special use permits are required for research drone applications. Reciprocity exists with AL, LA, AR, and TN.',
+      'Mississippi pesticide licensing is administered by the Mississippi Department of Agriculture and Commerce (MDAC) under Category 11 (Aerial Applicator), which also requires an Ag Aviation license. A written exam is required on a 3-year certification cycle. Exact exam fees are unverified, contact MDAC directly for current rates.\n\nDrone-specific regulations are still evolving. MDAC has published a UAV FAQ and applies hormone herbicide restrictions to aerial application. Special use permits are required for research drone applications. Reciprocity exists with AL, LA, AR and TN.',
     authorityLinks: [
       { label: 'MDAC Pesticide Programs', url: 'https://www.mdac.ms.gov' },
       { label: 'Mississippi State University Extension', url: 'https://extension.msstate.edu' },
     ],
     faqs: [
-      { question: 'What does drone spraying cost in Mississippi?', answer: 'Delta rates run $14 to $18 per acre for rice, cotton, and soybean applications. Strong manned aerial applicator competition keeps drone pricing moderate.' },
+      { question: 'What does drone spraying cost in Mississippi?', answer: 'Delta rates run $14 to $18 per acre for rice, cotton and soybean applications. Strong manned aerial applicator competition keeps drone pricing moderate.' },
       { question: 'Are Mississippi drone regulations finalized?', answer: 'Partially. MDAC has published a UAV FAQ and requires Category 11 plus Ag Aviation licensing, but drone-specific rules are still evolving. Contact MDAC directly for current requirements.' },
-      { question: 'What crops drive drone demand in Mississippi?', answer: 'Rice (100% aerial treated), cotton (defoliant Sep to Oct), soybeans (R2/R3 fungicide), and corn. The Delta region is the primary market.' },
-      { question: 'Does Mississippi have reciprocal licensing?', answer: 'Yes, with AL, LA, AR, and TN. Contact MDAC for current procedures.' },
-      { question: 'Is the Mississippi Delta a good market for drone operators?', answer: 'Yes, but competitive. Manned aerial applicators have deep roots here. Drones win on rice paddies (ground access impossible), drift-sensitive soybean borders, and small levee fields where airplane turns are inefficient.' },
+      { question: 'What crops drive drone demand in Mississippi?', answer: 'Rice (100% aerial treated), cotton (defoliant Sep to Oct), soybeans (R2/R3 fungicide) and corn. The Delta region is the primary market.' },
+      { question: 'Does Mississippi have reciprocal licensing?', answer: 'Yes, with AL, LA, AR and TN. Contact MDAC for current procedures.' },
+      { question: 'Is the Mississippi Delta a good market for drone operators?', answer: 'Yes, but competitive. Manned aerial applicators have deep roots here. Drones win on rice paddies (ground access impossible), drift-sensitive soybean borders and small levee fields where airplane turns are inefficient.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -1302,7 +1302,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Arkansas is the #1 US rice state at 1.2 million acres, effectively 100 percent aerial treated at heading stage. Drone operators must obtain a specific "pilot authorization" on their license; CAT licenses are invalid for drones. No reciprocity with any state. Rates run $14 to $18 per acre.',
     licensingDetails:
-      'Arkansas pesticide licensing is administered by the Arkansas Department of Agriculture. Drones are classified as aircraft and must follow the aerial application sections of federal pesticide labels. A standard private applicator license is insufficient, operators must obtain a specific "pilot authorization" added to their license.\n\nCommercial Applicator Technician (CAT) license holders explicitly cannot perform drone applications. Drone-applied pesticides are restricted to agricultural crop settings only, golf courses, home lawns, turf, and ornamentals are excluded. Arkansas offers no reciprocity with any state; all operators must test in Arkansas regardless of credentials held elsewhere. Renewal is on a 5-year cycle with recertification training required.',
+      'Arkansas pesticide licensing is administered by the Arkansas Department of Agriculture. Drones are classified as aircraft and must follow the aerial application sections of federal pesticide labels. A standard private applicator license is insufficient, operators must obtain a specific "pilot authorization" added to their license.\n\nCommercial Applicator Technician (CAT) license holders explicitly cannot perform drone applications. Drone-applied pesticides are restricted to agricultural crop settings only, golf courses, home lawns, turf and ornamentals are excluded. Arkansas offers no reciprocity with any state; all operators must test in Arkansas regardless of credentials held elsewhere. Renewal is on a 5-year cycle with recertification training required.',
     authorityLinks: [
       { label: 'Arkansas Department of Agriculture', url: 'https://www.agriculture.arkansas.gov' },
       { label: 'University of Arkansas Cooperative Extension', url: 'https://www.uaex.uada.edu' },
@@ -1311,7 +1311,7 @@ export const stateData: StateData[] = [
       { question: 'Why is Arkansas the top state for drone spraying on rice?', answer: 'Arkansas grows 1.2 million acres of rice, all requiring aerial treatment for heading-stage fungicide because flooded paddies make ground equipment impossible. Drones are taking rapid share from airplanes on drift-sensitive borders and small levee fields.' },
       { question: 'Can I use a CAT license for drone spraying in Arkansas?', answer: 'No. Arkansas explicitly prohibits Commercial Applicator Technician (CAT) license holders from performing drone applications. You must hold a full commercial applicator license with pilot authorization.' },
       { question: 'Does Arkansas have reciprocal licensing?', answer: 'No. Arkansas does not offer reciprocity with any state. All operators must test in Arkansas regardless of credentials held elsewhere.' },
-      { question: 'Can I spray golf courses or lawns by drone in Arkansas?', answer: 'No. Arkansas restricts drone-applied pesticides to agricultural crop settings only. Golf courses, home lawns, turf, and ornamentals are excluded.' },
+      { question: 'Can I spray golf courses or lawns by drone in Arkansas?', answer: 'No. Arkansas restricts drone-applied pesticides to agricultural crop settings only. Golf courses, home lawns, turf and ornamentals are excluded.' },
       { question: 'What does drone spraying cost in Arkansas?', answer: '$14 to $18 per acre for rice and cotton. Large blocks over 500 acres sometimes negotiate $12 to $14. Grand Prairie and Delta regions are the primary markets.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -1355,14 +1355,14 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Louisiana mandates the LSU AgCenter Drone Safety Program before drone pesticide certification, the only state with a mandatory pre-certification drone course. Non-resident Aerial Owner Operator License is $500. Rates run $14 to $20 per acre across 400K acres of rice and 1.1 million acres of soybeans.',
     licensingDetails:
-      'Louisiana pesticide licensing is administered by the Louisiana Department of Agriculture and Forestry (LDAF) under Category 11 (Aerial Applicator), which also requires an Aerial Owner Operator License ($200 for residents, $500 for non-residents). Louisiana is the only state that mandates a pre-certification drone safety training course: the LSU AgCenter Drone Safety Program (self-paced online) must be completed before applying.\n\nAdditional requirements include $50 per year per piece of spray equipment, minimum $50,000 liability insurance, and a $20 per year renewal fee. Louisiana distinguishes between a Drone Operator License (own-farm use) and a full Aerial Applicator License (commercial for-hire). Recertification via meeting or retest is required every 3 years. Reciprocity exists with AL, AR, MS, and TX.',
+      'Louisiana pesticide licensing is administered by the Louisiana Department of Agriculture and Forestry (LDAF) under Category 11 (Aerial Applicator), which also requires an Aerial Owner Operator License ($200 for residents, $500 for non-residents). Louisiana is the only state that mandates a pre-certification drone safety training course: the LSU AgCenter Drone Safety Program (self-paced online) must be completed before applying.\n\nAdditional requirements include $50 per year per piece of spray equipment, minimum $50,000 liability insurance and a $20 per year renewal fee. Louisiana distinguishes between a Drone Operator License (own-farm use) and a full Aerial Applicator License (commercial for-hire). Recertification via meeting or retest is required every 3 years. Reciprocity exists with AL, AR, MS and TX.',
     authorityLinks: [
       { label: 'LDAF Pesticide Licensing', url: 'https://www.ldaf.la.gov/plants/pesticides/pesticide-licensing' },
       { label: 'LSU AgCenter Drone Safety Program', url: 'https://store.lsuagcenter.com/p-2619-drone-safety-program.aspx' },
       { label: 'LSU AgCenter', url: 'https://www.lsuagcenter.com' },
     ],
     faqs: [
-      { question: 'What is the LSU AgCenter Drone Safety Program?', answer: 'A mandatory self-paced online course through LSU AgCenter Moodle platform. You must complete it and have the certificate sent to LDAF before applying for drone pesticide certification. It covers safe flight procedures, calibration, and regulatory compliance.' },
+      { question: 'What is the LSU AgCenter Drone Safety Program?', answer: 'A mandatory self-paced online course through LSU AgCenter Moodle platform. You must complete it and have the certificate sent to LDAF before applying for drone pesticide certification. It covers safe flight procedures, calibration and regulatory compliance.' },
       { question: 'How much does the non-resident license cost in Louisiana?', answer: '$500 for the Aerial Owner Operator License (vs $200 for LA residents), plus $50/yr per piece of spray equipment. This is the highest non-resident aerial fee in the Delta region.' },
       { question: 'What does drone spraying cost in Louisiana?', answer: '$14 to $20 per acre. Rice at $14 to $18, soybeans at $12 to $16, cotton defoliant at $16 to $20. SW Louisiana rice and NE Louisiana cotton are the primary markets.' },
       { question: 'Does Louisiana distinguish between own-farm and commercial drone use?', answer: 'Yes. LDAF has a Drone Operator License for farmers spraying only their own land and a full Aerial Applicator License for commercial for-hire work. Different requirements and fees apply.' },
@@ -1404,9 +1404,9 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['mississippi', 'tennessee', 'georgia', 'florida'],
     aeoBlock:
-      'Alabama requires insurance and a Custom Business License for for-hire aerial drone operations. Cotton (450K acres) is the primary crop, with rates of $16 to $24 per acre. Reciprocity with 8 states including FL, GA, MS, and TN.',
+      'Alabama requires insurance and a Custom Business License for for-hire aerial drone operations. Cotton (450K acres) is the primary crop, with rates of $16 to $24 per acre. Reciprocity with 8 states including FL, GA, MS and TN.',
     licensingDetails:
-      'Alabama pesticide licensing is administered by the Alabama Department of Agriculture and Industries (ADAI). Aerial applicators require the standard Core and category exams plus proof of insurance for the aerial mode. Commercial for-hire operators must also obtain a Custom Business License from ADAI.\n\nContact ADAI directly for current exam fees and CE requirements, as specific rates were unverified at time of publication. Renewal cycles vary by category (3 to 5 years). Reciprocity exists with FL, GA, IN, LA, MS, OH, SC, and TN.',
+      'Alabama pesticide licensing is administered by the Alabama Department of Agriculture and Industries (ADAI). Aerial applicators require the standard Core and category exams plus proof of insurance for the aerial mode. Commercial for-hire operators must also obtain a Custom Business License from ADAI.\n\nContact ADAI directly for current exam fees and CE requirements, as specific rates were unverified at time of publication. Renewal cycles vary by category (3 to 5 years). Reciprocity exists with FL, GA, IN, LA, MS, OH, SC and TN.',
     authorityLinks: [
       { label: 'Alabama Department of Agriculture and Industries', url: 'https://agi.alabama.gov' },
       { label: 'Alabama Cooperative Extension System', url: 'https://www.aces.edu' },
@@ -1415,7 +1415,7 @@ export const stateData: StateData[] = [
       { question: 'What does drone spraying cost in Alabama?', answer: '$16 to $24 per acre. Cotton defoliant and mid-season insecticide at the high end, soybean fungicide at the low end.' },
       { question: 'What is the Custom Business License?', answer: 'Alabama requires a separate Custom Business License for aerial for-hire operations. This is in addition to individual applicator certification.' },
       { question: 'What crops drive drone demand in Alabama?', answer: 'Cotton (450K acres) in central and southern Alabama, soybeans and corn in northern Alabama. Peanut and pecan operations add specialty demand.' },
-      { question: 'Does Alabama have reciprocal licensing?', answer: 'Yes, with FL, GA, IN, LA, MS, OH, SC, and TN. One of the broader reciprocity lists in the Southeast.' },
+      { question: 'Does Alabama have reciprocal licensing?', answer: 'Yes, with FL, GA, IN, LA, MS, OH, SC and TN. One of the broader reciprocity lists in the Southeast.' },
       { question: 'Is Alabama a good market for new drone operators?', answer: 'Moderate. Lower operator density than the Corn Belt means less competition but also smaller total acreage. Operators who serve both cotton and specialty crops have the best year-round utilization.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -1454,9 +1454,9 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['alabama', 'florida', 'south-carolina', 'north-carolina', 'tennessee'],
     aeoBlock:
-      'Georgia is the #2 US cotton state at 1.2 million acres, with Category 34 (Aerial Methods) requiring FAA proof and a Pesticide Contractor License. Rates run $16 to $26 per acre. Peanuts, pecans, and blueberries add specialty crop demand beyond cotton.',
+      'Georgia is the #2 US cotton state at 1.2 million acres, with Category 34 (Aerial Methods) requiring FAA proof and a Pesticide Contractor License. Rates run $16 to $26 per acre. Peanuts, pecans and blueberries add specialty crop demand beyond cotton.',
     licensingDetails:
-      'Georgia pesticide licensing is administered by the Georgia Department of Agriculture (GDA). Category 34 (Aerial Methods) covers drone application and uniquely requires proof of FAA certification (Part 107 and/or Part 137) at the state level, most states do not formally verify FAA credentials. Exams are $45 each with a $90 license fee on a 5-year cycle.\n\nCategory 34 carries zero CE hours of its own; continuing education must be earned through site categories. A Pesticide Contractor License is required for the business entity in addition to individual certification. Reciprocity exists with AL, FL, SC, TN, and NC.',
+      'Georgia pesticide licensing is administered by the Georgia Department of Agriculture (GDA). Category 34 (Aerial Methods) covers drone application and uniquely requires proof of FAA certification (Part 107 and/or Part 137) at the state level, most states do not formally verify FAA credentials. Exams are $45 each with a $90 license fee on a 5-year cycle.\n\nCategory 34 carries zero CE hours of its own; continuing education must be earned through site categories. A Pesticide Contractor License is required for the business entity in addition to individual certification. Reciprocity exists with AL, FL, SC, TN and NC.',
     authorityLinks: [
       { label: 'Georgia Department of Agriculture', url: 'https://agr.georgia.gov' },
       { label: 'University of Georgia Extension', url: 'https://extension.uga.edu' },
@@ -1465,7 +1465,7 @@ export const stateData: StateData[] = [
       { question: 'What does drone spraying cost in Georgia?', answer: 'Cotton defoliant runs $16 to $22 per acre. Pecan and blueberry orchard work runs $22 to $26. Row crop fungicide at the lower end.' },
       { question: 'Does Georgia require FAA proof for state licensing?', answer: 'Yes. Category 34 (Aerial Methods) requires you to show FAA Part 107 and/or Part 137 documentation as part of the state certification. This is unusual; most states do not formally verify FAA credentials.' },
       { question: 'What is the Pesticide Contractor License?', answer: 'Georgia requires commercial operators to hold both individual applicator certification and a Pesticide Contractor License for the business entity.' },
-      { question: 'What specialty crops use drones in Georgia?', answer: 'Peanuts (800K acres), pecans (180K acres), and blueberries (25K acres) all have growing drone adoption. Peach orchards in central Georgia are an emerging niche.' },
+      { question: 'What specialty crops use drones in Georgia?', answer: 'Peanuts (800K acres), pecans (180K acres) and blueberries (25K acres) all have growing drone adoption. Peach orchards in central Georgia are an emerging niche.' },
       { question: 'Does Georgia have reciprocal licensing?', answer: 'Yes, with any EPA-approved state. Special agreement with Mississippi. Contact GDA for specific procedures.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -1506,7 +1506,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Florida requires Aerial Pest Control certification under Chapter 487 with no exam fee but a $250 commercial license and annual aircraft registration with FDACS. Citrus (375K acres) drives the primary drone demand, with Asian citrus psyllid management requiring frequent low-volume insecticide applications. Rates run $18 to $28 per acre.',
     licensingDetails:
-      'Florida pesticide licensing is administered by the Florida Department of Agriculture and Consumer Services (FDACS) under Aerial Pest Control (Chapter 487 F.S.). Florida does not charge exam fees, the $250 commercial license is the main upfront cost. All aircraft including drones must register annually with FDACS, and insurance or a surety bond is required.\n\nFlorida has 24 separate pest control categories, the most granular category system in the US. Operators must certify in each relevant category. Renewal is on a 4-year cycle with 4 Core and 16 Aerial CEUs required. Reciprocity exists with AL, GA, and SC.',
+      'Florida pesticide licensing is administered by the Florida Department of Agriculture and Consumer Services (FDACS) under Aerial Pest Control (Chapter 487 F.S.). Florida does not charge exam fees, the $250 commercial license is the main upfront cost. All aircraft including drones must register annually with FDACS, and insurance or a surety bond is required.\n\nFlorida has 24 separate pest control categories, the most granular category system in the US. Operators must certify in each relevant category. Renewal is on a 4-year cycle with 4 Core and 16 Aerial CEUs required. Reciprocity exists with AL, GA and SC.',
     authorityLinks: [
       { label: 'FDACS Pesticide Licensing', url: 'https://www.fdacs.gov' },
       { label: 'UF/IFAS Extension', url: 'https://ifas.ufl.edu' },
@@ -1556,13 +1556,13 @@ export const stateData: StateData[] = [
     aeoBlock:
       'South Carolina pesticide licensing is administered by Clemson University Department of Pesticide Regulation, with Category 11 (Aerial Applicator) and $50,000 spray insurance required. Reciprocity available with 13 states at $50. Rates run $16 to $24 per acre on cotton and soybeans.',
     licensingDetails:
-      'South Carolina is unique nationally in delegating pesticide applicator regulation to Clemson University Department of Pesticide Regulation rather than a state agriculture department. Category 11 (Aerial Applicator) requires passing both the Core exam ($75) and the Category 11 exam ($50), plus a $50 license fee. Operators must carry $50,000 spray insurance.\n\nRenewal is on a 5-year cycle with Continuing Certification Units (CCUs) varying by category. Reciprocity is available with 13 states including AL, GA, FL, NC, TN, and VA at a $50 reciprocal fee for out-of-state operators.',
+      'South Carolina is unique nationally in delegating pesticide applicator regulation to Clemson University Department of Pesticide Regulation rather than a state agriculture department. Category 11 (Aerial Applicator) requires passing both the Core exam ($75) and the Category 11 exam ($50), plus a $50 license fee. Operators must carry $50,000 spray insurance.\n\nRenewal is on a 5-year cycle with Continuing Certification Units (CCUs) varying by category. Reciprocity is available with 13 states including AL, GA, FL, NC, TN and VA at a $50 reciprocal fee for out-of-state operators.',
     authorityLinks: [
       { label: 'Clemson Pesticide Regulation', url: 'https://www.clemson.edu/public/regulatory/pesticide-regulation' },
       { label: 'Clemson Extension', url: 'https://www.clemson.edu/extension' },
     ],
     faqs: [
-      { question: 'Why does Clemson handle pesticide licensing?', answer: 'South Carolina delegates pesticide applicator regulation to Clemson University Department of Pesticide Regulation rather than a state agriculture department. Exams, licensing, and enforcement all run through Clemson.' },
+      { question: 'Why does Clemson handle pesticide licensing?', answer: 'South Carolina delegates pesticide applicator regulation to Clemson University Department of Pesticide Regulation rather than a state agriculture department. Exams, licensing and enforcement all run through Clemson.' },
       { question: 'What insurance is required?', answer: '$50,000 spray insurance minimum. This is lower than Ohio ($100K/$300K) but still a mandatory requirement.' },
       { question: 'What does drone spraying cost in South Carolina?', answer: '$16 to $24 per acre. Cotton and soybean applications in the coastal plain and Pee Dee region.' },
       { question: 'Does South Carolina have reciprocal licensing?', answer: 'Yes, with 13 states including AL, GA, FL, NC, TN, VA. $50 reciprocal fee.' },
@@ -1585,7 +1585,7 @@ export const stateData: StateData[] = [
     examFees: 'Core/Aerial $50 each. Specialty $20. License $75/yr. Aircraft inspection $25.',
     uniqueRules: [
       'Aircraft inspection fee of $25 per aircraft.',
-      '3 exams minimum: Core, Aerial Methods, and at least one specialty category.',
+      '3 exams minimum: Core, Aerial Methods and at least one specialty category.',
     ],
     reciprocityStates: ['KY', 'SC', 'TN', 'VA'],
     renewalCycle: '2-year cycle for aerial certification',
@@ -1604,9 +1604,9 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['south-carolina', 'virginia', 'tennessee', 'georgia'],
     aeoBlock:
-      'North Carolina requires Core, Aerial Methods, and specialty exams with a $25 per-aircraft inspection fee. Rates run $16 to $25 per acre across 1.6 million acres of soybeans, 900K acres of corn, and high-value tobacco in the Piedmont and Coastal Plain.',
+      'North Carolina requires Core, Aerial Methods and specialty exams with a $25 per-aircraft inspection fee. Rates run $16 to $25 per acre across 1.6 million acres of soybeans, 900K acres of corn and high-value tobacco in the Piedmont and Coastal Plain.',
     licensingDetails:
-      'North Carolina pesticide licensing is administered by the NC Department of Agriculture and Consumer Services (NCDA&CS). Aerial operators must pass a minimum of 3 exams: Core ($50), Aerial Methods ($50), and at least one specialty use-category exam ($20 each). The annual commercial license fee is $75, and each aircraft in your fleet requires a $25 inspection fee.\n\nRenewal is on a 2-year cycle with 4 CE hours required per cycle for aerial certification. Reciprocity exists with KY, SC, TN, and VA. The shorter list compared to Midwest states reflects North Carolina\'s focus on Southeastern state compacts.',
+      'North Carolina pesticide licensing is administered by the NC Department of Agriculture and Consumer Services (NCDA&CS). Aerial operators must pass a minimum of 3 exams: Core ($50), Aerial Methods ($50) and at least one specialty use-category exam ($20 each). The annual commercial license fee is $75, and each aircraft in your fleet requires a $25 inspection fee.\n\nRenewal is on a 2-year cycle with 4 CE hours required per cycle for aerial certification. Reciprocity exists with KY, SC, TN and VA. The shorter list compared to Midwest states reflects North Carolina\'s focus on Southeastern state compacts.',
     authorityLinks: [
       { label: 'NCDA&CS Pesticide Section', url: 'https://www.ncagr.gov' },
       { label: 'NC State Extension', url: 'https://www.ces.ncsu.edu' },
@@ -1614,8 +1614,8 @@ export const stateData: StateData[] = [
     faqs: [
       { question: 'What does drone spraying cost in North Carolina?', answer: 'Row crops run $16 to $20 per acre. Tobacco and specialty crops run $22 to $25. Eastern NC coastal plain has the most demand.' },
       { question: 'What is the aircraft inspection fee?', answer: 'NC charges $25 per aircraft for inspection. Each drone in your fleet needs a separate inspection.' },
-      { question: 'What crops drive drone demand in North Carolina?', answer: 'Soybeans (1.6M acres), corn (900K acres), cotton (350K acres), and tobacco. Sweet potatoes in the Sandhills are an emerging niche.' },
-      { question: 'Does NC have reciprocal licensing?', answer: 'Yes, with KY, SC, TN, and VA. Limited compared to Midwest states.' },
+      { question: 'What crops drive drone demand in North Carolina?', answer: 'Soybeans (1.6M acres), corn (900K acres), cotton (350K acres) and tobacco. Sweet potatoes in the Sandhills are an emerging niche.' },
+      { question: 'Does NC have reciprocal licensing?', answer: 'Yes, with KY, SC, TN and VA. Limited compared to Midwest states.' },
       { question: 'Is tobacco a good drone spray market?', answer: 'Yes. Tobacco plants reach waist height by mid-season, making ground sprayer access damaging. Blue mold and black shank fungicides apply well by drone without crop damage.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -1654,9 +1654,9 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['north-carolina', 'west-virginia', 'kentucky', 'maryland'],
     aeoBlock:
-      'Virginia requires Category 11 (Aerial Pesticide Application) with a $25 non-refundable application and no renewal fee (eliminated 2022). Rates run $16 to $26 per acre across soybeans, corn, tobacco, and a growing vineyard industry. Reciprocity with multiple neighboring states.',
+      'Virginia requires Category 11 (Aerial Pesticide Application) with a $25 non-refundable application and no renewal fee (eliminated 2022). Rates run $16 to $26 per acre across soybeans, corn, tobacco and a growing vineyard industry. Reciprocity with multiple neighboring states.',
     licensingDetails:
-      'Virginia aerial pesticide licensing is administered by VDACS under Category 11 (Aerial Pesticide Application). Virginia requires applicants to provide FAA Part 107 and Part 137 documentation directly to VDACS as part of certification, one of the few states that formally verifies FAA credentials. The initial application fee is $25 (non-refundable); Virginia eliminated its renewal fee in 2022, making it among the cheapest ongoing licensing stacks nationally.\n\nRenewal is biennial, requiring attendance at one recertification session per category. Reciprocity is available with KY, NC, SC, WV, MD, and DE at $70 for a 2-year reciprocal certificate.',
+      'Virginia aerial pesticide licensing is administered by VDACS under Category 11 (Aerial Pesticide Application). Virginia requires applicants to provide FAA Part 107 and Part 137 documentation directly to VDACS as part of certification, one of the few states that formally verifies FAA credentials. The initial application fee is $25 (non-refundable); Virginia eliminated its renewal fee in 2022, making it among the cheapest ongoing licensing stacks nationally.\n\nRenewal is biennial, requiring attendance at one recertification session per category. Reciprocity is available with KY, NC, SC, WV, MD and DE at $70 for a 2-year reciprocal certificate.',
     authorityLinks: [
       { label: 'VDACS Pesticide Licensing', url: 'https://www.vdacs.virginia.gov' },
       { label: 'Virginia Tech Extension', url: 'https://ext.vt.edu' },
@@ -1665,7 +1665,7 @@ export const stateData: StateData[] = [
       { question: 'What does drone spraying cost in Virginia?', answer: 'Row crops $16 to $20 per acre. Tobacco $22 to $26. Vineyard work $24 to $30. Virginia rates are higher than the Corn Belt due to smaller fields and fewer operators.' },
       { question: 'Is there really no renewal fee?', answer: 'Correct. Virginia eliminated the renewal fee in 2022. You pay a $25 non-refundable application once, then attend biennial recertification sessions. One of the cheapest ongoing licensing structures nationally.' },
       { question: 'Is the Virginia wine industry a drone opportunity?', answer: 'Growing. Approximately 4,000 acres of vineyards across the state, primarily in the Piedmont and Shenandoah Valley. Hillside blocks and small field sizes make drones more practical than airblast in many Virginia vineyards.' },
-      { question: 'Does Virginia have reciprocal licensing?', answer: 'Yes, with KY, NC, SC, WV, MD, and DE. Reciprocal certificate is $70 for 2 years.' },
+      { question: 'Does Virginia have reciprocal licensing?', answer: 'Yes, with KY, NC, SC, WV, MD and DE. Reciprocal certificate is $70 for 2 years.' },
       { question: 'What FAA documentation does VDACS require?', answer: 'You must provide both FAA Part 107 and Part 137 documentation to VDACS as part of your aerial applicator certification. VDACS verifies these at the state level.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -1702,18 +1702,18 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['virginia', 'kentucky', 'ohio', 'pennsylvania', 'maryland'],
     aeoBlock:
-      'West Virginia requires Category 14 (Aerial) with 20 CCUs per category per 3-year cycle. Agricultural acreage is the smallest in the Southeast, but mountainous terrain creates niche drone opportunities on steep pastures, orchards, and hay fields where ground equipment cannot operate. Rates run $18 to $28 per acre.',
+      'West Virginia requires Category 14 (Aerial) with 20 CCUs per category per 3-year cycle. Agricultural acreage is the smallest in the Southeast, but mountainous terrain creates niche drone opportunities on steep pastures, orchards and hay fields where ground equipment cannot operate. Rates run $18 to $28 per acre.',
     licensingDetails:
-      'West Virginia aerial pesticide licensing falls under Category 14 (Aerial), administered by the West Virginia Department of Agriculture. Applicants must pass the Core exam plus the Category 14 exam; fees are not published online and must be confirmed by calling WV DOA at (304) 558-2209. Renewal is on a 3-year cycle requiring 20 CCUs per category.\n\nReciprocity exists with KY, OH, PA, VA, and MD. West Virginia has the smallest total agricultural acreage in the Southeast, but its mountainous topography creates specialized drone opportunities, steep pastures, small apple and peach orchards, and hay fields in valley bottoms where ground rigs and airplanes both struggle.',
+      'West Virginia aerial pesticide licensing falls under Category 14 (Aerial), administered by the West Virginia Department of Agriculture. Applicants must pass the Core exam plus the Category 14 exam; fees are not published online and must be confirmed by calling WV DOA at (304) 558-2209. Renewal is on a 3-year cycle requiring 20 CCUs per category.\n\nReciprocity exists with KY, OH, PA, VA and MD. West Virginia has the smallest total agricultural acreage in the Southeast, but its mountainous topography creates specialized drone opportunities, steep pastures, small apple and peach orchards and hay fields in valley bottoms where ground rigs and airplanes both struggle.',
     authorityLinks: [
       { label: 'WV Department of Agriculture', url: 'https://agriculture.wv.gov' },
       { label: 'WVU Extension', url: 'https://extension.wvu.edu' },
     ],
     faqs: [
-      { question: 'Is there much drone spray demand in West Virginia?', answer: 'Limited in total acreage but niche opportunities exist on steep pastures, small apple and peach orchards, and hay fields in mountain valleys where ground rigs cannot safely operate.' },
-      { question: 'What does drone spraying cost in West Virginia?', answer: '$18 to $28 per acre. Higher than neighboring states due to small field sizes, steep terrain, and very few operators.' },
-      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137, and WV DOA Category 14 (Aerial). Contact WV DOA at (304) 558-2209 for current fees and exam schedule.' },
-      { question: 'Does West Virginia have reciprocal licensing?', answer: 'Yes, with KY, OH, PA, VA, and MD. Contact WV DOA for procedures.' },
+      { question: 'Is there much drone spray demand in West Virginia?', answer: 'Limited in total acreage but niche opportunities exist on steep pastures, small apple and peach orchards and hay fields in mountain valleys where ground rigs cannot safely operate.' },
+      { question: 'What does drone spraying cost in West Virginia?', answer: '$18 to $28 per acre. Higher than neighboring states due to small field sizes, steep terrain and very few operators.' },
+      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137 and WV DOA Category 14 (Aerial). Contact WV DOA at (304) 558-2209 for current fees and exam schedule.' },
+      { question: 'Does West Virginia have reciprocal licensing?', answer: 'Yes, with KY, OH, PA, VA and MD. Contact WV DOA for procedures.' },
       { question: 'What makes West Virginia different from neighboring states?', answer: 'Terrain. West Virginia is almost entirely mountainous, which limits total ag acreage but makes drones the only practical aerial application method on many properties. Ground rigs and airplanes are both impractical on steep valley farms.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -1754,7 +1754,7 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['oregon', 'idaho'],
     aeoBlock:
-      'Washington has no standalone aerial applicator category, making it the simplest licensing pathway in the West: just Laws and Safety plus a use category exam. WSDA published drone-specific guidance confirming drones are legal wherever airblast is legal. Rates run $14 to $28 per acre across 175K acres of apples and cherries, 60K acres of wine grapes, and 2.1 million acres of wheat.',
+      'Washington has no standalone aerial applicator category, making it the simplest licensing pathway in the West: just Laws and Safety plus a use category exam. WSDA published drone-specific guidance confirming drones are legal wherever airblast is legal. Rates run $14 to $28 per acre across 175K acres of apples and cherries, 60K acres of wine grapes and 2.1 million acres of wheat.',
     licensingDetails:
       'Washington is the simplest aerial licensing state in the West. WSDA does not maintain a standalone aerial category, drone operators certify in the relevant use category (agricultural, right-of-way, etc.) plus the Laws and Safety exam, for a minimum of 2 exams total. Exam fees are $25 for paper or $58 for computer-based testing. The annual commercial license is $250. A WSDA Certification and Training rule change effective January 1, 2026 updated exam categories and study manuals.\n\nWSDA published dedicated drone guidance confirming that drones are legal wherever airblast application is legal. Washington maintains the most extensive reciprocal licensing chart among all states. Renewal is on a 5-year cycle with approved CE courses or re-exam.',
     authorityLinks: [
@@ -1809,7 +1809,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Oregon imposes the strictest aerial licensing in the West, requiring 50 hours of flight experience before applying for the Aerial Pesticide Applicator (APA) license. It is a violation to spray by drone without APA, even under supervision. Rates run $16 to $30 per acre across wine grapes in the Willamette Valley and orchards in Hood River.',
     licensingDetails:
-      'Oregon has the most demanding aerial licensing pathway in the West. The Aerial Pesticide Applicator (APA) license is a separate add-on on top of the underlying applicator license, requiring the Core exam, a use-category exam, and the APA exam. Before applying for the APA, operators must document 50 hours of flight experience applying pesticides or supervised training, one of the highest flight-hour barriers in the US. Critically, Oregon law prohibits applying any pesticide by aircraft without an APA license even under the direct supervision of a licensed APA holder.\n\nOregon Forest Practices Act establishes 60-foot buffer zones from fish-bearing or drinking water streams for non-helicopter aerial applications. Renewal is 5-year with 10 aerial credits required. No blanket reciprocity, aerial reciprocity is handled case-by-case.',
+      'Oregon has the most demanding aerial licensing pathway in the West. The Aerial Pesticide Applicator (APA) license is a separate add-on on top of the underlying applicator license, requiring the Core exam, a use-category exam and the APA exam. Before applying for the APA, operators must document 50 hours of flight experience applying pesticides or supervised training, one of the highest flight-hour barriers in the US. Critically, Oregon law prohibits applying any pesticide by aircraft without an APA license even under the direct supervision of a licensed APA holder.\n\nOregon Forest Practices Act establishes 60-foot buffer zones from fish-bearing or drinking water streams for non-helicopter aerial applications. Renewal is 5-year with 10 aerial credits required. No blanket reciprocity, aerial reciprocity is handled case-by-case.',
     authorityLinks: [
       { label: 'ODA Pesticide Licensing', url: 'https://www.oregon.gov/oda' },
       { label: 'OSU Extension', url: 'https://extension.oregonstate.edu' },
@@ -1858,15 +1858,15 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Idaho uses Category AA (Aerial Applicators) with a straightforward $120 license and 70 percent passing score. Rates run $14 to $22 per acre across 1.2 million acres of Palouse wheat and irrigated crops in the Magic Valley.',
     licensingDetails:
-      'Idaho aerial pesticide licensing is administered by the Idaho State Department of Agriculture (ISDA) under Category AA (Aerial Applicators). The pathway is one of the most straightforward in the West: Core exam (CO) plus Category AA, with a $120 license fee and a 70% passing score requirement. Renewal is on a 2-year cycle with 16 credits required per cycle.\n\nReciprocity exists with WA, OR, and MT using national standard categories. Buffer zone compliance and record-keeping are required for all aerial applications.',
+      'Idaho aerial pesticide licensing is administered by the Idaho State Department of Agriculture (ISDA) under Category AA (Aerial Applicators). The pathway is one of the most straightforward in the West: Core exam (CO) plus Category AA, with a $120 license fee and a 70% passing score requirement. Renewal is on a 2-year cycle with 16 credits required per cycle.\n\nReciprocity exists with WA, OR and MT using national standard categories. Buffer zone compliance and record-keeping are required for all aerial applications.',
     authorityLinks: [
       { label: 'ISDA Applicator Licensing', url: 'https://agri.idaho.gov/pesticides/applicator-licensing-certification' },
       { label: 'University of Idaho Extension', url: 'https://www.uidaho.edu/extension' },
     ],
     faqs: [
       { question: 'What does drone spraying cost in Idaho?', answer: 'Wheat runs $14 to $18. Irrigated crops in the Magic Valley $16 to $22. Orchard and vineyard work in the Snake River AVA runs higher.' },
-      { question: 'What license do I need in Idaho?', answer: 'FAA Part 107, Part 137, and ISDA Core (CO) + Category AA (Aerial Applicators). $120 license fee. 70% passing.' },
-      { question: 'Does Idaho have reciprocal licensing?', answer: 'Yes, with WA, OR, and MT using national standard categories.' },
+      { question: 'What license do I need in Idaho?', answer: 'FAA Part 107, Part 137 and ISDA Core (CO) + Category AA (Aerial Applicators). $120 license fee. 70% passing.' },
+      { question: 'Does Idaho have reciprocal licensing?', answer: 'Yes, with WA, OR and MT using national standard categories.' },
       { question: 'When is peak spray season in Idaho?', answer: 'Wheat heading in June (Palouse). Potato and sugar beet applications in the Magic Valley June through August.' },
       { question: 'Is there drone spray demand for potatoes?', answer: 'Growing. Idaho grows 300K+ acres of potatoes, and late blight management with drone fungicide is an emerging use case, especially on irrigated fields where pivot tracks limit ground rig access.' },
     ],
@@ -1904,15 +1904,15 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Nevada has minimal agricultural crop acreage with rates of $18 to $30 per acre. Primary drone opportunities are alfalfa hay in the northern valleys and ranch rangeland applications. Business license is $250 per year.',
     licensingDetails:
-      'Nevada aerial pesticide licensing is administered by the Nevada Department of Agriculture (NDA) under a 3-exam structure: Core, Laws, and the relevant use category, at $50 per initial exam. Commercial operators also pay a $250/yr business license fee. Renewal is on a 4-year cycle for certified applicators (12 CEUs) or annual for licensed pest control operators (6 CEUs/yr).\n\nNevada has very limited agricultural crop acreage. Primary drone opportunities are alfalfa hay in the northern valleys, ranch rangeland brush control, and some irrigated grain operations near Fallon and Elko. No reciprocity agreements are documented, contact NDA for current status.',
+      'Nevada aerial pesticide licensing is administered by the Nevada Department of Agriculture (NDA) under a 3-exam structure: Core, Laws and the relevant use category, at $50 per initial exam. Commercial operators also pay a $250/yr business license fee. Renewal is on a 4-year cycle for certified applicators (12 CEUs) or annual for licensed pest control operators (6 CEUs/yr).\n\nNevada has very limited agricultural crop acreage. Primary drone opportunities are alfalfa hay in the northern valleys, ranch rangeland brush control and some irrigated grain operations near Fallon and Elko. No reciprocity agreements are documented, contact NDA for current status.',
     authorityLinks: [
       { label: 'Nevada Department of Agriculture', url: 'https://agri.nv.gov' },
       { label: 'UNR Extension', url: 'https://extension.unr.edu' },
     ],
     faqs: [
-      { question: 'Is there drone spray demand in Nevada?', answer: 'Very limited for traditional agriculture. Alfalfa hay in northern Nevada, ranch rangeland, and some cannabis cultivation are the main opportunities.' },
-      { question: 'What does drone spraying cost in Nevada?', answer: '$18 to $30 per acre. Higher than neighboring states due to remote locations, small acreage, and very few operators.' },
-      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137, and NDA certification with Core + Laws + Category exams. $50 per exam. $250/yr business license.' },
+      { question: 'Is there drone spray demand in Nevada?', answer: 'Very limited for traditional agriculture. Alfalfa hay in northern Nevada, ranch rangeland and some cannabis cultivation are the main opportunities.' },
+      { question: 'What does drone spraying cost in Nevada?', answer: '$18 to $30 per acre. Higher than neighboring states due to remote locations, small acreage and very few operators.' },
+      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137 and NDA certification with Core + Laws + Category exams. $50 per exam. $250/yr business license.' },
       { question: 'Does Nevada have reciprocal licensing?', answer: 'Not documented. Contact NDA.' },
       { question: 'Is Nevada worth entering as a drone spray market?', answer: 'Only as a secondary market for operators based in neighboring states (CA, ID, UT). The total addressable acreage is too small to support a Nevada-only drone spray business.' },
     ],
@@ -1951,9 +1951,9 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['idaho', 'wyoming', 'colorado', 'nevada', 'arizona'],
     aeoBlock:
-      'Utah requires "special qualifications" for Category 11 (Aerial Application) beyond the standard exam, with a published Aerial Application Study Guide. License is $65 for 3 years. Primary drone markets are alfalfa, wheat, and fruit orchards in northern Utah. Rates run $16 to $25 per acre.',
+      'Utah requires "special qualifications" for Category 11 (Aerial Application) beyond the standard exam, with a published Aerial Application Study Guide. License is $65 for 3 years. Primary drone markets are alfalfa, wheat and fruit orchards in northern Utah. Rates run $16 to $25 per acre.',
     licensingDetails:
-      'Utah aerial pesticide licensing is administered by the Utah Department of Agriculture and Food (UDAF) under Category 11 (Aerial Application). Operators must pass 3 exams: Core, Category 11, and a relevant use-category exam. Category 11 requires "special qualifications" beyond the standard exam, details are in the UDAF Aerial Application Study Guide. The 3-year license fee is $65, with $15 per additional category. Operators must carry their license at all times during application.\n\nRenewal is on a 3-year cycle with 24 CEUs required. Reciprocity exists with CO, ID, and NV.',
+      'Utah aerial pesticide licensing is administered by the Utah Department of Agriculture and Food (UDAF) under Category 11 (Aerial Application). Operators must pass 3 exams: Core, Category 11 and a relevant use-category exam. Category 11 requires "special qualifications" beyond the standard exam, details are in the UDAF Aerial Application Study Guide. The 3-year license fee is $65, with $15 per additional category. Operators must carry their license at all times during application.\n\nRenewal is on a 3-year cycle with 24 CEUs required. Reciprocity exists with CO, ID and NV.',
     authorityLinks: [
       { label: 'UDAF Pesticide Licensing', url: 'https://ag.utah.gov/pesticides/apply-or-renew' },
       { label: 'UDAF Aerial Study Guide', url: 'https://ag.utah.gov/documents/AerialApplicationStudyGuide.pdf' },
@@ -1962,7 +1962,7 @@ export const stateData: StateData[] = [
     faqs: [
       { question: 'What are the "special qualifications" for aerial in Utah?', answer: 'UDAF requires additional qualifications beyond the standard Category 11 exam for aerial applicators. Details are in the UDAF Aerial Application Study Guide. Contact UDAF for current specifics.' },
       { question: 'What does drone spraying cost in Utah?', answer: '$16 to $25 per acre. Higher than the Great Plains due to smaller fields and mountainous terrain limiting operational efficiency.' },
-      { question: 'What crops use drones in Utah?', answer: 'Alfalfa hay (600K acres), wheat (200K acres), tart cherries in Utah County, and sweet corn in Cache Valley. Ranch rangeland is a secondary market.' },
+      { question: 'What crops use drones in Utah?', answer: 'Alfalfa hay (600K acres), wheat (200K acres), tart cherries in Utah County and sweet corn in Cache Valley. Ranch rangeland is a secondary market.' },
       { question: 'Does Utah have reciprocal licensing?', answer: 'General provision for reciprocity. Contact UDAF for specific states.' },
       { question: 'Is there a study guide for the aerial exam?', answer: 'Yes. UDAF publishes an Aerial Application Study Guide available at ag.utah.gov.' },
     ],
@@ -2002,18 +2002,18 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['california', 'nevada', 'utah', 'new-mexico'],
     aeoBlock:
-      'Arizona requires a dedicated Drone Pilot License (DPL) at $50 per year, separate from the manned Agricultural Aircraft Pilot License. Operating without DPL is a regulatory violation. Cotton (150K acres), citrus, and date palms drive drone demand. Tribal lands may require additional operational permissions.',
+      'Arizona requires a dedicated Drone Pilot License (DPL) at $50 per year, separate from the manned Agricultural Aircraft Pilot License. Operating without DPL is a regulatory violation. Cotton (150K acres), citrus and date palms drive drone demand. Tribal lands may require additional operational permissions.',
     licensingDetails:
-      'Arizona is one of the few states with a dedicated Drone Pilot License (DPL), entirely separate from the manned Agricultural Aircraft Pilot License (AAP). The DPL exam covers flight procedures, calibration, and operations near sensitive areas; the fee is $50 per year (annual renewal). For-hire operators also need a Commercial Applicator Certification (PUC) and a Custom Applicator License (CAL) at $100/yr. The DPL requires a valid FAA Part 107. Operating without a DPL is a nonserious regulatory violation under R3-3-502.\n\nArizona has extensive tribal lands where additional operational permissions beyond state licensing may be required. No reciprocity agreements are documented for the DPL.',
+      'Arizona is one of the few states with a dedicated Drone Pilot License (DPL), entirely separate from the manned Agricultural Aircraft Pilot License (AAP). The DPL exam covers flight procedures, calibration and operations near sensitive areas; the fee is $50 per year (annual renewal). For-hire operators also need a Commercial Applicator Certification (PUC) and a Custom Applicator License (CAL) at $100/yr. The DPL requires a valid FAA Part 107. Operating without a DPL is a nonserious regulatory violation under R3-3-502.\n\nArizona has extensive tribal lands where additional operational permissions beyond state licensing may be required. No reciprocity agreements are documented for the DPL.',
     authorityLinks: [
       { label: 'Arizona Department of Agriculture', url: 'https://agriculture.az.gov' },
       { label: 'University of Arizona Extension', url: 'https://extension.arizona.edu' },
     ],
     faqs: [
-      { question: 'What is the Arizona Drone Pilot License?', answer: 'A dedicated credential separate from the manned aircraft pilot license. It requires valid FAA Part 107, a written exam on flight procedures, calibration, and operations near sensitive areas, and $50 annual fee. Operating without it is a violation under R3-3-502.' },
+      { question: 'What is the Arizona Drone Pilot License?', answer: 'A dedicated credential separate from the manned aircraft pilot license. It requires valid FAA Part 107, a written exam on flight procedures, calibration and operations near sensitive areas and $50 annual fee. Operating without it is a violation under R3-3-502.' },
       { question: 'What does drone spraying cost in Arizona?', answer: '$16 to $28 per acre. Cotton defoliant and citrus insecticide at the high end. Desert terrain and heat limit daily spray windows to early morning hours.' },
       { question: 'Do tribal lands require extra permissions?', answer: 'Potentially, yes. Arizona extensive tribal lands may require additional operational permissions beyond state DOA licensing. Contact the relevant tribal authority before scheduling work on tribal land.' },
-      { question: 'What crops use drones in Arizona?', answer: 'Cotton (150K acres in Pima and Maricopa counties), citrus in the Salt River Valley, date palms in Yuma, and irrigated alfalfa.' },
+      { question: 'What crops use drones in Arizona?', answer: 'Cotton (150K acres in Pima and Maricopa counties), citrus in the Salt River Valley, date palms in Yuma and irrigated alfalfa.' },
       { question: 'Does Arizona have reciprocal licensing?', answer: 'Not documented for the DPL. Contact AZDA.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -2033,7 +2033,7 @@ export const stateData: StateData[] = [
     examFees: 'Contact DEC.',
     uniqueRules: [
       'Minimal agricultural crop acreage.',
-      'Primary opportunities in forestry, mosquito control, and invasive species management.',
+      'Primary opportunities in forestry, mosquito control and invasive species management.',
       'Remote locations add significant logistics cost.',
     ],
     reciprocityStates: [],
@@ -2049,17 +2049,17 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: [],
     aeoBlock:
-      'Alaska has minimal agricultural crop acreage with drone opportunities primarily in forestry, mosquito control, and invasive species management. Remote locations drive rates of $25 to $50 per acre. Contact Alaska DEC for current licensing requirements.',
+      'Alaska has minimal agricultural crop acreage with drone opportunities primarily in forestry, mosquito control and invasive species management. Remote locations drive rates of $25 to $50 per acre. Contact Alaska DEC for current licensing requirements.',
     licensingDetails:
-      'Alaska aerial pesticide licensing is administered by the Alaska Department of Environmental Conservation (DEC). FAA Part 107 and liability insurance are required. Specific exam requirements, fees, and renewal cycles should be confirmed directly with DEC, as Alaska\'s drone pesticide rules are less codified than the contiguous states.\n\nAlaska has minimal agricultural crop acreage. Drone opportunities center on forestry pest management, municipal mosquito control programs, and invasive species treatment on state and federal public lands. Remote logistical overhead drives rates significantly above national averages.',
+      'Alaska aerial pesticide licensing is administered by the Alaska Department of Environmental Conservation (DEC). FAA Part 107 and liability insurance are required. Specific exam requirements, fees and renewal cycles should be confirmed directly with DEC, as Alaska\'s drone pesticide rules are less codified than the contiguous states.\n\nAlaska has minimal agricultural crop acreage. Drone opportunities center on forestry pest management, municipal mosquito control programs and invasive species treatment on state and federal public lands. Remote logistical overhead drives rates significantly above national averages.',
     authorityLinks: [
       { label: 'Alaska DEC Pesticide Program', url: 'https://dec.alaska.gov' },
       { label: 'UAF Cooperative Extension', url: 'https://www.uaf.edu/ces' },
     ],
     faqs: [
-      { question: 'Is there agricultural drone demand in Alaska?', answer: 'Very limited for traditional crops. Opportunities exist in forestry pest management, mosquito control programs, and invasive species treatment on public lands.' },
-      { question: 'What does drone spraying cost in Alaska?', answer: '$25 to $50 per acre. Remote logistics, short growing season, and limited operator base drive rates far above the national average.' },
-      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137, liability insurance, and Alaska DEC pesticide certification. Contact DEC directly for current exam and fee requirements.' },
+      { question: 'Is there agricultural drone demand in Alaska?', answer: 'Very limited for traditional crops. Opportunities exist in forestry pest management, mosquito control programs and invasive species treatment on public lands.' },
+      { question: 'What does drone spraying cost in Alaska?', answer: '$25 to $50 per acre. Remote logistics, short growing season and limited operator base drive rates far above the national average.' },
+      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137, liability insurance and Alaska DEC pesticide certification. Contact DEC directly for current exam and fee requirements.' },
       { question: 'Is Alaska practical for a drone spray business?', answer: 'Only as a specialized niche. Total addressable acreage is too small for a standalone ag drone business. Operators typically combine drone work with other aviation or pest control services.' },
       { question: 'Does Alaska have reciprocal licensing?', answer: 'Not documented. Contact DEC.' },
     ],
@@ -2096,18 +2096,18 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: [],
     aeoBlock:
-      'Hawaii requires Category 4 (Aerial Pest Control) plus a separate RUP Aerial Permit (Form P-23) for restricted-use applications. Primary drone markets are coffee, macadamia nut, tropical fruit, and invasive species management. Rates run $20 to $40 per acre.',
+      'Hawaii requires Category 4 (Aerial Pest Control) plus a separate RUP Aerial Permit (Form P-23) for restricted-use applications. Primary drone markets are coffee, macadamia nut, tropical fruit and invasive species management. Rates run $20 to $40 per acre.',
     licensingDetails:
-      'Hawaii aerial pesticide licensing is administered by the Hawaii Department of Agriculture Division of Animal and Biocontrol (DAB) under Category 4 (Aerial Pest Control). Operators must pass Core ($50) and Category 4 ($50) exams, plus pay a $100 initial certification card fee. For restricted-use products, a separate RUP Aerial Permit (Form P-23) is required in addition to applicator certification. RUP buffer zones apply near residential areas, schools, and water bodies.\n\nRenewal is on a 5-year cycle with a 75% cap on online CE credits. No reciprocity with mainland states, all operators must test in Hawaii. Island logistics (equipment shipping, inter-island travel) add meaningful overhead to each job.',
+      'Hawaii aerial pesticide licensing is administered by the Hawaii Department of Agriculture Division of Animal and Biocontrol (DAB) under Category 4 (Aerial Pest Control). Operators must pass Core ($50) and Category 4 ($50) exams, plus pay a $100 initial certification card fee. For restricted-use products, a separate RUP Aerial Permit (Form P-23) is required in addition to applicator certification. RUP buffer zones apply near residential areas, schools and water bodies.\n\nRenewal is on a 5-year cycle with a 75% cap on online CE credits. No reciprocity with mainland states, all operators must test in Hawaii. Island logistics (equipment shipping, inter-island travel) add meaningful overhead to each job.',
     authorityLinks: [
       { label: 'Hawaii DAB Pesticide Program', url: 'https://dab.hawaii.gov/pi/pest' },
       { label: 'UH CTAHR Extension', url: 'https://www.ctahr.hawaii.edu' },
     ],
     faqs: [
       { question: 'What is the RUP Aerial Permit?', answer: 'Form P-23, a separate permit required for any aerial application of restricted-use pesticides in Hawaii. This is in addition to your Category 4 applicator certification. Standard permits are for individual applications.' },
-      { question: 'What crops use drones in Hawaii?', answer: 'Coffee (Big Island), macadamia nuts, tropical fruit (papaya, banana, pineapple), and seed corn operations on Maui and Molokai. Invasive species management on conservation lands is a growing niche.' },
+      { question: 'What crops use drones in Hawaii?', answer: 'Coffee (Big Island), macadamia nuts, tropical fruit (papaya, banana, pineapple) and seed corn operations on Maui and Molokai. Invasive species management on conservation lands is a growing niche.' },
       { question: 'What does drone spraying cost in Hawaii?', answer: '$20 to $40 per acre. Island logistics (shipping equipment, inter-island travel) and small field sizes push rates well above mainland averages.' },
-      { question: 'Are there special buffer zone rules?', answer: 'Yes. Hawaii applies RUP buffer zones for aerial applications near residential areas, schools, and water bodies. These apply to drones as well as manned aircraft.' },
+      { question: 'Are there special buffer zone rules?', answer: 'Yes. Hawaii applies RUP buffer zones for aerial applications near residential areas, schools and water bodies. These apply to drones as well as manned aircraft.' },
       { question: 'Does Hawaii have reciprocal licensing?', answer: 'No. All operators must test in Hawaii regardless of mainland credentials.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -2148,17 +2148,17 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['new-york', 'new-jersey', 'maryland', 'west-virginia', 'ohio', 'delaware'],
     aeoBlock:
-      'Pennsylvania uses Category 25 (Aerial Applicator) with reciprocity across 25+ states, one of the broadest networks in the US. Rates run $15 to $24 per acre across 1.3 million acres of corn, 600K acres of soybeans, and a growing cover crop seeding market driven by Chesapeake Bay watershed conservation incentives.',
+      'Pennsylvania uses Category 25 (Aerial Applicator) with reciprocity across 25+ states, one of the broadest networks in the US. Rates run $15 to $24 per acre across 1.3 million acres of corn, 600K acres of soybeans and a growing cover crop seeding market driven by Chesapeake Bay watershed conservation incentives.',
     licensingDetails:
-      'Pennsylvania aerial pesticide licensing is administered by the Pennsylvania Department of Agriculture (PDA) under Category 25 (Aerial Applicator). The exam fees are among the lowest in the Northeast: Core at $50 and Category 25 at just $10. Business license is $35/yr with a $40 annual renewal. The 3-year certification cycle requires 6 Core and 10 Category 25 CE credits. Penn State Extension publishes a detailed drone licensing guide.\n\nPennsylvania maintains reciprocity with 25+ states including DE, FL, IN, IA, MD, NJ, NY, OH, VA, WV, and WI, one of the broadest reciprocity networks nationally. Chesapeake Bay watershed conservation programs provide strong cost-share incentives for cover crops in SE Pennsylvania, driving growing drone seeding demand.',
+      'Pennsylvania aerial pesticide licensing is administered by the Pennsylvania Department of Agriculture (PDA) under Category 25 (Aerial Applicator). The exam fees are among the lowest in the Northeast: Core at $50 and Category 25 at just $10. Business license is $35/yr with a $40 annual renewal. The 3-year certification cycle requires 6 Core and 10 Category 25 CE credits. Penn State Extension publishes a detailed drone licensing guide.\n\nPennsylvania maintains reciprocity with 25+ states including DE, FL, IN, IA, MD, NJ, NY, OH, VA, WV and WI, one of the broadest reciprocity networks nationally. Chesapeake Bay watershed conservation programs provide strong cost-share incentives for cover crops in SE Pennsylvania, driving growing drone seeding demand.',
     authorityLinks: [
       { label: 'Pennsylvania Department of Agriculture', url: 'https://www.agriculture.pa.gov' },
       { label: 'Penn State Extension', url: 'https://extension.psu.edu' },
     ],
     faqs: [
       { question: 'What does drone spraying cost in Pennsylvania?', answer: 'Row crops run $15 to $20 per acre. Orchard work in Adams County runs $20 to $24. Cover crop seeding $14 to $18. Smaller and more irregular fields than the Midwest push rates slightly higher.' },
-      { question: 'What license do I need in Pennsylvania?', answer: 'FAA Part 107, Part 137, and PDA Core + Category 25 (Aerial Applicator). Core exam $50, Category 25 just $10. Business license $35/yr.' },
-      { question: 'Does Pennsylvania have good reciprocity?', answer: 'Yes, with 25+ states including DE, FL, IN, IA, MD, NJ, NY, OH, VA, WV, and WI. One of the broadest reciprocity lists nationally.' },
+      { question: 'What license do I need in Pennsylvania?', answer: 'FAA Part 107, Part 137 and PDA Core + Category 25 (Aerial Applicator). Core exam $50, Category 25 just $10. Business license $35/yr.' },
+      { question: 'Does Pennsylvania have good reciprocity?', answer: 'Yes, with 25+ states including DE, FL, IN, IA, MD, NJ, NY, OH, VA, WV and WI. One of the broadest reciprocity lists nationally.' },
       { question: 'Is cover crop seeding a big drone market here?', answer: 'Growing fast. Chesapeake Bay watershed conservation programs provide strong cost-share incentives for cover crops in SE Pennsylvania. Drone seeding into standing corn and soybeans in September is the primary window.' },
       { question: 'When is peak spray season in Pennsylvania?', answer: 'Corn VT/R1 in late July to early August. Soybean R2/R3 overlaps. Cover crop seeding September to October. Apple orchard programs run April through August.' },
     ],
@@ -2198,9 +2198,9 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['pennsylvania', 'new-jersey', 'connecticut', 'massachusetts', 'vermont'],
     aeoBlock:
-      'New York requires Category 11 (Aerial Application) with the highest exam fees in the Northeast: $100 per exam and $450 for 3-year first category certification. Rates run $16 to $28 per acre across 35K acres of Finger Lakes wine grapes, 40K acres of apples (#2 nationally), and 1 million acres of corn.',
+      'New York requires Category 11 (Aerial Application) with the highest exam fees in the Northeast: $100 per exam and $450 for 3-year first category certification. Rates run $16 to $28 per acre across 35K acres of Finger Lakes wine grapes, 40K acres of apples (#2 nationally) and 1 million acres of corn.',
     licensingDetails:
-      'New York aerial pesticide licensing is administered by the NY State DEC under Category 11 (Aerial Application). New York has among the highest fees in the Northeast: $100 per exam and $450 for the first 3-year category certification, with $150 for each additional category. A minimum of 3 exams is required: Core, Category 11, and at least one site or pest-use category. Budget $700 to $1,000 for initial licensing.\n\nThe 3-year renewal cycle requires 6 CE credits for Category 11. Reciprocity exists with NJ, CT, PA, and VT. Finger Lakes wine grapes (35K acres) and Hudson Valley apple orchards provide high-value specialty crop demand alongside 1 million acres of row crops in western NY.',
+      'New York aerial pesticide licensing is administered by the NY State DEC under Category 11 (Aerial Application). New York has among the highest fees in the Northeast: $100 per exam and $450 for the first 3-year category certification, with $150 for each additional category. A minimum of 3 exams is required: Core, Category 11 and at least one site or pest-use category. Budget $700 to $1,000 for initial licensing.\n\nThe 3-year renewal cycle requires 6 CE credits for Category 11. Reciprocity exists with NJ, CT, PA and VT. Finger Lakes wine grapes (35K acres) and Hudson Valley apple orchards provide high-value specialty crop demand alongside 1 million acres of row crops in western NY.',
     authorityLinks: [
       { label: 'NY DEC Pesticide Licensing', url: 'https://www.dec.ny.gov' },
       { label: 'Cornell Cooperative Extension', url: 'https://cals.cornell.edu/cornell-cooperative-extension' },
@@ -2209,7 +2209,7 @@ export const stateData: StateData[] = [
       { question: 'What does drone spraying cost in New York?', answer: 'Corn and soybeans $16 to $20 per acre. Apple orchards in the Hudson Valley $22 to $28. Wine grapes in the Finger Lakes $20 to $26. Higher than the Midwest due to smaller fields and fewer operators.' },
       { question: 'Why are New York licensing fees so high?', answer: '$100 per exam and $450 for the first 3-year category certification are among the highest nationally. Each additional category adds $150. Budget $700 to $1,000 for initial New York licensing.' },
       { question: 'Is the Finger Lakes a drone spray opportunity?', answer: 'Yes. Hillside vineyard blocks with steep grades make airblast impractical. Finger Lakes vineyards run 8 to 10 fungicide passes per season for downy and powdery mildew. Growing drone adoption.' },
-      { question: 'Does New York have reciprocal licensing?', answer: 'Yes, with NJ, CT, PA, and VT. Contact DEC for specific procedures.' },
+      { question: 'Does New York have reciprocal licensing?', answer: 'Yes, with NJ, CT, PA and VT. Contact DEC for specific procedures.' },
       { question: 'What about Long Island vineyards?', answer: 'Long Island (North Fork and Hamptons AVAs) adds about 3K acres of vineyards. Proximity to residential areas makes drones preferred over airblast for drift control. Premium rates reflect the market.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -2252,7 +2252,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Maryland requires Category 13 (Aerial) with 1 year practical experience before the exam and 8 annual CE credits, among the highest in the US. Chesapeake Bay watershed programs drive strong cover crop drone seeding demand. Rates run $16 to $24 per acre on the Eastern Shore.',
     licensingDetails:
-      'Maryland aerial pesticide licensing is administered by the Maryland Department of Agriculture (MDA) under Category 13 (Aerial). Maryland requires 1 year of practical experience in pest control before sitting for the Category 13 exam, an unusual barrier nationally. Renewal is annual, not on a multi-year cycle, with 8 CE credits required each year for Category 13, among the highest annual CE requirements in the US. Liability insurance is required. Initial certification is $75/yr, with $25 for each additional category.\n\nReciprocity exists with DE, PA, VA, and WV. Chesapeake Bay watershed conservation programs provide strong cost-share incentives for cover crops on the Eastern Shore, making Maryland one of the densest cover crop seeding markets in the country.',
+      'Maryland aerial pesticide licensing is administered by the Maryland Department of Agriculture (MDA) under Category 13 (Aerial). Maryland requires 1 year of practical experience in pest control before sitting for the Category 13 exam, an unusual barrier nationally. Renewal is annual, not on a multi-year cycle, with 8 CE credits required each year for Category 13, among the highest annual CE requirements in the US. Liability insurance is required. Initial certification is $75/yr, with $25 for each additional category.\n\nReciprocity exists with DE, PA, VA and WV. Chesapeake Bay watershed conservation programs provide strong cost-share incentives for cover crops on the Eastern Shore, making Maryland one of the densest cover crop seeding markets in the country.',
     authorityLinks: [
       { label: 'MDA Pesticide Licensing', url: 'https://mda.maryland.gov/plants-pests/pages/licensing_and_certification.aspx' },
       { label: 'UMD Extension', url: 'https://extension.umd.edu' },
@@ -2262,7 +2262,7 @@ export const stateData: StateData[] = [
       { question: 'What does drone spraying cost in Maryland?', answer: '$16 to $24 per acre. Eastern Shore corn and soybeans at the low end. Cover crop seeding and specialty crops higher.' },
       { question: 'Is cover crop seeding a big market in Maryland?', answer: 'Yes. Maryland Chesapeake Bay watershed programs provide strong cost-share for cover crops. The Eastern Shore is one of the densest cover crop regions in the US. Drone seeding into standing corn in September is the primary window.' },
       { question: 'Why are CE requirements so high?', answer: '8 credits annually for Category 13, compared to 4 to 6 per year in most states. This reflects Maryland stricter environmental compliance stance in the Chesapeake Bay watershed.' },
-      { question: 'Does Maryland have reciprocal licensing?', answer: 'Yes, with DE, PA, VA, and WV.' },
+      { question: 'Does Maryland have reciprocal licensing?', answer: 'Yes, with DE, PA, VA and WV.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -2301,7 +2301,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'New Jersey requires 40 hours of on-the-job training for Category 11 (Aerial Applicator), one of the few states with a mandatory OJT component. Dense population increases drift sensitivity. Rates run $18 to $28 per acre. Blueberry and cranberry operations in the Pine Barrens are specialty niches.',
     licensingDetails:
-      'New Jersey aerial pesticide licensing falls under Category 11 (Aerial Applicator), administered by the NJ Department of Environmental Protection (DEP). Category 11 requires 40 hours of documented on-the-job training before certification, one of the few states with a mandatory OJT requirement. At minimum 3 exams are needed: Core, Category 11, and one additional use category, at approximately $50 each. The annual license fee is approximately $100.\n\nRenewal is on a 5-year cycle with 8 Core and 16 per-category CE credits required. Reciprocity exists with NY, CT, IN, OH, PA, RI, and VT. Dense population and small field sizes push rates above neighboring PA, and drift-sensitivity buffer requirements are more stringent near residential areas.',
+      'New Jersey aerial pesticide licensing falls under Category 11 (Aerial Applicator), administered by the NJ Department of Environmental Protection (DEP). Category 11 requires 40 hours of documented on-the-job training before certification, one of the few states with a mandatory OJT requirement. At minimum 3 exams are needed: Core, Category 11 and one additional use category, at approximately $50 each. The annual license fee is approximately $100.\n\nRenewal is on a 5-year cycle with 8 Core and 16 per-category CE credits required. Reciprocity exists with NY, CT, IN, OH, PA, RI and VT. Dense population and small field sizes push rates above neighboring PA, and drift-sensitivity buffer requirements are more stringent near residential areas.',
     authorityLinks: [
       { label: 'NJ DEP Pesticide Control', url: 'https://www.nj.gov/dep/enforcement/pcp' },
       { label: 'Rutgers NJAES Extension', url: 'https://njaes.rutgers.edu' },
@@ -2309,8 +2309,8 @@ export const stateData: StateData[] = [
     faqs: [
       { question: 'What is the 40-hour OJT requirement?', answer: 'New Jersey requires 40 hours of on-the-job training specifically for Category 11 aerial certification. This must be documented under supervision before you can apply for the license.' },
       { question: 'What does drone spraying cost in New Jersey?', answer: '$18 to $28 per acre. Small field sizes and dense population (drift sensitivity) push rates above neighboring PA and NY.' },
-      { question: 'What crops use drones in New Jersey?', answer: 'Soybeans and corn in South Jersey, blueberries in the Pine Barrens, cranberry bogs, and vegetable farms. Small diversified farms are the norm rather than large-acreage operations.' },
-      { question: 'Does New Jersey have reciprocal licensing?', answer: 'Yes, with NY, CT, IN, OH, PA, RI, and VT.' },
+      { question: 'What crops use drones in New Jersey?', answer: 'Soybeans and corn in South Jersey, blueberries in the Pine Barrens, cranberry bogs and vegetable farms. Small diversified farms are the norm rather than large-acreage operations.' },
+      { question: 'Does New Jersey have reciprocal licensing?', answer: 'Yes, with NY, CT, IN, OH, PA, RI and VT.' },
       { question: 'Is New Jersey practical for a drone spray business?', answer: 'As a secondary market for PA or NY based operators, yes. Total addressable acreage is too small for a NJ-only business, but specialty crop premiums (blueberries, cranberries, vegetables) make individual jobs profitable.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -2350,17 +2350,17 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Connecticut is actively formalizing drone spraying regulations under HB 6289 (2024) with a March 2026 implementation deadline. Current rules require per-application aerial permits (Form DEP-PEST-APP-100) with fees of $200 to $565 per application and 200 to 300 foot buffer zone notifications. Contact DEEP for current drone authorization status.',
     licensingDetails:
-      'Connecticut aerial pesticide licensing is administered by CT DEEP. Under HB 6289 (2024), the Commissioner was mandated to update regulations by March 2026 to explicitly authorize drones for crop treatment, contact DEEP for current status of implementing regulations. Pre-existing aerial rules require a per-application aerial permit (Form DEP-PEST-APP-100) with USGS maps, buffer zone notifications of 200 to 300 feet, and acreage-based fees of $200 to $565 per application. Exam fees are $200 to DEEP plus $21 proctoring.\n\nConnecticut operates on a 5-year certification cycle, the longest in the US. Each category requires 12 CEUs per cycle. Reciprocity exists with NY, NJ, and MA.',
+      'Connecticut aerial pesticide licensing is administered by CT DEEP. Under HB 6289 (2024), the Commissioner was mandated to update regulations by March 2026 to explicitly authorize drones for crop treatment, contact DEEP for current status of implementing regulations. Pre-existing aerial rules require a per-application aerial permit (Form DEP-PEST-APP-100) with USGS maps, buffer zone notifications of 200 to 300 feet and acreage-based fees of $200 to $565 per application. Exam fees are $200 to DEEP plus $21 proctoring.\n\nConnecticut operates on a 5-year certification cycle, the longest in the US. Each category requires 12 CEUs per cycle. Reciprocity exists with NY, NJ and MA.',
     authorityLinks: [
       { label: 'Connecticut DEEP', url: 'https://portal.ct.gov/deep' },
       { label: 'UConn Extension', url: 'https://cahnr.uconn.edu/extension' },
     ],
     faqs: [
       { question: 'Are drones legal for crop spraying in Connecticut?', answer: 'HB 6289 (2024) mandated the DEEP Commissioner to update regulations by March 2026 to explicitly authorize drones. Current status should be confirmed directly with DEEP, as implementing regulations may still be in development.' },
-      { question: 'What is the per-application permit?', answer: 'Connecticut requires Form DEP-PEST-APP-100 for each aerial application, with USGS maps, buffer zone notifications, and acreage-based fees of $200 to $565. This applies to drones as well as manned aircraft.' },
-      { question: 'What does drone spraying cost in Connecticut?', answer: '$20 to $30 per acre. Small fields, dense population, buffer zone requirements, and per-application permit fees all push costs above neighboring states.' },
+      { question: 'What is the per-application permit?', answer: 'Connecticut requires Form DEP-PEST-APP-100 for each aerial application, with USGS maps, buffer zone notifications and acreage-based fees of $200 to $565. This applies to drones as well as manned aircraft.' },
+      { question: 'What does drone spraying cost in Connecticut?', answer: '$20 to $30 per acre. Small fields, dense population, buffer zone requirements and per-application permit fees all push costs above neighboring states.' },
       { question: 'Does Connecticut have the longest certification cycle?', answer: 'Yes, at 5 years, tied with a few other states but the longest in this region. 12 CEU per category per 5-year cycle.' },
-      { question: 'Does Connecticut have reciprocal licensing?', answer: 'Yes, with NY, NJ, and MA.' },
+      { question: 'Does Connecticut have reciprocal licensing?', answer: 'Yes, with NY, NJ and MA.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -2400,7 +2400,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Delaware requires 2 years supervised practical experience before the Category 11 (Aerial Pest Control) exam. Agriculture is concentrated in Sussex County with 170K acres each of corn and soybeans. Chesapeake Bay watershed cover crop incentives drive drone seeding demand. Rates run $16 to $24 per acre.',
     licensingDetails:
-      'Delaware aerial pesticide licensing is administered by the Delaware Department of Agriculture (DDA) under Category 11 (Aerial Pest Control). Delaware requires 2 years of supervised practical experience before sitting for the aerial exam, the longest experience requirement in the Northeast. Three exams are needed: Core, Category 11, and a site-use category, with annual fees of $30 for the cert and $50 for the business license. The 3-year renewal cycle requires only 4 CE credits for Category 11, among the lowest in the region.\n\nReciprocity exists with MD, NJ, PA, and VA. All of Delaware\'s agriculture is concentrated in Sussex County: 170K acres of corn and 170K acres of soybeans, plus growing cover crop acreage under Chesapeake Bay watershed conservation programs.',
+      'Delaware aerial pesticide licensing is administered by the Delaware Department of Agriculture (DDA) under Category 11 (Aerial Pest Control). Delaware requires 2 years of supervised practical experience before sitting for the aerial exam, the longest experience requirement in the Northeast. Three exams are needed: Core, Category 11 and a site-use category, with annual fees of $30 for the cert and $50 for the business license. The 3-year renewal cycle requires only 4 CE credits for Category 11, among the lowest in the region.\n\nReciprocity exists with MD, NJ, PA and VA. All of Delaware\'s agriculture is concentrated in Sussex County: 170K acres of corn and 170K acres of soybeans, plus growing cover crop acreage under Chesapeake Bay watershed conservation programs.',
     authorityLinks: [
       { label: 'Delaware Department of Agriculture', url: 'https://agriculture.delaware.gov' },
       { label: 'University of Delaware Extension', url: 'https://www.udel.edu/canr/cooperative-extension' },
@@ -2408,8 +2408,8 @@ export const stateData: StateData[] = [
     faqs: [
       { question: 'What is the 2-year experience requirement?', answer: 'Delaware requires 2 years of supervised practical experience in pest control before you can sit for the Category 11 aerial certification exam. This is the longest experience requirement for aerial in the Northeast.' },
       { question: 'What does drone spraying cost in Delaware?', answer: '$16 to $24 per acre. Sussex County row crops at the low end, specialty and cover crop work higher.' },
-      { question: 'Is Delaware big enough for a drone business?', answer: 'As a standalone market, barely. 340K combined corn and soybean acres in Sussex County is the entire addressable market. Most Delaware operators also serve MD, PA, and NJ.' },
-      { question: 'Does Delaware have reciprocal licensing?', answer: 'Yes, with MD, NJ, PA, and VA.' },
+      { question: 'Is Delaware big enough for a drone business?', answer: 'As a standalone market, barely. 340K combined corn and soybean acres in Sussex County is the entire addressable market. Most Delaware operators also serve MD, PA and NJ.' },
+      { question: 'Does Delaware have reciprocal licensing?', answer: 'Yes, with MD, NJ, PA and VA.' },
       { question: 'Are cover crops important in Delaware?', answer: 'Yes. Chesapeake Bay watershed programs provide cost-share for cover crops. Drone seeding into standing corn in September is growing in Sussex County.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -2444,19 +2444,19 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['massachusetts', 'connecticut'],
     aeoBlock:
-      'Rhode Island requires a separate DEM aerial application permit in addition to standard applicator certification. Agricultural acreage is minimal. Drone opportunities are limited to small specialty farms, turf management, and landscape applications. Rates run $22 to $35 per acre.',
+      'Rhode Island requires a separate DEM aerial application permit in addition to standard applicator certification. Agricultural acreage is minimal. Drone opportunities are limited to small specialty farms, turf management and landscape applications. Rates run $22 to $35 per acre.',
     licensingDetails:
-      'Rhode Island aerial pesticide licensing is administered by the Rhode Island Department of Environmental Management (DEM). RI does not maintain a specific aerial category, instead, a separate DEM aerial application permit is required in addition to standard Core and use-category applicator certification. Specific fees and exam schedules should be confirmed directly with DEM at (401) 222-2781.\n\nRI operates on a 5-year renewal cycle with CE hours varying by license type. Reciprocity exists with NJ, CT, and MA. Total agricultural acreage is the smallest of any state, drone opportunities are limited to specialty vegetable farms, turf management, and landscape pest control, typically as part of a broader New England territory.',
+      'Rhode Island aerial pesticide licensing is administered by the Rhode Island Department of Environmental Management (DEM). RI does not maintain a specific aerial category, instead, a separate DEM aerial application permit is required in addition to standard Core and use-category applicator certification. Specific fees and exam schedules should be confirmed directly with DEM at (401) 222-2781.\n\nRI operates on a 5-year renewal cycle with CE hours varying by license type. Reciprocity exists with NJ, CT and MA. Total agricultural acreage is the smallest of any state, drone opportunities are limited to specialty vegetable farms, turf management and landscape pest control, typically as part of a broader New England territory.',
     authorityLinks: [
       { label: 'Rhode Island DEM', url: 'https://dem.ri.gov' },
       { label: 'URI Cooperative Extension', url: 'https://web.uri.edu/coopext' },
     ],
     faqs: [
-      { question: 'Is there drone spray demand in Rhode Island?', answer: 'Very limited. Small specialty vegetable farms, turf management, and landscape pest control are the primary opportunities. Total agricultural acreage is the smallest of any state.' },
+      { question: 'Is there drone spray demand in Rhode Island?', answer: 'Very limited. Small specialty vegetable farms, turf management and landscape pest control are the primary opportunities. Total agricultural acreage is the smallest of any state.' },
       { question: 'What does drone spraying cost?', answer: '$22 to $35 per acre. Small fields and few operators drive rates well above the national average.' },
       { question: 'What is the DEM aerial permit?', answer: 'A separate permit from RI DEM required for any aerial pesticide application. This is in addition to your applicator certification. Contact DEM at (401) 222-2781.' },
       { question: 'Does RI have reciprocal licensing?', answer: 'Limited. Confirm with DEM.' },
-      { question: 'Is RI practical for a drone spray business?', answer: 'Only as part of a broader New England territory covering CT, MA, and RI combined. Standalone RI operations are not viable due to minimal acreage.' },
+      { question: 'Is RI practical for a drone spray business?', answer: 'Only as part of a broader New England territory covering CT, MA and RI combined. Standalone RI operations are not viable due to minimal acreage.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -2495,7 +2495,7 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Massachusetts requires Category 11 (Aerial Application) with 2 years practical experience and insurance of $100K/$300K bodily injury plus $100K property including chemical drift coverage. Cranberry bogs and apple orchards are specialty drone niches. Rates run $20 to $30 per acre.',
     licensingDetails:
-      'Massachusetts aerial pesticide licensing is administered by the Massachusetts Department of Agricultural Resources (MDAR) under Category 11 (Aerial Application). MA requires 2 years of practical experience before certification, one of the longer experience thresholds in the Northeast. Exam fees are $28 online with a $50/yr certification. Insurance is a defining barrier: $100,000/$300,000 bodily injury plus $100,000 property damage coverage is mandatory, and the policy must explicitly include chemical drift coverage, a separate endorsement most standard drone policies do not carry.\n\nRenewal is on a 3-year cycle with 12 contact hours per category. Reciprocity with CT, NY, NH, VT, and RI is granted at MDAR discretion under 333 CMR 10.12. Cranberry bogs on Cape Cod and central MA apple orchards are the primary specialty drone niches.',
+      'Massachusetts aerial pesticide licensing is administered by the Massachusetts Department of Agricultural Resources (MDAR) under Category 11 (Aerial Application). MA requires 2 years of practical experience before certification, one of the longer experience thresholds in the Northeast. Exam fees are $28 online with a $50/yr certification. Insurance is a defining barrier: $100,000/$300,000 bodily injury plus $100,000 property damage coverage is mandatory and the policy must explicitly include chemical drift coverage, a separate endorsement most standard drone policies do not carry.\n\nRenewal is on a 3-year cycle with 12 contact hours per category. Reciprocity with CT, NY, NH, VT and RI is granted at MDAR discretion under 333 CMR 10.12. Cranberry bogs on Cape Cod and central MA apple orchards are the primary specialty drone niches.',
     authorityLinks: [
       { label: 'MDAR Pesticide Licensing', url: 'https://www.mass.gov/pesticide-examination-and-licensing' },
       { label: 'UMass Extension', url: 'https://ag.umass.edu/extension' },
@@ -2504,7 +2504,7 @@ export const stateData: StateData[] = [
       { question: 'What insurance is required in Massachusetts?', answer: '$100,000/$300,000 bodily injury and $100,000 property damage. Critically, the policy must explicitly include chemical drift coverage, which is a separate endorsement most standard drone policies do not carry.' },
       { question: 'What does drone spraying cost in Massachusetts?', answer: '$20 to $30 per acre. Cranberry bog work and apple orchard spraying command premium rates. Row crop acreage is very limited.' },
       { question: 'Are cranberry bogs a drone opportunity?', answer: 'Yes. Cape Cod cranberry operations use aerial applications for pest and disease management. Drones handle the small, irregularly shaped bogs better than manned aircraft.' },
-      { question: 'Does Massachusetts have reciprocal licensing?', answer: 'At MDAR discretion under 333 CMR 10.12. CT, NY, NH, VT, and RI operators may qualify. Contact MDAR.' },
+      { question: 'Does Massachusetts have reciprocal licensing?', answer: 'At MDAR discretion under 333 CMR 10.12. CT, NY, NH, VT and RI operators may qualify. Contact MDAR.' },
       { question: 'Is the 2-year experience requirement common?', answer: 'It is shared by MD and DE in the region but unusual nationally. Most states have no experience requirement beyond passing the exams.' },
     ],
     lastReviewedAt: '2026-04-16',
@@ -2547,17 +2547,17 @@ export const stateData: StateData[] = [
     aeoBlock:
       'Vermont requires a mandatory Aerial Permit from the Secretary with a 30-day public comment period for all aerial applications including drones. The aerial exam requires 75 percent passing (above the national 70 percent standard) and must be taken in person. Rates run $20 to $30 per acre on limited agricultural acreage.',
     licensingDetails:
-      'Vermont aerial pesticide licensing is administered by the Vermont Agency of Agriculture, Food and Markets under Category 11 (Aerial). Vermont is the most restrictive aerial permitting state in the Northeast: every aerial application, including drones, requires a mandatory Aerial Permit issued by the Secretary with a 30-day public comment period, and buffer distances are set per-permit by the Secretary. The aerial exam must be taken in person, and the passing score is 75 percent (above the 70 percent national standard). Category fees are $30/yr each with a $120 maximum cap, and retakes cost $25.\n\nThe renewal cycle is 5 years with 16 CE credits required. Reciprocity exists with NY, NJ, RI, and PA. Operators must also comply with Vermont Agency of Transportation rules during application.',
+      'Vermont aerial pesticide licensing is administered by the Vermont Agency of Agriculture, Food and Markets under Category 11 (Aerial). Vermont is the most restrictive aerial permitting state in the Northeast: every aerial application, including drones, requires a mandatory Aerial Permit issued by the Secretary with a 30-day public comment period and buffer distances are set per-permit by the Secretary. The aerial exam must be taken in person, and the passing score is 75 percent (above the 70 percent national standard). Category fees are $30/yr each with a $120 maximum cap, and retakes cost $25.\n\nThe renewal cycle is 5 years with 16 CE credits required. Reciprocity exists with NY, NJ, RI and PA. Operators must also comply with Vermont Agency of Transportation rules during application.',
     authorityLinks: [
       { label: 'Vermont Agency of Agriculture', url: 'https://agriculture.vermont.gov' },
       { label: 'UVM Extension', url: 'https://www.uvm.edu/extension' },
     ],
     faqs: [
       { question: 'What is the Aerial Permit with public comment?', answer: 'Vermont requires a permit application for every aerial pesticide application, including drones, with a 30-day public comment period. Buffer distances are set by the Secretary. This is the most restrictive aerial permitting process in the Northeast.' },
-      { question: 'What does drone spraying cost in Vermont?', answer: '$20 to $30 per acre. Very limited acreage, small fields, and few operators push rates above neighboring states.' },
+      { question: 'What does drone spraying cost in Vermont?', answer: '$20 to $30 per acre. Very limited acreage, small fields and few operators push rates above neighboring states.' },
       { question: 'Is the higher passing score difficult?', answer: '75 percent vs the national standard of 70 percent. Marginal difference but catches some test-takers who would pass in other states. The in-person exam requirement also adds a travel commitment.' },
-      { question: 'What crops use drones in Vermont?', answer: 'Dairy silage corn (85K acres), Champlain Valley apples, and specialty vegetables. Total acreage is very small.' },
-      { question: 'Does Vermont have reciprocal licensing?', answer: 'Yes, with NY, NJ, RI, and PA.' },
+      { question: 'What crops use drones in Vermont?', answer: 'Dairy silage corn (85K acres), Champlain Valley apples and specialty vegetables. Total acreage is very small.' },
+      { question: 'Does Vermont have reciprocal licensing?', answer: 'Yes, with NY, NJ, RI and PA.' },
     ],
     lastReviewedAt: '2026-04-16',
   },
@@ -2593,19 +2593,19 @@ export const stateData: StateData[] = [
     sprayWindows: [],
     neighboringStates: ['vermont', 'massachusetts', 'maine'],
     aeoBlock:
-      'New Hampshire uses Category J (Aerial Application) with minimal agricultural crop acreage. Primary drone opportunities are forestry pest management, blueberry operations, and small apple orchards. Rates run $22 to $32 per acre.',
+      'New Hampshire uses Category J (Aerial Application) with minimal agricultural crop acreage. Primary drone opportunities are forestry pest management, blueberry operations and small apple orchards. Rates run $22 to $32 per acre.',
     licensingDetails:
-      'New Hampshire aerial pesticide licensing is administered by the NH Division of Pesticide Control under Category J (Aerial Application). Fees and exam schedules should be confirmed directly with the Division at (603) 271-3550, as specifics are not published online. Renewal is on a 5-year cycle requiring 12 CE credits.\n\nReciprocity exists with VT, MA, and ME, positioning NH as part of a broader New England territory rather than a standalone market. Primary drone opportunities are forestry pest management, small apple orchards, blueberry operations, and landscape pest control.',
+      'New Hampshire aerial pesticide licensing is administered by the NH Division of Pesticide Control under Category J (Aerial Application). Fees and exam schedules should be confirmed directly with the Division at (603) 271-3550, as specifics are not published online. Renewal is on a 5-year cycle requiring 12 CE credits.\n\nReciprocity exists with VT, MA and ME, positioning NH as part of a broader New England territory rather than a standalone market. Primary drone opportunities are forestry pest management, small apple orchards, blueberry operations and landscape pest control.',
     authorityLinks: [
       { label: 'NH Division of Pesticide Control', url: 'https://www.agriculture.nh.gov' },
       { label: 'UNH Extension', url: 'https://extension.unh.edu' },
     ],
     faqs: [
-      { question: 'Is there drone spray demand in New Hampshire?', answer: 'Limited. Forestry pest management, small apple orchards, blueberry operations, and landscape pest control are the main niches. Total crop acreage is very small.' },
-      { question: 'What does drone spraying cost?', answer: '$22 to $32 per acre. Small fields, hilly terrain, and very few operators push rates above the national average.' },
-      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137, and NH Division of Pesticide Control Core + Category J. Contact (603) 271-3550 for current fees and exam schedule.' },
-      { question: 'Does NH have reciprocal licensing?', answer: 'Yes, with VT, MA, and ME.' },
-      { question: 'Is NH practical for a drone spray business?', answer: 'Only as part of a broader New England territory. Most NH drone operators also serve VT, MA, and ME.' },
+      { question: 'Is there drone spray demand in New Hampshire?', answer: 'Limited. Forestry pest management, small apple orchards, blueberry operations and landscape pest control are the main niches. Total crop acreage is very small.' },
+      { question: 'What does drone spraying cost?', answer: '$22 to $32 per acre. Small fields, hilly terrain and very few operators push rates above the national average.' },
+      { question: 'What license do I need?', answer: 'FAA Part 107, Part 137 and NH Division of Pesticide Control Core + Category J. Contact (603) 271-3550 for current fees and exam schedule.' },
+      { question: 'Does NH have reciprocal licensing?', answer: 'Yes, with VT, MA and ME.' },
+      { question: 'Is NH practical for a drone spray business?', answer: 'Only as part of a broader New England territory. Most NH drone operators also serve VT, MA and ME.' },
     ],
     lastReviewedAt: '2026-04-16',
   },

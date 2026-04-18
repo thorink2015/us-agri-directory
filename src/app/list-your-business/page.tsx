@@ -16,7 +16,7 @@ const FAQS = [
   {
     question: 'How long does verification take?',
     answer:
-      'Typically 3 to 5 business days. We verify FAA Part 107, Part 137 (or Section 44807 exemption), and your state commercial pesticide applicator credentials before publishing. Profiles with all documentation in order are often live within 48 hours.',
+      'Typically 3 to 5 business days. We verify FAA Part 107, Part 137 (or Section 44807 exemption) and your state commercial pesticide applicator credentials before publishing. Profiles with all documentation in order are often live within 48 hours.',
   },
   {
     question: 'Can I update my listing later?',
@@ -88,7 +88,7 @@ export default function ListYourBusinessPage() {
       {/* AEO block */}
       <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
         <p className="text-sm text-gray-700 leading-relaxed">
-          The US Agricultural Drone Directory lists {operatorCount}+ verified operators across all 50 states. Listing is free with no commission, no booking fee, and no pay-for-placement. Operators must hold FAA Part 107, FAA Part 137 (or Section 44807 exemption), and a state commercial pesticide applicator license with an aerial or drone endorsement.
+          The US Agricultural Drone Directory lists {operatorCount}+ verified operators across all 50 states. Listing is free with no commission, no booking fee and no pay-for-placement. Operators must hold FAA Part 107, FAA Part 137 (or Section 44807 exemption) and a state commercial pesticide applicator license with an aerial or drone endorsement.
         </p>
       </div>
 
@@ -97,7 +97,7 @@ export default function ListYourBusinessPage() {
         {[
           { icon: CheckCircle, title: 'Always free', desc: 'No listing fee, no commission, no booking fee.' },
           { icon: Clock, title: 'Fast review', desc: 'Credentials verified in 3 to 5 business days.' },
-          { icon: Globe, title: 'SEO visibility', desc: 'Profile appears in state, crop, and service search.' },
+          { icon: Globe, title: 'SEO visibility', desc: 'Profile appears in state, crop and service search.' },
         ].map((b) => (
           <div key={b.title} className="flex flex-col items-center text-center p-4 bg-white rounded-xl border border-green-200">
             <b.icon className="w-7 h-7 text-green-600 mb-2" />
@@ -111,10 +111,10 @@ export default function ListYourBusinessPage() {
         <div>
           <h2 className="text-xl font-bold text-gray-900 mb-3">What you get</h2>
           <ul className="list-disc pl-5 space-y-1 not-prose text-sm">
-            <li>A dedicated profile page visible to farmers searching by state, crop, and service</li>
+            <li>A dedicated profile page visible to farmers searching by state, crop and service</li>
             <li>Your contact details (phone, email, website) displayed directly to farmers, no middleman</li>
             <li>No commission on jobs booked through the directory</li>
-            <li>Inclusion in state, crop, service, and drone-model filtered search results</li>
+            <li>Inclusion in state, crop, service and drone-model filtered search results</li>
             <li>A verified badge once your FAA and state credentials are confirmed</li>
           </ul>
         </div>
@@ -133,8 +133,8 @@ export default function ListYourBusinessPage() {
           <h2 className="text-xl font-bold text-gray-900 mb-3">How it works</h2>
           <ol className="list-decimal pl-5 space-y-1 not-prose text-sm">
             <li>Fill out the form below with your business details and credentials</li>
-            <li>We verify FAA Part 107, Part 137, and state pesticide license (typically 3 to 5 business days)</li>
-            <li>Your listing goes live on the directory and is indexed in state, crop, and service search</li>
+            <li>We verify FAA Part 107, Part 137 and state pesticide license (typically 3 to 5 business days)</li>
+            <li>Your listing goes live on the directory and is indexed in state, crop and service search</li>
             <li>Farmers find you and contact you directly, no booking fees or commissions</li>
           </ol>
         </div>

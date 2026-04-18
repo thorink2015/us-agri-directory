@@ -11,9 +11,9 @@ export const drones: DroneModel[] = [
     description:
       'The workhorse of the US ag drone fleet. The T50 handles 40 liters of liquid and 50 kg of granular material per flight with a 9 to 12 minute battery charge cycle, making it the single most deployed commercial spray drone in American agriculture.',
     longDescription:
-      'The DJI Agras T50 is the most widely used commercial ag spray drone in the United States, accounting for the majority of the estimated 10.3 million drone-sprayed acres in 2024. Its 40-liter (10.6 gallon) spray tank and 75-liter (50 kg) dry hopper handle both liquid pesticide application and dry granular spreading including cover crop seed, urea, and gypsum. The T50 produces 16 L/min flow rate on 2 nozzles and 24 L/min on 4 nozzles, with a 4 to 11 meter (13 to 36 foot) adjustable swath width. Battery swap and charge runs 9 to 12 minutes on the DB1560 battery (30 Ah, 52.22 V, approximately 1,567 Wh), and the included T50 Intelligent Charging Hub supports rapid cycling for continuous field operation. The T50 features front and rear phased-array radar, binocular vision, and a terrain-following LiDAR system for obstacle avoidance and precision altitude hold. RTK GPS delivers centimeter-level positioning for automated mission planning with under 3 percent overlap. Pre-tariff MSRP ran approximately $18,000 for the drone, remote controller, and battery cooling kit. Post-April 2025 tariff escalation to 170 percent on Chinese drones pushed effective pricing significantly higher, with dealer quotes in early 2026 ranging from $22,000 to $28,000 depending on inventory vintage. Not NDAA compliant.',
+      'The DJI Agras T50 is the most widely used commercial ag spray drone in the United States, accounting for the majority of the estimated 10.3 million drone-sprayed acres in 2024. Its 40-liter (10.6 gallon) spray tank and 75-liter (50 kg) dry hopper handle both liquid pesticide application and dry granular spreading including cover crop seed, urea and gypsum. The T50 produces 16 L/min flow rate on 2 nozzles and 24 L/min on 4 nozzles, with a 4 to 11 meter (13 to 36 foot) adjustable swath width. Battery swap and charge runs 9 to 12 minutes on the DB1560 battery (30 Ah, 52.22 V, approximately 1,567 Wh) and the included T50 Intelligent Charging Hub supports rapid cycling for continuous field operation. The T50 features front and rear phased-array radar, binocular vision and a terrain-following LiDAR system for obstacle avoidance and precision altitude hold. RTK GPS delivers centimeter-level positioning for automated mission planning with under 3 percent overlap. Pre-tariff MSRP ran approximately $18,000 for the drone, remote controller and battery cooling kit. Post-April 2025 tariff escalation to 170 percent on Chinese drones pushed effective pricing significantly higher, with dealer quotes in early 2026 ranging from $22,000 to $28,000 depending on inventory vintage. Not NDAA compliant.',
     aeoBlock:
-      'The DJI Agras T50 is the most widely used commercial spray drone in US agriculture, with a 40-liter tank, 50 kg dry hopper, and 9 to 12 minute battery charge cycle. Pre-tariff MSRP was approximately $18,000; post-2025 tariff escalation to 170 percent pushed dealer pricing to $22,000 to $28,000. It is not NDAA compliant. Field throughput runs 40 to 60 acres per flight hour for fungicide and insecticide applications at 2 to 5 gallons per acre.',
+      'The DJI Agras T50 is the most widely used commercial spray drone in US agriculture, with a 40-liter tank, 50 kg dry hopper and 9 to 12 minute battery charge cycle. Pre-tariff MSRP was approximately $18,000; post-2025 tariff escalation to 170 percent pushed dealer pricing to $22,000 to $28,000. It is not NDAA compliant. Field throughput runs 40 to 60 acres per flight hour for fungicide and insecticide applications at 2 to 5 gallons per acre.',
     specs: {
       emptyWeightKg: 39.9,
       emptyWeightLbs: 88,
@@ -35,7 +35,7 @@ export const drones: DroneModel[] = [
     },
     msrpUsd: '18,000 pre-tariff; 22,000 to 28,000 post-tariff (2026)',
     usDealerPresence: 'Broad authorized dealer network including HSE-UAV, Drone Nerds, AgriSpray Drones, FlyingAg, AckerSpray, Talos Drones',
-    bestFor: 'Commercial spray operators running 500 to 5,000+ acres per season on row crops, cover crop seeding, and dry granular spreading',
+    bestFor: 'Commercial spray operators running 500 to 5,000+ acres per season on row crops, cover crop seeding and dry granular spreading',
     authorityLinks: [
       { label: 'DJI Agras T50 Official Specs', url: 'https://ag.dji.com/t50/specs' },
       { label: 'DJI Agriculture Dealer Locator', url: 'https://www.dji.com/where-to-buy/agriculture-dealers' },
@@ -45,7 +45,7 @@ export const drones: DroneModel[] = [
       {
         question: 'How many acres can a DJI T50 spray per day?',
         answer:
-          'A single T50 covers 40 to 60 acres per flight hour at 2 to 5 gallons per acre, translating to 300 to 600 acres per day depending on field layout, battery cycling, and refill logistics. Two-drone crews routinely hit 600 to 1,000 acres per day during peak corn fungicide season.',
+          'A single T50 covers 40 to 60 acres per flight hour at 2 to 5 gallons per acre, translating to 300 to 600 acres per day depending on field layout, battery cycling and refill logistics. Two-drone crews routinely hit 600 to 1,000 acres per day during peak corn fungicide season.',
       },
       {
         question: 'What is the real cost of a DJI T50 in 2026 after tariffs?',
@@ -55,17 +55,17 @@ export const drones: DroneModel[] = [
       {
         question: 'Is the DJI T50 NDAA compliant?',
         answer:
-          'No. DJI products are manufactured in China and are not compliant with NDAA Sections 889 and 848. Operators working federal, state, or NDAA-restricted contracts should consider Hylio AG-272 or other US-manufactured alternatives. Private farm contracts are not subject to NDAA restrictions.',
+          'No. DJI products are manufactured in China and are not compliant with NDAA Sections 889 and 848. Operators working federal, state or NDAA-restricted contracts should consider Hylio AG-272 or other US-manufactured alternatives. Private farm contracts are not subject to NDAA restrictions.',
       },
       {
         question: 'Can the T50 do both liquid spraying and dry spreading?',
         answer:
-          'Yes. The T50 swaps between a 40-liter liquid tank and a 75-liter (50 kg) dry hopper for granular spreading. Cover crop seeding, urea spreading, and gypsum application all use the dry hopper. Switching between liquid and dry configurations takes approximately 10 to 15 minutes in the field.',
+          'Yes. The T50 swaps between a 40-liter liquid tank and a 75-liter (50 kg) dry hopper for granular spreading. Cover crop seeding, urea spreading and gypsum application all use the dry hopper. Switching between liquid and dry configurations takes approximately 10 to 15 minutes in the field.',
       },
       {
         question: 'How does the T50 compare to the older T40?',
         answer:
-          'The T50 replaced the T40 in DJI lineup. Key upgrades include improved radar obstacle avoidance, better terrain-following LiDAR, faster battery charging, and refined spray system calibration. The T40 is no longer listed on ag.dji.com and is effectively discontinued from new purchase through authorized channels, though units remain in service.',
+          'The T50 replaced the T40 in DJI lineup. Key upgrades include improved radar obstacle avoidance, better terrain-following LiDAR, faster battery charging and refined spray system calibration. The T40 is no longer listed on ag.dji.com and is effectively discontinued from new purchase through authorized channels, though units remain in service.',
       },
     ],
     lastReviewedAt: '2026-04-16',
@@ -80,9 +80,9 @@ export const drones: DroneModel[] = [
     description:
       'DJI largest ag drone, launched July 2025, with a 100-liter spray tank and 150-liter spreading capacity. Targets high-volume commercial operators replacing manned aircraft on large acreage.',
     longDescription:
-      'The DJI Agras T100 is the largest multirotor ag drone DJI has produced, launched globally on July 15, 2025 with US dealer shipments beginning in early 2026. Its 100-liter (26.4 gallon) spray tank and 150-liter (100 kg) granular capacity nearly triple the per-flight payload of the T50. Flow rate runs 30 L/min on 2 nozzles and 40 L/min on 4 nozzles, with a 5 to 13 meter (16 to 43 foot) swath width that puts it in manned-aircraft territory for throughput. The T100 introduces a cable lifting system (100 kg payload via 10 meter cable) for heavy equipment and supply transport to remote field sites. An upgraded Safety System 3.0 combines LiDAR, millimeter-wave radar, and quad vision for obstacle avoidance. The DB2160 battery (41 Ah, 52 V, approximately 2,132 Wh) charges from 30 to 95 percent in 8 to 9 minutes. MTOW is 175 kg (386 lbs), putting it firmly in the FAA Section 44807 exemption category for drones over 55 lbs. US pricing remains unpublished due to tariff volatility. Not NDAA compliant.',
+      'The DJI Agras T100 is the largest multirotor ag drone DJI has produced, launched globally on July 15, 2025 with US dealer shipments beginning in early 2026. Its 100-liter (26.4 gallon) spray tank and 150-liter (100 kg) granular capacity nearly triple the per-flight payload of the T50. Flow rate runs 30 L/min on 2 nozzles and 40 L/min on 4 nozzles, with a 5 to 13 meter (16 to 43 foot) swath width that puts it in manned-aircraft territory for throughput. The T100 introduces a cable lifting system (100 kg payload via 10 meter cable) for heavy equipment and supply transport to remote field sites. An upgraded Safety System 3.0 combines LiDAR, millimeter-wave radar and quad vision for obstacle avoidance. The DB2160 battery (41 Ah, 52 V, approximately 2,132 Wh) charges from 30 to 95 percent in 8 to 9 minutes. MTOW is 175 kg (386 lbs), putting it firmly in the FAA Section 44807 exemption category for drones over 55 lbs. US pricing remains unpublished due to tariff volatility. Not NDAA compliant.',
     aeoBlock:
-      'The DJI Agras T100 is DJI largest ag drone at 100 liters (26.4 gallons), launched July 2025 with US availability beginning early 2026 through Talos Drones, FlyingAg, and AckerSpray. Its 175 kg MTOW requires an FAA Section 44807 exemption in addition to Part 137. US pricing is not published due to 170 percent tariff volatility on Chinese drones. Not NDAA compliant.',
+      'The DJI Agras T100 is DJI largest ag drone at 100 liters (26.4 gallons), launched July 2025 with US availability beginning early 2026 through Talos Drones, FlyingAg and AckerSpray. Its 175 kg MTOW requires an FAA Section 44807 exemption in addition to Part 137. US pricing is not published due to 170 percent tariff volatility on Chinese drones. Not NDAA compliant.',
     specs: {
       emptyWeightKg: 75,
       emptyWeightLbs: 165,
@@ -114,7 +114,7 @@ export const drones: DroneModel[] = [
       {
         question: 'How much does the DJI T100 cost in the US?',
         answer:
-          'DJI has not published a US MSRP for the T100. With cumulative tariffs at 170 percent on Chinese drones, pricing is volatile and dealer-dependent. Contact Talos Drones, FlyingAg, or AckerSpray for current quotes.',
+          'DJI has not published a US MSRP for the T100. With cumulative tariffs at 170 percent on Chinese drones, pricing is volatile and dealer-dependent. Contact Talos Drones, FlyingAg or AckerSpray for current quotes.',
       },
       {
         question: 'Do I need a special FAA exemption for the T100?',
@@ -129,7 +129,7 @@ export const drones: DroneModel[] = [
       {
         question: 'Is the T100 available in the US yet?',
         answer:
-          'Yes, as of early 2026. Initial US shipments began through authorized dealers including Talos Drones, FlyingAg, and AckerSpray. Availability is limited compared to the established T50 supply chain, and wait times of 4 to 8 weeks from order to delivery are common.',
+          'Yes, as of early 2026. Initial US shipments began through authorized dealers including Talos Drones, FlyingAg and AckerSpray. Availability is limited compared to the established T50 supply chain, and wait times of 4 to 8 weeks from order to delivery are common.',
       },
       {
         question: 'Can the T100 replace a manned crop duster airplane?',
@@ -188,7 +188,7 @@ export const drones: DroneModel[] = [
       {
         question: 'Does the T25 spray as well as the T50?',
         answer:
-          'Yes, spray quality is identical. The T25 uses the same LX8060SZ sprinkler, same pump, same nozzle system, and same flow rates as the T50. The only difference is tank size (20L vs 40L), which means more refill stops per field pass but identical coverage quality per pass.',
+          'Yes, spray quality is identical. The T25 uses the same LX8060SZ sprinkler, same pump, same nozzle system and same flow rates as the T50. The only difference is tank size (20L vs 40L), which means more refill stops per field pass but identical coverage quality per pass.',
       },
       {
         question: 'Can the T25 handle cover crop seeding?',
@@ -252,12 +252,12 @@ export const drones: DroneModel[] = [
       {
         question: 'Why choose the Hylio AG-272 over a DJI T50?',
         answer:
-          'Two reasons: NDAA compliance and wind performance. If you work federal, state, or NDAA-restricted contracts, DJI products are excluded. The AG-272 also handles 25 mph sustained wind versus 13.4 mph for the T50, which matters in Kansas, Oklahoma, and the Dakotas where daily wind averages exceed DJI limits for much of the spray season.',
+          'Two reasons: NDAA compliance and wind performance. If you work federal, state or NDAA-restricted contracts, DJI products are excluded. The AG-272 also handles 25 mph sustained wind versus 13.4 mph for the T50, which matters in Kansas, Oklahoma and the Dakotas where daily wind averages exceed DJI limits for much of the spray season.',
       },
       {
         question: 'How much does the AG-272 cost compared to a DJI T50?',
         answer:
-          'Hylio does not publish MSRP. Industry estimates put the AG-272 at $55,000 to $75,000, roughly 2 to 3 times the DJI T50 pre-tariff price. Post-tariff DJI pricing has narrowed this gap significantly. Use the configurator at configurator.hyl.io for a custom quote based on your battery, nozzle, and accessory selections.',
+          'Hylio does not publish MSRP. Industry estimates put the AG-272 at $55,000 to $75,000, roughly 2 to 3 times the DJI T50 pre-tariff price. Post-tariff DJI pricing has narrowed this gap significantly. Use the configurator at configurator.hyl.io for a custom quote based on your battery, nozzle and accessory selections.',
       },
       {
         question: 'What is swarm mode and do I need it?',
@@ -326,7 +326,7 @@ export const drones: DroneModel[] = [
       {
         question: 'Is the AG-230 the same as the old AG-130?',
         answer:
-          'Same airframe, updated electronics. The AG-230 is the 2-series upgrade of the AG-130, with improved flight controller, updated firmware, and better-documented wind and IP specs. Hylio effectively retired the AG-130 designation in the 2023 transition.',
+          'Same airframe, updated electronics. The AG-230 is the 2-series upgrade of the AG-130, with improved flight controller, updated firmware and better-documented wind and IP specs. Hylio effectively retired the AG-130 designation in the 2023 transition.',
       },
       {
         question: 'How does the AG-230 battery life compare to DJI?',
@@ -354,9 +354,9 @@ export const drones: DroneModel[] = [
     ndaaCompliant: false,
     status: 'active',
     description:
-      'XAG flagship with a 50-liter tank, 22 L/min dual-pump system, and IPX6K rating for heavy rain operation. 10 m/s wind resistance exceeds DJI, making it suited to open plains environments.',
+      'XAG flagship with a 50-liter tank, 22 L/min dual-pump system and IPX6K rating for heavy rain operation. 10 m/s wind resistance exceeds DJI, making it suited to open plains environments.',
     longDescription:
-      'The XAG P100 Pro is XAG top agricultural drone, carrying 50 liters (13.2 gallons) of liquid and 80 liters (50 kg) of granular material. Its 22 L/min dual-pump system provides higher sustained flow than the DJI T50, and the 5 to 10 meter (16 to 33 foot) swath width covers efficiently at 2 to 5 gpa. The standout specification is IPX6K waterproofing, rated for high-pressure water jets, making the P100 Pro the most weather-resistant option for operators who spray in rain-prone conditions. Wind resistance of 10 m/s (22 mph) also exceeds DJI 6 m/s rating, an advantage in plains and delta environments. MTOW is 104 kg (229 lbs). Dual B13960S batteries (13S, 20 Ah, approximately 962 Wh each) power the system, with charge times not published by XAG but supported by the GC4000+ field charger. US dealer presence is through third-party importers including SkyDronesUSA, DroneSprayPro, and MidwestAirDrones. Not NDAA compliant.',
+      'The XAG P100 Pro is XAG top agricultural drone, carrying 50 liters (13.2 gallons) of liquid and 80 liters (50 kg) of granular material. Its 22 L/min dual-pump system provides higher sustained flow than the DJI T50, and the 5 to 10 meter (16 to 33 foot) swath width covers efficiently at 2 to 5 gpa. The standout specification is IPX6K waterproofing, rated for high-pressure water jets, making the P100 Pro the most weather-resistant option for operators who spray in rain-prone conditions. Wind resistance of 10 m/s (22 mph) also exceeds DJI 6 m/s rating, an advantage in plains and delta environments. MTOW is 104 kg (229 lbs). Dual B13960S batteries (13S, 20 Ah, approximately 962 Wh each) power the system, with charge times not published by XAG but supported by the GC4000+ field charger. US dealer presence is through third-party importers including SkyDronesUSA, DroneSprayPro and MidwestAirDrones. Not NDAA compliant.',
     aeoBlock:
       'The XAG P100 Pro carries 50 liters with a 22 L/min dual pump and IPX6K waterproof rating, the most weather-resistant spray drone in the US market. Wind resistance at 22 mph exceeds DJI 13.4 mph. Available through US third-party dealers (SkyDronesUSA, DroneSprayPro, MidwestAirDrones). Not NDAA compliant, manufactured in Guangzhou, China.',
     specs: {
@@ -405,12 +405,12 @@ export const drones: DroneModel[] = [
       {
         question: 'Is the XAG P100 Pro good for rice operations?',
         answer:
-          'Yes, the IPX6K rating and higher wind resistance make it well-suited for rice paddy environments where humidity, rain, and wind are constant factors. Several Arkansas and Louisiana rice operators run XAG alongside DJI fleets.',
+          'Yes, the IPX6K rating and higher wind resistance make it well-suited for rice paddy environments where humidity, rain and wind are constant factors. Several Arkansas and Louisiana rice operators run XAG alongside DJI fleets.',
       },
       {
         question: 'How does the XAG granular system compare?',
         answer:
-          'The P100 Pro holds 80 liters (50 kg) of granular material, comparable to the DJI T50 at 75 liters (50 kg). Both handle cover crop seed, urea, and gypsum spreading at similar throughput rates.',
+          'The P100 Pro holds 80 liters (50 kg) of granular material, comparable to the DJI T50 at 75 liters (50 kg). Both handle cover crop seed, urea and gypsum spreading at similar throughput rates.',
       },
     ],
     lastReviewedAt: '2026-04-16',
@@ -425,7 +425,7 @@ export const drones: DroneModel[] = [
     description:
       'Talos Drones first proprietary platform, launched February 2025. Carries 50 liters (upgradeable to 60 L) with tri-camera obstacle avoidance. Priced from $17,899, competing directly with DJI T50.',
     longDescription:
-      'The Talos T60X launched in February 2025 as Talos Drones first proprietary spray platform, positioning itself as a direct competitor to the DJI Agras T50 at a lower price point. The 50-liter tank (upgradeable to 60 liters) and 80-liter (60 kg / 132 lbs) dry hopper provide payload capacity comparable to the T50. Maximum swath width is 11 meters (36 feet), and the dual-nozzle flow rate of 18.2 L/min (28 L/min on 4 nozzles) slightly exceeds the T50. Tri-camera obstacle avoidance is included. The key selling point is price: listed from $17,899 on sale, regular $20,999. Talos Drones is a US company that also serves as an authorized DJI dealer, but the T60X manufacturing origin and NDAA compliance status are unconfirmed. Battery specifications, charge times, wind resistance, and IP ratings are not published on the Talos product page.',
+      'The Talos T60X launched in February 2025 as Talos Drones first proprietary spray platform, positioning itself as a direct competitor to the DJI Agras T50 at a lower price point. The 50-liter tank (upgradeable to 60 liters) and 80-liter (60 kg / 132 lbs) dry hopper provide payload capacity comparable to the T50. Maximum swath width is 11 meters (36 feet), and the dual-nozzle flow rate of 18.2 L/min (28 L/min on 4 nozzles) slightly exceeds the T50. Tri-camera obstacle avoidance is included. The key selling point is price: listed from $17,899 on sale, regular $20,999. Talos Drones is a US company that also serves as an authorized DJI dealer, but the T60X manufacturing origin and NDAA compliance status are unconfirmed. Battery specifications, charge times, wind resistance and IP ratings are not published on the Talos product page.',
     aeoBlock:
       'The Talos T60X carries 50 liters (upgradeable to 60 L) and is priced from $17,899, undercutting the DJI T50 pre-tariff price. Launched February 2025 by US company Talos Drones. Manufacturing origin and NDAA compliance are unconfirmed. Several key specifications (battery, charge time, wind resistance, IP rating) are not published.',
     specs: {
@@ -464,17 +464,17 @@ export const drones: DroneModel[] = [
       {
         question: 'How does the T60X compare to the DJI T50?',
         answer:
-          'Tank capacity is comparable (50L vs 40L, with T60X upgradeable to 60L). Flow rate is slightly higher on the T60X. Price is significantly lower at $17,899 versus $22,000 to $28,000 for a post-tariff T50. The trade-off is that several key specs (battery, wind, IP rating) are unpublished, and the DJI dealer and parts network is far larger.',
+          'Tank capacity is comparable (50L vs 40L, with T60X upgradeable to 60L). Flow rate is slightly higher on the T60X. Price is significantly lower at $17,899 versus $22,000 to $28,000 for a post-tariff T50. The trade-off is that several key specs (battery, wind, IP rating) are unpublished and the DJI dealer and parts network is far larger.',
       },
       {
         question: 'What specs are missing from the T60X listing?',
         answer:
-          'Battery specifications, energy capacity (Wh), charge time, maximum wind resistance, IP rating, empty weight, and MTOW are all not published on the Talos product page as of April 2026. This makes it hard to directly compare operational endurance and weather capability against DJI and Hylio.',
+          'Battery specifications, energy capacity (Wh), charge time, maximum wind resistance, IP rating, empty weight and MTOW are all not published on the Talos product page as of April 2026. This makes it hard to directly compare operational endurance and weather capability against DJI and Hylio.',
       },
       {
         question: 'Should I wait for more field data before buying the T60X?',
         answer:
-          'If you are risk-tolerant and want the lowest price point for a 50-liter class drone, the T60X is worth evaluating now. If you need proven dealer support, published specs for insurance and regulatory documentation, and a large operator community for troubleshooting, the DJI T50 or Hylio AG-272 are safer choices in 2026.',
+          'If you are risk-tolerant and want the lowest price point for a 50-liter class drone, the T60X is worth evaluating now. If you need proven dealer support, published specs for insurance and regulatory documentation and a large operator community for troubleshooting, the DJI T50 or Hylio AG-272 are safer choices in 2026.',
       },
       {
         question: 'Does Talos offer service and warranty?',
@@ -528,17 +528,17 @@ export const drones: DroneModel[] = [
       {
         question: 'Is the Pelican 2 a drone or an airplane?',
         answer:
-          'It is classified as a fixed-wing unmanned aircraft. It requires a 250-meter runway, flies at 60 to 70 knots, and operates autonomously without a human pilot on board. Regulatory classification and certification requirements differ from multirotor drones and are handled through FAA advanced operations pathways.',
+          'It is classified as a fixed-wing unmanned aircraft. It requires a 250-meter runway, flies at 60 to 70 knots and operates autonomously without a human pilot on board. Regulatory classification and certification requirements differ from multirotor drones and are handled through FAA advanced operations pathways.',
       },
       {
         question: 'Who is the Pelican 2 designed for?',
         answer:
-          'Large commercial aerial application businesses that currently operate manned crop dusters and want to reduce pilot risk, chemical exposure, and per-hour operating cost. At $550,000, the economics only work at 5,000+ acres per season. Individual farm operators should look at multirotor drones in the $18,000 to $75,000 range.',
+          'Large commercial aerial application businesses that currently operate manned crop dusters and want to reduce pilot risk, chemical exposure and per-hour operating cost. At $550,000, the economics only work at 5,000+ acres per season. Individual farm operators should look at multirotor drones in the $18,000 to $75,000 range.',
       },
       {
         question: 'How does throughput compare to a manned crop duster?',
         answer:
-          'At 260 acres per hour, the Pelican 2 approaches manned fixed-wing throughput (typically 300 to 800 acres per hour depending on aircraft). The autonomous system eliminates pilot fatigue, chemical exposure, and crew scheduling constraints, allowing longer daily operating windows.',
+          'At 260 acres per hour, the Pelican 2 approaches manned fixed-wing throughput (typically 300 to 800 acres per hour depending on aircraft). The autonomous system eliminates pilot fatigue, chemical exposure and crew scheduling constraints, allowing longer daily operating windows.',
       },
       {
         question: 'Can the Pelican 2 be used for cover crop seeding?',
@@ -548,7 +548,7 @@ export const drones: DroneModel[] = [
       {
         question: 'Is the Pelican 2 NDAA compliant?',
         answer:
-          'Yes. Manufactured in Alameda, California by Pyka, the Pelican 2 is fully US-made and NDAA compliant. This makes it eligible for federal, state, and NDAA-restricted contracts without the compliance concerns that apply to DJI and XAG products.',
+          'Yes. Manufactured in Alameda, California by Pyka, the Pelican 2 is fully US-made and NDAA compliant. This makes it eligible for federal, state and NDAA-restricted contracts without the compliance concerns that apply to DJI and XAG products.',
       },
     ],
     lastReviewedAt: '2026-04-16',

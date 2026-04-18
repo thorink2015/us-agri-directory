@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: 'US Ag Drone Directory',
     title: 'US Agricultural Drone Directory | Find Verified Drone Operators',
     description:
-      'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping, and scouting across all 50 states.',
+      'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping and scouting across all 50 states.',
     images: [
       {
         url: '/opengraph-image',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'US Ag Drone Directory | Find Drone Spraying Operators Near You',
     description:
-      'Find verified agricultural drone operators in all 50 states. Compare rates, check certifications, and contact directly.',
+      'Find verified agricultural drone operators in all 50 states. Compare rates, check certifications and contact directly.',
     images: [
       {
         url: '/opengraph-image',

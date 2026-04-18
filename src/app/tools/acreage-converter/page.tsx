@@ -30,7 +30,7 @@ const FAQS = [
 export const metadata: Metadata = {
   title: 'Acreage Converter: Acres, Hectares, Sq Ft, Sections',
   description:
-    'Convert between acres, hectares, square feet, square meters, and sections instantly. Built for farmers and ag professionals working with field measurements.',
+    'Convert between acres, hectares, square feet, square meters and sections instantly. Built for farmers and ag professionals working with field measurements.',
   alternates: { canonical: '/tools/acreage-converter' },
   openGraph: {
     type: 'website',
@@ -48,7 +48,7 @@ export default function AcreageConverterPage() {
     applicationCategory: 'Agriculture',
     operatingSystem: 'Web',
     description:
-      'Convert between acres, hectares, square feet, square meters, and sections. Instant conversion using USGS and NIST standard factors.',
+      'Convert between acres, hectares, square feet, square meters and sections. Instant conversion using USGS and NIST standard factors.',
     url: `${SITE.domain}/tools/acreage-converter`,
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     author: { '@id': AUTHOR.personId },
@@ -60,7 +60,7 @@ export default function AcreageConverterPage() {
     '@type': 'Article',
     headline: 'Farm Acreage Converter: Acres, Hectares, Square Feet, Sections',
     description:
-      'One acre equals 0.4047 hectares, 43,560 square feet, or 4,047 square meters. A standard section is 640 acres. Instant conversion for all US agricultural land measurements.',
+      'One acre equals 0.4047 hectares, 43,560 square feet or 4,047 square meters. A standard section is 640 acres. Instant conversion for all US agricultural land measurements.',
     url: `${SITE.domain}/tools/acreage-converter`,
     mainEntityOfPage: `${SITE.domain}/tools/acreage-converter`,
     datePublished: '2026-01-01',
@@ -109,7 +109,7 @@ export default function AcreageConverterPage() {
         {/* AEO block */}
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            One acre equals 0.4047 hectares, 43,560 square feet, or 4,047 square meters. A standard section is 640 acres. This converter handles all common agricultural land measurements used in US and international farming, including acres, hectares, square feet, square meters, and sections.
+            One acre equals 0.4047 hectares, 43,560 square feet or 4,047 square meters. A standard section is 640 acres. This converter handles all common agricultural land measurements used in US and international farming, including acres, hectares, square feet, square meters and sections.
           </p>
         </div>
 
@@ -123,7 +123,7 @@ export default function AcreageConverterPage() {
             All conversions use standard USGS and NIST factors. One acre was historically defined as the amount of land a yoke of oxen could plow in one day. The international acre used in the US equals exactly 4,046.8564224 square meters, the value used in this converter.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed">
-            Sections (640 acres, or one square mile) are the standard survey unit from the US Public Land Survey System used across the Midwest and West. A quarter section (160 acres) is the standard homestead size from the Homestead Act of 1862 and remains the benchmark field size used by USDA reporting, crop insurance, and custom hire rate surveys including the Iowa State Extension Custom Rate Survey.
+            Sections (640 acres, or one square mile) are the standard survey unit from the US Public Land Survey System used across the Midwest and West. A quarter section (160 acres) is the standard homestead size from the Homestead Act of 1862 and remains the benchmark field size used by USDA reporting, crop insurance and custom hire rate surveys including the Iowa State Extension Custom Rate Survey.
           </p>
           <div className="flex flex-wrap gap-3 mt-2">
             <Link href="/tools/coverage-calculator" className="text-green-700 text-sm font-medium hover:underline">

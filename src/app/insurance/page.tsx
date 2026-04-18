@@ -13,7 +13,7 @@ const FAQS = [
   {
     question: 'How much does ag drone insurance cost per year?',
     answer:
-      'Total annual premiums for a single-drone commercial operator typically run $2,500 to $5,000 for hull, liability, and chemical application coverage combined. Fleet operators pay less per drone. Part 137 certification and a clean claims history reduce rates.',
+      'Total annual premiums for a single-drone commercial operator typically run $2,500 to $5,000 for hull, liability and chemical application coverage combined. Fleet operators pay less per drone. Part 137 certification and a clean claims history reduce rates.',
   },
   {
     question: 'Does my farm policy cover my spray drone?',
@@ -28,7 +28,7 @@ const FAQS = [
   {
     question: 'What is pollution liability and do I really need it?',
     answer:
-      'Pollution and chemical application liability covers pesticide drift damage to neighboring crops, water contamination, and environmental claims. This is the most likely claim scenario for ag drone operators. Standard drone liability does NOT include it. Yes, you need it.',
+      'Pollution and chemical application liability covers pesticide drift damage to neighboring crops, water contamination and environmental claims. This is the most likely claim scenario for ag drone operators. Standard drone liability does NOT include it. Yes, you need it.',
   },
 ];
 
@@ -51,13 +51,13 @@ const INSURERS = [
 export const metadata: Metadata = {
   title: 'Drone Insurance for Ag Operators: 2026 Costs & Coverage',
   description:
-    'Ag drone operators need hull, liability, and chemical drift coverage. Premiums run $1,200 to $4,000/yr. Top insurers: BWI, AssuredPartners, Global Aerospace.',
+    'Ag drone operators need hull, liability and chemical drift coverage. Premiums run $1,200 to $4,000/yr. Top insurers: BWI, AssuredPartners, Global Aerospace.',
   alternates: { canonical: '/insurance' },
   openGraph: {
     type: 'website',
     title: 'Drone Insurance for Agricultural Spray Operators',
     description:
-      'Hull ($500 to $2,000/yr), commercial liability ($1,000 to $3,000/yr for $1M), and chemical application/pollution ($600 to $2,000/yr). Part 137 lowers premiums.',
+      'Hull ($500 to $2,000/yr), commercial liability ($1,000 to $3,000/yr for $1M) and chemical application/pollution ($600 to $2,000/yr). Part 137 lowers premiums.',
     url: `${SITE.domain}/insurance`,
   },
 };
@@ -68,7 +68,7 @@ export default function InsurancePage() {
     '@type': 'Article',
     headline: 'Drone Insurance for Agricultural Spray Operators',
     description:
-      'Ag drone operators need three insurance layers: hull coverage, commercial liability, and chemical application or pollution liability. Annual premiums typically run $2,500 to $5,000 combined.',
+      'Ag drone operators need three insurance layers: hull coverage, commercial liability and chemical application or pollution liability. Annual premiums typically run $2,500 to $5,000 combined.',
     url: `${SITE.domain}/insurance`,
     mainEntityOfPage: `${SITE.domain}/insurance`,
     datePublished: '2026-01-01',
@@ -114,7 +114,7 @@ export default function InsurancePage() {
 
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Agricultural drone operators need three insurance layers: hull coverage ($500 to $2,000 per year per drone), commercial liability ($1,000 to $3,000 per year for $1M per occurrence), and chemical application or pollution liability ($600 to $2,000 per year). Top US insurers serving ag drone operators include BWI Companies, AssuredPartners Aerospace, and Global Aerospace. Part 137 certification typically reduces premium rates.
+            Agricultural drone operators need three insurance layers: hull coverage ($500 to $2,000 per year per drone), commercial liability ($1,000 to $3,000 per year for $1M per occurrence) and chemical application or pollution liability ($600 to $2,000 per year). Top US insurers serving ag drone operators include BWI Companies, AssuredPartners Aerospace and Global Aerospace. Part 137 certification typically reduces premium rates.
           </p>
         </div>
 
@@ -145,12 +145,12 @@ export default function InsurancePage() {
 
           <h2 className="text-xl font-bold text-gray-900">What standard drone policies do NOT cover</h2>
           <p>
-            Standard UAS liability policies written for photography and mapping do not cover chemical drift, pesticide application, or agricultural operations. Operators must verify in writing that their policy explicitly covers agricultural aerial application. A mapping or photography policy used for spray work leaves the operator uninsured for the most likely claim scenario (drift). Read the exclusions page of any quote carefully; most general drone policies contain a blanket exclusion for chemical and pollution events.
+            Standard UAS liability policies written for photography and mapping do not cover chemical drift, pesticide application or agricultural operations. Operators must verify in writing that their policy explicitly covers agricultural aerial application. A mapping or photography policy used for spray work leaves the operator uninsured for the most likely claim scenario (drift). Read the exclusions page of any quote carefully; most general drone policies contain a blanket exclusion for chemical and pollution events.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">How Part 137 affects insurability</h2>
           <p>
-            Part 137 certification demonstrates operational standards, crew training records, and maintenance protocols that insurers reward with lower premiums. Some ag drone insurers require Part 137 before writing a policy. Operators without Part 137 pay noticeably higher rates or are declined coverage entirely by the stricter carriers. Along with Part 137, a documented safety management system (SMS), recurrent training records, and 12 months of clean claims history are the biggest rate-reduction levers.
+            Part 137 certification demonstrates operational standards, crew training records and maintenance protocols that insurers reward with lower premiums. Some ag drone insurers require Part 137 before writing a policy. Operators without Part 137 pay noticeably higher rates or are declined coverage entirely by the stricter carriers. Along with Part 137, a documented safety management system (SMS), recurrent training records and 12 months of clean claims history are the biggest rate-reduction levers.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Top insurers for US ag drone operators</h2>
@@ -167,7 +167,7 @@ export default function InsurancePage() {
 
           <h2 className="text-xl font-bold text-gray-900">Common claim scenarios</h2>
           <p>
-            The five most common ag drone insurance claims, in rough frequency order: (1) pesticide drift onto neighboring organic or sensitive crops (often 2A/2B/2ee label violations); (2) drone crash into a power line, tree, or structure during spray lines; (3) chemical runoff into a waterway after application in wet conditions; (4) crop damage from an incorrect application rate or product selection; (5) third-party bodily injury from a fly-away or loss-of-link event. All five scenarios require chemical application or pollution coverage in addition to standard UAS liability.
+            The five most common ag drone insurance claims, in rough frequency order: (1) pesticide drift onto neighboring organic or sensitive crops (often 2A/2B/2ee label violations); (2) drone crash into a power line, tree or structure during spray lines; (3) chemical runoff into a waterway after application in wet conditions; (4) crop damage from an incorrect application rate or product selection; (5) third-party bodily injury from a fly-away or loss-of-link event. All five scenarios require chemical application or pollution coverage in addition to standard UAS liability.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">State insurance requirements</h2>

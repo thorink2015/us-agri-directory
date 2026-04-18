@@ -38,13 +38,13 @@ const SORTED_STATES = [...counties].sort((a, b) => a.name.localeCompare(b.name))
 export const metadata: Metadata = {
   title: 'State Pesticide Applicator License: 50-State Guide',
   description:
-    'Every state requires a commercial pesticide applicator license for drone spraying. See aerial categories, exams, fees, and unique rules for all 50 states.',
+    'Every state requires a commercial pesticide applicator license for drone spraying. See aerial categories, exams, fees and unique rules for all 50 states.',
   alternates: { canonical: '/regulations/state-licensing' },
   openGraph: {
     type: 'website',
     title: 'State Pesticide Applicator Licensing for Drone Operators',
     description:
-      'California, North Dakota, and Arizona issue drone-specific credentials. Oregon requires 50 hours of flight experience. See every state licensing path.',
+      'California, North Dakota and Arizona issue drone-specific credentials. Oregon requires 50 hours of flight experience. See every state licensing path.',
     url: `${SITE.domain}/regulations/state-licensing`,
   },
 };
@@ -102,14 +102,14 @@ export default function StateLicensingPage() {
 
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            Every US state requires a commercial pesticide applicator license with an aerial category endorsement for drone pesticide application. Requirements vary significantly: California requires a separate Unmanned Pest Control Aircraft Pilot Certificate, Iowa mandates an in-state aerial applicator consultant, North Dakota issues a standalone Unmanned Aerial Applicator License, and Ohio requires even private applicators to hold a commercial license for drone use.
+            Every US state requires a commercial pesticide applicator license with an aerial category endorsement for drone pesticide application. Requirements vary significantly: California requires a separate Unmanned Pest Control Aircraft Pilot Certificate, Iowa mandates an in-state aerial applicator consultant, North Dakota issues a standalone Unmanned Aerial Applicator License and Ohio requires even private applicators to hold a commercial license for drone use.
           </p>
         </div>
 
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">The three-credential stack</h2>
           <p>
-            Commercial drone pesticide application is regulated at three levels: FAA Part 107 (pilot certificate), FAA Part 137 (agricultural aircraft operator certificate with Section 44807 exemption for drones over 55 lbs), and a state-issued commercial pesticide applicator license with an aerial category endorsement. The federal credentials are uniform across the country. The state license is the most variable piece of the stack, and it is where most operators spend the longest time on paperwork. No state issues a standalone drone spray license on its own; the state license is an aerial endorsement added to a commercial pesticide applicator credential.
+            Commercial drone pesticide application is regulated at three levels: FAA Part 107 (pilot certificate), FAA Part 137 (agricultural aircraft operator certificate with Section 44807 exemption for drones over 55 lbs) and a state-issued commercial pesticide applicator license with an aerial category endorsement. The federal credentials are uniform across the country. The state license is the most variable piece of the stack, and it is where most operators spend the longest time on paperwork. No state issues a standalone drone spray license on its own; the state license is an aerial endorsement added to a commercial pesticide applicator credential.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">What varies by state</h2>
@@ -129,12 +129,12 @@ export default function StateLicensingPage() {
 
           <h2 className="text-xl font-bold text-gray-900">Reciprocity overview</h2>
           <p>
-            Reciprocity agreements let you skip some exams when you already hold a license in another state. Minnesota has the broadest network at 18 reciprocal states. Pennsylvania recognizes 25 or more. North Dakota, South Dakota, and Nebraska honor most regional licenses. Arkansas, Hawaii, and Maine have no reciprocity of any kind. Even in the states that do have agreements, most require you to pass their own laws and regulations exam because pesticide rules are state-specific. Check each states agreement directly before assuming transferability.
+            Reciprocity agreements let you skip some exams when you already hold a license in another state. Minnesota has the broadest network at 18 reciprocal states. Pennsylvania recognizes 25 or more. North Dakota, South Dakota and Nebraska honor most regional licenses. Arkansas, Hawaii and Maine have no reciprocity of any kind. Even in the states that do have agreements, most require you to pass their own laws and regulations exam because pesticide rules are state-specific. Check each states agreement directly before assuming transferability.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Find your state</h2>
           <p>
-            Select your state below for licensing agency, specific aerial category, exam and fee details, seasonal spray windows, and verified operators serving your area.
+            Select your state below for licensing agency, specific aerial category, exam and fee details, seasonal spray windows and verified operators serving your area.
           </p>
         </section>
 

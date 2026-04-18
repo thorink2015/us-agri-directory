@@ -18,7 +18,7 @@ const FAQS = [
   {
     question: 'Is a manufacturer training course legally required?',
     answer:
-      'No FAA or state rule requires it. But DJI dealers typically require proof before selling the T50, and the 2-day course ($500 to $900) covers critical safety, maintenance, and software setup. Recommended even if not mandatory.',
+      'No FAA or state rule requires it. But DJI dealers typically require proof before selling the T50, and the 2-day course ($500 to $900) covers critical safety, maintenance and software setup. Recommended even if not mandatory.',
   },
   {
     question: 'Can I skip the consultant and do Part 137 myself?',
@@ -49,7 +49,7 @@ const PROVIDERS = [
 export const metadata: Metadata = {
   title: 'Ag Drone Pilot Training & Certification: 2026 Guide',
   description:
-    'From Part 107 to Part 137 to state pesticide license: the complete training pathway for agricultural drone operators. Costs, timeline, and providers.',
+    'From Part 107 to Part 137 to state pesticide license: the complete training pathway for agricultural drone operators. Costs, timeline and providers.',
   alternates: { canonical: '/training-and-certification' },
   openGraph: {
     type: 'website',
@@ -66,7 +66,7 @@ export default function TrainingAndCertificationPage() {
     '@type': 'Article',
     headline: 'Agricultural Drone Pilot Training and Certification Guide',
     description:
-      'The complete certification pathway for a commercial ag drone operator costs $3,500 to $6,000 across FAA Part 107, state pesticide license, and FAA Part 137 with Section 44807 exemption. Total timeline 6 to 9 months.',
+      'The complete certification pathway for a commercial ag drone operator costs $3,500 to $6,000 across FAA Part 107, state pesticide license and FAA Part 137 with Section 44807 exemption. Total timeline 6 to 9 months.',
     url: `${SITE.domain}/training-and-certification`,
     mainEntityOfPage: `${SITE.domain}/training-and-certification`,
     datePublished: '2026-01-01',
@@ -112,7 +112,7 @@ export default function TrainingAndCertificationPage() {
 
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">
-            The complete certification pathway for a commercial ag drone operator costs $3,500 to $6,000 across three tracks: FAA Part 107 ($175 exam, 2 to 4 weeks study), state commercial pesticide applicator license ($75 to $300 per category), and FAA Part 137 with Section 44807 exemption ($2,500 to $4,500 consultant package or DIY in 90 to 180 days). Total timeline from start to first paying customer: 6 to 9 months.
+            The complete certification pathway for a commercial ag drone operator costs $3,500 to $6,000 across three tracks: FAA Part 107 ($175 exam, 2 to 4 weeks study), state commercial pesticide applicator license ($75 to $300 per category) and FAA Part 137 with Section 44807 exemption ($2,500 to $4,500 consultant package or DIY in 90 to 180 days). Total timeline from start to first paying customer: 6 to 9 months.
           </p>
         </div>
 
@@ -143,7 +143,7 @@ export default function TrainingAndCertificationPage() {
 
           <h2 className="text-xl font-bold text-gray-900">Manufacturer operator certifications</h2>
           <p>
-            Manufacturer certifications are issued by drone OEMs and cover the safe operation, maintenance, software workflow, and in-field handling of a specific platform. DJI Agras operator certification is a 2-day course running $500 to $900, covering the T50 and T100 platforms. Hylio Academy offers a similar program for AG-230 and AG-272. XAG Training Center runs a parallel program for P100 and V40. Manufacturer training is not legally required, but dealers typically require proof before selling a new spray drone, and the hands-on field instruction shortens the real-world learning curve by weeks.
+            Manufacturer certifications are issued by drone OEMs and cover the safe operation, maintenance, software workflow and in-field handling of a specific platform. DJI Agras operator certification is a 2-day course running $500 to $900, covering the T50 and T100 platforms. Hylio Academy offers a similar program for AG-230 and AG-272. XAG Training Center runs a parallel program for P100 and V40. Manufacturer training is not legally required, but dealers typically require proof before selling a new spray drone and the hands-on field instruction shortens the real-world learning curve by weeks.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Training providers</h2>
@@ -160,17 +160,17 @@ export default function TrainingAndCertificationPage() {
 
           <h2 className="text-xl font-bold text-gray-900">State pesticide exam prep</h2>
           <p>
-            Most states use the EPA National Pesticide Applicator Certification Core manual plus state-specific aerial materials. Aerial category exams cover drift management, buffer zones, droplet size, equipment calibration, weather minimums, and label interpretation. Some states offer online proctored exams; others require in-person testing at designated sites. Pass rates on aerial category exams tend to run lower than core exams because the aerial-specific material (Weather, Drift, Nozzle selection) is often only covered superficially in general study guides. Plan 20 to 40 hours of focused study for the aerial category on top of the core exam. Check your state page for specific exam format and study manual.
+            Most states use the EPA National Pesticide Applicator Certification Core manual plus state-specific aerial materials. Aerial category exams cover drift management, buffer zones, droplet size, equipment calibration, weather minimums and label interpretation. Some states offer online proctored exams; others require in-person testing at designated sites. Pass rates on aerial category exams tend to run lower than core exams because the aerial-specific material (Weather, Drift, Nozzle selection) is often only covered superficially in general study guides. Plan 20 to 40 hours of focused study for the aerial category on top of the core exam. Check your state page for specific exam format and study manual.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Recommended certification order</h2>
           <p>
-            The optimal sequence for most operators: (1) Part 107 first (fastest, foundation for everything else, and required before Part 137); (2) state pesticide license next (state-specific and informs Part 137 application content); (3) manufacturer training concurrent with step 2 while you wait on exam scheduling; (4) Part 137 plus 44807 started as soon as Part 107 is in hand (longest timeline, so start early); (5) insurance binder once Part 137 is approved; (6) first customer contract signed after all credentials and insurance are in force. Running these in parallel where possible cuts total calendar time from 9+ months to about 6.
+            The optimal sequence for most operators: (1) Part 107 first (fastest, foundation for everything else and required before Part 137); (2) state pesticide license next (state-specific and informs Part 137 application content); (3) manufacturer training concurrent with step 2 while you wait on exam scheduling; (4) Part 137 plus 44807 started as soon as Part 107 is in hand (longest timeline, so start early); (5) insurance binder once Part 137 is approved; (6) first customer contract signed after all credentials and insurance are in force. Running these in parallel where possible cuts total calendar time from 9+ months to about 6.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">USDA funding for training</h2>
           <p>
-            USDA Beginning Farmer and Rancher Development Program (BFRDP) grants fund training and mentorship for new producers, with several awardees including ag drone training in eligible expenses between 2023 and 2026. The Veterans Farmer Coalition and state-level beginning farmer programs also include ag drone training as an eligible cost. Applications are competitive, vary by state and year, and are usually submitted through a community-based training provider rather than directly by the trainee.
+            USDA Beginning Farmer and Rancher Development Program (BFRDP) grants fund training and mentorship for new producers, with several awardees including ag drone training in eligible expenses between 2023 and 2026. The Veterans Farmer Coalition and state-level beginning farmer programs also include ag drone training as an eligible cost. Applications are competitive, vary by state and year and are usually submitted through a community-based training provider rather than directly by the trainee.
           </p>
         </section>
 
