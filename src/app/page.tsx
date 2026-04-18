@@ -168,7 +168,7 @@ export default function HomePage() {
       <Script
         id="avantlink-verify"
         src="https://classic.avantlink.com/affiliate_app_confirm.php?mode=js&authResponse=7f2a5dd0e8c0a0d88c8f463171c14e1a35737fe2"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema()) }} />
