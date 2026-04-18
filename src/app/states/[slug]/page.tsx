@@ -163,11 +163,21 @@ function RichStatePage({ slug }: { slug: string }) {
           </h2>
 
           {ops.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {ops.map((op) => (
-                <OperatorCard key={op.slug} operator={op} />
-              ))}
-            </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {ops.map((op) => (
+                  <OperatorCard key={op.slug} operator={op} />
+                ))}
+              </div>
+              <div className="mt-5 text-right">
+                <Link
+                  href={`/states/${slug}/operators`}
+                  className="text-sm font-semibold text-green-700 hover:underline"
+                >
+                  View all operators in {data.name} &rarr;
+                </Link>
+              </div>
+            </>
           ) : (
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center">
               <p className="text-amber-800 font-medium mb-2">No operators listed in {data.name} yet</p>
@@ -175,8 +185,8 @@ function RichStatePage({ slug }: { slug: string }) {
                 Many operators service multiple states and travel. Check neighboring states or list your business.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
-                <Link href="/operators" className="px-4 py-2 bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-sm font-medium hover:bg-amber-200 transition-colors">
-                  View all operators
+                <Link href={`/states/${slug}/operators`} className="px-4 py-2 bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-sm font-medium hover:bg-amber-200 transition-colors">
+                  {data.name} operators page
                 </Link>
                 <Link href="/list-your-business" className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors">
                   List your business free
@@ -464,9 +474,19 @@ function FallbackStatePage({ slug }: { slug: string }) {
         <div className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Drone operators serving {state.name}</h2>
           {ops.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {ops.map((op) => <OperatorCard key={op.slug} operator={op} />)}
-            </div>
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {ops.map((op) => <OperatorCard key={op.slug} operator={op} />)}
+              </div>
+              <div className="mt-5 text-right">
+                <Link
+                  href={`/states/${state.slug}/operators`}
+                  className="text-sm font-semibold text-green-700 hover:underline"
+                >
+                  View all operators in {state.name} &rarr;
+                </Link>
+              </div>
+            </>
           ) : (
             <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center">
               <p className="text-amber-800 font-medium mb-2">No operators listed in {state.name} yet</p>
@@ -474,8 +494,8 @@ function FallbackStatePage({ slug }: { slug: string }) {
                 Many operators service multiple states and will travel. Check neighboring states or list your business.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
-                <Link href="/operators" className="px-4 py-2 bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-sm font-medium hover:bg-amber-200 transition-colors">
-                  View all operators
+                <Link href={`/states/${state.slug}/operators`} className="px-4 py-2 bg-amber-100 text-amber-800 border border-amber-300 rounded-lg text-sm font-medium hover:bg-amber-200 transition-colors">
+                  {state.name} operators page
                 </Link>
                 <Link href="/list-your-business" className="px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors">
                   List your business free

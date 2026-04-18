@@ -346,7 +346,7 @@ export const services: ServiceDefinition[] = [
     authorityLinks: [
       { label: 'DJI Agricultural Drone Authorized Dealers', url: 'https://www.dji.com/agriculture/dealers' },
       { label: 'USDA NRCS EQIP Practice Code 595: Precision Agriculture', url: 'https://www.nrcs.usda.gov/programs-initiatives/eqip-environmental-quality-incentives' },
-      { label: 'US Department of Defense NDAA Compliance Drone List', url: 'https://www.diu.mil/solutions/blue-uas' },
+      { label: 'US Department of Defense NDAA Compliance Drone List', url: 'https://www.diu.mil/blue-uas-list' },
     ],
     faqs: [
       {

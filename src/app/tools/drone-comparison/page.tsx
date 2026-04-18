@@ -67,20 +67,6 @@ export default function DroneComparisonPage() {
     return a.name.localeCompare(b.name);
   });
 
-  const softwareSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Agricultural Spray Drone Comparison Tool',
-    applicationCategory: 'Agriculture',
-    operatingSystem: 'Web',
-    description:
-      'Compare agricultural spray drones side by side: DJI Agras T50, T100, T25, Hylio AG-272, XAG P100 Pro, Talos T60X and Pyka Pelican 2. Specs, pricing, NDAA status.',
-    url: `${SITE.domain}/tools/drone-comparison`,
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@id': AUTHOR.personId },
-    publisher: { '@id': AUTHOR.organizationId },
-  };
-
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -118,7 +104,6 @@ export default function DroneComparisonPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

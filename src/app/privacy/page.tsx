@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { SITE } from '@/data/author';
+import MailtoLink from '@/components/ui/MailtoLink';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | US Ag Drone Directory',
@@ -127,9 +128,9 @@ export default function PrivacyPage() {
             <p className="leading-relaxed">
               Information submitted through the List Your Business form is published on the
               directory. If you want your listing updated or removed, email{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 underline">
+              <MailtoLink email={CONTACT_EMAIL} className="text-green-700 underline">
                 {CONTACT_EMAIL}
-              </a>{' '}
+              </MailtoLink>{' '}
               with subject &quot;Listing update&quot; or &quot;Listing removal.&quot;
             </p>
           </section>
@@ -139,9 +140,9 @@ export default function PrivacyPage() {
             <p className="leading-relaxed">
               You can request access to, correction of or deletion of any personal data we hold
               by emailing{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 underline">
+              <MailtoLink email={CONTACT_EMAIL} className="text-green-700 underline">
                 {CONTACT_EMAIL}
-              </a>
+              </MailtoLink>
               . We respond within 30 days.
             </p>
           </section>
@@ -150,9 +151,9 @@ export default function PrivacyPage() {
             <h2 className="text-xl font-bold text-gray-900 mb-3">Contact</h2>
             <p className="leading-relaxed">
               Questions about this policy:{' '}
-              <a href={`mailto:${CONTACT_EMAIL}`} className="text-green-700 underline">
+              <MailtoLink email={CONTACT_EMAIL} className="text-green-700 underline">
                 {CONTACT_EMAIL}
-              </a>
+              </MailtoLink>
             </p>
           </section>
         </div>

@@ -51,20 +51,6 @@ export const metadata: Metadata = {
 };
 
 export default function AcreageConverterPage() {
-  const softwareSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Farm Acreage Converter',
-    applicationCategory: 'Agriculture',
-    operatingSystem: 'Web',
-    description:
-      'Convert between acres, hectares, square feet, square meters and sections. Instant conversion using USGS and NIST standard factors.',
-    url: `${SITE.domain}/tools/acreage-converter`,
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@id': AUTHOR.personId },
-    publisher: { '@id': AUTHOR.organizationId },
-  };
-
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -102,7 +88,6 @@ export default function AcreageConverterPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

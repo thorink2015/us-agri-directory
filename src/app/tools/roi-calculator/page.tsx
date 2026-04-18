@@ -51,20 +51,6 @@ export const metadata: Metadata = {
 };
 
 export default function ROICalculatorPage() {
-  const softwareSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Ag Drone Buy vs. Hire ROI Calculator',
-    applicationCategory: 'Agriculture',
-    operatingSystem: 'Web',
-    description:
-      'Calculate break-even and annual ROI for buying an agricultural spray drone versus hiring an operator. Models USDA EQIP cost-share, financing and variable acreage.',
-    url: `${SITE.domain}/tools/roi-calculator`,
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@id': AUTHOR.personId },
-    publisher: { '@id': AUTHOR.organizationId },
-  };
-
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -102,7 +88,6 @@ export default function ROICalculatorPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

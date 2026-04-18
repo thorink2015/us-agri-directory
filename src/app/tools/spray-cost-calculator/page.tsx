@@ -51,20 +51,6 @@ export const metadata: Metadata = {
 };
 
 export default function SprayCostPage() {
-  const softwareSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Drone Spray Cost Calculator',
-    applicationCategory: 'Agriculture',
-    operatingSystem: 'Web',
-    description:
-      'Estimate drone crop spraying cost per acre by crop type, state and number of passes. Uses 2026 Iowa State Custom Rate Survey data with regional adjustments.',
-    url: `${SITE.domain}/tools/spray-cost-calculator`,
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-    author: { '@id': AUTHOR.personId },
-    publisher: { '@id': AUTHOR.organizationId },
-  };
-
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -102,7 +88,6 @@ export default function SprayCostPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

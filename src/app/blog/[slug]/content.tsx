@@ -355,7 +355,7 @@ export const blogContent: Record<string, ReactNode> = {
       <h2>Authority sources</h2>
       <ul>
         <li>
-          <a href={addUtm("https://www.diu.mil/solutions/blue-uas", "authority_link")} target="_blank" rel="noopener noreferrer">
+          <a href={addUtm("https://www.diu.mil/blue-uas-list", "authority_link")} target="_blank" rel="noopener noreferrer">
             Defense Innovation Unit &mdash; Blue UAS Cleared List
           </a>
         </li>

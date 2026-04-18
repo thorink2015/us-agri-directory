@@ -394,7 +394,7 @@ export const stateData: StateData[] = [
     regionSlug: 'corn-belt',
     regionName: 'Corn Belt',
     licensingAgency: 'Ohio Department of Agriculture (ODA)',
-    licensingAgencyUrl: 'https://agri.ohio.gov/',
+    licensingAgencyUrl: 'https://agri.ohio.gov/divisions/pesticide-regulation',
     aerialCategory: 'Category C-1 (commercial license required even for private applicators)',
     examsRequired: 'Core + Category C-1. License $35/yr. Business license $35.',
     examFees: '$35/yr license (exam fee included). Aerial insurance $100K/$300K required.',
@@ -408,7 +408,7 @@ export const stateData: StateData[] = [
     renewalCycle: '3-year cycle.',
     ceRequirements: '5 hours per 3-year cycle (min 1 hr Core, 0.5 hr per category).',
     droneSpecificCredential: false,
-    droneGuidanceUrl: 'https://agri.ohio.gov/',
+    droneGuidanceUrl: 'https://agri.ohio.gov/divisions/pesticide-regulation',
     extensionUrl: 'https://cfaes.osu.edu',
     topCrops: [
       { slug: 'corn', name: 'Corn', acreage: '3.4M acres', notes: 'Tar spot expanding west to east' },
@@ -426,7 +426,7 @@ export const stateData: StateData[] = [
     licensingDetails:
       'Ohio pesticide licensing is administered by the Ohio Department of Agriculture (ODA) under Category C-1. Ohio has the strictest private applicator rule in the US: every drone pesticide applicator, including farmers spraying their own land, must hold a commercial license with Category C-1. License fees are $35 per year, with exam fee included.\n\nOhio also mandates among the highest aerial insurance minimums in the country: $100,000 property damage per occurrence, $100,000 bodily injury per person and $300,000 bodily injury per occurrence. ODA explicitly prohibits drone application of Enlist, Acuron (atrazine formulations) and Xtend Max (dicamba formulations). Continuing education is 5 hours per 3-year cycle. Reciprocity exists with AL, FL, GA, IL, IN, LA, MI and MN.',
     authorityLinks: [
-      { label: 'ODA Pesticide Program', url: 'https://agri.ohio.gov/' },
+      { label: 'ODA Pesticide Program', url: 'https://agri.ohio.gov/divisions/pesticide-regulation' },
       { label: 'OSU Extension CFAES', url: 'https://cfaes.osu.edu' },
     ],
     faqs: [
@@ -670,7 +670,7 @@ export const stateData: StateData[] = [
     ceRequirements: '12 hours per 3-year cycle.',
     droneSpecificCredential: false,
     droneGuidanceUrl: null,
-    extensionUrl: 'https://www.uky.edu/ccd',
+    extensionUrl: 'https://ccd.ca.uky.edu/',
     topCrops: [
       { slug: 'corn', name: 'Corn', acreage: '1.4M acres', notes: 'Central Kentucky' },
       { slug: 'soybeans', name: 'Soybeans', acreage: '1.7M acres', notes: 'Western Kentucky concentration' },
@@ -687,7 +687,7 @@ export const stateData: StateData[] = [
       'Kentucky pesticide licensing is administered by the Kentucky Department of Agriculture (KDA) under Category 11 (Aerial Certification), which explicitly includes UAS. Category 11 is not standalone, it must be paired with at least one site category, making a minimum of 3 exams: Core, Category 11 and a site category. Exam fees are $10 each with a $25 license fee.\n\nA notable Kentucky rule: aerial certification is required for all pesticides applied by drone, including general-use products. This is stricter than most states, where certification is only required for restricted-use pesticides. Continuing education is 12 hours per 3-year renewal cycle. Reciprocity exists with IL, IN, OH, TN, VA and WV.',
     authorityLinks: [
       { label: 'KDA Pesticide Certification', url: 'https://www.kyagr.com/consumer/obtaining-certification.html' },
-      { label: 'UK Center for Crop Diversification', url: 'https://www.uky.edu/ccd' },
+      { label: 'UK Center for Crop Diversification', url: 'https://ccd.ca.uky.edu/' },
     ],
     faqs: [
       { question: 'What does drone spraying cost in Kentucky?', answer: 'Rates run $14 to $19 per acre, slightly above the core Corn Belt baseline due to fewer operators and more variable terrain. Western Kentucky is flatter and more competitive.' },
