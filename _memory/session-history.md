@@ -148,6 +148,14 @@
 - Build: `npm run build` zero errors (1214 pages)
 - Pushed to `claude/revert-homepage-design-v1-ZYGY0`; draft PR #32 updated, marked ready for review
 
+## 2026-04-18 — Operator data import (260 new operators, PR #38)
+
+- Parsed 7 research batch files (`_research/operators-batch-*.md`) via `scripts/import-operators.ts`
+- Field-mapped raw rows → `Operator` objects; deduped vs 131 existing + cross-batch; category-filtered
+- Near-dupe check: removed 2 confirmed punctuation/spacing duplicates
+- Appended 260 net-new operators in 3 batches of 90/90/80; total **131 → 391 operators**
+- Zero TypeScript errors; committed + pushed to `claude/restore-operator-batches-5Kuiz`; draft PR #38 created
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

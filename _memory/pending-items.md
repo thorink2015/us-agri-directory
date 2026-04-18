@@ -28,7 +28,7 @@ See `_research/README.md` for what's uploaded and what's missing.
 | `research-03-state-licensing.md` | 50 state page template (build-plan Session 11), `/regulations/state-licensing` |
 | `research-04-usda-programs.md` | `/grants` pillar, insurance page, training page, `/pricing` rewrite |
 | `research-05-keyword-map.md` | Homepage rewrite, `/pricing` pillar rewrite |
-| `operators-batch-2-southeast.md` | Southeast operator seed data (plan references Batch 2 but not uploaded) |
+| `operators-batch-2-southeast.md` | Southeast operator seed data (plan references Batch 2 but not uploaded) — other 7 batches fully imported (PR #38) |
 
 ## Blocked on external account setup (Eugen handles)
 
