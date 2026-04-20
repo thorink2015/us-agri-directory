@@ -18,6 +18,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorSchema from '@/components/schema/OperatorSchema';
 import ExternalLink from '@/components/ui/ExternalLink';
 import OperatorContactLinks from '@/components/operators/OperatorContactLinks';
+import VerificationBadges from '@/components/ui/VerificationBadges';
 
 interface Props {
   params: { slug: string };
@@ -119,6 +120,8 @@ export default function OperatorPage({ params }: Props) {
                   </div>
                 </div>
               </div>
+
+              <VerificationBadges operator={operator} className="mt-4" />
 
               <p className="mt-4 text-gray-700 leading-relaxed">{operator.description}</p>
 
