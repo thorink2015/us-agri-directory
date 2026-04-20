@@ -1,0 +1,216 @@
+# US Ag Drone Directory, full text index
+
+> Plain-text export of the main hub and regulation pages for AI crawlers. Each section includes the page URL, the answer-engine optimization (AEO) opening block where one is published, and the main body content stripped of navigation and UI. Pricing is in 2026 USD. Regulations reflect FAA, EPA and state rules as of April 2026.
+
+=== Home: Find a Drone Spraying Service Near Your Farm ===
+URL: https://agdronedirectory.com/
+
+Search 391+ verified ag drone operators across all 50 US states. Compare per-acre rates from $12, check FAA credentials and contact operators directly. Row crop applications (corn, soybeans, wheat) run $12 to $18 per acre for application only, with the farmer supplying the chemical. Vineyard and orchard work runs $18 to $35 per acre because of terrain and more passes per season. The 2026 Iowa State Custom Rate Survey established the first university benchmark at $12.50 per acre average.
+
+Directory stats published on the homepage. 391+ verified operators. 50 states covered. 10.3M+ acres drone-sprayed in 2024 per the American Spray Drone Coalition. $12.50 per acre is the 2026 Iowa State Extension Custom Rate Survey average. Top states by operator count are Iowa, Texas, California, Illinois, Arkansas and Kansas.
+
+Services listed on the homepage: drone spraying ($12 to $22 per acre, fungicides, herbicides, insecticides, defoliants); cover crop seeding ($12 to $18 per acre, cereal rye, ryegrass, clover blends); aerial mapping ($2 to $8 per acre, NDVI, orthomosaic, prescription files); crop monitoring ($3 to $10 per acre, pest pressure and disease identification); granular spreading ($10 to $18 per acre, urea, gypsum, lime); drone sales ($18,000 to $75,000, new and used, authorized dealers).
+
+How it works in three steps. Search your area by state, county or zip, add crop type and service needed. Compare operators side by side for equipment, certifications, coverage area, per-acre rates and ratings. Contact and book directly, request quotes and schedule the application window.
+
+Featured drones on the homepage. DJI Agras T50, 40L tank, $22,000 to $28,000, not NDAA. DJI Agras T100, 100L tank, contact dealer, not NDAA. Hylio AG-272, 68L tank, $55,000 to $75,000, NDAA compliant. Talos T60X, 50L tank, from $17,899, NDAA status to be confirmed.
+
+Homepage FAQ answers. Drone crop spraying costs $12 to $18 per acre for row crops and $18 to $35 per acre for specialty crops in 2026. Commercial drone spraying is legal in all 50 states with FAA Part 107, FAA Part 137 and a state pesticide applicator license with aerial endorsement. A single DJI Agras T50 covers 40 to 60 acres per flight hour or 300 to 600 acres per day. Two-drone crews reach 600 to 1,000 acres per day. USDA NRCS EQIP Practice Code 595 offers 40 to 90 percent cost-share on qualifying drone purchases. Cover crop seeding by drone qualifies under Practice Standard 340 at $25 to $55 per acre. Book corn fungicide applications 4 to 6 weeks ahead, wheat heading in April, full-season orchard contracts in January or February.
+
+---
+
+=== Pricing: How Much Does Drone Crop Spraying Cost in 2026? ===
+URL: https://agdronedirectory.com/pricing
+
+Drone crop spraying in the United States costs $12 to $18 per acre for row crops and $18 to $35 per acre for vineyards and orchards in 2026, application only with the farmer supplying chemical. The 2026 Iowa State Custom Rate Survey established the first university benchmark at $12.50 per acre average ($12.00 median) based on 47 operator responses. Rates have compressed 30 to 45 percent since 2022, driven by rapid growth in operator supply.
+
+Rates by application type, all application-only (farmer supplies chemical). Fungicide application $13 to $16 per acre, source Indiana Prairie Farmer April 2025 and University of Missouri Extension. Herbicide application $12 to $19 per acre, source national operator data and nuWay Ag. Insecticide application $13 to $17 per acre. Defoliant application $14 to $18 per acre, cotton benchmark. Cover crop seeding $12 to $20 per acre, Iowa State 2026 aerial seeding average $13.60, Wisconsin drone seeding $20. Liquid fertilizer application $13 to $17 per acre; Iowa State 2026 ground broadcast $9.35, drone rates follow spray pricing. University of Missouri G1274 uses $16 per acre as the custom-hire benchmark, with farmer ownership at $12.27 per acre at 1,000 acres per year and $7.39 per acre at 4,000 acres per year.
+
+Regional rates. Corn Belt (IA, IL, IN, OH, eastern NE) $12 to $17 per acre, most competitive market, large flat fields. Great Plains (KS, NE, ND, SD, OK, TX panhandle) $12 to $16 per acre, large open acreage. Mississippi Delta (AR, LA, MS, MO bootheel) $14 to $18 per acre, strong manned aerial competition, rice paddy complexity. California specialty crops $15 to $35 per acre, orchards, vineyards, steep terrain, CDPR compliance. Southeast (GA, AL, SC, NC, FL) $16 to $28 per acre, variable terrain, higher chemical costs. Pacific Northwest (WA, OR, ID) $14 to $20 per acre, row crops at the low end, orchards and vineyards at the high end. Northeast (PA, NY, VA, MD) $15 to $25 per acre, smaller irregular fields.
+
+Rates by crop. Corn $12 to $18 per acre, VT/R1 tall-crop fungicide commands 15 to 25 percent premium, Beck's 2025 PFR shows $27.26 ROI per acre. Soybeans $12 to $18 per acre, Midwest baseline. Wheat $12 to $16 per acre, lower canopy complexity. Cotton $14 to $20 per acre, defoliant rates run higher than mid-season insecticide. Rice $14 to $22 per acre, Delta region, wet field conditions. Orchards $20 to $35 per acre, higher GPA requirements, complex flight paths. Vineyards $18 to $30 per acre, steep terrain, 8 to 12 passes per season. Specialty vegetables $20 to $40 per acre.
+
+Minimums and extras. Most operators set a 10 to 25 acre minimum. Broken-up or hard-to-reach fields add $5 to $10 per acre. Mobilization fees run $50 to $150 flat or per-mile. Generator fuel runs roughly $0.37 to $0.48 per acre, typically built into the base rate. Chemical cost is additional, $8 to $25 per acre for fungicide products.
+
+Historical trend. 2022 Midwest drone rate $22 to $25 per acre with manned aerial at $10 to $13. 2024 drone rate $15 to $18 with manned aerial at $11 to $13. 2026 drone rate $12 to $17 with manned aerial at $12 per acre (Iowa State). Midwest rates dropped 30 to 45 percent in three years. SweetWater Technologies scaled from 32,000 acres in 2022 to an estimated 200,000 by end of 2025. NAAA 2025 industry survey found 13 percent of aerial application operations now include UAS, up from 5 percent in 2024. American Spray Drone Coalition reported 10.3 million US acres sprayed by drones in 2024, roughly 2.5 times the 2023 figure. Cumulative tariffs on Chinese drones reached 170 percent by April 2025, narrowing the price gap with US-made alternatives.
+
+Drone vs ground vs airplane. Agricultural drone $12 to $35 per acre, best for tall crops at VT/R1, wetlands, spot treatment, orchards and vineyards. Ground sprayer custom hire $7 to $11 per acre, best for large open row-crop fields, weak in tall or wet crops. Manned airplane $10 to $13 per acre, best for 500+ acre fields, weak near structures, minimum field size, drift risk.
+
+USDA cost-share. EQIP Practice 595 Integrated Pest Management provides $15 to $35 per acre for qualifying IPM. EQIP Practice 340 Cover Crop supports aerial seeding at 50 to 75 percent cost-share. FSA microloans up to $50,000 and operating loans can finance drone equipment.
+
+Pricing FAQ. Iowa State 2026 reported a low end of $8 per acre on large contiguous Corn Belt fields. Vineyard and orchard costs run higher because of steep terrain, 10 to 20 gallons per acre carrier volume and 8 to 12 passes per season. Farmers typically supply chemical; all-in pricing runs 10 to 20 percent higher. University of Missouri Extension puts the drone-ownership break-even at approximately 980 acres per year. Multi-pass and multi-year contracts cut rates 10 to 20 percent.
+
+Primary sources: Iowa State Extension 2026 Custom Rate Survey, University of Missouri Extension G1274, American Spray Drone Coalition, USDA NRCS EQIP.
+
+---
+
+=== About US Ag Drone Directory ===
+URL: https://agdronedirectory.com/about
+
+US Ag Drone Directory is a single-author directory of 391+ agricultural drone operators across all 50 US states, founded and personally edited by Eugen. Every listing is independently reviewed against FAA Part 107 and Part 137 records, and every regulatory or pricing page on this site cites primary sources from the FAA, EPA, USDA or land-grant university extension. The directory exists to give US farmers one trusted place to find verified ag drone operators, regulations and pricing, without middlemen, commissions or paywalls.
+
+Why this directory exists. The US agricultural drone services market is growing at over 30 percent per year, but farmers searching for a local spray operator found generic results, equipment retailers and outdated forum threads instead of service providers. Operators had no cost-effective way to reach the farmers in their coverage area. This site was built after years of tracking the agricultural drone industry in more mature markets. The US market is larger and more fragmented, but the information problem is the same: farmers need a single trusted place to find verified operators, compare pricing and understand the FAA, EPA and state regulations that govern every application. The site is free for operators to list, free for farmers to use and will remain that way. It is not a lead-generation marketplace, not an affiliate network and not a software vendor.
+
+How the research works. Primary sources only: every regulatory fact, FAA Part 107 and Part 137 requirements, EPA FIFRA labeling, state pesticide licensing, USDA program rules, cites its primary source directly. No secondary aggregators, no unverified forum posts. Operator verification: each listed operator is reviewed against the public FAA Airmen database for Part 107 Remote Pilot Certificate, against publicly searchable state pesticide applicator records where available, and by direct contact. Pricing data: per-acre rate ranges are compiled from operator surveys, public quotes, USDA cost-of-production data and direct interviews, reviewed each spray season. Last-reviewed dates are published on every content page. Regulatory pages older than 90 days and pricing pages older than 180 days are flagged for refresh.
+
+What the site is not. The author is not a licensed Part 137 Agricultural Aircraft Operator and does not hold a US state pesticide applicator license; the site researches and writes about regulations but does not perform commercial applications. The site is not legal advice and is not a law firm. FAA and EPA rules change, state pesticide rules vary widely; verify every regulatory requirement with the FAA, EPA and your state Department of Agriculture before operating commercially. Operator listings are a good-faith review, not a guarantee; always verify current certifications, insurance and references before hiring.
+
+How operators get listed. Listing a drone-spraying business is and will remain completely free for operators anywhere in the United States. No commissions, no referral fees, no paywalled features. Basic listings are free permanently. Featured placement is available separately for operators who want additional visibility.
+
+About FAQ. Listing is free, no commission, no booking fee; premium features may be offered in the future but basic listings will always be free. The directory is currently not monetized; future revenue may include premium operator listings, manufacturer partnerships and educational resources; the directory will never charge farmers for access or take commissions. Pricing data is reviewed quarterly, regulatory data is updated when rules change, operator listings are continuously refreshed, every content page displays a last-reviewed date.
+
+---
+
+=== Operators: All US Agricultural Drone Operators ===
+URL: https://agdronedirectory.com/operators
+
+Search and filter all verified agricultural drone operators in the US. Filter by state, service type and crop to find the right operator for your fields. The index lists 391 operators across all 50 states; every operator page includes phone, email, website, coverage counties, services offered, crops served, drone models in the fleet, FAA Part 107 and Part 137 status, NDAA compliance, fleet size, acres treated and per-acre price range.
+
+How operators are organized. Each operator record holds: business name and short name, city, state, counties served (used for geographic search), services (spraying, seeding, mapping, monitoring, spreading, training, rental, sales, consultancy, emergency), crops served, drone models flown, per-acre price range in USD, total acres treated, fleet size, FAA Part 107 status, FAA Part 137 status, NDAA compliance status, featured and verified flags. The verified badge is applied after review against the public FAA Airmen database and state pesticide applicator records. Featured operators appear first on state and service pages.
+
+Operator coverage highlights. Top states by operator count: California 41 operators, Tennessee 32, Nebraska 32, Texas 29, Alabama 26, Illinois 25, Kansas 25, Iowa 23. 13 operators currently hold featured placement. All 391 operators hold FAA Part 107; the large majority also hold Part 137 or a 44807 exemption for drones over 55 lbs. NDAA-compliant operators (Hylio, Pyka, Blue UAS platform fleets) are flagged separately for farmers and procurement officers bidding federal or state-funded contracts.
+
+How to find an operator. Four filter paths. First, by state or county via /states. Second, by crop specialty via /crops (corn, soybeans, wheat, cotton, rice, grapes, orchards, cover crops). Third, by service via /services (10 service categories). Fourth, by drone model flown via /drones (DJI Agras T50, T100, T25; Hylio AG-272, AG-230; XAG P100 Pro; Talos T60X; Pyka Pelican Spray).
+
+How operators get verified and listed. Operators submit through /list-your-business for free. The author reviews the FAA Airmen record for Part 107, the state aerial applicator registry where publicly searchable and the Part 137 certificate status. Verified operators display the green verified badge. Listing is permanent and free. Featured placement is available separately for operators who want priority placement on state and service pages.
+
+---
+
+=== States: Agricultural Drone Spraying by State (2026) ===
+URL: https://agdronedirectory.com/states
+
+Drone spray rates across the US range from $12 per acre in the Corn Belt (Iowa benchmark) to $50 per acre in Alaska for remote logistics work. Every operator must hold FAA Part 107 and a state pesticide applicator license in the aerial category. All 50 states have detailed guides covering state-specific licensing rules, reciprocity, seasonal spray windows, top crops and 2026 rate ranges.
+
+Featured state guides on the hub. Iowa: Corn Belt benchmark, $12 to $17 per acre, top crops corn and soybeans, agency IDALS Category 11. Texas: largest ag state, $12 to $20 per acre, top crops cotton and corn, agency Texas Department of Agriculture Category 9. California: specialty crops, $18 to $35 per acre, top crops grapes and almonds, agency California Department of Pesticide Regulation (CDPR).
+
+How the state pages are organized. Each of the 50 state pages includes: state-specific licensing agency and aerial category name; exam requirements, fees and continuing education hours; reciprocity notes for operators licensed in neighboring states; seasonal spray windows by crop; 2026 per-acre rate range; top crops by acreage; operator count currently serving the state; county-level coverage list; link to the state department of agriculture and to primary licensing sources; FAQs specific to local rules.
+
+What varies most across states. License name and aerial category differ (Category 11 in Iowa, Category 12 in Kansas, Category 1a in Washington, Aerial Pesticide Applicator in Oregon). Fees range from $75 per year in North Dakota to $400+ per year in California. Continuing education hours vary from 2 per cycle in some states to 24+ in others. Six states (California, North Dakota, Arizona, Michigan, Louisiana, Minnesota) have issued drone-specific paperwork on top of the standard aerial category. Ohio uniquely requires private applicators to hold a commercial license for any drone use. Oregon requires 50 hours of flight experience before the Aerial Pesticide Applicator license. Arkansas, Hawaii and Maine have no reciprocity.
+
+Regional organization on the states hub. States are grouped by farming region: Corn Belt (IA, IL, IN, OH, MO, MI, WI, MN, KY, TN); Great Plains (KS, NE, ND, SD, MT, WY, CO, OK, NM, TX); Mid-South (AR, MS, LA, TN, AL, GA); Southeast (FL, SC, NC, VA, WV); West (CA, WA, OR, ID, NV, UT, AZ, AK, HI). Each region has its own multi-state profile page at /regions/<slug>.
+
+---
+
+=== Crops: Drone Spraying by Crop Type ===
+URL: https://agdronedirectory.com/crops
+
+Different crops need different approaches. Browse by crop to find operators with hands-on experience in your production system, plus application timing, typical per-acre rates and equipment recommendations. The directory publishes 8 crop pages covering the acreage where drone application is most common or growing fastest.
+
+Crops covered and headline facts. Corn, 90 million US acres, VT/R1 fungicide at $12 to $18 per acre, 5 to 8 bushel yield response in Beck's PFR data, treatment window July. Soybeans, 87 million US acres, R2/R3 fungicide at $12 to $18 per acre, white mold and frogeye leaf spot control, treatment window July and August. Wheat, 45 million US acres, T3 heading fungicide at $12 to $16 per acre, Fusarium head blight control, treatment window May and June. Cotton, 10 million Delta acres, September to October defoliant at $14 to $20 per acre. Rice, 2.5 million acres in AR, LA, MS and CA, 100 percent aerial treated, $14 to $22 per acre. Grapes and vineyards, 8 to 12 passes per season, $18 to $30 per acre, hillside blocks, UC Davis data. Orchards (apple, cherry, almond, walnut), 5 million US acres, $20 to $35 per acre. Cover crops, 15 million acres, aerial seeding $12 to $20 per acre, USDA NRCS Practice Standard 340.
+
+What each crop page covers. Every crop page includes: an AEO answer block with the typical rate range and treatment window; US acreage and regional concentration; primary target pests, diseases or weeds addressed by drone; application timing by growth stage (BBCH or university scale); operator recommendations for carrier volume, droplet size and wind limits; USDA NRCS cost-share eligibility where applicable; primary-source authority links to land-grant extension research (Iowa State, University of Illinois, Kansas State, UC Davis, University of Arkansas, LSU AgCenter, Mississippi State); FAQs on timing, ROI and chemical compatibility.
+
+How to find operators by crop. Each crop page surfaces operators who list that crop in their profile. Filters combine crop specialty with state coverage so a corn grower in Iowa sees only Iowa-serving operators flagged for corn, an almond grower in California sees CA orchard specialists, a rice grower in the Delta sees AR and LA operators with rice experience.
+
+Why drone application is growing on these crops. Tall crops at late reproductive stages (corn at VT/R1, soybeans at R2/R3) cannot be traversed by ground equipment without canopy damage, and manned aerial struggles to target upper-canopy fungicide at low carrier volumes; drones close the gap. Rice paddies and flooded fields rule out ground rigs and make drone application the default. Vineyards and orchards on steep terrain or dense trellis systems are outside the reach of ground sprayers and conventional aircraft. Cover crop seeding into standing corn or soybeans before harvest lets growers plant rye, ryegrass or clover weeks earlier than post-harvest ground seeding, which is what makes USDA NRCS Practice 340 cost-share relevant.
+
+---
+
+=== Services: Agricultural Drone Services in the US ===
+URL: https://agdronedirectory.com/services
+
+Modern ag drones do more than spray. The directory publishes 10 service pages covering the full range of commercial drone work available from verified US operators. Services are organized by revenue category so farmers can find the exact service they need and operators can benchmark their market.
+
+Services covered and headline pricing. Drone pesticide spraying at $12 to $22 per acre, Part 137 required, includes fungicide, herbicide, insecticide and defoliant application. Aerial cover crop seeding at $12 to $18 per acre, USDA NRCS EQIP Practice Standard 340 eligible. Agricultural drone mapping at $2 to $8 per acre, Part 107 only, NDVI orthomosaics and prescription files. Crop health monitoring at $3 to $10 per acre per flight, multispectral NDVI and NDRE imaging. Dry granular spreading at $10 to $18 per acre, urea, gypsum, lime and cover crop seed. Ag drone pilot training at $500 to $4,500 per course, FAA and state exam prep. Agricultural drone rental at $2,000 to $8,000 per week, insurance required. Agricultural drone sales covering new and used platforms from DJI, Hylio, XAG and Talos authorized dealers. Ag drone business consultancy at $100 to $300 per hour, Part 137 operations manual preparation and Section 44807 petition drafting. Emergency spray services at $18 to $35 per acre for rapid-response outbreak treatment.
+
+What each service page covers. Every service page includes: an AEO answer block with the typical 2026 USD rate range; the certification layer required (Part 107 only for mapping, Part 107 plus Part 137 plus state aerial license for any pesticide application, state-specific applicator category for seed or fertilizer); typical workflow and deliverables; operator recommendations; primary-source citations (Iowa State Custom Rate Survey, University of Missouri Extension G1274, UC Davis, Kansas State, USDA NRCS); FAQs specific to scheduling, minimum acreage, chemical supply and insurance.
+
+Why spraying is the anchor service. Drone pesticide spraying generates the largest revenue share for most commercial operators and is the most tightly regulated. The three-credential stack (Part 107, Part 137, state aerial applicator license) applies to every spray flight. The 2026 Iowa State Custom Rate Survey benchmark of $12.50 per acre is the primary public reference point. Rates have compressed 30 to 45 percent since 2022 driven by operator supply growth from roughly 1,000 commercial ag drone operators in 2022 to 4,000+ in 2025.
+
+Secondary services worth noting. Cover crop seeding is the fastest-growing category thanks to USDA NRCS EQIP cost-share and the operational advantage of seeding cereal rye into standing corn or soybeans weeks before harvest. Aerial mapping and crop monitoring do not require Part 137 or a state pesticide license, making them lower-barrier entry services for new Part 107 operators. Drone sales and rental are the platform revenue streams for Hylio, DJI, XAG and Talos authorized dealers. Consultancy is a high-margin niche for operators who have already navigated their own Part 137 application and can shepherd new operators through the 90-to-180-day FAA process.
+
+---
+
+=== Drones: Commercial Ag Spray Drones ===
+URL: https://agdronedirectory.com/drones
+
+Compare the commercial spray drones used by operators in the directory. Specifications, pricing and key features for each platform. 8 drone model pages cover the platforms that account for the majority of US commercial ag drone fleet hours in 2026.
+
+Drones listed and headline specs. DJI Agras T50, 40L tank, $22,000 to $28,000 post-tariff, 22 mph maximum wind rating, not NDAA compliant, the volume leader in US private commercial ag drone fleets. DJI Agras T100, 100L tank, launched July 2025, 175 kg MTOW, designed for very large contiguous row-crop fields, not NDAA compliant. DJI Agras T25, 20L tank, compact spray platform, 18.5 mph wind rating, entry-level DJI platform. Hylio AG-272, 68L tank, $55,000 to $75,000, NDAA compliant, Richmond Texas manufacture, the highest-volume NDAA-compliant spray drone in US service. Hylio AG-230, smaller Hylio platform, $38,000 to $48,000, NDAA compliant. XAG P100 Pro, 40L tank, 22 mph wind rating, not NDAA compliant, strong in cotton and orchard markets. Talos T60X, 50L tank, from $17,899, US-manufactured alternative spray platform. Pyka Pelican Spray (Pelican 2), fixed-wing autonomous spray aircraft, roughly $550,000, the largest NDAA-compliant spray platform in service.
+
+What each drone page covers. Every drone page includes: tank volume and spray system specifications (pump type, nozzle count, droplet range); maximum takeoff weight and loaded weight; airspeed and maximum wind rating; battery platform and swap time; typical acres per flight hour under standard conditions; NDAA compliance status with primary-source citation; MSRP and post-tariff pricing; authorized US dealers; operator fleets flying the platform; compatible spreader and seeder attachments; warranty and parts availability notes.
+
+How to use the hub. Farmers and operators use the drone pages to match equipment to contract requirements. Federal contracts and USDA-funded research require NDAA compliance, which filters to Hylio AG-272, Hylio AG-230, Pyka Pelican 2 and Blue UAS list platforms. Private farm contracts have no NDAA requirement; DJI T50 and T100 lead on per-gallon and per-acre cost. Specialty crop work with high carrier volumes (vineyards, orchards) favors higher-tank platforms (Hylio AG-272, DJI T100). Large open row-crop operations favor high-throughput platforms (DJI T100, Pyka Pelican 2). New operators often start on DJI T50 for private work while adding a Hylio platform when federal contract opportunities open up.
+
+---
+
+=== Regions: US Agricultural Drone Regions ===
+URL: https://agdronedirectory.com/regions
+
+American agriculture is built around distinct farming regions, each with its own crop mix, spray timing and drone demand drivers. 5 regional hubs cover the multi-state profiles where drone application has the largest footprint: Corn Belt, Great Plains, Mid-South, Southeast and West.
+
+Regions and headline facts. Corn Belt includes Iowa, Illinois, Indiana, Ohio, Missouri, Michigan, Wisconsin, Minnesota, Kentucky and Tennessee. The Corn Belt is the densest commercial ag drone market in the United States, with Iowa as the Iowa State Custom Rate Survey anchor at $12.50 per acre. Corn fungicide at VT/R1 in July and soybean fungicide at R2/R3 in late July and early August drive peak-season demand. Great Plains includes Kansas, Nebraska, North Dakota, South Dakota, Montana, Wyoming, Colorado, Oklahoma, New Mexico and Texas. The Great Plains region hosts wheat fungicide at T3 heading in May and June, irrigated corn and soybean fungicide at scale, and strong airplane-to-drone crossover economics below 500 acre field sizes. Mid-South includes Arkansas, Mississippi, Louisiana, Tennessee, Alabama and Georgia. Mid-South is the cotton, soybean and rice core with 100 percent aerial-treated rice acreage in Arkansas and Louisiana, strong manned aerial applicator competition and higher operational complexity from flooded fields. Southeast includes Florida, South Carolina, North Carolina, Virginia and West Virginia. Southeast covers cotton, peanuts, forestry and specialty vegetable applications with variable terrain and smaller average field sizes. West includes California, Washington, Oregon, Idaho, Nevada, Utah, Arizona, Alaska and Hawaii. West is dominated by California specialty crops (vineyards, orchards, almonds, walnuts) at $18 to $35 per acre, Pacific Northwest orchards and row crops, and unique state credentials (CDPR Unmanned Pest Control Aircraft Pilot Certificate, Oregon 50-hour flight experience prerequisite, Washington streamlined licensing).
+
+What each region page covers. Every region page includes: the list of states in the region and their operator counts; dominant crops and acreage by crop; typical spray windows month by month; regional rate range with the primary drivers; top operators serving multiple states in the region; region-specific regulatory notes (airplane aerial competition intensity, state reciprocity arrangements, NDAA-mirror state laws where present); link to each state page in the region; FAQs on regional booking lead times and seasonal demand peaks.
+
+How to use the region hub. Farmers in multi-state operations use the region pages to find operators who serve a corridor rather than a single state. Operators use the region pages to benchmark their market against neighboring states and to identify expansion opportunities. The region hub cross-links to the states hub (50 individual state pages) and to the crops hub (8 crop pages) so users can combine geography and crop specialty in one search.
+
+---
+
+=== FAA Part 107: Remote Pilot Certificate for Ag Drone Operators ===
+URL: https://agdronedirectory.com/regulations/faa-part-107
+
+FAA Part 107 is the baseline remote pilot certificate for all commercial drone operations in the US. The exam is 60 multiple-choice questions, 70 percent passing, proctored at PSI testing centers for $175. Study time is 2 to 4 weeks. Part 107 alone does not authorize pesticide application; Part 137 and a state pesticide license are also required.
+
+What Part 107 covers. Part 107 grants authority to operate a small unmanned aircraft (under 55 lbs) commercially in the US National Airspace System. It covers airspace rules (Class B through G), visual line of sight (VLOS) operations, weather minimums (3 statute miles visibility, 500 ft below clouds, 2,000 ft horizontal), crew requirements (remote pilot-in-command plus optional visual observer) and the waiver process for operations outside standard rules. Maximum altitude is 400 ft AGL above ground or within 400 ft of a structure.
+
+How to get Part 107. The path is a single knowledge exam: 60 multiple-choice questions, 70 percent passing, 2-hour time limit, $175 at PSI testing centers. There is no flight test. Typical study time is 2 to 4 weeks using the free FAA Remote Pilot study guide and sample test questions. Paid courses from Drone Pilot Ground School, Pilot Institute and King Schools run $150 to $300 and typically include a pass guarantee. After passing, create an IACRA account, submit Form 8710-13 and receive a temporary certificate within 10 business days. The permanent card arrives by mail in 4 to 6 weeks.
+
+What Part 107 does not authorize. Part 107 is the foundation, not the full stack. It does not authorize aerial pesticide application (requires Part 137 and a state license), operation of drones over 55 lbs (requires Section 44807 exemption), beyond visual line of sight (BVLOS) flight without a waiver, operations over non-participating people without a waiver or compliant platform or flight above 400 ft AGL outside of controlled airspace with ATC authorization. Flying a spray drone with just Part 107 is a violation of both FAA and EPA rules.
+
+[Full content at URL, including Part 107 renewal (24-month recurrent online test ALC-677) and Part 107 waivers for ag drone operators (night, BVLOS, operations over people, altitude above 400 ft AGL).]
+
+Primary sources: FAA Become a Drone Pilot page, FAA Part 107 Overview, 14 CFR Part 107 full regulation text at eCFR.
+
+---
+
+=== FAA Part 137: Agricultural Aircraft Operator Certificate for Drones ===
+URL: https://agdronedirectory.com/regulations/faa-part-137
+
+FAA Part 137 is the agricultural aircraft operator certificate required for any commercial aerial application of pesticides, including by drone. The certification process takes 90 to 180 days from submission to FAA approval. Drones over 55 lbs require an additional Section 44807 exemption as part of the Part 137 application. Most commercial ag drone operators hold both Part 137 and a 44807 exemption.
+
+What Part 137 is. 14 CFR Part 137 is the agricultural aircraft operator certificate, originally written for manned aircraft (crop dusters and helicopters) and later interpreted by FAA to cover small unmanned aircraft systems (sUAS). Any person or business conducting aerial application of economic poison, seed or other agricultural substance for hire or for their own agricultural operation must hold a Part 137 certificate. The certificate is issued by the local FAA Flight Standards District Office (FSDO) after review of the operations manual, training records and any applicable exemption petitions.
+
+Part 137 commercial vs private. FAA distinguishes commercial operators (spraying for hire or custom application work) from private operators (a farmer spraying only their own crops on land they own, lease or rent). Private operators are eligible for a simplified Part 137 with reduced recordkeeping and no commercial-fleet airworthiness requirements. Commercial operators have the full Part 137 obligations including operations manual, crew training documentation and maintenance records. The commercial certificate is the correct path for any operator who charges customers or sprays for neighbors.
+
+The Section 44807 exemption. Section 44807 of the FAA Reauthorization Act allows FAA to grant exemptions for unmanned aircraft that fall outside standard Part 107 rules. Drones over 55 lbs and commercial spray operations with sUAS require a 44807 exemption as part of the Part 137 package. The exemption petition documents the specific aircraft, operations manual compliance, pilot training and maintenance program. Most ag drones (DJI Agras T50 at 90+ lbs loaded, Hylio AG-272 at 140 lbs loaded, DJI T100 at 220 lbs loaded) cross the 55 lb threshold and therefore require 44807.
+
+[Full content at URL, including How to get Part 137 (six-step application and consultant packages at $2,500 to $4,500), What the operations manual must include (8 required sections, 60 to 120 pages typical) and Common mistakes that delay approval.]
+
+Primary sources: FAA Agricultural Operations page, 14 CFR Part 137 full regulation text at eCFR.
+
+---
+
+=== State Pesticide Applicator Licensing for Drone Operators: All 50 States ===
+URL: https://agdronedirectory.com/regulations/state-licensing
+
+Every US state requires a commercial pesticide applicator license with an aerial category endorsement for drone pesticide application. Requirements vary significantly: California requires a separate Unmanned Pest Control Aircraft Pilot Certificate, Iowa mandates an in-state aerial applicator consultant, North Dakota issues a standalone Unmanned Aerial Applicator License and Ohio requires even private applicators to hold a commercial license for drone use.
+
+The three-credential stack. Commercial drone pesticide application is regulated at three levels: FAA Part 107 (pilot certificate), FAA Part 137 (agricultural aircraft operator certificate with Section 44807 exemption for drones over 55 lbs) and a state-issued commercial pesticide applicator license with an aerial category endorsement. The federal credentials are uniform across the country. The state license is the most variable piece of the stack, and it is where most operators spend the longest time on paperwork. No state issues a standalone drone spray license on its own; the state license is an aerial endorsement added to a commercial pesticide applicator credential.
+
+What varies by state. State-to-state variation covers eight dimensions. First, the aerial category name (Category 11 in Iowa, Category 12 in Kansas, Category 1a in Washington, Aerial Pesticide Applicator in Oregon). Second, the number of exams: most states require 2 or 3 exams (core + category + laws), a few require 4 or more. Third, fees, ranging from $75 per year in North Dakota to $400+ per year in California. Fourth, continuing education: hours per cycle and acceptable course providers. Fifth, reciprocity: whether out-of-state licenses count and which exams must still be retaken. Sixth, unique drone-specific rules. Seventh, experience prerequisites (Oregon 50 hours, Pennsylvania Part 137 required first). Eighth, insurance minimums, which some states enforce at the state level and some leave to customer contracts.
+
+States with drone-specific credentials. Six states have issued drone-specific paperwork on top of standard aerial category licenses. California Department of Pesticide Regulation (CDPR) issues an Unmanned Pest Control Aircraft Pilot Certificate separate from the aerial applicator license. North Dakota issues an Unmanned Aerial Applicator License as a standalone credential. Arizona publishes a Drone Pilot License through the Department of Agriculture. Michigan MDARD approved specific UAV training courses required for the aerial endorsement. Louisiana mandates completion of the LSU AgCenter Drone Safety Program before issuing the aerial category. Minnesota requires MnDOT registration for the aircraft itself in addition to the Department of Agriculture license.
+
+[Full content at URL, including States with unique restrictions (Ohio, Iowa, Oregon, Arkansas, Tennessee, Vermont), Reciprocity overview (Minnesota 18 reciprocal states, Pennsylvania 25+, Arkansas and Hawaii none) and the 50-state Find-your-state grid.]
+
+Primary sources: EPA Pesticide Worker Safety and Certification, National Pesticide Safety Education Center (NPSEC), American Association of Pesticide Safety Educators (AAPSE).
+
+---
+
+=== NDAA Compliance: What Ag Drone Operators Need to Know ===
+URL: https://agdronedirectory.com/regulations/ndaa-compliance
+
+The National Defense Authorization Act restricts federal and many state agencies from purchasing or using drones with components from designated foreign manufacturers, which includes DJI and XAG. As of April 2026, DJI drones remain legal to purchase and operate in the US for private commercial use, but cumulative tariffs of 170 percent and pending legislation (Countering CCP Drones Act) create uncertainty. NDAA-compliant alternatives include Hylio AG-272 ($55,000 to $75,000), Pyka Pelican 2 ($550,000) and platforms on the DoD Blue UAS list.
+
+What NDAA actually restricts. The NDAA is an annual defense authorization law. Two provisions are most relevant to drone operators: Section 889 of the FY2019 NDAA prohibits federal agencies from procuring covered telecommunications equipment and services from specified Chinese companies, and Section 848 of the FY2020 NDAA extends the restriction to small unmanned aircraft systems from covered foreign entities. Together they block federal purchase or operational use of DJI and XAG drones. Critically, neither provision bans private commercial use. A farmer, custom operator or agronomist can still buy, own and fly DJI drones under current law; the restriction is a procurement rule, not a personal ownership rule.
+
+Who is affected. The practical impact of NDAA sits in four buckets. First, federal agencies (USDA, Forest Service, Department of the Interior, Department of Defense) cannot buy or use covered drones. Second, state agencies spending federal pass-through dollars (most state agriculture departments, extension offices and universities running federally funded research) inherit the restriction. Third, university researchers on federal grants must use compliant platforms or risk grant ineligibility. Fourth, private operators bidding USDA cost-share, state-funded treatment programs or any federally funded work need NDAA-compliant equipment. Private farm contracts with individual growers remain unaffected.
+
+Current DJI status in the US. As of April 2026, DJI drones remain fully legal to import, purchase and operate for private commercial use. Section 1709 of the FY2025 NDAA required a national security review of DJI by December 2025; the review was completed and did not trigger an automatic ban, but policy activity remains elevated. The Countering CCP Drones Act, which would add DJI to the FCC Covered List and halt new authorizations, was excluded from the FY2025 NDAA but is active in subsequent legislative cycles. Cumulative tariffs (Section 301, IEEPA and reciprocal) now total around 170 percent on DJI ag drones, raising landed cost significantly. Uyghur Forced Labor Prevention Act (UFLPA) import holds have also disrupted DJI supply at certain US ports.
+
+[Full content at URL, including NDAA-compliant alternatives (Hylio AG-272, AG-230, Pyka Pelican 2, Skydio X10D, Parrot Anafi USA), Mixed fleet strategy and What to watch (Countering CCP Drones Act, state NDAA-mirror laws, tariff trajectory).]
+
+Primary sources: DoD Defense Innovation Unit Blue UAS list, Congress.gov Countering CCP Drones Act text, Hylio NDAA compliance sheet.
+
+---
