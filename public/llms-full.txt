@@ -379,3 +379,58 @@ Corn fungicide timing peaks at VT/R1 in mid-to-late July. Wheat heading sprays h
 State and crop-specific spray-window planner with booking lead times.
 
 ---
+
+=== Blog: Corn Fungicide by Drone: What University Data Shows ===
+URL: https://agdronedirectory.com/blog/corn-fungicide-drone-spraying-guide
+
+Drone-applied fungicide on corn at VT/R1 costs $12 to $18 per acre and produces an average 5 to 8 bushel yield response in moderate to high disease pressure years, according to Beck's Practical Farm Research across Iowa, Indiana and Illinois. Carrier volume of 2 to 3 gallons per acre matches ground rig efficacy at 15 to 20 gpa. High-pressure tar spot years in Indiana and Wisconsin have produced 15 to 25 bushel responses.
+
+The VT/R1 timing window (tassel through silking) is the highest-value fungicide pass on corn. This guide covers product selection (Miravis Neo, Veltyma, Delaro Complete), carrier volume decisions, when to add an insecticide tank mix for western bean cutworm, and how to calculate expected ROI against current corn prices and your specific disease pressure history.
+
+FAQs: 2 gpa is enough for most labeled corn fungicide products because rotor downwash provides canopy penetration equivalent to 15 to 20 gpa ground application, but always check the label. At 2 to 4 bu/acre response in low-pressure years and $5/bu corn, the return barely covers the $12 to $18 application cost, so moderate to high pressure years are where drone fungicide clearly pays. Most operators run tank mixes combining fungicide and insecticide in one pass, as long as combined minimum carrier volume stays within drone range (typically 2 to 5 gpa).
+
+---
+
+=== Blog: How to Get FAA Part 137 for Agricultural Drone Spraying ===
+URL: https://agdronedirectory.com/blog/faa-part-137-drone-guide
+
+FAA Part 137 Agricultural Aircraft Operator Certificate is required for any commercial aerial pesticide application by drone. The process takes 90 to 180 days from complete submission. Drones over 55 lbs require a Section 44807 exemption filed concurrently. Consultant packages at $2,500 to $4,500 shorten the timeline by 60 to 120 days by avoiding revision cycles on the operations manual.
+
+This guide walks through the full Part 137 application: operations manual structure, knowledge and skills test with an FAA aviation safety inspector, training records, aircraft list, and the concurrent 44807 petition for sub-55-lb exemption on larger platforms. It covers the most common causes of delay, what to expect from the FSDO interview, and how to decide between going it alone versus hiring a consultant.
+
+FAQs: You cannot start commercial aerial pesticide application until Part 137 is approved and in hand because spraying under Part 107 alone is a federal violation. The 44807 exemption covers your operation (not a specific serial number) but references the drone type, so adding a different model may require an amendment while adding another unit of the same model does not. Outright FAA rejection is rare; more commonly FAA requests revisions to your operations manual, and consultants report near 100 percent eventual approval rates after addressing feedback.
+
+---
+
+=== Blog: DJI Agras T50 vs Hylio AG-272: The 2026 Comparison ===
+URL: https://agdronedirectory.com/blog/dji-vs-hylio-which-spray-drone
+
+The DJI Agras T50 ($22,000 to $28,000 post-tariff, 40L tank) and Hylio AG-272 ($55,000 to $75,000 estimated, 68L tank) are the two most common commercial spray drones in the US. DJI offers lower cost and a larger dealer network. Hylio offers NDAA compliance, US manufacturing in Richmond, Texas and 25 mph wind resistance versus DJI 13.4 mph. Most operators choose based on whether they need NDAA compliance and how much wind they face.
+
+This comparison breaks down acquisition cost post-tariff, throughput in acres per hour, wind rating, swath width, tank capacity per trip, ground station and pilot ergonomics, parts availability, resale value, and the NDAA and Blue UAS question. It includes decision frameworks for private-contract operators, mixed private-and-government operators, and high-wind Great Plains operators.
+
+FAQs: You can run both DJI and Hylio in the same fleet with different ground stations and software, which is common among operators serving both private and government-funded contracts. As of April 2026, DJI remains legal to purchase and operate in the US; the Countering CCP Drones Act was excluded from FY2025 NDAA but remains active in future cycles, and the 170 percent tariff is the more immediate impact. DJI has a larger used market and the T40 trades at significant discounts now that the T50 has superseded it, while Hylio resale data is limited due to a smaller installed base.
+
+---
+
+=== Blog: Why Drone Spray Rates Dropped 30-45% in Three Years ===
+URL: https://agdronedirectory.com/blog/drone-spraying-pricing-trends-2026
+
+Midwest custom drone spray rates compressed from $22 to $25 per acre in 2022 to $12 to $17 in 2026, a 30 to 45 percent decline driven by rapid operator supply growth. The 2026 Iowa State Custom Rate Survey established the first university benchmark at $12.50 per acre average. At current rates, some operators report barely clearing $5 per acre profit, suggesting the market is approaching a pricing floor on row crops.
+
+This analysis covers the causes of rate compression (operator supply growth, DJI price drops pre-tariff, farmer price discovery), which crops and regions have compressed most, and where rates are holding (vineyards, orchards, rice, emergency applications). It includes Iowa State, Kansas State and UC Davis data points and a near-term outlook on where rates head in 2027.
+
+FAQs: Row-crop rates are unlikely to keep dropping because margins are already thin at $12 to $17 per acre and equipment costs are rising from tariffs, so expect stabilization or slight increases in 2027 as unprofitable operators exit. Specialty-crop rates have compressed less because fewer operators serve vineyards and orchards and the work is more complex, so expect $18 to $35 per acre to hold for 2 to 3 years. Starting a drone business at these rates works if you can reach 1,000+ acres per year by year 2 and diversify beyond row crops, but not if your only plan is corn and soybean fungicide in a saturated Corn Belt county.
+
+---
+
+=== Blog: The DJI Question: NDAA, Tariffs and Your Farm ===
+URL: https://agdronedirectory.com/blog/ndaa-chinese-drones-what-farmers-need-to-know
+
+DJI agricultural drones remain legal to purchase and operate in the US as of April 2026 but face 170 percent cumulative tariffs, FY2025 NDAA Section 1709 security review requirements and the pending Countering CCP Drones Act. NDAA restrictions apply only to federal agency procurement, not private commercial use. Farmers hiring drone operators for private contracts are not affected by NDAA regardless of which drone the operator flies.
+
+This guide explains exactly what NDAA does and does not cover, how Section 1709 differs from a ban, the tariff timeline and stacking that produces the 170 percent cumulative figure, the status of the Countering CCP Drones Act, and when a farmer or operator should consider Hylio or another NDAA-compliant US-made platform.
+
+FAQs: Whether DJI gets banned is unknown, as the Countering CCP Drones Act is active but not yet law and tariffs are the more immediate financial impact. If you only work private farm contracts, buy now based on current pricing and ROI, but if you plan to bid federal or state work, buy Hylio to be NDAA-compliant from day one. USDA RMA crop insurance is not affected by the drone manufacturer used for application, as coverage depends on proper application per product label rather than equipment brand.
+
+---
