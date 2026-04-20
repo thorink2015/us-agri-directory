@@ -15,7 +15,7 @@ export const SITE = {
 export const AUTHOR = {
   // Identity
   firstName: 'Eugen',
-  lastName: '{{LAST_NAME}}',              // TODO: real last name, or decide to use first name only
+  lastName: 'Manoli',
   get fullName() {
     return this.lastName.startsWith('{{')
       ? this.firstName
@@ -31,12 +31,12 @@ export const AUTHOR = {
   publicEmail: 'eugen@agdronedirectory.com', // TODO: confirm real address
 
   // Social (for Person schema sameAs array + author card)
-  linkedin: '{{LINKEDIN_URL}}',           // TODO: https://linkedin.com/in/...
-  x: '{{X_URL}}',                         // TODO: https://x.com/... (optional)
+  linkedin: 'https://www.linkedin.com/in/manoli-eugen/',
+  x: '',
 
   // Bio, canonical, do NOT paraphrase
   bio:
-    'Eugen is the founder and editor of US Ag Drone Directory. He grew up in an agricultural family in {{COUNTRY_REGION}}, studied {{FIELD_OF_STUDY}} at university, and has worked hands-on with agricultural drone technology in European markets. He built this directory after seeing how scattered and incomplete US ag drone information was for the farmers who need it most. Every page on this site is written or edited by him personally.',
+    'Eugen is the founder and editor of US Ag Drone Directory. He grew up in an agricultural family in Florida, United States, studied Agricultural Economics at university, and has worked hands-on with agricultural drone technology in European markets. He built this directory after seeing how scattered and incomplete US ag drone information was for the farmers who need it most. Every page on this site is written or edited by him personally.',
 
   shortBio:
     'Eugen is the founder and editor of US Ag Drone Directory. He built this directory to give US farmers a single trusted place to find verified ag drone operators, regulations and pricing.',
