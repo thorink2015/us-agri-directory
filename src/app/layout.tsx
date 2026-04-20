@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -89,6 +90,12 @@ export default function RootLayout({
         </a>
         <GoogleAnalytics />
         <GAPageView />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1300213627244453"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
         <Header />
         <main id="main-content" className="flex-1">{children}</main>
         <Footer />
