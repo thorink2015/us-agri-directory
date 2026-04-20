@@ -214,3 +214,168 @@ Current DJI status in the US. As of April 2026, DJI drones remain fully legal to
 Primary sources: DoD Defense Innovation Unit Blue UAS list, Congress.gov Countering CCP Drones Act text, Hylio NDAA compliance sheet.
 
 ---
+
+=== Corn: Drone Spraying for Corn, Rates, Timing and Operators 2026 ===
+URL: https://agdronedirectory.com/crops/corn
+
+Drone fungicide on corn costs $12 to $18 per acre and is the single largest use case for agricultural drones in America, covering over 90 million acres annually. The critical application window is the VT to R1 tassel stage in July and August, when corn is too tall for ground rigs and trampling damage from tractor passes costs 3 to 6 bushels per acre. University trials from Beck's Hybrids and Iowa State Extension show drone-applied fungicide at 2 to 3 gallons per acre matches ground rig efficacy at 15 to 20 gallons per acre, with an average yield response of 5 to 8 bushels per acre.
+
+Long description. Corn is the largest crop in the United States at over 90 million acres, and drone fungicide application at the VT/R1 tassel stage is the number one use case for agricultural drones. Once corn exceeds 6 to 8 feet, ground sprayers cannot clear the canopy without wheel-track damage. Drones fly 8 to 15 feet above canopy and never touch the ground. Beck's Practical Farm Research across Iowa, Indiana and Illinois showed drone-applied fungicide at 2 to 3 gallons per acre matched ground rig results at 15 to 20 gallons per acre with an average 5 to 8 bushel response. Iowa State and Purdue Extension confirm the finding for tar spot, gray leaf spot and southern rust pressure years. Operators treat 300 to 600 acres per drone per day on T50 or AG-272 class machines during the peak two-week VT/R1 window in late July.
+
+Key pests and diseases. Tar Spot (Phyllachora maydis), Gray Leaf Spot (Cercospora zeae-maydis), Northern Corn Leaf Blight, Southern Rust (Puccinia polysora), Corn Rootworm (Diabrotica).
+
+Rates 2026. Application only. Low $12 per acre. Average $15 per acre. High $18 per acre. Tank mix of strobilurin fungicide plus insecticide for rootworm beetle or western bean cutworm is standard on seed corn and stacked-trait fields. Target carrier volume 2 to 5 gpa.
+
+FAQ. Target window VT to R1 (tassel through silking), mid-to-late July across most of the Corn Belt; spraying earlier than VT gives too little residual, spraying after R2 shows diminishing response. Published trials show 5 to 8 bushel response on moderate-to-high-pressure fields; high-pressure tar spot years have produced 15 to 25 bushel responses. 2 gpa carrier volume is enough because rotor downwash drives droplets into the canopy. Ground sprayers top out at 6 to 8 feet; drones clear 8 to 11 foot tasseling corn cleanly. Corn Belt operators book out 4 to 6 weeks before the VT/R1 window; call by early June for late-July slots.
+
+Primary sources: Iowa State Extension Corn Disease Management, Purdue Extension Corn Fungicide Timing, Beck's Practical Farm Research, USDA NASS Corn Acreage and Production.
+
+---
+
+=== Soybeans: Drone Spraying for Soybeans, Rates, Timing and Operators 2026 ===
+URL: https://agdronedirectory.com/crops/soybeans
+
+Drone fungicide on soybeans costs $12 to $18 per acre and targets white mold, frogeye leaf spot and soybean aphids at the R2 to R3 growth stage across 87 million US acres. Purdue University trials confirmed drone applications at 2 and 5 gallons per acre were equally effective as ground equipment for frogeye leaf spot reduction. Eliminating ground rig passes prevents the 4 to 6 percent yield loss from soil compaction and plant lodging in mature canopy.
+
+Long description. Soybeans cover more than 87 million US acres and are the second-largest drone spray market in America. The primary target is the R2 to R3 reproductive window in July and August, when canopy closure and soybean aphid, spider mite and frogeye leaf spot pressure peak across the Corn Belt, Mid-South and Mid-Atlantic. Purdue trials confirmed 2 and 5 gpa drone applications matched ground equipment for frogeye leaf spot. University of Illinois Extension reports similar equivalence for white mold in the northern soybean belt. University of Minnesota research puts late-season ground-rig compaction loss at 4 to 6 percent on tall R3 canopies. Operators cover 250 to 500 acres per drone per day on T40 or T50 class machines, often running fungicide plus insecticide tank mixes. Cover crop overseeding into standing soybeans in September and October is a major secondary use case, especially in states with USDA NRCS EQIP cost-share for cereal rye establishment.
+
+Key pests and diseases. White Mold (Sclerotinia sclerotiorum), Frogeye Leaf Spot (Cercospora sojina), Soybean Aphid (Aphis glycines), Brown Stem Rot, Sudden Death Syndrome.
+
+Rates 2026. Application only. Low $12 per acre. Average $15 per acre. High $18 per acre. Carrier volume 2 to 5 gpa.
+
+FAQ. R2 to R3 is the target window; R2 is full flowering, R3 is beginning pod. Herbicide on soybeans is possible but labels may require 10 to 15 gpa carrier volume, and dicamba systems have drift-reduction nozzle rules. Modern RTK drones hit under 3 percent overlap. Book 2 to 4 weeks ahead for R2/R3, 6 weeks in high-pressure years; in Iowa, Illinois, Indiana slots fill earliest. Cover crop overseeding into R6 to R7 soybeans in late September gives cereal rye, clover or ryegrass 3 to 4 extra weeks, often covered 50 to 70 percent by EQIP Practice 340.
+
+Primary sources: Purdue Extension Soybean Disease Management, University of Illinois Extension, University of Minnesota Extension, USDA NASS Soybean Acreage.
+
+---
+
+=== Wheat: Drone Spraying for Wheat, Rates, Timing and Operators 2026 ===
+URL: https://agdronedirectory.com/crops/wheat
+
+Drone fungicide on wheat costs $12 to $16 per acre and targets Fusarium head blight (scab), stripe rust and leaf rust at the T3 heading stage across approximately 45 million US acres. The USDA ARS Wheat Scab Initiative estimates proper fungicide timing reduces deoxynivalenol (DON) mycotoxin contamination by 40 to 60 percent. Drones are gaining market share over airplanes in the Great Plains for fields under 500 acres, where airplane mobilization costs make per-acre pricing uncompetitive.
+
+Long description. Winter and spring wheat total approximately 45 million US acres annually, with the Great Plains (Kansas, Oklahoma, Nebraska, North Dakota, South Dakota) and Pacific Northwest (Washington, Idaho) as the primary markets. The critical drone application window is T3 at heading, when Fusarium head blight, stripe rust and leaf rust do their worst damage. Proper fungicide timing reduces DON mycotoxin contamination by 40 to 60 percent, which is the difference between food-grade wheat and discounted feed wheat at the elevator. Great Plains operators run DJI Agras T50 and Hylio AG-272 for the 1,000+ gallons-per-day throughput the heading window demands. Kansas State Extension trials show drone applications at 2 to 3 gpa match airplane efficacy at 2 to 5 gpa; NDSU Extension has similar data for North Dakota hard red spring wheat. The heading window is often only 5 to 7 days, making local drone capacity a real constraint.
+
+Key pests and diseases. Fusarium Head Blight or Scab (Fusarium graminearum), Stripe Rust (Puccinia striiformis), Leaf Rust (Puccinia triticina), Wheat Streak Mosaic Virus, Hessian Fly.
+
+Rates 2026. Application only. Low $12 per acre. Average $14 per acre. High $16 per acre. Carrier volume 2 to 5 gpa.
+
+FAQ. T3 at heading is the target (roughly half the heads emerged from the boot); 5 to 7 day window, late May in Texas, early June in Kansas and Nebraska, mid to late June in North Dakota. On sub-500-acre fields drones are cost-competitive with airplanes. T3 applications of Prosaro, Caramba or Miravis Ace cut DON by 40 to 60 percent in high-scab-pressure years. Label droplet size requirements (coarse to medium) must be matched against operator nozzle setup. Book in April for June heading applications; Great Plains operators fill slots by May.
+
+Primary sources: USDA ARS Wheat Scab Initiative (scabusa.org), Kansas State Extension Wheat Disease Management, NDSU Extension Wheat Production, USDA NASS Wheat Acreage.
+
+---
+
+=== Service: Drone Pesticide Spraying ===
+URL: https://agdronedirectory.com/services/spraying
+
+Drone pesticide spraying in the US costs $12 to $22 per acre depending on crop, region and product. It is legally required to hold FAA Part 137 certification plus a state commercial pesticide applicator license with aerial category endorsement. Most commercial operators run DJI Agras T50 or Hylio AG-272 class drones at 2 to 5 gallons per acre carrier volume, treating 40 to 60 acres per flight hour per drone.
+
+Long description. Drone pesticide spraying is the single largest ag drone service in the United States, generating an estimated 60 percent of all commercial drone flight hours in agriculture. Operators run DJI Agras T50 and T40, Hylio AG-272 and AG-230 and XAG P100 Pro class machines to apply EPA-registered crop protection products at 2 to 5 gallons per acre carrier volume. Typical field throughput is 40 to 60 acres per flight hour for a single T50; large operators run 3 to 8 drone fleets that treat 800 to 1,500 acres per day during peak windows. The three regulatory pillars every commercial drone sprayer must clear are FAA Part 107 (remote pilot certification), FAA Part 137 (agricultural aircraft operator certificate) and a state commercial pesticide applicator license with an aerial endorsement. Labels govern everything: carrier volume minimums, droplet size specs, wind limits, buffer zones, REI (restricted entry interval) and PHI (preharvest interval) all come from the EPA-approved product label, not from operator preference.
+
+Rates 2026. $12 to $22 per acre depending on crop, region and chemistry. Row crops (corn, soybeans, wheat) anchor at $12 to $18. Specialty crops (orchards, vineyards, vegetables) run $18 to $35 per acre due to canopy density and pass count.
+
+Spraying FAQ. Commercial spraying requires Part 137 in addition to Part 107; farmers spraying only their own crops may qualify for the simplified private Part 137 path. 2026 national averages run $12 to $18 per acre for fungicide and insecticide on row crops, $18 to $35 per acre for orchards and vineyards; minimum field size typically 40 to 80 acres, travel surcharges over 30 miles from base. Dicamba, paraquat and 2,4-D can be drone-applied if the label permits aerial use, the operator holds the restricted-use state endorsement, and state-specific drone approval rules are met. Wind caps are typically 10 mph for standard droplets and 7 mph for dicamba or 2,4-D; inversions, rain within 4 to 8 hours and high-heat low-humidity conditions pause spraying. FIFRA recordkeeping is met via on-drone weather stations plus local mesonet data. Book corn fungicide 4 to 6 weeks out, wheat in April for June applications, orchard and vineyard annual contracts in January or February.
+
+Primary sources: FAA Part 137 Agricultural Aircraft Operations, EPA Pesticide Registration and Labeling, USDA NASS Agricultural Chemical Use Surveys.
+
+---
+
+=== Service: Aerial Cover Crop Seeding ===
+URL: https://agdronedirectory.com/services/seeding
+
+Drone cover crop seeding costs $12 to $18 per acre application only, or $22 to $35 per acre seed and application combined. USDA NRCS EQIP cost-share under Cover Crop Practice Standard 340 pays $25 to $55 per acre in most states, reducing net farmer cost to $5 to $12 per acre. A single DJI Agras T50 broadcasts 200 to 400 acres per day during the peak August to October window.
+
+Long description. Aerial cover crop seeding is the fastest-growing ag drone service in the US, with approximately 15 million acres planted to cover crops annually. Drones broadcast cereal rye, annual ryegrass, crimson clover, hairy vetch, oats and brassicas into standing row crops 2 to 6 weeks before harvest, giving seeds a 3 to 4 week head start over post-harvest ground seeding. USDA NRCS Cover Crop Practice Standard 340 makes drone seeding eligible for EQIP cost-share payments of $25 to $55 per acre in most states, often covering 50 to 70 percent of total cost. DJI Agras T50 or T40 throughput runs 200 to 400 acres per drone per day, with seed rate, wind and field layout as the main variables. Most operators handle seed procurement and charge a combined seed-plus-application rate, though bring-your-own-seed is common for farmers in state programs with species mandates.
+
+Seeding FAQ. Cereal rye is the workhorse in the Corn Belt; annual ryegrass, crimson clover, hairy vetch, oats, radishes and brassicas broadcast well. Large seeds like soybeans and peas are impractical. Peak window is late August through early October in the Corn Belt, timed around canopy senescence so seed reaches soil. EQIP Practice 340 pays $25 to $55 per acre; RCPP funds stack on top for 80 to 100 percent coverage in some states. Drone seeding into standing corn or soybeans beats post-harvest drilling for cereal rye cover by frost. Book by late July or early August for September slots.
+
+Primary sources: USDA NRCS Cover Crop Practice Standard 340, Midwest Cover Crops Council Species Selection Tool, USDA EQIP.
+
+---
+
+=== Service: Agricultural Drone Mapping ===
+URL: https://agdronedirectory.com/services/mapping
+
+Agricultural drone mapping costs $2 to $8 per acre for raw orthomosaics and elevation data, rising to $5 to $15 per acre when prescription maps for variable-rate application are included. Only FAA Part 107 is required, with no Part 137 or state pesticide license needed. Fixed-wing drones cover 500 to 1,500 acres per flight, while quadcopter platforms handle 100 to 400 acres per flight.
+
+Long description. Agricultural drone mapping produces orthomosaics, digital elevation models and field boundary data for precision farming, drainage tile design, yield zone analysis and variable-rate prescriptions. Fixed-wing drones like the senseFly eBee X and quadcopter platforms like the DJI Mavic 3 Multispectral and Phantom 4 RTK cover 200 to 1,500 acres per flight at ground sample distances of 1 to 5 centimeters per pixel. Mapping is the lowest regulatory barrier ag drone service because it does not require Part 137 or a state pesticide license, only FAA Part 107 and standard airspace authorizations. Typical deliverables include geo-referenced orthomosaics (GeoTIFF, JPEG), DEMs for drainage planning, volumetric calculations for silage piles and vegetation index maps (NDVI, NDRE). Most operators charge per acre with a minimum flight fee; prescription-ready outputs command a premium over raw orthomosaic output.
+
+Mapping FAQ. Uses include drainage tile design, variable-rate seed and fertilizer prescriptions from NDVI zones, post-emergence stand counts, storage pile volumes, in-season progress tracking and post-harvest yield zone maps; most outputs import into Climate FieldView, John Deere Operations Center or SMS. Part 107 is sufficient; Part 137 not needed. RTK drone elevation maps hit 2 to 5 cm vertical accuracy, sufficient for tile drainage design. Raw orthomosaic $2 to $5 per acre with $250 to $500 minimum flight fee; elevation adds $1 to $3; prescription outputs $5 to $15 per acre. T50 spray drones are not ideal for mapping; dedicated Mavic 3 Multispectral or Phantom 4 RTK deliver better ground sample distance and flight time.
+
+Primary sources: FAA Part 107 Small UAS Operations, USDA NRCS Soil Survey Resources, ASABE Standards for Aerial Sensor Data.
+
+---
+
+=== Drone: DJI Agras T50 ===
+URL: https://agdronedirectory.com/drones/dji-agras-t50
+
+The DJI Agras T50 is the most widely used commercial spray drone in US agriculture, with a 40-liter tank, 50 kg dry hopper and 9 to 12 minute battery charge cycle. Pre-tariff MSRP was approximately $18,000; post-2025 tariff escalation to 170 percent pushed dealer pricing to $22,000 to $28,000. It is not NDAA compliant. Field throughput runs 40 to 60 acres per flight hour for fungicide and insecticide applications at 2 to 5 gallons per acre.
+
+Long description. The DJI Agras T50 accounts for the majority of the estimated 10.3 million drone-sprayed acres in 2024. Its 40-liter (10.6 gallon) spray tank and 75-liter (50 kg) dry hopper handle liquid pesticide and dry granular material including cover crop seed, urea and gypsum. Flow rate is 16 L/min on 2 nozzles and 24 L/min on 4 nozzles, with a 4 to 11 meter (13 to 36 foot) adjustable swath width. Battery swap runs 9 to 12 minutes on the DB1560 (30 Ah, 52.22 V, approximately 1,567 Wh) and the T50 Intelligent Charging Hub supports rapid cycling for continuous field operation. The T50 features front and rear phased-array radar, binocular vision and terrain-following LiDAR for obstacle avoidance and precision altitude hold. RTK GPS delivers centimeter-level positioning. Pre-tariff MSRP approximately $18,000 for drone, controller and battery cooling kit; post-April 2025 tariff escalation to 170 percent pushed 2026 dealer quotes to $22,000 to $28,000 depending on inventory vintage. Not NDAA compliant.
+
+Specs. Empty weight 39.9 kg (88 lbs). MTOW 92 kg (203 lbs). Tank 40 L (10.6 gal). Granular hopper 75 L (50 kg). Swath 4 to 11 m (13 to 36 ft). Flow rate 16 to 24 L/min. Battery DB1560, 30 Ah, 52.22 V, 1,567 Wh. Charge time 9 to 12 minutes. Max wind 6 m/s (13.4 mph). IP rating: relay IP55, aircraft body not rated.
+
+Pricing. $18,000 MSRP pre-tariff. $22,000 to $28,000 post-tariff dealer quotes in 2026. US dealer network includes HSE-UAV, Drone Nerds, AgriSpray Drones, FlyingAg, AckerSpray and Talos Drones.
+
+Best for. Commercial spray operators running 500 to 5,000+ acres per season on row crops, cover crop seeding and dry granular spreading.
+
+T50 FAQ. A single T50 covers 40 to 60 acres per flight hour at 2 to 5 gpa, translating to 300 to 600 acres per day; two-drone crews hit 600 to 1,000 acres per day in peak corn fungicide. Real 2026 post-tariff cost is $22,000 to $28,000 depending on dealer inventory. T50 is not NDAA compliant; federal and NDAA-restricted contracts require Hylio AG-272 or other US-manufactured alternatives. Yes the T50 does both liquid spraying and dry spreading, 10 to 15 minute swap. The T50 replaced the T40 with improved radar, better LiDAR, faster battery charging and refined spray calibration.
+
+Primary sources: DJI Agras T50 Official Specs, DJI Agriculture Dealer Locator, FAA Part 137 Agricultural Aircraft Operations.
+
+---
+
+=== Tools: Spray Cost Calculator ===
+URL: https://agdronedirectory.com/tools/spray-cost-calculator
+
+Drone crop spraying costs $12 to $35 per acre in 2026 depending on crop, region and terrain. This calculator uses the 2026 Iowa State Custom Rate Survey benchmark of $12.50 per acre average plus regional and crop-specific adjustments from university extension data. Enter your acres, crop and state for an instant estimate.
+
+Instant per-acre cost estimate by crop, state and service using primary-source pricing data.
+
+---
+
+=== Tools: ROI Calculator (Buy vs Hire) ===
+URL: https://agdronedirectory.com/tools/roi-calculator
+
+University of Missouri Extension research puts the break-even for DJI Agras T50 ownership at approximately 980 acres per year of custom application work. Farmer ownership cost drops to $7.39 per acre at 4,000 acres per year. USDA EQIP cost-share of 40 to 90 percent on qualifying purchases can shift break-even below 600 acres. This calculator models your specific situation.
+
+Buy-vs-hire analysis with EQIP cost-share, financing and annual acreage inputs.
+
+---
+
+=== Tools: Coverage Calculator ===
+URL: https://agdronedirectory.com/tools/coverage-calculator
+
+A single DJI Agras T50 covers 40 to 60 acres per flight hour at 2 to 5 gallons per acre, treating 300 to 600 acres per day. This calculator estimates total spray time including tank refills, battery swaps and field shape adjustments for 7 drone models.
+
+Daily and per-job coverage time estimator across DJI, Hylio, XAG, Talos and Pyka platforms.
+
+---
+
+=== Tools: Acreage Converter ===
+URL: https://agdronedirectory.com/tools/acreage-converter
+
+One acre equals 0.4047 hectares, 43,560 square feet or 4,047 square meters. A standard section is 640 acres. This converter handles all common agricultural land measurements used in US and international farming, including acres, hectares, square feet, square meters and sections.
+
+Unit conversion for field-size math between acres, hectares, square feet, square meters and sections.
+
+---
+
+=== Tools: Drone Comparison ===
+URL: https://agdronedirectory.com/tools/drone-comparison
+
+The US agricultural spray drone market in 2026 is led by the DJI Agras T50 ($22,000 to $28,000 post-tariff, 40L tank, not NDAA compliant) and the Hylio AG-272 (estimated $55,000 to $75,000, 68L tank, NDAA compliant, US-made). This tool compares all major models on tank capacity, price, NDAA status, wind resistance, throughput and best-fit use case.
+
+Side-by-side specs for DJI, Hylio, XAG, Talos and Pyka spray drones.
+
+---
+
+=== Tools: Treatment Calendar ===
+URL: https://agdronedirectory.com/tools/treatment-calendar
+
+Corn fungicide timing peaks at VT/R1 in mid-to-late July. Wheat heading sprays hit in late May through late June depending on latitude. Cover crop seeding runs late August through mid-October. This calendar shows optimal drone application windows by crop with booking deadline recommendations so you know exactly when to contact your operator.
+
+State and crop-specific spray-window planner with booking lead times.
+
+---
