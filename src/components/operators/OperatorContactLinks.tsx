@@ -2,6 +2,7 @@
 
 import { Phone } from 'lucide-react';
 import { trackOperatorPhoneClick, trackOperatorEmailClick } from '@/components/analytics/events';
+import MailtoLink from '@/components/ui/MailtoLink';
 
 interface Props {
   operatorSlug: string;
@@ -28,14 +29,14 @@ export default function OperatorContactLinks({ operatorSlug, phone, email }: Pro
         </a>
       )}
       {email && (
-        <a
-          href={`mailto:${email}`}
+        <MailtoLink
+          email={email}
           className="flex items-center gap-2 text-sm text-gray-700 hover:text-green-700 transition-colors break-all"
           onClick={() => trackOperatorEmailClick(operatorSlug)}
         >
           <span className="w-4 h-4 text-green-600 text-center flex-shrink-0">@</span>
           {email}
-        </a>
+        </MailtoLink>
       )}
     </>
   );

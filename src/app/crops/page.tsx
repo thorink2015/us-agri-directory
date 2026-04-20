@@ -4,10 +4,27 @@ import { crops } from '@/data/crops';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Drone Services by Crop Type | Corn, Soybeans, Cotton, Wheat & More',
+  title: 'Drone Services by Crop: Corn, Soybeans, Cotton, Wheat',
   description:
-    'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs, and equipment for every major US crop.',
+    'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs and equipment for every major US crop.',
   alternates: { canonical: '/crops' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Drone Services by Crop: Corn, Soybeans, Cotton, Wheat',
+    description:
+      'Find drone spraying operators with experience in your specific crop. Guides covering application timing, per-acre costs, and equipment for every major US crop.',
+    url: 'https://agdronedirectory.com/crops',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Drone services by crop type',
+      },
+    ],
+  },
 };
 
 export default function CropsPage() {
@@ -17,7 +34,7 @@ export default function CropsPage() {
 
       <h1 className="text-3xl font-bold text-gray-900 mb-2">Drone spraying by crop type</h1>
       <p className="text-gray-600 mb-8">
-        Different crops need different approaches. Browse by crop to find operators with hands-on experience in your production system, plus application timing, typical per-acre rates, and equipment recommendations.
+        Different crops need different approaches. Browse by crop to find operators with hands-on experience in your production system, plus application timing, typical per-acre rates and equipment recommendations.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -34,7 +51,7 @@ export default function CropsPage() {
               </h2>
               <p className="text-sm text-gray-600 line-clamp-2">{crop.description}</p>
               <div className="mt-2 flex items-center gap-3 text-xs text-gray-500">
-                <span className="font-medium text-green-700">${crop.priceMinUsd}–${crop.priceMaxUsd}/acre</span>
+                <span className="font-medium text-green-700">${crop.priceMinUsd} to ${crop.priceMaxUsd}/acre</span>
                 {crop.haUS && (
                   <span>{(crop.haUS / 1000000).toFixed(0)}M+ acres in the US</span>
                 )}

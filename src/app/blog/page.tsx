@@ -5,10 +5,27 @@ import { blogPosts, BLOG_CATEGORY_LABELS } from '@/data/blog-posts';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Ag Drone Blog: Top Lists, Guides & Industry News 2026 | US Ag Drone Directory',
+  title: 'Ag Drone Blog: Lists, Guides & Industry News 2026',
   description:
-    'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies, and equipment comparisons.',
+    'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies and equipment comparisons.',
   alternates: { canonical: '/blog' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Ag Drone Blog: Lists, Guides & Industry News 2026',
+    description:
+      'Articles about agricultural drones: operator rankings, application guides, FAA legislation updates, USDA funding case studies, and equipment comparisons.',
+    url: 'https://agdronedirectory.com/blog',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'US Ag Drone Directory Blog',
+      },
+    ],
+  },
 };
 
 export default function BlogHub() {
@@ -26,7 +43,7 @@ export default function BlogHub() {
           Ag Drone Blog
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Operator rankings, application guides, legislation updates, and equipment comparisons for
+          Operator rankings, application guides, legislation updates and equipment comparisons for
           the US agricultural drone industry. Updated weekly.
         </p>
       </header>
@@ -65,7 +82,7 @@ export default function BlogHub() {
             className="group bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-green-300 transition-all flex flex-col"
           >
             <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
-              <span className="px-2 py-0.5 bg-gray-100 rounded-full font-medium">
+              <span className="px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full font-medium">
                 {BLOG_CATEGORY_LABELS[post.category]}
               </span>
               <span className="flex items-center gap-1">

@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 import { MapPin, CheckCircle } from 'lucide-react';
 import { counties, getCountyBySlug } from '@/data/counties';
-import { crops, getCropBySlug, CROP_NAME_MAP } from '@/data/crops';
+import { crops, getCropBySlug } from '@/data/crops';
 import { getOperatorsByCounty } from '@/data/operators';
 import { formatPrice } from '@/lib/utils';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import { SITE } from '@/data/author';
 
 interface Props {
   params: { slug: string; crop: string };
@@ -25,11 +26,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const crop = getCropBySlug(params.crop);
   if (!county || !crop) return {};
 
+  const desc = `Drone spraying operators for ${crop.name.toLowerCase()} in ${county.name}, 2026 rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}. Compare verified operators and contact directly for quotes.`;
   return {
-    title: `${crop.name} Drone Spraying in ${county.name} | Agricultural Drone Services 2026`,
-    description: `Drone operators for ${crop.name.toLowerCase()} in ${county.name}. Rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre — contact verified operators directly.`,
+    title: `${crop.name} Drone Spraying: ${county.name} 2026`,
+    description: desc,
     alternates: {
       canonical: `/states/${params.slug}/crops/${params.crop}`,
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      title: `${crop.name} Drone Spraying in ${county.name} | US Ag Drone Directory`,
+      description: desc,
+      url: `${SITE.domain}/states/${params.slug}/crops/${params.crop}`,
+      siteName: 'US Ag Drone Directory',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${crop.name} drone spraying in ${county.name}`,
+        },
+      ],
     },
   };
 }
@@ -48,7 +66,7 @@ export default function CountyCropPage({ params }: Props) {
   const faqs = [
     {
       question: `How much does drone spraying for ${crop.name.toLowerCase()} cost in ${county.name}?`,
-      answer: `Drone spraying rates for ${crop.name.toLowerCase()} in ${county.name} typically run ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)} per acre for application only — the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base, and product type.`,
+      answer: `Drone spraying rates for ${crop.name.toLowerCase()} in ${county.name} typically run ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)} per acre for application only, the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base and product type.`,
     },
     {
       question: `When should I schedule drone applications for ${crop.name.toLowerCase()}?`,
@@ -56,7 +74,7 @@ export default function CountyCropPage({ params }: Props) {
     },
     {
       question: `What advantages does drone spraying offer for ${crop.name.toLowerCase()} vs. ground equipment?`,
-      answer: `Drone spraying on ${crop.name.toLowerCase()} offers several advantages: zero soil compaction, ability to operate when fields are too wet for tractors, GPS-guided uniform coverage at 95%+ accuracy, and the ability to treat small or irregularly shaped fields. It also reduces product waste by 20–30% compared to ground equipment.`,
+      answer: `Drone spraying on ${crop.name.toLowerCase()} offers several advantages: zero soil compaction, ability to operate when fields are too wet for tractors, GPS-guided uniform coverage at 95%+ accuracy and the ability to treat small or irregularly shaped fields. It also reduces product waste by 20 to 30% compared to ground equipment.`,
     },
   ];
 
@@ -121,8 +139,8 @@ export default function CountyCropPage({ params }: Props) {
                 key={month}
                 className={`text-center py-2 rounded-lg text-xs font-medium ${
                   isActive
-                    ? 'bg-green-600 text-white'
-                    : 'bg-gray-100 text-gray-400'
+                    ? 'bg-green-700 text-white'
+                    : 'bg-gray-100 text-gray-700'
                 }`}
               >
                 {month}
@@ -186,15 +204,15 @@ export default function CountyCropPage({ params }: Props) {
       <div className="mb-8">
         <h2 className="text-base font-semibold text-gray-900 mb-3">Other crops in {county.name}</h2>
         <div className="flex flex-wrap gap-2">
-          {county.mainCrops
-            .filter((c) => c !== crop.slug)
+          {crops
+            .filter((c) => c.slug !== crop.slug)
             .map((c) => (
               <Link
-                key={c}
-                href={`/states/${county.slug}/crops/${c}`}
+                key={c.slug}
+                href={`/states/${county.slug}/crops/${c.slug}`}
                 className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700"
               >
-                {CROP_NAME_MAP[c] || c}
+                {c.name} in {county.name}
               </Link>
             ))}
           <Link

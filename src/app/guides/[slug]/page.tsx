@@ -11,6 +11,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   purple: 'bg-purple-100 text-purple-800',
 };
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import { SITE } from '@/data/author';
 import { guideContent } from './content';
 
 interface Props {
@@ -25,14 +26,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guide = getGuideBySlug(params.slug);
   if (!guide) return {};
   return {
-    title: `${guide.title} | US Ag Drone Directory`,
+    title: guide.title,
     description: guide.description,
     alternates: { canonical: `/guides/${guide.slug}` },
     openGraph: {
       title: guide.title,
       description: guide.description,
       type: 'article',
+      locale: 'en_US',
+      siteName: 'US Ag Drone Directory',
       publishedTime: guide.lastUpdated,
+      url: `${SITE.domain}/guides/${guide.slug}`,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: guide.title,
+        },
+      ],
     },
   };
 }

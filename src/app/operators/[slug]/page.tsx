@@ -9,10 +9,10 @@ import {
 } from '@/components/ui/SocialIcons';
 import { operators, getOperatorBySlug } from '@/data/operators';
 import { counties } from '@/data/counties';
-import { CROP_NAME_MAP } from '@/data/crops';
-import { DRONE_NAME_MAP } from '@/data/drone-models';
+import { CROP_NAME_MAP, getCropBySlug } from '@/data/crops';
+import { DRONE_NAME_MAP, getDroneBySlug } from '@/data/drone-model';
 import { SERVICE_LABELS } from '@/data/types';
-import { formatPrice, getStateAbbr } from '@/lib/utils';
+import { formatPrice, getStateAbbr, normalizeSocialUrl } from '@/lib/utils';
 import { buildOperatorMetadata } from '@/lib/seo';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorSchema from '@/components/schema/OperatorSchema';
@@ -55,6 +55,12 @@ export default function OperatorPage({ params }: Props) {
   if (!operator) notFound();
 
   const coveredStates = counties.filter((c) => operator.counties.includes(c.slug));
+  const facebookUrl = normalizeSocialUrl('facebook', operator.facebook);
+  const instagramUrl = normalizeSocialUrl('instagram', operator.instagram);
+  const linkedinUrl = normalizeSocialUrl('linkedin', operator.linkedin);
+  const youtubeUrl = normalizeSocialUrl('youtube', operator.youtube);
+  const tiktokUrl = normalizeSocialUrl('tiktok', operator.tiktok);
+  const hasAnySocial = facebookUrl || instagramUrl || linkedinUrl || youtubeUrl || tiktokUrl;
 
   return (
     <>
@@ -168,15 +174,26 @@ export default function OperatorPage({ params }: Props) {
               <section className="bg-white border border-gray-200 rounded-xl p-6">
                 <h2 className="font-bold text-gray-900 mb-4 text-lg">Crops serviced</h2>
                 <div className="flex flex-wrap gap-2">
-                  {operator.crops.map((c) => (
-                    <Link
-                      key={c}
-                      href={`/crops/${c}`}
-                      className="px-3 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors"
-                    >
-                      {CROP_NAME_MAP[c] || c}
-                    </Link>
-                  ))}
+                  {operator.crops.map((c) => {
+                    const cropExists = !!getCropBySlug(c);
+                    const label = CROP_NAME_MAP[c] || c.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase());
+                    return cropExists ? (
+                      <Link
+                        key={c}
+                        href={`/crops/${c}`}
+                        className="px-3 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors"
+                      >
+                        {label}
+                      </Link>
+                    ) : (
+                      <span
+                        key={c}
+                        className="px-3 py-1.5 bg-gray-50 text-gray-700 border border-gray-200 rounded-lg text-sm"
+                      >
+                        {label}
+                      </span>
+                    );
+                  })}
                 </div>
               </section>
             )}
@@ -186,16 +203,28 @@ export default function OperatorPage({ params }: Props) {
               <section className="bg-white border border-gray-200 rounded-xl p-6">
                 <h2 className="font-bold text-gray-900 mb-4 text-lg">Equipment used</h2>
                 <div className="flex flex-wrap gap-2">
-                  {operator.drones.map((d) => (
-                    <Link
-                      key={d}
-                      href={`/drones/${d}`}
-                      className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-800 border border-blue-200 rounded-lg text-sm font-medium hover:bg-blue-100 transition-colors"
-                    >
-                      <Plane className="w-3.5 h-3.5 rotate-45" />
-                      {DRONE_NAME_MAP[d] || d}
-                    </Link>
-                  ))}
+                  {operator.drones.map((d) => {
+                    const droneExists = !!getDroneBySlug(d);
+                    const label = DRONE_NAME_MAP[d] || d;
+                    return droneExists ? (
+                      <Link
+                        key={d}
+                        href={`/drones/${d}`}
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-800 border border-blue-200 rounded-lg text-sm font-medium hover:bg-blue-100 transition-colors"
+                      >
+                        <Plane className="w-3.5 h-3.5 rotate-45" />
+                        {label}
+                      </Link>
+                    ) : (
+                      <span
+                        key={d}
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-blue-50 text-blue-800 border border-blue-200 rounded-lg text-sm font-medium"
+                      >
+                        <Plane className="w-3.5 h-3.5 rotate-45" />
+                        {label}
+                      </span>
+                    );
+                  })}
                 </div>
               </section>
             )}
@@ -254,7 +283,7 @@ export default function OperatorPage({ params }: Props) {
               </section>
             )}
 
-            {/* Coverage — US states */}
+            {/* Coverage, US states */}
             {coveredStates.length > 0 && (
               <section className="bg-white border border-gray-200 rounded-xl p-6">
                 <h2 className="font-bold text-gray-900 mb-4 text-lg">
@@ -288,7 +317,7 @@ export default function OperatorPage({ params }: Props) {
                   : <span className="text-xl">Contact for quote</span>}
               </div>
               {!operator.priceMinUsd && (
-                <p className="text-sm text-gray-500">Rates vary by crop, field size, and location</p>
+                <p className="text-sm text-gray-500">Rates vary by crop, field size and location</p>
               )}
               <p className="text-xs text-gray-500 mt-2">
                 * Chemical/product not included unless noted
@@ -358,13 +387,13 @@ export default function OperatorPage({ params }: Props) {
               </div>
 
               {/* Social media */}
-              {(operator.facebook || operator.instagram || operator.linkedin || operator.youtube || operator.tiktok) && (
+              {hasAnySocial && (
                 <div className="mt-4 pt-4 border-t border-gray-100">
                   <div className="text-xs text-gray-500 uppercase tracking-wide mb-2">Social media</div>
                   <div className="flex flex-wrap gap-2">
-                    {operator.facebook && (
+                    {facebookUrl && (
                       <ExternalLink
-                        href={operator.facebook}
+                        href={facebookUrl}
                         operatorSlug={operator.slug}
                         source="operator_profile_facebook"
                         withUtm={false}
@@ -374,9 +403,9 @@ export default function OperatorPage({ params }: Props) {
                         <FacebookIcon className="w-4 h-4" />
                       </ExternalLink>
                     )}
-                    {operator.instagram && (
+                    {instagramUrl && (
                       <ExternalLink
-                        href={operator.instagram}
+                        href={instagramUrl}
                         operatorSlug={operator.slug}
                         source="operator_profile_instagram"
                         withUtm={false}
@@ -386,9 +415,9 @@ export default function OperatorPage({ params }: Props) {
                         <InstagramIcon className="w-4 h-4" />
                       </ExternalLink>
                     )}
-                    {operator.linkedin && (
+                    {linkedinUrl && (
                       <ExternalLink
-                        href={operator.linkedin}
+                        href={linkedinUrl}
                         operatorSlug={operator.slug}
                         source="operator_profile_linkedin"
                         withUtm={false}
@@ -398,9 +427,9 @@ export default function OperatorPage({ params }: Props) {
                         <LinkedinIcon className="w-4 h-4" />
                       </ExternalLink>
                     )}
-                    {operator.youtube && (
+                    {youtubeUrl && (
                       <ExternalLink
-                        href={operator.youtube}
+                        href={youtubeUrl}
                         operatorSlug={operator.slug}
                         source="operator_profile_youtube"
                         withUtm={false}
@@ -410,9 +439,9 @@ export default function OperatorPage({ params }: Props) {
                         <YoutubeIcon className="w-4 h-4" />
                       </ExternalLink>
                     )}
-                    {operator.tiktok && (
+                    {tiktokUrl && (
                       <ExternalLink
-                        href={operator.tiktok}
+                        href={tiktokUrl}
                         operatorSlug={operator.slug}
                         source="operator_profile_tiktok"
                         withUtm={false}

@@ -2,17 +2,24 @@ import { Metadata } from 'next';
 import { Operator } from '@/data/types';
 import { County } from '@/data/types';
 
-const SITE_URL = 'https://agdronedirectory.com';
-const SITE_NAME = 'US Ag Drone Directory';
+export const SITE_URL = 'https://agdronedirectory.com';
+export const SITE_NAME = 'US Ag Drone Directory';
 
 export function buildOperatorMetadata(operator: Operator): Metadata {
-  const price = operator.priceMinUsd
-    ? `Rates from $${operator.priceMinUsd}/acre. `
-    : '';
-  const coverage = `Service area: ${operator.counties.length} state${operator.counties.length !== 1 ? 's' : ''}.`;
+  const baseCity = operator.city.split(/[,(/]/)[0].trim();
+  const fullTitle = `${operator.name}: Drone Spraying in ${baseCity}`;
+  const title = fullTitle.length > 55
+    ? `${operator.name.slice(0, 52).trim()}…`
+    : fullTitle;
+  const pricePart = operator.priceMinUsd ? `Rates from $${operator.priceMinUsd}/acre. ` : '';
+  const svcCount = operator.services.length;
+  const stateCount = operator.counties.length;
+  const locationPart = baseCity ? ` based in ${baseCity}` : '';
+  const fullDesc = `${operator.name}, professional agricultural drone operator${locationPart}. ${pricePart}Offers ${svcCount} service${svcCount !== 1 ? 's' : ''} across ${stateCount} state${stateCount !== 1 ? 's' : ''}. Get verified contact info and direct quotes.`;
+  const description = fullDesc.length > 160 ? `${fullDesc.slice(0, 157).trim()}…` : fullDesc;
   return {
-    title: `${operator.name} | Ag Drone Services ${operator.city} | Rates and Contact`,
-    description: `${operator.name}, agricultural drone operator based in ${operator.city}. ${price}${operator.services.length} services available. ${coverage} Contact directly.`,
+    title,
+    description,
     alternates: { canonical: `/operators/${operator.slug}` },
     openGraph: {
       title: `${operator.name} | US Ag Drone Directory`,
@@ -20,33 +27,67 @@ export function buildOperatorMetadata(operator: Operator): Metadata {
       url: `${SITE_URL}/operators/${operator.slug}`,
       siteName: SITE_NAME,
       type: 'website',
+      locale: 'en_US',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${operator.name}, agricultural drone operator in ${baseCity}`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${operator.name} | Ag Drone Services, ${operator.city}`,
       description: operator.description.slice(0, 155),
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${operator.name}, agricultural drone operator in ${baseCity}`,
+        },
+      ],
     },
   };
 }
 
 export function buildCountyMetadata(county: County, operatorCount: number): Metadata {
   const crops = county.mainCrops.slice(0, 3).join(', ');
-  const desc = `Find ${operatorCount} verified drone spraying operator${operatorCount !== 1 ? 's' : ''} in ${county.name}. Compare rates, check certifications, and hire an ag drone service for your ${crops} fields.`;
+  const desc = `Find ${operatorCount} verified drone spraying operator${operatorCount !== 1 ? 's' : ''} in ${county.name}. Compare rates, check certifications and hire an ag drone service for your ${crops} fields.`;
   return {
-    title: `Drone Spraying Services in ${county.name} | Ag Drone Directory`,
+    title: `${county.name} Drone Spraying: Rates & Operators 2026`,
     description: desc,
     alternates: { canonical: `/states/${county.slug}` },
     openGraph: {
       title: `Drone Spraying in ${county.name} | US Ag Drone Directory`,
-      description: `Verified ag drone operators in ${county.name}. Spraying, seeding, mapping, and scouting for ${crops} growers.`,
+      description: `Verified ag drone operators in ${county.name}. Spraying, seeding, mapping and scouting for ${crops} growers.`,
       url: `${SITE_URL}/states/${county.slug}`,
       siteName: SITE_NAME,
       type: 'website',
+      locale: 'en_US',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `Drone Spraying in ${county.name}`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: `Drone Spraying in ${county.name} | Rates and Operators`,
       description: desc,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `Drone Spraying in ${county.name}`,
+        },
+      ],
     },
   };
 }
@@ -54,11 +95,11 @@ export function buildCountyMetadata(county: County, operatorCount: number): Meta
 export const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'US Agricultural Drone Directory | Find Verified Drone Spraying Operators',
-    template: '%s | US Ag Drone Directory',
+    default: 'US Ag Drone Directory: Find Drone Spraying Operators',
+    template: '%s',
   },
   description:
-    'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping, and scouting across all 50 states.',
+    'The largest US ag drone directory. Find verified operators for spraying, seeding, mapping and scouting across all 50 states.',
   keywords: [
     'drone spraying near me',
     'agricultural drone services',

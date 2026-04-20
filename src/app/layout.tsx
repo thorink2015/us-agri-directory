@@ -25,17 +25,18 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://agdronedirectory.com',
     siteName: 'US Ag Drone Directory',
     title: 'US Agricultural Drone Directory | Find Verified Drone Operators',
     description:
-      'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping, and scouting across all 50 states.',
+      'The largest directory of agricultural drone services in America. Find verified drone operators for spraying, seeding, mapping and scouting across all 50 states.',
+    // Note: no `url` here — inheriting would cause og:url to mismatch the
+    // canonical on child routes. Each page sets its own openGraph.url.
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'US Ag Drone Directory — Find Verified Agricultural Drone Operators Near You',
+        alt: 'US Ag Drone Directory, Find Verified Agricultural Drone Operators Near You',
       },
     ],
   },
@@ -43,13 +44,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'US Ag Drone Directory | Find Drone Spraying Operators Near You',
     description:
-      'Find verified agricultural drone operators in all 50 states. Compare rates, check certifications, and contact directly.',
+      'Find verified agricultural drone operators in all 50 states. Compare rates, check certifications and contact directly.',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'US Ag Drone Directory — verified operators in all 50 states',
+        alt: 'US Ag Drone Directory, verified operators in all 50 states',
       },
     ],
   },
@@ -73,6 +74,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-adsense-account" content="ca-pub-1300213627244453" />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <link rel="preconnect" href="https://www.googletagmanager.com" />
         )}

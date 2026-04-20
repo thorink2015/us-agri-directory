@@ -5,10 +5,27 @@ import { guides, GUIDE_CATEGORIES } from '@/data/guides';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Ag Drone Guides 2026 | FAA Part 107, USDA Funding, Licensing',
+  title: 'Ag Drone Guides: FAA Part 107, USDA Funding, Licensing',
   description:
-    'Complete guides for agricultural drone operators in the United States: FAA regulations, USDA funding programs, pilot licensing, equipment selection, and business start-up.',
+    'Guides for US agricultural drone operators: FAA regulations, USDA funding, pilot licensing, equipment selection and business start-up.',
   alternates: { canonical: '/guides' },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Ag Drone Guides: FAA Part 107, USDA Funding, Licensing',
+    description:
+      'Guides for US agricultural drone operators: FAA regulations, USDA funding, pilot licensing, equipment selection, and business start-up.',
+    url: 'https://agdronedirectory.com/guides',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Agricultural drone guides',
+      },
+    ],
+  },
 };
 
 export default function GuidesHubPage() {
@@ -23,7 +40,7 @@ export default function GuidesHubPage() {
           Agricultural Drone Guides: US Operators 2026
         </h1>
         <p className="text-lg text-gray-600 max-w-3xl">
-          Everything you need to start, grow, and operate a successful agricultural drone business in the
+          Everything you need to start, grow and operate a successful agricultural drone business in the
           United States. Guides updated for 2026 based on current FAA regulations and USDA programs.
         </p>
       </header>

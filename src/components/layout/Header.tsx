@@ -6,24 +6,21 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, Plane, ChevronDown } from 'lucide-react';
 
 const nav = [
-  { href: '/operators', label: 'Find Operators' },
-  { href: '/states', label: 'Browse by State' },
+  { href: '/operators', label: 'Operators' },
+  { href: '/services', label: 'Services' },
+  { href: '/crops', label: 'Crops' },
+  { href: '/states', label: 'States' },
+  { href: '/drones', label: 'Drones' },
+  { href: '/pricing', label: 'Pricing' },
   {
-    label: 'Crops & Services',
+    label: 'Tools',
     dropdown: [
-      { href: '/crops', label: 'Crops', description: 'Corn, soybeans, cotton, wheat, vineyards' },
-      { href: '/services', label: 'Services', description: 'Spraying, seeding, mapping, scouting' },
-      { href: '/drones', label: 'Drone Models', description: 'DJI Agras, Hylio, XAG' },
+      { href: '/tools/spray-cost-calculator', label: 'Spray Cost Calculator', description: 'Instant per-acre cost estimate by state and crop' },
+      { href: '/tools/roi-calculator', label: 'ROI: Buy vs. Hire', description: 'Compare owning a drone vs. hiring a custom operator' },
+      { href: '/tools/coverage-calculator', label: 'Coverage Time Estimator', description: 'How long will it take to spray your fields?' },
     ],
   },
-  {
-    label: 'Resources',
-    dropdown: [
-      { href: '/pricing', label: 'Pricing Guide', description: 'Per-acre rates by crop and region 2026' },
-      { href: '/about', label: 'About', description: 'About this directory' },
-      { href: '/contact', label: 'Contact', description: 'Get in touch with our team' },
-    ],
-  },
+  { href: '/blog', label: 'Blog' },
 ];
 
 type NavItem = { href?: string; label: string; dropdown?: { href: string; label: string; description?: string }[] };

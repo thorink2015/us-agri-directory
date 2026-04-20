@@ -2,24 +2,54 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Mail, ExternalLink, AlertTriangle, BookOpen, Users, CheckCircle } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import FAQAccordion from '@/components/ui/FAQAccordion';
+import MailtoLink from '@/components/ui/MailtoLink';
 import { operators } from '@/data/operators';
 import { AUTHOR, SITE, personSchema, organizationSchema } from '@/data/author';
 
+const FAQS = [
+  {
+    question: 'Is this directory really free for operators?',
+    answer:
+      'Yes. Listing is free. No commission, no booking fee. We may offer optional premium features (featured placement) in the future but basic listings will always be free, permanently.',
+  },
+  {
+    question: 'How do you make money?',
+    answer:
+      'Currently, the directory is not monetized. Future revenue may include premium operator listings, manufacturer partnerships and educational resources. The directory will never charge farmers for access or take commissions on jobs.',
+  },
+  {
+    question: 'How often is information updated?',
+    answer:
+      'Pricing data is reviewed quarterly, regulatory data is updated when rules change and operator listings are continuously refreshed as new operators apply and existing ones update their information. Every content page displays a "last reviewed" date.',
+  },
+];
+
 export const metadata: Metadata = {
-  title: `About ${SITE.name} | Founded and Edited by ${AUTHOR.firstName}`,
+  title: `About ${SITE.name}: Founded by ${AUTHOR.firstName}`,
   description:
-    `${SITE.name} is a single-author directory founded and edited by ${AUTHOR.firstName}. Every page is personally researched to connect US farmers with verified agricultural drone operators across all 50 states.`,
+    `${SITE.name}, a single-author directory founded by ${AUTHOR.firstName}. Every page personally researched to connect US farmers with verified ag drone operators.`,
   alternates: { canonical: '/about' },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
     title: `About ${SITE.name}`,
     description: `Founded and edited by ${AUTHOR.firstName}. Every page personally researched and updated.`,
     url: `${SITE.domain}/about`,
+    siteName: SITE.name,
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: `About ${SITE.name}`,
+      },
+    ],
   },
 };
 
 export default function AboutPage() {
   const verifiedCount = operators.filter((op) => op.verified).length;
-  const hasPhoto = !AUTHOR.photoUrl.includes('{{');
   const hasLinkedin = !AUTHOR.linkedin.includes('{{');
 
   const breadcrumbSchema = {
@@ -31,26 +61,50 @@ export default function AboutPage() {
     ],
   };
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: `About ${SITE.name}`,
+    url: `${SITE.domain}/about`,
+    description: `${SITE.name} is a single-author directory founded and edited by ${AUTHOR.firstName}.`,
+    isPartOf: { '@id': `${SITE.domain}/#organization` },
+    about: { '@id': AUTHOR.personId },
+    mainEntity: { '@id': AUTHOR.personId },
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
 
       <Breadcrumb items={[{ label: 'About' }]} />
 
       {/* 1. H1 */}
       <h1 className="text-3xl font-bold text-gray-900 mb-4">About {SITE.name}</h1>
 
-      {/* 2. AEO block — what the site is, who runs it, why it exists (contains a number) */}
+      {/* 2. AEO block, what the site is, who runs it, why it exists (contains a number) */}
       <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
         <p className="text-sm text-gray-700 leading-relaxed">
           {SITE.name} is a single-author directory of {operators.length}+ agricultural drone operators
           across all 50 US states, founded and personally edited by {AUTHOR.firstName}. Every listing
           is independently reviewed against FAA Part 107 and Part 137 records, and every regulatory or
-          pricing page on this site cites primary sources from the FAA, EPA, USDA, or land-grant
+          pricing page on this site cites primary sources from the FAA, EPA, USDA or land-grant
           university extension. The directory exists to give US farmers one trusted place to find
-          verified ag drone operators, regulations, and pricing — without middlemen, commissions, or paywalls.
+          verified ag drone operators, regulations and pricing, without middlemen, commissions or paywalls.
         </p>
       </div>
 
@@ -61,20 +115,20 @@ export default function AboutPage() {
           <p>
             The US agricultural drone services market is growing at over 30% per year. But farmers
             searching for a local spray operator found generic search results, equipment retailers,
-            and outdated forum threads — not service providers. Operators, on the other side, had no
+            and outdated forum threads, not service providers. Operators, on the other side, had no
             cost-effective way to reach the farmers in their coverage area.
           </p>
           <p>
             I built {SITE.name} after spending years tracking the agricultural drone industry in
             European markets, where operator directories are more mature. The US market is larger and
             more fragmented, but the information problem is the same: farmers need a single trusted
-            place to find verified operators, compare pricing, and understand the FAA, EPA, and state
+            place to find verified operators, compare pricing and understand the FAA, EPA and state
             regulations that govern every application.
           </p>
           <p>
-            This site is free for operators to list, free for farmers to use, and will remain that way.
-            It is not a lead-generation marketplace, not an affiliate network, and not a software
-            vendor. It is a directory — researched, verified, and maintained by one person who cares
+            This site is free for operators to list, free for farmers to use and will remain that way.
+            It is not a lead-generation marketplace, not an affiliate network and not a software
+            vendor. It is a directory, researched, verified and maintained by one person who cares
             about getting the facts right.
           </p>
         </div>
@@ -86,44 +140,26 @@ export default function AboutPage() {
           <Users className="w-6 h-6 text-green-600" /> Who runs this site
         </h2>
         <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <div className="flex items-start gap-5">
-            {hasPhoto ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={AUTHOR.photoUrl}
-                alt={AUTHOR.photoAlt}
-                width={96}
-                height={96}
-                className="w-24 h-24 rounded-full object-cover flex-shrink-0"
-              />
-            ) : (
-              <div className="w-24 h-24 rounded-full bg-green-100 flex-shrink-0 flex items-center justify-center text-3xl font-bold text-green-700">
-                {AUTHOR.firstName[0]}
-              </div>
+          <div className="text-xl font-bold text-gray-900">{AUTHOR.fullName}</div>
+          <div className="text-sm text-green-700 font-medium mb-3">{AUTHOR.jobTitle}</div>
+          <p className="text-sm text-gray-700 leading-relaxed mb-4">{AUTHOR.bio}</p>
+          <div className="flex flex-wrap gap-4 text-sm">
+            {hasLinkedin && (
+              <a
+                href={AUTHOR.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
+              >
+                <ExternalLink className="w-4 h-4" /> LinkedIn
+              </a>
             )}
-            <div className="flex-1">
-              <div className="text-xl font-bold text-gray-900">{AUTHOR.fullName}</div>
-              <div className="text-sm text-green-700 font-medium mb-3">{AUTHOR.jobTitle}</div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-4">{AUTHOR.bio}</p>
-              <div className="flex flex-wrap gap-4 text-sm">
-                {hasLinkedin && (
-                  <a
-                    href={AUTHOR.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
-                  >
-                    <ExternalLink className="w-4 h-4" /> LinkedIn
-                  </a>
-                )}
-                <a
-                  href={`mailto:${AUTHOR.publicEmail}`}
-                  className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
-                >
-                  <Mail className="w-4 h-4" /> {AUTHOR.publicEmail}
-                </a>
-              </div>
-            </div>
+            <MailtoLink
+              email={AUTHOR.publicEmail}
+              className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
+            >
+              <Mail className="w-4 h-4" /> {AUTHOR.publicEmail}
+            </MailtoLink>
           </div>
         </div>
       </section>
@@ -137,8 +173,8 @@ export default function AboutPage() {
           <div className="flex gap-3">
             <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
             <p>
-              <strong>Primary sources only.</strong> Every regulatory fact on this site — FAA Part 107 and
-              Part 137 requirements, EPA FIFRA labeling, state pesticide licensing, USDA program rules —
+              <strong>Primary sources only.</strong> Every regulatory fact on this site, FAA Part 107 and
+              Part 137 requirements, EPA FIFRA labeling, state pesticide licensing, USDA program rules
               cites its primary source directly. No secondary aggregators, no unverified forum posts.
             </p>
           </div>
@@ -155,7 +191,7 @@ export default function AboutPage() {
             <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
             <p>
               <strong>Pricing data.</strong> Per-acre rate ranges are compiled from operator surveys, public
-              quotes, USDA cost-of-production data, and direct interviews. Rates are reviewed each spray
+              quotes, USDA cost-of-production data and direct interviews. Rates are reviewed each spray
               season (spring and fall) and updated to reflect current market conditions.
             </p>
           </div>
@@ -184,7 +220,7 @@ export default function AboutPage() {
               <span className="text-amber-600 flex-shrink-0">•</span>
               <span>
                 I am <strong>not a licensed Part 137 Agricultural Aircraft Operator</strong> and I do not
-                hold a US state pesticide applicator license. I research and write about the regulations —
+                hold a US state pesticide applicator license. I research and write about the regulations
                 I don&apos;t perform commercial applications.
               </span>
             </li>
@@ -193,14 +229,14 @@ export default function AboutPage() {
               <span>
                 This site is <strong>not legal advice</strong> and is not a law firm. FAA and EPA rules
                 change. State pesticide rules vary widely. Verify every regulatory requirement with the
-                FAA, EPA, and your state Department of Agriculture before operating commercially.
+                FAA, EPA and your state Department of Agriculture before operating commercially.
               </span>
             </li>
             <li className="flex gap-2">
               <span className="text-amber-600 flex-shrink-0">•</span>
               <span>
                 Operator listings are a good-faith review, not a guarantee. Always verify an
-                operator&apos;s current certifications, insurance, and references before hiring.
+                operator&apos;s current certifications, insurance and references before hiring.
               </span>
             </li>
           </ul>
@@ -211,7 +247,7 @@ export default function AboutPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">How operators get listed</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          Listing a drone-spraying business on {SITE.name} is — and will remain — <strong>completely
+          Listing a drone-spraying business on {SITE.name} is, and will remain, <strong>completely
           free</strong> for operators anywhere in the United States. There are no commissions, no referral
           fees, and no features hidden behind a paywall. Basic listings are free, permanently.
         </p>
@@ -233,7 +269,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 8. Contact */}
+      {/* 8. FAQ */}
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Frequently asked questions</h2>
+        <FAQAccordion faqs={FAQS} />
+      </section>
+
+      {/* 9. Contact */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact</h2>
         <p className="text-gray-700 leading-relaxed mb-3">
@@ -241,12 +283,12 @@ export default function AboutPage() {
           directly or use the contact form.
         </p>
         <div className="flex flex-wrap gap-4 text-sm">
-          <a
-            href={`mailto:${AUTHOR.publicEmail}`}
+          <MailtoLink
+            email={AUTHOR.publicEmail}
             className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:text-green-700 transition-colors"
           >
             <Mail className="w-4 h-4 text-green-600" /> {AUTHOR.publicEmail}
-          </a>
+          </MailtoLink>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:text-green-700 transition-colors"

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { MapPin, Phone, Globe, CheckCircle, Plane, Zap, Shield } from 'lucide-react';
 import { Operator, SERVICE_LABELS } from '@/data/types';
+import { SITE } from '@/data/author';
 import { formatPrice, addUtmParams, getStateAbbr } from '@/lib/utils';
 import {
   trackOperatorWebsiteClick,
@@ -27,6 +28,14 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
       itemScope
       itemType="https://schema.org/ProfessionalService"
     >
+      <meta itemProp="name" content={operator.name} />
+      <link itemProp="url" href={`/operators/${operator.slug}`} />
+      <meta itemProp="image" content={`${SITE.domain}/og-image.png`} />
+      <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
+        <meta itemProp="addressLocality" content={operator.city} />
+        <meta itemProp="addressRegion" content={getStateAbbr(operator.counties)} />
+        <meta itemProp="addressCountry" content="US" />
+      </div>
       {/* Header: icon + name + badges */}
       <header className="flex items-start gap-3 mb-2">
         <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-green-50 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:from-green-200 group-hover:to-green-100 transition-colors">
@@ -37,7 +46,6 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
             <Link
               href={`/operators/${operator.slug}`}
               className="font-bold text-gray-900 group-hover:text-green-700 transition-colors text-base leading-tight truncate"
-              itemProp="name"
               title={operator.name}
             >
               {displayName}
@@ -49,7 +57,7 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
             )}
           </div>
           {showCounty && (
-            <div className="flex items-center gap-1 text-xs text-gray-500 mt-0.5" itemProp="address">
+            <div className="flex items-center gap-1 text-xs text-gray-500 mt-0.5">
               <MapPin className="w-3 h-3 flex-shrink-0" />
               <span className="truncate">{operator.city}, {getStateAbbr(operator.counties)}</span>
             </div>

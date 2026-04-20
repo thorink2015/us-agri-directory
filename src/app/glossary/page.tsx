@@ -5,15 +5,26 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { glossaryTerms, GlossaryTerm } from '@/data/glossary';
 
 export const metadata: Metadata = {
-  title: 'Agricultural Drone Glossary 2026 | FAA, EPA & Spraying Terms',
+  title: 'Agricultural Drone Glossary: FAA, EPA & Spray Terms',
   description:
-    'Plain-English definitions of 55+ agricultural drone terms: Part 107, Part 137, LAANC, FIFRA, GPA, ULV, RTK, and more. Updated for 2026 regulations.',
+    'Plain-English definitions of 55+ agricultural drone terms: Part 107, Part 137, LAANC, FIFRA, GPA, ULV, RTK and more. Updated for 2026 regulations.',
   alternates: { canonical: '/glossary' },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
     title: 'Agricultural Drone Glossary | US Ag Drone Directory',
     description:
-      'The complete glossary of agricultural drone terminology: FAA regulations, spray application, drone hardware, and ag business terms.',
+      'The complete glossary of agricultural drone terminology: FAA regulations, spray application, drone hardware and ag business terms.',
     url: 'https://agdronedirectory.com/glossary',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Agricultural Drone Glossary',
+      },
+    ],
   },
 };
 
@@ -58,6 +69,16 @@ export default function GlossaryPage() {
     })),
   };
 
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Agricultural Drone Glossary',
+    url: 'https://agdronedirectory.com/glossary',
+    description: `Plain-English definitions of ${glossaryTerms.length}+ agricultural drone terms used across FAA regulations, EPA pesticide rules, drone hardware and farm business.`,
+    isPartOf: { '@id': 'https://agdronedirectory.com/#organization' },
+    mainEntity: { '@id': 'https://agdronedirectory.com/glossary#termset' },
+  };
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -70,6 +91,7 @@ export default function GlossaryPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <Breadcrumb items={[{ label: 'Glossary' }]} />
@@ -80,7 +102,7 @@ export default function GlossaryPage() {
       </div>
       <p className="text-lg text-gray-600 mb-6 leading-relaxed">
         Plain-English definitions of {glossaryTerms.length}+ terms used in US agricultural drone
-        operations — FAA regulations, EPA pesticide rules, application technique, hardware, and business terminology.
+        operations, FAA regulations, EPA pesticide rules, application technique, hardware and business terminology.
       </p>
 
       {/* A-Z quick nav */}
@@ -99,7 +121,7 @@ export default function GlossaryPage() {
             ) : (
               <span
                 key={l}
-                className="w-7 h-7 flex items-center justify-center rounded-md text-sm font-medium text-gray-300 cursor-not-allowed"
+                className="w-7 h-7 flex items-center justify-center rounded-md text-sm font-medium text-gray-400 cursor-not-allowed"
               >
                 {l}
               </span>

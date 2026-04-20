@@ -89,6 +89,7 @@ export interface Crop {
   name: string;
   nameRo: string;             // English display name
   description: string;
+  longDescription: string;    // long-form body copy (150-250 words)
   aeoBlock: string;           // 2-3 sentence definitive answer for AI engines, contains a number
   priceMinUsd: number;        // min per-acre rate (USD)
   priceMaxUsd: number;        // max per-acre rate (USD)
@@ -99,6 +100,7 @@ export interface Crop {
   uvlNormLHa?: string;        // carrier volume per acre (gpa)
   yieldGainPct?: number;
   authorityLinks: { label: string; url: string }[];
+  faqs?: { question: string; answer: string }[];  // 4-5 crop-specific FAQs
   lastReviewedAt?: string;    // ISO date (YYYY-MM-DD) of last editorial review
 }
 
@@ -106,18 +108,113 @@ export interface DroneModel {
   slug: string;
   name: string;
   manufacturer: string;
-  tankCapacityL: number;
-  coverageHaPerHour: number;
-  haPerDay?: number;
-  flowRateLPerMin?: number;
-  workWidthM?: number;
-  spreadingCapacityKg?: number;
-  weightKg?: number;
-  ipRating?: string;
-  priceUsdMin?: number;
-  priceUsdMax?: number;
-  ndaaCompliant?: boolean;
-  highlightFeature?: string;
+  countryOfManufacture: string;
+  ndaaCompliant: boolean;
+  status: 'active' | 'discontinued';
+  description: string;
+  longDescription: string;
+  aeoBlock: string;
+  specs: {
+    emptyWeightKg: number | null;
+    emptyWeightLbs: number | null;
+    mtowKg: number | null;
+    mtowLbs: number | null;
+    tankLiters: number | null;
+    tankGallons: number | null;
+    granularCapacityLiters: number | null;
+    granularCapacityKg: number | null;
+    swathWidthMeters: string | null;
+    swathWidthFeet: string | null;
+    maxFlowRateLMin: string | null;
+    battery: string | null;
+    batteryWh: number | null;
+    chargeTimeMin: string | null;
+    maxWindMs: number | null;
+    maxWindMph: number | null;
+    ipRating: string | null;
+  };
+  msrpUsd: string;
+  usDealerPresence: string;
+  bestFor: string;
+  authorityLinks: { label: string; url: string }[];
+  faqs: { question: string; answer: string }[];
+  lastReviewedAt: string;
+}
+
+export interface Region {
+  slug: string;
+  name: string;
+  icon?: string;
+  tagline?: string;
+  totalAcres?: number;
+  states: string[];
+  stateSlugs: string[];
+  description: string;
+  longDescription: string;
+  aeoBlock: string;
+  priceRangeUsd: string;
+  primaryCrops: string[];
+  sprayWindows: { crop: string; months: string; stage: string }[];
+  keyInsights: string[];
+  authorityLinks: { label: string; url: string }[];
+  faqs: { question: string; answer: string }[];
+  lastReviewedAt: string;
+}
+
+export interface ServiceDefinition {
+  slug: string;
+  name: string;
+  description: string;
+  longDescription: string;
+  aeoBlock: string;
+  priceMinUsd: number;
+  priceMaxUsd: number;
+  priceUnit?: string;
+  icon?: string;
+  keywords?: string[];
+  authorityLinks: { label: string; url: string }[];
+  faqs?: { question: string; answer: string }[];
+  lastReviewedAt?: string;
+}
+
+export interface StateData {
+  slug: string;
+  name: string;
+  abbreviation: string;
+  regionSlug: string;          // e.g. 'corn-belt'
+  regionName: string;          // e.g. 'Corn Belt'
+  licensingAgency: string;     // e.g. 'IDALS'
+  licensingAgencyUrl: string;
+  aerialCategory: string;      // e.g. 'Category 11 (Aerial Application)'
+  examsRequired: string;
+  examFees: string;
+  uniqueRules: string[];
+  reciprocityStates: string[]; // abbreviated state names
+  renewalCycle: string;
+  ceRequirements: string;
+  droneSpecificCredential: boolean;
+  droneGuidanceUrl: string | null;
+  extensionUrl: string;
+  topCrops: {
+    slug: string;
+    name: string;
+    acreage: string;
+    notes: string;
+  }[];
+  rateRange: string;           // e.g. '$12 to $17/acre'
+  statsRate: string;
+  statsTopCrop: string;
+  sprayWindows: {
+    crop: string;
+    rateRange: string;
+    window: string;
+  }[];
+  neighboringStates: string[]; // slugs e.g. ['illinois', 'minnesota']
+  aeoBlock: string;
+  licensingDetails: string;    // long prose for the licensing section
+  authorityLinks: { label: string; url: string }[];
+  faqs: { question: string; answer: string }[];
+  lastReviewedAt: string;
 }
 
 export interface BlogPost {
@@ -136,4 +233,6 @@ export interface BlogPost {
   relatedServices?: ServiceType[];
   content: string;
   featuredImage?: string;
+  aeoBlock?: string;
+  faqs?: { question: string; answer: string }[];
 }

@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Search, Filter, X, ChevronDown, ChevronUp, SlidersHorizontal, ArrowUpDown } from 'lucide-react';
 import { Operator, SERVICE_LABELS, ServiceType } from '@/data/types';
 import { County } from '@/data/types';
-import { DRONE_NAME_MAP } from '@/data/drone-models';
+import { DRONE_NAME_MAP } from '@/data/drone-model';
 import OperatorCard from '@/components/operators/OperatorCard';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
@@ -20,7 +20,7 @@ const SORT_LABELS: Record<SortOption, string> = {
   price_asc: 'Price: low → high',
   price_desc: 'Price: high → low',
   ha_desc: 'Acres treated ↓',
-  name_asc: 'Name A–Z',
+  name_asc: 'Name A to Z',
 };
 
 export default function OperatoriClient({ operators, counties }: Props) {
@@ -42,6 +42,10 @@ export default function OperatoriClient({ operators, counties }: Props) {
 
   // Sort
   const [sortBy, setSortBy] = useState<SortOption>('default');
+
+  // Pagination
+  const PAGE_SIZE = 20;
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filtered = useMemo(() => {
     let result = operators.filter((op) => {
@@ -98,6 +102,14 @@ export default function OperatoriClient({ operators, counties }: Props) {
     selectedDrone, priceMin, priceMax, sortBy,
   ]);
 
+  // Reset pagination when filters/sort change
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [search, selectedCounty, selectedService, priceMin, priceMax, selectedDrone, verifiedOnly, featuredOnly, certPart107, certPart137, ndaaOnly, sortBy]);
+
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visibleCount < filtered.length;
+
   const hasBasicFilters = !!(search || selectedCounty || selectedService);
   const hasAdvancedFilters = !!(priceMin || priceMax || selectedDrone || verifiedOnly || featuredOnly || certPart107 || certPart137 || ndaaOnly);
   const hasFilters = hasBasicFilters || hasAdvancedFilters;
@@ -141,10 +153,11 @@ export default function OperatoriClient({ operators, counties }: Props) {
         <div className="flex flex-wrap gap-3">
           {/* Search */}
           <div className="relative flex-1 min-w-[200px]">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
             <input
               type="text"
               placeholder="Search by name, city..."
+              aria-label="Search operators by name or city"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-9 pr-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
@@ -155,6 +168,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
           <select
             value={selectedCounty}
             onChange={(e) => setSelectedCounty(e.target.value)}
+            aria-label="Filter by state"
             className="px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[150px]"
           >
             <option value="">All States</option>
@@ -167,6 +181,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
           <select
             value={selectedService}
             onChange={(e) => setSelectedService(e.target.value as ServiceType | '')}
+            aria-label="Filter by service"
             className="px-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[160px]"
           >
             <option value="">All Services</option>
@@ -177,10 +192,11 @@ export default function OperatoriClient({ operators, counties }: Props) {
 
           {/* Sort */}
           <div className="relative">
-            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+            <ArrowUpDown className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as SortOption)}
+              aria-label="Sort operators"
               className="pl-9 pr-3 py-2.5 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white min-w-[190px]"
             >
               {Object.entries(SORT_LABELS).map(([key, label]) => (
@@ -238,7 +254,7 @@ export default function OperatoriClient({ operators, counties }: Props) {
                     min={0}
                     max={100}
                   />
-                  <span className="text-gray-400 text-xs">–</span>
+                  <span className="text-gray-500 text-xs">-</span>
                   <input
                     type="number"
                     placeholder="Max"
@@ -382,16 +398,27 @@ export default function OperatoriClient({ operators, counties }: Props) {
           )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {filtered.map((op) => (
+            {visible.map((op) => (
               <OperatorCard key={op.slug} operator={op} />
             ))}
           </div>
+
+          {hasMore && (
+            <div className="text-center mt-8">
+              <button
+                onClick={() => setVisibleCount((n) => n + PAGE_SIZE)}
+                className="px-6 py-3 bg-green-700 text-white text-sm font-medium rounded-lg hover:bg-green-800 transition-colors"
+              >
+                Load more ({filtered.length - visibleCount} remaining)
+              </button>
+            </div>
+          )}
         </>
       ) : (
         <div className="text-center py-20 bg-white rounded-xl border border-gray-200">
           <Filter className="w-14 h-14 text-gray-200 mx-auto mb-4" />
           <p className="text-gray-700 text-lg font-medium mb-1">No operators found</p>
-          <p className="text-gray-400 text-sm mb-5">Try adjusting or clearing your filters</p>
+          <p className="text-gray-600 text-sm mb-5">Try adjusting or clearing your filters</p>
           <button
             onClick={clearFilters}
             className="px-5 py-2 bg-green-700 text-white text-sm font-medium rounded-lg hover:bg-green-800 transition-colors"

@@ -8,11 +8,11 @@ export function cn(...inputs: ClassValue[]) {
 export function formatPrice(min?: number, max?: number, currency = 'USD'): string {
   if (!min && !max) return 'Price on request';
   if (currency === 'USD') {
-    if (min && max) return `$${min}–$${max}/acre`;
+    if (min && max) return `$${min} to $${max}/acre`;
     if (min) return `from $${min}/acre`;
     return `up to $${max}/acre`;
   }
-  if (min && max) return `${min}–${max} ${currency}/acre`;
+  if (min && max) return `${min} to ${max} ${currency}/acre`;
   if (min) return `from ${min} ${currency}/acre`;
   return `up to ${max} ${currency}/acre`;
 }
@@ -63,6 +63,48 @@ export const STATE_ABBR: Record<string, string> = {
 export function getStateAbbr(counties: string[]): string {
   if (!counties || counties.length === 0) return 'US';
   return STATE_ABBR[counties[0]] || 'US';
+}
+
+/**
+ * Normalize a raw social-field value into a full https URL, or null if unusable.
+ * Data entries can be full URLs, bare "@handle", "platform.com/path", or junk like "Y".
+ */
+export function normalizeSocialUrl(
+  platform: 'facebook' | 'instagram' | 'linkedin' | 'youtube' | 'tiktok' | 'website',
+  raw?: string,
+): string | null {
+  if (!raw) return null;
+  const val = raw.trim();
+  if (val.length < 3) return null;
+  if (/^https?:\/\//i.test(val)) {
+    try {
+      new URL(val);
+      return val;
+    } catch {
+      return null;
+    }
+  }
+  if (platform === 'website') {
+    if (/^[a-z0-9][a-z0-9.-]*\.[a-z]{2,}(\/.*)?$/i.test(val)) return `https://${val}`;
+    return null;
+  }
+  const handle = val.replace(/^@/, '').trim();
+  if (!/^[A-Za-z0-9._/-]+$/.test(handle)) return null;
+  const bases: Record<string, string> = {
+    facebook: 'https://www.facebook.com/',
+    instagram: 'https://www.instagram.com/',
+    linkedin: 'https://www.linkedin.com/',
+    youtube: 'https://www.youtube.com/',
+    tiktok: 'https://www.tiktok.com/@',
+  };
+  if (/^(facebook|instagram|linkedin|youtube|tiktok)\.com\//i.test(handle)) {
+    return `https://www.${handle}`;
+  }
+  const base = bases[platform];
+  if (platform === 'tiktok' && handle.startsWith('@')) {
+    return `https://www.tiktok.com/${handle}`;
+  }
+  return `${base}${handle}`;
 }
 
 export function addUtmParams(url: string, operatorSlug: string): string {

@@ -13,6 +13,7 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 
+import { addUtm } from '@/lib/utm';
 // Fallback last-reviewed date for service pages. Bump when content reviewed.
 const SERVICE_LAST_REVIEWED = '2026-04-01';
 
@@ -29,14 +30,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!service) return {};
 
   return {
-    title: `${service.name} Services | Agricultural Drone Operators US 2026`,
+    title: `${service.name}: US Operators & Rates 2026`,
     description: service.aeoBlock.slice(0, 155),
     alternates: { canonical: `/services/${params.slug}` },
-    keywords: service.keywords.join(', '),
+    keywords: service.keywords?.join(', '),
     openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      siteName: 'US Ag Drone Directory',
       title: `${service.name} | US Agricultural Drone Directory`,
       description: service.description,
       url: `https://agdronedirectory.com/services/${params.slug}`,
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: service.name,
+        },
+      ],
     },
   };
 }
@@ -45,7 +57,7 @@ export default function ServicePage({ params }: Props) {
   const service = getServiceBySlug(params.slug as ServiceType);
   if (!service) notFound();
 
-  const serviceOps = operators.filter((op) => op.services.includes(service.slug));
+  const serviceOps = operators.filter((op) => op.services.includes(service.slug as ServiceType));
 
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -83,7 +95,7 @@ export default function ServicePage({ params }: Props) {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: service.faqs.map((faq) => ({
+    mainEntity: (service.faqs ?? []).map((faq) => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
@@ -136,7 +148,7 @@ export default function ServicePage({ params }: Props) {
             <span className="text-sm text-gray-700">
               Typical rate:{' '}
               <span className="font-semibold text-green-700">{formatPrice(service.priceMinUsd, service.priceMaxUsd)}</span>
-              {' '}<span className="text-gray-400">({service.priceUnit})</span>
+              {' '}<span className="text-gray-600">({service.priceUnit})</span>
             </span>
           </div>
         )}
@@ -150,7 +162,7 @@ export default function ServicePage({ params }: Props) {
             {service.authorityLinks.map((link) => (
               <a
                 key={link.url}
-                href={link.url}
+                href={addUtm(link.url, "authority_link")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-green-700 hover:underline"
@@ -170,8 +182,8 @@ export default function ServicePage({ params }: Props) {
           <span className="text-sm font-normal text-gray-500 ml-2">({serviceOps.length})</span>
         </h2>
         <p className="text-sm text-gray-500 mb-4">
-          All operators are independently verified. <Link href="/operators" className="text-green-700 hover:underline">View all operators</Link> or{' '}
-          <Link href="/states" className="text-green-700 hover:underline">search by state</Link>.
+          All operators are independently verified. <Link href="/operators" className="text-green-700 underline">View all operators</Link> or{' '}
+          <Link href="/states" className="text-green-700 underline">search by state</Link>.
         </p>
 
         {serviceOps.length > 0 ? (
@@ -199,7 +211,7 @@ export default function ServicePage({ params }: Props) {
       <div className="mb-8">
         <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Also searched as</p>
         <div className="flex flex-wrap gap-2">
-          {service.keywords.map((kw) => (
+          {(service.keywords ?? []).map((kw) => (
             <span key={kw} className="px-2.5 py-1 bg-gray-100 text-gray-600 text-xs rounded-full">
               {kw}
             </span>
@@ -212,7 +224,7 @@ export default function ServicePage({ params }: Props) {
         <h2 className="text-xl font-bold text-gray-900 mb-4">
           Frequently asked questions
         </h2>
-        <FAQAccordion faqs={service.faqs} />
+        <FAQAccordion faqs={service.faqs ?? []} />
       </div>
 
       {/* Internal links to calculators */}
@@ -220,11 +232,11 @@ export default function ServicePage({ params }: Props) {
         <h2 className="font-semibold text-gray-900 mb-3 text-sm">Related tools</h2>
         <div className="flex flex-wrap gap-3">
           <Link href="/tools/spray-cost-calculator" className="text-sm text-green-700 hover:underline">Spray Cost Calculator</Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-400" aria-hidden="true">|</span>
           <Link href="/tools/roi-calculator" className="text-sm text-green-700 hover:underline">ROI Buy vs. Hire</Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-400" aria-hidden="true">|</span>
           <Link href="/tools/coverage-calculator" className="text-sm text-green-700 hover:underline">Coverage Time Estimator</Link>
-          <span className="text-gray-300">|</span>
+          <span className="text-gray-400" aria-hidden="true">|</span>
           <Link href="/pricing" className="text-sm text-green-700 hover:underline">Full Pricing Guide</Link>
         </div>
       </div>
@@ -247,7 +259,7 @@ export default function ServicePage({ params }: Props) {
         </div>
       </div>
 
-      {/* Author card — E-E-A-T footer */}
+      {/* Author card, E-E-A-T footer */}
       <AuthorCard />
     </div>
   );

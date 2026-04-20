@@ -10,6 +10,7 @@ import { formatPrice } from '@/lib/utils';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import { SITE } from '@/data/author';
 
 interface Props {
   params: { slug: string; service: string };
@@ -27,10 +28,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!county || !service) return {};
 
   return {
-    title: `${service.name} in ${county.name} | Agricultural Drone Operators 2026`,
-    description: `${service.name} drone services in ${county.name}. ${service.description} Find verified operators and contact them directly.`,
+    title: `${service.name}: ${county.name} 2026`,
+    description: `${service.name} drone services in ${county.name}. Compare rates from verified operators and contact them directly for your ${county.name} fields.`,
     alternates: {
       canonical: `/states/${params.slug}/services/${params.service}`,
+    },
+    openGraph: {
+      type: 'website',
+      locale: 'en_US',
+      title: `${service.name} in ${county.name} | US Ag Drone Directory`,
+      description: `${service.name} drone services in ${county.name}. Compare rates from verified operators and contact them directly for your ${county.name} fields.`,
+      url: `${SITE.domain}/states/${params.slug}/services/${params.service}`,
+      siteName: 'US Ag Drone Directory',
+      images: [
+        {
+          url: '/opengraph-image',
+          width: 1200,
+          height: 630,
+          alt: `${service.name} in ${county.name}`,
+        },
+      ],
     },
   };
 }
@@ -41,17 +58,17 @@ export default function CountyServicePage({ params }: Props) {
   if (!county || !service) notFound();
 
   const allCountyOps = getOperatorsByCounty(county.slug);
-  const serviceOps = allCountyOps.filter((op) => op.services.includes(service.slug));
+  const serviceOps = allCountyOps.filter((op) => op.services.includes(service.slug as ServiceType));
   const displayOps = serviceOps.length > 0 ? serviceOps : allCountyOps;
 
   const faqs = [
-    ...service.faqs,
+    ...(service.faqs ?? []),
     {
       question: `How many operators offer ${service.name.toLowerCase()} in ${county.name}?`,
       answer:
         serviceOps.length > 0
           ? `There ${serviceOps.length === 1 ? 'is' : 'are'} ${serviceOps.length} operator${serviceOps.length !== 1 ? 's' : ''} offering ${service.name.toLowerCase()} drone services in ${county.name}: ${serviceOps.map((o) => o.name).join(', ')}.`
-          : `We don't currently have operators specialized in ${service.name.toLowerCase()} listed directly in ${county.name}. Many national operators cover multiple states — contact them for availability.`,
+          : `We don't currently have operators specialized in ${service.name.toLowerCase()} listed directly in ${county.name}. Many national operators cover multiple states, contact them for availability.`,
     },
   ];
 

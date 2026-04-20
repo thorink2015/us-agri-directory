@@ -79,3 +79,18 @@ and `AUTHOR.organizationId` getters.
 - `_research/` — 13 research + planning docs (see `_research/README.md`)
 - `_memory/` — this folder. Claude Code self-maintained knowledge base.
 - Both can be deleted with `rm -rf _research _memory` before launch.
+
+## `_research/` drop-folder workflow (2026-04-17)
+
+Eugen uses `_research/` as a drop folder for any files he wants Claude
+Code to work with. Standard flow per batch:
+
+1. Look in `_research/` for the new files Eugen dropped
+2. Read + analyze them
+3. Apply the changes / integrate content into the right destination
+   (e.g. `src/data/`, `src/app/...`, `public/images/`, etc.)
+4. Move or delete the source files out of `_research/` once integrated,
+   so the folder only holds un-processed drops
+5. Commit + push per the small-batches rule
+
+Do not leave processed drop files sitting in `_research/`.

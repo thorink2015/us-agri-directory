@@ -1,15 +1,32 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Plane, Zap, Droplets, Shield } from 'lucide-react';
-import { droneModels } from '@/data/drone-models';
+import { Plane, Shield } from 'lucide-react';
+import { drones } from '@/data/drone-model';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'Commercial Ag Spray Drones | DJI Agras, Hylio, XAG Specs & Prices',
+  title: 'Commercial Ag Spray Drones: DJI, Hylio, XAG Specs',
   description:
-    'Compare commercial agricultural spray drones used by operators across the US: DJI Agras T50, T25P, T100, Hylio AG-272, and XAG P100 Pro. Specifications and pricing.',
+    'Compare commercial ag spray drones used by US operators: DJI Agras T50, T25, T100, Hylio AG-272, XAG P100 Pro, Talos T60X. Specs and pricing.',
   alternates: {
     canonical: '/drones',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    title: 'Commercial Ag Spray Drones: DJI, Hylio, XAG Specs',
+    description:
+      'Compare commercial ag spray drones used by US operators: DJI Agras T50, T25, T100, Hylio AG-272, XAG P100 Pro, Talos T60X. Specs and pricing.',
+    url: 'https://agdronedirectory.com/drones',
+    siteName: 'US Ag Drone Directory',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Commercial agricultural spray drones',
+      },
+    ],
   },
 };
 
@@ -21,12 +38,12 @@ export default function DronePage() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Commercial Ag Spray Drones</h1>
         <p className="text-gray-600">
-          Compare the commercial spray drones used by operators in our directory. Specifications, pricing, and key features for each platform.
+          Compare the commercial spray drones used by operators in our directory. Specifications, pricing and key features for each platform.
         </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {droneModels.map((drone) => (
+        {drones.map((drone) => (
           <Link
             key={drone.slug}
             href={`/drones/${drone.slug}`}
@@ -46,24 +63,19 @@ export default function DronePage() {
 
             <div className="grid grid-cols-2 gap-2 mb-3">
               <div className="bg-gray-50 rounded-lg p-2.5 text-center">
-                <Droplets className="w-4 h-4 text-blue-500 mx-auto mb-1" />
-                <div className="text-sm font-bold text-gray-900">{drone.tankCapacityL}L</div>
-                <div className="text-xs text-gray-400">Tank</div>
+                <div className="text-sm font-bold text-gray-900">{drone.specs.tankLiters}L</div>
+                <div className="text-xs text-gray-600">Tank</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-2.5 text-center">
-                <Zap className="w-4 h-4 text-green-500 mx-auto mb-1" />
-                <div className="text-sm font-bold text-gray-900">{drone.coverageHaPerHour} ac/hr</div>
-                <div className="text-xs text-gray-400">Coverage</div>
+                <div className="text-sm font-bold text-gray-900">{drone.specs.maxWindMph} mph</div>
+                <div className="text-xs text-gray-600">Max wind</div>
               </div>
             </div>
 
-            {drone.priceUsdMin && (
-              <div className="text-xs text-gray-500">
-                From <span className="font-semibold text-gray-700">${drone.priceUsdMin.toLocaleString()}</span>
-              </div>
-            )}
+            <div className="text-xs text-gray-500 mb-2">{drone.msrpUsd}</div>
+
             {drone.ndaaCompliant && (
-              <span className="inline-flex items-center gap-1 mt-2 px-2 py-0.5 bg-blue-100 text-blue-800 text-xs rounded-full font-medium">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-blue-100 text-blue-800 text-xs rounded-full font-medium">
                 <Shield className="w-3 h-3" /> NDAA Compliant
               </span>
             )}
