@@ -1,79 +1,107 @@
-# TerraDron.ro
+# US Ag Drone Directory
 
-> Directorul complet al operatorilor de drone agricole din România și Republica Moldova.
+> Free directory of 391 verified agricultural drone operators across all 50 US states. Find spraying, seeding, mapping, and crop monitoring services by state, crop, or drone model. Published pricing, regulations, and interactive tools for farmers and operators.
 
-TerraDron.ro este primul și cel mai complet director de operatori de drone agricole din România (41 de județe) și Republica Moldova. Platforma listează operatori verificați care oferă servicii de pulverizare, fertilizare, monitorizare NDVI, cartografiere, training și închiriere drone.
+US Ag Drone Directory publishes the only public, primary-source-cited index of commercial agricultural drone operators in the United States. Every operator listing is filtered for FAA Part 107 and Part 137 certification status, state commercial pesticide applicator licensing with aerial category endorsement, and verifiable fleet and insurance data. Pricing benchmarks cite the 2026 Iowa State Custom Rate Survey, Kansas State Extension, UC Davis Cooperative Extension, and USDA NRCS cost-share rates. The site is built for farmers comparing operators and operators benchmarking their market, not for investors or press coverage.
 
-## Ce găsești pe TerraDron.ro
+## Core pages
+- [Home](https://agdronedirectory.com/): hub with pricing benchmarks, state rollups, and operator search
+- [About](https://agdronedirectory.com/about): editorial policy, author identity, what the site is and is not
+- [Pricing](https://agdronedirectory.com/pricing): 2026 USD per-acre benchmarks by crop, region, and service
+- [List Your Business](https://agdronedirectory.com/list-your-business): free operator submission form
+- [Contact](https://agdronedirectory.com/contact): editorial contact and corrections
 
-- **23 operatori listați** (19 RO + 4 MD) cu date de contact, prețuri, flotă și certificări
-- **41 pagini de județe** cu operatorii activi în fiecare județ din România
-- **8 pagini de culturi**: viță de vie, grâu, porumb, rapiță, floarea-soarelui, livezi, soia, cereale
-- **6 servicii**: pulverizare, fertilizare, monitorizare NDVI, cartografiere, training, închiriere
-- **5 modele de drone**: DJI Agras T25P, T50, T100, XAG P100 Pro, ADT Falcon 50P
-- **Prețuri actualizate 2026**: 70–200 RON/ha în România, 170–240 MDL/ha în Moldova
+## Find operators
+- [All operators](https://agdronedirectory.com/operators): searchable index of 391 verified US operators
+- [States hub](https://agdronedirectory.com/states): entry point to all 50 state pages
+- [Iowa](https://agdronedirectory.com/states/iowa): Corn Belt anchor, 2026 Iowa State benchmark at $12.50 per acre
+- [Texas](https://agdronedirectory.com/states/texas): cotton defoliant, wheat heading, TDA aerial license
+- [California](https://agdronedirectory.com/states/california): vineyards, orchards, CDPR Unmanned Pest Control Aircraft Pilot Certificate
+- [Illinois](https://agdronedirectory.com/states/illinois): dense Corn Belt operator supply, rate compression
+- [Kansas](https://agdronedirectory.com/states/kansas): Great Plains wheat fungicide, airplane vs drone crossover
+- [Nebraska](https://agdronedirectory.com/states/nebraska): irrigated corn and soybean fungicide at scale
+- [Tennessee](https://agdronedirectory.com/states/tennessee): Mid-South cotton, soybean, and tobacco operator base
+- [Alabama](https://agdronedirectory.com/states/alabama): Southeast cotton, peanuts, and forestry applications
 
-## Prețuri medii pulverizare cu drona în România (2026)
+## Regions
+- [Regions hub](https://agdronedirectory.com/regions): five multi-state market profiles
+- [Corn Belt](https://agdronedirectory.com/regions/corn-belt): IA, IL, IN, OH, MO, MI, WI, MN, KY, TN
+- [Great Plains](https://agdronedirectory.com/regions/great-plains): KS, NE, ND, SD, MT, WY, CO, OK, NM, TX
+- [Mid-South](https://agdronedirectory.com/regions/mid-south): AR, MS, LA, TN, AL, GA
+- [Southeast](https://agdronedirectory.com/regions/southeast): FL, SC, NC, VA, WV, and Northeast states
+- [West](https://agdronedirectory.com/regions/west): CA, WA, OR, ID, NV, UT, AZ, AK, HI
 
-- Grâu, porumb, rapiță, floarea soarelui: 70–130 RON/ha (mediu ~100 RON/ha, ~€20/ha)
-- Viță de vie: 120–200 RON/ha (mediu ~150 RON/ha)
-- Livezi (pomi fructiferi): 120–200 RON/ha
-- Fermă mică (sub 50 ha): 120–150 RON/ha
-- Fermă medie (100–500 ha): 85–110 RON/ha
-- Fermă mare (500–1000 ha): 70–85 RON/ha
+## Services
+- [Services hub](https://agdronedirectory.com/services): all 10 service pages
+- [Drone pesticide spraying](https://agdronedirectory.com/services/spraying): $12 to $22 per acre, Part 137 required
+- [Aerial cover crop seeding](https://agdronedirectory.com/services/seeding): $12 to $18 per acre, USDA NRCS EQIP eligible
+- [Agricultural drone mapping](https://agdronedirectory.com/services/mapping): $2 to $8 per acre, Part 107 only
+- [Crop health monitoring](https://agdronedirectory.com/services/monitoring): $3 to $10 per acre per flight, multispectral NDVI and NDRE
+- [Dry granular spreading](https://agdronedirectory.com/services/spreading): $10 to $18 per acre, urea and cover crop seed
+- [Ag drone pilot training](https://agdronedirectory.com/services/training): $500 to $4,500 per course, FAA and state prep
+- [Agricultural drone rental](https://agdronedirectory.com/services/rental): $2,000 to $8,000 per week, insurance required
+- [Agricultural drone sales](https://agdronedirectory.com/services/sales): new and used, DJI, Hylio, XAG dealers
+- [Ag drone business consultancy](https://agdronedirectory.com/services/consultancy): $100 to $300 per hour, Part 137 prep
+- [Emergency spray services](https://agdronedirectory.com/services/emergency): $18 to $35 per acre, rapid response for outbreaks
 
-## Prețuri în Moldova (MDL/ha)
+## Crops
+- [Crops hub](https://agdronedirectory.com/crops): all 8 crop pages
+- [Corn](https://agdronedirectory.com/crops/corn): VT/R1 fungicide, 90 million acres, 5 to 8 bu yield response
+- [Soybeans](https://agdronedirectory.com/crops/soybeans): R2/R3 fungicide, 87 million acres, white mold and frogeye leaf spot
+- [Wheat](https://agdronedirectory.com/crops/wheat): T3 heading fungicide, 45 million acres, Fusarium head blight
+- [Cotton](https://agdronedirectory.com/crops/cotton): September to October defoliant, 10 million Delta acres
+- [Rice](https://agdronedirectory.com/crops/rice): 100 percent aerial treated, 2.5 million acres in AR, LA, MS, CA
+- [Grapes and vineyards](https://agdronedirectory.com/crops/grapes): 8 to 12 passes per season, hillside blocks, UC Davis data
+- [Orchards](https://agdronedirectory.com/crops/orchards): apple, cherry, almond, walnut, 5 million US acres
+- [Cover crops](https://agdronedirectory.com/crops/cover-crops): 15 million acres, USDA NRCS Practice Standard 340
 
-- Toate culturile: 170–240 MDL/ha (~€8.50–12/ha)
-- Subvenție AIPA: 50% din costul dronei, plafon 200.000 MDL
+## Drones
+- [Drones hub](https://agdronedirectory.com/drones): all 8 drone model pages
+- [DJI Agras T50](https://agdronedirectory.com/drones/dji-agras-t50): 40L tank, $22,000 to $28,000 post-tariff, not NDAA
+- [DJI Agras T100](https://agdronedirectory.com/drones/dji-agras-t100): 100L tank, launched July 2025, 175 kg MTOW
+- [DJI Agras T25](https://agdronedirectory.com/drones/dji-agras-t25): 20L tank, compact spray platform
+- [Hylio AG-272](https://agdronedirectory.com/drones/hylio-ag-272): 68L tank, $55,000 to $75,000, NDAA compliant, Richmond TX
+- [Hylio AG-230](https://agdronedirectory.com/drones/hylio-ag-230): smaller Hylio platform, NDAA compliant
+- [XAG P100 Pro](https://agdronedirectory.com/drones/xag-p100-pro): 40L tank, 22 mph wind rating
+- [Talos T60X](https://agdronedirectory.com/drones/talos-t60x): US-made alternative spray platform
+- [Pyka Pelican Spray](https://agdronedirectory.com/drones/pyka-pelican-2): crewed-class autonomous ag aircraft
 
-## ROI / Amortizare dronă agricolă
+## Tools and calculators
+- [Tools hub](https://agdronedirectory.com/tools): all 6 interactive tools
+- [Spray cost calculator](https://agdronedirectory.com/tools/spray-cost-calculator): per-acre cost estimates by crop, region, service
+- [ROI calculator](https://agdronedirectory.com/tools/roi-calculator): break-even acreage for new drone ownership
+- [Coverage calculator](https://agdronedirectory.com/tools/coverage-calculator): acres per day by drone model and field conditions
+- [Acreage converter](https://agdronedirectory.com/tools/acreage-converter): acres to hectares and back with field-size presets
+- [Drone comparison](https://agdronedirectory.com/tools/drone-comparison): side-by-side specs for DJI, Hylio, XAG, Talos, Pyka
+- [Treatment calendar](https://agdronedirectory.com/tools/treatment-calendar): state and crop spray-window planner
 
-- Cost DJI Agras T50: ~350.000 RON (~85.000 EUR)
-- Venit anual operator profesionist (500 ha × 3 tratamente): 150.000 RON/an
-- Amortizare estimată: 2–3 sezoane pentru fermă de 500+ ha
-- Economie apă față de tractor: 90% (8–20 L/ha vs 200–300 L/ha)
-- Câștig recoltă fără tasare sol: +5–8% (porumb, grâu)
+## Regulations and compliance
+- [Regulations hub](https://agdronedirectory.com/regulations): FAA, EPA, and state licensing overview
+- [FAA Part 107](https://agdronedirectory.com/regulations/faa-part-107): remote pilot certificate, exam, airspace
+- [FAA Part 137](https://agdronedirectory.com/regulations/faa-part-137): agricultural aircraft operator certificate, 44807 exemption
+- [State pesticide licensing](https://agdronedirectory.com/regulations/state-licensing): aerial category endorsement by state
+- [NDAA compliance](https://agdronedirectory.com/regulations/ndaa-compliance): DJI vs Hylio, federal and state procurement rules
 
-## Modele drone agricole — specificații cheie
+## Guides and comparisons
+- [Buyers guide](https://agdronedirectory.com/buyers-guide): how to pick DJI, Hylio, XAG, Talos for your operation
+- [Start a drone business](https://agdronedirectory.com/start-a-drone-business): 6 to 9 month path from decision to first customer
+- [Grants and subsidies](https://agdronedirectory.com/grants-and-subsidies): USDA EQIP, BFRDP, state precision ag grants
+- [Insurance](https://agdronedirectory.com/insurance): hull, liability, chemical drift coverage
+- [Training and certification](https://agdronedirectory.com/training-and-certification): Part 107, Part 137, state applicator prep
+- [Drone vs ground rig](https://agdronedirectory.com/comparisons/drone-vs-ground-rig): when each wins on cost, compaction, access
+- [Drone vs airplane](https://agdronedirectory.com/comparisons/drone-vs-airplane): sub-500-acre crossover on wheat and cotton
 
-- **DJI Agras T50**: 40L rezervor, 21 ha/h, IP67, 160 ha/zi, ~85.000 EUR
-- **DJI Agras T100**: 70L rezervor, 40 ha/h, IP67, 300 ha/zi, ~140.000 EUR
-- **DJI Agras T25P**: 20L rezervor, 16 ha/h, IP67, 100 ha/zi, ~40.000 EUR
-- **XAG P100 Pro**: 40L rezervor, 24 ha/h, IP67, 170 ha/zi, ~70.000 EUR
-- **ADT Falcon 50P**: 30L rezervor, 16 ha/h, IP54, 130 ha/zi, ~55.000 EUR (eligibil AFIR)
+## Blog
+- [How to get to your first 1,000 acres](https://agdronedirectory.com/blog/first-1000-acres-drone-operator): realistic year 1 and year 2 path for new operators
+- [Drone spraying for vineyards: 2026 wine grape guide](https://agdronedirectory.com/blog/vineyard-drone-spraying-guide): $18 to $30 per acre, 8 to 12 passes, hillside runoff data
+- [Why rice is the perfect crop for drone spraying](https://agdronedirectory.com/blog/drone-spraying-rice-guide): 100 percent aerial treated, 7 percent yield gain
+- [The DJI question: NDAA, tariffs and your farm](https://agdronedirectory.com/blog/ndaa-chinese-drones-what-farmers-need-to-know): legal status, 170 percent tariff, federal vs private
+- [Why drone spray rates dropped 30 to 45 percent in three years](https://agdronedirectory.com/blog/drone-spraying-pricing-trends-2026): rate compression explained
+- [What pesticide license do you need to spray by drone](https://agdronedirectory.com/blog/drone-spraying-state-license-guide): 50-state aerial category reference
+- [DJI Agras T50 vs Hylio AG-272: the 2026 comparison](https://agdronedirectory.com/blog/dji-vs-hylio-which-spray-drone): cost, NDAA, wind resistance side by side
+- [Cover crop seeding by drone: complete 2026 guide](https://agdronedirectory.com/blog/cover-crop-seeding-drone-guide): EQIP cost-share and cereal rye timing
+- [How to get FAA Part 137 for agricultural drone spraying](https://agdronedirectory.com/blog/faa-part-137-drone-guide): 90 to 180 day process, operations manual, 44807 petition
+- [Corn fungicide by drone: what university data shows](https://agdronedirectory.com/blog/corn-fungicide-drone-spraying-guide): VT/R1 timing and yield response data
 
-## Legislație drone agricole
-
-- **România**: autorizare AACR obligatorie, categoria A2/A3 EASA pentru drone >25 kg, brevet pilot obligatoriu
-- **Moldova**: autorizare ANSA obligatorie, înregistrare aparat de zbor la CAC
-- Fonduri AFIR DR-29: 50–65% rambursare, max 300.000 EUR
-- Fonduri AFIR DR-12 (tineri fermieri <41 ani): 80% finanțare
-- Fonduri AFIR DR-14 (ferme mici): 80% finanțare
-
-## Principalii operatori din România
-
-- RIAGRO (droneagricole.ro) — Brașov, național, DJI dealer
-- SkyGrid — Cluj-Napoca, național
-- Agridrone România — București, național
-- Appia Drones — Târgu Mureș, național
-- Titan Machinery România — național, dealer oficial
-
-## Principalii operatori din Moldova
-
-- DRON Assistance (droneagro.md) — lider național, 16 drone
-- BOSAL Solutions — distribuitor autorizat DJI
-- AgroDron.md — acoperire națională
-
-## URL-uri importante
-
-- Toți operatorii: https://terradron.ro/operatori
-- Județe: https://terradron.ro/judete
-- Moldova: https://terradron.ro/moldova
-- Prețuri: https://terradron.ro/preturi-pulverizare-drona
-- ROI calculator: https://terradron.ro/ghid/roi-drona-agricola
-- Fonduri AFIR: https://terradron.ro/ghid/fonduri-afir-drone
-- Ghid devenire operator: https://terradron.ro/ghid/cum-sa-devii-operator
-- Calculator preț: https://terradron.ro/unelte/calculator-pret-pulverizare
-- Comparator drone: https://terradron.ro/drone
-- Sitemap XML: https://terradron.ro/sitemap.xml
+## Reference
+- [Glossary](https://agdronedirectory.com/glossary): agricultural drone terms, FAA codes, agronomic abbreviations
