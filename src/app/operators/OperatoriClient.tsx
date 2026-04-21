@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, type ReactNode } from 'react';
 import { Search, Filter, X, ChevronDown, ChevronUp, SlidersHorizontal, ArrowUpDown } from 'lucide-react';
 import { Operator, SERVICE_LABELS, ServiceType } from '@/data/types';
 import { County } from '@/data/types';
@@ -11,6 +11,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 interface Props {
   operators: Operator[];
   counties: County[];
+  mapSection?: ReactNode;
 }
 
 type SortOption = 'default' | 'price_asc' | 'price_desc' | 'ha_desc' | 'name_asc';
@@ -23,7 +24,7 @@ const SORT_LABELS: Record<SortOption, string> = {
   name_asc: 'Name A to Z',
 };
 
-export default function OperatoriClient({ operators, counties }: Props) {
+export default function OperatoriClient({ operators, counties, mapSection }: Props) {
   // Basic filters
   const [search, setSearch] = useState('');
   const [selectedCounty, setSelectedCounty] = useState('');
@@ -146,6 +147,8 @@ export default function OperatoriClient({ operators, counties }: Props) {
           {stateName ? ` in ${stateName}` : ' across the US'}
         </p>
       </div>
+
+      {mapSection}
 
       {/* Filter panel */}
       <div className="bg-white border border-gray-200 rounded-xl p-4 mb-6 shadow-sm">
