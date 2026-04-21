@@ -268,6 +268,32 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>Minnesota handles roughly 150 pesticide drift complaints a year through MDA, with inspector visits in one to two business days, lab results in two to three weeks, and full investigations taking three to six months. Illinois handled 241 misuse complaints in 2024, with 21 resulting in fines. The enforcement machinery exists. Use it.</p>
 
+      <h2 id="short-checklist">The short checklist</h2>
+
+      <section className="guide-printable">
+        <p>Before the operator&apos;s drone lifts off your field:</p>
+        <ul>
+          <li>Physical Part 137 certificate (Commercial, not Private)</li>
+          <li>FAA Airmen Inquiry verified Part 107</li>
+          <li>State commercial pesticide applicator license with aerial or UAS category for your state</li>
+          <li>Current certificate of insurance naming you as additional insured, with chemical drift endorsement</li>
+          <li>Written contract covering GPS field boundary, product, rate, weather terms, and records clause</li>
+          <li>Pattern test certificate dated within the last two years</li>
+          <li>Field walkthrough completed, with DriftWatch and beehive check</li>
+          <li>Label confirmation covering carrier volume, droplet size category, buffer zones, and current EPA registration</li>
+          <li>Weather plan with defined wind and Delta T limits</li>
+          <li>Post-application record delivery timeline of 30 days maximum</li>
+        </ul>
+      </section>
+
+      <p>Our <Link href="/buyers-guide">buyer&apos;s guide</Link> has the full 62-question operator interview list and a one-page printable version of this checklist.</p>
+
+      <h2>Closing thought</h2>
+
+      <p>Most American farmers will hire a drone applicator at some point in the next five years. The industry is growing faster than any other aerial application segment. In 2025 about 16.4 million US acres were treated by drone, up almost 60 percent from the year before. Most of those applications went fine.</p>
+
+      <p>The reason to vet hard is not that drone spraying is dangerous. It is that the current market rewards operators who cut paperwork corners, and the legal framework puts the farmer who hires one of them on the hook. A thirty minute conversation with the right questions filters out the operators who cannot pass them. Once you have found one who can, hold onto them.</p>
+
       {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
