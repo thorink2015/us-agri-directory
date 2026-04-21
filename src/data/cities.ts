@@ -144,4 +144,41 @@ export function getCityCenter(city: CityData): { lat?: number; lng?: number } {
   return { lat: avg(lats), lng: avg(lngs) };
 }
 
+export function getCityServiceBreakdown(city: CityData): { service: ServiceType; count: number }[] {
+  const counts = new Map<ServiceType, number>();
+  for (const op of city.operators) {
+    for (const s of op.services) counts.set(s, (counts.get(s) ?? 0) + 1);
+  }
+  return Array.from(counts.entries())
+    .map(([service, count]) => ({ service, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getCityCropBreakdown(city: CityData): { slug: string; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const op of city.operators) {
+    for (const c of op.crops) counts.set(c, (counts.get(c) ?? 0) + 1);
+  }
+  return Array.from(counts.entries())
+    .map(([slug, count]) => ({ slug, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getCityCredentialCounts(city: CityData): {
+  part107: number;
+  part137: number;
+  ndaa: number;
+  total: number;
+} {
+  let part107 = 0;
+  let part137 = 0;
+  let ndaa = 0;
+  for (const op of city.operators) {
+    if (op.certFAAPart107) part107 += 1;
+    if (op.certFAAPart137) part137 += 1;
+    if (op.ndaaCompliant) ndaa += 1;
+  }
+  return { part107, part137, ndaa, total: city.operators.length };
+}
+
 export const CITY_OPERATOR_MIN = CITY_OPERATOR_THRESHOLD;
