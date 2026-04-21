@@ -567,6 +567,27 @@ export default function HomePage() {
               All articles <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+
+          <Link
+            href="/guides/hire-drone-spray-operator-checklist"
+            className="group mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white border border-green-200 rounded-xl p-5 hover:border-green-500 hover:shadow-sm transition-all"
+          >
+            <div>
+              <div className="text-[11px] font-semibold uppercase tracking-widest text-green-700 mb-1">
+                New pillar guide for farmers
+              </div>
+              <h3 className="font-semibold text-gray-900 group-hover:text-green-800 leading-snug">
+                How to hire a drone spray operator: the farmer&apos;s complete vetting checklist
+              </h3>
+              <p className="text-sm text-gray-500 mt-1 leading-relaxed">
+                Verify Part 137, insurance and state licenses before a drone ever lifts off your field. 18-min read with 9 red flags worth walking away over.
+              </p>
+            </div>
+            <span className="inline-flex items-center gap-1 text-sm font-medium text-green-700 group-hover:underline whitespace-nowrap">
+              Read the guide <ArrowRight className="w-4 h-4" />
+            </span>
+          </Link>
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {latestBlogPosts.map((post) => (
               <Link
