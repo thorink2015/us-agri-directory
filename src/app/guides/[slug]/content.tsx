@@ -236,6 +236,22 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>Alex Harrell, the Leesburg, Georgia farmer who set the world soybean yield record at 218.29 bushels per acre in 2024 on Pioneer P49Z02E, runs two spray drones to cover roughly 500 acres per day on his 4,000 acre operation. He told Farm Journal: &ldquo;The drones are running foliar and fungicide treatments and stink bug spray every day now. We rarely call in an airplane, because we can mix and spray everything ourselves.&rdquo; Harrell credits the ability to hit timing windows during a wet June in 2023 as a key factor in his first record the prior year. The whole case for hiring a drone applicator, versus calling an airplane and waiting, comes down to this. Time is the most expensive input you cannot buy. Training context on our <Link href="/training-and-certification">training and certification page</Link>.</p>
 
+      <h2 id="red-flags">Nine red flags worth walking away over</h2>
+
+      <ol>
+        <li><strong>Cannot produce a physical Part 137 certificate.</strong> Flying ag spray without Part 137 is a federal violation with civil penalties up to $75,000 per violation under the 2024 FAA Reauthorization Act, plus up to three years imprisonment under 49 USC 46306.</li>
+        <li><strong>Has Part 107 only.</strong> Part 107 is for commercial drone flight. It is not a spraying credential.</li>
+        <li><strong>Refuses to show a certificate of insurance.</strong> Or shows one that excludes chemical operations. Or lists themselves personally rather than the business entity.</li>
+        <li><strong>Pricing far below market.</strong> Under $10 per acre in the corn belt is a near-certain sign of undercutting by unlicensed operators. ASDC has flagged this publicly.</li>
+        <li><strong>Only on Facebook Marketplace or Craigslist.</strong> No business website, no Google Business Profile, no state ag department registration. The absence of a paper trail is the paper trail.</li>
+        <li><strong>Cannot explain droplet size requirements on your product label.</strong> If they cannot tell you whether the label requires Coarse or Ultra Coarse, they cannot match the label in practice.</li>
+        <li><strong>Cash only, no receipts, no W-9.</strong> This is not tax efficiency. This is an uninsured operator who will vanish if something goes wrong.</li>
+        <li><strong>Will not walk the field before spraying.</strong> Skipping the pre-flight walkthrough means they have not looked for the power lines, the beehives, the pond, the tile outlets, or the organic neighbor.</li>
+        <li><strong>Dismisses wind or temperature inversion concerns.</strong> &ldquo;It&apos;ll be fine, I&apos;ve sprayed in worse&rdquo; is the line that precedes most drift claims.</li>
+      </ol>
+
+      <p>Any one of these on its own is worth a second conversation. Two of them is your answer.</p>
+
       {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
