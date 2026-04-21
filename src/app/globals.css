@@ -36,3 +36,138 @@ body {
     -webkit-box-orient: vertical;
   }
 }
+
+/* ── Pillar guide typography ─────────────────────────────────────────── */
+/* Applied to the long-form article body on /guides/[slug]. Uses a native
+   serif stack (no web font = no CLS) and loosens line-height for scan. */
+.guide-body {
+  font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  color: #1f2937;
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.75;
+}
+.guide-body p {
+  margin-bottom: 1.25em;
+}
+.guide-body h2 {
+  font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+  line-height: 1.25;
+  scroll-margin-top: 5rem;
+  letter-spacing: -0.01em;
+}
+.guide-body h3 {
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111827;
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+  line-height: 1.35;
+  scroll-margin-top: 5rem;
+  text-transform: none;
+}
+.guide-body ul, .guide-body ol {
+  margin-bottom: 1.25em;
+  padding-left: 1.4em;
+}
+.guide-body ul { list-style: disc; }
+.guide-body ol { list-style: decimal; }
+.guide-body li { margin-bottom: 0.5em; }
+.guide-body li::marker { color: #6b7280; }
+.guide-body strong { font-weight: 700; color: #111827; }
+/* Internal links get a subtle underline with green accent; external links
+   inherit the same color but render the ExternalLink icon inline. */
+.guide-body a[href^="/"] {
+  color: #166534;
+  text-decoration: underline;
+  text-decoration-color: #bbf7d0;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 150ms ease;
+}
+.guide-body a[href^="/"]:hover {
+  text-decoration-color: #15803d;
+}
+.guide-body a[href^="http"] {
+  color: #166534;
+  text-decoration: underline;
+  text-decoration-color: #a7f3d0;
+  text-underline-offset: 3px;
+}
+
+/* Data-table callout: lifts tables out of prose flow */
+.guide-table-callout {
+  margin: 2em -0.5em;
+  padding: 1.25rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+}
+.guide-table-callout table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.875rem;
+}
+.guide-table-callout thead th {
+  text-align: left;
+  font-weight: 600;
+  color: #1f2937;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid #cbd5e1;
+  background: transparent;
+}
+.guide-table-callout tbody td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #374151;
+  vertical-align: top;
+}
+.guide-table-callout tbody tr:last-child td { border-bottom: none; }
+
+/* Pull quote */
+.guide-pullquote {
+  margin: 2em 0;
+  padding: 1.25em 1.5em;
+  border-left: 4px solid #15803d;
+  background: #f0fdf4;
+  font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #052e16;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+.guide-pullquote cite {
+  display: block;
+  margin-top: 0.75em;
+  font-size: 0.8125rem;
+  font-style: normal;
+  color: #166534;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Print-friendly short checklist */
+@media print {
+  body { background: #fff; color: #000; }
+  header, footer, nav, aside, .guide-no-print { display: none !important; }
+  main { padding: 0 !important; }
+  .guide-printable {
+    page-break-inside: avoid;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .guide-printable h2, .guide-printable h3 { color: #000 !important; }
+  .guide-printable ul { list-style: square; padding-left: 1.25rem; }
+  .guide-printable li { margin-bottom: 0.35em; break-inside: avoid; }
+  .guide-body h2, .guide-body h3 { break-after: avoid-page; }
+  a { color: #000 !important; text-decoration: underline !important; }
+}
