@@ -252,6 +252,22 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>Any one of these on its own is worth a second conversation. Two of them is your answer.</p>
 
+      <h2 id="drift-damage">What to do if drift or damage happens after the job</h2>
+
+      <p>Ninety-five percent of drone spray jobs go without incident. The remaining five percent is why this section matters.</p>
+
+      <p>If you suspect drift or misapplication on your crop or a neighbor&apos;s, move fast.</p>
+
+      <p>Within 24 hours, document with timestamped, GPS-tagged photos and video. Physical pesticide residue disappears within days. Preserve plant tissue, though most states require a state inspector to collect samples for chain of custody. File a complaint with your state pesticide regulatory agency that same day. Some states have notification statutes that run as short as 30 to 60 days. Miss them and your civil case can be dismissed regardless of the merits.</p>
+
+      <p>Within the first week, notify the applicator and the insurance carrier in writing by certified mail. Contact your own crop insurance agent. Most MPCI policies do not cover chemical misapplication, but document the call in case. Do not accept an informal cash settlement before the state investigation is complete. You are giving away standing.</p>
+
+      <p>If damage exceeds a few thousand dollars, consult an ag attorney. The National Agricultural Law Center publishes a 50-state survey of drift liability law. Request a copy of the operator&apos;s flight log and application record through discovery if voluntary cooperation breaks down.</p>
+
+      <p>Statute of limitations for drift negligence is two to four years in most states. Iowa gives you two years on personal injury and five on property damage. Texas is two. Missouri is five. The shorter clock starts at notification in most states, not at harvest. Move fast.</p>
+
+      <p>Minnesota handles roughly 150 pesticide drift complaints a year through MDA, with inspector visits in one to two business days, lab results in two to three weeks, and full investigations taking three to six months. Illinois handled 241 misuse complaints in 2024, with 21 resulting in fines. The enforcement machinery exists. Use it.</p>
+
       {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
