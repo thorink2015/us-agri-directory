@@ -108,6 +108,38 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>If no federal money is involved and you are paying out of pocket, NDAA does not apply to you. You can legally hire a DJI-using operator in any state. The restriction kicks in when federal funds pay for the work. Post-December 22, 2025, USDA cost-share programs such as EQIP, CSP, and REAP cannot fund applications done with covered Chinese-made drones. If your application is tied to a USDA program, ask for a Blue UAS Cleared List platform like Hylio. Full background on our <Link href="/regulations/ndaa-compliance">NDAA compliance page</Link>.</p>
 
+      <h2 id="label-question">The label question most operators cannot answer</h2>
+
+      <p>The pesticide label is federal law under FIFRA section 12(a)(2)(G). Using a pesticide &ldquo;in a manner inconsistent with its labeling&rdquo; carries civil penalties up to $23,494 per violation for commercial applicators, and criminal penalties up to $25,000 and a year in prison for knowing violations.</p>
+
+      <p>Labels were written for manned aerial application. Drones complicate them.</p>
+
+      <p>Purdue&apos;s Pesticide Applicator Training publication 154 puts the practical issue plainly: &ldquo;Specific information about the carrier volumes, application heights, nozzle types, and droplet sizes that are typical of drone applications are not incorporated in the aerial application sections on product labels.&rdquo; That regulatory gap is a risk farmers carry.</p>
+
+      <h3>Products with drone restrictions</h3>
+
+      <p>Based on extension guidance from Purdue, Penn State, Kansas State, Ohio State, and the University of Arkansas, the following categories regularly cause drone compliance problems.</p>
+
+      <p><strong>Auxin herbicides.</strong> Dicamba-based XtendiMax, Engenia, and Tavium. 2,4-D choline-based Enlist One and Enlist Duo. Labels require specific air induction nozzles, Ultra Coarse droplets, wind under 10 mph, and buffer distances of 110 to 240 feet. Carrier volumes are tough for most drones to meet.</p>
+
+      <p><strong>Paraquat products.</strong> Gramoxone, Parazone. Closed-system transfer required. Certification every three years. EPA restricts most aerial applications.</p>
+
+      <p><strong>Soil fumigants.</strong> Fumigant management plans are incompatible with drone deployment.</p>
+
+      <p><strong>Any product where the label says &ldquo;ground application only&rdquo; or &ldquo;not for aerial application.&rdquo;</strong> These cannot be applied by drone, period.</p>
+
+      <p>Jason Davis, a University of Arkansas Extension Specialist focused on spray technology, told Farm Progress in 2024: &ldquo;You&apos;ve got to follow the label, no matter what. Some of the more recent label interpretations have created some gray areas or some complete no-go zones for some of our drone applications.&rdquo;</p>
+
+      <h3>The gallons-per-acre mismatch</h3>
+
+      <p>Most US pesticide labels were written assuming ground rig (10 to 20 gallons per acre) or manned aerial (2 to 5 gallons per acre). Drone rigs typically apply 1 to 3 gallons per acre, which is below many label minimums. Glyphosate labels often specify 3 gallons minimum aerial. Liberty labels often specify 10. Most fungicide labels on wheat require at least 2 aerial, with 5 preferred for consistent coverage. If the operator wants to fly at 1 gallon per acre on a product whose label says 2, that is a label violation, and you own the risk.</p>
+
+      <p>Before the application, ask the operator to send you the current EPA-registered label for the product, highlight the carrier volume line, and tell you exactly what gallons per acre they will fly. Cross-check the label yourself at the EPA&apos;s Pesticide Product Label System (PPLS) or at Greenbook.net. The label that came with the jug can be older than the current registration.</p>
+
+      <h3>What &ldquo;aerial&rdquo; means on a label</h3>
+
+      <p>This is the quiet fight inside EPA right now. Some states treat drone application as aerial under existing label language. Others require drone-specific state approval. California, Iowa, and Minnesota have issued guidance. Most other states have not. Ask your operator whether the state ag department allows drone use of this specific product under the existing aerial label section. If they shrug, call the state ag department yourself before approving the job.</p>
+
       {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
