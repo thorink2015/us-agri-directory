@@ -160,6 +160,62 @@ Each tool is split into two files:
 
 Examples: `src/app/tools/roi-calculator/`, `src/app/tools/coverage-calculator/`.
 
+## Long-form content rollout (sentinel append loop)
+
+**Used on:** pillar guides in `src/app/guides/[slug]/content.tsx`. Any
+time we are writing a 3,000+ word TSX body that would otherwise exceed
+safe per-turn output.
+
+**Why:** A single `Write` with a 5,000-word body sends ~25k tokens
+through the stream and reliably trips "stream idle timeout - partial
+response received" or post-compaction rate limiting. Appending one H2
+section per turn keeps each diff tiny and the git tree clean between
+turns.
+
+**Shape of the scaffold:**
+
+```tsx
+// src/app/guides/[slug]/content.tsx
+import { ReactNode } from 'react';
+import Link from 'next/link';
+
+export const guideContent: Record<string, ReactNode> = {
+  'the-slug': (
+    <>
+      {/* GUIDE-INSERT-POINT: the-slug */}
+    </>
+  ),
+};
+```
+
+**Per-section turn:**
+
+1. ONE `Edit` that replaces the sentinel with:
+   ```tsx
+   [new section JSX]
+   {/* GUIDE-INSERT-POINT: the-slug */}
+   ```
+2. ONE `git commit` (short subject, e.g. `content(guides): section N of
+   <slug> — <short label>`) and `git push`.
+3. Stop. Wait for user to say "next".
+
+**Final turn only:** remove the sentinel, run `npx next build` to
+verify the route generates, commit + push.
+
+**Author tone / escape rules (same as blog/[slug]/content.tsx):**
+- Apostrophes in JSX text → `&apos;`
+- Curly double quotes → `&ldquo;` / `&rdquo;`
+- No em/en dashes, no double hyphens (standing rule)
+- Internal paths via `<Link href="/...">` — the `.guide-body a[href^="/"]`
+  selector in `globals.css` styles them with the green underline
+
+**Don'ts:**
+- Never `Write` the whole content file mid-rollout. Always `Edit` so
+  only the diff streams.
+- Never re-read the research markdown every turn — it's already in
+  conversation context from the first read.
+- Never put more than one H2 section per turn, even for short ones.
+
 ## Commit message format
 
 ```

@@ -13,6 +13,24 @@ writes (big translations, 12+ article rewrites in one go).
 commit + push + wait for user "next". This is documented in CLAUDE.md
 as a hard rule.
 
+### 2026-04-21 — Post-compaction rate limits on long-form guide content
+**Symptom:** After a context compaction, the first attempt to `Write`
+a full 5,000-word TSX guide body hits "API Error" / rate limit before
+the stream completes. Subsequent "continue from batch 2" attempts
+repeat the failure because the retry still tries to emit the full
+body.
+**Cause:** A single turn trying to emit 20k+ tokens of content is
+fragile across the compaction boundary. The "smaller batches" fix in
+CLAUDE.md only works if each batch is actually tiny — one file at a
+time was still too big for 5,000-word guide bodies.
+**Fix:** Use the **sentinel append loop** documented in
+`code-patterns.md § Long-form content rollout`. Insert one H2 section
+per turn via `Edit`, commit, push, stop. The diff per turn is
+500–1,500 tokens instead of 20k+, which survives compaction cleanly.
+**Prevention:** For any new pillar guide, scaffold `content.tsx` with
+`{/* GUIDE-INSERT-POINT: <slug> */}` as the first commit, before
+writing any body content.
+
 ### 2026-04-15 — "File has not been read yet" error on Edit tool
 **Symptom:** `Edit` tool fails with `File has not been read yet. Read it first before writing to it.`
 **Cause:** Edit requires a prior `Read` of the same file in the same
