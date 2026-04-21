@@ -225,6 +225,17 @@
 - **URL preservation:** every URL from the old 9-item nav is still reachable (/operators, /services, /crops, /states, /drones, /pricing, /tools/spray-cost-calculator, /tools/roi-calculator, /tools/coverage-calculator, /blog, /list-your-business). New nav adds /map, /regions, the 3 remaining tool calculators, /about, /contact, /advertise, /guides.
 - **Build:** `npm run build` clean. Shared first-load JS 87.3 kB — unchanged from the prior nav, so no PageSpeed regression risk from the added dropdown JS (all handlers are on a component that was already client-side).
 
+## 2026-04-21 — Pillar guides section launch (branch claude/launch-guides-section-UYEt2)
+
+- **Sentinel append loop pattern (new):** after a 5,000-word `Write` hit post-compaction rate limits, designed the per-H2-section `Edit` rollout. One JSX section per commit, push, wait for "next". Documented in `code-patterns.md § Long-form content rollout` and root-caused in `known-issues.md` 2026-04-21 entry.
+- **Guide data + template:** `src/data/guides.ts` (Guide interface + `hire-drone-spray-operator-checklist` data), `src/app/guides/[slug]/page.tsx` (Article + BreadcrumbList + FAQPage + HowTo JSON-LD, TOC sidebar, quick-facts panel, printable short-checklist block, AuthorCard), `src/app/guides/page.tsx` hub (category grouping by `GUIDE_CATEGORY_ORDER`).
+- **First pillar guide shipped:** `/guides/hire-drone-spray-operator-checklist` — 5,500-word farmer-side vetting playbook. 11 H2 sections: three-licenses, insurance, equipment-questions, label-question, pricing (table callout), contract-clauses, weather-timing, red-flags, drift-damage, short-checklist, closing thought. 10 internal `<Link>` crosslinks, 4 pull quotes, 6 HowTo steps, 8 FAQPage FAQs.
+- **Styling:** `.guide-body` typography block in `globals.css` (serif, 17px/1.75, green-underlined internal links), `.guide-table-callout` and `.guide-pullquote` utility classes, print stylesheet for short-checklist.
+- **Build:** clean after every section commit; final `npx next build` generated the route at 2.1 kB.
+- **PRs:** #66, #67, #68 shipped the scaffold + body sections (all merged mid-session).
+- **Batch 3 — AI discovery files (PR #69, merged):** `public/llms.txt` gained a new `## Pillar guides` section linking the `/guides` hub and the new guide; `public/llms-full.txt` gained a full AEO-block entry for the new guide plus a `/guides` hub entry. `sitemap.ts` (`guides.map` at line 144-150) and `robots.ts` (Allow:/ for 27 AI crawlers) already handled the new route — no change needed. Operator count on llms.txt line 3 verified at 391 via `operators.length`.
+- **Batch 4 — reciprocal internal links (PR #70):** linked into the new guide from 6 pages. Homepage got a dedicated featured-guide callout strip above the blog grid (green-bordered card with 11-char uppercase kicker + title + teaser + CTA). The other 5 pages (/regulations/faa-part-137, /regulations/state-licensing, /insurance, /buyers-guide, /start-a-drone-business) tucked the link into their existing footer link clusters.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
