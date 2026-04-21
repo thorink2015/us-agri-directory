@@ -60,6 +60,10 @@ export interface Guide {
   quickFacts?: GuideQuickFact[];
   pullQuotes?: GuidePullQuote[];
   howToSteps?: GuideHowToStep[];
+  /** HowTo schema `name` — used when howToSteps is set. Falls back to guide.title. */
+  howToTitle?: string;
+  /** Hero-card quote on the /guides hub when this guide is the latest. */
+  featuredPullQuote?: GuidePullQuote;
   /** Related internal pages shown in the footer */
   relatedInternal?: { href: string; label: string }[];
 }
@@ -135,6 +139,12 @@ export const guides: Guide[] = [
           'Alex Harrell, Leesburg, Georgia, 218.29 bu/A soybean world record holder (Farm Journal)',
       },
     ],
+    howToTitle: 'How to vet and hire a drone spray operator',
+    featuredPullQuote: {
+      quote:
+        'In 2024 about 9,000 agricultural drones were sold in the United States. Fewer than 1,200 of them got registered with the FAA.',
+      attribution: 'From: the opening data hook on operator verification',
+    },
     howToSteps: [
       { name: 'Verify the physical Part 137 certificate', text: 'Ask to see the Commercial (not Private) Part 137 certificate on paper and cross-check the FAA Air Operator FAR Search for that company name.' },
       { name: 'Verify Part 107 on the FAA Airmen Inquiry', text: 'Search by full legal name at amsrvs.registry.faa.gov/airmeninquiry and match the name on the remote pilot card exactly.' },

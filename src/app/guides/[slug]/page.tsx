@@ -130,7 +130,7 @@ export default function GuidePage({ params }: Props) {
     ? {
         '@context': 'https://schema.org',
         '@type': 'HowTo',
-        name: `How to vet and hire a drone spray operator`,
+        name: guide.howToTitle ?? guide.title,
         description: guide.description,
         totalTime: `PT${guide.readMinutes}M`,
         step: guide.howToSteps.map((s, i) => ({
@@ -236,8 +236,7 @@ export default function GuidePage({ params }: Props) {
                     Frequently asked questions
                   </h2>
                   <p className="text-sm text-gray-600 mb-6">
-                    The eight questions farmers most often ask before booking a
-                    drone applicator.
+                    Common questions readers ask on this topic.
                   </p>
                   <FAQAccordion faqs={guide.faqs} />
                 </section>
