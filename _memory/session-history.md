@@ -216,6 +216,15 @@
 - **State pages:** contextual small `<USMap highlightSlug compact />` kept as-is in both rich + fallback templates (per spec).
 - **Build:** `npm run build` clean. /map = 12.1 kB / 109 kB first-load JS; /operators = 3.59 kB / 116 kB (unchanged baseline after map removal).
 
+## 2026-04-21 — Navigation restructure (branch claude/move-map-to-page-NNRGz)
+
+- **`src/components/layout/Header.tsx`:** full rewrite. New top-level structure: Operators (link), Map (link), Browse (dropdown: Services, Crops, States, Drones, Regions), Tools (dropdown: 6 calculators), About (dropdown: About Us, Contact, Advertise, Guides, Pricing Guide, Blog). Right-side "List Your Business" CTA retained.
+- **Desktop dropdowns:** open on hover (onMouseEnter/onMouseLeave on wrapper — panel is a descendant so leaving to hover the panel does not close). Click on trigger toggles for keyboard/touch fallback. Escape key closes. aria-expanded, aria-haspopup, role="menu", role="menuitem", aria-current="page" on the active link. Absolute-positioned panel means zero CLS.
+- **Mobile dropdowns:** native `<details>` accordion, defaults to `open` when the user is on a page inside that section. Preserves zero-JS fallback.
+- **Active highlighting:** link active = exact match or `pathname.startsWith(href + '/')`; dropdown trigger active when any of its sub-links match.
+- **URL preservation:** every URL from the old 9-item nav is still reachable (/operators, /services, /crops, /states, /drones, /pricing, /tools/spray-cost-calculator, /tools/roi-calculator, /tools/coverage-calculator, /blog, /list-your-business). New nav adds /map, /regions, the 3 remaining tool calculators, /about, /contact, /advertise, /guides.
+- **Build:** `npm run build` clean. Shared first-load JS 87.3 kB — unchanged from the prior nav, so no PageSpeed regression risk from the added dropdown JS (all handlers are on a component that was already client-side).
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
