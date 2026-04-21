@@ -13,7 +13,18 @@ function bucketFor(n: number): 0 | 1 | 2 | 3 | 4 {
   return 4;
 }
 
-export default function USMap() {
+interface USMapProps {
+  // Slug of a state to render with the highlight fill (blue).
+  // The highlighted path is rendered last so it sits on top of any neighbors.
+  highlightSlug?: string;
+  // Compact variant: max-width 300px, no legend, no mobile ranked list.
+  // Use on state pages where the map is a navigational sidebar aid.
+  compact?: boolean;
+  // Tailwind/extra wrapper class (e.g. `hidden md:block` to skip on mobile).
+  className?: string;
+}
+
+export default function USMap({ highlightSlug, compact = false, className = '' }: USMapProps = {}) {
   // Build state-slug -> operator count map at build time (server component).
   const counts: Record<string, number> = {};
   for (const c of counties) {
@@ -27,10 +38,15 @@ export default function USMap() {
     if (abbr) byAbbr[abbr.toLowerCase()] = { slug: c.slug, name: c.name };
   }
 
-  // Render order: biggest first so small coastal states sit on top for hit-testing.
-  const pathEntries = Object.entries(US_STATE_PATHS).sort(
-    (a, b) => b[1].length - a[1].length,
-  );
+  // Render order: biggest first for hit-testing on small coastal states,
+  // but the highlighted state (if any) renders LAST so it sits on top.
+  const pathEntries = Object.entries(US_STATE_PATHS).sort((a, b) => {
+    const aIsHighlight = highlightSlug && byAbbr[a[0]]?.slug === highlightSlug;
+    const bIsHighlight = highlightSlug && byAbbr[b[0]]?.slug === highlightSlug;
+    if (aIsHighlight && !bIsHighlight) return 1;
+    if (!aIsHighlight && bIsHighlight) return -1;
+    return b[1].length - a[1].length;
+  });
 
   // Ranked list for mobile fallback: only states with ≥1 operator.
   const ranked = counties
@@ -38,8 +54,12 @@ export default function USMap() {
     .filter((s) => s.count > 0)
     .sort((a, b) => b.count - a.count);
 
+  const ariaLabel = highlightSlug
+    ? `Map of US states with ${byAbbr[STATE_ABBR[highlightSlug]?.toLowerCase() ?? '']?.name ?? 'the current state'} highlighted`
+    : 'Map of US states shaded by number of drone operators';
+
   return (
-    <div className="us-map">
+    <div className={`us-map ${compact ? 'us-map--compact' : ''} ${className}`.trim()}>
       <style>{USMAP_CSS}</style>
 
       <div
@@ -50,7 +70,7 @@ export default function USMap() {
           viewBox={US_STATES_VIEWBOX}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
-          aria-label="Map of US states shaded by number of drone operators"
+          aria-label={ariaLabel}
           className="us-map__svg"
         >
           {pathEntries.map(([abbr, d]) => {
@@ -69,7 +89,10 @@ export default function USMap() {
             }
             const count = counts[state.slug] || 0;
             const bucket = bucketFor(count);
-            const label = `${state.name}: ${count} ${count === 1 ? 'operator' : 'operators'}`;
+            const isHighlighted = state.slug === highlightSlug;
+            const label = isHighlighted
+              ? `${state.name} (current): ${count} ${count === 1 ? 'operator' : 'operators'}`
+              : `${state.name}: ${count} ${count === 1 ? 'operator' : 'operators'}`;
             return (
               <a
                 key={abbr}
@@ -79,6 +102,7 @@ export default function USMap() {
                 <path
                   d={d}
                   data-bucket={bucket}
+                  data-highlighted={isHighlighted ? 'true' : undefined}
                   data-label={label}
                   className="us-map__path"
                 />
@@ -89,16 +113,18 @@ export default function USMap() {
         </svg>
       </div>
 
-      <div className="us-map__legend" aria-hidden="true">
-        <span className="us-map__legend-label">Operators per state</span>
-        <span className="us-map__legend-item"><i data-bucket={0}></i>0</span>
-        <span className="us-map__legend-item"><i data-bucket={1}></i>1&ndash;5</span>
-        <span className="us-map__legend-item"><i data-bucket={2}></i>6&ndash;15</span>
-        <span className="us-map__legend-item"><i data-bucket={3}></i>16&ndash;30</span>
-        <span className="us-map__legend-item"><i data-bucket={4}></i>31+</span>
-      </div>
+      {!compact && (
+        <div className="us-map__legend" aria-hidden="true">
+          <span className="us-map__legend-label">Operators per state</span>
+          <span className="us-map__legend-item"><i data-bucket={0}></i>0</span>
+          <span className="us-map__legend-item"><i data-bucket={1}></i>1&ndash;5</span>
+          <span className="us-map__legend-item"><i data-bucket={2}></i>6&ndash;15</span>
+          <span className="us-map__legend-item"><i data-bucket={3}></i>16&ndash;30</span>
+          <span className="us-map__legend-item"><i data-bucket={4}></i>31+</span>
+        </div>
+      )}
 
-      {ranked.length > 0 && (
+      {!compact && ranked.length > 0 && (
         <nav
           aria-label="States with most operators"
           className="us-map__ranked md:hidden"
@@ -128,6 +154,7 @@ const USMAP_CSS = `
   max-width: 100%;
   position: relative;
 }
+.us-map--compact .us-map__frame { max-width: 300px; }
 .us-map__svg {
   width: 100%;
   height: 100%;
@@ -146,12 +173,21 @@ const USMAP_CSS = `
 .us-map__path[data-bucket="2"] { fill: #4ade80; }
 .us-map__path[data-bucket="3"] { fill: #16a34a; }
 .us-map__path[data-bucket="4"] { fill: #166534; }
+.us-map__path[data-highlighted="true"][data-bucket] {
+  fill: #2563eb;
+  stroke: #1e3a8a;
+  stroke-width: 1.5;
+}
 .us-map__path:hover,
 .us-map__path:focus {
   filter: brightness(1.1);
   stroke: #065f46;
   stroke-width: 1.5;
   outline: none;
+}
+.us-map__path[data-highlighted="true"]:hover,
+.us-map__path[data-highlighted="true"]:focus {
+  stroke: #1e3a8a;
 }
 .us-map__path--static:hover { filter: none; stroke: #ffffff; stroke-width: 0.5; }
 
