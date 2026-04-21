@@ -82,6 +82,10 @@ US Ag Drone Directory publishes the only public, primary-source-cited index of c
 - [State pesticide licensing](https://agdronedirectory.com/regulations/state-licensing): aerial category endorsement by state
 - [NDAA compliance](https://agdronedirectory.com/regulations/ndaa-compliance): DJI vs Hylio, federal and state procurement rules
 
+## Pillar guides
+- [Guides hub](https://agdronedirectory.com/guides): long-form farmer-side playbooks on hiring, vetting, and working with drone spray operators
+- [How to hire a drone spray operator: the farmer&apos;s complete vetting checklist](https://agdronedirectory.com/guides/hire-drone-spray-operator-checklist): verify Part 137, Part 107, state aerial applicator license, insurance with chemical drift endorsement, label compliance, contract clauses, and nine red flags worth walking away over. 18-minute read, $13 ASDC 2025 rate benchmark, 40 CFR 170.9(c) farmer liability.
+
 ## Guides and comparisons
 - [Buyers guide](https://agdronedirectory.com/buyers-guide): how to pick DJI, Hylio, XAG, Talos for your operation
 - [Start a drone business](https://agdronedirectory.com/start-a-drone-business): 6 to 9 month path from decision to first customer
