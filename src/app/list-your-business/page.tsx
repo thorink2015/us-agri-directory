@@ -162,8 +162,16 @@ export default function ListYourBusinessPage() {
         <FAQAccordion faqs={FAQS} />
       </section>
 
+      {/* Premium placement note */}
+      <p className="mt-10 text-sm text-gray-600 leading-relaxed">
+        Already listed and want priority placement in your state or crop results? See the{' '}
+        <Link href="/advertise" className="text-green-700 hover:underline">
+          sponsored listing options
+        </Link>.
+      </p>
+
       {/* Internal links */}
-      <div className="mt-10 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+      <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 text-sm">
         <Link href="/about" className="text-green-700 hover:underline">About the directory</Link>
         <Link href="/states" className="text-green-700 hover:underline">Browse by state</Link>
         <Link href="/services" className="text-green-700 hover:underline">Browse services</Link>

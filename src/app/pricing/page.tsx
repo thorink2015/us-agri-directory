@@ -414,6 +414,16 @@ export default function PricingPage() {
           </div>
         </section>
 
+        {/* Advertise callout */}
+        <section className="mb-10">
+          <h3 className="text-lg font-bold text-gray-900 mb-2">Looking for more visibility?</h3>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            Dealers, insurers, training providers and operators can put a sponsored placement in front of
+            farmers reading this page. See the{' '}
+            <Link href="/advertise" className="text-green-700 hover:underline">advertising options</Link>.
+          </p>
+        </section>
+
         {/* Authority links */}
         {AUTHORITY_LINKS.length > 0 && (
           <section className="mb-10">
