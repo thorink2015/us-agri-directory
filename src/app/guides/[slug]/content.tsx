@@ -294,7 +294,6 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>The reason to vet hard is not that drone spraying is dangerous. It is that the current market rewards operators who cut paperwork corners, and the legal framework puts the farmer who hires one of them on the hook. A thirty minute conversation with the right questions filters out the operators who cannot pass them. Once you have found one who can, hold onto them.</p>
 
-      {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
 };
