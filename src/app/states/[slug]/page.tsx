@@ -14,6 +14,7 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { getStateData } from '@/data/states';
+import { getCitiesInState } from '@/data/cities';
 import { AUTHOR, SITE } from '@/data/author';
 
 import { addUtm } from '@/lib/utm';
@@ -61,6 +62,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function RichStatePage({ slug }: { slug: string }) {
   const data = getStateData(slug)!;
   const ops = getOperatorsByCounty(slug);
+  const cities = getCitiesInState(slug);
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -197,6 +199,27 @@ function RichStatePage({ slug }: { slug: string }) {
             </div>
           )}
         </section>
+
+        {/* 4b, Browse by city (only when ≥2 ops in a city) */}
+        {cities.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
+              Browse {data.name} operators by city
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+              {cities.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/states/${slug}/${c.slug}`}
+                  className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700 flex items-center justify-between gap-2"
+                >
+                  <span className="truncate">{c.city}</span>
+                  <span className="text-xs text-gray-500 shrink-0">({c.operators.length})</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* 5, Spray windows / rates table */}
         {data.sprayWindows.length > 0 && <section className="mb-10">
@@ -416,6 +439,7 @@ function FallbackStatePage({ slug }: { slug: string }) {
   const state = getCountyBySlug(slug)!;
   const ops = getOperatorsByCounty(state.slug);
   const adjacent = getAdjacentCounties(state, 5);
+  const cities = getCitiesInState(state.slug);
   const cropNames = state.mainCrops.map((c) => CROP_NAME_MAP[c] || c);
 
   const faqs = [
@@ -508,6 +532,26 @@ function FallbackStatePage({ slug }: { slug: string }) {
             </div>
           )}
         </div>
+
+        {cities.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
+              Browse {state.name} operators by city
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+              {cities.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/states/${state.slug}/${c.slug}`}
+                  className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700 flex items-center justify-between gap-2"
+                >
+                  <span className="truncate">{c.city}</span>
+                  <span className="text-xs text-gray-500 shrink-0">({c.operators.length})</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Crops for drone spraying in {state.name}</h2>

@@ -7,6 +7,7 @@ import { drones as droneModels } from '@/data/drone-model';
 import { regions } from '@/data/regions';
 import { blogPosts } from '@/data/blog-posts';
 import { guides } from '@/data/guides';
+import { getQualifyingCities } from '@/data/cities';
 import { SERVICE_LABELS } from '@/data/types';
 
 const BASE_URL = 'https://agdronedirectory.com';
@@ -91,6 +92,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  // ─── City pages (cities meeting the operator threshold) ──────────────────
+  const cityPages: MetadataRoute.Sitemap = getQualifyingCities().map((c) => ({
+    url: `${BASE_URL}/states/${c.stateSlug}/${c.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   // ─── Crop pages (8) ──────────────────────────────────────────────────────
   const cropPages: MetadataRoute.Sitemap = crops.map((c) => ({
     url: `${BASE_URL}/crops/${c.slug}`,
@@ -155,6 +164,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...operatorPages,        // N operators
     ...countyPages,          // 50
     ...countyOperatorPages,  // 50
+    ...cityPages,            // N qualifying cities (≥2 operators)
     ...countyCropPages,      // 50 × 8 = 400
     ...countyServicePages,   // 50 × 10 = 500
     ...cropPages,            // 8
