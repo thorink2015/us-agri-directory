@@ -53,6 +53,13 @@ See `_research/README.md` for what's uploaded and what's missing.
 - `/start-a-drone-business` pillar (needs all research files)
 - Blog posts 1-10 (build-plan says "written in full by me" — Eugen writes these)
 
+## Known gaps to patch
+
+- `/advertise` (merged PR #58, 2026-04-21) is NOT listed in
+  `src/app/sitemap.ts` `staticPages`. Append
+  `{ url: `${BASE_URL}/advertise`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 }`
+  in the next small batch. Flagged by `standing-rules.md` §3.1.
+
 ## Optional polish (not blocking)
 
 - Netlify post-deploy GitHub Action to auto-run IndexNow ping
