@@ -12,6 +12,7 @@ every new session to read the files here before starting work.
 | File | Purpose | When to update |
 |---|---|---|
 | `copy-source-of-truth.md` | **Hard rule** on what Claude Code may write vs. what must come from Eugen's research deliverables | Rarely — read every session, edit only if the rule itself changes. |
+| `standing-rules.md` | Read-before-every-task rules: sitemap/robots/schema checklist for new pages, voice, forbidden tokens, what not to touch | When a rule is actually broken or a new convention emerges. Do not pad. |
 | `project-facts.md` | Verified facts about the project: branch, domain, author, env vars, conventions | Whenever a fact is **learned** or **changed**. Never fabricate. |
 | `code-patterns.md` | Reusable code/content patterns (AEO block format, schema factories, byline signature) | When introducing a new pattern that other pages will copy. |
 | `session-history.md` | Chronological log of batches completed | At the end of every batch. One line per batch. |

@@ -15,10 +15,13 @@ This project uses a self-maintained knowledge base at `_memory/`.
    Code may write vs. what must come from Eugen's research deliverables
 2. `_memory/project-facts.md` — verified facts about the project
    (branch, domain, author, env vars, conventions)
-3. `_memory/pending-items.md` — what's blocked and what's ready to build
-4. `_memory/known-issues.md` — gotchas and their fixes
-5. `_memory/session-history.md` — what's been shipped, in order
-6. `_memory/code-patterns.md` — reusable code/content patterns to copy
+3. `_memory/standing-rules.md` — read-before-every-task rules
+   (sitemap/robots/schema checklist for new pages, voice, forbidden
+   tokens, what not to touch)
+4. `_memory/pending-items.md` — what's blocked and what's ready to build
+5. `_memory/known-issues.md` — gotchas and their fixes
+6. `_memory/session-history.md` — what's been shipped, in order
+7. `_memory/code-patterns.md` — reusable code/content patterns to copy
 
 These files exist **so the user never has to repeat themselves.** If a
 fact is recorded there, don't ask for it again.
