@@ -187,6 +187,17 @@
 - **Internal-linking verified:** 21 distinct states gained the city block, covering all 26 city pages. Every city page uplinks 3 ways (breadcrumb text, breadcrumb JSON-LD, "View all operators in [State]" CTA + the state link near the H1). Zero orphans.
 - **Build:** `npm run build` clean.
 
+## 2026-04-21 — Interactive SVG US map on operators page (batch 1 of 2, branch claude/build-svg-us-map-PW07e)
+
+- **`src/data/us-states-svg.ts`:** public-domain US state SVG path data (viewBox 0 0 959 593, 51 features including DC). Derived from datamaps (MIT) / Natural Earth (public domain); simplified equirectangular projection with Alaska + Hawaii as lower-left insets. Total path payload 20 KB.
+- **`src/components/ui/USMap.tsx`:** server component (zero client JS). Renders inline SVG with each state as an `<a href="/states/[slug]">` wrapping a `<path>`. Fills by operator-count bucket (0, 1-5, 6-15, 16-30, 31+ → gray/green-200/400/600/800). `<title>` child on each path gives native accessible tooltip `"[State]: N operators"`. CSS `:hover` bumps brightness + stroke. DC rendered static-gray (no state page). Legend row below the map. Mobile-only `md:hidden` ranked list of top 12 states for small-state tap fallback. Frame reserves `aspectRatio: 959/593` to prevent layout shift.
+- **`src/app/operators/page.tsx`:** imports USMap, passes it as `mapSection` prop inside an `<h2>Find operators by state</h2>` SEO section.
+- **`src/app/operators/OperatoriClient.tsx`:** accepts `mapSection?: ReactNode`, renders it between the H1 header block and the filter panel (keeps USMap server-rendered despite the surrounding client component).
+- **Size budget:** component (USMap.tsx 6.8 KB + us-states-svg.ts 20.3 KB) = 27 KB, well under the 50 KB cap.
+- **Build:** `npm run build` clean. /operators route JS 3.58 kB, shared first-load 116 kB (unchanged profile; SVG adds zero client bundle).
+- **Operator count range shown:** 0 (Nevada) to 41 (California). 49/50 states have ≥1 operator.
+- Batch 2 pending.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
