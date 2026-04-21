@@ -206,6 +206,16 @@
 - **Verified:** every state page, homepage, and operators page emit 50 unique `href="/states/[slug]"` links in SSR HTML (grep confirmed).
 - **Build:** `npm run build` clean, zero errors. `/states/[slug]` still 785 B / 101 kB, `/operators` still 3.58 kB / 116 kB, homepage chunk 3.5 kB — USMap adds zero client JS across all routes.
 
+## 2026-04-21 — Dedicated /map page (branch claude/move-map-to-page-NNRGz)
+
+- **`src/app/map/page.tsx`:** new standalone map page. Title "Agricultural Drone Operator Map | US Ag Drone Directory"; H1 "Find Agricultural Drone Operators on the Map"; 130-word AEO block (uses live `operators.length` + computed state count). BreadcrumbList + WebPage JSON-LD with author + publisher `@id` refs. Byline + AuthorCard + CTA link to /operators.
+- **`src/app/map/MapClient.tsx`:** client component. Renders interactive SVG from `US_STATE_PATHS`. Text search (state/city, short digits treated as zip with no match), service dropdown (from SERVICE_LABELS), crop dropdown (from crops.ts). Active filter keeps matching states green by bucket + dims non-matching states to gray via `data-match="false"`. Ranked state list below filters also honors the filter.
+- **`src/app/operators/page.tsx`:** removed `<USMap />` from `mapSection`. Replaced with a green CTA card linking to /map ("View operators on the map"). All 391 operator cards still ship in the RSC payload.
+- **`src/app/page.tsx`:** removed `USMap` import and the SECTION 8 full-map embed. Kept the 8-state compact grid and added a subtle "Explore the map" button under it linking to /map.
+- **`src/app/sitemap.ts`:** added `/map` URL (weekly, 0.8) to `staticPages`.
+- **State pages:** contextual small `<USMap highlightSlug compact />` kept as-is in both rich + fallback templates (per spec).
+- **Build:** `npm run build` clean. /map = 12.1 kB / 109 kB first-load JS; /operators = 3.59 kB / 116 kB (unchanged baseline after map removal).
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
+import { MapPin, ArrowRight } from 'lucide-react';
 import OperatoriClient from './OperatoriClient';
-import USMap from '@/components/ui/USMap';
 import { operators } from '@/data/operators';
 import { counties } from '@/data/counties';
 import type { Operator, County } from '@/data/types';
@@ -84,16 +85,30 @@ export default function OperatorsPage() {
       counties={counties.map(compactCounty)}
       mapSection={
         <section aria-labelledby="find-by-state-heading" className="mb-8">
-          <h2
-            id="find-by-state-heading"
-            className="text-2xl font-bold text-gray-900 mb-2"
+          <Link
+            href="/map"
+            className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 bg-green-50 border border-green-200 rounded-2xl hover:border-green-400 hover:shadow-sm transition-all group"
           >
-            Find operators by state
-          </h2>
-          <p className="text-sm text-gray-600 mb-4">
-            Darker states have more verified drone operators. Click any state to see its directory.
-          </p>
-          <USMap />
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h2
+                  id="find-by-state-heading"
+                  className="text-lg font-bold text-gray-900 group-hover:text-green-800"
+                >
+                  View operators on the map
+                </h2>
+                <p className="text-sm text-gray-600">
+                  Browse verified operators by state with filters for city, service type and crop.
+                </p>
+              </div>
+            </div>
+            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 group-hover:text-green-800 whitespace-nowrap">
+              Open map <ArrowRight className="w-4 h-4" />
+            </span>
+          </Link>
         </section>
       }
     />
