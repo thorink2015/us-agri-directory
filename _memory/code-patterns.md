@@ -177,7 +177,6 @@ turns.
 ```tsx
 // src/app/guides/[slug]/content.tsx
 import { ReactNode } from 'react';
-import Link from 'next/link';
 
 export const guideContent: Record<string, ReactNode> = {
   'the-slug': (
@@ -187,6 +186,12 @@ export const guideContent: Record<string, ReactNode> = {
   ),
 };
 ```
+
+**Imports grow with the body, not up front.** Start with only
+`ReactNode`. When the first section with internal links lands, that
+same `Edit` also adds `import Link from 'next/link';`. Importing ahead
+of use trips `@typescript-eslint/no-unused-vars` and fails the
+Netlify build (see `known-issues.md` 2026-04-21 entry).
 
 **Per-section turn:**
 

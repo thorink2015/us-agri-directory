@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import Link from 'next/link';
 
 /**
  * Guide content keyed by slug (matching guides.ts).
