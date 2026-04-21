@@ -16,6 +16,7 @@ import AuthorCard from '@/components/author/AuthorCard';
 import { getStateData } from '@/data/states';
 import { getCitiesInState } from '@/data/cities';
 import { AUTHOR, SITE } from '@/data/author';
+import USMap from '@/components/ui/USMap';
 
 import { addUtm } from '@/lib/utm';
 interface Props {
@@ -142,20 +143,29 @@ function RichStatePage({ slug }: { slug: string }) {
           <p className="text-sm text-gray-700 leading-relaxed">{data.aeoBlock}</p>
         </div>
 
-        {/* 3, Stats row */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          {[
-            { icon: Users, value: ops.length > 0 ? `${ops.length}` : '0', label: 'Listed operators' },
-            { icon: DollarSign, value: data.statsRate, label: 'Rate range / acre' },
-            { icon: Wheat, value: data.statsTopCrop, label: 'Top crop' },
-            { icon: Shield, value: data.licensingAgency, label: 'Licensing agency' },
-          ].map((stat) => (
-            <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">
-              <stat.icon className="w-5 h-5 text-green-600 mb-2" />
-              <div className="font-bold text-gray-900 text-sm truncate">{stat.value}</div>
-              <div className="text-xs text-gray-500">{stat.label}</div>
-            </div>
-          ))}
+        {/* 3, Stats row + mini map */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 mb-8 items-start">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { icon: Users, value: ops.length > 0 ? `${ops.length}` : '0', label: 'Listed operators' },
+              { icon: DollarSign, value: data.statsRate, label: 'Rate range / acre' },
+              { icon: Wheat, value: data.statsTopCrop, label: 'Top crop' },
+              { icon: Shield, value: data.licensingAgency, label: 'Licensing agency' },
+            ].map((stat) => (
+              <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">
+                <stat.icon className="w-5 h-5 text-green-600 mb-2" />
+                <div className="font-bold text-gray-900 text-sm truncate">{stat.value}</div>
+                <div className="text-xs text-gray-500">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          <aside
+            aria-label={`${data.name} on the US map`}
+            className="hidden md:block w-[300px] bg-white border border-gray-200 rounded-xl p-3"
+          >
+            <USMap highlightSlug={slug} compact />
+            <p className="text-xs text-gray-500 mt-2 text-center">{data.name} is highlighted. Click a state to switch.</p>
+          </aside>
         </div>
 
         {/* 4, Operator grid */}
@@ -480,21 +490,30 @@ function FallbackStatePage({ slug }: { slug: string }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          {[
-            { icon: Users, value: `${ops.length}`, label: 'Operators' },
-            { icon: TrendingUp, value: formatAcres(state.agriculturalLandHa), label: 'Agricultural land' },
-            { icon: Wheat, value: cropNames.slice(0, 2).join(', '), label: 'Main crops' },
-            ...(state.vineyardHa ? [{ icon: MapPin, value: formatAcres(state.vineyardHa), label: 'Vineyard acreage' }] : [
-              { icon: MapPin, value: state.region, label: 'Region' },
-            ]),
-          ].map((stat) => (
-            <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">
-              <stat.icon className="w-5 h-5 text-green-600 mb-2" />
-              <div className="font-bold text-gray-900 text-sm truncate">{stat.value}</div>
-              <div className="text-xs text-gray-500">{stat.label}</div>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 mb-8 items-start">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { icon: Users, value: `${ops.length}`, label: 'Operators' },
+              { icon: TrendingUp, value: formatAcres(state.agriculturalLandHa), label: 'Agricultural land' },
+              { icon: Wheat, value: cropNames.slice(0, 2).join(', '), label: 'Main crops' },
+              ...(state.vineyardHa ? [{ icon: MapPin, value: formatAcres(state.vineyardHa), label: 'Vineyard acreage' }] : [
+                { icon: MapPin, value: state.region, label: 'Region' },
+              ]),
+            ].map((stat) => (
+              <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">
+                <stat.icon className="w-5 h-5 text-green-600 mb-2" />
+                <div className="font-bold text-gray-900 text-sm truncate">{stat.value}</div>
+                <div className="text-xs text-gray-500">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          <aside
+            aria-label={`${state.name} on the US map`}
+            className="hidden md:block w-[300px] bg-white border border-gray-200 rounded-xl p-3"
+          >
+            <USMap highlightSlug={state.slug} compact />
+            <p className="text-xs text-gray-500 mt-2 text-center">{state.name} is highlighted. Click a state to switch.</p>
+          </aside>
         </div>
 
         <div className="mb-10">

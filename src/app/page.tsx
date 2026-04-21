@@ -14,6 +14,7 @@ import { SITE, organizationSchema, personSchema } from '@/data/author';
 import SearchBar from '@/components/search/SearchBar';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import USMap from '@/components/ui/USMap';
 
 const SERVICE_CARDS = [
   { slug: 'spraying', icon: Droplets, label: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', price: '$12 to $22/acre' },
@@ -355,18 +356,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 8: States (compact) */}
+      {/* SECTION 8: States (map + compact grid fallback) */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8 gap-4">
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Find drone services in your state</h2>
-              <p className="text-gray-500 mt-1">Top states by operator count</p>
+              <p className="text-gray-500 mt-1">Click your state on the map or pick from the top states below</p>
             </div>
             <Link href="/states" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
               All states <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+
+          <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 mb-6">
+            <USMap />
+          </div>
+
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
             {topStatesByOps.map((state) => (
               <Link

@@ -198,6 +198,14 @@
 - **Operator count range shown:** 0 (Nevada) to 41 (California). 49/50 states have ≥1 operator.
 - Batch 2 pending.
 
+## 2026-04-21 — Interactive SVG US map on state pages + homepage (batch 2 of 2, branch claude/build-svg-us-map-PW07e)
+
+- **`src/components/ui/USMap.tsx`:** extended with `highlightSlug`, `compact`, and `className` props. Highlighted state renders last in z-order so its blue fill (`#2563eb`) sits on top of neighbors; CSS uses dual-attribute selector `[data-highlighted="true"][data-bucket]` to override bucket fill without `!important`. Compact mode caps frame at 300px and hides legend + ranked list.
+- **`src/app/states/[slug]/page.tsx`:** both rich and fallback templates wrap the stats row in a `grid md:grid-cols-[1fr_auto]` and add a right-hand `<aside className="hidden md:block w-[300px] …">` with `<USMap highlightSlug={slug} compact />` plus a caption "[State] is highlighted. Click a state to switch." Mobile skips the map entirely (per spec).
+- **`src/app/page.tsx`:** homepage SECTION 8 "Find drone services in your state" now renders the full `<USMap />` in a white card above the existing top-states grid; subhead updated to "Click your state on the map or pick from the top states below" (dropdown/grid preserved as fallback).
+- **Verified:** every state page, homepage, and operators page emit 50 unique `href="/states/[slug]"` links in SSR HTML (grep confirmed).
+- **Build:** `npm run build` clean, zero errors. `/states/[slug]` still 785 B / 101 kB, `/operators` still 3.58 kB / 116 kB, homepage chunk 3.5 kB — USMap adds zero client JS across all routes.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
