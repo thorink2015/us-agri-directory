@@ -221,6 +221,41 @@ verify the route generates, commit + push.
   conversation context from the first read.
 - Never put more than one H2 section per turn, even for short ones.
 
+**Research drop convention:** Eugen drops each guide's source research
+into `_research/<slug>.md` matching the target slug in
+`src/data/guides.ts`. First turn of a new guide: read that file once in
+full, then work from in-context memory for every subsequent section
+turn. The `_research/` folder is internal-only (not shipped to Netlify)
+and is safe to delete before launch per `project-facts.md`.
+
+## Pillar guide shipping checklist
+
+When shipping a new pillar guide, everything the template needs is
+already in `src/data/guides.ts`. Per-guide work:
+
+1. Read `_research/<slug>.md`.
+2. Append a new entry to `guides` in `src/data/guides.ts` filling every
+   required field. Optional fields to populate for quality:
+   - `howToSteps` + `howToTitle` (HowTo JSON-LD)
+   - `featuredPullQuote` (hero card on /guides hub when this guide is
+     newest)
+   - `quickFacts`, `pullQuotes`, `relatedInternal`
+3. Seed the content scaffold: add a new key to `guideContent` in
+   `src/app/guides/[slug]/content.tsx` with the sentinel comment.
+4. Append H2 sections via the sentinel loop above.
+5. After the final section lands:
+   - Add the slug to `public/llms.txt` under `## Pillar guides`.
+   - Append a full AEO-block entry to `public/llms-full.txt`.
+   - Add one reciprocal `<Link>` on the most relevant 3–5 pages (crop,
+     service, regulation, tools) into the new guide.
+   - If this guide replaces the "Latest guide" hero, the `/guides` hub
+     updates automatically via `getLatestGuides(1)` + `featuredPullQuote`.
+     The homepage featured-guide callout is hardcoded — update it when
+     the featured slug changes.
+6. Sitemap + JSON-LD cover the new guide automatically via
+   `guides.map(...)` in `src/app/sitemap.ts` and the schemas in
+   `src/app/guides/[slug]/page.tsx`.
+
 ## Commit message format
 
 ```

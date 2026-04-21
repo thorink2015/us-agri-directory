@@ -183,17 +183,18 @@ export default function GuidesHubPage() {
                   Read the full guide <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
-              <div className="hidden md:flex bg-gradient-to-br from-green-800 to-green-950 p-10 items-center justify-center text-white">
-                <blockquote className="max-w-sm">
-                  <p className="font-serif text-xl leading-snug mb-4">
-                    &ldquo;In 2024 about 9,000 agricultural drones were sold in the
-                    United States. Fewer than 1,200 of them got registered with the FAA.&rdquo;
-                  </p>
-                  <cite className="not-italic text-sm text-green-200">
-                    From: the opening data hook on operator verification
-                  </cite>
-                </blockquote>
-              </div>
+              {latest.featuredPullQuote && (
+                <div className="hidden md:flex bg-gradient-to-br from-green-800 to-green-950 p-10 items-center justify-center text-white">
+                  <blockquote className="max-w-sm">
+                    <p className="font-serif text-xl leading-snug mb-4">
+                      &ldquo;{latest.featuredPullQuote.quote}&rdquo;
+                    </p>
+                    <cite className="not-italic text-sm text-green-200">
+                      {latest.featuredPullQuote.attribution}
+                    </cite>
+                  </blockquote>
+                </div>
+              )}
             </div>
           </Link>
         </section>
@@ -261,9 +262,9 @@ export default function GuidesHubPage() {
             More pillar guides coming through 2026.
           </h3>
           <p className="text-sm text-gray-600 max-w-xl mx-auto mb-4">
-            Upcoming: Part 137 decision tree for operators, NDAA and tariff math for
-            2026 equipment purchases, USDA EQIP cost-share walkthrough, state pesticide
-            license by state, and the first-season custom operator playbook.
+            New guides cover regulations, equipment, funding, and operator-side
+            playbooks as each topic lands. Shorter takes and news are published
+            on the blog.
           </p>
           <Link
             href="/blog"
