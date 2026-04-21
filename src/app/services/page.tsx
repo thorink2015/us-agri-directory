@@ -49,7 +49,18 @@ const serviceIconMap: Record<string, LucideIcon> = {
 };
 
 export default function ServicesPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE.domain}/services` },
+    ],
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: 'Services' }]} />
 
@@ -99,5 +110,6 @@ export default function ServicesPage() {
         </Link>
       </div>
     </div>
+    </>
   );
 }

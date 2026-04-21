@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Clock, Calendar, ArrowRight } from 'lucide-react';
 import { blogPosts, BLOG_CATEGORY_LABELS } from '@/data/blog-posts';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import { SITE } from '@/data/author';
 
 export const metadata: Metadata = {
   title: 'Ag Drone Blog: Lists, Guides & Industry News 2026',
@@ -34,7 +35,18 @@ export default function BlogHub() {
   const featured = sortedPosts[0];
   const rest = sortedPosts.slice(1);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.domain}/blog` },
+    ],
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: 'Blog' }]} />
 
@@ -104,5 +116,6 @@ export default function BlogHub() {
         ))}
       </div>
     </div>
+    </>
   );
 }

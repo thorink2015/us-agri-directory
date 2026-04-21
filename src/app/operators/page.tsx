@@ -3,6 +3,7 @@ import OperatoriClient from './OperatoriClient';
 import USMap from '@/components/ui/USMap';
 import { operators } from '@/data/operators';
 import { counties } from '@/data/counties';
+import { SITE } from '@/data/author';
 import type { Operator, County } from '@/data/types';
 
 const DESCRIPTION_LIMIT = 180;
@@ -78,24 +79,36 @@ export const metadata: Metadata = {
 };
 
 export default function OperatorsPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain },
+      { '@type': 'ListItem', position: 2, name: 'Operators', item: `${SITE.domain}/operators` },
+    ],
+  };
+
   return (
-    <OperatoriClient
-      operators={operators.map(compact)}
-      counties={counties.map(compactCounty)}
-      mapSection={
-        <section aria-labelledby="find-by-state-heading" className="mb-8">
-          <h2
-            id="find-by-state-heading"
-            className="text-2xl font-bold text-gray-900 mb-2"
-          >
-            Find operators by state
-          </h2>
-          <p className="text-sm text-gray-600 mb-4">
-            Darker states have more verified drone operators. Click any state to see its directory.
-          </p>
-          <USMap />
-        </section>
-      }
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <OperatoriClient
+        operators={operators.map(compact)}
+        counties={counties.map(compactCounty)}
+        mapSection={
+          <section aria-labelledby="find-by-state-heading" className="mb-8">
+            <h2
+              id="find-by-state-heading"
+              className="text-2xl font-bold text-gray-900 mb-2"
+            >
+              Find operators by state
+            </h2>
+            <p className="text-sm text-gray-600 mb-4">
+              Darker states have more verified drone operators. Click any state to see its directory.
+            </p>
+            <USMap />
+          </section>
+        }
+      />
+    </>
   );
 }

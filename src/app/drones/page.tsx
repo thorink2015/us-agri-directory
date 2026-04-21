@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Plane, Shield } from 'lucide-react';
 import { drones } from '@/data/drone-model';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import { SITE } from '@/data/author';
 
 export const metadata: Metadata = {
   title: 'Commercial Ag Spray Drones: DJI, Hylio, XAG Specs',
@@ -31,7 +32,18 @@ export const metadata: Metadata = {
 };
 
 export default function DronePage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain },
+      { '@type': 'ListItem', position: 2, name: 'Drone Models', item: `${SITE.domain}/drones` },
+    ],
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: 'Drone Models' }]} />
 
@@ -96,5 +108,6 @@ export default function DronePage() {
         </Link>
       </div>
     </div>
+    </>
   );
 }

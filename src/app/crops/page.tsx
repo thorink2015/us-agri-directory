@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { crops } from '@/data/crops';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import { SITE } from '@/data/author';
 
 export const metadata: Metadata = {
   title: 'Drone Services by Crop: Corn, Soybeans, Cotton, Wheat',
@@ -28,7 +29,18 @@ export const metadata: Metadata = {
 };
 
 export default function CropsPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.domain },
+      { '@type': 'ListItem', position: 2, name: 'Crops', item: `${SITE.domain}/crops` },
+    ],
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <Breadcrumb items={[{ label: 'Crops' }]} />
 
@@ -61,5 +73,6 @@ export default function CropsPage() {
         ))}
       </div>
     </div>
+    </>
   );
 }
