@@ -180,6 +180,13 @@
 - **Generated:** 26 city pages. Top: Auburn AL (3), Salinas CA (3), then 24 cities at 2 ops (Baton Rouge LA, Houston TX, Harrisonburg VA, Nashville TN, Knoxville TN, Starkville MS, Lexington KY, Daytona Beach FL, Jonesboro AR, Weston WV, Syracuse NY, Champaign IL, Effingham IL, Six Lakes MI, Overland Park KS, Hiawatha KS, Wichita KS, Nebraska City NE, etc).
 - **Build:** `npm run build` clean, zero errors.
 
+## 2026-04-21 — City pages internal-linking (batch 2)
+
+- **`src/app/states/[slug]/page.tsx`:** new "Browse by city" section in both the rich proof-state template (after the operator grid, before spray windows) and the fallback county-based template (after the operator grid, before crops). Renders only when `getCitiesInState(slug)` returns ≥1 city. Each entry links to `/states/[state]/[city]` with operator count chip.
+- **`src/app/states/page.tsx`:** added one sentence to the intro paragraph: "In states with multiple operators per city, you can also browse by city."
+- **Internal-linking verified:** 21 distinct states gained the city block, covering all 26 city pages. Every city page uplinks 3 ways (breadcrumb text, breadcrumb JSON-LD, "View all operators in [State]" CTA + the state link near the H1). Zero orphans.
+- **Build:** `npm run build` clean.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

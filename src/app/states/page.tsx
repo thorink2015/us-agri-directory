@@ -79,7 +79,7 @@ export default function StatesPage() {
             Agricultural Drone Spraying by State (2026)
           </h1>
           <p className="text-gray-600 max-w-3xl">
-            Licensing requirements, 2026 spray rates and verified operators for all 50 US states. Select your state to see local licensing rules, seasonal spray windows and operators serving your area.
+            Licensing requirements, 2026 spray rates and verified operators for all 50 US states. Select your state to see local licensing rules, seasonal spray windows and operators serving your area. In states with multiple operators per city, you can also browse by city.
           </p>
         </div>
 
