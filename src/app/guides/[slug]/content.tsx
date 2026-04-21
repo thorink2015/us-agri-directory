@@ -140,6 +140,63 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>This is the quiet fight inside EPA right now. Some states treat drone application as aerial under existing label language. Others require drone-specific state approval. California, Iowa, and Minnesota have issued guidance. Most other states have not. Ask your operator whether the state ag department allows drone use of this specific product under the existing aerial label section. If they shrug, call the state ag department yourself before approving the job.</p>
 
+      <h2 id="pricing">Pricing sanity check</h2>
+
+      <p>University extension custom rate surveys give you a floor. Here is the 2024 to 2025 data that actually matters.</p>
+
+      <div className="guide-table-callout">
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Year</th>
+              <th>Rate per acre</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>University of Missouri G1274</td>
+              <td>March 2025</td>
+              <td>$16</td>
+              <td>Benchmark custom hire, chemistry excluded</td>
+            </tr>
+            <tr>
+              <td>Iowa State 2024 Custom Rate Survey</td>
+              <td>2024</td>
+              <td>$10.70</td>
+              <td>Aerial, not drone-specific, 130 responses</td>
+            </tr>
+            <tr>
+              <td>Purdue 2025 Indiana Farm Custom Rates</td>
+              <td>April 2025</td>
+              <td>$13.31</td>
+              <td>Aerial, 18 responses</td>
+            </tr>
+            <tr>
+              <td>ASDC 2024 industry average</td>
+              <td>2024</td>
+              <td>$21</td>
+              <td>Drone-specific, member survey</td>
+            </tr>
+            <tr>
+              <td>ASDC 2025 industry average</td>
+              <td>2025</td>
+              <td>$13</td>
+              <td>Drone-specific, attributed to non-licensed undercutting</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Add chemistry supply and the full job price typically runs $25 to $60 per acre on commodity row crops. Orchards, vineyards, and specialty crops run 1.5 to 3 times that because of narrower swath geometry and tighter obstacle avoidance.</p>
+
+      <p>Small field minimums matter. On 10 acres or less, expect a minimum charge of $100 to $300 instead of a per-acre rate. Mobilization distance matters too. If an operator has to drive four hours to reach you, a $15 per acre rate is economically impossible without volume.</p>
+
+      <p>If someone quotes you $7 or $8 per acre in the corn belt for a row-crop job, the odds are overwhelming that they are operating without full licensing and insurance. They are not a bargain. They are an uninsured liability attached to your field.</p>
+
+      <p>For the broader cost picture, see our <Link href="/comparisons/drone-vs-ground-rig">drone versus ground rig comparison</Link> and <Link href="/comparisons/drone-vs-airplane">drone versus airplane comparison</Link>.</p>
+
       {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
