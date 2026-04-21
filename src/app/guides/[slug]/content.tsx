@@ -52,6 +52,34 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>Reciprocity helps some, but not universally. Iowa reciprocates with Illinois, Minnesota, Missouri, Nebraska, South Dakota, and Wisconsin. An Illinois-licensed operator can generally work in Iowa through reciprocity, but has to file the paperwork first. &ldquo;I&apos;m licensed in Indiana&rdquo; does not mean licensed for your Ohio field. Our <Link href="/regulations/state-licensing">state licensing directory</Link> links to every lookup tool we could verify.</p>
 
+      <h2 id="insurance">Insurance. Where most farmers get burned.</h2>
+
+      <p>Drone ag is a specialty insurance line. A standard commercial drone policy does not cover agricultural spraying. SkyWatch, one of the largest aviation insurers working drones, states this directly in their policy language: the base policy &ldquo;does not provide coverage for drone chemical spraying operations (unless approved by underwriters).&rdquo;</p>
+
+      <p>This matters because if an operator hands you a certificate of insurance showing $1 million in general aviation coverage and no chemical endorsement, they are insured for crashing their drone into a shed. They are not insured for spraying the wrong product on your soybeans.</p>
+
+      <h3>Chemical coverage tiers, decoded</h3>
+
+      <p>Aerial insurance splits chemical coverage into tiers that farmers rarely see on any certificate unless they ask. Learn these three letter combinations.</p>
+
+      <p><strong>XC (Excluding Chemical)</strong> covers seeds or fertilizer only. Useless for pesticide work. <strong>LC or RC (Limited or Restricted Chemical)</strong> covers seeds, fertilizer, insecticides, fungicides, and usually rodenticides. Adequate for most foliar fungicide work on corn and soybeans. <strong>CC (Comprehensive Chemical)</strong> covers the full range of aerial applications with a short list of named exclusions. Picloram is almost always excluded. Paraquat, some dicamba-based products, and tree farms are commonly excluded.</p>
+
+      <p>If you are applying restricted-use herbicides, you need CC with a clean exclusion page for your specific product. Ask to see the exclusions schedule itself. Not the summary page. The schedule.</p>
+
+      <h3>The numbers to require</h3>
+
+      <p>Based on published rate sheets from BWI Fly and SkyWatch and interviews with ag aviation brokers, here is the floor a farmer should require before signing.</p>
+
+      <p>Minimum $1 million per occurrence aviation liability. Chemical drift endorsement with a sub-limit of at least $100,000, and $300,000 if you work row crops in a tight-patchwork area. Hull coverage matching drone replacement value, which runs $25,000 to $35,000 for a DJI Agras T40 or T50. Workers&apos; compensation if the operator has employees. And you, the farmer, named as additional insured on this specific job.</p>
+
+      <p>A legitimate drone ag operator pays roughly $3,000 to $10,000 per year in insurance premiums. If the operator is quoting you $7 an acre and claims they carry full drift coverage, ask how. The economics do not work.</p>
+
+      <h3>The FOG endorsement question</h3>
+
+      <p>The Farmer, Owner, Grower endorsement is the old ag aviation instrument that extends coverage or clarifies liability between an aerial applicator and the landowner. On the manned side it has been standard for decades. Drone ag insurance is still maturing and FOG equivalent language varies by carrier. Ask the operator&apos;s agent directly: &ldquo;Does this policy include a Farmer, Owner, Grower endorsement or its equivalent, and does it name me as additional insured on this specific job?&rdquo; If the agent fumbles the question, that tells you something about the policy.</p>
+
+      <p>Nationwide rolled out a farm-side drone endorsement (Form FL70355) in late 2024 that covers farmers who fly their own drones on their own land. It does not cover you when you hire someone else. Your own farm insurance almost certainly will not cover a hired applicator&apos;s mistake. Your MPCI crop policy will not cover chemical misapplication damage either. You are relying entirely on the operator&apos;s policy. Verify it. Full breakdown on our <Link href="/insurance">insurance page</Link>.</p>
+
       {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
