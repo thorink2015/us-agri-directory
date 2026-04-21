@@ -197,6 +197,27 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>For the broader cost picture, see our <Link href="/comparisons/drone-vs-ground-rig">drone versus ground rig comparison</Link> and <Link href="/comparisons/drone-vs-airplane">drone versus airplane comparison</Link>.</p>
 
+      <h2 id="contract-clauses">Contract clauses to require</h2>
+
+      <p>Written contract. Always. Verbal agreements get expensive. Based on UAPASTF&apos;s September 2024 Master BMP and standard extension guidance, here are the twelve clauses to put in every spray contract.</p>
+
+      <ol>
+        <li><strong>Scope of work.</strong> Field GPS boundaries, acres, product name and EPA registration number, rate per acre, carrier volume in gallons per acre, growth stage or timing window.</li>
+        <li><strong>Federal licensing warranty.</strong> Operator warrants current Part 107, Part 137, and 44807 exemption numbers in the contract text.</li>
+        <li><strong>State license warranty.</strong> License number, category, state of issue.</li>
+        <li><strong>Insurance evidence.</strong> Certificate of insurance attached, naming you as additional insured, with coverage limits and chemical endorsement tier specified.</li>
+        <li><strong>Chemistry supply.</strong> Who buys it, who stores it, who bears EPA registration responsibility, who eats a mix error.</li>
+        <li><strong>Weather cancellation.</strong> Defined wind thresholds, inversion exclusion, rain-approach exclusion, rescheduling terms.</li>
+        <li><strong>Drift liability and indemnification.</strong> Buffer commitments written in. Responsibility allocation between operator and landowner for drift onto third party property.</li>
+        <li><strong>Recordkeeping delivery.</strong> Application records including date, time, product, rate, wind, temperature, relative humidity, and GPS log delivered within 30 days.</li>
+        <li><strong>Application window guarantee.</strong> Days and hours between your notification and treatment. Refund or rate adjustment if window is missed.</li>
+        <li><strong>Payment terms.</strong> Per-acre rate, minimum acreage, fuel or battery surcharge, mobilization fee. Invoice with W-9 on file.</li>
+        <li><strong>Dispute resolution.</strong> Governing law, mediation or arbitration clause.</li>
+        <li><strong>Calibration verification.</strong> Most recent pattern test date and coefficient of variation percentage attached.</li>
+      </ol>
+
+      <p>If the operator resists a written contract, that is your answer. Our <Link href="/start-a-drone-business">start a drone business guide</Link> walks through the other side of this same contract for operators, which tells you what language a legitimate pro is already familiar with.</p>
+
       {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
