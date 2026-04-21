@@ -172,6 +172,14 @@
   - Operator pages: added `image` field with site-level fallback `${SITE.domain}/og-image.png`.
 - Commits on `claude/remove-garbage-files-aDHms`: b8135d2 (dashes), 26db07e (AI patterns), 4e3076c (dynamic count), ab54e37 (pricing), b9843a7 (drone specs), 44ad737 (Google schema)
 
+## 2026-04-21 — City-level pages template (batch 1, branch claude/city-level-pages-template-vcGAG)
+
+- **`src/data/cities.ts`:** new aggregator. Buckets operators by `city + counties[0]` (primary state). Filters out junk: city == state name (Nebraska/Texas/etc), directional/statewide (Central/Southern/Statewide), and reserved child slugs (operators/services/crops). Threshold = 2+ operators per city (only 2 cities cleared 3+ after filtering, so fell back to 2+ as instructed). Helpers: `getCity`, `getQualifyingCities`, `getCitiesInState`, `getTopServicesForCity`, `getTopCropsForCity`, `getCityRateRange`, `getCityCenter`.
+- **`src/app/states/[slug]/[city]/page.tsx`:** new programmatic route, `dynamicParams = false`. Title: `Drone Spraying Services in [City], [State] | Ag Drone Directory`. H1: `Agricultural Drone Services in [City], [State]`. AEO block built from real city data (operator count + min/max per-acre rate + top crop + top 3 service labels) — every block unique. Reuses `OperatorCard`, `Breadcrumb`, `Byline`, `AuthorCard`. Schemas: BreadcrumbList (Home > States > State > City), LocalBusiness with averaged GeoCoordinates, ItemList of operators. Sections: stats row, operator grid, nearby cities (other qualifying cities in state), state-link CTA, related crop links to `/states/[state]/crops/[crop]` for top 2 crops.
+- **`src/app/sitemap.ts`:** wired `cityPages` from `getQualifyingCities()` (priority 0.7, monthly).
+- **Generated:** 26 city pages. Top: Auburn AL (3), Salinas CA (3), then 24 cities at 2 ops (Baton Rouge LA, Houston TX, Harrisonburg VA, Nashville TN, Knoxville TN, Starkville MS, Lexington KY, Daytona Beach FL, Jonesboro AR, Weston WV, Syracuse NY, Champaign IL, Effingham IL, Six Lakes MI, Overland Park KS, Hiawatha KS, Wichita KS, Nebraska City NE, etc).
+- **Build:** `npm run build` clean, zero errors.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
