@@ -80,6 +80,34 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>Nationwide rolled out a farm-side drone endorsement (Form FL70355) in late 2024 that covers farmers who fly their own drones on their own land. It does not cover you when you hire someone else. Your own farm insurance almost certainly will not cover a hired applicator&apos;s mistake. Your MPCI crop policy will not cover chemical misapplication damage either. You are relying entirely on the operator&apos;s policy. Verify it. Full breakdown on our <Link href="/insurance">insurance page</Link>.</p>
 
+      <h2 id="equipment-questions">Equipment questions that separate pros from Facebook Marketplace operators</h2>
+
+      <p>Most farmers do not want to become drone engineers. You do not need to. You need five answers from the operator, and the answers have to be specific.</p>
+
+      <h3>Which drone, and how big is the tank</h3>
+
+      <p>Ask for make, model, tank capacity in gallons, effective swath width, and acres per hour at your field&apos;s application rate. A legitimate operator rattles these off. The most common platforms running US row-crop work right now are the DJI Agras T40 and T50 at around 10.5 gallons, 32 to 36 foot swath, roughly 40 to 50 acres per hour at 2 gallons per acre; the Hylio AG-272 at 18 gallons, 40 foot swath, up to 50 acres per hour, NDAA compliant and Texas-built; and the XAG P100 Pro at around 13 gallons. Consumer grade drones under 5 gallons do not belong on commercial row crops. If someone is proposing to spray a quarter section with a 2-gallon rig, walk away.</p>
+
+      <p>Manufacturer marketing numbers are almost always optimistic. Brady Holst, a custom drone operator interviewed by AgWeb, put it plainly: &ldquo;The manufacturer says 30-foot spray width. Your real-world number after you pattern-test it is more like 20.&rdquo; Ask whether they trust the factory number or have a pattern test that says otherwise.</p>
+
+      <h3>Pattern test certificate</h3>
+
+      <p>NAAA&apos;s Operation S.A.F.E. pattern testing program has adapted to drones over the past two seasons. A pattern test uses water-sensitive paper or fluorescent dye to measure actual swath width, droplet size distribution, and coefficient of variation across the swath. The certificate is usually good for two years. A serious drone operator has one. Ask to see it. Date, product used, and altitude and speed parameters should all be on the certificate.</p>
+
+      <h3>Nozzle setup matched to the product label</h3>
+
+      <p>This is where most operators can be separated from the crowd in one question: &ldquo;What droplet size category does the product label require, and which nozzle and pressure combination will you use to produce it?&rdquo;</p>
+
+      <p>The ASABE S572.3 standard defines droplet size categories from Very Fine (under 150 microns) to Ultra Coarse (over 750 microns). Most auxin herbicide labels, meaning dicamba and 2,4-D choline products, require Extremely Coarse or Ultra Coarse. Fungicide labels often want Medium to Coarse. A DJI Agras uses centrifugal rotary atomizers with an adjustable droplet range of 50 to 500 microns. A Hylio AG-272 uses TeeJet flat fan nozzles that can be swapped for air induction types. An operator who cannot match droplet size category to the label language on your product should not be spraying your field.</p>
+
+      <h3>RTK, terrain following, obstacle avoidance</h3>
+
+      <p>Real-time kinematic GPS brings horizontal positioning accuracy from plus or minus 60 centimeters down to plus or minus 10. Terrain-following radar keeps the drone at consistent height above canopy on rolling ground. Obstacle avoidance catches power lines and wind breaks the operator missed on the pre-flight walk. Purdue&apos;s PPP-154 publication reports that the majority of spray drone crashes have occurred with obstacle avoidance disabled. Confirm it stays on.</p>
+
+      <h3>NDAA compliance only if federal money is involved</h3>
+
+      <p>If no federal money is involved and you are paying out of pocket, NDAA does not apply to you. You can legally hire a DJI-using operator in any state. The restriction kicks in when federal funds pay for the work. Post-December 22, 2025, USDA cost-share programs such as EQIP, CSP, and REAP cannot fund applications done with covered Chinese-made drones. If your application is tied to a USDA program, ask for a Blue UAS Cleared List platform like Hylio. Full background on our <Link href="/regulations/ndaa-compliance">NDAA compliance page</Link>.</p>
+
       {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
