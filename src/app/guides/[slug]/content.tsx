@@ -218,6 +218,24 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>If the operator resists a written contract, that is your answer. Our <Link href="/start-a-drone-business">start a drone business guide</Link> walks through the other side of this same contract for operators, which tells you what language a legitimate pro is already familiar with.</p>
 
+      <h2 id="weather-timing">Weather and timing realities</h2>
+
+      <p>The UAPASTF Master BMP recommends spraying only when wind is between 3 and 10 miles per hour at the point of release. Under 3 can indicate a temperature inversion, which traps droplets near the ground and lets them drift horizontally into the next county overnight. Over 10, even professional ag drones degrade in accuracy. The DJI T50 is rated to 15 mph, but most operators work to 10.</p>
+
+      <p>Delta T, the gap between dry bulb and wet bulb temperature, is a drift predictor that Australian grain growers have used for years and that US operators are starting to take seriously. Ideal range 2 to 8. Do not spray if Delta T is over 10 or under 0. A $250 Kestrel 5500 meter handles it. Ask the operator if they use one.</p>
+
+      <p>Beyond weather, crop biology sets hard windows.</p>
+
+      <p>Wheat T3 for Fusarium head blight hits at Feekes 10.5.1, roughly 50% early anthesis. The window is five to seven days. Miss it and application value drops most of the way to zero.</p>
+
+      <p>Soybean R3 fungicide sits between R2 and R3, about five to ten days. White mold narrows that to R1 through R2.</p>
+
+      <p>Corn tassel (VT to R1) fungicide runs five to seven days. Tall corn you cannot drive through with a ground rig, which is exactly why drones have taken over this timing in the last two seasons.</p>
+
+      <p>Rice neck and panicle blast runs late boot to 10 percent heading. Narrow, and the window closes fast.</p>
+
+      <p>Alex Harrell, the Leesburg, Georgia farmer who set the world soybean yield record at 218.29 bushels per acre in 2024 on Pioneer P49Z02E, runs two spray drones to cover roughly 500 acres per day on his 4,000 acre operation. He told Farm Journal: &ldquo;The drones are running foliar and fungicide treatments and stink bug spray every day now. We rarely call in an airplane, because we can mix and spray everything ourselves.&rdquo; Harrell credits the ability to hit timing windows during a wet June in 2023 as a key factor in his first record the prior year. The whole case for hiring a drone applicator, versus calling an airplane and waiting, comes down to this. Time is the most expensive input you cannot buy. Training context on our <Link href="/training-and-certification">training and certification page</Link>.</p>
+
       {/* GUIDE-INSERT-POINT: hire-drone-spray-operator-checklist */}
     </>
   ),
