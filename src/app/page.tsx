@@ -14,7 +14,6 @@ import { SITE, organizationSchema, personSchema } from '@/data/author';
 import SearchBar from '@/components/search/SearchBar';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
-import USMap from '@/components/ui/USMap';
 
 const SERVICE_CARDS = [
   { slug: 'spraying', icon: Droplets, label: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', price: '$12 to $22/acre' },
@@ -356,24 +355,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 8: States (map + compact grid fallback) */}
+      {/* SECTION 8: States */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8 gap-4">
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Find drone services in your state</h2>
-              <p className="text-gray-500 mt-1">Click your state on the map or pick from the top states below</p>
+              <p className="text-gray-500 mt-1">Pick from the top states below or explore the full US map</p>
             </div>
             <Link href="/states" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
               All states <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 mb-6">
-            <USMap />
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mb-6">
             {topStatesByOps.map((state) => (
               <Link
                 key={state.slug}
@@ -384,6 +379,15 @@ export default function HomePage() {
                 <span className="mt-1 text-xs text-gray-500">{state.count} operator{state.count === 1 ? '' : 's'}</span>
               </Link>
             ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/map"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-green-200 text-green-700 font-semibold rounded-xl hover:border-green-400 hover:bg-green-50 transition-colors"
+            >
+              <MapIcon className="w-4 h-4" /> Explore the map
+            </Link>
           </div>
         </div>
       </section>
