@@ -156,7 +156,7 @@ export default function GuidesHubPage() {
             href={`/guides/${latest.slug}`}
             className="group block bg-white border border-stone-200 rounded-2xl overflow-hidden hover:border-green-300 hover:shadow-lg transition-all"
           >
-            <div className="grid md:grid-cols-[1.1fr_1fr] gap-0">
+            <div className={`grid gap-0 ${latest.featuredPullQuote ? 'md:grid-cols-[1.1fr_1fr]' : ''}`}>
               <div className="p-6 md:p-10 flex flex-col justify-center">
                 <div className="flex flex-wrap items-center gap-3 mb-4">
                   <span
