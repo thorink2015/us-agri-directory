@@ -62,6 +62,7 @@ export default function ContactForm({ type }: Props) {
   if (type === 'contact') {
     return (
       <form onSubmit={handleSubmit} className="space-y-4">
+        <input type="hidden" name="_form_type" value="contact" />
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1.5">Name *</label>
@@ -121,6 +122,7 @@ export default function ContactForm({ type }: Props) {
   // type === 'listing'
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <input type="hidden" name="_form_type" value="list-your-business" />
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1.5">Business name *</label>
