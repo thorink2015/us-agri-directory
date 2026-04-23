@@ -298,6 +298,22 @@ export const guideContent: Record<string, ReactNode> = {
   ),
   'year-round-revenue-ag-drone-operators': (
     <>
+      <p>A DJI Agras T50 kitted for commercial work runs about $33,000. Finance that over five years at 7 percent and you are paying close to $800 every month, whether the drone flies or sits in a shed. In most of the Corn Belt, the spray season lasts five months. That leaves seven months of loan payments with zero spray revenue coming in, and most new operators learn this the hard way their first winter.</p>
+
+      <p>The irony is that the industry is growing faster than ever. The American Spray Drone Coalition reported 16.4 million US acres sprayed by drone in 2025, up 58.7 percent year over year. Those acres are consolidating into fewer, more utilized operators. The ones earning real money are not running spray-only businesses. They are running three to five stacked services and keeping the calendar full from January through December.</p>
+
+      <p>This guide lays out exactly how they do it, backed by named US companies, real 2026 pricing, and the regulatory details most starter guides skip. If you already have your <Link href="/regulations/faa-part-107">Part 107 certificate</Link> and your <Link href="/regulations/faa-part-137">Part 137 operating certificate</Link>, you have the legal foundation to add most of what follows without going back to square one.</p>
+
+      <h2 id="spray-season-math">The spray-season math that forces this decision</h2>
+
+      <p>Here is what most &ldquo;how to start a drone business&rdquo; content never tells you. The 2026 Iowa State Farm Custom Rate Survey, the first year drone spraying was a separate category, pegged drone spraying at $12.50 per acre average with a range of $8 to $16. University of Missouri Extension&apos;s 2025 economic model puts a custom operator&apos;s all-in cost at $7.39 per acre at 4,000 acres per year. Your margin is about $5 to $8 per acre, and the whole thing only works if you actually hit 4,000 acres.</p>
+
+      <p>Here is how that breaks down in reality. A solo operator with one drone covers 150 to 250 acres per field day. SweetWater Technologies, a 25-drone fleet based in Wyanet, Illinois, does 300 to 500 acres per drone per day, but that is with full infrastructure, two-person crews, and a tender truck. First-year operators do not hit that number. Infinity Precision Ag, a three-pilot Nebraska outfit that started in 2024, ended their first partial season at 2,500 to 3,000 acres. Their Year 2 target was 6,000 to 7,000.</p>
+
+      <p>Now run the math. At 3,000 acres in a 120-day Corn Belt spray window at $14 per acre, you gross $42,000. Take out your $7.39 per acre cost base and you net about $19,800. Your drone payment alone ate $9,504 of that for the year. Insurance, trucking, batteries, and fuel take most of what&apos;s left.</p>
+
+      <p>AckerSpray&apos;s benchmark is that spray-only becomes a &ldquo;real business opportunity&rdquo; at 3,000 acres minimum, and that is not a profitable business. That is a survivable one. The operators earning $150,000 to $785,000 per year, according to Financial Models Lab&apos;s December 2025 benchmark, are not spray-only shops. They are running four or five services. Everything below is how you get there.</p>
+
       {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
     </>
   ),
