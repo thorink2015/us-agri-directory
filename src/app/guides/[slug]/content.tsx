@@ -384,7 +384,117 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>One warning. Non-ag client work needs different insurance language. Standard ag UAV policies may not cover construction sites. A rider or separate commercial UAS policy is usually required. Confirm this with your insurer before you accept non-ag work.</p>
 
-      {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
+      <h2 id="calendar">The 12-month calendar that actually gets built</h2>
+
+      <p>A Corn Belt operator with one spray drone plus a mapping drone can run a real 12-month calendar that looks something like this.</p>
+
+      <p>January is contract calls, fleet teardown, equipment inspection, and non-ag mapping. February is spring marketing, USDA program consultations with customers, and crop insurance adjusting work in southern states. March is spring preplant granular spreading on wet fields, first herbicide sprays in Texas and Oklahoma, and early NDVI mapping of spring stand establishment. April is preplant spray in northern states and NDVI baseline mapping for seasonal subscription clients.</p>
+
+      <p>May through July is core spray season at maximum capacity. August is spray continuing while cover crop seeding begins into standing soybeans. This is peak billing month of the year. September is cover crop seeding peak (into corn, into soybean stubble after cutting) and spray winding down. October is post-harvest NDVI analysis, cover crop establishment verification, and fall granular spreading starting. November is fall granular spreading (potassium, phosphorus, lime), ranch and livestock contracts in Texas and the Plains, and construction mapping. December is fleet maintenance, subscription renewals, proposals for next year, and livestock thermal calls tied to weather-related cattle movement.</p>
+
+      <p>A realistic Year 2 revenue model for a solo operator with one spray drone and one mapping drone, if you actually run all the services, looks like this:</p>
+
+      <div className="guide-table-callout" role="region" aria-label="Year 2 revenue model">
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Days per year</th>
+              <th>Rate</th>
+              <th>Daily output</th>
+              <th>Gross</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Liquid spray</td>
+              <td>85</td>
+              <td>$14 per acre</td>
+              <td>180 acres</td>
+              <td>$214,200</td>
+            </tr>
+            <tr>
+              <td>Cover crop seeding</td>
+              <td>25</td>
+              <td>$12 per acre</td>
+              <td>120 acres</td>
+              <td>$36,000</td>
+            </tr>
+            <tr>
+              <td>NDVI mapping</td>
+              <td>35</td>
+              <td>$9 per acre</td>
+              <td>400 acres</td>
+              <td>$126,000</td>
+            </tr>
+            <tr>
+              <td>Granular spreading</td>
+              <td>20</td>
+              <td>$10 per acre</td>
+              <td>100 acres</td>
+              <td>$20,000</td>
+            </tr>
+            <tr>
+              <td>Livestock thermal</td>
+              <td>18</td>
+              <td>$225 per hour</td>
+              <td>6 hours</td>
+              <td>$24,300</td>
+            </tr>
+            <tr>
+              <td><strong>Total</strong></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><strong>$420,500</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>That number aligns with the upper range Financial Models Lab projects for diversified operators in Year 2, and it requires building a client base. Year 1 mapping revenue and ranch revenue will both be lower while you establish the relationships. Year 3 is where the subscription model covered further down starts compounding.</p>
+
+      <h2 id="certification-stack">The certification stack that prices up every service</h2>
+
+      <p>The difference between a $9 per acre NDVI map and a $25 per acre variable rate prescription is a signature. Specifically, the signature of a Certified Crop Adviser from the American Society of Agronomy on the agronomic recommendation.</p>
+
+      <p>The CCA international exam runs $275 to $280, with a local board exam at $100 to $160. You need two years of experience with a BS degree or four years without, plus 40 continuing education units every two years. CareerExplorer pegs CCA median salary at $59,770 and ZipRecruiter shows $70,000 to over $100,000 for dedicated crop advisors. The value to a drone operator is not the employment number. It is the premium it puts on every map you deliver. A CCA-signed prescription jumps from the commodity $5 to $10 per acre range into the $15 to $30 range, because now you are signing an agronomic recommendation the farmer can use to justify an application decision to a state regulator, a crop insurance adjuster, or a landlord.</p>
+
+      <p>Specialty credentials stack on top. The 4R Nutrient Management Specialty is a CCA add-on at $170 that markets directly for variable rate nitrogen prescription work. ASPRS sUAS Mapping Scientist certification (around $475 exam plus $100 application) is the credential for federal or survey-grade mapping work. Infraspection Institute Certified Infrared Thermographer (32 hours plus exam, no expiration, no renewal fee) unlocks thermography services in agricultural and industrial settings. FLIR ITC Level I is a $2,200 four-day course that also opens this niche.</p>
+
+      <p>State pesticide consultant licenses are required to formally recommend rates and products in nearly every state. Iowa&apos;s Agricultural Consultant license (Category 10) is $75. Illinois CPAdM is $60. Nebraska runs around $25. North Dakota has a separate Unmanned Aerial Applicator License at $200 through the ND Aeronautics Commission. California now has the AB 527 Unmanned Apprentice Pilot Certificate and Journeyman Unmanned Pest Control Aircraft Pilot, which are drone-specific certs requiring a QAC application and 20 CEUs every two years.</p>
+
+      <p>For a state-by-state breakdown of what each credential unlocks, see <Link href="/training-and-certification">training and certification</Link>.</p>
+
+      <h2 id="subscription-model">The subscription model most operators never build</h2>
+
+      <p>One question separates operators earning $150,000 per year from operators earning $500,000. Are your clients paying you once per service, or are they on a monthly retainer?</p>
+
+      <p>Ceres Imaging, a fixed-wing aerial imagery company, publishes a case study on a California vineyard that paid $6,000 for a season of imagery and tracked $150,000 in added grape value. Sentera sells FieldAgent tiered annual subscriptions with specific line items like $0.25 per acre for weed and population maps and $1,200 per year flat for unlimited cotton stand count. Taranis sells &ldquo;Subscribed Acres&rdquo; through ag retailers at $5 to $20 per acre per season. Rantizo&apos;s Bronze, Silver, and Gold subscription tiers for its operator network include AcreConnect software as recurring revenue.</p>
+
+      <p>What triggers a farmer to convert from one-off service to a subscription? Documentation is the biggest driver, not farming nostalgia. USDA Risk Management Agency approves drone-derived measurements for flood and hail loss adjustment, and the policyholder must file a damage notice within 72 hours. That deadline favors operators already on retainer who can fly a claim within a day of a weather event. Repeat disease or pest problems (white mold in soybeans, tar spot in corn, iron chlorosis) convert one-off scouting into annual monitoring. Landlord and tenant compliance on cash-rent leases pushes As Applied and As Covered mapping records into lease terms that renew every year. State pesticide reporting requirements in California and Washington force operators to maintain the mapping tool they already use for internal compliance.</p>
+
+      <p>The sample subscription contract from independent US operators is not publicly posted anywhere. This is a real market gap. Ceres&apos;s published structure specifies weekly or bi-monthly flights with Water Stress plus NDVI base, optional RGB, thermal, and chlorophyll add-ons, 48-hour data turnaround, and per-acre billing. Industry guides consistently show seasonal or subscription contracts reduce effective per-acre cost 15 to 25 percent for the farmer versus one-offs.</p>
+
+      <p>For CRM, small operators cobble together Jobber (350,000+ professionals on the platform) or Housecall Pro (around 200,000 users) for customer management, QuickBooks for invoicing, and either Rantizo AcreConnect or DJI SmartFarm for operational data. Rantizo AcreConnect is purpose-built for drone ag with work orders, product usage reports, As Applied and As Covered maps, and job matching across the Rantizo network. It launched March 2024 and is the closest thing the industry has to a standard.</p>
+
+      <h2 id="action-checklist">Operator action checklist</h2>
+
+      <p>If you run a spray-only business today, the moves are sequential, not simultaneous.</p>
+
+      <ol>
+        <li>Buy the spreader attachment for your existing Agras drone. Under $1,200.</li>
+        <li>Pick your state&apos;s largest cover crop cost-share program and learn every rule. This becomes your sales pitch.</li>
+        <li>Identify three to five ranch operations within 45 minutes that run over 2,000 acres. Introduce yourself in December, not in July.</li>
+        <li>Order a DJI Mavic 3 Multispectral and a Pix4Dfields license. Start the scouting service the following April.</li>
+        <li>Enroll in the CCA exam at your next available sitting. Budget 6 to 12 months of study time.</li>
+        <li>Get quotes on Public Health Pest Control Operator licensing in your state. Start paperwork before May.</li>
+        <li>Redesign your quote and invoice template to include a monthly subscription option for every farm over 1,000 acres.</li>
+      </ol>
+
+      <p>The operators who win the next three years will not be the ones with the biggest spray drones. They will be the ones with the most services stacked, the most credentials behind their name, and the most recurring-revenue contracts signed before the season starts. If you are still starting out on the licensing side, <Link href="/start-a-drone-business">start a drone business</Link> covers the foundation, <Link href="/regulations/faa-part-137">FAA Part 137</Link> covers the operator certificate you need for spray work, and <Link href="/buyers-guide">buyers guide</Link> covers equipment selection before you spend the money.</p>
+
+      <p>The off season is not empty. It is unclaimed.</p>
     </>
   ),
 };
