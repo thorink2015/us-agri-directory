@@ -204,6 +204,117 @@ export const guides: Guide[] = [
       { href: '/comparisons/drone-vs-airplane', label: 'Drone vs airplane' },
     ],
   },
+  {
+    slug: 'year-round-revenue-ag-drone-operators',
+    title:
+      'Year Round Revenue for Ag Drone Operators: How to Fill Your Calendar in the Off Season',
+    shortTitle: 'Year-round revenue for ag drone operators',
+    description:
+      'How US ag drone operators stack 6 services to earn $150K to $420K per year. Real companies, 2026 pricing, state cost share rates, and the 12 month calendar that actually works.',
+    primaryKeyword: 'ag drone business year round',
+    secondaryKeywords: [
+      'drone spraying off season income',
+      'cover crop seeding drone service',
+      'drone NDVI mapping pricing',
+      'agricultural drone custom operator revenue',
+      'livestock thermal drone pricing',
+      'mosquito abatement drone contracts',
+    ],
+    category: 'Operators',
+    publishDate: '2026-04-23',
+    lastUpdated: '2026-04-23',
+    readMinutes: 20,
+    aeoBlock:
+      'A spray-only ag drone business in the US Corn Belt caps out around $80,000 to $150,000 gross because the spray window is only 5 months and industry-average custom rates collapsed to about $13 per acre in 2025. The operators earning $150,000 to $420,000 per year run 4 to 6 stacked services across a full 12-month calendar: liquid spray at $12 to $22 per acre in-season, cover crop aerial seeding at $18 to $25 per acre in August through October, NDVI mapping and variable-rate prescriptions at $9 to $30 per acre, thermal ranch and livestock work at $150 to $400 per hour year-round, mosquito abatement district contracts, granular fertilizer shoulder-season work, and non-ag RGB mapping for construction and real estate in winter. The single highest-ROI add-on to a spray-only business is a $1,200 spreader attachment for an existing Agras drone, which unlocks $30,000 to $50,000 in fall cover crop seeding plus $15,000 to $20,000 in shoulder-season granular work.',
+    toc: [
+      { id: 'spray-season-math', label: 'The spray-season math that forces this decision' },
+      { id: 'cover-crop-seeding', label: 'Service 1: Cover crop aerial seeding' },
+      { id: 'ndvi-mapping', label: 'Service 2: NDVI mapping and variable-rate prescriptions' },
+      { id: 'livestock-ranch', label: 'Service 3: Livestock and ranch services' },
+      { id: 'mosquito-abatement', label: 'Service 4: Mosquito abatement contracts' },
+      { id: 'granular-spreading', label: 'Service 5: Granular fertilizer and lime spreading' },
+      { id: 'non-ag-mapping', label: 'Service 6: Non-ag mapping for year-round RGB income' },
+      { id: 'calendar', label: 'The 12-month calendar that actually gets built' },
+      { id: 'certification-stack', label: 'The certification stack that prices up every service' },
+      { id: 'subscription-model', label: 'The subscription model most operators never build' },
+      { id: 'action-checklist', label: 'Operator action checklist' },
+    ],
+    quickFacts: [
+      { label: '2025 US acres sprayed by drone', value: '16.4 million (ASDC, up 58.7% YoY)' },
+      { label: 'Registered Part 137 drone operators', value: '~1,082 nationwide (NAAA, fall 2025)' },
+      { label: 'Solo Year-2 diversified gross target', value: '$150,000 to $420,000 across 5 services' },
+      { label: 'Highest-ROI single add-on', value: 'Spreader attachment (<$1,200) for existing Agras' },
+    ],
+    pullQuotes: [
+      {
+        quote:
+          'A DJI Agras T50 kitted for commercial work runs about $33,000. Finance that over five years at 7 percent and you are paying close to $800 every month, whether the drone flies or sits in a shed.',
+        attribution: 'Opening math on why spray-only is fragile',
+      },
+      {
+        quote:
+          'A Maryland farmer pays you $22 per acre to seed, and the state pays him $65 per acre to do it. He nets $43 per acre and builds soil.',
+        attribution: 'Cover crop cost-share sales framing',
+      },
+      {
+        quote:
+          'One question separates operators earning $150,000 per year from operators earning $500,000. Are your clients paying you once per service, or are they on a monthly retainer?',
+        attribution: 'Subscription-model framing',
+      },
+    ],
+    featuredPullQuote: {
+      quote:
+        'The operators earning real money are not running spray-only businesses. They are running three to five stacked services and keeping the calendar full from January through December.',
+      attribution: 'From: the opening hook on ag drone operator revenue models',
+    },
+    faqs: [
+      {
+        question: 'How much can a solo ag drone operator realistically earn in Year 2?',
+        answer:
+          'A diversified Year 2 operator running spray plus cover crop seeding plus NDVI mapping plus one shoulder service (thermal ranch or granular spreading) can hit $150,000 to $420,000 gross. Spray-only operators typically max out around $80,000 to $150,000 gross even at 4,000 acres.',
+      },
+      {
+        question: 'Do I need a separate drone for NDVI mapping?',
+        answer:
+          'Yes. DJI Agras spray drones have basic GPS and limited survey capability. Real NDVI work needs a DJI Mavic 3 Multispectral ($4,618 to $5,204 depending on Care plan) or equivalent. Payback is typically one season if you cover 1,500+ acres of scouting work.',
+      },
+      {
+        question: 'What drone is best for livestock thermal inspection under $6,000?',
+        answer:
+          'The Autel EVO II Dual 640T V3 at $5,299 manufacturer direct is currently the best value sub-$6K thermal option. DJI Matrice 30T starts around $12,000. FLIR SIRAS starts around $5,000 and is purpose-built for thermal but harder to source through 2026.',
+      },
+      {
+        question: 'Do I need a separate license for mosquito abatement?',
+        answer:
+          'Yes, in nearly every state. This is a public health category, separate from your ag applicator license. Florida requires Chapter 388 Public Health Pest Control Operator (not the Chapter 487 ag RUP license). California requires CDPH Vector Control Technician Certification with Categories A and B. Most states require $1 to $5 million liability coverage for district contracts.',
+      },
+      {
+        question: 'Can a Northern Plains operator actually make money year round?',
+        answer:
+          'Yes, but not from drone flying in North Dakota or Minnesota from November through March. The documented strategy is five months of spray, three to four months of crop insurance adjusting (NCIS CAPP licensure) at $225 to $350 per day plus mileage, plus one to two months of southern contract flying in the Delta or Rio Grande Valley through subcontract arrangements with operators like Pro Ag Solutions or Great Plains Drone Co.',
+      },
+      {
+        question: 'What is the single highest ROI addition to a spray-only business?',
+        answer:
+          'A $1,200 spreader attachment for your existing Agras drone. No new FAA certification, no new insurance class, and it unlocks $30,000 to $50,000 in fall cover crop seeding plus $15,000 to $20,000 in shoulder-season granular fertilizer work. Payback under one season in most markets.',
+      },
+      {
+        question: 'Can I start a ranch thermal service without becoming a licensed vet?',
+        answer:
+          'Yes, but you cannot diagnose. You can observe, count, locate, and report visible events. You cannot describe an animal as having fever, pneumonia, or BRD on a client report. Partner with a licensed vet who holds the Veterinarian Client Patient Relationship for any diagnostic language.',
+      },
+    ],
+    relatedInternal: [
+      { href: '/regulations/faa-part-137', label: 'FAA Part 137 for drones' },
+      { href: '/regulations/faa-part-107', label: 'FAA Part 107' },
+      { href: '/regulations/state-licensing', label: 'State pesticide licensing' },
+      { href: '/insurance', label: 'Insurance for drone applicators' },
+      { href: '/grants-and-subsidies', label: 'Grants and cost-share programs' },
+      { href: '/training-and-certification', label: 'Training and certification' },
+      { href: '/start-a-drone-business', label: 'Start a drone business' },
+      { href: '/buyers-guide', label: 'Spray drone buyer\'s guide' },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string): Guide | undefined {

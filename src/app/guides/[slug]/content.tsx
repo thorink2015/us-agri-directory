@@ -296,4 +296,9 @@ export const guideContent: Record<string, ReactNode> = {
 
     </>
   ),
+  'year-round-revenue-ag-drone-operators': (
+    <>
+      {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
+    </>
+  ),
 };
