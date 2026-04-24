@@ -618,6 +618,87 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>There is no published FAA fee for the Part 137 AAOC. The hidden cost is time: assembling the operations manual, training program, and Applicant Readiness Checklist takes most first-time applicants 40 to 80 hours of work. Some operators pay aviation attorneys or compliance services to prepare the package. AckerSpray publishes a fixed-price compliance bundle at $3,000 that covers Section 44807, Part 137, and FAA registration.</p>
 
+      <h2 id="step-3-state-license">Step 3, get your state pesticide applicator license</h2>
+
+      <p>The FAA regulates your aircraft and your pilot. Your state agriculture department regulates you as a pesticide applicator. These are two separate, simultaneous licensing tracks.</p>
+
+      <p>The legal basis is the Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA), which delegates applicator certification to the states under EPA-approved plans (40 CFR Part 171). The 2017 revision to Part 171 required all states to offer a dedicated aerial specialization for commercial applicators using restricted-use pesticides.</p>
+
+      <p>Two applicator categories matter for drone work:</p>
+
+      <ul>
+        <li>A <strong>private applicator</strong> applies restricted-use pesticides on land owned or rented by the applicator or their employer, for agricultural commodity production.</li>
+        <li>A <strong>commercial applicator</strong> applies pesticides on someone else&apos;s land for compensation. This is the category most drone spray businesses fall under.</li>
+      </ul>
+
+      <p>Every commercial applicator takes a &ldquo;core&rdquo; or general standards exam covering labels, safety, environmental protection, calibration, and drift. Then they take one or more category exams. Aerial is a mandatory federal category. Some states have added drone-specific sub-categories on top of aerial.</p>
+
+      <p>Costs and renewal cycles vary by state:</p>
+
+      <figure className="guide-table-callout" aria-label="Representative state pesticide applicator fees and renewal cycles">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">State</th>
+              <th scope="col">Representative fee</th>
+              <th scope="col">Renewal cycle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>California</td>
+              <td>$265 Unmanned Apprentice Pilot Certificate</td>
+              <td>2-year</td>
+            </tr>
+            <tr>
+              <td>Texas</td>
+              <td>Commercial $200 per year, Private $100 (5-yr)</td>
+              <td>Commercial annual</td>
+            </tr>
+            <tr>
+              <td>Nebraska</td>
+              <td>Commercial $90 (3-yr), Private $25 (3-yr)</td>
+              <td>3-year</td>
+            </tr>
+            <tr>
+              <td>Minnesota</td>
+              <td>Private $5 to add General Aerial endorsement</td>
+              <td>3-year</td>
+            </tr>
+            <tr>
+              <td>Iowa</td>
+              <td>IDALS exam plus cert fees, separate company license</td>
+              <td>3-year</td>
+            </tr>
+            <tr>
+              <td>Ohio</td>
+              <td>Oct 1 to Sept 30 license year</td>
+              <td>Annual</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>Source: state agriculture department websites, 2025-2026 fee schedules.</p>
+
+      <p>Reciprocity is limited and unreliable. Even when two states recognize each other&apos;s core exam, they will typically require you to pass the category-specific exam locally. Jonathan Cottingham at Southern Drone OPS built out dealer and pilot coverage in 11 states; each one required a separate state-level license stack.</p>
+
+      <p>If you plan to operate across state lines, budget for three to six months of testing and paperwork across every state on your list. For the full 50-state breakdown and individual state contacts, see <Link href="/regulations/state-licensing">our state licensing directory</Link>.</p>
+
+      <h2 id="step-4-section-44807">Step 4, Section 44807 exemption for drones over 55 pounds</h2>
+
+      <p>The Part 107 weight limit for small UAS is 55 pounds maximum takeoff weight, including payload. A DJI Agras T50 with a full tank weighs 227 pounds. A DJI T100 weighs 390 pounds. A Hylio AG-272 weighs 400 pounds. None of these are legal to operate commercially under Part 107 alone. You need a Section 44807 exemption.</p>
+
+      <p>Section 44807 of 49 U.S.C. gives the FAA authority to let certain UAS operate safely without full airworthiness certification, case by case. The FAA Reauthorization Act of 2024 extended this authority to September 30, 2033 and continued existing exemptions for up to three years beyond their original termination date.</p>
+
+      <p>A 44807 exemption is also needed when the operation itself falls outside Part 107&apos;s scope, for example multi-UAS swarming or BVLOS beyond the standard waiver. Ag spray operators always need one for Part 107 Section 107.36, which non-waivably prohibits hazmat carriage.</p>
+
+      <p>Since 2023, you can reference the FAA&apos;s &ldquo;List of Approved Agricultural UAS under Section 44807&rdquo; (Docket FAA-2023-1271) instead of starting from scratch. If your aircraft is on the list, your petition is essentially a me-too application. Approved airframes include the DJI Agras T40, T50, and T100, the Hylio AG-172 and AG-272, and the Guardian Agriculture SC1.</p>
+
+      <p>Petitions are filed on regulations.gov under 14 CFR Part 11. Section 11.63(d) requires that you file at least 120 days before your needed effective date. There is no FAA filing fee. Industry-reported approval timelines run 30 to 120 days for straightforward ag petitions. Novel operations like BVLOS or swarming take longer.</p>
+
+      <p>On cost, self-filing is free if you do the work yourself. Attorney-filed petitions for a simple me-too ag 44807 typically run $1,500 to $3,500, with some shops publishing $600 fees for individual add-ons like night operations or BVLOS safety cases. Flat fees for routine Part 107 waivers start around $500, and BVLOS petitions can run $10,000 or more. For the full regulatory breakdown see <Link href="/regulations">our regulations hub</Link>.</p>
+
       {/* GUIDE-INSERT-POINT: how-to-become-an-agricultural-drone-pilot */}
     </>
   ),
