@@ -838,7 +838,50 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>A typical solo operator in their first full season flies 4,000 to 8,000 acres. Iowa State&apos;s 2026 survey shows Iowa&apos;s average drone spray rate at $11.85 per acre, so a 6,000-acre Iowa solo operator will gross around $71,000. Most of the margin goes back into the second drone, second generator, or hiring a ground crew. See <Link href="/pricing">our pricing pillar</Link> for the full custom-rate breakdown by service and region.</p>
 
-      {/* GUIDE-INSERT-POINT: how-to-become-an-agricultural-drone-pilot */}
+      <h2 id="who-succeeds">What separates operators who build a business from those who quit</h2>
+
+      <p>Four patterns show up across every successful named operator in the 2024 to 2026 coverage.</p>
+
+      <p><strong>Ag roots or a deliberate substitute.</strong> Hayden and Conner Crum started Midwest Air off their family&apos;s 50-year farm supply business. Jonathan Cottingham is a third-generation aerial applicator; his family&apos;s crop-dusting history was his referral network from day one. Kam Harper was a former farm manager whose first customers were his old employer&apos;s neighbors. &ldquo;I was so busy that I couldn&apos;t keep up.&rdquo; If you do not have ag roots, build a deliberate substitute. Partner with a seed dealer, a chemical retailer, or a co-op. Ackerspray&apos;s founder puts it plainly: start with local seed and chemical dealers, not with farmers directly.</p>
+
+      <p><strong>A subcontracting path for day-one revenue.</strong> nuWay FastPass is the most documented example: for an $800 fee, operators who have bought equipment but are waiting on their own Part 137 approval can legally spray as contractors under nuWay Ag&apos;s existing certificate. That gets you flying in one to two weeks instead of three to six months. SweetWater Technologies runs a similar franchise model, going from 32,000 acres in 2022 to a projected 200,000 acres by end of 2025. &ldquo;What we do is in demand.&rdquo;</p>
+
+      <p><strong>Specialization within 12 months.</strong> Harper runs Delta herbicide, 90%. Beal runs Christmas tree fungicide and corn pastures. Crum layered Ohio H2Ohio cover-crop seeding on top of fungicide, exploiting the state&apos;s roughly $50 per acre cover crop program. Operators who stay generalists get squeezed; operators who specialize find rates that have not compressed.</p>
+
+      <p><strong>Regulatory compliance from day one, usually with a second revenue line by year two.</strong> Every successful named operator in the sample runs at least two revenue lines by year two: spraying plus dealer sales, trailer sales, training, or software. Mike Yoder at nuWay Ag runs spraying plus DJI dealer plus trailer manufacturing plus the DroneOn Show plus FastPass subcontracting. Hayden Crum at Midwest Air runs spraying plus DJI dealer plus cover-crop seeding. Taylor Moreland at Agri Spray Drones runs distribution plus the Spray Drone End User Conference.</p>
+
+      <p>The quitters share a different pattern: wrong drone for the job, no Part 137, no state license, insurance gap after a drift claim, or a single customer that bailed. The 2025 Minneapolis Craigslist listing sells a Minnesota spray operation with 85 acres on the drone. The paper trail tells the story.</p>
+
+      <p>Crum&apos;s summary on the selling-to-your-competition question is the right frame for how this industry actually scales: &ldquo;I can&apos;t cover every acre, and I can&apos;t always hit perfect timing for every farmer.&rdquo; If you go in with that mindset, you will find room. See <Link href="/start-a-drone-business">our start a drone business playbook</Link> for the full breakdown on partnerships, pricing, and first-year contracts.</p>
+
+      <h3>Your 90-day launch checklist</h3>
+
+      <ol>
+        <li>Create an IACRA account and reserve a PSI Part 107 test date within 30 days.</li>
+        <li>Study 15 to 20 hours for the UAG exam. Pass on the first attempt.</li>
+        <li>Receive your temporary Part 107 certificate and register the aircraft under Part 47 if it is over 55 pounds, or Part 48 if under.</li>
+        <li>File your Section 44807 petition on regulations.gov, referencing the approved airframe list.</li>
+        <li>Start your state pesticide applicator core exam prep while the 44807 is pending.</li>
+        <li>Once 44807 is granted, draft your Part 137 operations manual and Applicant Readiness Checklist.</li>
+        <li>Submit Form 8710-3 to UAS137Certificates@faa.gov with your 44807 exemption number.</li>
+        <li>Get insured before the AAOC comes through. Hull, liability, and chemical drift. Budget $4,000 to $10,500 annually.</li>
+        <li>Sign one subcontracting agreement (nuWay FastPass, regional operator) so you can book paid work while your AAOC is in review.</li>
+        <li>Pick one specialization by month 12: Delta herbicide, corn fungicide, cover crop seeding, orchards, or pheromones.</li>
+      </ol>
+
+      <p>Some ag drone operators go on to get their Private Pilot certificate for manned aerial work, either to fly their own scouting plane or to move into mixed-fleet custom application down the road.</p>
+
+      <AffiliateCard
+        slug="pilot-institute-private-pilot"
+        heading="Going beyond drones? Study for your Private Pilot"
+        bullets={[
+          '35 hours of video, 850 practice questions',
+          'Instructor endorsement included',
+          'Pass guarantee',
+        ]}
+        ctaLabel="See the Private Pilot course"
+        variant="compact"
+      />
     </>
   ),
 };
