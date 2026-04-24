@@ -265,6 +265,7 @@ export default function BuyersGuidePage() {
           <Link href="/tools/roi-calculator" className="text-green-700 hover:underline">ROI calculator</Link>
           <Link href="/pricing" className="text-green-700 hover:underline">2026 pricing guide</Link>
           <Link href="/guides/hire-drone-spray-operator-checklist" className="text-green-700 hover:underline">Hiring a drone spray operator (checklist)</Link>
+          <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
           <Link href="/services/sales" className="text-green-700 hover:underline">Drone sales and dealers</Link>
           <Link href="/grants-and-subsidies" className="text-green-700 hover:underline">Grants and cost-share</Link>
