@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateCard from '@/components/affiliate/AffiliateCard';
 import { AUTHOR, SITE } from '@/data/author';
 
 import { addUtm } from '@/lib/utm';
@@ -139,6 +140,18 @@ export default function FaaPart107Page() {
             The most common waivers requested by ag drone operators are: night operations (no longer required since April 2021 rule change if anti-collision lighting is installed), BVLOS for large field spraying (still requires case-by-case waiver), operations over people (Category 1-4 drones may qualify without a waiver) and altitude above 400 ft AGL (rare for ag work, occasionally requested for mountain orchards). Waivers are submitted through the <a href={addUtm("https://faadronezone-access.faa.gov/", "authority_link")} target="_blank" rel="noopener noreferrer" className="text-green-700 hover:underline">FAA DroneZone portal</a> and typically take 60 to 90 days for review.
           </p>
         </section>
+
+        <AffiliateCard
+          slug="pilot-institute-part-107"
+          heading="Need to pass the Part 107 exam?"
+          bullets={[
+            '15 hours of video taught by an FAA Certified Flight Instructor',
+            'Pass guarantee, $175 test fee refunded if you fail',
+            'Used by 80,000+ students',
+            'Lifetime access so you stay current with FAA changes',
+          ]}
+          ctaLabel="See the Part 107 course"
+        />
 
         {/* Authority links */}
         <section className="mt-10 bg-gray-50 border border-gray-200 rounded-xl p-5 text-sm">

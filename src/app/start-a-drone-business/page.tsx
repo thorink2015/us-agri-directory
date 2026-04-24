@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateCard from '@/components/affiliate/AffiliateCard';
 import { AUTHOR, SITE } from '@/data/author';
 
 import { addUtm } from '@/lib/utm';
@@ -215,6 +216,20 @@ export default function StartADroneBusinessPage() {
           <p>
             <Link href="/training-and-certification" className="text-green-700 hover:underline">Full certification details</Link> | <Link href="/regulations/state-licensing" className="text-green-700 hover:underline">state-specific requirements</Link>.
           </p>
+
+          <div className="not-prose">
+            <AffiliateCard
+              slug="pilot-institute-part-107"
+              heading="Step one: get your Part 107"
+              bullets={[
+                '15 hours of video taught by an FAA Certified Flight Instructor',
+                'Pass guarantee, $175 test fee refunded if you fail',
+                'Used by 80,000+ students',
+                'Lifetime access so you stay current with FAA changes',
+              ]}
+              ctaLabel="See the Part 107 course"
+            />
+          </div>
 
           <h2 className="text-xl font-bold text-gray-900">Which drone to buy first</h2>
           <p>

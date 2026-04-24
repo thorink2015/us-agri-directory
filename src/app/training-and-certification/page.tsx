@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateCard from '@/components/affiliate/AffiliateCard';
 import { AUTHOR, SITE } from '@/data/author';
 
 import { addUtm } from '@/lib/utm';
@@ -124,6 +125,30 @@ export default function TrainingAndCertificationPage() {
             The complete certification pathway for a commercial ag drone operator costs $3,500 to $6,000 across three tracks: FAA Part 107 ($175 exam, 2 to 4 weeks study), state commercial pesticide applicator license ($75 to $300 per category) and FAA Part 137 with Section 44807 exemption ($2,500 to $4,500 consultant package or DIY in 90 to 180 days). Total timeline from start to first paying customer: 6 to 9 months.
           </p>
         </div>
+
+        <AffiliateCard
+          slug="pilot-institute-part-107"
+          heading="Get your Part 107 certificate"
+          bullets={[
+            '15 hours of video taught by an FAA Certified Flight Instructor',
+            'Pass guarantee, $175 test fee refunded if you fail',
+            'Used by 80,000+ students',
+            'Lifetime access so you stay current with FAA changes',
+          ]}
+          ctaLabel="See the Part 107 course"
+        />
+
+        <AffiliateCard
+          slug="pilot-institute-private-pilot"
+          heading="Going beyond drones? Study for your Private Pilot"
+          bullets={[
+            '35 hours of video, 850 practice questions',
+            'Instructor endorsement included',
+            'Pass guarantee',
+          ]}
+          ctaLabel="See the Private Pilot course"
+          variant="compact"
+        />
 
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">The three certification tracks</h2>
