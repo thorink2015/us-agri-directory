@@ -389,6 +389,76 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>One warning. Non-ag client work needs different insurance language. Standard ag UAV policies may not cover construction sites. A rider or separate commercial UAS policy is usually required. Confirm this with your insurer before you accept non-ag work.</p>
 
+      <h2 id="calendar">The 12 month calendar that actually gets built</h2>
+
+      <p>A Corn Belt operator with one spray drone plus a mapping drone can run a real 12-month calendar that looks something like this.</p>
+
+      <p>January is contract calls, fleet teardown, equipment inspection, and non-ag mapping. February is spring marketing, USDA program consultations with customers, and crop insurance adjusting work in southern states. March is spring preplant granular spreading on wet fields, first herbicide sprays in Texas and Oklahoma, and early NDVI mapping of spring stand establishment. April is preplant spray in northern states and NDVI baseline mapping for seasonal subscription clients.</p>
+
+      <p>May through July is core spray season at maximum capacity. August is spray continuing while cover crop seeding begins into standing soybeans. This is peak billing month of the year. September is cover crop seeding peak (into corn, into soybean stubble after cutting) and spray winding down. October is post-harvest NDVI analysis, cover crop establishment verification, and fall granular spreading starting. November is fall granular spreading (potassium, phosphorus, lime), ranch and livestock contracts in Texas and the Plains, and construction mapping. December is fleet maintenance, subscription renewals, proposals for next year, and livestock thermal calls tied to weather-related cattle movement.</p>
+
+      <p>A realistic Year 2 revenue model for a solo operator with one spray drone and one mapping drone, if you actually run all the services, looks like this:</p>
+
+      <figure className="guide-table-callout" aria-label="Year 2 revenue model, solo operator with one spray drone and one mapping drone">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Service</th>
+              <th scope="col">Days per year</th>
+              <th scope="col">Rate</th>
+              <th scope="col">Daily output</th>
+              <th scope="col">Gross</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Liquid spray</td>
+              <td>85</td>
+              <td>$14 per acre</td>
+              <td>180 acres</td>
+              <td>$214,200</td>
+            </tr>
+            <tr>
+              <td>Cover crop seeding</td>
+              <td>25</td>
+              <td>$12 per acre</td>
+              <td>120 acres</td>
+              <td>$36,000</td>
+            </tr>
+            <tr>
+              <td>NDVI mapping</td>
+              <td>35</td>
+              <td>$9 per acre</td>
+              <td>400 acres</td>
+              <td>$126,000</td>
+            </tr>
+            <tr>
+              <td>Granular spreading</td>
+              <td>20</td>
+              <td>$10 per acre</td>
+              <td>100 acres</td>
+              <td>$20,000</td>
+            </tr>
+            <tr>
+              <td>Livestock thermal</td>
+              <td>18</td>
+              <td>$225 per hour</td>
+              <td>6 hours</td>
+              <td>$24,300</td>
+            </tr>
+            <tr>
+              <td><strong>Total</strong></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><strong>$420,500</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>That number aligns with the upper range Financial Models Lab projects for diversified operators in Year 2, and it requires building a client base. Year 1 mapping revenue and ranch revenue will both be lower while you establish the relationships. Year 3 is where the subscription model covered further down starts compounding.</p>
+
       {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
     </>
   ),
