@@ -2,6 +2,8 @@
 
 > Free directory of 391 verified agricultural drone operators across all 50 US states. Find spraying, seeding, mapping, and crop monitoring services by state, crop, or drone model. Published pricing, regulations, and interactive tools for farmers and operators.
 
+**Full content for AI agents:** [llms-full.txt](https://agdronedirectory.com/llms-full.txt) — deeper AEO blocks, pillar guide digests, and primary sources for all key pages.
+
 US Ag Drone Directory publishes the only public, primary-source-cited index of commercial agricultural drone operators in the United States. Every operator listing is filtered for FAA Part 107 and Part 137 certification status, state commercial pesticide applicator licensing with aerial category endorsement, and verifiable fleet and insurance data. Pricing benchmarks cite the 2026 Iowa State Custom Rate Survey, Kansas State Extension, UC Davis Cooperative Extension, and USDA NRCS cost-share rates. The site is built for farmers comparing operators and operators benchmarking their market, not for investors or press coverage.
 
 ## Core pages
