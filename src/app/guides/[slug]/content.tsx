@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
+import AffiliateCard from '@/components/affiliate/AffiliateCard';
 
 /**
  * Guide content keyed by slug (matching guides.ts).
@@ -531,6 +532,75 @@ export const guideContent: Record<string, ReactNode> = {
       <p>A Part 107 certificate alone lets you fly a drone commercially, for example for mapping or scouting. It does not let you dispense pesticides. For that you need Part 137. Running a spray business as Part 107 only is the single fastest way to get fined or shut down. The FAA&apos;s 2025 enforcement sweep suspended or fined 18 drone operators with penalties between $1,771 and $36,770.</p>
 
       <p>Fleet size tells you what this market actually looks like. According to the ASDC&apos;s 2025 survey, 69% of Part 137 operators run two drones or fewer, and the average operator flies 9,584 acres per season. Most of the people doing this are solo or two-person shops, not fleets.</p>
+
+      <h2 id="step-1-part-107">Step 1, get your Part 107 Remote Pilot Certificate</h2>
+
+      <p>Everything else waits on this. Part 107 is the FAA&apos;s foundational commercial small-UAS license. No Part 107, no commercial drone flight.</p>
+
+      <p>The knowledge test, the Unmanned Aircraft General (UAG), costs $175 per attempt, paid to PSI Services at booking. The format is straightforward: 60 multiple-choice questions, 120 minutes to finish, 70% to pass. If you fail, there is a mandatory 14-day wait before you can retest.</p>
+
+      <p>The test content is weighted like this:</p>
+
+      <figure className="guide-table-callout" aria-label="Part 107 UAG knowledge test content weighting">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Area</th>
+              <th scope="col">Topic</th>
+              <th scope="col">Weight</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>I</td>
+              <td>Regulations (Parts 89 and 107, waivers, Remote ID)</td>
+              <td>15 to 25%</td>
+            </tr>
+            <tr>
+              <td>II</td>
+              <td>Airspace and operating requirements</td>
+              <td>15 to 25%</td>
+            </tr>
+            <tr>
+              <td>III</td>
+              <td>Weather</td>
+              <td>11 to 16%</td>
+            </tr>
+            <tr>
+              <td>IV</td>
+              <td>Loading and performance</td>
+              <td>7 to 11%</td>
+            </tr>
+            <tr>
+              <td>V</td>
+              <td>Operations (radio, ADM, physiology, maintenance)</td>
+              <td>35 to 45%</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>Source: FAA-S-ACS-10B, current version dated April 2021.</p>
+
+      <p>Most first-time test-takers put in 15 to 20 hours of study over two to three weeks. Agricultural-specific guides suggest 8 to 15 hours once you focus on what ag pilots actually need to know. The 2025 FAA pass rate for Part 107 sits at 82.96%, which is the lowest of any FAA airman group. Study the material. Do not assume you will pass cold.</p>
+
+      <p>To hold the certificate you must be at least 16, able to read, speak, write, and understand English, and self-assessed as free from any physical or mental condition that would interfere with safe flight. No medical certificate is required.</p>
+
+      <p>Once you pass, you apply through IACRA with FAA Form 8710-13 and your 17-digit Knowledge Test Exam ID. TSA security vetting runs in the background. Most applicants get a temporary certificate by email in 7 to 14 business days, with the plastic card following in 6 to 8 weeks. See <Link href="/regulations/faa-part-107">our FAA Part 107 page</Link> for the full breakdown of test topics and scheduling.</p>
+
+      <p>To stay current you complete a free online recurrent training course every 24 calendar months. Course ALC-677 on FAASafety.gov covers Part 107 recurrent topics; it takes about two hours of material plus a 45-question quiz. If you let it lapse, you lose Remote Pilot-in-Command privileges until you complete it, but the certificate itself does not expire.</p>
+
+      <AffiliateCard
+        slug="pilot-institute-part-107"
+        heading="Get your Part 107 certificate"
+        bullets={[
+          '15 hours of video taught by an FAA Certified Flight Instructor',
+          'Pass guarantee, $175 test fee refunded if you fail',
+          'Used by 80,000+ students',
+          'Lifetime access so you stay current with FAA changes',
+        ]}
+        ctaLabel="See the Part 107 course"
+      />
 
       {/* GUIDE-INSERT-POINT: how-to-become-an-agricultural-drone-pilot */}
     </>
