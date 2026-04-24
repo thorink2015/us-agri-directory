@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateTextLink from '@/components/affiliate/AffiliateTextLink';
 import { counties } from '@/data/counties';
 import { AUTHOR, SITE } from '@/data/author';
 
@@ -119,7 +120,7 @@ export default function StateLicensingPage() {
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">The three-credential stack</h2>
           <p>
-            Commercial drone pesticide application is regulated at three levels: FAA Part 107 (pilot certificate), FAA Part 137 (agricultural aircraft operator certificate with Section 44807 exemption for drones over 55 lbs) and a state-issued commercial pesticide applicator license with an aerial category endorsement. The federal credentials are uniform across the country. The state license is the most variable piece of the stack, and it is where most operators spend the longest time on paperwork. No state issues a standalone drone spray license on its own; the state license is an aerial endorsement added to a commercial pesticide applicator credential.
+            Commercial drone pesticide application is regulated at three levels: FAA Part 107 (pilot certificate), FAA Part 137 (agricultural aircraft operator certificate with Section 44807 exemption for drones over 55 lbs) and a state-issued commercial pesticide applicator license with an aerial category endorsement. The federal credentials are uniform across the country. The state license is the most variable piece of the stack, and it is where most operators spend the longest time on paperwork. No state issues a standalone drone spray license on its own; the state license is an aerial endorsement added to a commercial pesticide applicator credential. Part 107 is a prerequisite for all of this. If you do not have it yet, <AffiliateTextLink slug="pilot-institute-part-107" linkText="start with the Part 107 course" />.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">What varies by state</h2>

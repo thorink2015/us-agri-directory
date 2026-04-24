@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateTextLink from '@/components/affiliate/AffiliateTextLink';
 import { AUTHOR, SITE } from '@/data/author';
 import { drones } from '@/data/drone-model';
 
@@ -270,6 +271,13 @@ export default function BuyersGuidePage() {
           <Link href="/services/sales" className="text-green-700 hover:underline">Drone sales and dealers</Link>
           <Link href="/grants-and-subsidies" className="text-green-700 hover:underline">Grants and cost-share</Link>
           <Link href="/regulations/ndaa-compliance" className="text-green-700 hover:underline">NDAA compliance</Link>
+          <span>
+            Need your Part 107 license?{' '}
+            <AffiliateTextLink
+              slug="pilot-institute-part-107"
+              linkText="See our recommended course"
+            />
+          </span>
         </div>
 
         <div className="mt-10">
