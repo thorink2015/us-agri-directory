@@ -602,6 +602,22 @@ export const guideContent: Record<string, ReactNode> = {
         ctaLabel="See the Part 107 course"
       />
 
+      <h2 id="step-2-part-137">Step 2, get your Part 137 Agricultural Aircraft Operator Certificate</h2>
+
+      <p>Part 107 covers the flight. Part 137 covers the dispensing. You need both.</p>
+
+      <p>14 CFR Part 137 governs agricultural aircraft operations, meaning the dispensing of economic poisons (pesticides, herbicides, fungicides), plant regulators, seeds, and soil-treatment substances. Section 137.11(a) is the line you cannot cross: no person may conduct agricultural aircraft operations without a valid Agricultural Aircraft Operator Certificate (AAOC).</p>
+
+      <p>Since June 2023, UAS-only applications no longer go to your local FSDO. You email FAA Form 8710-3 and your Section 44807 exemption number to UAS137Certificates@faa.gov at the centralized 137 UAS Operations Office under AFS-700. The process runs through five phases: Preapplication, Formal Application, Document Compliance, Demonstration and Inspection, and Certification.</p>
+
+      <p>Required documents include your operations manual, your congested-area plan if you will fly within 300 meters of one, chemical-handling and container-disposal procedures, pilot competency records, and aircraft make, model, and registration number. FAA Notice 8900.766, effective January 24, 2024, introduced a mandatory Applicant Readiness Checklist specifically to cut down on applicants entering Phase 3 with gaps in their paperwork.</p>
+
+      <p>Timelines vary. Industry reports place most uncomplicated applications at three to six months. Your mileage depends on how clean your paperwork is and how quickly you respond to an FAA Request for Information. The most common rejection reasons in 2024 to 2026 were: failing to respond to an RFI on time, using a P.O. Box instead of a physical address, name mismatches between Form 8710-3 and the Section 44807 exemption holder, and incomplete chemical-handling procedures in the operations manual. See <Link href="/regulations/faa-part-137">our Part 137 page</Link> for the full document checklist.</p>
+
+      <p>Delays matter more than you might think. Investigate Midwest reported that at the start of the 2024 season, at least 200 pilots were still waiting for their Part 137 certificate. Illinois operator Isaac Strubbe&apos;s advice: &ldquo;Drones can do things planes and helicopters can&apos;t.&rdquo; You cannot dispense a single drop of chemical without the certificate in hand. File in the off-season, not when you already have contracts on the line.</p>
+
+      <p>There is no published FAA fee for the Part 137 AAOC. The hidden cost is time: assembling the operations manual, training program, and Applicant Readiness Checklist takes most first-time applicants 40 to 80 hours of work. Some operators pay aviation attorneys or compliance services to prepare the package. AckerSpray publishes a fixed-price compliance bundle at $3,000 that covers Section 44807, Part 137, and FAA registration.</p>
+
       {/* GUIDE-INSERT-POINT: how-to-become-an-agricultural-drone-pilot */}
     </>
   ),
