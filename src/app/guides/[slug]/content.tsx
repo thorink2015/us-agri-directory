@@ -512,6 +512,26 @@ export const guideContent: Record<string, ReactNode> = {
   ),
   'how-to-become-an-agricultural-drone-pilot': (
     <>
+      <p>Hayden Crum was 16 when he and his brother Conner bought their first DJI Agras T20 and started flying jobs off the back of their family&apos;s Adams County, Ohio farm supply store. Four years later Midwest Air has sprayed close to 100,000 acres and runs four trailer setups. Their first custom job almost broke them. &ldquo;We had a generator that was not big enough.&rdquo; It took them four days to spray a single 100-acre field.</p>
+
+      <p>That gap between the pitch and the reality is what this guide is about.</p>
+
+      <p>In 2025, US operators sprayed 16.4 million acres by drone, up 58.7% from the year before, across a field of 1,710 Part 137-certified operators (ASDC 2025 Impact Survey). In the same year the average price per acre fell from $21 to $13, a 38% single-year collapse. The opportunity is real. The margin to waste is not.</p>
+
+      <p>To legally fly a commercial ag spray job in the United States you need a <Link href="/regulations/faa-part-107">Part 107 Remote Pilot Certificate</Link>, a Section 44807 exemption if your drone is over 55 pounds, a <Link href="/regulations/faa-part-137">Part 137 Agricultural Aircraft Operator Certificate</Link>, a <Link href="/regulations/state-licensing">state pesticide applicator license</Link>, FAA aircraft registration, and liability and chemical coverage. Skip any one of those and you are either grounded or exposed to FAA civil penalties that were raised to $75,000 per violation in 2025.</p>
+
+      <p>Here is the step-by-step path, what each step actually costs, and what the operators who stuck with it did differently from the ones who quit in year one.</p>
+
+      <h2 id="what-pilots-do">What an ag drone pilot actually does</h2>
+
+      <p>Daily work is less Instagram and more logistics. A solo operator flying a DJI Agras T40 or T50 covers 400 to 1,200 acres per good day depending on field size, obstacles, and chemical load. The 2026 Iowa State Custom Rate Survey added drone spraying as its own line for the first time, reflecting how common the service has become in row-crop country. Specialty crops, orchards, and vineyards take longer per acre but pay more.</p>
+
+      <p>The season is short. In the Midwest, most of the fungicide work collapses into a three-to-four week window between corn VT stage and soybean R3. In the Delta, Kam Harper at Macon Ridge Specialty Drone Service sprays herbicide on Mississippi Delta fields roughly 90% of the year. &ldquo;In the Mississippi Delta, the majority of what we do is herbicide. That is 90%.&rdquo; In the Mountain West, weed-district contracts dominate and the calendar stretches wider.</p>
+
+      <p>A Part 107 certificate alone lets you fly a drone commercially, for example for mapping or scouting. It does not let you dispense pesticides. For that you need Part 137. Running a spray business as Part 107 only is the single fastest way to get fined or shut down. The FAA&apos;s 2025 enforcement sweep suspended or fined 18 drone operators with penalties between $1,771 and $36,770.</p>
+
+      <p>Fleet size tells you what this market actually looks like. According to the ASDC&apos;s 2025 survey, 69% of Part 137 operators run two drones or fewer, and the average operator flies 9,584 acres per season. Most of the people doing this are solo or two-person shops, not fleets.</p>
+
       {/* GUIDE-INSERT-POINT: how-to-become-an-agricultural-drone-pilot */}
     </>
   ),
