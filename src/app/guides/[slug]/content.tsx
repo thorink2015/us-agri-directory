@@ -699,6 +699,145 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>On cost, self-filing is free if you do the work yourself. Attorney-filed petitions for a simple me-too ag 44807 typically run $1,500 to $3,500, with some shops publishing $600 fees for individual add-ons like night operations or BVLOS safety cases. Flat fees for routine Part 107 waivers start around $500, and BVLOS petitions can run $10,000 or more. For the full regulatory breakdown see <Link href="/regulations">our regulations hub</Link>.</p>
 
+      <h2 id="startup-costs">What it really costs to start</h2>
+
+      <p>A field-ready ag drone operation is not a $15,000 side project. Budget honestly or plan to be undercapitalized.</p>
+
+      <p>Here is what a realistic first-season setup looks like in 2026:</p>
+
+      <figure className="guide-table-callout" aria-label="First-season ag drone startup cost breakdown, 2026 budgets">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Line item</th>
+              <th scope="col">Low budget</th>
+              <th scope="col">Mid</th>
+              <th scope="col">High</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Drone (T40 to T50 class)</td>
+              <td>$22,000</td>
+              <td>$27,000</td>
+              <td>$32,000</td>
+            </tr>
+            <tr>
+              <td>Batteries (3 to 6 packs)</td>
+              <td>$6,000</td>
+              <td>$9,000</td>
+              <td>$13,000</td>
+            </tr>
+            <tr>
+              <td>Generator (14 kW +)</td>
+              <td>$4,000</td>
+              <td>$5,500</td>
+              <td>$7,500</td>
+            </tr>
+            <tr>
+              <td>Trailer and mix station</td>
+              <td>$5,000</td>
+              <td>$10,000</td>
+              <td>$18,000</td>
+            </tr>
+            <tr>
+              <td>Licensing and compliance</td>
+              <td>$1,500</td>
+              <td>$3,000</td>
+              <td>$5,000</td>
+            </tr>
+            <tr>
+              <td>Insurance (year 1 premium)</td>
+              <td>$4,000</td>
+              <td>$7,500</td>
+              <td>$10,500</td>
+            </tr>
+            <tr>
+              <td>PPE, mix tanks, spare nozzles</td>
+              <td>$1,000</td>
+              <td>$2,000</td>
+              <td>$3,500</td>
+            </tr>
+            <tr>
+              <td><strong>Total</strong></td>
+              <td><strong>$43,500</strong></td>
+              <td><strong>$64,000</strong></td>
+              <td><strong>$89,500</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>Source: NuWay Ag Complete Kit pricing, AckerSpray, Drone Spray Pro, Talos Drones, BWI Aviation Insurance 2025-2026 rates.</p>
+
+      <p>A DJI Agras T50 with four batteries and a generator runs about $27,195 through Drone Spray Pro&apos;s package. NuWay Ag&apos;s T50-C10000 complete kit lists at $22,996. A DJI T40 RTF bundle through AckerSpray runs $30,000 to $38,000 with a Westinghouse generator. Trailers range from a DIY bed setup under $5,000 up to $18,000 for a purpose-built enclosed rig with mixing station, lights, and hydraulic jacks.</p>
+
+      <p>Insurance is the line item most new operators underprice. BWI Aviation published a 2025 sample breakdown for a $40,000 DJI T40 policy with full coverage: $5,000 hull, $1,350 liability, $3,500 chemical liability, $607 terrorism and war, total $10,457 per year. You can come in lower on a smaller drone with thinner chemical limits, but budget at least $4,000 for a year one policy that actually covers drift. See <Link href="/insurance">our insurance page</Link> for carrier options and policy structures.</p>
+
+      <p>A Minneapolis Craigslist listing from 2025 offers a cautionary benchmark: an EAVision J-100 spray drone with 85 acres on it, included in a turn-key Minnesota C-Corp with $35,000 in the business account. Essentially never used. The total investment had been made. The acres had not.</p>
+
+      <p>For equipment comparisons by drone class and price-per-acre economics, see <Link href="/buyers-guide">our spray drone buyer&apos;s guide</Link>.</p>
+
+      <h2 id="earnings">What you can actually earn in year 1 and year 2</h2>
+
+      <p>Honest numbers first. Brandon Beal at Elevation Aerial Application in Galax, Virginia documented his year-one revenue at $50,000 flying Christmas tree farms, corn, and pastures. His year-two revenue, with three drones, landed at $170,000 to $180,000 (Drone to 1K Podcast, S7 Ep. 3). That is the documented progression of a well-run solo-to-small-fleet operation. Not all operators hit it.</p>
+
+      <p>Rates vary by region and by what you fly:</p>
+
+      <figure className="guide-table-callout" aria-label="Regional drone spraying rates by zone, 2026">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Region</th>
+              <th scope="col">$/acre range</th>
+              <th scope="col">Key dynamics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Corn Belt (IA, IL, IN, OH, eastern NE)</td>
+              <td>$12 to $17</td>
+              <td>Most competitive market, large flat fields, heavy operator supply</td>
+            </tr>
+            <tr>
+              <td>Great Plains (KS, NE, ND, SD)</td>
+              <td>$12 to $16</td>
+              <td>Large open acreage, fewer operators than Corn Belt</td>
+            </tr>
+            <tr>
+              <td>Delta and South (AR, LA, MS)</td>
+              <td>$14 to $18</td>
+              <td>Manned aerial competition, rice adds complexity</td>
+            </tr>
+            <tr>
+              <td>California specialty crops</td>
+              <td>$15 to $35, pheromone $100 to $300</td>
+              <td>Regulatory-locked, margin is strong where you can legally operate</td>
+            </tr>
+            <tr>
+              <td>Southeast (GA, AL, SC, NC, FL)</td>
+              <td>$16 to $28</td>
+              <td>Mixed terrain, higher chemical costs</td>
+            </tr>
+            <tr>
+              <td>Mountain West (WY, MT, CO, ID)</td>
+              <td>$14 to $20</td>
+              <td>Underserved commercial market, weed-district contracts</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>Source: Iowa State 2026 Custom Rate Survey, NuWay Ag, Ag Partners Coop, Growing Produce, Drone Spray Pro.</p>
+
+      <p>By crop, corn fungicide and cotton defoliation tend to run 15 to 25% above flat-crop rates. Specialty vegetables and vineyards command $18 to $40 per acre because of complexity, trellis systems, and smaller field sizes.</p>
+
+      <p>Rate compression is the single biggest story in 2025. National average prices fell from $21 per acre in 2024 to $13 per acre in 2025, a 38% drop driven largely by the Corn Belt and by non-Part 137 operators willing to fly cheap. Eric Ringer of the American Spray Drone Coalition attributes most of it to undercutting by unlicensed operators. Specialty crop markets, orchards, and vineyards remain much less compressed.</p>
+
+      <p>Gross margin after chemicals, fuel, batteries, and insurance lands somewhere between $5 and $8 per acre at current Midwest rates. A solo operator flying 9,584 acres per season at a $6 net margin earns about $57,500 in year one before owner&apos;s draw. At Brandon Beal&apos;s year-two pace with three drones flying specialty and row crop combined, you are in six-figure territory. The path from one to the other is not linear, and it is not short.</p>
+
+      <p>A typical solo operator in their first full season flies 4,000 to 8,000 acres. Iowa State&apos;s 2026 survey shows Iowa&apos;s average drone spray rate at $11.85 per acre, so a 6,000-acre Iowa solo operator will gross around $71,000. Most of the margin goes back into the second drone, second generator, or hiring a ground crew. See <Link href="/pricing">our pricing pillar</Link> for the full custom-rate breakdown by service and region.</p>
+
       {/* GUIDE-INSERT-POINT: how-to-become-an-agricultural-drone-pilot */}
     </>
   ),
