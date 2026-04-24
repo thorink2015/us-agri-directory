@@ -188,6 +188,7 @@ export default function DroneVsGroundRigPage() {
           <Link href="/services/spraying" className="text-green-700 hover:underline">Drone spraying services</Link>
           <Link href="/comparisons/drone-vs-airplane" className="text-green-700 hover:underline">Drone vs. airplane</Link>
           <Link href="/buyers-guide" className="text-green-700 hover:underline">Buyer&apos;s guide</Link>
+          <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
         </div>
 
         <div className="mt-10">

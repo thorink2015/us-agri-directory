@@ -204,6 +204,122 @@ export const guides: Guide[] = [
       { href: '/comparisons/drone-vs-airplane', label: 'Drone vs airplane' },
     ],
   },
+  {
+    slug: 'year-round-revenue-ag-drone-operators',
+    title:
+      'Year Round Revenue for Ag Drone Operators: How to Fill Your Calendar in the Off Season',
+    shortTitle: 'Year-round revenue for ag drone operators',
+    description:
+      'How US ag drone operators stack 6 services to earn $150K to $420K per year. Real companies, 2026 pricing, state cost share rates, and the 12 month calendar that actually works.',
+    primaryKeyword: 'ag drone business year round revenue',
+    secondaryKeywords: [
+      'drone spraying off season income',
+      'cover crop seeding drone service pricing',
+      'drone NDVI mapping service rates',
+      'agricultural drone custom operator revenue',
+      'spray drone business 12 month calendar',
+    ],
+    category: 'Operators',
+    publishDate: '2026-04-24',
+    lastUpdated: '2026-04-24',
+    readMinutes: 20,
+    aeoBlock:
+      'US ag drone operators running a spray-only business typically cap out at $80,000 to $150,000 gross per year even at 4,000 acres, because the Corn Belt spray season is only 120 days long. Operators who stack six services (liquid spray, cover crop seeding, NDVI mapping, granular spreading, livestock thermal, and non-ag RGB mapping) reach $150,000 to $420,000 gross in Year 2 per Financial Models Lab and ASDC 2025 benchmarks. The 2026 Iowa State Farm Custom Rate Survey pegs drone spraying at $12.50 per acre with a University of Missouri cost base of $7.39 per acre. A $1,200 spreader attachment for an existing DJI Agras is the single highest-return expansion, unlocking $30,000 to $50,000 in fall cover crop seeding plus $15,000 to $20,000 in shoulder-season granular fertilizer work.',
+    toc: [
+      { id: 'spray-season-math', label: 'Spray season math' },
+      { id: 'cover-crop-seeding', label: 'Cover crop aerial seeding' },
+      { id: 'ndvi-mapping', label: 'NDVI mapping and variable rate' },
+      { id: 'livestock-ranch', label: 'Livestock and ranch services' },
+      { id: 'mosquito-abatement', label: 'Mosquito abatement contracts' },
+      { id: 'granular-spreading', label: 'Granular fertilizer and lime' },
+      { id: 'non-ag-mapping', label: 'Non-ag RGB mapping' },
+      { id: 'calendar', label: 'The 12 month calendar' },
+      { id: 'certifications', label: 'Certification stack' },
+      { id: 'subscription-model', label: 'Subscription model' },
+      { id: 'action-checklist', label: 'Operator action checklist' },
+    ],
+    quickFacts: [
+      { label: '2025 drone-sprayed US acreage', value: '16.4 million acres (ASDC), up 58.7% YoY' },
+      { label: '2026 Iowa State drone spray average', value: '$12.50 per acre ($8 to $16 range)' },
+      { label: 'Operator cost base at 4,000 acres', value: '$7.39 per acre (Mizzou Extension 2025)' },
+      { label: 'Registered Part 137 drone operators', value: '~1,082 nationwide (NAAA, fall 2025)' },
+    ],
+    pullQuotes: [
+      {
+        quote:
+          'The American Spray Drone Coalition reported 16.4 million US acres sprayed by drone in 2025, up 58.7 percent year over year.',
+        attribution: 'ASDC 2025 annual report',
+      },
+      {
+        quote:
+          'A $1,200 spreader attachment for your existing Agras drone. No new FAA certification, no new insurance class, and it unlocks $30,000 to $50,000 in fall cover crop seeding plus $15,000 to $20,000 in shoulder-season granular fertilizer work.',
+        attribution: 'On the highest-ROI expansion for a spray-only shop',
+      },
+      {
+        quote: 'The off season is not empty. It is unclaimed.',
+        attribution: 'Closing line of the year-round revenue playbook',
+      },
+    ],
+    howToTitle: 'How to stack services for year-round ag drone revenue',
+    featuredPullQuote: {
+      quote: 'The off season is not empty. It is unclaimed.',
+      attribution: 'From: the closing line of the year-round revenue playbook',
+    },
+    howToSteps: [
+      { name: 'Add the spreader attachment', text: 'Buy a spreader kit for the DJI Agras drone you already own. The T50 spreading system, T40 spreader, and T25 spreader all run under $1,200 from US dealers like Drone Nerds, Bestway Ag, and Agri Spray Drones.' },
+      { name: 'Learn your state cost-share programs', text: 'Pick your state\'s largest cover crop cost-share program (USDA EQIP, Iowa WQI, Illinois Fall Covers, Ohio H2Ohio, Maryland MACS, Illinois Decatur RCPP). Every rule becomes a sales pitch that turns a price objection into a program enrollment.' },
+      { name: 'Prospect ranch operations in December', text: 'Identify three to five ranch operations within 45 minutes of your base that run over 2,000 acres. Introduce yourself before calving and hunting season in December, not in July when they are too busy to talk.' },
+      { name: 'Add an NDVI mapping drone', text: 'Order a DJI Mavic 3 Multispectral (typically $4,618 to $5,204) and a Pix4Dfields license at $1,990 annual. Start scouting service the following April with a target of 35 flight days and 400 acres per day.' },
+      { name: 'Sit for the CCA exam', text: 'Enroll in the Certified Crop Adviser exam at your next available sitting. Budget 6 to 12 months of study time. The credential pushes NDVI maps from $9 per acre commodity work into $15 to $30 per acre signed prescriptions.' },
+      { name: 'Open the mosquito abatement lane', text: 'Get quotes on Public Health Pest Control Operator licensing in your state. In Florida it is Chapter 388, in California it is CDPH Vector Control Technician with Categories A and B. Start paperwork before May so you can bid spring RFPs.' },
+      { name: 'Redesign invoices with subscription option', text: 'Rebuild your quote and invoice template to include a monthly subscription option for every farm over 1,000 acres. Ceres Imaging benchmarks show subscription contracts reduce per-acre cost 15 to 25 percent versus one-offs and retain clients year after year.' },
+    ],
+    faqs: [
+      {
+        question: 'How much can a solo ag drone operator realistically earn in Year 2?',
+        answer:
+          'A diversified Year 2 operator running spray plus cover crop seeding plus NDVI mapping plus one shoulder service (thermal ranch or granular spreading) can hit $150,000 to $420,000 gross. Spray-only operators typically max out around $80,000 to $150,000 gross even at 4,000 acres.',
+      },
+      {
+        question: 'Do I need a separate drone for NDVI mapping?',
+        answer:
+          'Yes. DJI Agras spray drones have basic GPS and limited survey capability. Real NDVI work needs a DJI Mavic 3 Multispectral ($4,618 to $5,204 depending on Care plan) or equivalent. Payback is typically one season if you cover 1,500+ acres of scouting work.',
+      },
+      {
+        question: 'What drone is best for livestock thermal inspection under $6,000?',
+        answer:
+          'The Autel EVO II Dual 640T V3 at $5,299 manufacturer direct is currently the best value sub-$6K thermal option. DJI Matrice 30T starts around $12,000. FLIR SIRAS starts around $5,000 and is purpose-built for thermal but harder to source through 2026.',
+      },
+      {
+        question: 'Do I need a separate license for mosquito abatement?',
+        answer:
+          'Yes, in nearly every state. This is a public health category, separate from your ag applicator license. Florida requires Chapter 388 Public Health Pest Control Operator (not the Chapter 487 ag RUP license). California requires CDPH Vector Control Technician Certification with Categories A and B. Most states require $1 to $5 million liability coverage for district contracts.',
+      },
+      {
+        question: 'Can a Northern Plains operator actually make money year round?',
+        answer:
+          'Yes, but not from drone flying in North Dakota or Minnesota from November through March. The documented strategy is five months of spray, three to four months of crop insurance adjusting (NCIS CAPP licensure) at $225 to $350 per day plus mileage, plus one to two months of southern contract flying in the Delta or Rio Grande Valley through subcontract arrangements with operators like Pro Ag Solutions or Great Plains Drone Co.',
+      },
+      {
+        question: 'What is the single highest ROI addition to a spray-only business?',
+        answer:
+          'A $1,200 spreader attachment for your existing Agras drone. No new FAA certification, no new insurance class, and it unlocks $30,000 to $50,000 in fall cover crop seeding plus $15,000 to $20,000 in shoulder-season granular fertilizer work. Payback under one season in most markets.',
+      },
+      {
+        question: 'Can I start a ranch thermal service without becoming a licensed vet?',
+        answer:
+          'Yes, but you cannot diagnose. You can observe, count, locate, and report visible events. You cannot describe an animal as having fever, pneumonia, or BRD on a client report. Partner with a licensed vet who holds the Veterinarian Client Patient Relationship for any diagnostic language.',
+      },
+    ],
+    relatedInternal: [
+      { href: '/start-a-drone-business', label: 'Start a drone business' },
+      { href: '/training-and-certification', label: 'Training and certification' },
+      { href: '/grants-and-subsidies', label: 'Grants and subsidies for cover crops' },
+      { href: '/buyers-guide', label: 'Spray drone buyer\'s guide' },
+      { href: '/regulations/faa-part-137', label: 'FAA Part 137 for drones' },
+      { href: '/insurance', label: 'Insurance for drone applicators' },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string): Guide | undefined {

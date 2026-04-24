@@ -13,6 +13,7 @@ import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import GuideReadingProgress from '@/components/guides/GuideReadingProgress';
 import GuideTOC from '@/components/guides/GuideTOC';
+import ShareButtons from '@/components/guides/ShareButtons';
 import { AUTHOR, SITE } from '@/data/author';
 import { guideContent } from './content';
 
@@ -187,6 +188,10 @@ export default function GuidePage({ params }: Props) {
           </p>
 
           <Byline lastUpdated={guide.lastUpdated} />
+
+          <div className="mt-5 print:hidden">
+            <ShareButtons url={absoluteUrl} title={guide.title} size="sm" />
+          </div>
         </header>
 
         {/* Main two-column layout: sidebar TOC + article */}
@@ -264,8 +269,13 @@ export default function GuidePage({ params }: Props) {
                 </section>
               )}
 
+              {/* Share again at the bottom */}
+              <div className="mt-10 pt-6 border-t border-stone-200 print:hidden">
+                <ShareButtons url={absoluteUrl} title={guide.title} size="md" />
+              </div>
+
               {/* Print CTA */}
-              <div className="mt-10 bg-stone-50 border border-stone-200 rounded-xl p-5 text-sm text-gray-700 flex items-start gap-3 print:hidden">
+              <div className="mt-8 bg-stone-50 border border-stone-200 rounded-xl p-5 text-sm text-gray-700 flex items-start gap-3 print:hidden">
                 <Printer className="w-4 h-4 mt-0.5 text-gray-500 shrink-0" />
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">

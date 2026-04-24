@@ -294,6 +294,7 @@ export default function StartADroneBusinessPage() {
           <Link href="/training-and-certification" className="text-green-700 hover:underline">Training and certification</Link>
           <Link href="/insurance" className="text-green-700 hover:underline">Drone insurance</Link>
           <Link href="/guides/hire-drone-spray-operator-checklist" className="text-green-700 hover:underline">How farmers vet operators (checklist)</Link>
+          <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
           <Link href="/grants-and-subsidies" className="text-green-700 hover:underline">Grants and cost-share</Link>
           <Link href="/pricing" className="text-green-700 hover:underline">2026 pricing guide</Link>
           <Link href="/tools/roi-calculator" className="text-green-700 hover:underline">ROI calculator</Link>

@@ -256,6 +256,47 @@ already in `src/data/guides.ts`. Per-guide work:
    `guides.map(...)` in `src/app/sitemap.ts` and the schemas in
    `src/app/guides/[slug]/page.tsx`.
 
+## Guide ShareButtons
+
+**Used on:** `src/app/guides/[slug]/page.tsx` (both places — under the Byline and above the print CTA).
+
+Client component at `src/components/guides/ShareButtons.tsx` exposes X, LinkedIn, and copy-link with `role="group"`, per-button `aria-label`, live clipboard feedback (`Check` icon for 1.8s after copy). The `size` prop (`sm` default / `md`) swaps button padding; copy-link falls back to `document.execCommand('copy')` when `navigator.clipboard` is absent. Added in the 2026-04-24 year-round-revenue guide batch.
+
+Always pass `url={absoluteUrl}` (the full `${SITE.domain}/guides/${guide.slug}` string, not the relative canonical) so X and LinkedIn share metadata correctly when their crawlers re-fetch the URL.
+
+## Guide revenue / comparison table
+
+Long-form numeric tables go inside a `<figure>` to get the `.guide-table-callout` card styling (bordered stone panel, zebra rows, sans-serif body, horizontal scroll on overflow). Always set `aria-label` on the figure describing what the table shows, and `scope="col"` on every `<th>` so screen readers announce column context. Pattern from guide 2 revenue table:
+
+```tsx
+<figure className="guide-table-callout" aria-label="Year 2 revenue model, solo operator">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Service</th>
+        <th scope="col">Days per year</th>
+        <th scope="col">Rate</th>
+        ...
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Liquid spray</td>
+        <td>85</td>
+        <td>$14 per acre</td>
+        ...
+      </tr>
+      ...
+      <tr>
+        <td><strong>Total</strong></td>
+        ...
+        <td><strong>$420,500</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+```
+
 ## Commit message format
 
 ```
