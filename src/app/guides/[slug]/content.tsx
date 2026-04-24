@@ -314,6 +314,25 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>AckerSpray&apos;s benchmark is that spray-only becomes a &ldquo;real business opportunity&rdquo; at 3,000 acres minimum, and that is not a profitable business. That is a survivable one. The operators earning $150,000 to $785,000 per year, according to Financial Models Lab&apos;s December 2025 benchmark, are not spray-only shops. They are running four or five services. Everything below is how you get there.</p>
 
+      <h2 id="cover-crop-seeding">Service 1: Cover crop aerial seeding</h2>
+
+      <p>Between August and late October, most of the Midwest sits in a window where the only way to establish cover crops into standing corn or standing soybeans is aerial. Ground drills cannot go in without destroying the cash crop. Airplane crop dusters prefer large blocks over 500 acres and pass on odd-shaped fields. That leaves a clear lane for drone operators with a spreader hopper.</p>
+
+      <p>Real US operators have built real businesses here. Rantizo, the largest licensed drone-application network in the country, covers 30 states. SweetWater Technologies grew from 32,000 acres in 2022 to a 200,000 acre target in 2025 through a franchise model. Cover Crop Innovations in Concord, Massachusetts holds Part 137 certificate 2OVG250Q and specializes in drone seeding into standing corn, soybeans, and cucurbits. American Drones in Wisconsin documented a $20 per acre application rate for a rye and rape mix at 36 pounds per acre on the Rat River Watershed project. Skytech Solutions in Barren County, Kentucky flies a DJI Agras T40 seeding wheat and turnip mix into standing corn at roughly $12 per acre seed cost plus application fee.</p>
+
+      <p>Pricing lands in a tight band. NRCS cites an aerial application premium of $20 to $30 per acre above seed cost. Your application-only fee sits between $18 and $25 per acre, with seed billed separately or passed through at cost. The DJI Agras T50 Spreading System runs $989 at Drone Nerds and $950 at Bestway Ag Kentucky. The T40 Spreader is $825 at Bestway Ag. The T25 Spreading System is $999 at Agri Spray Drones. For a spray drone you already own, the spreader attachment is a one-time investment under $1,200 that unlocks a $35,000 to $75,000 fall revenue stream for a solo operator covering 2,500 to 4,000 acres.</p>
+
+      <figure className="guide-pullquote">
+        <p>A $1,200 spreader attachment unlocks a $35,000 to $75,000 fall revenue stream on the same drone you already spray with.</p>
+        <cite>On the highest-ROI expansion for an existing Agras operator</cite>
+      </figure>
+
+      <p>The angle most operators miss entirely is state cost-share. USDA EQIP pays farmers $50 to $57 per acre for cover crop establishment. Iowa&apos;s Water Quality Initiative adds $30 per acre for first-time users, $20 returning, with a separate $5 per acre crop insurance premium discount for fall 2025 planting. Illinois&apos; Fall Covers for Spring Savings pays a $5 per acre crop insurance discount capped at 190,000 acres statewide, and the 2024 cap filled inside one hour with 241,650 acres requested. Ohio&apos;s H2Ohio pays $20 to $25 per acre for overwintering covers and expanded to 10 additional counties for 2026-27. Maryland MACS is the most generous at a $35 per acre base with add-ons bringing it to $65 per acre, covering roughly 500,000 acres through a $22 million FY26 appropriation. Illinois&apos; Decatur RCPP pays up to $103.80 per acre for multi-species overwintering mixes.</p>
+
+      <p>What this means for your sales conversation: an operator who understands these programs turns a price objection into a program enrollment. A Maryland farmer pays you $22 per acre to seed, and the state pays him $65 per acre to do it. He nets $43 per acre and builds soil. You just made yourself cost-neutral on a transaction that looked expensive. Point customers to <Link href="/grants-and-subsidies">grants and subsidies</Link> for the broader list.</p>
+
+      <p>Agronomic rules matter. NRCS Illinois Tech Note 21 specifies aerial rates at 1.5 to 2 times drilled rates for most species. Brassicas (radish, turnip, oilseed radish), clovers (red, crimson, balansa), annual ryegrass, and cereal rye work well aerially. Peas, faba bean, and sunflower do not. Iowa State&apos;s Mark Lang documents only about nine days between soybean R6 and R6.5 before leaf drop blocks seed-to-soil contact, which is the tightest timing window in the entire cover crop calendar. Wilson et al. (2013, Agronomy Journal) found broadcast rye emergence ranging from 3 to 54 percent depending on first-week moisture after seeding. Your reputation depends on reading the weather forecast correctly.</p>
+
       {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
     </>
   ),
