@@ -488,7 +488,26 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>For CRM, small operators cobble together Jobber (350,000+ professionals on the platform) or Housecall Pro (around 200,000 users) for customer management, QuickBooks for invoicing, and either Rantizo AcreConnect or DJI SmartFarm for operational data. Rantizo AcreConnect is purpose-built for drone ag with work orders, product usage reports, As Applied and As Covered maps, and job matching across the Rantizo network. It launched March 2024 and is the closest thing the industry has to a standard.</p>
 
-      {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
+      <h2 id="action-checklist">Operator action checklist</h2>
+
+      <p>If you run a spray-only business today, the moves are sequential, not simultaneous.</p>
+
+      <ol>
+        <li>Buy the spreader attachment for your existing Agras drone. Under $1,200.</li>
+        <li>Pick your state&apos;s largest cover crop cost-share program and learn every rule. This becomes your sales pitch.</li>
+        <li>Identify three to five ranch operations within 45 minutes that run over 2,000 acres. Introduce yourself in December, not in July.</li>
+        <li>Order a DJI Mavic 3 Multispectral and a Pix4Dfields license. Start the scouting service the following April.</li>
+        <li>Enroll in the CCA exam at your next available sitting. Budget 6 to 12 months of study time.</li>
+        <li>Get quotes on Public Health Pest Control Operator licensing in your state. Start paperwork before May.</li>
+        <li>Redesign your quote and invoice template to include a monthly subscription option for every farm over 1,000 acres.</li>
+      </ol>
+
+      <p>The operators who win the next three years will not be the ones with the biggest spray drones. They will be the ones with the most services stacked, the most credentials behind their name, and the most recurring-revenue contracts signed before the season starts. If you are still starting out on the licensing side, <Link href="/start-a-drone-business">start a drone business</Link> covers the foundation, <Link href="/regulations/faa-part-137">FAA Part 137</Link> covers the operator certificate you need for spray work, and <Link href="/buyers-guide">buyers guide</Link> covers equipment selection before you spend the money.</p>
+
+      <figure className="guide-pullquote">
+        <p>The off season is not empty. It is unclaimed.</p>
+        <cite>Closing line</cite>
+      </figure>
     </>
   ),
 };
