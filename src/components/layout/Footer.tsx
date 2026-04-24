@@ -178,6 +178,8 @@ export default function Footer() {
             <span className="text-green-700">|</span>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
             <span className="text-green-700">|</span>
+            <Link href="/affiliate-disclosure" className="hover:text-white transition-colors">Affiliate Disclosure</Link>
+            <span className="text-green-700">|</span>
             <span>Free basic listings for all verified operators</span>
           </div>
         </div>
