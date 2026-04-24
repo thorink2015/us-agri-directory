@@ -510,4 +510,9 @@ export const guideContent: Record<string, ReactNode> = {
       </figure>
     </>
   ),
+  'how-to-become-an-agricultural-drone-pilot': (
+    <>
+      {/* GUIDE-INSERT-POINT: how-to-become-an-agricultural-drone-pilot */}
+    </>
+  ),
 };
