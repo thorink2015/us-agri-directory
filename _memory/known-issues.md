@@ -6,6 +6,35 @@
 
 ## API / tooling gotchas
 
+### 2026-04-24 — Netlify build-minute budget (temporary, until 2026-05-01)
+
+**Status:** 297 / 300 build minutes used for April 2026. Budget resets
+on the 1st of each month. From 2026-05-01 onward this constraint goes
+away and the normal per-push workflow resumes.
+
+**Symptom if overrun:** Netlify Free plan blocks further builds,
+including production merges to `main`, until the next monthly reset.
+Deploy previews stop, IndexNow stops firing on merges.
+
+**Rule for any work shipped before 2026-05-01:**
+1. Work section-by-section locally as usual (sentinel append loop stays
+   the safety net against API rate limits), but **commit and push only
+   when the full body is done.** Target 2 to 3 pushes per feature
+   instead of per-section pushes. Guide 2 fired ~16 preview builds;
+   guide 3 should fire 2 to 3.
+2. Any commit that only touches `_memory/`, `_research/`, or `*.md`
+   should use `[skip ci]` in the subject line to avoid triggering a
+   Netlify build.
+3. Do not push to `main` directly. Merging the PR still fires one
+   production build, which is fine, but unnecessary force-pushes or
+   rebuilds are not.
+4. Do not upgrade the plan yet. 6 days to reset at effectively zero
+   burn is fine.
+
+**After 2026-05-01:** revert to the original per-push small-batch
+rhythm. Delete this entry from known-issues once the reset lands and
+normal flow resumes.
+
 ### 2026-04-14 — "Stream idle timeout - partial response received"
 **Symptom:** Claude Code API times out when making very large file
 writes (big translations, 12+ article rewrites in one go).

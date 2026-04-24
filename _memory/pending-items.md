@@ -39,6 +39,35 @@ See `_research/README.md` for what's uploaded and what's missing.
 - Sign up for rank tracker (SerpRobot or Wincher) with 50 seed keywords
 - Set up Cloudflare for performance + bot management
 
+## Next session — plots program pillar guide (monetization)
+
+Eugen is opening a separate session to ship a pillar guide on a
+&ldquo;plots program&rdquo; topic (exact angle TBD, likely USDA plots or
+similar). Key differences from guides 1 and 2:
+
+- **Affiliate monetization.** The guide includes an affiliate link
+  Eugen wants to monetize. The same link needs placement on several
+  other pages across the site, not just inside the guide.
+- **Standing rules still apply.** No em dashes, no banned words,
+  data-driven FAQ schema, the sentinel append loop, reciprocal links,
+  `llms.txt` + `llms-full.txt` entries, sitemap auto-pickup.
+- **Netlify budget constraint applies until 2026-05-01.** See
+  `known-issues.md` for the push-only-when-done rule. Likely fine
+  since this guide will probably ship on or after 2026-05-01.
+- **Affiliate link hygiene to design in that session:**
+  - Centralize the affiliate URL in `src/data/affiliates.ts` (or
+    similar) so it can be updated in one place if the merchant ever
+    rotates it.
+  - Add UTM parameters via a `withUtm(url, source)` helper so we can
+    attribute clicks to which page sent them.
+  - `rel="sponsored noopener noreferrer"` on every affiliate anchor
+    (Google treats `sponsored` as the correct attribution signal for
+    monetized links; `nofollow` alone is older guidance).
+  - Render a &ldquo;This link may earn us a commission&rdquo; disclosure
+    once per page near first use, per FTC guidelines.
+  - Track placements: list every page where the link appears in
+    `session-history.md` so future sessions know where to update.
+
 ## Ready to build when unblocked
 
 - ✅ Homepage full rewrite — shipped 2026-04-16
