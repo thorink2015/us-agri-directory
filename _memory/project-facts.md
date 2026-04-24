@@ -24,17 +24,19 @@ Last updated: 2026-04-15
 - **Single source of truth:** `src/data/author.ts` — import `AUTHOR`,
   `SITE`, `personSchema()`, `organizationSchema()` from here. Never
   paraphrase the bio elsewhere.
-- **Known placeholders** still awaiting real values from Eugen:
-  - `{{LAST_NAME}}` — real last name (or confirm first-name-only)
-  - `{{LINKEDIN_URL}}` — e.g. `https://linkedin.com/in/...`
-  - `{{X_URL}}` — optional
-  - `{{COUNTRY_REGION}}` — country/region Eugen grew up in (used in bio)
-  - `{{FIELD_OF_STUDY}}` — university field (used in bio)
-- **Photo:** expected at `/public/images/eugen-author.jpg` (400×400+).
-  Components (`Byline`, `AuthorCard`) render an initial-letter avatar
-  fallback until the file is uploaded.
-- **Public email:** `eugen@agdronedirectory.com` (unconfirmed — Eugen
-  should verify this address is actually monitored before launch)
+- **Filled as of 2026-04-24:** firstName Eugen, lastName Manoli,
+  LinkedIn `https://www.linkedin.com/in/manoli-eugen/`, job title
+  "Founder and Editor", bio has Florida / United States and
+  Agricultural Economics populated.
+- **Photo:** `/public/images/eugen-author.jpg` (39 KB, uploaded
+  2026-04-24). `Byline` and `AuthorCard` render the real image;
+  initial-letter fallback still in place for safety if the file
+  goes missing.
+- **Public email:** `eugen@agdronedirectory.com` (active).
+- **Optional still blank:** `AUTHOR.x` (X/Twitter URL — optional,
+  filtered out of `sameAs` by `authorSameAs()`).
+- **Organization `sameAs`** in `organizationSchema()` is still an
+  empty array. Add the company LinkedIn + X URLs when they exist.
 
 ## Environment variables (set in Netlify dashboard)
 

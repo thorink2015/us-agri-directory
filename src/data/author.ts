@@ -1,9 +1,6 @@
 // ─── Single source of truth for author identity (E-E-A-T) ─────────────────
 // All bylines, Person schema, footer credit and author cards reference
 // this file. Do NOT paraphrase the bio elsewhere, import from here.
-//
-// TODO before launch: replace every {{PLACEHOLDER}} with a real value.
-// Eugen's spec (implementation-spec v1) lists the required fields.
 // ───────────────────────────────────────────────────────────────────────────
 
 export const SITE = {
@@ -24,11 +21,11 @@ export const AUTHOR = {
   jobTitle: 'Founder and Editor',
 
   // Media
-  photoUrl: 'https://agdronedirectory.com/images/eugen-author.jpg', // TODO: upload real headshot
+  photoUrl: 'https://agdronedirectory.com/images/eugen-author.jpg',
   photoAlt: 'Eugen, Founder and Editor of US Ag Drone Directory',
 
   // Contact
-  publicEmail: 'eugen@agdronedirectory.com', // TODO: confirm real address
+  publicEmail: 'eugen@agdronedirectory.com',
 
   // Social (for Person schema sameAs array + author card)
   linkedin: 'https://www.linkedin.com/in/manoli-eugen/',
