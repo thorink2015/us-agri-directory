@@ -459,6 +459,23 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>That number aligns with the upper range Financial Models Lab projects for diversified operators in Year 2, and it requires building a client base. Year 1 mapping revenue and ranch revenue will both be lower while you establish the relationships. Year 3 is where the subscription model covered further down starts compounding.</p>
 
+      <h2 id="certifications">The certification stack that prices up every service</h2>
+
+      <p>The difference between a $9 per acre NDVI map and a $25 per acre variable rate prescription is a signature. Specifically, the signature of a Certified Crop Adviser from the American Society of Agronomy on the agronomic recommendation.</p>
+
+      <p>The CCA international exam runs $275 to $280, with a local board exam at $100 to $160. You need two years of experience with a BS degree or four years without, plus 40 continuing education units every two years. CareerExplorer pegs CCA median salary at $59,770 and ZipRecruiter shows $70,000 to over $100,000 for dedicated crop advisors. The value to a drone operator is not the employment number. It is the premium it puts on every map you deliver. A CCA-signed prescription jumps from the commodity $5 to $10 per acre range into the $15 to $30 range, because now you are signing an agronomic recommendation the farmer can use to justify an application decision to a state regulator, a crop insurance adjuster, or a landlord.</p>
+
+      <figure className="guide-pullquote">
+        <p>A CCA signature lifts an NDVI map from $9 per acre commodity work into a $15 to $30 per acre signed agronomic recommendation.</p>
+        <cite>On the single highest-impact credential in the stack</cite>
+      </figure>
+
+      <p>Specialty credentials stack on top. The 4R Nutrient Management Specialty is a CCA add-on at $170 that markets directly for variable rate nitrogen prescription work. ASPRS sUAS Mapping Scientist certification (around $475 exam plus $100 application) is the credential for federal or survey-grade mapping work. Infraspection Institute Certified Infrared Thermographer (32 hours plus exam, no expiration, no renewal fee) unlocks thermography services in agricultural and industrial settings. FLIR ITC Level I is a $2,200 four-day course that also opens this niche.</p>
+
+      <p>State pesticide consultant licenses are required to formally recommend rates and products in nearly every state. Iowa&apos;s Agricultural Consultant license (Category 10) is $75. Illinois CPAdM is $60. Nebraska runs around $25. North Dakota has a separate Unmanned Aerial Applicator License at $200 through the ND Aeronautics Commission. California now has the AB 527 Unmanned Apprentice Pilot Certificate and Journeyman Unmanned Pest Control Aircraft Pilot, which are drone-specific certs requiring a QAC application and 20 CEUs every two years.</p>
+
+      <p>For a state-by-state breakdown of what each credential unlocks, see <Link href="/training-and-certification">training and certification</Link>.</p>
+
       {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
     </>
   ),
