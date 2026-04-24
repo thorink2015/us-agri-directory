@@ -337,8 +337,8 @@ export const guides: Guide[] = [
       'drone spraying startup cost',
     ],
     category: 'Operators',
-    publishDate: '2026-04-24',
-    lastUpdated: '2026-04-24',
+    publishDate: '2026-04-25',
+    lastUpdated: '2026-04-25',
     readMinutes: 18,
     aeoBlock:
       'To legally fly a commercial ag spray job in the United States you need a Part 107 Remote Pilot Certificate, a Section 44807 exemption if your drone is over 55 pounds, a Part 137 Agricultural Aircraft Operator Certificate, a state pesticide applicator license, FAA aircraft registration, and liability plus chemical coverage. Expect $43,500 to $89,500 in first-season startup, 3 to 6 months from paperwork to first paid flight, and $12 to $35 per acre depending on region and crop. In 2025, US operators sprayed 16.4 million acres by drone across 1,710 Part 137-certified operators (ASDC), while national rates fell from $21 to $13 per acre, a 38% single-year drop. FAA civil penalties were raised to $75,000 per violation in 2025.',

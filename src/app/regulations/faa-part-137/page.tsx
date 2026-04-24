@@ -175,6 +175,7 @@ export default function FaaPart137Page() {
           <Link href="/regulations/ndaa-compliance" className="text-green-700 hover:underline">NDAA compliance</Link>
           <Link href="/guides/hire-drone-spray-operator-checklist" className="text-green-700 hover:underline">How farmers verify Part 137</Link>
           <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
+          <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
           <Link href="/training-and-certification" className="text-green-700 hover:underline">Training providers</Link>
           <Link href="/services/consultancy" className="text-green-700 hover:underline">Consultancy services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>

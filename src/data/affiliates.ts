@@ -1,7 +1,7 @@
 // ─── Affiliate partners + link metadata ────────────────────────────────────
 // Every outbound affiliate click on the site goes through /go/[slug] which
 // fires GA4 events and then redirects to the partner's tracked URL. Never
-// hard-code a partner URL in a page — always reference a slug here and let
+// hard-code a partner URL in a page. Always reference a slug here and let
 // the /go route build the final URL.
 //
 // The destination field must carry the partner's tracking code exactly as

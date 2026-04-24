@@ -242,6 +242,7 @@ export default function TrainingAndCertificationPage() {
           <Link href="/services/consultancy" className="text-green-700 hover:underline">Consultancy services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
           <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
+          <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
           <Link href="/tools/roi-calculator" className="text-green-700 hover:underline">ROI calculator</Link>
           <Link href="/insurance" className="text-green-700 hover:underline">Drone insurance</Link>
           <Link href="/grants-and-subsidies" className="text-green-700 hover:underline">Grants and cost-share</Link>
