@@ -371,6 +371,16 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>The math favors relationships over bids. Drones cover about 35 acres per flight versus 34,000 acres per plane, so you lose on raw area but win in dense vegetation, sensitive habitats, and residential-adjacent work where manned aircraft cannot operate. Private contracts (HOAs, resorts, wedding venues, rice farms) run $15 to $25 per acre for large contracted areas. A small district with 2,000 acres of managed wetlands at $18 per acre is a $36,000 annual contract for one client.</p>
 
+      <h2 id="granular-spreading">Service 5: Granular fertilizer and lime spreading</h2>
+
+      <p>The hopper attachment you bought for cover crop seeding also spreads granular fertilizer, urea, potash, and pelletized lime. The DJI Agras T40 spreader carries 110 pounds of dry payload. The T50 spreading system covers irregular field shapes, waterways, and post-harvest saturated soil that ground equipment cannot touch.</p>
+
+      <p>The timing fills two shoulder windows core spray season leaves open. October through November is post-harvest potassium, phosphorus, and lime on fields trafficable but too tight on timing for a spreader truck. March and April is spring preplant fertilizer on small, wet, or irregular fields before your liquid spray season starts.</p>
+
+      <p>The economics resemble liquid spray. Application fees run $8 to $15 per acre on top of material. Specialty crop work pays a premium. A Massachusetts cranberry grower documented on the DJI Mavic Pilots forum that ground equipment places 100 pounds per acre but only 80 pounds end up on the crop. The drone at 10 feet gets into nooks and crannies of irregular bogs that tractors cannot reach. He applies at night, which is a value proposition ground equipment cannot match at any price.</p>
+
+      <p>For operators already running a spray drone, the spreader attachment is probably the highest-return expansion you can make. Under $1,200 of equipment. No new FAA certification. No new software. Two additional seasonal revenue windows that do not conflict with core spray. You can compare the economics against traditional equipment at <Link href="/comparisons/drone-vs-ground-rig">drone vs ground rig</Link> and <Link href="/comparisons/drone-vs-airplane">drone vs airplane</Link>.</p>
+
       {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
     </>
   ),
