@@ -180,6 +180,7 @@ export default function GrantsAndSubsidiesPage() {
           <Link href="/tools/roi-calculator" className="text-green-700 hover:underline">ROI calculator</Link>
           <Link href="/services/sales" className="text-green-700 hover:underline">Drone sales and dealers</Link>
           <Link href="/services/seeding" className="text-green-700 hover:underline">Drone seeding services</Link>
+          <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
           <Link href="/crops/cover-crops" className="text-green-700 hover:underline">Cover crops guide</Link>
           <Link href="/states" className="text-green-700 hover:underline">Find operators by state</Link>
           <Link href="/insurance" className="text-green-700 hover:underline">Drone insurance</Link>
