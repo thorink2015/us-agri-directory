@@ -381,6 +381,14 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>For operators already running a spray drone, the spreader attachment is probably the highest-return expansion you can make. Under $1,200 of equipment. No new FAA certification. No new software. Two additional seasonal revenue windows that do not conflict with core spray. You can compare the economics against traditional equipment at <Link href="/comparisons/drone-vs-ground-rig">drone vs ground rig</Link> and <Link href="/comparisons/drone-vs-airplane">drone vs airplane</Link>.</p>
 
+      <h2 id="non-ag-mapping">Service 6: Non ag mapping for year round RGB income</h2>
+
+      <p>Your NDVI drone is also an RGB mapping drone. Construction, real estate, and environmental clients pay year round for the same orthomosaic work that produces NDVI maps in summer.</p>
+
+      <p>Construction mapping runs $35 per acre for basic rural work per Recon Aerial Media, up to $60 to $80 per acre for complex as-built feature extraction. Earthwork volume calculations bill $500 to $2,000 per site. Real estate aerial packages for large rural properties price at $300 to $600, with luxury or farmland listings at $600 to $1,500 per property. Environmental and conservation work (wetland delineation, riparian buffer mapping, invasive species monitoring) prices at $500 to $3,000 per parcel and occasionally comes through state conservation districts or NRCS field offices as contract work.</p>
+
+      <p>One warning. Non-ag client work needs different insurance language. Standard ag UAV policies may not cover construction sites. A rider or separate commercial UAS policy is usually required. Confirm this with your insurer before you accept non-ag work.</p>
+
       {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
     </>
   ),
