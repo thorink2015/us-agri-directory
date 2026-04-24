@@ -476,6 +476,18 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>For a state-by-state breakdown of what each credential unlocks, see <Link href="/training-and-certification">training and certification</Link>.</p>
 
+      <h2 id="subscription-model">The subscription model most operators never build</h2>
+
+      <p>One question separates operators earning $150,000 per year from operators earning $500,000. Are your clients paying you once per service, or are they on a monthly retainer?</p>
+
+      <p>Ceres Imaging, a fixed-wing aerial imagery company, publishes a case study on a California vineyard that paid $6,000 for a season of imagery and tracked $150,000 in added grape value. Sentera sells FieldAgent tiered annual subscriptions with specific line items like $0.25 per acre for weed and population maps and $1,200 per year flat for unlimited cotton stand count. Taranis sells &ldquo;Subscribed Acres&rdquo; through ag retailers at $5 to $20 per acre per season. Rantizo&apos;s Bronze, Silver, and Gold subscription tiers for its operator network include AcreConnect software as recurring revenue.</p>
+
+      <p>What triggers a farmer to convert from one-off service to a subscription? Documentation is the biggest driver, not farming nostalgia. USDA Risk Management Agency approves drone-derived measurements for flood and hail loss adjustment, and the policyholder must file a damage notice within 72 hours. That deadline favors operators already on retainer who can fly a claim within a day of a weather event. Repeat disease or pest problems (white mold in soybeans, tar spot in corn, iron chlorosis) convert one-off scouting into annual monitoring. Landlord and tenant compliance on cash-rent leases pushes As Applied and As Covered mapping records into lease terms that renew every year. State pesticide reporting requirements in California and Washington force operators to maintain the mapping tool they already use for internal compliance.</p>
+
+      <p>The sample subscription contract from independent US operators is not publicly posted anywhere. This is a real market gap. Ceres&apos;s published structure specifies weekly or bi-monthly flights with Water Stress plus NDVI base, optional RGB, thermal, and chlorophyll add-ons, 48-hour data turnaround, and per-acre billing. Industry guides consistently show seasonal or subscription contracts reduce effective per-acre cost 15 to 25 percent for the farmer versus one-offs.</p>
+
+      <p>For CRM, small operators cobble together Jobber (350,000+ professionals on the platform) or Housecall Pro (around 200,000 users) for customer management, QuickBooks for invoicing, and either Rantizo AcreConnect or DJI SmartFarm for operational data. Rantizo AcreConnect is purpose-built for drone ag with work orders, product usage reports, As Applied and As Covered maps, and job matching across the Rantizo network. It launched March 2024 and is the closest thing the industry has to a standard.</p>
+
       {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
     </>
   ),
