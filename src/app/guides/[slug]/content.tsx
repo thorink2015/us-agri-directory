@@ -347,6 +347,18 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>The flywheel this creates is the real reason to bother. You scout the field, find the problem zones, then charge to spray them. The mapping service justifies the spray contract and improves application accuracy, which lets you charge a premium per acre on the spray itself. A Certified Crop Adviser credential on top of this pushes your map price from $9 per acre into the $15 to $30 range, because now you are signing an agronomic recommendation, not producing a pretty image.</p>
 
+      <h2 id="livestock-ranch">Service 3: Livestock and ranch services</h2>
+
+      <p>Ranch work is the most reliable winter and shoulder-season income in the ag drone business, and most operators never touch it. The reason is simple. Ranching has no off-season. Cattle, sheep, and horses need monitoring 12 months a year.</p>
+
+      <p>The US cattle inventory sits at 86.2 million head as of January 2026 per USDA NASS. Texas alone runs 12.2 million head on 90.3 million acres of permanent pasture. Nebraska has 6.05 million, Kansas 5.95 million, California 5.05 million, Oklahoma 4.6 million, Missouri 3.95 million, and South Dakota 3.55 million. DroneDeploy estimates 614 million US acres are in grazing or rangeland. If 5 percent of US ranchers adopt four drone missions per year at $300 to $500 each, the addressable spend is over $200 million annually. Almost nobody is serving it.</p>
+
+      <p>The operators who do run ranch work include Landview Drones in the Montana and Idaho region, Sky Hunter TX running thermal predator and feral hog work, Montana Drone Company and Meadowlark Drones on thermal livestock and wildlife surveys, Tex-Air Drone across Texas and Oklahoma and New Mexico, Montana Ag Drones, and Osprey Agri Drones. At the corporate scale, Cargill&apos;s CattleView program runs autonomous feedlot drones and documents $1 per head labor savings, $1 per head feed waste savings, and $6 per head profit lift.</p>
+
+      <p>Pricing on ranch work runs hourly at $150 to $400 per hour for thermal work, per Drone U&apos;s 2026 pricing guide. A two-hour thermal search for a lost cow on 1,000 acres of brush runs $300 to $800. Utah State Extension&apos;s 2025 study &ldquo;Using Thermal Camera Drones in Beef Cattle Roundup&rdquo; by Clawson et al. documented two Autel EVO II Dual 640T V3 drones working alongside horseback crews in mountain terrain and concluded that drones &ldquo;significantly reduced search time and labor.&rdquo; The Autel EVO II Dual 640T V3 lists at $5,299 manufacturer direct, currently the best sub-$6,000 thermal option on the market.</p>
+
+      <p>One legal line matters here, and ignoring it ends careers. The AVMA Policy on Telehealth explicitly requires an in-person physical examination before any diagnosis. Every state veterinary practice act includes diagnosis within &ldquo;practice of veterinary medicine.&rdquo; You may legally observe, count, locate, and report visible events. You may not describe an animal as having fever, BRD, or pinkeye on a client report. The safer framing is &ldquo;points of interest requiring rancher or veterinarian attention.&rdquo; Partner with a licensed vet who holds the valid Veterinarian Client Patient Relationship for any diagnostic language in reports. On <Link href="/insurance">insurance</Link>, BWI Aviation Insurance dominates ag drone liability, with standard $1 million liability-only policies running $275 to $350 per year.</p>
+
       {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
     </>
   ),
