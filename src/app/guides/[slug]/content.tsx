@@ -333,6 +333,20 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>Agronomic rules matter. NRCS Illinois Tech Note 21 specifies aerial rates at 1.5 to 2 times drilled rates for most species. Brassicas (radish, turnip, oilseed radish), clovers (red, crimson, balansa), annual ryegrass, and cereal rye work well aerially. Peas, faba bean, and sunflower do not. Iowa State&apos;s Mark Lang documents only about nine days between soybean R6 and R6.5 before leaf drop blocks seed-to-soil contact, which is the tightest timing window in the entire cover crop calendar. Wilson et al. (2013, Agronomy Journal) found broadcast rye emergence ranging from 3 to 54 percent depending on first-week moisture after seeding. Your reputation depends on reading the weather forecast correctly.</p>
 
+      <h2 id="ndvi-mapping">Service 2: NDVI mapping and variable rate prescriptions</h2>
+
+      <p>The NDVI and multispectral mapping service is where operators stop being a commodity sprayer and start being an advisor. The hardware cost is modest. A DJI Mavic 3 Multispectral with integrated RTK runs between $4,618 and $5,204 at US dealers like DSLRPros, Advexure, and CDW.</p>
+
+      <p>The software stack has consolidated around five platforms. DroneDeploy&apos;s Ag Lite plan is $1,908 per year. Pix4Dfields is $1,990 annually or $3,990 for a perpetual license. Sentera FieldAgent is quote-based and typical of enterprise-tier deals. Solvi uses credit-based pricing at about $1.40 per acre for plant counts and $0.80 per acre for weed detection. Taranis bundles through ag retailers at $5 to $20 per acre per season depending on crop.</p>
+
+      <p>The income math is cleaner than spray. At $9 per acre for NDVI mapping and 400 acres per field day, you gross $3,600 per day. Run 35 flight days in a growing season and you are looking at $126,000 in gross revenue from a $5,000 drone. Variable rate prescription work, where you interpret the map and output a shapefile or ISOXML file for the farmer&apos;s sprayer, sits at $10 to $20 per acre. Monthly farm monitoring subscriptions run $1,000 to $3,000 per farm per month during the growing season, per UAV Coach&apos;s 2025 benchmark.</p>
+
+      <p>Real case studies make this an easy sell. DroneDeploy published the Dusty Wilkins case on 185 acres of Idaho sugar beets, where NDVI caught a field-wide aphid infestation that ground scouting missed. Recovered revenue came to about $60,000 at $40 per ton. Sentera&apos;s Aerial WeedScout trial across roughly 10,000 Corn Belt acres produced a 70 percent herbicide cost reduction in beta. Iowa State&apos;s drone weed mapping with Sentera drove around $13.42 per acre in cost savings in targeted herbicide trials. A farmer who saves $13 per acre on chemicals across 2,000 acres saved $26,000. Charging him $9 per acre for the map that produced the saving is a rounding error.</p>
+
+      <p>Prescription compatibility finally works in 2026. Pix4Dfields exports ISOXML and ISOBUS files for Case IH AFS, New Holland, AGCO, Trimble, Raven, CLAAS, Amazone, Müller, Topcon, Kubota, and Valtra terminals. Direct integration with the John Deere Operations Center went live in version 2.5. A few gotchas: older John Deere GS3 2630 displays need shapefiles named &ldquo;JD4600&rdquo; in the Rx folder, ISOBUS zips over 10 MB quarantine on some terminals so keep zone counts reasonable, and older Apex software exports shapefile only not ISOXML. For universal fallback, the Pix4D &ldquo;Generic tractor/sprayer&rdquo; shapefile export lands on almost anything.</p>
+
+      <p>The flywheel this creates is the real reason to bother. You scout the field, find the problem zones, then charge to spray them. The mapping service justifies the spray contract and improves application accuracy, which lets you charge a premium per acre on the spray itself. A Certified Crop Adviser credential on top of this pushes your map price from $9 per acre into the $15 to $30 range, because now you are signing an agronomic recommendation, not producing a pretty image.</p>
+
       {/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}
     </>
   ),
