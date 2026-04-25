@@ -259,6 +259,12 @@
 - **Netlify constraint note:** Working branch does not auto-deploy (prod branch is `main`). PR #76 triggers a Netlify deploy preview on each push which does consume build minutes from the shared pool. Eugen said to only push to GitHub this month, not publish live.
 - **Build:** `npx next build` clean after every sub-batch. `/go/[slug]` prerenders 3 static routes. New guide route prerenders at `/guides/how-to-become-an-agricultural-drone-pilot`.
 
+## 2026-04-25 — Contact scraper tool (PR #78, branch `claude/build-operators-scraper-l0r9c`)
+
+- Reusable tool at `tools/contact-scraper/` (own package.json, deps cheerio + p-limit + tsx; never touches the Next.js bundle). Three input modes: `--source=directory|csv|json`. Scrapes homepage + standard contact paths + same-origin contact-hint links; extracts emails (with Cloudflare CFEmail / `[at]/dot` / HTML-entity decoders), US phones, contact form URL, socials. Polite (5 cross-domain in flight, 2.5s same-domain delay with 50% jitter), one retry on transient failure, per-site time budget. Resumable via atomic-write `progress.json`. CSV writer is RFC 4180 compliant; passthrough columns from the source pass through to output.
+- GitHub Actions workflow `.github/workflows/scrape-contacts.yml` (workflow_dispatch only): runs the scraper on GitHub's own runners, uploads CSV + log + progress as artifacts. Owner runs from the GitHub UI (no terminal), independent of Netlify build minutes.
+- Fixed: root `tsconfig.json` `**/*.ts` include was pulling the new Node-only CLI TS files into the Next.js typecheck and breaking Netlify deploy previews. Added `tools` to the root tsconfig exclude list, mirroring the existing exclusion of `scripts/`.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
