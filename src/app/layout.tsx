@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import GAPageView from '@/components/analytics/GAPageView';
+import AIReferrerTracker from '@/components/analytics/AIReferrerTracker';
 import ExitIntentPopup from '@/components/ui/ExitIntentPopup';
 import { defaultMetadata } from '@/lib/seo';
 
@@ -77,6 +78,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="google-adsense-account" content="ca-pub-1300213627244453" />
+        {/* AI-agent discoverability: llms.txt + llms-full.txt per the emerging spec
+            so ChatGPT, Claude, Perplexity and agent frameworks can find our
+            structured content index. */}
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+        <link rel="alternate" type="text/plain" href="/llms-full.txt" title="llms-full.txt" />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <link rel="preconnect" href="https://www.googletagmanager.com" />
         )}
@@ -91,6 +97,7 @@ export default function RootLayout({
         </a>
         <GoogleAnalytics />
         <GAPageView />
+        <AIReferrerTracker />
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1300213627244453"

@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateTextLink from '@/components/affiliate/AffiliateTextLink';
 import { AUTHOR, SITE } from '@/data/author';
 
 import { addUtm } from '@/lib/utm';
@@ -116,7 +117,7 @@ export default function FaaPart137Page() {
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">What Part 137 is</h2>
           <p>
-            14 CFR Part 137 is the agricultural aircraft operator certificate, originally written for manned aircraft (crop dusters and helicopters) and later interpreted by FAA to cover small unmanned aircraft systems (sUAS). Any person or business conducting aerial application of economic poison, seed or other agricultural substance for hire or for their own agricultural operation must hold a Part 137 certificate. The certificate is issued by the local FAA Flight Standards District Office (FSDO) after review of the operations manual, training records and any applicable exemption petitions.
+            14 CFR Part 137 is the agricultural aircraft operator certificate, originally written for manned aircraft (crop dusters and helicopters) and later interpreted by FAA to cover small unmanned aircraft systems (sUAS). Any person or business conducting aerial application of economic poison, seed or other agricultural substance for hire or for their own agricultural operation must hold a Part 137 certificate. The certificate is issued by the local FAA Flight Standards District Office (FSDO) after review of the operations manual, training records and any applicable exemption petitions. Part 107 is a prerequisite. If you do not have it yet, <AffiliateTextLink slug="pilot-institute-part-107" linkText="start with the Part 107 course" />.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Part 137 commercial vs. private</h2>
@@ -174,6 +175,7 @@ export default function FaaPart137Page() {
           <Link href="/regulations/ndaa-compliance" className="text-green-700 hover:underline">NDAA compliance</Link>
           <Link href="/guides/hire-drone-spray-operator-checklist" className="text-green-700 hover:underline">How farmers verify Part 137</Link>
           <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
+          <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
           <Link href="/training-and-certification" className="text-green-700 hover:underline">Training providers</Link>
           <Link href="/services/consultancy" className="text-green-700 hover:underline">Consultancy services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
