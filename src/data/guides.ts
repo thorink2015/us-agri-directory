@@ -33,6 +33,29 @@ export interface GuideHowToStep {
   text: string;
 }
 
+/**
+ * Optional Dataset (schema.org) payload for guides whose centerpiece is a
+ * citable data table, like the 2026 statistics report. Renders as a
+ * Dataset JSON-LD block on the guide page so the table is individually
+ * indexable in Google Dataset Search and quotable by AI engines.
+ */
+export interface GuideDataset {
+  name: string;
+  description: string;
+  /** Stable identifier, typically the page URL plus a fragment */
+  identifier?: string;
+  /** Variable measured names (one entry per column or stat group) */
+  variableMeasured: string[];
+  /** ISO date when the dataset assembly was first published */
+  dateCreated: string;
+  /** SPDX-style license URL or label */
+  license?: string;
+  /** Search keywords for Dataset Search */
+  keywords?: string[];
+  /** Citation strings for primary upstream sources */
+  citation?: string[];
+}
+
 export type GuideCategory =
   | 'For Farmers'
   | 'Regulations'
@@ -66,6 +89,8 @@ export interface Guide {
   featuredPullQuote?: GuidePullQuote;
   /** Related internal pages shown in the footer */
   relatedInternal?: { href: string; label: string }[];
+  /** Optional Dataset JSON-LD payload for guides anchored on a citable table */
+  dataset?: GuideDataset;
 }
 
 export const GUIDE_CATEGORY_ORDER: GuideCategory[] = [
@@ -458,6 +483,155 @@ export const guides: Guide[] = [
       { href: '/start-a-drone-business', label: 'Start a drone business' },
       { href: '/training-and-certification', label: 'Training and certification' },
     ],
+  },
+  {
+    slug: 'agricultural-drone-spraying-statistics-2026',
+    title:
+      'Agricultural Drone Spraying Statistics 2026: US Market Report',
+    shortTitle: 'Agricultural drone spraying statistics 2026',
+    description:
+      '85+ verified ag drone spraying stats for 2026: 16.4M US acres treated, 1,710 Part 137 operators, $13/acre pricing, peer-reviewed environmental data.',
+    primaryKeyword: 'agricultural drone spraying statistics',
+    secondaryKeywords: [
+      'drone spraying market size',
+      'FAA Part 137 operators count',
+      'drone spraying cost per acre',
+      'ag drone adoption rate',
+      'drone vs ground spraying environmental',
+    ],
+    category: 'For Farmers',
+    publishDate: '2026-04-25',
+    lastUpdated: '2026-04-25',
+    readMinutes: 22,
+    aeoBlock:
+      'US agricultural spray drones treated 16.4 million acres in 2025, up 58.7% year over year, with 1,710 FAA-certificated Part 137 unmanned aircraft operators flying nationwide as of September 2025. The average per-acre price fell to $13 from $21 in 2024 as new operators entered the market, while peer-reviewed studies show drone spraying cuts pesticide use 46 to 75% and operator chemical exposure 90 to 99% versus ground equipment. This guide compiles 85+ verified statistics from the American Spray Drone Coalition, FAA, NAAA, USDA, and peer-reviewed research, with conflict notes and methodology caveats so you can cite numbers that hold up.',
+    toc: [
+      { id: 'what-this-guide-covers', label: 'What this guide covers' },
+      { id: 'adoption', label: 'Adoption is real and accelerating' },
+      { id: 'market-size', label: 'Market size and why it is messy' },
+      { id: 'pricing', label: 'Cost per acre and operator economics' },
+      { id: 'where-flying', label: 'By crop and by state' },
+      { id: 'made-in-america', label: 'Made in America vs Made in China' },
+      { id: 'environmental', label: 'Environmental performance' },
+      { id: 'regulation-2030', label: 'Regulation and the road to 2030' },
+      { id: 'methodology', label: 'Methodology and caveats' },
+      { id: 'mega-table', label: '20 highest-signal statistics' },
+      { id: 'sources', label: 'Sources' },
+    ],
+    quickFacts: [
+      { label: '2025 US drone-treated acreage', value: '16.4 million acres (ASDC), +58.7% YoY' },
+      { label: '2025 average per-acre price', value: '$13 per acre (down from $21 in 2024)' },
+      { label: 'Registered Part 137 UAS operators', value: '1,710 (FAA Safety Briefing, Sept 2025)' },
+      { label: 'Pesticide use reduction range', value: '46 to 75% (Nature Scientific Reports, 2025)' },
+    ],
+    pullQuotes: [
+      {
+        quote:
+          'In 2024 about 9,000 ag drones were sold in the US. Only ~1,200 of them got registered with the FAA in the over-55-pound category. An estimated 14% registration rate.',
+        attribution: 'ASDC presentation, NAAA Fall Board Meeting',
+      },
+      {
+        quote:
+          'New US ag drone unit sales fell 59% in 2025. Treated acreage grew 59% the same year. Existing fleets are flying harder while the supply pipeline tightens.',
+        attribution: 'On the 2025 sales-versus-acreage paradox',
+      },
+      {
+        quote:
+          'Drone application reduced operator chemical exposure by 90 to 99% versus handheld backpack application. The applicator never handles the spray cloud directly.',
+        attribution: 'ACS Agricultural Science and Technology, 2023',
+      },
+    ],
+    featuredPullQuote: {
+      quote:
+        'The US is third or fourth globally in deployed fleet. There is room.',
+      attribution: 'From: the international context section',
+    },
+    relatedInternal: [
+      { href: '/pricing', label: 'Drone spraying pricing 2026' },
+      { href: '/regulations/faa-part-137', label: 'FAA Part 137 for drones' },
+      { href: '/regulations/state-licensing', label: 'State pesticide licensing' },
+      { href: '/regulations/ndaa-compliance', label: 'NDAA compliance' },
+      { href: '/insurance', label: 'Insurance for drone applicators' },
+      { href: '/comparisons/drone-vs-ground-rig', label: 'Drone vs ground rig' },
+    ],
+    faqs: [
+      {
+        question: 'How many US farmers use spray drones?',
+        answer:
+          'No primary source supports a single national figure. The cleanest verifiable proxy is Iowa, where the Iowa Farm and Rural Life Poll 2025 found 22% of Iowa farmers used a drone or drone service in 2024. National "X% of farmers use drones" claims circulating online are not traceable to primary research.',
+      },
+      {
+        question: 'How much does drone spraying cost per acre in 2026?',
+        answer:
+          'The average US drone spray service charged $13 per acre in 2025, down from $21 per acre in 2024 (ASDC 2025 Impact Survey). University of Missouri Extension Guide G1274 puts owner-operator cost at $12.27 per acre and typical custom-hire at around $16 per acre. Pricing varies by region, crop, chemical complexity, and field size.',
+      },
+      {
+        question: 'Are spray drones really better for the environment than ground rigs?',
+        answer:
+          'Peer-reviewed evidence says yes, with specific numbers. Pesticide use drops 46 to 75% (Nature meta-review, 2025), drift drops 65 to 70% at field boundaries (ScienceDirect vineyard study, 2025), operator chemical exposure drops 90 to 99% (ACS, 2023), water use drops 71.8% (PLOS ONE LCA, 2024), and soil compaction is effectively zero. These are the figures that have stood peer review.',
+      },
+      {
+        question: 'How many FAA Part 137 drone operators are there in the US?',
+        answer:
+          '1,710 as of September 2025, per FAA Safety Briefing. Up from approximately 1,080 a year earlier, a 58.3% one-year increase. The FAA August 2025 BVLOS NPRM cites over 1,700 cumulative ag UAS operator certificates.',
+      },
+      {
+        question: 'Is the Chinese drone ban going to kill the US ag drone industry?',
+        answer:
+          'The new-unit data shows pressure but not collapse. New US ag drone unit sales fell from 8,950 (2024) to 3,711 (2025), a 59% one-year drop. At the same time, treated acreage grew 59% as existing fleets flew more hours. The FCC waiver path keeps existing equipment legal through January 1, 2027 for Blue UAS-cleared and qualified domestic models. US-made manufacturers (Hylio, AgEagle, Talos, Raptor Dynamic) are scaling, though Guardian Agriculture shut down in August 2025 after building only 8 aircraft against $100M+ in pre-orders. Watch the FCC and BIS rulings through 2026.',
+      },
+    ],
+    dataset: {
+      name: 'US Agricultural Drone Spraying Statistics 2026',
+      description:
+        'A 20-row reference table of the highest-signal US agricultural drone spraying statistics for 2026, sourced from primary documents (ASDC, FAA, NAAA, peer-reviewed journals, university extension) with explicit year and provider attribution per row.',
+      identifier:
+        'https://agdronedirectory.com/guides/agricultural-drone-spraying-statistics-2026#mega-table',
+      variableMeasured: [
+        'US acres treated by spray drones',
+        'Year-over-year treated-acreage growth',
+        'FAA-certificated Part 137 UAS operators',
+        'Average acres per operator per year',
+        'Average US drone spray price per acre',
+        'Rural economic activity from drone services',
+        'Chinese-made share of US ag spray drone sales',
+        'New US ag drone unit sales',
+        'NAAA operators reporting drone use',
+        'US ag retailers offering drone applications',
+        'Iowa farmers using drone or drone service',
+        'US ag drone market size (Grand View, US-specific)',
+        'Pesticide use reduction (peer-reviewed range)',
+        'Drift reduction at field boundary',
+        'Operator pesticide exposure reduction',
+        'Water and fluid use reduction (LCA)',
+        'Hylio cumulative drones sold and revenue',
+        'Section 44807 spray drone exemption CAGR',
+        'China drone-treated cropland',
+        'NAAA reported manned-vs-drone unsafe encounters',
+      ],
+      dateCreated: '2026-04-25',
+      license: 'https://creativecommons.org/licenses/by/4.0/',
+      keywords: [
+        'agricultural drone statistics',
+        'spray drone market size',
+        'FAA Part 137 count',
+        'drone vs ground spraying',
+        'ASDC 2025 Impact Survey',
+        'peer-reviewed drone spraying environmental data',
+      ],
+      citation: [
+        'American Spray Drone Coalition (ASDC) 2025 Impact Survey, January 2026',
+        'FAA Safety Briefing, September/October 2025 issue',
+        'FAA BVLOS NPRM, Docket FAA-2025-1908, August 2025',
+        '2025 CropLife/Purdue Precision Agriculture Dealership Survey',
+        'Iowa State University Extension Iowa Farm and Rural Life Poll 2025',
+        'University of Missouri Extension Guide G1274',
+        'Nature Scientific Reports meta-review (s41598-025-19473-x), 2025',
+        'PLOS ONE LCA study (pone.0323779), 2024',
+        'ACS Agricultural Science and Technology exposure study, 2023',
+        'Grand View Research US Agriculture Drone Market Report, 2025',
+      ],
+    },
   },
 ];
 

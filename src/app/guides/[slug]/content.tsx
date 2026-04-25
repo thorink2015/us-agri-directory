@@ -884,4 +884,9 @@ export const guideContent: Record<string, ReactNode> = {
       />
     </>
   ),
+  'agricultural-drone-spraying-statistics-2026': (
+    <>
+      {/* GUIDE-INSERT-POINT: agricultural-drone-spraying-statistics-2026 */}
+    </>
+  ),
 };
