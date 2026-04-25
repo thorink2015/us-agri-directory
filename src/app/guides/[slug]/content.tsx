@@ -1120,6 +1120,57 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>The 44807 exemption process itself is the underlying enabler. Per the <a href="https://www.faa.gov/data_research/aviation/aerospace_forecasts/2025_uas_and_aam_full_document.pdf" target="_blank" rel="noopener noreferrer">FAA Aerospace Forecast FY2025-2045</a>: <strong>Section 44807 spray drone exemptions grew at a 115% four-year CAGR (2021 to 2024)</strong>, and registered ag drones over 55 lb grew at 133% CAGR over the same period.</p>
 
+      <h2 id="environmental">Environmental performance</h2>
+
+      <p>This section has the most rigorous peer-reviewed data of anything in the ag drone literature. If you only cite five drone-spraying numbers, three of them should come from this section.</p>
+
+      <p><strong>Pesticide use cuts.</strong> A <a href="https://www.nature.com/articles/s41598-025-19473-x" target="_blank" rel="noopener noreferrer">2025 meta-review in <em>Nature Scientific Reports</em></a> synthesized peer-reviewed studies and found drone spraying reduces pesticide use by <strong>46 to 75% versus conventional ground or airblast application</strong>. The wide range reflects crop, formulation, and target differences. The lower bound is conservative.</p>
+
+      <p><strong>Drift reduction.</strong> A 2025 ScienceDirect vineyard study (<a href="https://www.sciencedirect.com/science/article/pii/S2772375525009724" target="_blank" rel="noopener noreferrer">S2772375525009724</a>) measured optimized UAV application against airblast at field boundaries and recorded <strong>65 to 70% drift reduction</strong>. Drift is the single biggest off-target environmental concern in airblast applications. Drone systems with low-altitude precision targeting cut it dramatically.</p>
+
+      <figure className="guide-pullquote">
+        <blockquote>
+          <p>Drone application reduced operator chemical exposure by 90 to 99% versus handheld backpack application. The applicator never handles the spray cloud directly.</p>
+        </blockquote>
+        <cite>ACS Agricultural Science and Technology, 2023</cite>
+      </figure>
+
+      <p><strong>Operator exposure.</strong> A 2023 <a href="https://pubs.acs.org/doi/10.1021/acsagscitech.3c00253" target="_blank" rel="noopener noreferrer">ACS <em>Agricultural Science and Technology</em> study</a> measured pesticide exposure to applicators and found <strong>drone application reduced operator chemical exposure by 90 to 99% versus handheld backpack application</strong>. The applicator never handles the spray cloud directly. This is the single biggest worker-safety argument for drone application.</p>
+
+      <p><strong>Water and energy.</strong> A 2024 <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0323779" target="_blank" rel="noopener noreferrer">PLOS ONE Life Cycle Assessment</a> found drone ULV application reduces fluid use by <strong>71.8%</strong> and energy consumption by <strong>30%</strong> versus conventional ground-rig application.</p>
+
+      <p><strong>Carbon and soil.</strong> An LCA case study in Idaho measured drone application at <strong>14.49 kg CO2 per hectare versus 41.28 kg per hectare for ground rig</strong>, roughly a 65% reduction. Soil compaction is effectively zero with drones (no ground contact) versus ground rigs that apply 15,000 to 20,000 lb of pressure per pass (Purdue Extension PPP-154). The same Idaho case documented an ~8% yield improvement after switching from ground to drone application in compacted fields, attributed to compaction relief. Yield numbers from a single case study, so flag accordingly. Pressure and CO2 figures are solid.</p>
+
+      <figure className="guide-figure" aria-label="Environmental performance bar chart placeholder">
+        <div className="guide-figure-placeholder" role="img" aria-label="Drone vs ground spraying environmental performance, peer-reviewed studies">
+          <span className="guide-figure-label">Chart</span>
+          <span className="guide-figure-caption-inline">Pesticide reduction 46 to 75%, drift 65 to 70%, operator exposure 90 to 99%, water 71.8%.</span>
+        </div>
+        <figcaption>Image slot 6 of 6. Alt text on swap: &ldquo;Drone vs ground spraying environmental performance, peer-reviewed studies.&rdquo;</figcaption>
+      </figure>
+
+      <p><strong>Field efficacy.</strong> UC Davis trials at the Rice Experiment Station documented <strong>over 90% weed control efficacy with drone application matching or exceeding ground-rig benchmarks</strong>, though drift was recorded up to 100 feet from sprayed plots in early-stage trials. Mississippi State&apos;s MAFES work on cotton, soybean, and sorghum confirmed drone insecticide application is equally effective as ground rigs at lower gallons-per-acre. See our comparison page on <Link href="/comparisons/drone-vs-ground-rig">drone vs ground rig spraying</Link> for the full performance picture.</p>
+
+      <p>These are the numbers that hold up to scrutiny. Avoid the &ldquo;30% chemical reduction&rdquo; and &ldquo;90% water savings&rdquo; figures that recur in vendor blogs. Both have been superseded by the peer-reviewed numbers above.</p>
+
+      <h2 id="regulation-2030">Regulation, barriers, and the road to 2030</h2>
+
+      <p>Three regulatory pivots will shape the 2026 to 2027 market.</p>
+
+      <p><strong>Part 108 BVLOS, final rule expected Spring 2026.</strong> The <a href="https://www.faa.gov/newsroom/BVLOS_NPRM_website_version.pdf" target="_blank" rel="noopener noreferrer">FAA&apos;s BVLOS NPRM</a> (Docket FAA-2025-1908) was published August 7, 2025 (700+ pages). Comment period closed October 6, 2025. The proposed rule would permit ag operations of <strong>up to 25 drones per single pilot</strong>, with aircraft up to 1,320 lb maximum gross weight, eliminating the per-flight Part 107 waiver process for many ag missions. If finalized as proposed, the operator-economics math changes substantially: one operator running a 25-drone swarm changes the per-acre cost equation in ways the current $13/acre price does not capture.</p>
+
+      <p><strong>FCC Covered List, effective December 22, 2025.</strong> Discussed above. The waiver path through January 1, 2027 keeps existing inventory legal but constrains new model authorizations.</p>
+
+      <p><strong>State pesticide applicator licensing remains fragmented.</strong> California&apos;s AB 1016 created a private-applicator UAV pesticide certificate. Most other states fold drone applications into existing aerial categories. There is no consolidated cross-state count of drone-specific applicators, and operators expanding across state lines need to verify each state&apos;s requirements individually. Our <Link href="/regulations/state-licensing">state licensing hub</Link> tracks current requirements by state.</p>
+
+      <p><strong>Insurance underwriting is tightening but available.</strong> Premium ranges have settled at roughly $3,000 to $10,000+ per year for a single-drone Part 137 operator, varying by chemical liability limits, fleet size, and state. The 1/3/1 structure ($1M aviation, $100K/$300K/$100K chemical) is industry standard. BWI, SkyWatch, VT Insurance Agency, AssuredPartners Aerospace, and (as of January 2026) Coverdrone are the active markets. Verifly/Skyward exited. See our <Link href="/insurance">insurance guide</Link> for current market coverage.</p>
+
+      <p><strong>The safety-encounter line is moving the wrong way.</strong> NAAA&apos;s annual survey of manned aerial applicators reports the share of operators who experienced an unsafe encounter with a drone rose from <strong>11% (2023) to 16% (2024) to 20% (2025)</strong>. NAAA frames this as a basis for stronger separation rules. Most encounters are believed to involve recreational or hobby drones, not Part 137 operators, but the data does not disaggregate. This will be an active regulatory front through 2026 to 2027.</p>
+
+      <p><strong>The substitution effect.</strong> NAAA&apos;s 2025 data shows manned ag aviation declined in the same year drone-using operations rose. Average acres per manned operation fell 17% year over year, and 49% of operators flew fewer acres than in 2024. This is substitution, not pure additive growth. The total ag-aviation pie is roughly stable; drones are taking share from manned aircraft, especially for smaller fields and specialty applications.</p>
+
+      <p><strong>Total cropland treated by all ag aircraft (manned plus unmanned)</strong> is approximately <strong>137 million acres annually</strong>, per NAAA&apos;s 2026 release. Spray drones at 16.4M are about 12% of that total today, up from under 3% in 2023. The trajectory points to drone share crossing 25% before 2030 if the current curves hold and Part 108 lands.</p>
+
       {/* GUIDE-INSERT-POINT: agricultural-drone-spraying-statistics-2026 */}
     </>
   ),
