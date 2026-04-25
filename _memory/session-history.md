@@ -265,6 +265,10 @@
 - GitHub Actions workflow `.github/workflows/scrape-contacts.yml` (workflow_dispatch only): runs the scraper on GitHub's own runners, uploads CSV + log + progress as artifacts. Owner runs from the GitHub UI (no terminal), independent of Netlify build minutes.
 - Fixed: root `tsconfig.json` `**/*.ts` include was pulling the new Node-only CLI TS files into the Next.js typecheck and breaking Netlify deploy previews. Added `tools` to the root tsconfig exclude list, mirroring the existing exclusion of `scripts/`.
 
+## 2026-04-25 — Scraper workflow Actions bump (branch `claude/update-github-actions-mntKS`)
+
+- `actions/checkout@v4` → `@v5`, `actions/setup-node@v4` → `@v5`, `actions/upload-artifact@v4` → `@v5` (3 upload steps) in `.github/workflows/scrape-contacts.yml`. Clears the GitHub Actions deprecation warning ("Node.js 20 actions are deprecated… forced to Node.js 24 by June 2nd, 2026"). v5 of these actions runs on Node.js 24 natively, so no `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24` env shim needed. Workflow inputs/outputs/artifact names unchanged — first scraper run from prior session (which produced the example progress.json with 10 sites completed) is unaffected.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
