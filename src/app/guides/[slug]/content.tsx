@@ -886,6 +886,156 @@ export const guideContent: Record<string, ReactNode> = {
   ),
   'agricultural-drone-spraying-statistics-2026': (
     <>
+      <h2 id="what-this-guide-covers">What this guide covers</h2>
+
+      <p>The US ag drone spray industry tripled treated acreage in 24 months. New unit sales then collapsed by half in a single year, even as flight volume kept climbing. Both things are true. Both have sources.</p>
+
+      <p>Most &ldquo;drone spraying statistics&rdquo; pages on Google recycle the same 5-year-old DJI marketing numbers and unsourced &ldquo;X% of farmers use drones&rdquo; claims that no primary source supports. This guide does the opposite. Every figure below has a named source, a year, and a tier rating. Conflicting figures are flagged. Claims that cannot be traced are excluded.</p>
+
+      <p>If you are a farmer trying to decide whether to hire a drone operator, an operator pricing your services, a manufacturer building a market deck, or a journalist looking for citable data, the numbers below are the ones to use.</p>
+
+      <figure className="guide-figure" aria-label="Hero image placeholder">
+        <div className="guide-figure-placeholder" role="img" aria-label="Agricultural spray drone treating US cropland in 2025">
+          <span className="guide-figure-label">Figure</span>
+          <span className="guide-figure-caption-inline">Hero image, ag spray drone over US row crops at low altitude (placeholder).</span>
+        </div>
+        <figcaption>Image slot 1 of 6. Real artwork pending. Alt text on swap: &ldquo;Agricultural spray drone treating US cropland in 2025.&rdquo;</figcaption>
+      </figure>
+
+      <h2 id="adoption">Adoption is real and accelerating</h2>
+
+      <p>The single most important number in US ag drone spraying right now is <strong>16.4 million acres</strong>. That is how much US cropland was treated by spray drones in 2025, according to the <a href="https://americanspraydronecoalition.com" target="_blank" rel="noopener noreferrer">American Spray Drone Coalition&apos;s 2025 Impact Survey</a>, published January 2026. The figure represents a 58.7% jump from 10.3 million acres in 2024, and roughly 4.4 times the 3.7 million acres ASDC documented in 2023.</p>
+
+      <p>ASDC member-distributors represent about 80% of the US ag spray drone market, so the number is a defensible industry estimate rather than a partial sample. It is the cleanest single proxy for adoption.</p>
+
+      <figure className="guide-figure" aria-label="Adoption curve placeholder">
+        <div className="guide-figure-placeholder" role="img" aria-label="US ag spray drone treated acreage 2023 to 2025, source ASDC">
+          <span className="guide-figure-label">Chart</span>
+          <span className="guide-figure-caption-inline">Adoption curve: 3.7M (2023), 10.3M (2024), 16.4M (2025) US acres treated.</span>
+        </div>
+        <figcaption>Image slot 2 of 6. Source: ASDC 2025 Impact Survey. Alt text on swap: &ldquo;US ag spray drone treated acreage 2023-2025, source ASDC.&rdquo;</figcaption>
+      </figure>
+
+      <p>The pilot side of the story tracks the same curve. The FAA had certificated <strong>1,710 Part 137 unmanned aircraft operators</strong> by September 2025, per the agency&apos;s <em>Safety Briefing</em> (Sept/Oct 2025 issue, cited in the ASDC report). That is a 58.3% increase year over year. The same figure is corroborated by the FAA&apos;s <a href="https://www.faa.gov/newsroom/BVLOS_NPRM_website_version.pdf" target="_blank" rel="noopener noreferrer">BVLOS Notice of Proposed Rulemaking</a> (Docket FAA-2025-1908, August 2025), which references over 1,700 cumulative ag UAS operator certificates. For context, this number was effectively zero in 2020. See our breakdown of <Link href="/regulations/faa-part-137">Part 137 certification</Link> for what the certificate covers.</p>
+
+      <p>NAAA, the trade group for manned aerial applicators, reports its own snapshot. At its Fall 2025 board meeting, NAAA counted <strong>1,082 registered Part 137 drone operators</strong> among its tracked universe, alongside 1,560 manned operators and 2,028 manned ag pilots. Two different counting methodologies, both useful, both pointing the same direction.</p>
+
+      <p>Adoption inside the manned-aviation industry itself is moving fast. NAAA&apos;s 2025 Industry Snap Survey found <strong>13% of manned aerial application operators reported using drones in 2025, versus 5% in 2024</strong>. That is a 160% one-year jump. Many traditional crop dusters are adding drones to their fleet rather than competing against them.</p>
+
+      <p>On the ag-retail side, the <a href="https://ag.purdue.edu/idaas" target="_blank" rel="noopener noreferrer">2025 CropLife/Purdue Precision Agriculture Dealership Survey</a> (the 25th annual edition) found <strong>27% of US ag retailers offered drone-applied crop inputs in 2025, down from 35% in 2024</strong>, but up sharply from 14% in 2021. The 2024-to-2025 decline appears to reflect retailers exiting after a year of low-margin competition rather than a permanent retreat. The CropLife/Purdue survey is a dealer survey, not a farmer survey, so do not read it as &ldquo;27% of farmers.&rdquo;</p>
+
+      <p>The cleanest farmer-level data point comes from the <a href="https://extension.iastate.edu" target="_blank" rel="noopener noreferrer">Iowa Farm and Rural Life Poll 2025</a>: <strong>22% of Iowa farmers used a drone or drone service in 2024</strong>. Of those, 51% accessed drones through service providers, 37% through retailer or co-op partnerships, and 62% used drones for monitoring or scouting (often the entry point before spray adoption). For state-specific operator listings, see our <Link href="/states/iowa">Iowa state directory page</Link>.</p>
+
+      <figure className="guide-pullquote">
+        <blockquote>
+          <p>In 2024 about 9,000 ag drones were sold in the US. Only ~1,200 of them got registered with the FAA in the over-55-pound category. An estimated 14% registration rate.</p>
+        </blockquote>
+        <cite>ASDC presentation, NAAA Fall Board Meeting</cite>
+      </figure>
+
+      <p>Most of the FAA-registered ag drones are still uncounted. ASDC presented data at the NAAA Fall Board meeting showing roughly 9,000 ag drones sold in the US in 2024 versus only ~1,200 registered with the FAA in the over-55-pound category, an estimated 14% registration rate. The implication is that official federal counts substantially understate the deployed fleet.</p>
+
+      <h2 id="market-size">The market-size picture, and why it is so messy</h2>
+
+      <p>If you Google &ldquo;agricultural drone market size,&rdquo; you will get nine different numbers from nine different research firms. They disagree by a factor of 5x. Here is the spread, with the most defensible figure first.</p>
+
+      <figure className="guide-table-callout" aria-label="2025 ag drone market size estimates by research firm">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Source</th>
+              <th scope="col">2025 Base</th>
+              <th scope="col">Forecast</th>
+              <th scope="col">CAGR</th>
+              <th scope="col">Geography</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://www.grandviewresearch.com/industry-analysis/us-agriculture-drone-market-report" target="_blank" rel="noopener noreferrer">Grand View Research</a> (US-specific)</td>
+              <td>$614.7M (2025); $506.3M (2024)</td>
+              <td>~$1.77B by 2030</td>
+              <td>23.5%</td>
+              <td>US-only</td>
+            </tr>
+            <tr>
+              <td>Grand View Research (global)</td>
+              <td>$3.37B (2025)</td>
+              <td>$21.59B by 2033</td>
+              <td>26.5%</td>
+              <td>Global</td>
+            </tr>
+            <tr>
+              <td>Mordor Intelligence (current report)</td>
+              <td>$1.5B (2025)</td>
+              <td>$3.9B by 2031</td>
+              <td>16.72%</td>
+              <td>Global</td>
+            </tr>
+            <tr>
+              <td>MarketsandMarkets</td>
+              <td>$2.63B (2025)</td>
+              <td>$10.76B by 2030</td>
+              <td>32.6%</td>
+              <td>Global</td>
+            </tr>
+            <tr>
+              <td>Fortune Business Insights</td>
+              <td>~$7.4B (2025 implied)</td>
+              <td>$23.78B by 2032</td>
+              <td>18.5%</td>
+              <td>Global</td>
+            </tr>
+            <tr>
+              <td>Precedence Research</td>
+              <td>$1.92B (2025)</td>
+              <td>$12.05B by 2035</td>
+              <td>20.16%</td>
+              <td>Global</td>
+            </tr>
+            <tr>
+              <td>IMARC Group</td>
+              <td>$3.46B (2025)</td>
+              <td>$29.46B by 2034</td>
+              <td>26.85%</td>
+              <td>Global</td>
+            </tr>
+            <tr>
+              <td>Business Research Co.</td>
+              <td>$3.39B (2025)</td>
+              <td>$11.79B by 2030</td>
+              <td>27.9%</td>
+              <td>Global</td>
+            </tr>
+            <tr>
+              <td>DRONEII</td>
+              <td>$3.6B (2024)</td>
+              <td>$5.7B by 2030</td>
+              <td>~7.7 to 8%</td>
+              <td>Global</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <figure className="guide-figure" aria-label="Market-size spread chart placeholder">
+        <div className="guide-figure-placeholder" role="img" aria-label="2025 global ag drone market size estimates by research firm">
+          <span className="guide-figure-label">Chart</span>
+          <span className="guide-figure-caption-inline">Bar chart of nine research firms&apos; 2025 ag drone market estimates, $1.5B to $7.4B range.</span>
+        </div>
+        <figcaption>Image slot 3 of 6. Alt text on swap: &ldquo;2025 global ag drone market size estimates by research firm.&rdquo;</figcaption>
+      </figure>
+
+      <p>For a US-focused decision, <strong>use Grand View Research&apos;s US-specific figure: $506.3M in 2024 growing to roughly $1.77B by 2030 at a 23.5% CAGR</strong>. It is the only major firm publishing a dedicated US report rather than estimating a regional split off a global headline.</p>
+
+      <p>Within that US market, Grand View breaks out hardware at 50.1%, crop-management applications at 24.7%, rotary-wing aircraft at 62.2%, and outdoor farming at 82.3% of the segment.</p>
+
+      <p>For ground-truth comparison, ASDC projected roughly $1 billion in total US spend on spray drones plus services in 2025, and Hylio&apos;s CEO has publicly estimated US TAM at 10,000 to 15,000 spray drones per year (DTN/Progressive Farmer, January 2026). Both are operator-side estimates and run higher than Grand View&apos;s hardware-only figure, which is consistent: hardware sales are a fraction of total spend.</p>
+
+      <p>A note on press releases. <strong>Mordor Intelligence&apos;s October 2025 PR claims a $5B 2025 market and $13B by 2030</strong>, which directly contradicts its own current report ($1.5B and $3.9B). When you see Mordor&apos;s numbers cited online, check which document they came from. Cite the report, not the press release.</p>
+
+      <p>Take any global forecast claiming a 30%+ CAGR with skepticism. The US-specific 23.5% Grand View number lines up with what ASDC&apos;s actual 2024-to-2025 unit-sales and treated-acreage curves imply. That is the one to anchor on.</p>
+
       {/* GUIDE-INSERT-POINT: agricultural-drone-spraying-statistics-2026 */}
     </>
   ),
