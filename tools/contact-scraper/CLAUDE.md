@@ -1,7 +1,21 @@
 # CLAUDE.md — Contact Scraper
 
 > Read first if a future session needs to extend, debug, or re-run this
-> tool. Updated as we hit gotchas. **Status: in progress, batch 1 of 4.**
+> tool. Updated as we hit gotchas. **Status: shipped, all 4 batches.**
+
+## How the owner runs it
+
+The owner is non-technical and runs out of Netlify minutes. Default run
+path is the GitHub Actions workflow at
+`.github/workflows/scrape-contacts.yml`. UI flow:
+
+1. Repo → Actions tab → "Scrape Contacts" → "Run workflow" → fill inputs → green button
+2. CSV downloads as the `contacts-csv` artifact at the bottom of the
+   completed run page
+
+Local CLI run is documented in `README.md` for completeness but the
+owner won't use it. If they say "the scraper failed", first ask which
+GitHub Actions run, get the run URL, and read the log artifact.
 
 ## What this tool is
 
@@ -102,7 +116,39 @@ debug the scraper — debug the environment.
 
 ## Common error signatures (will grow as we hit them)
 
-*To be populated during batches 2-4 and after the first real run.*
+### `Cannot find module 'tsx'` or similar in CI
+`tools/contact-scraper/package-lock.json` got out of sync with the
+package.json. Run `npm install` inside the tool dir locally and
+commit the lockfile.
+
+### Netlify build fails with TS errors in `tools/`
+The root `tsconfig.json` excludes `tools` (alongside `scripts`,
+`_research`, `_memory`, `_handoff`). If someone removes that exclude,
+the Next.js typecheck will pull in our Node-only CLI files (which use
+`import.meta.dirname`, `node:fs/promises`) and break the deploy.
+**Don't** remove `tools` from the root tsconfig exclude list.
+
+### Every site comes back `site_dead` in the GitHub Actions log
+Possibly the runner network is degraded; retry. If persistent across
+multiple runs, GitHub may have changed something — check the
+github-actions issue tracker.
+
+### Every site comes back `blocked`
+The User-Agent in `src/config.ts` may have aged out. Bump it to the
+current Chrome major version and retry.
+
+## Resume / reruns
+
+Each GitHub Actions run starts with a fresh `progress.json` (we don't
+auto-restore the prior artifact — `actions/download-artifact@v4` can't
+do cross-run downloads natively, and a full 391-site run finishes in
+one runner session anyway).
+
+If a run does get cut short and you need to resume:
+1. Download the `contact-scraper-progress` artifact from the failed run
+2. Drop `progress.json` into `tools/contact-scraper/` locally
+3. Run locally with `npm run scrape -- --source=directory`
+   (without `--force`); it'll skip already-completed ids
 
 ## Where to start if you need to extend this
 

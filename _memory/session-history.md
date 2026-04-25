@@ -249,6 +249,12 @@
 - **Build:** `npm run build` clean after the final section. 1,504 static pages generated. Share buttons add one client component but guide route was not in the top-listed bundle output.
 - **PR #74:** draft, branch `claude/build-guides-hub-S7TPj`. Commits in order: scaffold + share buttons, intro + spray-season-math, service 1 cover crop, service 2 NDVI, service 3 ranch, service 4 mosquito, service 5 granular, service 6 non-ag RGB, 12-month calendar + revenue table, certification stack, subscription model, action checklist + closing, llms.txt + llms-full.txt, reciprocal links batch 1, reciprocal links batch 2.
 
+## 2026-04-25 — Contact scraper tool (PR #78, branch `claude/build-operators-scraper-l0r9c`)
+
+- Reusable tool at `tools/contact-scraper/` (own package.json, deps cheerio + p-limit + tsx; never touches the Next.js bundle). Three input modes: `--source=directory|csv|json`. Scrapes homepage + standard contact paths + same-origin contact-hint links; extracts emails (with Cloudflare CFEmail / `[at]/dot` / HTML-entity decoders), US phones, contact form URL, socials. Polite (5 cross-domain in flight, 2.5s same-domain delay with 50% jitter), one retry on transient failure, per-site time budget. Resumable via atomic-write `progress.json`. CSV writer is RFC 4180 compliant; passthrough columns from the source pass through to output.
+- GitHub Actions workflow `.github/workflows/scrape-contacts.yml` (workflow_dispatch only): runs the scraper on GitHub's own runners, uploads CSV + log + progress as artifacts. Owner runs from the GitHub UI (no terminal), independent of Netlify build minutes.
+- Fixed: root `tsconfig.json` `**/*.ts` include was pulling the new Node-only CLI TS files into the Next.js typecheck and breaking Netlify deploy previews. Added `tools` to the root tsconfig exclude list, mirroring the existing exclusion of `scripts/`.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
