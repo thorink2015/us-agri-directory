@@ -10,8 +10,12 @@
 **Symptom:** Annotation on every Scrape Contacts workflow run:
 > Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026.
 **Cause:** GitHub deprecated Node.js 20 for JavaScript actions on 2025-09-19. v4 of these three actions still ships a Node 20 entry binary.
-**Fix:** Bump all three to v5 in `.github/workflows/*.yml`. v5 ships a Node 24 entry binary. No other changes needed (input contracts unchanged for our usage). Refs: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
-**Prevention:** Whenever a new workflow is added, pull the latest major of `actions/checkout`, `actions/setup-node`, `actions/upload-artifact`, `actions/download-artifact`, `actions/cache` rather than copying older snippets.
+**Fix:** Bump in `.github/workflows/*.yml`:
+- `actions/checkout@v5` (Node 24)
+- `actions/setup-node@v5` (Node 24)
+- `actions/upload-artifact@v7` (Node 24)
+**Trap:** `actions/upload-artifact@v5` is **still on Node 20**. The Node-24 cutover for upload-artifact landed in v6 (Dec 2025) and v7 (Feb 2026). Bumping checkout/setup-node to v5 silences two of three warnings but leaves `upload-artifact@v5` flagged. v7 is input-compatible with v4/v5 for our four inputs (`name`, `path`, `if-no-files-found`, `retention-days`); it adds new optional inputs (`compression-level`, `overwrite`, `include-hidden-files`, `archive`) that default to safe values. Refs: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/ , https://github.com/actions/upload-artifact/releases
+**Prevention:** Whenever a new workflow is added or warnings reappear, check each action's release page individually — a v5 of one action is not equivalent to v5 of another. Always pull the latest major of `actions/checkout`, `actions/setup-node`, `actions/upload-artifact`, `actions/download-artifact`, `actions/cache` rather than copying older snippets.
 
 ## API / tooling gotchas
 

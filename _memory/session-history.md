@@ -265,9 +265,10 @@
 - GitHub Actions workflow `.github/workflows/scrape-contacts.yml` (workflow_dispatch only): runs the scraper on GitHub's own runners, uploads CSV + log + progress as artifacts. Owner runs from the GitHub UI (no terminal), independent of Netlify build minutes.
 - Fixed: root `tsconfig.json` `**/*.ts` include was pulling the new Node-only CLI TS files into the Next.js typecheck and breaking Netlify deploy previews. Added `tools` to the root tsconfig exclude list, mirroring the existing exclusion of `scripts/`.
 
-## 2026-04-25 — Scraper workflow Actions bump (branch `claude/update-github-actions-mntKS`)
+## 2026-04-25 — Scraper workflow Actions bump (branch `claude/update-github-actions-mntKS`, PR #79 merged)
 
-- `actions/checkout@v4` → `@v5`, `actions/setup-node@v4` → `@v5`, `actions/upload-artifact@v4` → `@v5` (3 upload steps) in `.github/workflows/scrape-contacts.yml`. Clears the GitHub Actions deprecation warning ("Node.js 20 actions are deprecated… forced to Node.js 24 by June 2nd, 2026"). v5 of these actions runs on Node.js 24 natively, so no `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24` env shim needed. Workflow inputs/outputs/artifact names unchanged — first scraper run from prior session (which produced the example progress.json with 10 sites completed) is unaffected.
+- **Round 1 (PR #79, merged):** `actions/checkout@v4` → `@v5`, `actions/setup-node@v4` → `@v5`, `actions/upload-artifact@v4` → `@v5` (3 upload steps) in `.github/workflows/scrape-contacts.yml`. Cleared two of three deprecation warnings.
+- **Round 2 (same branch):** Next workflow run still flagged `actions/upload-artifact@v5` as Node 20. Bumped to `@v7` (latest as of 2026-04-10; Node 24 cutover landed in v6 Dec 2025 → v7 Feb 2026). Inputs we use (`name`, `path`, `if-no-files-found`, `retention-days`) are unchanged in v7; new optional inputs (`compression-level`, `overwrite`, `include-hidden-files`, `archive`) default to safe values. See `known-issues.md` 2026-04-25 entry — `v5` of upload-artifact is *not* equivalent to `v5` of checkout/setup-node.
 
 ## What's next (see pending-items.md for detail)
 
