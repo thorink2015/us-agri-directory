@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
+import AffiliateCard from '@/components/affiliate/AffiliateCard';
 
 /**
  * Guide content keyed by slug (matching guides.ts).
@@ -508,6 +509,379 @@ export const guideContent: Record<string, ReactNode> = {
         <p>The off season is not empty. It is unclaimed.</p>
         <cite>Closing line</cite>
       </figure>
+    </>
+  ),
+  'how-to-become-an-agricultural-drone-pilot': (
+    <>
+      <p>Hayden Crum was 16 when he and his brother Conner bought their first DJI Agras T20 and started flying jobs off the back of their family&apos;s Adams County, Ohio farm supply store. Four years later Midwest Air has sprayed close to 100,000 acres and runs four trailer setups. Their first custom job almost broke them. &ldquo;We had a generator that was not big enough.&rdquo; It took them four days to spray a single 100-acre field.</p>
+
+      <p>That gap between the pitch and the reality is what this guide is about.</p>
+
+      <p>In 2025, US operators sprayed 16.4 million acres by drone, up 58.7% from the year before, across a field of 1,710 Part 137-certified operators (ASDC 2025 Impact Survey). In the same year the average price per acre fell from $21 to $13, a 38% single-year collapse. The opportunity is real. The margin to waste is not.</p>
+
+      <p>To legally fly a commercial ag spray job in the United States you need a <Link href="/regulations/faa-part-107">Part 107 Remote Pilot Certificate</Link>, a Section 44807 exemption if your drone is over 55 pounds, a <Link href="/regulations/faa-part-137">Part 137 Agricultural Aircraft Operator Certificate</Link>, a <Link href="/regulations/state-licensing">state pesticide applicator license</Link>, FAA aircraft registration, and liability and chemical coverage. Skip any one of those and you are either grounded or exposed to FAA civil penalties that were raised to $75,000 per violation in 2025.</p>
+
+      <p>Here is the step-by-step path, what each step actually costs, and what the operators who stuck with it did differently from the ones who quit in year one.</p>
+
+      <h2 id="what-pilots-do">What an ag drone pilot actually does</h2>
+
+      <p>Daily work is less Instagram and more logistics. A solo operator flying a DJI Agras T40 or T50 covers 400 to 1,200 acres per good day depending on field size, obstacles, and chemical load. The 2026 Iowa State Custom Rate Survey added drone spraying as its own line for the first time, reflecting how common the service has become in row-crop country. Specialty crops, orchards, and vineyards take longer per acre but pay more.</p>
+
+      <p>The season is short. In the Midwest, most of the fungicide work collapses into a three-to-four week window between corn VT stage and soybean R3. In the Delta, Kam Harper at Macon Ridge Specialty Drone Service sprays herbicide on Mississippi Delta fields roughly 90% of the year. &ldquo;In the Mississippi Delta, the majority of what we do is herbicide. That is 90%.&rdquo; In the Mountain West, weed-district contracts dominate and the calendar stretches wider.</p>
+
+      <p>A Part 107 certificate alone lets you fly a drone commercially, for example for mapping or scouting. It does not let you dispense pesticides. For that you need Part 137. Running a spray business as Part 107 only is the single fastest way to get fined or shut down. The FAA&apos;s 2025 enforcement sweep suspended or fined 18 drone operators with penalties between $1,771 and $36,770.</p>
+
+      <p>Fleet size tells you what this market actually looks like. According to the ASDC&apos;s 2025 survey, 69% of Part 137 operators run two drones or fewer, and the average operator flies 9,584 acres per season. Most of the people doing this are solo or two-person shops, not fleets.</p>
+
+      <h2 id="step-1-part-107">Step 1, get your Part 107 Remote Pilot Certificate</h2>
+
+      <p>Everything else waits on this. Part 107 is the FAA&apos;s foundational commercial small-UAS license. No Part 107, no commercial drone flight.</p>
+
+      <p>The knowledge test, the Unmanned Aircraft General (UAG), costs $175 per attempt, paid to PSI Services at booking. The format is straightforward: 60 multiple-choice questions, 120 minutes to finish, 70% to pass. If you fail, there is a mandatory 14-day wait before you can retest.</p>
+
+      <p>The test content is weighted like this:</p>
+
+      <figure className="guide-table-callout" aria-label="Part 107 UAG knowledge test content weighting">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Area</th>
+              <th scope="col">Topic</th>
+              <th scope="col">Weight</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>I</td>
+              <td>Regulations (Parts 89 and 107, waivers, Remote ID)</td>
+              <td>15 to 25%</td>
+            </tr>
+            <tr>
+              <td>II</td>
+              <td>Airspace and operating requirements</td>
+              <td>15 to 25%</td>
+            </tr>
+            <tr>
+              <td>III</td>
+              <td>Weather</td>
+              <td>11 to 16%</td>
+            </tr>
+            <tr>
+              <td>IV</td>
+              <td>Loading and performance</td>
+              <td>7 to 11%</td>
+            </tr>
+            <tr>
+              <td>V</td>
+              <td>Operations (radio, ADM, physiology, maintenance)</td>
+              <td>35 to 45%</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>Source: FAA-S-ACS-10B, current version dated April 2021.</p>
+
+      <p>Most first-time test-takers put in 15 to 20 hours of study over two to three weeks. Agricultural-specific guides suggest 8 to 15 hours once you focus on what ag pilots actually need to know. The 2025 FAA pass rate for Part 107 sits at 82.96%, which is the lowest of any FAA airman group. Study the material. Do not assume you will pass cold.</p>
+
+      <p>To hold the certificate you must be at least 16, able to read, speak, write, and understand English, and self-assessed as free from any physical or mental condition that would interfere with safe flight. No medical certificate is required.</p>
+
+      <p>Once you pass, you apply through IACRA with FAA Form 8710-13 and your 17-digit Knowledge Test Exam ID. TSA security vetting runs in the background. Most applicants get a temporary certificate by email in 7 to 14 business days, with the plastic card following in 6 to 8 weeks. See <Link href="/regulations/faa-part-107">our FAA Part 107 page</Link> for the full breakdown of test topics and scheduling.</p>
+
+      <p>To stay current you complete a free online recurrent training course every 24 calendar months. Course ALC-677 on FAASafety.gov covers Part 107 recurrent topics; it takes about two hours of material plus a 45-question quiz. If you let it lapse, you lose Remote Pilot-in-Command privileges until you complete it, but the certificate itself does not expire.</p>
+
+      <AffiliateCard
+        slug="pilot-institute-part-107"
+        heading="Get your Part 107 certificate"
+        bullets={[
+          '15 hours of video taught by an FAA Certified Flight Instructor',
+          'Pass guarantee, $175 test fee refunded if you fail',
+          'Used by 80,000+ students',
+          'Lifetime access so you stay current with FAA changes',
+        ]}
+        ctaLabel="See the Part 107 course"
+      />
+
+      <h2 id="step-2-part-137">Step 2, get your Part 137 Agricultural Aircraft Operator Certificate</h2>
+
+      <p>Part 107 covers the flight. Part 137 covers the dispensing. You need both.</p>
+
+      <p>14 CFR Part 137 governs agricultural aircraft operations, meaning the dispensing of economic poisons (pesticides, herbicides, fungicides), plant regulators, seeds, and soil-treatment substances. Section 137.11(a) is the line you cannot cross: no person may conduct agricultural aircraft operations without a valid Agricultural Aircraft Operator Certificate (AAOC).</p>
+
+      <p>Since June 2023, UAS-only applications no longer go to your local FSDO. You email FAA Form 8710-3 and your Section 44807 exemption number to UAS137Certificates@faa.gov at the centralized 137 UAS Operations Office under AFS-700. The process runs through five phases: Preapplication, Formal Application, Document Compliance, Demonstration and Inspection, and Certification.</p>
+
+      <p>Required documents include your operations manual, your congested-area plan if you will fly within 300 meters of one, chemical-handling and container-disposal procedures, pilot competency records, and aircraft make, model, and registration number. FAA Notice 8900.766, effective January 24, 2024, introduced a mandatory Applicant Readiness Checklist specifically to cut down on applicants entering Phase 3 with gaps in their paperwork.</p>
+
+      <p>Timelines vary. Industry reports place most uncomplicated applications at three to six months. Your mileage depends on how clean your paperwork is and how quickly you respond to an FAA Request for Information. The most common rejection reasons in 2024 to 2026 were: failing to respond to an RFI on time, using a P.O. Box instead of a physical address, name mismatches between Form 8710-3 and the Section 44807 exemption holder, and incomplete chemical-handling procedures in the operations manual. See <Link href="/regulations/faa-part-137">our Part 137 page</Link> for the full document checklist.</p>
+
+      <p>Delays matter more than you might think. Investigate Midwest reported that at the start of the 2024 season, at least 200 pilots were still waiting for their Part 137 certificate. Illinois operator Isaac Strubbe&apos;s advice: &ldquo;Drones can do things planes and helicopters can&apos;t.&rdquo; You cannot dispense a single drop of chemical without the certificate in hand. File in the off-season, not when you already have contracts on the line.</p>
+
+      <p>There is no published FAA fee for the Part 137 AAOC. The hidden cost is time: assembling the operations manual, training program, and Applicant Readiness Checklist takes most first-time applicants 40 to 80 hours of work. Some operators pay aviation attorneys or compliance services to prepare the package. AckerSpray publishes a fixed-price compliance bundle at $3,000 that covers Section 44807, Part 137, and FAA registration.</p>
+
+      <h2 id="step-3-state-license">Step 3, get your state pesticide applicator license</h2>
+
+      <p>The FAA regulates your aircraft and your pilot. Your state agriculture department regulates you as a pesticide applicator. These are two separate, simultaneous licensing tracks.</p>
+
+      <p>The legal basis is the Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA), which delegates applicator certification to the states under EPA-approved plans (40 CFR Part 171). The 2017 revision to Part 171 required all states to offer a dedicated aerial specialization for commercial applicators using restricted-use pesticides.</p>
+
+      <p>Two applicator categories matter for drone work:</p>
+
+      <ul>
+        <li>A <strong>private applicator</strong> applies restricted-use pesticides on land owned or rented by the applicator or their employer, for agricultural commodity production.</li>
+        <li>A <strong>commercial applicator</strong> applies pesticides on someone else&apos;s land for compensation. This is the category most drone spray businesses fall under.</li>
+      </ul>
+
+      <p>Every commercial applicator takes a &ldquo;core&rdquo; or general standards exam covering labels, safety, environmental protection, calibration, and drift. Then they take one or more category exams. Aerial is a mandatory federal category. Some states have added drone-specific sub-categories on top of aerial.</p>
+
+      <p>Costs and renewal cycles vary by state:</p>
+
+      <figure className="guide-table-callout" aria-label="Representative state pesticide applicator fees and renewal cycles">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">State</th>
+              <th scope="col">Representative fee</th>
+              <th scope="col">Renewal cycle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>California</td>
+              <td>$265 Unmanned Apprentice Pilot Certificate</td>
+              <td>2-year</td>
+            </tr>
+            <tr>
+              <td>Texas</td>
+              <td>Commercial $200 per year, Private $100 (5-yr)</td>
+              <td>Commercial annual</td>
+            </tr>
+            <tr>
+              <td>Nebraska</td>
+              <td>Commercial $90 (3-yr), Private $25 (3-yr)</td>
+              <td>3-year</td>
+            </tr>
+            <tr>
+              <td>Minnesota</td>
+              <td>Private $5 to add General Aerial endorsement</td>
+              <td>3-year</td>
+            </tr>
+            <tr>
+              <td>Iowa</td>
+              <td>IDALS exam plus cert fees, separate company license</td>
+              <td>3-year</td>
+            </tr>
+            <tr>
+              <td>Ohio</td>
+              <td>Oct 1 to Sept 30 license year</td>
+              <td>Annual</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>Source: state agriculture department websites, 2025-2026 fee schedules.</p>
+
+      <p>Reciprocity is limited and unreliable. Even when two states recognize each other&apos;s core exam, they will typically require you to pass the category-specific exam locally. Jonathan Cottingham at Southern Drone OPS built out dealer and pilot coverage in 11 states; each one required a separate state-level license stack.</p>
+
+      <p>If you plan to operate across state lines, budget for three to six months of testing and paperwork across every state on your list. For the full 50-state breakdown and individual state contacts, see <Link href="/regulations/state-licensing">our state licensing directory</Link>.</p>
+
+      <h2 id="step-4-section-44807">Step 4, Section 44807 exemption for drones over 55 pounds</h2>
+
+      <p>The Part 107 weight limit for small UAS is 55 pounds maximum takeoff weight, including payload. A DJI Agras T50 with a full tank weighs 227 pounds. A DJI T100 weighs 390 pounds. A Hylio AG-272 weighs 400 pounds. None of these are legal to operate commercially under Part 107 alone. You need a Section 44807 exemption.</p>
+
+      <p>Section 44807 of 49 U.S.C. gives the FAA authority to let certain UAS operate safely without full airworthiness certification, case by case. The FAA Reauthorization Act of 2024 extended this authority to September 30, 2033 and continued existing exemptions for up to three years beyond their original termination date.</p>
+
+      <p>A 44807 exemption is also needed when the operation itself falls outside Part 107&apos;s scope, for example multi-UAS swarming or BVLOS beyond the standard waiver. Ag spray operators always need one for Part 107 Section 107.36, which non-waivably prohibits hazmat carriage.</p>
+
+      <p>Since 2023, you can reference the FAA&apos;s &ldquo;List of Approved Agricultural UAS under Section 44807&rdquo; (Docket FAA-2023-1271) instead of starting from scratch. If your aircraft is on the list, your petition is essentially a me-too application. Approved airframes include the DJI Agras T40, T50, and T100, the Hylio AG-172 and AG-272, and the Guardian Agriculture SC1.</p>
+
+      <p>Petitions are filed on regulations.gov under 14 CFR Part 11. Section 11.63(d) requires that you file at least 120 days before your needed effective date. There is no FAA filing fee. Industry-reported approval timelines run 30 to 120 days for straightforward ag petitions. Novel operations like BVLOS or swarming take longer.</p>
+
+      <p>On cost, self-filing is free if you do the work yourself. Attorney-filed petitions for a simple me-too ag 44807 typically run $1,500 to $3,500, with some shops publishing $600 fees for individual add-ons like night operations or BVLOS safety cases. Flat fees for routine Part 107 waivers start around $500, and BVLOS petitions can run $10,000 or more. For the full regulatory breakdown see <Link href="/regulations">our regulations hub</Link>.</p>
+
+      <h2 id="startup-costs">What it really costs to start</h2>
+
+      <p>A field-ready ag drone operation is not a $15,000 side project. Budget honestly or plan to be undercapitalized.</p>
+
+      <p>Here is what a realistic first-season setup looks like in 2026:</p>
+
+      <figure className="guide-table-callout" aria-label="First-season ag drone startup cost breakdown, 2026 budgets">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Line item</th>
+              <th scope="col">Low budget</th>
+              <th scope="col">Mid</th>
+              <th scope="col">High</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Drone (T40 to T50 class)</td>
+              <td>$22,000</td>
+              <td>$27,000</td>
+              <td>$32,000</td>
+            </tr>
+            <tr>
+              <td>Batteries (3 to 6 packs)</td>
+              <td>$6,000</td>
+              <td>$9,000</td>
+              <td>$13,000</td>
+            </tr>
+            <tr>
+              <td>Generator (14 kW +)</td>
+              <td>$4,000</td>
+              <td>$5,500</td>
+              <td>$7,500</td>
+            </tr>
+            <tr>
+              <td>Trailer and mix station</td>
+              <td>$5,000</td>
+              <td>$10,000</td>
+              <td>$18,000</td>
+            </tr>
+            <tr>
+              <td>Licensing and compliance</td>
+              <td>$1,500</td>
+              <td>$3,000</td>
+              <td>$5,000</td>
+            </tr>
+            <tr>
+              <td>Insurance (year 1 premium)</td>
+              <td>$4,000</td>
+              <td>$7,500</td>
+              <td>$10,500</td>
+            </tr>
+            <tr>
+              <td>PPE, mix tanks, spare nozzles</td>
+              <td>$1,000</td>
+              <td>$2,000</td>
+              <td>$3,500</td>
+            </tr>
+            <tr>
+              <td><strong>Total</strong></td>
+              <td><strong>$43,500</strong></td>
+              <td><strong>$64,000</strong></td>
+              <td><strong>$89,500</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>Source: NuWay Ag Complete Kit pricing, AckerSpray, Drone Spray Pro, Talos Drones, BWI Aviation Insurance 2025-2026 rates.</p>
+
+      <p>A DJI Agras T50 with four batteries and a generator runs about $27,195 through Drone Spray Pro&apos;s package. NuWay Ag&apos;s T50-C10000 complete kit lists at $22,996. A DJI T40 RTF bundle through AckerSpray runs $30,000 to $38,000 with a Westinghouse generator. Trailers range from a DIY bed setup under $5,000 up to $18,000 for a purpose-built enclosed rig with mixing station, lights, and hydraulic jacks.</p>
+
+      <p>Insurance is the line item most new operators underprice. BWI Aviation published a 2025 sample breakdown for a $40,000 DJI T40 policy with full coverage: $5,000 hull, $1,350 liability, $3,500 chemical liability, $607 terrorism and war, total $10,457 per year. You can come in lower on a smaller drone with thinner chemical limits, but budget at least $4,000 for a year one policy that actually covers drift. See <Link href="/insurance">our insurance page</Link> for carrier options and policy structures.</p>
+
+      <p>A Minneapolis Craigslist listing from 2025 offers a cautionary benchmark: an EAVision J-100 spray drone with 85 acres on it, included in a turn-key Minnesota C-Corp with $35,000 in the business account. Essentially never used. The total investment had been made. The acres had not.</p>
+
+      <p>For equipment comparisons by drone class and price-per-acre economics, see <Link href="/buyers-guide">our spray drone buyer&apos;s guide</Link>.</p>
+
+      <h2 id="earnings">What you can actually earn in year 1 and year 2</h2>
+
+      <p>Honest numbers first. Brandon Beal at Elevation Aerial Application in Galax, Virginia documented his year-one revenue at $50,000 flying Christmas tree farms, corn, and pastures. His year-two revenue, with three drones, landed at $170,000 to $180,000 (Drone to 1K Podcast, S7 Ep. 3). That is the documented progression of a well-run solo-to-small-fleet operation. Not all operators hit it.</p>
+
+      <p>Rates vary by region and by what you fly:</p>
+
+      <figure className="guide-table-callout" aria-label="Regional drone spraying rates by zone, 2026">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Region</th>
+              <th scope="col">$/acre range</th>
+              <th scope="col">Key dynamics</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Corn Belt (IA, IL, IN, OH, eastern NE)</td>
+              <td>$12 to $17</td>
+              <td>Most competitive market, large flat fields, heavy operator supply</td>
+            </tr>
+            <tr>
+              <td>Great Plains (KS, NE, ND, SD)</td>
+              <td>$12 to $16</td>
+              <td>Large open acreage, fewer operators than Corn Belt</td>
+            </tr>
+            <tr>
+              <td>Delta and South (AR, LA, MS)</td>
+              <td>$14 to $18</td>
+              <td>Manned aerial competition, rice adds complexity</td>
+            </tr>
+            <tr>
+              <td>California specialty crops</td>
+              <td>$15 to $35, pheromone $100 to $300</td>
+              <td>Regulatory-locked, margin is strong where you can legally operate</td>
+            </tr>
+            <tr>
+              <td>Southeast (GA, AL, SC, NC, FL)</td>
+              <td>$16 to $28</td>
+              <td>Mixed terrain, higher chemical costs</td>
+            </tr>
+            <tr>
+              <td>Mountain West (WY, MT, CO, ID)</td>
+              <td>$14 to $20</td>
+              <td>Underserved commercial market, weed-district contracts</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>Source: Iowa State 2026 Custom Rate Survey, NuWay Ag, Ag Partners Coop, Growing Produce, Drone Spray Pro.</p>
+
+      <p>By crop, corn fungicide and cotton defoliation tend to run 15 to 25% above flat-crop rates. Specialty vegetables and vineyards command $18 to $40 per acre because of complexity, trellis systems, and smaller field sizes.</p>
+
+      <p>Rate compression is the single biggest story in 2025. National average prices fell from $21 per acre in 2024 to $13 per acre in 2025, a 38% drop driven largely by the Corn Belt and by non-Part 137 operators willing to fly cheap. Eric Ringer of the American Spray Drone Coalition attributes most of it to undercutting by unlicensed operators. Specialty crop markets, orchards, and vineyards remain much less compressed.</p>
+
+      <p>Gross margin after chemicals, fuel, batteries, and insurance lands somewhere between $5 and $8 per acre at current Midwest rates. A solo operator flying 9,584 acres per season at a $6 net margin earns about $57,500 in year one before owner&apos;s draw. At Brandon Beal&apos;s year-two pace with three drones flying specialty and row crop combined, you are in six-figure territory. The path from one to the other is not linear, and it is not short.</p>
+
+      <p>A typical solo operator in their first full season flies 4,000 to 8,000 acres. Iowa State&apos;s 2026 survey shows Iowa&apos;s average drone spray rate at $11.85 per acre, so a 6,000-acre Iowa solo operator will gross around $71,000. Most of the margin goes back into the second drone, second generator, or hiring a ground crew. See <Link href="/pricing">our pricing pillar</Link> for the full custom-rate breakdown by service and region.</p>
+
+      <h2 id="who-succeeds">What separates operators who build a business from those who quit</h2>
+
+      <p>Four patterns show up across every successful named operator in the 2024 to 2026 coverage.</p>
+
+      <p><strong>Ag roots or a deliberate substitute.</strong> Hayden and Conner Crum started Midwest Air off their family&apos;s 50-year farm supply business. Jonathan Cottingham is a third-generation aerial applicator; his family&apos;s crop-dusting history was his referral network from day one. Kam Harper was a former farm manager whose first customers were his old employer&apos;s neighbors. &ldquo;I was so busy that I couldn&apos;t keep up.&rdquo; If you do not have ag roots, build a deliberate substitute. Partner with a seed dealer, a chemical retailer, or a co-op. Ackerspray&apos;s founder puts it plainly: start with local seed and chemical dealers, not with farmers directly.</p>
+
+      <p><strong>A subcontracting path for day-one revenue.</strong> nuWay FastPass is the most documented example: for an $800 fee, operators who have bought equipment but are waiting on their own Part 137 approval can legally spray as contractors under nuWay Ag&apos;s existing certificate. That gets you flying in one to two weeks instead of three to six months. SweetWater Technologies runs a similar franchise model, going from 32,000 acres in 2022 to a projected 200,000 acres by end of 2025. &ldquo;What we do is in demand.&rdquo;</p>
+
+      <p><strong>Specialization within 12 months.</strong> Harper runs Delta herbicide, 90%. Beal runs Christmas tree fungicide and corn pastures. Crum layered Ohio H2Ohio cover-crop seeding on top of fungicide, exploiting the state&apos;s roughly $50 per acre cover crop program. Operators who stay generalists get squeezed; operators who specialize find rates that have not compressed.</p>
+
+      <p><strong>Regulatory compliance from day one, usually with a second revenue line by year two.</strong> Every successful named operator in the sample runs at least two revenue lines by year two: spraying plus dealer sales, trailer sales, training, or software. Mike Yoder at nuWay Ag runs spraying plus DJI dealer plus trailer manufacturing plus the DroneOn Show plus FastPass subcontracting. Hayden Crum at Midwest Air runs spraying plus DJI dealer plus cover-crop seeding. Taylor Moreland at Agri Spray Drones runs distribution plus the Spray Drone End User Conference.</p>
+
+      <p>The quitters share a different pattern: wrong drone for the job, no Part 137, no state license, insurance gap after a drift claim, or a single customer that bailed. The 2025 Minneapolis Craigslist listing sells a Minnesota spray operation with 85 acres on the drone. The paper trail tells the story.</p>
+
+      <p>Crum&apos;s summary on the selling-to-your-competition question is the right frame for how this industry actually scales: &ldquo;I can&apos;t cover every acre, and I can&apos;t always hit perfect timing for every farmer.&rdquo; If you go in with that mindset, you will find room. See <Link href="/start-a-drone-business">our start a drone business playbook</Link> for the full breakdown on partnerships, pricing, and first-year contracts.</p>
+
+      <h3>Your 90-day launch checklist</h3>
+
+      <ol>
+        <li>Create an IACRA account and reserve a PSI Part 107 test date within 30 days.</li>
+        <li>Study 15 to 20 hours for the UAG exam. Pass on the first attempt.</li>
+        <li>Receive your temporary Part 107 certificate and register the aircraft under Part 47 if it is over 55 pounds, or Part 48 if under.</li>
+        <li>File your Section 44807 petition on regulations.gov, referencing the approved airframe list.</li>
+        <li>Start your state pesticide applicator core exam prep while the 44807 is pending.</li>
+        <li>Once 44807 is granted, draft your Part 137 operations manual and Applicant Readiness Checklist.</li>
+        <li>Submit Form 8710-3 to UAS137Certificates@faa.gov with your 44807 exemption number.</li>
+        <li>Get insured before the AAOC comes through. Hull, liability, and chemical drift. Budget $4,000 to $10,500 annually.</li>
+        <li>Sign one subcontracting agreement (nuWay FastPass, regional operator) so you can book paid work while your AAOC is in review.</li>
+        <li>Pick one specialization by month 12: Delta herbicide, corn fungicide, cover crop seeding, orchards, or pheromones.</li>
+      </ol>
+
+      <p>Some ag drone operators go on to get their Private Pilot certificate for manned aerial work, either to fly their own scouting plane or to move into mixed-fleet custom application down the road.</p>
+
+      <AffiliateCard
+        slug="pilot-institute-private-pilot"
+        heading="Going beyond drones? Study for your Private Pilot"
+        bullets={[
+          '35 hours of video, 850 practice questions',
+          'Instructor endorsement included',
+          'Pass guarantee',
+        ]}
+        ctaLabel="See the Private Pilot course"
+        variant="compact"
+      />
     </>
   ),
 };

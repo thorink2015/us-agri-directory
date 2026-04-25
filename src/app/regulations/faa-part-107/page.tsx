@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateCard from '@/components/affiliate/AffiliateCard';
 import { AUTHOR, SITE } from '@/data/author';
 
 import { addUtm } from '@/lib/utm';
@@ -140,6 +141,18 @@ export default function FaaPart107Page() {
           </p>
         </section>
 
+        <AffiliateCard
+          slug="pilot-institute-part-107"
+          heading="Need to pass the Part 107 exam?"
+          bullets={[
+            '15 hours of video taught by an FAA Certified Flight Instructor',
+            'Pass guarantee, $175 test fee refunded if you fail',
+            'Used by 80,000+ students',
+            'Lifetime access so you stay current with FAA changes',
+          ]}
+          ctaLabel="See the Part 107 course"
+        />
+
         {/* Authority links */}
         <section className="mt-10 bg-gray-50 border border-gray-200 rounded-xl p-5 text-sm">
           <h3 className="font-semibold text-gray-800 mb-2">Primary sources</h3>
@@ -177,6 +190,7 @@ export default function FaaPart107Page() {
           <Link href="/training-and-certification" className="text-green-700 hover:underline">Training providers</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
           <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
+          <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
           <Link href="/services/spraying" className="text-green-700 hover:underline">Drone spraying services</Link>
           <Link href="/tools" className="text-green-700 hover:underline">Free tools</Link>
         </div>

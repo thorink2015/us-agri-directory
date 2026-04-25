@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/_memory/', '/_research/', '/_handoff/', '/api/'],
+        disallow: ['/_memory/', '/_research/', '/_handoff/', '/api/', '/go/'],
       },
       // ── AI crawlers, explicit allow for citation advantage ──────────────
       { userAgent: 'GPTBot', allow: '/' },                // OpenAI / ChatGPT training

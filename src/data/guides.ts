@@ -320,6 +320,145 @@ export const guides: Guide[] = [
       { href: '/insurance', label: 'Insurance for drone applicators' },
     ],
   },
+  {
+    slug: 'how-to-become-an-agricultural-drone-pilot',
+    title:
+      'How to Become an Agricultural Drone Pilot in the US: A Step-by-Step 2026 Guide',
+    shortTitle: 'How to become an agricultural drone pilot',
+    description:
+      'The real path to becoming a licensed ag drone pilot in 2026. Part 107, Part 137, state license, startup costs, and what operators actually earn.',
+    primaryKeyword: 'how to become an agricultural drone pilot',
+    secondaryKeywords: [
+      'become an ag drone pilot',
+      'agricultural drone pilot license',
+      'Part 107 ag drone',
+      'Part 137 drone certification',
+      'Section 44807 exemption',
+      'drone spraying startup cost',
+    ],
+    category: 'Operators',
+    publishDate: '2026-04-25',
+    lastUpdated: '2026-04-25',
+    readMinutes: 18,
+    aeoBlock:
+      'To legally fly a commercial ag spray job in the United States you need a Part 107 Remote Pilot Certificate, a Section 44807 exemption if your drone is over 55 pounds, a Part 137 Agricultural Aircraft Operator Certificate, a state pesticide applicator license, FAA aircraft registration, and liability plus chemical coverage. Expect $43,500 to $89,500 in first-season startup, 3 to 6 months from paperwork to first paid flight, and $12 to $35 per acre depending on region and crop. In 2025, US operators sprayed 16.4 million acres by drone across 1,710 Part 137-certified operators (ASDC), while national rates fell from $21 to $13 per acre, a 38% single-year drop. FAA civil penalties were raised to $75,000 per violation in 2025.',
+    toc: [
+      { id: 'what-pilots-do', label: 'What an ag drone pilot actually does' },
+      { id: 'step-1-part-107', label: 'Step 1: Part 107 Remote Pilot Certificate' },
+      { id: 'step-2-part-137', label: 'Step 2: Part 137 Agricultural Operator Certificate' },
+      { id: 'step-3-state-license', label: 'Step 3: State pesticide applicator license' },
+      { id: 'step-4-section-44807', label: 'Step 4: Section 44807 exemption' },
+      { id: 'startup-costs', label: 'What it really costs to start' },
+      { id: 'earnings', label: 'What you can earn in year 1 and 2' },
+      { id: 'who-succeeds', label: 'What separates operators who build a business' },
+    ],
+    quickFacts: [
+      { label: '2025 US acres sprayed by drone', value: '16.4 million (ASDC), up 58.7% YoY' },
+      { label: '2025 national average rate', value: '$13 per acre, down from $21 in 2024' },
+      { label: 'Registered Part 137 operators', value: '1,710 nationwide (ASDC 2025)' },
+      { label: 'First-season startup budget', value: '$43,500 low, $64,000 mid, $89,500 high' },
+    ],
+    pullQuotes: [
+      {
+        quote:
+          'We had a generator that was not big enough. It took us four days to spray a single 100-acre field.',
+        attribution: 'Hayden Crum, Midwest Air, on their first custom job (DroneOn Show Ep. 22)',
+      },
+      {
+        quote:
+          'In the Mississippi Delta, the majority of what we do is herbicide. That is 90%.',
+        attribution: 'Kam Harper, Macon Ridge Specialty Drone Service (Delta Farm Press)',
+      },
+      {
+        quote:
+          'I can\'t cover every acre, and I can\'t always hit perfect timing for every farmer.',
+        attribution: 'Hayden Crum, Midwest Air, on subcontracting (DroneOn Show Ep. 22)',
+      },
+    ],
+    howToTitle: 'How to become a licensed agricultural drone pilot in the US',
+    featuredPullQuote: {
+      quote:
+        'In 2025, US operators sprayed 16.4 million acres by drone, up 58.7% from the year before. The opportunity is real. The margin to waste is not.',
+      attribution: 'From: the market math opening the step-by-step licensing path',
+    },
+    howToSteps: [
+      {
+        name: 'Get your Part 107 Remote Pilot Certificate',
+        text: 'Pass the UAG knowledge test ($175 at PSI Services), 60 multiple-choice questions, 70% to pass. Most first-timers put in 15 to 20 hours of study. Apply through IACRA with Form 8710-13 and your 17-digit Knowledge Test Exam ID. Temporary certificate by email in 7 to 14 business days.',
+      },
+      {
+        name: 'Apply for Section 44807 exemption if your drone is over 55 pounds',
+        text: 'File on regulations.gov under 14 CFR Part 11 referencing the FAA List of Approved Agricultural UAS (Docket FAA-2023-1271). No FAA filing fee. Industry approval timelines run 30 to 120 days for straightforward ag petitions.',
+      },
+      {
+        name: 'Apply for your Part 137 Agricultural Aircraft Operator Certificate',
+        text: 'Email Form 8710-3 plus your Section 44807 exemption number to UAS137Certificates@faa.gov. Five-phase process: Preapplication, Formal Application, Document Compliance, Demonstration and Inspection, and Certification. Most uncomplicated applications take 3 to 6 months.',
+      },
+      {
+        name: 'Get your state pesticide applicator license',
+        text: 'Pass your state commercial applicator core exam plus aerial or UAS category. Fees range from $25 Nebraska private to $265 California UAPC. Reciprocity is limited. Budget 3 to 6 months per state if you plan to work across state lines.',
+      },
+      {
+        name: 'Register your aircraft and insure it',
+        text: 'Part 47 registration if over 55 pounds, Part 48 if under. Insure with hull, liability, and chemical drift coverage before the AAOC arrives. BWI Aviation sample 2025 policy totaled $10,457 per year on a $40,000 T40; budget $4,000 minimum.',
+      },
+      {
+        name: 'Sign a subcontracting agreement to earn while you wait',
+        text: 'Pay the $800 nuWay FastPass fee (or sign with SweetWater Technologies, Ackerspray, or a regional operator) so you can legally spray under their Part 137 certificate while your own application is in review. Cuts time to first revenue from 3-6 months to 1-2 weeks.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How much does it cost to start an ag drone spraying business?',
+        answer:
+          'Budget $43,500 on the low end, $64,000 mid-range, and $89,500 for a fully built-out first-season setup with insurance and compliance. The drone is roughly half of that; batteries, trailer, generator, licensing, and insurance are the other half. Plan on insurance alone being at least $4,000 in year one.',
+      },
+      {
+        question: 'How long until I make my first dollar?',
+        answer:
+          'If you already have Part 107, most operators are three to six months from their first paid flight: 30 to 120 days for the Section 44807 petition, another two to six months for Part 137. A subcontracting path like nuWay FastPass can get you earning in one to two weeks under another operator\'s certificate while your own is pending.',
+      },
+      {
+        question: 'What is the best drone for a beginner?',
+        answer:
+          'DJI Agras T40 and T50 are the dominant first-purchase platforms in the US because of dealer support, parts availability, and the size of the trained pilot pool. The T50 has 40L tank capacity and runs about $22,000 to $27,000 base, plus batteries and a generator. For NDAA-compliant alternatives consider Hylio, Talos, or Raptor Dynamic, but budget a premium.',
+      },
+      {
+        question: 'Do I need an LLC before I start?',
+        answer:
+          'Most state agriculture departments will issue a commercial applicator license to an individual, but Part 137 and your insurance policy will both list an operator entity. Forming an LLC before you file Part 137 saves you a name-change refile later. Costs range from $50 to $500 depending on state.',
+      },
+      {
+        question: 'What is the difference between Part 107 and Part 137?',
+        answer:
+          'Part 107 authorizes you to commercially operate a small UAS. Part 137 authorizes the operator (your business) to dispense agricultural chemicals. Part 107 is about the pilot and the flight. Part 137 is about the work being done. You need both to legally spray for hire.',
+      },
+      {
+        question: 'What is the minimum insurance I need?',
+        answer:
+          'Most ag customers will require $1 million liability. If you are spraying chemicals, you also need a chemical liability endorsement, typically with $100,000 limits on the 1/3/1 structure. Hull insurance on a $30,000 to $40,000 drone runs 10 to 15% of the insured value. BWI Aviation and SkyWatch are the two most cited carriers.',
+      },
+      {
+        question: 'What is the best state to start an ag drone business?',
+        answer:
+          'Underserved markets are Mountain West (Wyoming, Montana, Colorado rangeland and orchards) and specialty California crops where the regulatory load is high enough to deter competition. The Corn Belt is the most saturated and most price-compressed. Start where you already have farmer relationships if you can.',
+      },
+      {
+        question: 'Can I spray my own farm without a commercial license?',
+        answer:
+          'Yes, but only as a private applicator, and only on land you own or rent for agricultural commodity production. You still need Part 107 and Section 44807 if your drone is over 55 pounds, plus your state\'s private applicator certification with the aerial category. You do not need Part 137 for spraying exclusively on your own operation.',
+      },
+    ],
+    relatedInternal: [
+      { href: '/regulations/faa-part-107', label: 'FAA Part 107 for drones' },
+      { href: '/regulations/faa-part-137', label: 'FAA Part 137 for drones' },
+      { href: '/regulations/state-licensing', label: 'State pesticide licensing' },
+      { href: '/insurance', label: 'Insurance for drone applicators' },
+      { href: '/buyers-guide', label: 'Spray drone buyer\'s guide' },
+      { href: '/start-a-drone-business', label: 'Start a drone business' },
+      { href: '/training-and-certification', label: 'Training and certification' },
+    ],
+  },
 ];
 
 export function getGuideBySlug(slug: string): Guide | undefined {

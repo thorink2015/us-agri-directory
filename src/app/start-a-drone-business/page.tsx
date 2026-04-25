@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateCard from '@/components/affiliate/AffiliateCard';
 import { AUTHOR, SITE } from '@/data/author';
 
 import { addUtm } from '@/lib/utm';
@@ -216,6 +217,20 @@ export default function StartADroneBusinessPage() {
             <Link href="/training-and-certification" className="text-green-700 hover:underline">Full certification details</Link> | <Link href="/regulations/state-licensing" className="text-green-700 hover:underline">state-specific requirements</Link>.
           </p>
 
+          <div className="not-prose">
+            <AffiliateCard
+              slug="pilot-institute-part-107"
+              heading="Step one: get your Part 107"
+              bullets={[
+                '15 hours of video taught by an FAA Certified Flight Instructor',
+                'Pass guarantee, $175 test fee refunded if you fail',
+                'Used by 80,000+ students',
+                'Lifetime access so you stay current with FAA changes',
+              ]}
+              ctaLabel="See the Part 107 course"
+            />
+          </div>
+
           <h2 className="text-xl font-bold text-gray-900">Which drone to buy first</h2>
           <p>
             <strong>DJI Agras T50 ($22,000 to $28,000 post-tariff):</strong> most operators start here. 40L tank, proven dealer network, fastest parts availability, largest operator community for troubleshooting. Not NDAA compliant. <strong>DJI Agras T25 ($16,000 to $20,000):</strong> lower entry cost, same spray quality as T50 (identical pump and nozzle). Best for farmer-operators spraying their own fields at 200 to 800 acres per year. Lower daily throughput limits commercial scalability. <strong>Talos T60X (from $17,899):</strong> lowest price point for a 50L-class drone, but undisclosed specs on battery, wind and IP rating and a shorter field track record. <strong>Hylio AG-272 ($55,000 to $75,000):</strong> buy this if you need NDAA compliance or work in high-wind environments (25 mph vs DJI 13.4 mph). Higher cost but US-made with no tariff exposure. Do NOT buy Pyka Pelican 2 ($550,000) as your first platform; it targets large commercial applicators <Link href="/comparisons/drone-vs-airplane" className="text-green-700 hover:underline">replacing manned aircraft</Link>, not startup operators. <Link href="/tools/drone-comparison" className="text-green-700 hover:underline">Compare all drones side by side</Link>.
@@ -295,6 +310,7 @@ export default function StartADroneBusinessPage() {
           <Link href="/insurance" className="text-green-700 hover:underline">Drone insurance</Link>
           <Link href="/guides/hire-drone-spray-operator-checklist" className="text-green-700 hover:underline">How farmers vet operators (checklist)</Link>
           <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
+          <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
           <Link href="/grants-and-subsidies" className="text-green-700 hover:underline">Grants and cost-share</Link>
           <Link href="/pricing" className="text-green-700 hover:underline">2026 pricing guide</Link>
           <Link href="/tools/roi-calculator" className="text-green-700 hover:underline">ROI calculator</Link>
