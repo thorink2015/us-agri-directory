@@ -1,0 +1,6 @@
+node_modules/
+output/*.csv
+output/*.json
+logs/*.log
+progress.json
+.DS_Store
