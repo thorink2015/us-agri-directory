@@ -48,6 +48,37 @@ export default function BlogHub() {
         </p>
       </header>
 
+      {/* Pillar guides cross-promo */}
+      <aside className="mb-10 bg-stone-50 border border-stone-200 rounded-2xl p-5 sm:p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <div className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 mb-1">
+              Looking for the long-form playbooks?
+            </div>
+            <h2 className="text-lg font-bold text-gray-900">
+              Pillar guides for ag drone work
+            </h2>
+            <p className="text-sm text-gray-600 mt-1 max-w-2xl">
+              Multi-thousand-word references on hiring, vetting, becoming an operator, and the 2026 industry-statistics report. Built from FAA, EPA, USDA and peer-reviewed primary sources.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3 shrink-0">
+            <Link
+              href="/guides"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-800 hover:underline"
+            >
+              All guides <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              href="/guides/agricultural-drone-spraying-statistics-2026"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-stone-800 hover:underline"
+            >
+              2026 statistics report <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </aside>
+
       {/* Featured */}
       {featured && (
         <Link
