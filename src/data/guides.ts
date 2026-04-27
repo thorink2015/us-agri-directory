@@ -500,8 +500,8 @@ export const guides: Guide[] = [
       'drone vs ground spraying environmental',
     ],
     category: 'For Farmers',
-    publishDate: '2026-04-25',
-    lastUpdated: '2026-04-25',
+    publishDate: '2026-04-26',
+    lastUpdated: '2026-04-26',
     readMinutes: 22,
     aeoBlock:
       'US agricultural spray drones treated 16.4 million acres in 2025, up 58.7% year over year, with 1,710 FAA-certificated Part 137 unmanned aircraft operators flying nationwide as of September 2025. The average per-acre price fell to $13 from $21 in 2024 as new operators entered the market, while peer-reviewed studies show drone spraying cuts pesticide use 46 to 75% and operator chemical exposure 90 to 99% versus ground equipment. This guide compiles 85+ verified statistics from the American Spray Drone Coalition, FAA, NAAA, USDA, and peer-reviewed research, with conflict notes and methodology caveats so you can cite numbers that hold up.',
