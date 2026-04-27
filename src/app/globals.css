@@ -131,6 +131,53 @@ body {
 }
 .guide-table-callout tbody tr:last-child td { border-bottom: none; }
 
+/* Image-slot placeholder. Reserves space and labels the slot for future
+   artwork. The placeholder block is greyed out so it reads as a slot, not
+   a missing asset. */
+.guide-figure {
+  margin: 2em 0;
+}
+.guide-figure figcaption {
+  margin-top: 0.5em;
+  font-size: 0.8125rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: #6b7280;
+  font-style: italic;
+}
+.guide-figure-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 12rem;
+  padding: 2rem 1.5rem;
+  border: 1px dashed #cbd5e1;
+  background: repeating-linear-gradient(
+    45deg,
+    #f8fafc,
+    #f8fafc 12px,
+    #f1f5f9 12px,
+    #f1f5f9 24px
+  );
+  border-radius: 0.75rem;
+  text-align: center;
+  color: #475569;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+.guide-figure-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+.guide-figure-caption-inline {
+  font-size: 0.875rem;
+  max-width: 28rem;
+  line-height: 1.45;
+}
+
 /* Pull quote */
 .guide-pullquote {
   margin: 2em 0;

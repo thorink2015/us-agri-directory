@@ -143,6 +143,43 @@ export default function GuidePage({ params }: Props) {
       }
     : null;
 
+  // Dataset schema for guides anchored on a citable data table. Makes the
+  // table individually indexable in Google Dataset Search and quotable by
+  // AI engines.
+  const datasetSchema = guide.dataset
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Dataset',
+        name: guide.dataset.name,
+        description: guide.dataset.description,
+        identifier: guide.dataset.identifier ?? absoluteUrl,
+        url: absoluteUrl,
+        sameAs: absoluteUrl,
+        isAccessibleForFree: true,
+        inLanguage: 'en-US',
+        dateCreated: guide.dataset.dateCreated,
+        datePublished: guide.publishDate,
+        dateModified: guide.lastUpdated,
+        creator: { '@id': AUTHOR.personId },
+        publisher: { '@id': AUTHOR.organizationId },
+        license: guide.dataset.license,
+        keywords: guide.dataset.keywords,
+        variableMeasured: guide.dataset.variableMeasured.map((name) => ({
+          '@type': 'PropertyValue',
+          name,
+        })),
+        citation: guide.dataset.citation,
+        distribution: [
+          {
+            '@type': 'DataDownload',
+            encodingFormat: 'text/html',
+            contentUrl: `${absoluteUrl}#mega-table`,
+          },
+        ],
+        mainEntityOfPage: absoluteUrl,
+      }
+    : null;
+
   return (
     <>
       <GuideReadingProgress />
@@ -154,6 +191,9 @@ export default function GuidePage({ params }: Props) {
       )}
       {howToSchema && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      )}
+      {datasetSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
       )}
 
       <article className="bg-white">

@@ -114,6 +114,21 @@ export default function FaaPart137Page() {
           </p>
         </div>
 
+        <aside className="mb-8 bg-stone-50 border border-stone-200 rounded-xl p-4">
+          <div className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 mb-1">
+            Industry adoption data
+          </div>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            FAA-certificated Part 137 UAS operators reached 1,710 in September 2025, up 58.3% year over year, while drones treated 16.4 million US acres in 2025 (ASDC).{' '}
+            <Link
+              href="/guides/agricultural-drone-spraying-statistics-2026"
+              className="text-green-800 font-semibold hover:underline"
+            >
+              See the full 2026 statistics report.
+            </Link>
+          </p>
+        </aside>
+
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">What Part 137 is</h2>
           <p>
@@ -176,6 +191,7 @@ export default function FaaPart137Page() {
           <Link href="/guides/hire-drone-spray-operator-checklist" className="text-green-700 hover:underline">How farmers verify Part 137</Link>
           <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
           <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
+          <Link href="/guides/agricultural-drone-spraying-statistics-2026" className="text-green-700 hover:underline">2026 industry statistics</Link>
           <Link href="/training-and-certification" className="text-green-700 hover:underline">Training providers</Link>
           <Link href="/services/consultancy" className="text-green-700 hover:underline">Consultancy services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
