@@ -106,3 +106,11 @@
   to = "/operators/kuhns-aerial-applications"
   status = 301
   force = true
+
+# Flying Cowboy: business pivot from photography to ag services
+# (renamed slug; same operator, same site).
+[[redirects]]
+  from = "/operators/flying-cowboy-photography"
+  to = "/operators/flying-cowboy-ag-services"
+  status = 301
+  force = true
