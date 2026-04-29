@@ -74,6 +74,12 @@ export default function OperatorPage({ params }: Props) {
           ]}
         />
 
+        {operator.pendingConfirmation && (
+          <div className="mb-4 px-3 py-2 rounded-md border border-gray-200 bg-gray-50 text-[12px] text-gray-600 leading-snug">
+            This profile was built from public records and is awaiting verification by the operator.
+          </div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* ─── Main content ─────────────────────────────── */}
           <div className="lg:col-span-2 space-y-6">
@@ -386,6 +392,15 @@ export default function OperatorPage({ params }: Props) {
                     <Globe className="w-4 h-4 text-green-600" />
                     Official website
                   </ExternalLink>
+                )}
+                {!operator.phone && !operator.email && (
+                  <p className="text-xs text-gray-600 leading-snug">
+                    Contact info not yet provided. If this is your business,{' '}
+                    <Link href="/list-your-business" className="text-green-700 underline hover:text-green-800">
+                      claim your listing
+                    </Link>{' '}
+                    to add direct contact details.
+                  </p>
                 )}
               </div>
 
