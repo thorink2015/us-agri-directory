@@ -97,3 +97,12 @@
 #   from = "/old-path"
 #   to = "/new-path"
 #   status = 301
+
+# ── Operator slug redirects (canonicalize duplicates / renames) ───────────
+# Kuhn's Aerial Applications: merged duplicate kuhn-s-aerial-applications-llc
+# into the more complete kuhns-aerial-applications entry.
+[[redirects]]
+  from = "/operators/kuhn-s-aerial-applications-llc"
+  to = "/operators/kuhns-aerial-applications"
+  status = 301
+  force = true

@@ -2679,23 +2679,8 @@ export const operators: Operator[] = [
   },
 
   // ── IMPORTED BATCH 1 (operators-batch-1 through batch-4a, entries 0-89) ──────
-  {
-    slug: 'kuhn-s-aerial-applications-llc',
-    name: 'Kuhn\'s Aerial Applications LLC',
-    description:
-      'WV-based spray drone company specializing in steep mountain terrain inaccessible to tractors. Featured in WVU Extension Doddridge County drone spraying demonstration.',
-    country: 'US',
-    counties: ['west-virginia'],
-    city: 'Weston',
-    website: 'https://www.kaa-llc.com?utm_source=agdronedirectory&utm_medium=referral&utm_campaign=operator_profile',
-    facebook: 'https://www.facebook.com/p/Kuhns-Aerial-Applications-LLC-61573924156374/',
-    services: ['spraying', 'seeding', 'spreading', 'training'],
-    drones: ['dji-agras-t50'],
-    crops: [],
-    certFAAPart107: true,
-    featured: false,
-    verified: false,
-  },
+  // (kuhn-s-aerial-applications-llc removed — duplicate of kuhns-aerial-applications;
+  //  redirect from /operators/kuhn-s-aerial-applications-llc lives in netlify.toml)
   {
     slug: 'agfly',
     name: 'AgFly',
