@@ -18,6 +18,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorSchema from '@/components/schema/OperatorSchema';
 import ExternalLink from '@/components/ui/ExternalLink';
 import OperatorContactLinks from '@/components/operators/OperatorContactLinks';
+import OperatorGallery from '@/components/operators/OperatorGallery';
 import VerificationBadges from '@/components/ui/VerificationBadges';
 
 interface Props {
@@ -161,6 +162,10 @@ export default function OperatorPage({ params }: Props) {
                 </div>
               )}
             </div>
+
+            {operator.gallery && operator.gallery.length > 0 && (
+              <OperatorGallery operatorName={operator.name} images={operator.gallery} />
+            )}
 
             {/* Services */}
             <section className="bg-white border border-gray-200 rounded-xl p-6">
