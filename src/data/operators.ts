@@ -3720,6 +3720,27 @@ export const operators: Operator[] = [
     verified: false,
   },
   {
+    slug: 'hazel-hill-drone-services',
+    name: 'Hazel Hill Drone Services LLC',
+    description:
+      'Hazel Hill Drone Services LLC provides professional agricultural drone spraying across Northeast Missouri and surrounding areas. We specialize in precision application of herbicides, fungicides, pesticides, and fertilizers using advanced drone technology. Our services help farmers reduce crop damage, improve efficiency, and spray fields that traditional equipment can\'t reach. Fast scheduling, reliable service, and results you can trust. Fully Licensed and Insured since 2023.',
+    country: 'US',
+    counties: ['missouri', 'iowa'],
+    city: 'Arbela',
+    phone: '660-460-7477',
+    email: 'hazelhilldroneservices@gmail.com',
+    website: 'https://hazelhilldroneservices.com',
+    founded: 2023,
+    services: ['spraying', 'spreading', 'seeding'],
+    drones: ['dji-agras-t100'],
+    crops: ['corn', 'soybeans', 'wheat', 'orchards', 'cover-crops'],
+    priceMinUsd: 15,
+    priceMaxUsd: 15,
+    featured: false,
+    verified: true,
+    lastUpdated: '2026-04-29',
+  },
+  {
     slug: '19th-uas-precision-llc',
     name: '19th UAS Precision LLC',
     description:
