@@ -3223,6 +3223,26 @@ export const operators: Operator[] = [
     verified: false,
   },
   {
+    slug: 'fortis-aerial',
+    name: 'Fortis Aerial',
+    description:
+      'Single owner/operator (Curtis) servicing Central Iowa. We help with pasture management, hobby farms, and large row crop fungicide applications.',
+    country: 'US',
+    counties: ['iowa'],
+    city: 'Runnells',
+    phone: '515-993-0848',
+    email: 'curtis@fortisaerial.com',
+    website: 'https://fortisaerial.com',
+    services: ['spraying'],
+    drones: ['dji-agras-t50'],
+    crops: ['corn', 'soybeans', 'grapes', 'orchards', 'cover-crops'],
+    priceMinUsd: 15,
+    priceMaxUsd: 15,
+    featured: false,
+    verified: true,
+    lastUpdated: '2026-04-29',
+  },
+  {
     slug: 'spray-drone-solutions',
     name: 'Spray Drone Solutions',
     description:
