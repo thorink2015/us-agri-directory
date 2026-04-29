@@ -7,17 +7,15 @@ Last updated: 2026-04-15
 
 ## Blocked on Eugen's input
 
-### Author identity (fills placeholders in `src/data/author.ts`)
+### Author identity
 
-| Placeholder | Where used | Status |
-|---|---|---|
-| `{{LAST_NAME}}` | Footer credit, full name, Person schema | Awaiting |
-| `{{LINKEDIN_URL}}` | `/about` contact, Person sameAs | Awaiting |
-| `{{X_URL}}` | Person sameAs (optional) | Awaiting |
-| `{{COUNTRY_REGION}}` | Canonical bio in `/about` | Awaiting |
-| `{{FIELD_OF_STUDY}}` | Canonical bio in `/about` | Awaiting |
-| Author photo | `/public/images/eugen-author.jpg` | Awaiting upload (initial-letter avatar fallback active) |
-| Public email | `AUTHOR.publicEmail` — currently `eugen@agdronedirectory.com` | Needs confirmation |
+Author placeholders filled and photo uploaded 2026-04-24 (see
+`project-facts.md § Author (E-E-A-T)`). Optional items remaining
+(not blockers):
+
+- `AUTHOR.x` (X/Twitter URL) — optional, leave blank if not used
+- `organizationSchema().sameAs` — add company LinkedIn / X when
+  those accounts exist
 
 ## Blocked on research files
 
@@ -52,6 +50,13 @@ See `_research/README.md` for what's uploaded and what's missing.
 - Grants / insurance / training pages (needs research-04)
 - `/start-a-drone-business` pillar (needs all research files)
 - Blog posts 1-10 (build-plan says "written in full by me" — Eugen writes these)
+
+## Known gaps to patch
+
+- `/advertise` (merged PR #58, 2026-04-21) is NOT listed in
+  `src/app/sitemap.ts` `staticPages`. Append
+  `{ url: `${BASE_URL}/advertise`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 }`
+  in the next small batch. Flagged by `standing-rules.md` §3.1.
 
 ## Optional polish (not blocking)
 

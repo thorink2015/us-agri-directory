@@ -1,0 +1,135 @@
+name: Scrape Contacts
+
+# Runs the contact scraper on demand from the GitHub UI.
+# Goes to Actions tab -> "Scrape Contacts" -> "Run workflow".
+# The CSV ships back as a downloadable artifact on the workflow run page.
+#
+# Lives in .github/workflows/. Free for public repos; uses a tiny slice
+# of the generous private-repo runner allowance. Independent of Netlify.
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Where to load the operator list from'
+        required: true
+        default: 'directory'
+        type: choice
+        options:
+          - directory
+          - csv
+          - json
+      file:
+        description: 'Path inside the repo for csv/json sources (ignored when source=directory)'
+        required: false
+        default: ''
+        type: string
+      limit:
+        description: 'Stop after first N operators (leave blank for all)'
+        required: false
+        default: ''
+        type: string
+      force:
+        description: 'Re-scrape entries already in progress.json'
+        required: false
+        default: false
+        type: boolean
+      concurrency:
+        description: 'Parallel sites in flight (default 5)'
+        required: false
+        default: '5'
+        type: string
+      per_domain_delay_ms:
+        description: 'Politeness delay per domain, ms (default 2500)'
+        required: false
+        default: '2500'
+        type: string
+
+# Only one scrape can run at a time; queue the rest. Prevents two
+# parallel runs from racing the same progress.json artifact.
+concurrency:
+  group: scrape-contacts
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  scrape:
+    name: Run contact scraper
+    runs-on: ubuntu-latest
+    # GitHub Actions free-tier hard cap is 6h; we set a soft cap so a
+    # runaway run cannot eat the monthly quota.
+    timeout-minutes: 240
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: tools/contact-scraper/package-lock.json
+
+      - name: Install scraper dependencies
+        working-directory: tools/contact-scraper
+        run: npm ci --no-audit --no-fund
+
+      # Note: each run starts with a fresh progress.json. The progress
+      # artifact below is uploaded for the human, not auto-restored —
+      # cross-run artifact restore needs extra plumbing and 391 sites
+      # finish in one runner session anyway. If you ever need to resume,
+      # download the prior run's progress.json artifact and place it in
+      # tools/contact-scraper/progress.json before re-running locally.
+
+      - name: Build scraper CLI flags
+        id: flags
+        run: |
+          set -euo pipefail
+          ARGS="--source=${{ inputs.source }}"
+          if [ -n "${{ inputs.file }}" ]; then
+            ARGS="$ARGS --file=${{ inputs.file }}"
+          fi
+          if [ -n "${{ inputs.limit }}" ]; then
+            ARGS="$ARGS --limit=${{ inputs.limit }}"
+          fi
+          if [ "${{ inputs.force }}" = "true" ]; then
+            ARGS="$ARGS --force"
+          fi
+          ARGS="$ARGS --concurrency=${{ inputs.concurrency }}"
+          ARGS="$ARGS --per-domain-delay=${{ inputs.per_domain_delay_ms }}"
+          echo "args=$ARGS" >> "$GITHUB_OUTPUT"
+          echo "Computed args: $ARGS"
+
+      - name: Run scraper
+        working-directory: tools/contact-scraper
+        run: npm run -s scrape -- ${{ steps.flags.outputs.args }}
+
+      - name: Upload CSV artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: contacts-csv
+          path: tools/contact-scraper/output/*.csv
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Upload run log
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: contacts-log
+          path: tools/contact-scraper/logs/*.log
+          if-no-files-found: warn
+          retention-days: 14
+
+      - name: Upload progress (for resumable next run)
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: contact-scraper-progress
+          path: tools/contact-scraper/progress.json
+          if-no-files-found: ignore
+          retention-days: 30

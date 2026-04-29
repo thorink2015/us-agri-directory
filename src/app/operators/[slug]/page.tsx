@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import {
-  Globe, MapPin, CheckCircle, Calendar, Plane,
+  Globe, MapPin, CheckCircle, BadgeCheck, Calendar, Plane,
   Clock, Languages, CreditCard, Shield, Award, Zap, Users,
 } from 'lucide-react';
 import {
@@ -18,6 +18,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorSchema from '@/components/schema/OperatorSchema';
 import ExternalLink from '@/components/ui/ExternalLink';
 import OperatorContactLinks from '@/components/operators/OperatorContactLinks';
+import VerificationBadges from '@/components/ui/VerificationBadges';
 
 interface Props {
   params: { slug: string };
@@ -73,6 +74,12 @@ export default function OperatorPage({ params }: Props) {
           ]}
         />
 
+        {operator.pendingConfirmation && (
+          <div className="mb-4 px-3 py-2 rounded-md border border-gray-200 bg-gray-50 text-[12px] text-gray-600 leading-snug">
+            This profile was built from public records and is awaiting verification by the operator.
+          </div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* ─── Main content ─────────────────────────────── */}
           <div className="lg:col-span-2 space-y-6">
@@ -85,9 +92,9 @@ export default function OperatorPage({ params }: Props) {
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
                     <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">{operator.name}</h1>
-                    {operator.verified && (
-                      <span className="flex items-center gap-1 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-semibold">
-                        <CheckCircle className="w-3 h-3" /> Verified
+                    {operator.verified && !operator.pendingConfirmation && (
+                      <span className="flex items-center gap-1 text-xs bg-emerald-50 text-emerald-900 border border-emerald-300 px-2 py-1 rounded-full font-semibold">
+                        <BadgeCheck className="w-3 h-3" /> Verified Operator
                       </span>
                     )}
                     {operator.featured && (
@@ -119,6 +126,8 @@ export default function OperatorPage({ params }: Props) {
                   </div>
                 </div>
               </div>
+
+              <VerificationBadges operator={operator} className="mt-4" />
 
               <p className="mt-4 text-gray-700 leading-relaxed">{operator.description}</p>
 
@@ -383,6 +392,15 @@ export default function OperatorPage({ params }: Props) {
                     <Globe className="w-4 h-4 text-green-600" />
                     Official website
                   </ExternalLink>
+                )}
+                {!operator.phone && !operator.email && (
+                  <p className="text-xs text-gray-600 leading-snug">
+                    Contact info not yet provided. If this is your business,{' '}
+                    <Link href="/list-your-business" className="text-green-700 underline hover:text-green-800">
+                      claim your listing
+                    </Link>{' '}
+                    to add direct contact details.
+                  </p>
                 )}
               </div>
 

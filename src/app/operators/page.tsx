@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
+import { MapPin, ArrowRight, BarChart3 } from 'lucide-react';
 import OperatoriClient from './OperatoriClient';
 import { operators } from '@/data/operators';
 import { counties } from '@/data/counties';
@@ -81,6 +83,56 @@ export default function OperatorsPage() {
     <OperatoriClient
       operators={operators.map(compact)}
       counties={counties.map(compactCounty)}
+      mapSection={
+        <section aria-labelledby="find-by-state-heading" className="mb-8">
+          <Link
+            href="/map"
+            className="flex flex-col sm:flex-row items-center justify-between gap-4 p-5 bg-green-50 border border-green-200 rounded-2xl hover:border-green-400 hover:shadow-sm transition-all group"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h2
+                  id="find-by-state-heading"
+                  className="text-lg font-bold text-gray-900 group-hover:text-green-800"
+                >
+                  View operators on the map
+                </h2>
+                <p className="text-sm text-gray-600">
+                  Browse verified operators by state with filters for city, service type and crop.
+                </p>
+              </div>
+            </div>
+            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 group-hover:text-green-800 whitespace-nowrap">
+              Open map <ArrowRight className="w-4 h-4" />
+            </span>
+          </Link>
+
+          <Link
+            href="/guides/agricultural-drone-spraying-statistics-2026"
+            className="mt-3 flex flex-col sm:flex-row items-center justify-between gap-4 p-5 bg-stone-50 border border-stone-200 rounded-2xl hover:border-stone-400 hover:shadow-sm transition-all group"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-stone-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                <BarChart3 className="w-6 h-6 text-white" />
+              </div>
+              <div>
+                <h2 className="text-lg font-bold text-gray-900 group-hover:text-stone-900">
+                  Industry insights
+                </h2>
+                <p className="text-sm text-gray-600">
+                  16.4M acres treated, 1,710 Part 137 UAS operators, $13/acre. The 2026 statistics report.
+                </p>
+              </div>
+            </div>
+            <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-stone-800 whitespace-nowrap">
+              Read the report <ArrowRight className="w-4 h-4" />
+            </span>
+          </Link>
+        </section>
+      }
     />
   );
 }

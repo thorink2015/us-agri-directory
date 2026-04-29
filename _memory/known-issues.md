@@ -4,6 +4,19 @@
 > append a dated entry here. Do not delete old entries — they prevent
 > recurrence.
 
+## CI / GitHub Actions gotchas
+
+### 2026-04-25 — Node.js 20 deprecation warning on scraper workflow
+**Symptom:** Annotation on every Scrape Contacts workflow run:
+> Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/setup-node@v4, actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026.
+**Cause:** GitHub deprecated Node.js 20 for JavaScript actions on 2025-09-19. v4 of these three actions still ships a Node 20 entry binary.
+**Fix:** Bump in `.github/workflows/*.yml`:
+- `actions/checkout@v5` (Node 24)
+- `actions/setup-node@v5` (Node 24)
+- `actions/upload-artifact@v7` (Node 24)
+**Trap:** `actions/upload-artifact@v5` is **still on Node 20**. The Node-24 cutover for upload-artifact landed in v6 (Dec 2025) and v7 (Feb 2026). Bumping checkout/setup-node to v5 silences two of three warnings but leaves `upload-artifact@v5` flagged. v7 is input-compatible with v4/v5 for our four inputs (`name`, `path`, `if-no-files-found`, `retention-days`); it adds new optional inputs (`compression-level`, `overwrite`, `include-hidden-files`, `archive`) that default to safe values. Refs: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/ , https://github.com/actions/upload-artifact/releases
+**Prevention:** Whenever a new workflow is added or warnings reappear, check each action's release page individually — a v5 of one action is not equivalent to v5 of another. Always pull the latest major of `actions/checkout`, `actions/setup-node`, `actions/upload-artifact`, `actions/download-artifact`, `actions/cache` rather than copying older snippets.
+
 ## API / tooling gotchas
 
 ### 2026-04-14 — "Stream idle timeout - partial response received"
@@ -12,6 +25,24 @@ writes (big translations, 12+ article rewrites in one go).
 **Fix:** Work in batches of 1–3 items per commit. After each batch,
 commit + push + wait for user "next". This is documented in CLAUDE.md
 as a hard rule.
+
+### 2026-04-21 — Post-compaction rate limits on long-form guide content
+**Symptom:** After a context compaction, the first attempt to `Write`
+a full 5,000-word TSX guide body hits "API Error" / rate limit before
+the stream completes. Subsequent "continue from batch 2" attempts
+repeat the failure because the retry still tries to emit the full
+body.
+**Cause:** A single turn trying to emit 20k+ tokens of content is
+fragile across the compaction boundary. The "smaller batches" fix in
+CLAUDE.md only works if each batch is actually tiny — one file at a
+time was still too big for 5,000-word guide bodies.
+**Fix:** Use the **sentinel append loop** documented in
+`code-patterns.md § Long-form content rollout`. Insert one H2 section
+per turn via `Edit`, commit, push, stop. The diff per turn is
+500–1,500 tokens instead of 20k+, which survives compaction cleanly.
+**Prevention:** For any new pillar guide, scaffold `content.tsx` with
+`{/* GUIDE-INSERT-POINT: <slug> */}` as the first commit, before
+writing any body content.
 
 ### 2026-04-15 — "File has not been read yet" error on Edit tool
 **Symptom:** `Edit` tool fails with `File has not been read yet. Read it first before writing to it.`

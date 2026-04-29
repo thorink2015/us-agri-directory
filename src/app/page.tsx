@@ -10,6 +10,7 @@ import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
 import { getServiceBySlug } from '@/data/services';
 import { blogPosts } from '@/data/blog-posts';
+import { getLatestGuides } from '@/data/guides';
 import { SITE, organizationSchema, personSchema } from '@/data/author';
 import SearchBar from '@/components/search/SearchBar';
 import OperatorCard from '@/components/operators/OperatorCard';
@@ -140,6 +141,7 @@ export default function HomePage() {
   const latestBlogPosts = [...blogPosts]
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
     .slice(0, 3);
+  const latestGuide = getLatestGuides(1)[0];
 
   const websiteSchema = {
     '@context': 'https://schema.org',
@@ -355,19 +357,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 8: States (compact) */}
+      {/* SECTION 8: States */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8 gap-4">
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Find drone services in your state</h2>
-              <p className="text-gray-500 mt-1">Top states by operator count</p>
+              <p className="text-gray-500 mt-1">Pick from the top states below or explore the full US map</p>
             </div>
             <Link href="/states" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
               All states <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mb-6">
             {topStatesByOps.map((state) => (
               <Link
                 key={state.slug}
@@ -378,6 +381,15 @@ export default function HomePage() {
                 <span className="mt-1 text-xs text-gray-500">{state.count} operator{state.count === 1 ? '' : 's'}</span>
               </Link>
             ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/map"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-green-200 text-green-700 font-semibold rounded-xl hover:border-green-400 hover:bg-green-50 transition-colors"
+            >
+              <MapIcon className="w-4 h-4" /> Explore the map
+            </Link>
           </div>
         </div>
       </section>
@@ -557,6 +569,29 @@ export default function HomePage() {
               All articles <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+
+          {latestGuide && (
+            <Link
+              href={`/guides/${latestGuide.slug}`}
+              className="group mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white border border-green-200 rounded-xl p-5 hover:border-green-500 hover:shadow-sm transition-all"
+            >
+              <div>
+                <div className="text-[11px] font-semibold uppercase tracking-widest text-green-700 mb-1">
+                  New pillar guide
+                </div>
+                <h3 className="font-semibold text-gray-900 group-hover:text-green-800 leading-snug">
+                  {latestGuide.shortTitle}
+                </h3>
+                <p className="text-sm text-gray-500 mt-1 leading-relaxed">
+                  {latestGuide.description}
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-1 text-sm font-medium text-green-700 group-hover:underline whitespace-nowrap">
+                Read the guide <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
+          )}
+
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {latestBlogPosts.map((post) => (
               <Link

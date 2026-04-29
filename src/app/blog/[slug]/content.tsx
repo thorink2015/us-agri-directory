@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import Link from 'next/link';
 
 import { addUtm } from '@/lib/utm';
+import AffiliateTextLink from '@/components/affiliate/AffiliateTextLink';
 export const blogContent: Record<string, ReactNode> = {
   'first-1000-acres-drone-operator': (
     <>
@@ -466,7 +467,8 @@ export const blogContent: Record<string, ReactNode> = {
         <Link href="/regulations/faa-part-137">FAA Part 137</Link>, and a state commercial pesticide
         applicator license with an aerial category endorsement. Beyond that baseline, everything
         varies. Our <Link href="/regulations/state-licensing">state licensing hub</Link> tracks
-        every requirement.
+        every requirement. If you are still on step one,{' '}
+        <AffiliateTextLink slug="pilot-institute-part-107" linkText="start with the Part 107 course" />.
       </p>
 
       <h2>Six states with drone-specific credentials</h2>
@@ -746,7 +748,8 @@ export const blogContent: Record<string, ReactNode> = {
         Part 137 application references your Part 107. Get the pilot cert before submitting anything
         else. Budget 2 to 4 weeks to study, take the exam and receive the temporary certificate.
         Study plans and provider list live on our{' '}
-        <Link href="/training-and-certification">training and certification</Link> page.
+        <Link href="/training-and-certification">training and certification</Link> page, and you can{' '}
+        <AffiliateTextLink slug="pilot-institute-part-107" linkText="enroll in the Part 107 course here" />.
       </p>
 
       <h2>Step 2: Draft your operations manual</h2>

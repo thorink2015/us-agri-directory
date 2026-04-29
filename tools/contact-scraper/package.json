@@ -1,0 +1,22 @@
+{
+  "name": "@agdrone/contact-scraper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Polite, resumable contact extractor for operator directories. Self-contained tool, separate from the main Next.js app.",
+  "type": "module",
+  "scripts": {
+    "scrape": "tsx src/index.ts",
+    "scrape:directory": "tsx src/index.ts --source=directory",
+    "scrape:test": "tsx src/index.ts --source=directory --limit=10",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "p-limit": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.3.0"
+  }
+}

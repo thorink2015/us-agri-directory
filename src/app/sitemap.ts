@@ -7,6 +7,7 @@ import { drones as droneModels } from '@/data/drone-model';
 import { regions } from '@/data/regions';
 import { blogPosts } from '@/data/blog-posts';
 import { guides } from '@/data/guides';
+import { getQualifyingCities } from '@/data/cities';
 import { SERVICE_LABELS } from '@/data/types';
 
 const BASE_URL = 'https://agdronedirectory.com';
@@ -18,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${BASE_URL}/operators`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/map`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE_URL}/states`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/crops`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/services`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
@@ -25,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/regions`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/pricing`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE_URL}/guides`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/guides`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/buyers-guide`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/start-a-drone-business`, lastModified: now, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/grants-and-subsidies`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
@@ -44,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/glossary`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
     { url: `${BASE_URL}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${BASE_URL}/affiliate-disclosure`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
   // ─── Operator profiles ───────────────────────────────────────────────────
@@ -91,6 +94,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
+  // ─── City pages (cities meeting the operator threshold) ──────────────────
+  const cityPages: MetadataRoute.Sitemap = getQualifyingCities().map((c) => ({
+    url: `${BASE_URL}/states/${c.stateSlug}/${c.slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   // ─── Crop pages (8) ──────────────────────────────────────────────────────
   const cropPages: MetadataRoute.Sitemap = crops.map((c) => ({
     url: `${BASE_URL}/crops/${c.slug}`,
@@ -136,7 +147,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}/guides/${g.slug}`,
     lastModified: g.lastUpdated ? new Date(g.lastUpdated) : now,
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.8,
   }));
 
   // ─── Tool pages ─────────────────────────────────────────────────────────
@@ -155,6 +166,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...operatorPages,        // N operators
     ...countyPages,          // 50
     ...countyOperatorPages,  // 50
+    ...cityPages,            // N qualifying cities (≥2 operators)
     ...countyCropPages,      // 50 × 8 = 400
     ...countyServicePages,   // 50 × 10 = 500
     ...cropPages,            // 8

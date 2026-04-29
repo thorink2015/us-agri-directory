@@ -14,7 +14,9 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { getStateData } from '@/data/states';
+import { getCitiesInState } from '@/data/cities';
 import { AUTHOR, SITE } from '@/data/author';
+import USMap from '@/components/ui/USMap';
 
 import { addUtm } from '@/lib/utm';
 interface Props {
@@ -61,6 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function RichStatePage({ slug }: { slug: string }) {
   const data = getStateData(slug)!;
   const ops = getOperatorsByCounty(slug);
+  const cities = getCitiesInState(slug);
 
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -140,20 +143,29 @@ function RichStatePage({ slug }: { slug: string }) {
           <p className="text-sm text-gray-700 leading-relaxed">{data.aeoBlock}</p>
         </div>
 
-        {/* 3, Stats row */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          {[
-            { icon: Users, value: ops.length > 0 ? `${ops.length}` : '0', label: 'Listed operators' },
-            { icon: DollarSign, value: data.statsRate, label: 'Rate range / acre' },
-            { icon: Wheat, value: data.statsTopCrop, label: 'Top crop' },
-            { icon: Shield, value: data.licensingAgency, label: 'Licensing agency' },
-          ].map((stat) => (
-            <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">
-              <stat.icon className="w-5 h-5 text-green-600 mb-2" />
-              <div className="font-bold text-gray-900 text-sm truncate">{stat.value}</div>
-              <div className="text-xs text-gray-500">{stat.label}</div>
-            </div>
-          ))}
+        {/* 3, Stats row + mini map */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 mb-8 items-start">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { icon: Users, value: ops.length > 0 ? `${ops.length}` : '0', label: 'Listed operators' },
+              { icon: DollarSign, value: data.statsRate, label: 'Rate range / acre' },
+              { icon: Wheat, value: data.statsTopCrop, label: 'Top crop' },
+              { icon: Shield, value: data.licensingAgency, label: 'Licensing agency' },
+            ].map((stat) => (
+              <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">
+                <stat.icon className="w-5 h-5 text-green-600 mb-2" />
+                <div className="font-bold text-gray-900 text-sm truncate">{stat.value}</div>
+                <div className="text-xs text-gray-500">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          <aside
+            aria-label={`${data.name} on the US map`}
+            className="hidden md:block w-[300px] bg-white border border-gray-200 rounded-xl p-3"
+          >
+            <USMap highlightSlug={slug} compact />
+            <p className="text-xs text-gray-500 mt-2 text-center">{data.name} is highlighted. Click a state to switch.</p>
+          </aside>
         </div>
 
         {/* 4, Operator grid */}
@@ -197,6 +209,27 @@ function RichStatePage({ slug }: { slug: string }) {
             </div>
           )}
         </section>
+
+        {/* 4b, Browse by city (only when ≥2 ops in a city) */}
+        {cities.length > 0 && (
+          <section className="mb-10">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
+              Browse {data.name} operators by city
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+              {cities.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/states/${slug}/${c.slug}`}
+                  className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700 flex items-center justify-between gap-2"
+                >
+                  <span className="truncate">{c.city}</span>
+                  <span className="text-xs text-gray-500 shrink-0">({c.operators.length})</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* 5, Spray windows / rates table */}
         {data.sprayWindows.length > 0 && <section className="mb-10">
@@ -416,6 +449,7 @@ function FallbackStatePage({ slug }: { slug: string }) {
   const state = getCountyBySlug(slug)!;
   const ops = getOperatorsByCounty(state.slug);
   const adjacent = getAdjacentCounties(state, 5);
+  const cities = getCitiesInState(state.slug);
   const cropNames = state.mainCrops.map((c) => CROP_NAME_MAP[c] || c);
 
   const faqs = [
@@ -456,21 +490,30 @@ function FallbackStatePage({ slug }: { slug: string }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-          {[
-            { icon: Users, value: `${ops.length}`, label: 'Operators' },
-            { icon: TrendingUp, value: formatAcres(state.agriculturalLandHa), label: 'Agricultural land' },
-            { icon: Wheat, value: cropNames.slice(0, 2).join(', '), label: 'Main crops' },
-            ...(state.vineyardHa ? [{ icon: MapPin, value: formatAcres(state.vineyardHa), label: 'Vineyard acreage' }] : [
-              { icon: MapPin, value: state.region, label: 'Region' },
-            ]),
-          ].map((stat) => (
-            <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">
-              <stat.icon className="w-5 h-5 text-green-600 mb-2" />
-              <div className="font-bold text-gray-900 text-sm truncate">{stat.value}</div>
-              <div className="text-xs text-gray-500">{stat.label}</div>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 mb-8 items-start">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {[
+              { icon: Users, value: `${ops.length}`, label: 'Operators' },
+              { icon: TrendingUp, value: formatAcres(state.agriculturalLandHa), label: 'Agricultural land' },
+              { icon: Wheat, value: cropNames.slice(0, 2).join(', '), label: 'Main crops' },
+              ...(state.vineyardHa ? [{ icon: MapPin, value: formatAcres(state.vineyardHa), label: 'Vineyard acreage' }] : [
+                { icon: MapPin, value: state.region, label: 'Region' },
+              ]),
+            ].map((stat) => (
+              <div key={stat.label} className="bg-white border border-gray-200 rounded-xl p-4">
+                <stat.icon className="w-5 h-5 text-green-600 mb-2" />
+                <div className="font-bold text-gray-900 text-sm truncate">{stat.value}</div>
+                <div className="text-xs text-gray-500">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+          <aside
+            aria-label={`${state.name} on the US map`}
+            className="hidden md:block w-[300px] bg-white border border-gray-200 rounded-xl p-3"
+          >
+            <USMap highlightSlug={state.slug} compact />
+            <p className="text-xs text-gray-500 mt-2 text-center">{state.name} is highlighted. Click a state to switch.</p>
+          </aside>
         </div>
 
         <div className="mb-10">
@@ -508,6 +551,26 @@ function FallbackStatePage({ slug }: { slug: string }) {
             </div>
           )}
         </div>
+
+        {cities.length > 0 && (
+          <div className="mb-10">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
+              Browse {state.name} operators by city
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+              {cities.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/states/${state.slug}/${c.slug}`}
+                  className="px-3 py-2 bg-white border border-gray-200 rounded-lg text-sm hover:border-green-300 hover:text-green-700 transition-colors text-gray-700 flex items-center justify-between gap-2"
+                >
+                  <span className="truncate">{c.city}</span>
+                  <span className="text-xs text-gray-500 shrink-0">({c.operators.length})</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Crops for drone spraying in {state.name}</h2>

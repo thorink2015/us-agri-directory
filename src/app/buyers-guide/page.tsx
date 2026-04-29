@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateTextLink from '@/components/affiliate/AffiliateTextLink';
 import { AUTHOR, SITE } from '@/data/author';
 import { drones } from '@/data/drone-model';
 
@@ -264,10 +265,20 @@ export default function BuyersGuidePage() {
           <Link href="/tools/drone-comparison" className="text-green-700 hover:underline">Drone comparison tool</Link>
           <Link href="/tools/roi-calculator" className="text-green-700 hover:underline">ROI calculator</Link>
           <Link href="/pricing" className="text-green-700 hover:underline">2026 pricing guide</Link>
+          <Link href="/guides/hire-drone-spray-operator-checklist" className="text-green-700 hover:underline">Hiring a drone spray operator (checklist)</Link>
+          <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
+          <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
           <Link href="/services/sales" className="text-green-700 hover:underline">Drone sales and dealers</Link>
           <Link href="/grants-and-subsidies" className="text-green-700 hover:underline">Grants and cost-share</Link>
           <Link href="/regulations/ndaa-compliance" className="text-green-700 hover:underline">NDAA compliance</Link>
+          <span>
+            Need your Part 107 license?{' '}
+            <AffiliateTextLink
+              slug="pilot-institute-part-107"
+              linkText="See our recommended course"
+            />
+          </span>
         </div>
 
         <div className="mt-10">

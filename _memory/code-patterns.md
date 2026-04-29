@@ -160,6 +160,143 @@ Each tool is split into two files:
 
 Examples: `src/app/tools/roi-calculator/`, `src/app/tools/coverage-calculator/`.
 
+## Long-form content rollout (sentinel append loop)
+
+**Used on:** pillar guides in `src/app/guides/[slug]/content.tsx`. Any
+time we are writing a 3,000+ word TSX body that would otherwise exceed
+safe per-turn output.
+
+**Why:** A single `Write` with a 5,000-word body sends ~25k tokens
+through the stream and reliably trips "stream idle timeout - partial
+response received" or post-compaction rate limiting. Appending one H2
+section per turn keeps each diff tiny and the git tree clean between
+turns.
+
+**Shape of the scaffold:**
+
+```tsx
+// src/app/guides/[slug]/content.tsx
+import { ReactNode } from 'react';
+
+export const guideContent: Record<string, ReactNode> = {
+  'the-slug': (
+    <>
+      {/* GUIDE-INSERT-POINT: the-slug */}
+    </>
+  ),
+};
+```
+
+**Imports grow with the body, not up front.** Start with only
+`ReactNode`. When the first section with internal links lands, that
+same `Edit` also adds `import Link from 'next/link';`. Importing ahead
+of use trips `@typescript-eslint/no-unused-vars` and fails the
+Netlify build (see `known-issues.md` 2026-04-21 entry).
+
+**Per-section turn:**
+
+1. ONE `Edit` that replaces the sentinel with:
+   ```tsx
+   [new section JSX]
+   {/* GUIDE-INSERT-POINT: the-slug */}
+   ```
+2. ONE `git commit` (short subject, e.g. `content(guides): section N of
+   <slug> — <short label>`) and `git push`.
+3. Stop. Wait for user to say "next".
+
+**Final turn only:** remove the sentinel, run `npx next build` to
+verify the route generates, commit + push.
+
+**Author tone / escape rules (same as blog/[slug]/content.tsx):**
+- Apostrophes in JSX text → `&apos;`
+- Curly double quotes → `&ldquo;` / `&rdquo;`
+- No em/en dashes, no double hyphens (standing rule)
+- Internal paths via `<Link href="/...">` — the `.guide-body a[href^="/"]`
+  selector in `globals.css` styles them with the green underline
+
+**Don'ts:**
+- Never `Write` the whole content file mid-rollout. Always `Edit` so
+  only the diff streams.
+- Never re-read the research markdown every turn — it's already in
+  conversation context from the first read.
+- Never put more than one H2 section per turn, even for short ones.
+
+**Research drop convention:** Eugen drops each guide's source research
+into `_research/<slug>.md` matching the target slug in
+`src/data/guides.ts`. First turn of a new guide: read that file once in
+full, then work from in-context memory for every subsequent section
+turn. The `_research/` folder is internal-only (not shipped to Netlify)
+and is safe to delete before launch per `project-facts.md`.
+
+## Pillar guide shipping checklist
+
+When shipping a new pillar guide, everything the template needs is
+already in `src/data/guides.ts`. Per-guide work:
+
+1. Read `_research/<slug>.md`.
+2. Append a new entry to `guides` in `src/data/guides.ts` filling every
+   required field. Optional fields to populate for quality:
+   - `howToSteps` + `howToTitle` (HowTo JSON-LD)
+   - `featuredPullQuote` (hero card on /guides hub when this guide is
+     newest)
+   - `quickFacts`, `pullQuotes`, `relatedInternal`
+3. Seed the content scaffold: add a new key to `guideContent` in
+   `src/app/guides/[slug]/content.tsx` with the sentinel comment.
+4. Append H2 sections via the sentinel loop above.
+5. After the final section lands:
+   - Add the slug to `public/llms.txt` under `## Pillar guides`.
+   - Append a full AEO-block entry to `public/llms-full.txt`.
+   - Add one reciprocal `<Link>` on the most relevant 3–5 pages (crop,
+     service, regulation, tools) into the new guide.
+   - If this guide replaces the "Latest guide" hero, the `/guides` hub
+     updates automatically via `getLatestGuides(1)` + `featuredPullQuote`.
+     The homepage featured-guide callout is hardcoded — update it when
+     the featured slug changes.
+6. Sitemap + JSON-LD cover the new guide automatically via
+   `guides.map(...)` in `src/app/sitemap.ts` and the schemas in
+   `src/app/guides/[slug]/page.tsx`.
+
+## Guide ShareButtons
+
+**Used on:** `src/app/guides/[slug]/page.tsx` (both places — under the Byline and above the print CTA).
+
+Client component at `src/components/guides/ShareButtons.tsx` exposes X, LinkedIn, and copy-link with `role="group"`, per-button `aria-label`, live clipboard feedback (`Check` icon for 1.8s after copy). The `size` prop (`sm` default / `md`) swaps button padding; copy-link falls back to `document.execCommand('copy')` when `navigator.clipboard` is absent. Added in the 2026-04-24 year-round-revenue guide batch.
+
+Always pass `url={absoluteUrl}` (the full `${SITE.domain}/guides/${guide.slug}` string, not the relative canonical) so X and LinkedIn share metadata correctly when their crawlers re-fetch the URL.
+
+## Guide revenue / comparison table
+
+Long-form numeric tables go inside a `<figure>` to get the `.guide-table-callout` card styling (bordered stone panel, zebra rows, sans-serif body, horizontal scroll on overflow). Always set `aria-label` on the figure describing what the table shows, and `scope="col"` on every `<th>` so screen readers announce column context. Pattern from guide 2 revenue table:
+
+```tsx
+<figure className="guide-table-callout" aria-label="Year 2 revenue model, solo operator">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Service</th>
+        <th scope="col">Days per year</th>
+        <th scope="col">Rate</th>
+        ...
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Liquid spray</td>
+        <td>85</td>
+        <td>$14 per acre</td>
+        ...
+      </tr>
+      ...
+      <tr>
+        <td><strong>Total</strong></td>
+        ...
+        <td><strong>$420,500</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+```
+
 ## Commit message format
 
 ```

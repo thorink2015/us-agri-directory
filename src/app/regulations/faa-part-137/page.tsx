@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateTextLink from '@/components/affiliate/AffiliateTextLink';
 import { AUTHOR, SITE } from '@/data/author';
 
 import { addUtm } from '@/lib/utm';
@@ -113,10 +114,25 @@ export default function FaaPart137Page() {
           </p>
         </div>
 
+        <aside className="mb-8 bg-stone-50 border border-stone-200 rounded-xl p-4">
+          <div className="text-[11px] font-semibold uppercase tracking-widest text-gray-500 mb-1">
+            Industry adoption data
+          </div>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            FAA-certificated Part 137 UAS operators reached 1,710 in September 2025, up 58.3% year over year, while drones treated 16.4 million US acres in 2025 (ASDC).{' '}
+            <Link
+              href="/guides/agricultural-drone-spraying-statistics-2026"
+              className="text-green-800 font-semibold hover:underline"
+            >
+              See the full 2026 statistics report.
+            </Link>
+          </p>
+        </aside>
+
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">What Part 137 is</h2>
           <p>
-            14 CFR Part 137 is the agricultural aircraft operator certificate, originally written for manned aircraft (crop dusters and helicopters) and later interpreted by FAA to cover small unmanned aircraft systems (sUAS). Any person or business conducting aerial application of economic poison, seed or other agricultural substance for hire or for their own agricultural operation must hold a Part 137 certificate. The certificate is issued by the local FAA Flight Standards District Office (FSDO) after review of the operations manual, training records and any applicable exemption petitions.
+            14 CFR Part 137 is the agricultural aircraft operator certificate, originally written for manned aircraft (crop dusters and helicopters) and later interpreted by FAA to cover small unmanned aircraft systems (sUAS). Any person or business conducting aerial application of economic poison, seed or other agricultural substance for hire or for their own agricultural operation must hold a Part 137 certificate. The certificate is issued by the local FAA Flight Standards District Office (FSDO) after review of the operations manual, training records and any applicable exemption petitions. Part 107 is a prerequisite. If you do not have it yet, <AffiliateTextLink slug="pilot-institute-part-107" linkText="start with the Part 107 course" />.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900">Part 137 commercial vs. private</h2>
@@ -172,6 +188,10 @@ export default function FaaPart137Page() {
           <Link href="/regulations/faa-part-107" className="text-green-700 hover:underline">FAA Part 107</Link>
           <Link href="/regulations/state-licensing" className="text-green-700 hover:underline">State pesticide licensing</Link>
           <Link href="/regulations/ndaa-compliance" className="text-green-700 hover:underline">NDAA compliance</Link>
+          <Link href="/guides/hire-drone-spray-operator-checklist" className="text-green-700 hover:underline">How farmers verify Part 137</Link>
+          <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
+          <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
+          <Link href="/guides/agricultural-drone-spraying-statistics-2026" className="text-green-700 hover:underline">2026 industry statistics</Link>
           <Link href="/training-and-certification" className="text-green-700 hover:underline">Training providers</Link>
           <Link href="/services/consultancy" className="text-green-700 hover:underline">Consultancy services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>

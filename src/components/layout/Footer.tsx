@@ -83,6 +83,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-green-300">
               <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link href="/advertise" className="hover:text-white transition-colors">Advertise</Link></li>
               <li><Link href="/glossary" className="hover:text-white transition-colors">Glossary</Link></li>
               <li><Link href="/guides" className="hover:text-white transition-colors">Guides</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
@@ -102,6 +103,7 @@ export default function Footer() {
               <p className="text-sm text-yellow-400 font-medium">You&apos;re subscribed. Thank you!</p>
             ) : (
               <form onSubmit={handleSubscribe} className="flex gap-2">
+                <input type="hidden" name="_form_type" value="newsletter" />
                 <input
                   name="email"
                   type="email"
@@ -175,6 +177,8 @@ export default function Footer() {
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <span className="text-green-700">|</span>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+            <span className="text-green-700">|</span>
+            <Link href="/affiliate-disclosure" className="hover:text-white transition-colors">Affiliate Disclosure</Link>
             <span className="text-green-700">|</span>
             <span>Free basic listings for all verified operators</span>
           </div>

@@ -296,6 +296,10 @@ export default function AboutPage() {
             Contact form
           </Link>
         </div>
+        <p className="text-sm text-gray-600 leading-relaxed mt-6">
+          Running a business that serves US farmers or drone operators? See the{' '}
+          <Link href="/advertise" className="text-green-700 hover:underline">advertising options</Link>.
+        </p>
       </section>
 
     </div>

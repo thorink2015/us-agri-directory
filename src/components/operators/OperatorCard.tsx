@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { MapPin, Phone, Globe, CheckCircle, Plane, Zap, Shield } from 'lucide-react';
+import { MapPin, Phone, Globe, BadgeCheck, Plane, Zap } from 'lucide-react';
 import { Operator, SERVICE_LABELS } from '@/data/types';
 import { SITE } from '@/data/author';
 import { formatPrice, addUtmParams, getStateAbbr } from '@/lib/utils';
@@ -9,6 +9,7 @@ import {
   trackOperatorWebsiteClick,
   trackOperatorPhoneClick,
 } from '@/components/analytics/events';
+import VerificationBadges from '@/components/ui/VerificationBadges';
 
 interface OperatorCardProps {
   operator: Operator;
@@ -50,9 +51,9 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
             >
               {displayName}
             </Link>
-            {operator.verified && (
-              <span title="Verified" className="flex-shrink-0">
-                <CheckCircle className="w-4 h-4 text-green-600" aria-label="Verified" />
+            {operator.verified && !operator.pendingConfirmation && (
+              <span title="Verified Operator" className="flex-shrink-0">
+                <BadgeCheck className="w-4 h-4 text-emerald-600" aria-label="Verified Operator" />
               </span>
             )}
           </div>
@@ -81,6 +82,9 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
       <p className="text-sm text-gray-600 line-clamp-2 mb-3 flex-grow-0" itemProp="description">
         {operator.description}
       </p>
+
+      {/* Verification badges (max 3) */}
+      <VerificationBadges operator={operator} max={3} compact className="mb-3" />
 
       {/* Service tags */}
       <div className="flex flex-wrap gap-1 mb-3 min-h-[24px]">
@@ -121,16 +125,6 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
               {operator.fleetSize && (
                 <span className="flex items-center gap-0.5" title="Drone fleet size">
                   <Plane className="w-3 h-3 rotate-45" /> {operator.fleetSize}
-                </span>
-              )}
-              {operator.ndaaCompliant && (
-                <span title="NDAA compliant">
-                  <Shield className="w-3 h-3 text-blue-600" />
-                </span>
-              )}
-              {(operator.certFAAPart107 || operator.certFAAPart137) && (
-                <span title="FAA Certified" className="text-green-800 font-semibold text-[10px]">
-                  FAA
                 </span>
               )}
             </div>

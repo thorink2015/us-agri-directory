@@ -302,6 +302,16 @@ export default function PricingPage() {
             <p>
               Offsetting downward pressure, cumulative tariffs on Chinese drones reached 170 percent by April 2025. A DJI Agras T50 that sold for roughly $18,000 pre-tariff could effectively cost $25,000 or more post-tariff, narrowing the price gap with US-made alternatives.
             </p>
+            <p>
+              The 2025 update from the American Spray Drone Coalition put the national average at <strong>$13 per acre, down 38 percent from $21 per acre in 2024</strong>. Treated acreage jumped to 16.4 million in 2025 (+58.7 percent YoY) even as new unit sales fell 59 percent, so existing fleets are flying harder while the supply pipeline tightens.{' '}
+              <Link
+                href="/guides/agricultural-drone-spraying-statistics-2026"
+                className="text-green-700 font-semibold hover:underline"
+              >
+                Full 2026 statistics report with sourcing
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
@@ -412,6 +422,16 @@ export default function PricingPage() {
               Find operators by state
             </Link>
           </div>
+        </section>
+
+        {/* Advertise callout */}
+        <section className="mb-10">
+          <h3 className="text-lg font-bold text-gray-900 mb-2">Looking for more visibility?</h3>
+          <p className="text-sm text-gray-700 leading-relaxed">
+            Dealers, insurers, training providers and operators can put a sponsored placement in front of
+            farmers reading this page. See the{' '}
+            <Link href="/advertise" className="text-green-700 hover:underline">advertising options</Link>.
+          </p>
         </section>
 
         {/* Authority links */}

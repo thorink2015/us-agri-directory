@@ -60,7 +60,17 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    # Explicit snippet/image generosity so AI Overviews and AI search engines
+    # can quote full answer blocks instead of truncating to 160 chars.
+    X-Robots-Tag = "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://formspree.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://formspree.io https://whatsapp.com; frame-src https://www.youtube.com; object-src 'none'; base-uri 'self';"
+
+# Override X-Robots-Tag on the /go/* redirect routes so crawlers skip them
+# regardless of page-level metadata.
+[[headers]]
+  for = "/go/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
 
 # Canonical domain redirects (enforce HTTPS + non-www in a single hop)
 # All variants jump directly to https://agdronedirectory.com/:splat
@@ -87,3 +97,29 @@
 #   from = "/old-path"
 #   to = "/new-path"
 #   status = 301
+
+# ── Operator slug redirects (canonicalize duplicates / renames) ───────────
+# Kuhn's Aerial Applications: merged duplicate kuhn-s-aerial-applications-llc
+# into the more complete kuhns-aerial-applications entry.
+[[redirects]]
+  from = "/operators/kuhn-s-aerial-applications-llc"
+  to = "/operators/kuhns-aerial-applications"
+  status = 301
+  force = true
+
+# Flying Cowboy: business pivot from photography to ag services
+# (renamed slug; same operator, same site).
+[[redirects]]
+  from = "/operators/flying-cowboy-photography"
+  to = "/operators/flying-cowboy-ag-services"
+  status = 301
+  force = true
+
+# American Drone: rebuilt entry under canonical slug 'american-drone'
+# (was american-drone-llc; new entry sourced from public records,
+# pendingConfirmation true).
+[[redirects]]
+  from = "/operators/american-drone-llc"
+  to = "/operators/american-drone"
+  status = 301
+  force = true

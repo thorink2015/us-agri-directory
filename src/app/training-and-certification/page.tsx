@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import AffiliateCard from '@/components/affiliate/AffiliateCard';
 import { AUTHOR, SITE } from '@/data/author';
 
 import { addUtm } from '@/lib/utm';
@@ -125,6 +126,30 @@ export default function TrainingAndCertificationPage() {
           </p>
         </div>
 
+        <AffiliateCard
+          slug="pilot-institute-part-107"
+          heading="Get your Part 107 certificate"
+          bullets={[
+            '15 hours of video taught by an FAA Certified Flight Instructor',
+            'Pass guarantee, $175 test fee refunded if you fail',
+            'Used by 80,000+ students',
+            'Lifetime access so you stay current with FAA changes',
+          ]}
+          ctaLabel="See the Part 107 course"
+        />
+
+        <AffiliateCard
+          slug="pilot-institute-private-pilot"
+          heading="Going beyond drones? Study for your Private Pilot"
+          bullets={[
+            '35 hours of video, 850 practice questions',
+            'Instructor endorsement included',
+            'Pass guarantee',
+          ]}
+          ctaLabel="See the Private Pilot course"
+          variant="compact"
+        />
+
         <section className="prose prose-sm max-w-none space-y-5 text-gray-700 leading-relaxed">
           <h2 className="text-xl font-bold text-gray-900 mt-2">The three certification tracks</h2>
           <div className="overflow-x-auto not-prose">
@@ -216,6 +241,8 @@ export default function TrainingAndCertificationPage() {
           <Link href="/services/training" className="text-green-700 hover:underline">Training providers directory</Link>
           <Link href="/services/consultancy" className="text-green-700 hover:underline">Consultancy services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
+          <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
+          <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
           <Link href="/tools/roi-calculator" className="text-green-700 hover:underline">ROI calculator</Link>
           <Link href="/insurance" className="text-green-700 hover:underline">Drone insurance</Link>
           <Link href="/grants-and-subsidies" className="text-green-700 hover:underline">Grants and cost-share</Link>

@@ -214,6 +214,9 @@ export default function InsurancePage() {
 
         <div className="mt-10 flex flex-wrap gap-x-4 gap-y-2 text-sm">
           <Link href="/regulations/faa-part-137" className="text-green-700 hover:underline">FAA Part 137</Link>
+          <Link href="/guides/hire-drone-spray-operator-checklist" className="text-green-700 hover:underline">Hiring a drone spray operator (checklist)</Link>
+          <Link href="/guides/year-round-revenue-ag-drone-operators" className="text-green-700 hover:underline">Year-round revenue for drone operators</Link>
+          <Link href="/guides/how-to-become-an-agricultural-drone-pilot" className="text-green-700 hover:underline">How to become an ag drone pilot</Link>
           <Link href="/services/spraying" className="text-green-700 hover:underline">Drone spraying services</Link>
           <Link href="/start-a-drone-business" className="text-green-700 hover:underline">Start a drone business</Link>
           <Link href="/pricing" className="text-green-700 hover:underline">2026 pricing guide</Link>

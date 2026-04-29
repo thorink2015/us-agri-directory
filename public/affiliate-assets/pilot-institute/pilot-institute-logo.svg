@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" width="240" height="80" role="img" aria-label="Pilot Institute">
+  <rect width="240" height="80" fill="#ffffff"/>
+  <g fill="#0b3d2e" font-family="Georgia, 'Times New Roman', serif">
+    <text x="20" y="38" font-size="22" font-weight="700">Pilot</text>
+    <text x="20" y="62" font-size="22" font-weight="700">Institute</text>
+  </g>
+  <g transform="translate(150, 20)" fill="#f59e0b">
+    <path d="M0 20 L40 0 L36 20 L40 40 Z"/>
+  </g>
+</svg>

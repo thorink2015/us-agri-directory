@@ -172,6 +172,118 @@
   - Operator pages: added `image` field with site-level fallback `${SITE.domain}/og-image.png`.
 - Commits on `claude/remove-garbage-files-aDHms`: b8135d2 (dashes), 26db07e (AI patterns), 4e3076c (dynamic count), ab54e37 (pricing), b9843a7 (drone specs), 44ad737 (Google schema)
 
+## 2026-04-21 — City-level pages template (batch 1, branch claude/city-level-pages-template-vcGAG)
+
+- **`src/data/cities.ts`:** new aggregator. Buckets operators by `city + counties[0]` (primary state). Filters out junk: city == state name (Nebraska/Texas/etc), directional/statewide (Central/Southern/Statewide), and reserved child slugs (operators/services/crops). Threshold = 2+ operators per city (only 2 cities cleared 3+ after filtering, so fell back to 2+ as instructed). Helpers: `getCity`, `getQualifyingCities`, `getCitiesInState`, `getTopServicesForCity`, `getTopCropsForCity`, `getCityRateRange`, `getCityCenter`.
+- **`src/app/states/[slug]/[city]/page.tsx`:** new programmatic route, `dynamicParams = false`. Title: `Drone Spraying Services in [City], [State] | Ag Drone Directory`. H1: `Agricultural Drone Services in [City], [State]`. AEO block built from real city data (operator count + min/max per-acre rate + top crop + top 3 service labels) — every block unique. Reuses `OperatorCard`, `Breadcrumb`, `Byline`, `AuthorCard`. Schemas: BreadcrumbList (Home > States > State > City), LocalBusiness with averaged GeoCoordinates, ItemList of operators. Sections: stats row, operator grid, nearby cities (other qualifying cities in state), state-link CTA, related crop links to `/states/[state]/crops/[crop]` for top 2 crops.
+- **`src/app/sitemap.ts`:** wired `cityPages` from `getQualifyingCities()` (priority 0.7, monthly).
+- **Generated:** 26 city pages. Top: Auburn AL (3), Salinas CA (3), then 24 cities at 2 ops (Baton Rouge LA, Houston TX, Harrisonburg VA, Nashville TN, Knoxville TN, Starkville MS, Lexington KY, Daytona Beach FL, Jonesboro AR, Weston WV, Syracuse NY, Champaign IL, Effingham IL, Six Lakes MI, Overland Park KS, Hiawatha KS, Wichita KS, Nebraska City NE, etc).
+- **Build:** `npm run build` clean, zero errors.
+
+## 2026-04-21 — City pages internal-linking (batch 2)
+
+- **`src/app/states/[slug]/page.tsx`:** new "Browse by city" section in both the rich proof-state template (after the operator grid, before spray windows) and the fallback county-based template (after the operator grid, before crops). Renders only when `getCitiesInState(slug)` returns ≥1 city. Each entry links to `/states/[state]/[city]` with operator count chip.
+- **`src/app/states/page.tsx`:** added one sentence to the intro paragraph: "In states with multiple operators per city, you can also browse by city."
+- **Internal-linking verified:** 21 distinct states gained the city block, covering all 26 city pages. Every city page uplinks 3 ways (breadcrumb text, breadcrumb JSON-LD, "View all operators in [State]" CTA + the state link near the H1). Zero orphans.
+- **Build:** `npm run build` clean.
+
+## 2026-04-21 — Interactive SVG US map on operators page (batch 1 of 2, branch claude/build-svg-us-map-PW07e)
+
+- **`src/data/us-states-svg.ts`:** public-domain US state SVG path data (viewBox 0 0 959 593, 51 features including DC). Derived from datamaps (MIT) / Natural Earth (public domain); simplified equirectangular projection with Alaska + Hawaii as lower-left insets. Total path payload 20 KB.
+- **`src/components/ui/USMap.tsx`:** server component (zero client JS). Renders inline SVG with each state as an `<a href="/states/[slug]">` wrapping a `<path>`. Fills by operator-count bucket (0, 1-5, 6-15, 16-30, 31+ → gray/green-200/400/600/800). `<title>` child on each path gives native accessible tooltip `"[State]: N operators"`. CSS `:hover` bumps brightness + stroke. DC rendered static-gray (no state page). Legend row below the map. Mobile-only `md:hidden` ranked list of top 12 states for small-state tap fallback. Frame reserves `aspectRatio: 959/593` to prevent layout shift.
+- **`src/app/operators/page.tsx`:** imports USMap, passes it as `mapSection` prop inside an `<h2>Find operators by state</h2>` SEO section.
+- **`src/app/operators/OperatoriClient.tsx`:** accepts `mapSection?: ReactNode`, renders it between the H1 header block and the filter panel (keeps USMap server-rendered despite the surrounding client component).
+- **Size budget:** component (USMap.tsx 6.8 KB + us-states-svg.ts 20.3 KB) = 27 KB, well under the 50 KB cap.
+- **Build:** `npm run build` clean. /operators route JS 3.58 kB, shared first-load 116 kB (unchanged profile; SVG adds zero client bundle).
+- **Operator count range shown:** 0 (Nevada) to 41 (California). 49/50 states have ≥1 operator.
+- Batch 2 pending.
+
+## 2026-04-21 — Interactive SVG US map on state pages + homepage (batch 2 of 2, branch claude/build-svg-us-map-PW07e)
+
+- **`src/components/ui/USMap.tsx`:** extended with `highlightSlug`, `compact`, and `className` props. Highlighted state renders last in z-order so its blue fill (`#2563eb`) sits on top of neighbors; CSS uses dual-attribute selector `[data-highlighted="true"][data-bucket]` to override bucket fill without `!important`. Compact mode caps frame at 300px and hides legend + ranked list.
+- **`src/app/states/[slug]/page.tsx`:** both rich and fallback templates wrap the stats row in a `grid md:grid-cols-[1fr_auto]` and add a right-hand `<aside className="hidden md:block w-[300px] …">` with `<USMap highlightSlug={slug} compact />` plus a caption "[State] is highlighted. Click a state to switch." Mobile skips the map entirely (per spec).
+- **`src/app/page.tsx`:** homepage SECTION 8 "Find drone services in your state" now renders the full `<USMap />` in a white card above the existing top-states grid; subhead updated to "Click your state on the map or pick from the top states below" (dropdown/grid preserved as fallback).
+- **Verified:** every state page, homepage, and operators page emit 50 unique `href="/states/[slug]"` links in SSR HTML (grep confirmed).
+- **Build:** `npm run build` clean, zero errors. `/states/[slug]` still 785 B / 101 kB, `/operators` still 3.58 kB / 116 kB, homepage chunk 3.5 kB — USMap adds zero client JS across all routes.
+
+## 2026-04-21 — Dedicated /map page (branch claude/move-map-to-page-NNRGz)
+
+- **`src/app/map/page.tsx`:** new standalone map page. Title "Agricultural Drone Operator Map | US Ag Drone Directory"; H1 "Find Agricultural Drone Operators on the Map"; 130-word AEO block (uses live `operators.length` + computed state count). BreadcrumbList + WebPage JSON-LD with author + publisher `@id` refs. Byline + AuthorCard + CTA link to /operators.
+- **`src/app/map/MapClient.tsx`:** client component. Renders interactive SVG from `US_STATE_PATHS`. Text search (state/city, short digits treated as zip with no match), service dropdown (from SERVICE_LABELS), crop dropdown (from crops.ts). Active filter keeps matching states green by bucket + dims non-matching states to gray via `data-match="false"`. Ranked state list below filters also honors the filter.
+- **`src/app/operators/page.tsx`:** removed `<USMap />` from `mapSection`. Replaced with a green CTA card linking to /map ("View operators on the map"). All 391 operator cards still ship in the RSC payload.
+- **`src/app/page.tsx`:** removed `USMap` import and the SECTION 8 full-map embed. Kept the 8-state compact grid and added a subtle "Explore the map" button under it linking to /map.
+- **`src/app/sitemap.ts`:** added `/map` URL (weekly, 0.8) to `staticPages`.
+- **State pages:** contextual small `<USMap highlightSlug compact />` kept as-is in both rich + fallback templates (per spec).
+- **Build:** `npm run build` clean. /map = 12.1 kB / 109 kB first-load JS; /operators = 3.59 kB / 116 kB (unchanged baseline after map removal).
+
+## 2026-04-21 — Navigation restructure (branch claude/move-map-to-page-NNRGz)
+
+- **`src/components/layout/Header.tsx`:** full rewrite. New top-level structure: Operators (link), Map (link), Browse (dropdown: Services, Crops, States, Drones, Regions), Tools (dropdown: 6 calculators), About (dropdown: About Us, Contact, Advertise, Guides, Pricing Guide, Blog). Right-side "List Your Business" CTA retained.
+- **Desktop dropdowns:** open on hover (onMouseEnter/onMouseLeave on wrapper — panel is a descendant so leaving to hover the panel does not close). Click on trigger toggles for keyboard/touch fallback. Escape key closes. aria-expanded, aria-haspopup, role="menu", role="menuitem", aria-current="page" on the active link. Absolute-positioned panel means zero CLS.
+- **Mobile dropdowns:** native `<details>` accordion, defaults to `open` when the user is on a page inside that section. Preserves zero-JS fallback.
+- **Active highlighting:** link active = exact match or `pathname.startsWith(href + '/')`; dropdown trigger active when any of its sub-links match.
+- **URL preservation:** every URL from the old 9-item nav is still reachable (/operators, /services, /crops, /states, /drones, /pricing, /tools/spray-cost-calculator, /tools/roi-calculator, /tools/coverage-calculator, /blog, /list-your-business). New nav adds /map, /regions, the 3 remaining tool calculators, /about, /contact, /advertise, /guides.
+- **Build:** `npm run build` clean. Shared first-load JS 87.3 kB — unchanged from the prior nav, so no PageSpeed regression risk from the added dropdown JS (all handlers are on a component that was already client-side).
+
+## 2026-04-21 — Pillar guides section launch (branch claude/launch-guides-section-UYEt2)
+
+- **Sentinel append loop pattern (new):** after a 5,000-word `Write` hit post-compaction rate limits, designed the per-H2-section `Edit` rollout. One JSX section per commit, push, wait for "next". Documented in `code-patterns.md § Long-form content rollout` and root-caused in `known-issues.md` 2026-04-21 entry.
+- **Guide data + template:** `src/data/guides.ts` (Guide interface + `hire-drone-spray-operator-checklist` data), `src/app/guides/[slug]/page.tsx` (Article + BreadcrumbList + FAQPage + HowTo JSON-LD, TOC sidebar, quick-facts panel, printable short-checklist block, AuthorCard), `src/app/guides/page.tsx` hub (category grouping by `GUIDE_CATEGORY_ORDER`).
+- **First pillar guide shipped:** `/guides/hire-drone-spray-operator-checklist` — 5,500-word farmer-side vetting playbook. 11 H2 sections: three-licenses, insurance, equipment-questions, label-question, pricing (table callout), contract-clauses, weather-timing, red-flags, drift-damage, short-checklist, closing thought. 10 internal `<Link>` crosslinks, 4 pull quotes, 6 HowTo steps, 8 FAQPage FAQs.
+- **Styling:** `.guide-body` typography block in `globals.css` (serif, 17px/1.75, green-underlined internal links), `.guide-table-callout` and `.guide-pullquote` utility classes, print stylesheet for short-checklist.
+- **Build:** clean after every section commit; final `npx next build` generated the route at 2.1 kB.
+- **PRs:** #66, #67, #68 shipped the scaffold + body sections (all merged mid-session).
+- **Batch 3 — AI discovery files (PR #69, merged):** `public/llms.txt` gained a new `## Pillar guides` section linking the `/guides` hub and the new guide; `public/llms-full.txt` gained a full AEO-block entry for the new guide plus a `/guides` hub entry. `sitemap.ts` (`guides.map` at line 144-150) and `robots.ts` (Allow:/ for 27 AI crawlers) already handled the new route — no change needed. Operator count on llms.txt line 3 verified at 391 via `operators.length`.
+- **Batch 4 — reciprocal internal links (PR #70):** linked into the new guide from 6 pages. Homepage got a dedicated featured-guide callout strip above the blog grid (green-bordered card with 11-char uppercase kicker + title + teaser + CTA). The other 5 pages (/regulations/faa-part-137, /regulations/state-licensing, /insurance, /buyers-guide, /start-a-drone-business) tucked the link into their existing footer link clusters.
+
+## 2026-04-24 — Pillar guide #2: year-round revenue (branch claude/build-guides-hub-S7TPj, PR #74)
+
+- **Source drop:** `_research/guide3-year-round-revenue.md` (4,756 body words, 20-min read at 240 wpm). Category `Operators`. Slug `year-round-revenue-ag-drone-operators`.
+- **Data entry:** appended to `src/data/guides.ts` with 11-entry TOC, 4 quickFacts, 3 pullQuotes, 7 FAQs, 7 HowTo steps, `featuredPullQuote` ("The off season is not empty. It is unclaimed."), and 6 `relatedInternal` links. Because this guide&apos;s publishDate is newer than guide 1, `getLatestGuides(1)[0]` now returns guide 2, so the homepage featured-guide callout and the `/guides` hub hero card auto-switched without code changes.
+- **Content rollout:** followed the sentinel append loop. 11 H2 sections shipped one per turn via `Edit` against `{/* GUIDE-INSERT-POINT: year-round-revenue-ag-drone-operators */}`. Each commit was pushed before moving on. Intro + spray-season-math landed together (intro paragraphs sit above the first H2). The revenue table renders inside the existing `.guide-table-callout` figure wrapper with `scope="col"` and an `aria-label`. Two inline `<figure className="guide-pullquote">` callouts (spreader attachment, CCA credential lift) plus the closing pullquote on the &ldquo;off season&rdquo; line.
+- **New template addition:** `src/components/guides/ShareButtons.tsx` (client component). X, LinkedIn, and copy-link with `role="group"`, `aria-label` per button, live-region clipboard feedback, keyboard focusable. Wired into `src/app/guides/[slug]/page.tsx` in two places: under the Byline, and above the print CTA. Guide 1 inherits the share strip for free.
+- **Sitemap:** bumped `/guides` hub and per-guide priorities from 0.7 to 0.8 in `src/app/sitemap.ts` to reflect pillar content weighting.
+- **AI discovery:** `public/llms.txt` Pillar guides section gained one new line. `public/llms-full.txt` Current guides tally bumped and a full `=== Guide: ... ===` block appended (AEO block + quickFacts + per-service revenue breakdowns + Year 2 revenue table + certification stack + subscription model + action checklist + primary sources).
+- **Reciprocal links:** added to 10 pages guide 2 inbounds into. Batch 1 (5 pages that already carried guide 1&apos;s link): `/buyers-guide`, `/insurance`, `/start-a-drone-business`, `/regulations/faa-part-137`, `/regulations/state-licensing`. Batch 2 (5 pages without prior guide links): `/regulations/faa-part-107`, `/training-and-certification`, `/grants-and-subsidies`, `/comparisons/drone-vs-ground-rig`, `/comparisons/drone-vs-airplane`. All use the same `text-green-700 hover:underline` in-cluster style.
+- **Internal link audit:** all 10 internal targets in the guide body resolve to existing routes (0 four-oh-fours).
+- **Build:** `npm run build` clean after the final section. 1,504 static pages generated. Share buttons add one client component but guide route was not in the top-listed bundle output.
+- **PR #74:** draft, branch `claude/build-guides-hub-S7TPj`. Commits in order: scaffold + share buttons, intro + spray-season-math, service 1 cover crop, service 2 NDVI, service 3 ranch, service 4 mosquito, service 5 granular, service 6 non-ag RGB, 12-month calendar + revenue table, certification stack, subscription model, action checklist + closing, llms.txt + llms-full.txt, reciprocal links batch 1, reciprocal links batch 2.
+
+## 2026-04-24 — Pilot Institute affiliate program + guide #3 (branch claude/build-pilot-institute-7IIru, PR #76)
+
+- **Batch 1 — redirect infra:** `src/data/affiliates.ts` with typed `AffiliateLink` entries for 3 Pilot Institute destinations (main, Part 107 course, Private Pilot course) preserving `affcode=MO3DURF9IB3D9WXNG2`. `buildAffiliateUrl` appends `utm_source=agdronedirectory&utm_medium=affiliate&utm_campaign={slug}`. `src/app/go/[slug]/page.tsx` (server, `robots: noindex/nofollow`, static params for all 3 slugs) + `AffiliateRedirect.tsx` (client, fires `affiliate_click` + `affiliate_click_source` GA4 events with sanitized `referrer_path`, 120ms delay then `window.location.replace`, `<noscript>` fallback anchor). `/go/` added to robots.txt disallow. Sitemap is data-driven so `/go/*` is implicitly excluded.
+- **Batch 2 — surface components:** `AffiliateDisclosure` (muted 11px inline text), `AffiliateCard` (client, IntersectionObserver one-shot `affiliate_impression` event, `standard` and `compact` variants, logo slot via `next/image unoptimized`, green-800 CTA button), `AffiliateTextLink` (client, same impression + click tracking, inline `(affiliate)` label in 10px uppercase after the link). `/affiliate-disclosure` page with WebPage + BreadcrumbList schema and `getActivePartners()` dedup list. Footer gained Affiliate Disclosure link next to Privacy and Terms. Placeholder SVG at `/public/affiliate-assets/pilot-institute/pilot-institute-logo.svg` (real logo pending Eugen's drop).
+- **Batch 3 — guide #3 deployment:** `/guides/how-to-become-an-agricultural-drone-pilot` shipped via sentinel append loop (6 sub-commits: scaffold, intro+what-pilots-do, step-1-part-107 with Part 107 AffiliateCard, step-2-part-137, step-3+step-4, startup-costs+earnings, close with 90-day checklist + Private Pilot AffiliateCard). 8 H2 sections, 4 callout tables (Part 107 test weights, state fees, startup cost breakdown, regional rate table), 8 FAQs, 6 HowTo steps, Article/BreadcrumbList/FAQPage/HowTo JSON-LD, TOC, ShareButtons. Source research file: `_research/how-to-become-an-agricultural-drone-pilot.md`.
+- **Batch 4 — site-wide placements:** Full `AffiliateCard` on `/training-and-certification` (2 cards: Part 107 + Private Pilot compact), `/regulations/faa-part-107` ("Need to pass the Part 107 exam?"), `/start-a-drone-business` ("Step one: get your Part 107"). `AffiliateTextLink` on `/regulations/faa-part-137`, `/regulations/state-licensing`, `/buyers-guide`, and 2 blog posts (`drone-spraying-state-license-guide`, `faa-part-137-drone-guide`). 10 blog posts scanned, 8 skipped as not about licensing/training.
+- **Pending drop-ins for Eugen:** real Pilot Institute SVG logo, 2 Part 107 course screenshots (at `/public/affiliate-assets/pilot-institute/part-107-dashboard.jpg` and `.../part-107-flashcards.jpg`) to wire into the Step 1 section of guide #3.
+- **Netlify constraint note:** Working branch does not auto-deploy (prod branch is `main`). PR #76 triggers a Netlify deploy preview on each push which does consume build minutes from the shared pool. Eugen said to only push to GitHub this month, not publish live.
+- **Build:** `npx next build` clean after every sub-batch. `/go/[slug]` prerenders 3 static routes. New guide route prerenders at `/guides/how-to-become-an-agricultural-drone-pilot`.
+
+## 2026-04-25 — Contact scraper tool (PR #78, branch `claude/build-operators-scraper-l0r9c`)
+
+- Reusable tool at `tools/contact-scraper/` (own package.json, deps cheerio + p-limit + tsx; never touches the Next.js bundle). Three input modes: `--source=directory|csv|json`. Scrapes homepage + standard contact paths + same-origin contact-hint links; extracts emails (with Cloudflare CFEmail / `[at]/dot` / HTML-entity decoders), US phones, contact form URL, socials. Polite (5 cross-domain in flight, 2.5s same-domain delay with 50% jitter), one retry on transient failure, per-site time budget. Resumable via atomic-write `progress.json`. CSV writer is RFC 4180 compliant; passthrough columns from the source pass through to output.
+- GitHub Actions workflow `.github/workflows/scrape-contacts.yml` (workflow_dispatch only): runs the scraper on GitHub's own runners, uploads CSV + log + progress as artifacts. Owner runs from the GitHub UI (no terminal), independent of Netlify build minutes.
+- Fixed: root `tsconfig.json` `**/*.ts` include was pulling the new Node-only CLI TS files into the Next.js typecheck and breaking Netlify deploy previews. Added `tools` to the root tsconfig exclude list, mirroring the existing exclusion of `scripts/`.
+
+## 2026-04-25 — Scraper workflow Actions bump (branch `claude/update-github-actions-mntKS`, PR #79 merged)
+
+- **Round 1 (PR #79, merged):** `actions/checkout@v4` → `@v5`, `actions/setup-node@v4` → `@v5`, `actions/upload-artifact@v4` → `@v5` (3 upload steps) in `.github/workflows/scrape-contacts.yml`. Cleared two of three deprecation warnings.
+- **Round 2 (same branch):** Next workflow run still flagged `actions/upload-artifact@v5` as Node 20. Bumped to `@v7` (latest as of 2026-04-10; Node 24 cutover landed in v6 Dec 2025 → v7 Feb 2026). Inputs we use (`name`, `path`, `if-no-files-found`, `retention-days`) are unchanged in v7; new optional inputs (`compression-level`, `overwrite`, `include-hidden-files`, `archive`) default to safe values. See `known-issues.md` 2026-04-25 entry — `v5` of upload-artifact is *not* equivalent to `v5` of checkout/setup-node.
+
+## 2026-04-29 — Operator updates batch 001 (PR #83, branch `claude/batch-operator-updates-kemgQ`)
+
+- **Source:** `_research/operator-updates-batch-001.md` — 16 atomic commits, 1 per global change or per operator update.
+- **Schema additions:** `pendingConfirmation`, `veteranOwned`, `nonProfit`, `womenLed`, `lastUpdated` (all optional, default false).
+- **Verified Operator badge tweaked** to `BadgeCheck` icon + emerald color + label "Verified Operator"; suppressed when `pendingConfirmation` is true (single-source-of-truth rule).
+- **New tag badges** (Veteran-Owned / Non-Profit / Women-Led) added to `VerificationBadges`, reusing the existing pill pattern. Distinct icons: `ShieldCheck` / `HeartHandshake` / `Sparkles`.
+- **Profile page additions:** subtle grey `pendingConfirmation` banner above the about section; "claim your listing" notice in the contact card when both phone and email are empty.
+- **Operators sidebar:** 3 new filter checkboxes under a new "Operator profile" group, wired into predicate + advancedCount + clearFilters + reset effect.
+- **4 new drone entries** (`joyance-j100`, `joyance-j150`, `ceres-air-c31`, `leadingedge-pv40x`) — name + manufacturer only, all specs `null`/Pending per the no-invented-specs rule. Pages auto-generate at `/drones/[slug]`. **Flagged for manual completion** with primary-source specs.
+- **Bug fixes:** merged duplicate Kuhn's Aerial entries (kept `kuhns-aerial-applications`, removed `kuhn-s-aerial-applications-llc`, 301 added). Rebuilt `american-drone` under canonical slug; 301 from `american-drone-llc`. `flying-cowboy-photography` renamed to `flying-cowboy-ag-services`; 301 added.
+- **Operator updates:** 9 operators touched — `usar-drone-team`, `rafter-7-agritech`, `pro-ag-solutions` (Rantizo references removed), `cover-crop-innovations`, `swift-aeroseed` (pendingConfirmation + women-led), `flying-cowboy-ag-services`, `fortis-aerial` (new), `hazel-hill-drone-services` (new), `american-drone` (rebuilt).
+- **Build:** `npm run build` clean. All 9 affected operator routes + 4 new drone routes generate as static pages. Sitemap regenerates from data; old slugs absent (handled by netlify.toml 301s).
+- **Duplicate sweep findings (no auto-merge):** repeated phone numbers (5 pairs) and shared dealer/brand websites (Rantizo ×5, AcuSpray ×3, Osprey ×3, plus pairs for AgDronesWest, AgriSpray, Airoterra, FlyingAg, KADS, Martens, NuwayAg, RaptorDynamic, CropGuardDrones, WilburEllis) — most are intentional national + regional brand-hub patterns, not duplicates. Surfaced in PR #83 description for Eugen's review.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
