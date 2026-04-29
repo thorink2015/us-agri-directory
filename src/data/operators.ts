@@ -2337,7 +2337,8 @@ export const operators: Operator[] = [
     country: 'US',
     counties: ['massachusetts', 'vermont', 'connecticut', 'new-hampshire', 'maine', 'rhode-island', 'new-york'],
     city: 'Concord',
-    phone: '(978) 430-0415',
+    address: '65 Central Street, Concord, Massachusetts 01742',
+    phone: '978-430-0415',
     email: 'covercropinnovations@gmail.com',
     website: 'https://covercropinnovations.com',
     services: ['seeding'],
@@ -2346,6 +2347,7 @@ export const operators: Operator[] = [
     certFAAPart107: true,
     verified: true,
     featured: false,
+    lastUpdated: '2026-04-29',
   },
   {
     slug: 'guardian-agriculture',
