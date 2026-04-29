@@ -114,3 +114,12 @@
   to = "/operators/flying-cowboy-ag-services"
   status = 301
   force = true
+
+# American Drone: rebuilt entry under canonical slug 'american-drone'
+# (was american-drone-llc; new entry sourced from public records,
+# pendingConfirmation true).
+[[redirects]]
+  from = "/operators/american-drone-llc"
+  to = "/operators/american-drone"
+  status = 301
+  force = true
