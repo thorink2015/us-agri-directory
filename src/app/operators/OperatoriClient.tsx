@@ -40,6 +40,9 @@ export default function OperatoriClient({ operators, counties, mapSection }: Pro
   const [certPart107, setCertPart107] = useState(false);
   const [certPart137, setCertPart137] = useState(false);
   const [ndaaOnly, setNdaaOnly] = useState(false);
+  const [veteranOwnedOnly, setVeteranOwnedOnly] = useState(false);
+  const [nonProfitOnly, setNonProfitOnly] = useState(false);
+  const [womenLedOnly, setWomenLedOnly] = useState(false);
 
   // Sort
   const [sortBy, setSortBy] = useState<SortOption>('default');
@@ -57,6 +60,9 @@ export default function OperatoriClient({ operators, counties, mapSection }: Pro
       if (certPart107 && !op.certFAAPart107) return false;
       if (certPart137 && !op.certFAAPart137) return false;
       if (ndaaOnly && !op.ndaaCompliant) return false;
+      if (veteranOwnedOnly && !op.veteranOwned) return false;
+      if (nonProfitOnly && !op.nonProfit) return false;
+      if (womenLedOnly && !op.womenLed) return false;
       if (selectedDrone && !op.drones.includes(selectedDrone)) return false;
       if (priceMin && op.priceMinUsd && op.priceMinUsd < Number(priceMin)) return false;
       if (priceMax && op.priceMaxUsd && op.priceMaxUsd > Number(priceMax)) return false;
@@ -100,21 +106,22 @@ export default function OperatoriClient({ operators, counties, mapSection }: Pro
   }, [
     operators, selectedCounty, selectedService, search,
     verifiedOnly, featuredOnly, certPart107, certPart137, ndaaOnly,
+    veteranOwnedOnly, nonProfitOnly, womenLedOnly,
     selectedDrone, priceMin, priceMax, sortBy,
   ]);
 
   // Reset pagination when filters/sort change
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [search, selectedCounty, selectedService, priceMin, priceMax, selectedDrone, verifiedOnly, featuredOnly, certPart107, certPart137, ndaaOnly, sortBy]);
+  }, [search, selectedCounty, selectedService, priceMin, priceMax, selectedDrone, verifiedOnly, featuredOnly, certPart107, certPart137, ndaaOnly, veteranOwnedOnly, nonProfitOnly, womenLedOnly, sortBy]);
 
   const visible = filtered.slice(0, visibleCount);
   const hasMore = visibleCount < filtered.length;
 
   const hasBasicFilters = !!(search || selectedCounty || selectedService);
-  const hasAdvancedFilters = !!(priceMin || priceMax || selectedDrone || verifiedOnly || featuredOnly || certPart107 || certPart137 || ndaaOnly);
+  const hasAdvancedFilters = !!(priceMin || priceMax || selectedDrone || verifiedOnly || featuredOnly || certPart107 || certPart137 || ndaaOnly || veteranOwnedOnly || nonProfitOnly || womenLedOnly);
   const hasFilters = hasBasicFilters || hasAdvancedFilters;
-  const advancedCount = [priceMin, priceMax, selectedDrone, verifiedOnly, featuredOnly, certPart107, certPart137, ndaaOnly].filter(Boolean).length;
+  const advancedCount = [priceMin, priceMax, selectedDrone, verifiedOnly, featuredOnly, certPart107, certPart137, ndaaOnly, veteranOwnedOnly, nonProfitOnly, womenLedOnly].filter(Boolean).length;
 
   function clearFilters() {
     setSearch('');
@@ -128,6 +135,9 @@ export default function OperatoriClient({ operators, counties, mapSection }: Pro
     setCertPart107(false);
     setCertPart137(false);
     setNdaaOnly(false);
+    setVeteranOwnedOnly(false);
+    setNonProfitOnly(false);
+    setWomenLedOnly(false);
     setSortBy('default');
   }
 
@@ -306,6 +316,40 @@ export default function OperatoriClient({ operators, counties, mapSection }: Pro
                       className="w-4 h-4 rounded border-gray-300 text-green-600 focus:ring-green-500"
                     />
                     <span className="text-sm text-gray-700">Featured only</span>
+                  </label>
+                </div>
+              </div>
+
+              {/* Identity tags */}
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1.5">Operator profile</label>
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={veteranOwnedOnly}
+                      onChange={(e) => setVeteranOwnedOnly(e.target.checked)}
+                      className="w-4 h-4 rounded border-gray-300 text-green-600 focus:ring-green-500"
+                    />
+                    <span className="text-sm text-gray-700">Veteran-Owned</span>
+                  </label>
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={nonProfitOnly}
+                      onChange={(e) => setNonProfitOnly(e.target.checked)}
+                      className="w-4 h-4 rounded border-gray-300 text-green-600 focus:ring-green-500"
+                    />
+                    <span className="text-sm text-gray-700">Non-Profit</span>
+                  </label>
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={womenLedOnly}
+                      onChange={(e) => setWomenLedOnly(e.target.checked)}
+                      className="w-4 h-4 rounded border-gray-300 text-green-600 focus:ring-green-500"
+                    />
+                    <span className="text-sm text-gray-700">Women-Led</span>
                   </label>
                 </div>
               </div>
