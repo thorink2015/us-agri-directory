@@ -270,6 +270,20 @@
 - **Round 1 (PR #79, merged):** `actions/checkout@v4` → `@v5`, `actions/setup-node@v4` → `@v5`, `actions/upload-artifact@v4` → `@v5` (3 upload steps) in `.github/workflows/scrape-contacts.yml`. Cleared two of three deprecation warnings.
 - **Round 2 (same branch):** Next workflow run still flagged `actions/upload-artifact@v5` as Node 20. Bumped to `@v7` (latest as of 2026-04-10; Node 24 cutover landed in v6 Dec 2025 → v7 Feb 2026). Inputs we use (`name`, `path`, `if-no-files-found`, `retention-days`) are unchanged in v7; new optional inputs (`compression-level`, `overwrite`, `include-hidden-files`, `archive`) default to safe values. See `known-issues.md` 2026-04-25 entry — `v5` of upload-artifact is *not* equivalent to `v5` of checkout/setup-node.
 
+## 2026-04-29 — Operator updates batch 001 (PR #83, branch `claude/batch-operator-updates-kemgQ`)
+
+- **Source:** `_research/operator-updates-batch-001.md` — 16 atomic commits, 1 per global change or per operator update.
+- **Schema additions:** `pendingConfirmation`, `veteranOwned`, `nonProfit`, `womenLed`, `lastUpdated` (all optional, default false).
+- **Verified Operator badge tweaked** to `BadgeCheck` icon + emerald color + label "Verified Operator"; suppressed when `pendingConfirmation` is true (single-source-of-truth rule).
+- **New tag badges** (Veteran-Owned / Non-Profit / Women-Led) added to `VerificationBadges`, reusing the existing pill pattern. Distinct icons: `ShieldCheck` / `HeartHandshake` / `Sparkles`.
+- **Profile page additions:** subtle grey `pendingConfirmation` banner above the about section; "claim your listing" notice in the contact card when both phone and email are empty.
+- **Operators sidebar:** 3 new filter checkboxes under a new "Operator profile" group, wired into predicate + advancedCount + clearFilters + reset effect.
+- **4 new drone entries** (`joyance-j100`, `joyance-j150`, `ceres-air-c31`, `leadingedge-pv40x`) — name + manufacturer only, all specs `null`/Pending per the no-invented-specs rule. Pages auto-generate at `/drones/[slug]`. **Flagged for manual completion** with primary-source specs.
+- **Bug fixes:** merged duplicate Kuhn's Aerial entries (kept `kuhns-aerial-applications`, removed `kuhn-s-aerial-applications-llc`, 301 added). Rebuilt `american-drone` under canonical slug; 301 from `american-drone-llc`. `flying-cowboy-photography` renamed to `flying-cowboy-ag-services`; 301 added.
+- **Operator updates:** 9 operators touched — `usar-drone-team`, `rafter-7-agritech`, `pro-ag-solutions` (Rantizo references removed), `cover-crop-innovations`, `swift-aeroseed` (pendingConfirmation + women-led), `flying-cowboy-ag-services`, `fortis-aerial` (new), `hazel-hill-drone-services` (new), `american-drone` (rebuilt).
+- **Build:** `npm run build` clean. All 9 affected operator routes + 4 new drone routes generate as static pages. Sitemap regenerates from data; old slugs absent (handled by netlify.toml 301s).
+- **Duplicate sweep findings (no auto-merge):** repeated phone numbers (5 pairs) and shared dealer/brand websites (Rantizo ×5, AcuSpray ×3, Osprey ×3, plus pairs for AgDronesWest, AgriSpray, Airoterra, FlyingAg, KADS, Martens, NuwayAg, RaptorDynamic, CropGuardDrones, WilburEllis) — most are intentional national + regional brand-hub patterns, not duplicates. Surfaced in PR #83 description for Eugen's review.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
