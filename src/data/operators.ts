@@ -4771,6 +4771,26 @@ export const operators: Operator[] = [
     featured: false,
     verified: true,
     lastUpdated: '2026-04-29',
+    gallery: [
+      {
+        src: '/images/operators/pro-ag-solutions/pilot-refill-trailer.webp',
+        alt: 'Pro Ag Solutions pilot refilling a DJI Agras spray drone next to the company\'s branded trailer at a North Dakota soybean field',
+        width: 675,
+        height: 1200,
+      },
+      {
+        src: '/images/operators/pro-ag-solutions/fleet-drones-field.webp',
+        alt: 'Two DJI Agras spray drones in the Pro Ag Solutions fleet staged in a field with a third drone airborne overhead',
+        width: 552,
+        height: 1200,
+      },
+      {
+        src: '/images/operators/pro-ag-solutions/spraying-corn-field.webp',
+        alt: 'Pro Ag Solutions DJI Agras drone spraying a North Dakota corn field at low altitude',
+        width: 552,
+        height: 1200,
+      },
+    ],
   },
   {
     slug: 'spotters-aerial-ag',
