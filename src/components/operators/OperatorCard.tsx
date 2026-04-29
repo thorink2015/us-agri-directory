@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { MapPin, Phone, Globe, CheckCircle, Plane, Zap } from 'lucide-react';
+import { MapPin, Phone, Globe, BadgeCheck, Plane, Zap } from 'lucide-react';
 import { Operator, SERVICE_LABELS } from '@/data/types';
 import { SITE } from '@/data/author';
 import { formatPrice, addUtmParams, getStateAbbr } from '@/lib/utils';
@@ -51,9 +51,9 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
             >
               {displayName}
             </Link>
-            {operator.verified && (
-              <span title="Verified" className="flex-shrink-0">
-                <CheckCircle className="w-4 h-4 text-green-600" aria-label="Verified" />
+            {operator.verified && !operator.pendingConfirmation && (
+              <span title="Verified Operator" className="flex-shrink-0">
+                <BadgeCheck className="w-4 h-4 text-emerald-600" aria-label="Verified Operator" />
               </span>
             )}
           </div>

@@ -66,6 +66,11 @@ export interface Operator {
   iso9001?: boolean;
   featured?: boolean;
   verified?: boolean;
+  pendingConfirmation?: boolean;  // Profile built from public records, awaiting operator confirmation
+  veteranOwned?: boolean;
+  nonProfit?: boolean;
+  womenLed?: boolean;
+  lastUpdated?: string;           // ISO date (YYYY-MM-DD) of last operator-data update
   logoUrl?: string;
   lat?: number;
   lng?: number;

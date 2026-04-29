@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import {
-  Globe, MapPin, CheckCircle, Calendar, Plane,
+  Globe, MapPin, CheckCircle, BadgeCheck, Calendar, Plane,
   Clock, Languages, CreditCard, Shield, Award, Zap, Users,
 } from 'lucide-react';
 import {
@@ -86,9 +86,9 @@ export default function OperatorPage({ params }: Props) {
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center gap-2 flex-wrap mb-1">
                     <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">{operator.name}</h1>
-                    {operator.verified && (
-                      <span className="flex items-center gap-1 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-semibold">
-                        <CheckCircle className="w-3 h-3" /> Verified
+                    {operator.verified && !operator.pendingConfirmation && (
+                      <span className="flex items-center gap-1 text-xs bg-emerald-50 text-emerald-900 border border-emerald-300 px-2 py-1 rounded-full font-semibold">
+                        <BadgeCheck className="w-3 h-3" /> Verified Operator
                       </span>
                     )}
                     {operator.featured && (
