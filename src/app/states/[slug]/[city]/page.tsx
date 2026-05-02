@@ -645,6 +645,63 @@ export default function CityPage({ params }: Props) {
           </p>
         </section>
 
+        {/* Authority links — primary sources for verifying credentials */}
+        <section className="mb-10">
+          <h2 className="text-base font-bold text-gray-900 mb-3">
+            Verify {city.city} drone operator credentials
+          </h2>
+          <p className="text-xs text-gray-500 mb-3">
+            Primary-source references for verifying ag drone operator credentials
+            in {city.stateName} and federally.
+          </p>
+          <ul className="space-y-1.5 text-sm">
+            {stateData?.licensingAgencyUrl && stateData.licensingAgency && (
+              <li>
+                <a
+                  href={stateData.licensingAgencyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-700 underline hover:text-green-800"
+                >
+                  {stateData.licensingAgency} ({city.stateName} pesticide regulator)
+                </a>
+              </li>
+            )}
+            {stateData?.extensionUrl && (
+              <li>
+                <a
+                  href={stateData.extensionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-700 underline hover:text-green-800"
+                >
+                  {city.stateName} state extension service
+                </a>
+              </li>
+            )}
+            <li>
+              <a
+                href="https://www.faa.gov/uas/advanced_operations/dispensing_chemicals"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-700 underline hover:text-green-800"
+              >
+                FAA Part 137 Agricultural Aircraft Operations
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.agaviation.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-700 underline hover:text-green-800"
+              >
+                National Agricultural Aviation Association (NAAA)
+              </a>
+            </li>
+          </ul>
+        </section>
+
         {/* How to hire */}
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
