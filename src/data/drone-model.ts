@@ -785,6 +785,279 @@ export const drones: DroneModel[] = [
     faqs: [],
     lastReviewedAt: '2026-04-29',
   },
+  {
+    slug: 'dji-agras-t40',
+    name: 'DJI Agras T40',
+    manufacturer: 'DJI',
+    countryOfManufacture: 'China',
+    ndaaCompliant: false,
+    status: 'discontinued',
+    description:
+      'DJI predecessor to the T50, with a 40-liter spray tank and 50 kg dry hopper. Discontinued from new DJI dealer channels in 2024 in favour of the T50, but still flying with at least 18 operators in the US ag drone fleet. Chinese-made and not NDAA Section 848 compliant.',
+    longDescription:
+      'The DJI Agras T40 was the predecessor to the T50 in the DJI Agras spray-drone lineup, launched globally in 2022 and replaced by the T50 in late 2023. Like the T50, it carries a 40-liter (10.6 gallon) liquid tank and 50 kg dry hopper, with a 4 to 11 meter (13 to 36 foot) adjustable swath width. The T40 used the older twin-rotor coaxial design that DJI carried over to the T50, and runs the same DB1560 battery and charging hub. Empty weight is approximately 38 kg (84 lbs); MTOW is 90 kg (198 lbs). DJI replaced the T40 with the T50 to ship upgraded radar obstacle avoidance, refined spray system calibration and faster battery charging — operators flying T40 fleets typically run them alongside newer T50s for capacity rather than swapping in lockstep. Pre-tariff dealer pricing on the T40 was approximately $16,000 to $18,000; post-April 2025 tariff escalation to 170 percent on Chinese ag drones drove that to roughly $20,000 to $25,000 for the inventory still in dealer channels. Like every DJI Agras model, the T40 is not NDAA Section 848 compliant. Operators flying federal contracts or NDAA-restricted state programs should consider the Hylio AG-272 or AG-230 instead. The T40 is no longer listed on ag.dji.com as a current model; new operator purchases route to the T50.',
+    aeoBlock:
+      'The DJI Agras T40 is the predecessor to the T50, with a 40-liter spray tank and 50 kg dry hopper. DJI discontinued it from new dealer channels in 2024 in favour of the T50, though at least 18 US operators in the directory still fly T40s. Pre-tariff MSRP was approximately $16,000 to $18,000; post-tariff dealer prices on remaining inventory ran $20,000 to $25,000. Not NDAA Section 848 compliant.',
+    specs: {
+      emptyWeightKg: 38,
+      emptyWeightLbs: 84,
+      mtowKg: 90,
+      mtowLbs: 198,
+      tankLiters: 40,
+      tankGallons: 10.6,
+      granularCapacityLiters: 75,
+      granularCapacityKg: 50,
+      swathWidthMeters: '4 to 11',
+      swathWidthFeet: '13 to 36',
+      maxFlowRateLMin: '12 (2 nozzles), 24 (4 nozzles)',
+      battery: 'DB1560, 30 Ah, 52.22 V',
+      batteryWh: 1567,
+      chargeTimeMin: '9 to 12',
+      maxWindMs: 6,
+      maxWindMph: 13.4,
+      ipRating: 'Relay IP55; aircraft body not rated',
+    },
+    msrpUsd: 'Discontinued from new channels; remaining dealer inventory $20,000 to $25,000 post-tariff',
+    usDealerPresence: 'Discontinued; dealer service and parts continuity through DJI authorized agriculture dealer network',
+    bestFor: 'Existing T40 operators maintaining fleet capacity alongside newer T50s. Not recommended as a new purchase — DJI dealers will route new orders to the T50.',
+    authorityLinks: [
+      { label: 'DJI Agriculture (US)', url: 'https://ag.dji.com' },
+      { label: 'DJI Agras T50 (current model — replaced T40)', url: 'https://ag.dji.com/t50/specs' },
+      { label: 'NDAA Section 848 covered foreign UAS guidance', url: 'https://www.acquisition.gov/far/52.204-25' },
+      { label: 'FAA Part 137 Agricultural Aircraft Operator Certificate', url: 'https://www.faa.gov/uas/advanced_operations/agriculture' },
+    ],
+    faqs: [
+      {
+        question: 'Is the DJI Agras T40 still being made?',
+        answer:
+          'No. DJI replaced the T40 with the T50 in late 2023 and the T40 is no longer listed on ag.dji.com as a current model. Existing T40 fleets remain in service; DJI dealers continue to support service and parts but route new orders to the T50.',
+      },
+      {
+        question: 'Should I buy a used T40 or a new T50?',
+        answer:
+          'For most new operators, the T50 is the better buy — the T50 carries the same 40-liter tank and 50 kg hopper, but ships with upgraded radar obstacle avoidance, refined spray calibration and faster battery cycling. Used T40 prices in 2026 sometimes undercut new T50 by $5,000 to $8,000, which can pencil for an existing operator adding capacity, but the parts and service horizon is shorter.',
+      },
+      {
+        question: 'Is the DJI Agras T40 NDAA compliant?',
+        answer:
+          'No. The T40 is manufactured by DJI in China and is not NDAA Section 848 compliant. Operators bidding federal contracts or NDAA-restricted state programs (Florida, Mississippi, Arkansas DOT and others) should look at the Hylio AG-272 or AG-230 instead.',
+      },
+      {
+        question: 'How does the T40 compare to the T50 on spray performance?',
+        answer:
+          'Tank size, hopper capacity, swath width and flow rate are essentially identical. The T50 ships upgraded Phased Array Radar, an improved terrain-following LiDAR system and refined spray calibration that delivers slightly tighter droplet uniformity. T40 spray quality is good; T50 is incrementally better.',
+      },
+      {
+        question: 'Are T40 parts and service still available in 2026?',
+        answer:
+          'Yes, through DJI authorized agriculture dealers. Spray pumps, batteries, propellers and electronics remain in the dealer network for existing T40 fleets. Plan on a 5-to-7-year service horizon from dealer commitments; longer-term parts availability will mirror the T20 and T30 phase-out trajectory.',
+      },
+    ],
+    lastReviewedAt: '2026-05-02',
+  },
+  {
+    slug: 'dji-agras-t10',
+    name: 'DJI Agras T10',
+    manufacturer: 'DJI',
+    countryOfManufacture: 'China',
+    ndaaCompliant: false,
+    status: 'discontinued',
+    description:
+      'Entry-level DJI Agras model with an 8-liter tank, replaced by the T20P in 2022 and the T25 in 2024. Discontinued from new DJI dealer channels but still flying with a small number of US ag drone operators on small acreage. Chinese-made and not NDAA Section 848 compliant.',
+    longDescription:
+      'The DJI Agras T10 was DJI\'s entry-level Agras spray drone from 2020 to 2022, with an 8-liter (2.1 gallon) liquid tank and a 4 to 8 meter (13 to 26 foot) swath width. It was replaced by the T20P (10-liter tank) in 2022 and effectively phased out of new DJI dealer channels by the launch of the T25 in early 2024. T10 spec sheets list empty weight at approximately 13 kg (28.7 lbs), MTOW around 24.8 kg (54.7 lbs) — small enough that some configurations stayed under the FAA 55 lb threshold for unmanned aircraft. The DB12000 battery (12 Ah) gave roughly 8 to 10 minute flight times. Pre-tariff MSRP ran approximately $5,000 to $7,000, the lowest entry point in the Agras family. T10 fleets are now mostly with smaller US farmer-operators spraying their own fields at under 200 acres per season; dealers route new orders to the T25 (20-liter) or T50 (40-liter). The T10 is not NDAA Section 848 compliant.',
+    aeoBlock:
+      'The DJI Agras T10 is DJI\'s entry-level Agras spray drone, with an 8-liter tank and 4-8 meter swath width. Pre-tariff MSRP ran approximately $5,000 to $7,000. Replaced by the T20P in 2022 and effectively phased out by the T25 launch in 2024. Discontinued from new DJI dealer channels but still flying with smaller farmer-operators. Not NDAA Section 848 compliant.',
+    specs: {
+      emptyWeightKg: 13,
+      emptyWeightLbs: 28.7,
+      mtowKg: 24.8,
+      mtowLbs: 54.7,
+      tankLiters: 8,
+      tankGallons: 2.1,
+      granularCapacityLiters: 8,
+      granularCapacityKg: 8,
+      swathWidthMeters: '4 to 8',
+      swathWidthFeet: '13 to 26',
+      maxFlowRateLMin: '6 to 12',
+      battery: 'DB12000, 12 Ah',
+      batteryWh: 600,
+      chargeTimeMin: '8 to 12',
+      maxWindMs: 6,
+      maxWindMph: 13.4,
+      ipRating: 'Relay IP55; aircraft body not rated',
+    },
+    msrpUsd: 'Discontinued from new channels; used T10 inventory typically $4,000 to $7,000',
+    usDealerPresence: 'Discontinued; service and parts continuity through DJI authorized agriculture dealer network',
+    bestFor: 'Smaller farmer-operators spraying their own fields at under 200 acres per season; no longer recommended as a new purchase, dealers route to the T25.',
+    authorityLinks: [
+      { label: 'DJI Agriculture (US)', url: 'https://ag.dji.com' },
+      { label: 'DJI Agras T25 (current entry-level model)', url: 'https://ag.dji.com/t25/specs' },
+      { label: 'FAA Part 107 Remote Pilot Certification', url: 'https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot' },
+    ],
+    faqs: [
+      {
+        question: 'Is the DJI Agras T10 still being sold?',
+        answer:
+          'No. DJI replaced the T10 with the T20P in 2022 and effectively phased it out with the T25 launch in early 2024. Existing T10 units remain in service; new orders route to the T25 (20-liter) or T50 (40-liter) at DJI authorized dealers.',
+      },
+      {
+        question: 'Does the DJI T10 stay under the FAA 55 lb threshold?',
+        answer:
+          'In some configurations, yes. Empty weight is approximately 28.7 lbs and MTOW is 54.7 lbs, so loaded operation is right at the 55 lb threshold. Confirm your specific battery and payload configuration with a Part 137 consultant — exceeding 55 lbs triggers the Section 44807 exemption requirement on top of Part 137 for commercial use.',
+      },
+      {
+        question: 'Is the T10 NDAA compliant?',
+        answer:
+          'No. The T10 is manufactured by DJI in China and is not NDAA Section 848 compliant. Federal agencies and several state programs bar procurement of non-NDAA UAS. Hylio AG-230 is the closest NDAA-compliant alternative for small-acreage spraying.',
+      },
+      {
+        question: 'Should I buy a used T10 or upgrade to the T25?',
+        answer:
+          'For most new operators, the T25 is the better fit — same nozzle architecture as the T50, 20-liter tank for fewer refill stops, and ongoing dealer service horizon. Used T10s can pencil for very small farmer-operator scales (under 100 acres per year), but the parts and service horizon is shorter.',
+      },
+    ],
+    lastReviewedAt: '2026-05-02',
+  },
+  {
+    slug: 'xag-p100',
+    name: 'XAG P100',
+    manufacturer: 'XAG',
+    countryOfManufacture: 'China',
+    ndaaCompliant: false,
+    status: 'discontinued',
+    description:
+      'XAG predecessor to the P100 Pro, with a 40-liter spray tank. Replaced in late 2024 by the P100 Pro which adds revised rotor geometry, upgraded RTK and a higher max-wind rating. Chinese-made and not NDAA Section 848 compliant.',
+    longDescription:
+      'The XAG P100 is the predecessor model to the XAG P100 Pro in XAG\'s ag spray drone lineup. Like the Pro, it carries a 40-liter (10.6 gallon) liquid tank and a 50 kg dry hopper, with a swath width in the 4 to 7 meter range and flow rates up to 22 liters per minute. The P100 was XAG\'s push into the larger-acreage US market starting in 2023, and was replaced in late 2024 by the P100 Pro which ships revised rotor geometry, upgraded RTK GPS and a higher 22 mph wind rating. The P100 retained good drift control through XAG\'s "RevoSpray" centrifugal nozzle system, which delivers tighter droplet uniformity than rotary atomizers at the same flow rate. Empty weight is approximately 32 kg (70 lbs); MTOW is roughly 80 kg (176 lbs), well above the 55 lb FAA threshold for unmanned aircraft. Pre-tariff dealer pricing ran approximately $20,000 to $25,000 in the US channel. Like every XAG drone, the P100 is manufactured in China and is not NDAA Section 848 compliant. Operators flying federal contracts or NDAA-restricted state programs should consider the Hylio AG-272 or AG-230 instead.',
+    aeoBlock:
+      'The XAG P100 is the predecessor to the XAG P100 Pro, with a 40-liter spray tank and 50 kg dry hopper. Replaced in late 2024 by the P100 Pro which adds upgraded RTK and a higher max-wind rating. Pre-tariff MSRP ran approximately $20,000 to $25,000. Chinese-made and not NDAA Section 848 compliant.',
+    specs: {
+      emptyWeightKg: 32,
+      emptyWeightLbs: 70,
+      mtowKg: 80,
+      mtowLbs: 176,
+      tankLiters: 40,
+      tankGallons: 10.6,
+      granularCapacityLiters: 70,
+      granularCapacityKg: 50,
+      swathWidthMeters: '4 to 7',
+      swathWidthFeet: '13 to 23',
+      maxFlowRateLMin: '12 to 22',
+      battery: 'XAG B13900s, 13.9 Ah',
+      batteryWh: 1085,
+      chargeTimeMin: '9 to 12',
+      maxWindMs: 8,
+      maxWindMph: 17.9,
+      ipRating: 'IP67 spray system; aircraft IP55',
+    },
+    msrpUsd: 'Discontinued; remaining dealer inventory $20,000 to $25,000 post-tariff',
+    usDealerPresence: 'Discontinued in favour of P100 Pro; service and parts continuity through XAG North America authorized partners',
+    bestFor: 'Existing XAG P100 operators; new operators should look at the P100 Pro for the upgraded RTK and higher wind rating.',
+    authorityLinks: [
+      { label: 'XAG Agriculture', url: 'https://www.xa.com' },
+      { label: 'XAG P100 Pro (current model)', url: 'https://www.xa.com/p100pro' },
+      { label: 'NDAA Section 848 covered foreign UAS guidance', url: 'https://www.acquisition.gov/far/52.204-25' },
+      { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
+    ],
+    faqs: [
+      {
+        question: 'How is the XAG P100 different from the P100 Pro?',
+        answer:
+          'The P100 Pro ships revised rotor geometry, upgraded RTK GPS and a higher 22 mph wind rating versus the P100\'s ~18 mph spec. Tank capacity, hopper, swath and flow rate are essentially the same. New operator purchases route to the P100 Pro; the P100 is no longer the current model.',
+      },
+      {
+        question: 'Is the XAG P100 NDAA compliant?',
+        answer:
+          'No. XAG drones are manufactured in China and are not NDAA Section 848 compliant. Federal agencies and several state programs bar procurement of non-NDAA UAS. Hylio AG-272 or AG-230 are the NDAA-compliant alternatives in the same payload class.',
+      },
+      {
+        question: 'Why use XAG centrifugal nozzles vs DJI rotary atomizers?',
+        answer:
+          'XAG\'s "RevoSpray" centrifugal nozzles deliver tighter droplet uniformity than rotary atomizers at the same flow rate, with better drift control on dicamba-sensitive borders. DJI Agras systems use rotary atomizers across the T25, T50 and T100 lineup. In practice both classes meet most label drift specs; the choice usually comes down to dealer support and parts availability in the operator\'s region.',
+      },
+      {
+        question: 'Are XAG P100 parts still available in 2026?',
+        answer:
+          'Yes, through XAG North America authorized partners. The P100 Pro replaced the P100 in late 2024; service and parts for both models continue. Plan on a 5-to-7-year service horizon for the P100; the P100 Pro will outlast it as the current production model.',
+      },
+      {
+        question: 'Should I buy a used P100 or a new P100 Pro?',
+        answer:
+          'For most new operators, the P100 Pro is the better buy — the upgraded RTK and higher wind rating measurably extend the daily-operations window in windy regions like the Great Plains and Pacific Northwest. Used P100s can pencil for an existing operator adding capacity, but the spec gap is real.',
+      },
+    ],
+    lastReviewedAt: '2026-05-02',
+  },
+  {
+    slug: 'eavision-j100',
+    name: 'EAVision J100',
+    manufacturer: 'EAVision',
+    countryOfManufacture: 'China',
+    ndaaCompliant: false,
+    status: 'active',
+    description:
+      'EAVision J100 ag spray drone, marketed in the US through select dealers as a lower-cost alternative to the DJI Agras T50. 16-liter tank, smaller airframe than the T50/AG-272 class. Chinese-made and not NDAA Section 848 compliant; verify state cost-share program eligibility before purchase.',
+    longDescription:
+      'The EAVision J100 is a Chinese-manufactured agricultural spray drone from EAVision Technology, sold in the US through select agricultural drone dealers as a price-competitive alternative to the DJI Agras T50 and Hylio AG-272 in the larger-acreage class. Published spec sheets list a 16-liter (4.2 gallon) liquid tank, a 4 to 5 meter swath width and flow rates around 12 liters per minute. Empty weight runs approximately 25 kg (55 lbs), MTOW around 55 kg (121 lbs). Battery configuration is the J100\'s own proprietary pack with roughly 10 to 12 minute flight times per charge. EAVision is positioned in the US as an entry-level commercial spray drone for smaller operators and farmer-operators who want larger payload than a DJI T25 but lower upfront cost than a T50. US dealer presence is narrower than DJI or Hylio — confirm dealer service and parts continuity for your region before purchase. The J100 is manufactured in China and is not NDAA Section 848 compliant. Several state cost-share programs (Florida, Mississippi, Arkansas DOT and others) require NDAA status; verify program eligibility for your state before purchase if cost-share is part of your business case. Detailed specs and current US pricing should be confirmed directly with the dealer at quote time, as EAVision has not consistently published US-specific specs through a single primary source.',
+    aeoBlock:
+      'The EAVision J100 is a Chinese-manufactured ag spray drone with a 16-liter tank, marketed in the US as a price-competitive alternative to the DJI Agras T50. Smaller airframe than the T50 and Hylio AG-272 class. US dealer presence is narrower than DJI or Hylio. Chinese-made and not NDAA Section 848 compliant — verify state cost-share program eligibility before purchase.',
+    specs: {
+      emptyWeightKg: 25,
+      emptyWeightLbs: 55,
+      mtowKg: 55,
+      mtowLbs: 121,
+      tankLiters: 16,
+      tankGallons: 4.2,
+      granularCapacityLiters: null,
+      granularCapacityKg: null,
+      swathWidthMeters: '4 to 5',
+      swathWidthFeet: '13 to 16',
+      maxFlowRateLMin: '8 to 12',
+      battery: 'EAVision proprietary pack',
+      batteryWh: null,
+      chargeTimeMin: '10 to 12',
+      maxWindMs: 6,
+      maxWindMph: 13.4,
+      ipRating: 'Pending verification',
+    },
+    msrpUsd: 'Pending dealer confirmation; positioned below DJI Agras T50 in the US channel',
+    usDealerPresence: 'Limited; narrower than DJI or Hylio. Confirm regional service and parts before purchase.',
+    bestFor: 'Cost-conscious commercial operators who want larger payload than a DJI T25 but lower upfront cost than a T50, and who do not need NDAA-compliant equipment for federal or state cost-share programs.',
+    authorityLinks: [
+      { label: 'EAVision Technology', url: 'https://www.eavision.cn/en/' },
+      { label: 'NDAA Section 848 covered foreign UAS guidance', url: 'https://www.acquisition.gov/far/52.204-25' },
+      { label: 'FAA Part 137 Agricultural Aircraft Operations', url: 'https://www.faa.gov/uas/advanced_operations/dispensing_chemicals' },
+    ],
+    faqs: [
+      {
+        question: 'Is the EAVision J100 NDAA compliant?',
+        answer:
+          'No. EAVision drones are manufactured in China and are not NDAA Section 848 compliant. Operators bidding federal contracts or applying to NDAA-restricted state cost-share programs (Florida, Mississippi, Arkansas DOT and others) should look at the Hylio AG-272 or AG-230 instead.',
+      },
+      {
+        question: 'How does the EAVision J100 compare to the DJI Agras T50?',
+        answer:
+          'The J100 has a smaller 16-liter tank versus the T50\'s 40-liter, narrower swath and lower flow rate. It is positioned as a lower-cost entry below the T50, but throughput per flight hour is meaningfully less. For higher-volume custom spray operations, the T50 or Hylio AG-272 is the more productive choice.',
+      },
+      {
+        question: 'Is EAVision dealer support available across the US?',
+        answer:
+          'EAVision\'s US dealer network is narrower than DJI or Hylio, with fewer authorized service centers per region. Confirm dealer presence and parts inventory in your operating area before purchase. For operators outside the dealer footprint, parts lead times and field-repair availability are real constraints.',
+      },
+      {
+        question: 'What state cost-share programs work with the EAVision J100?',
+        answer:
+          'Most NDAA-restricted state cost-share programs do not work with the J100 because it is not NDAA Section 848 compliant. Verify with your state department of agriculture and the specific program (USDA EQIP carve-outs, Iowa Water Quality Initiative, Maryland MACS, etc.) before counting on cost-share offsetting purchase.',
+      },
+      {
+        question: 'Can the EAVision J100 spray the same products as a DJI or Hylio drone?',
+        answer:
+          'Yes for most products. Carrier volume, droplet size and flow rate are governed by the EPA-approved product label, not the drone manufacturer. Confirm the J100\'s nozzle and pump configuration meets the label\'s minimum carrier volume and droplet size for the specific product before booking work.',
+      },
+    ],
+    lastReviewedAt: '2026-05-02',
+  },
 ];
 
 export const droneBySlug: Record<string, DroneModel> = Object.fromEntries(
@@ -799,11 +1072,8 @@ export function getDroneBySlug(slug: string): DroneModel | undefined {
 // full DroneModel entry. Profile pages render a non-link span using these
 // fallbacks so operator pages never show a raw slug like "dji-agras-t30".
 const DRONE_NAME_FALLBACKS: Record<string, string> = {
-  'dji-agras-t10': 'DJI Agras T10',
   'dji-agras-t30': 'DJI Agras T30',
-  'dji-agras-t40': 'DJI Agras T40',
   'dji-agras-t60x': 'DJI Agras T60X',
-  'xag-p100': 'XAG P100',
   'j100': 'J100',
   'j150': 'J150',
 };
