@@ -4869,7 +4869,7 @@ export const operators: Operator[] = [
     name: 'Rafter 7 AgriTech',
     tagline: 'No job too big or too small',
     description:
-      'Texas-based operator covering TX, OK, and NM. Retired ag teacher Rodney "Rod" Brents combines traditional ranching with drone technology. Services include spraying, brush control (Brush Bullet), pasture management, right-of-way and solar farm spraying.',
+      'Texas-based operator covering TX, OK, and NM. Retired ag teacher Rod Brents combines traditional ranching with drone technology. Services include spraying, brush control (Brush Bullet), pasture management, right-of-way and solar farm spraying.',
     country: 'US',
     counties: ['texas', 'oklahoma', 'new-mexico'],
     city: 'Texas (serves OK and NM)',
@@ -4877,11 +4877,11 @@ export const operators: Operator[] = [
     email: 'rafter7.rod@gmail.com',
     website: 'https://www.rafter7agritech.com?utm_source=agdronedirectory&utm_medium=referral&utm_campaign=operator_profile',
     services: ['spraying', 'spreading'],
-    drones: ['joyance-j100', 'joyance-j150'],
+    drones: ['j100', 'j150'],
     crops: ['cotton', 'corn', 'pasture', 'rangeland'],
     featured: false,
     verified: true,
-    lastUpdated: '2026-04-29',
+    lastUpdated: '2026-05-02',
   },
   {
     slug: 'tracye-beer-independent',

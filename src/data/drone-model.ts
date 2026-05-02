@@ -729,6 +729,8 @@ const DRONE_NAME_FALLBACKS: Record<string, string> = {
   'dji-agras-t40': 'DJI Agras T40',
   'dji-agras-t60x': 'DJI Agras T60X',
   'xag-p100': 'XAG P100',
+  'j100': 'J100',
+  'j150': 'J150',
 };
 
 export const DRONE_NAME_MAP: Record<string, string> = {
