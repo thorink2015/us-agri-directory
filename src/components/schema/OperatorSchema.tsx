@@ -32,7 +32,10 @@ export default function OperatorSchema({ operator }: Props) {
     name: operator.name,
     description: operator.description,
     url: canonicalUrl,
-    image: FALLBACK_IMAGE,
+    image:
+      operator.gallery && operator.gallery.length > 0
+        ? operator.gallery.map((g) => `${SITE.domain}${g.src}`)
+        : FALLBACK_IMAGE,
     address: {
       '@type': 'PostalAddress',
       ...(operator.address ? { streetAddress: operator.address } : {}),

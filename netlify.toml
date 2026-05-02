@@ -98,3 +98,29 @@
 #   from = "/old-path"
 #   to = "/new-path"
 #   status = 301
+
+# ── Operator slug redirects (canonicalize duplicates / renames) ───────────
+# Kuhn's Aerial Applications: merged duplicate kuhn-s-aerial-applications-llc
+# into the more complete kuhns-aerial-applications entry.
+[[redirects]]
+  from = "/operators/kuhn-s-aerial-applications-llc"
+  to = "/operators/kuhns-aerial-applications"
+  status = 301
+  force = true
+
+# Flying Cowboy: business pivot from photography to ag services
+# (renamed slug; same operator, same site).
+[[redirects]]
+  from = "/operators/flying-cowboy-photography"
+  to = "/operators/flying-cowboy-ag-services"
+  status = 301
+  force = true
+
+# American Drone: rebuilt entry under canonical slug 'american-drone'
+# (was american-drone-llc; new entry sourced from public records,
+# pendingConfirmation true).
+[[redirects]]
+  from = "/operators/american-drone-llc"
+  to = "/operators/american-drone"
+  status = 301
+  force = true

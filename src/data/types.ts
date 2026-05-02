@@ -66,9 +66,25 @@ export interface Operator {
   iso9001?: boolean;
   featured?: boolean;
   verified?: boolean;
+  pendingConfirmation?: boolean;  // Profile built from public records, awaiting operator confirmation
+  veteranOwned?: boolean;
+  nonProfit?: boolean;
+  womenLed?: boolean;
+  lastUpdated?: string;           // ISO date (YYYY-MM-DD) of last operator-data update
   logoUrl?: string;
+  gallery?: GalleryImage[];       // optional photo gallery (lazy-rendered on profile)
   lat?: number;
   lng?: number;
+}
+
+/** Optional photo gallery entry. `width`/`height` are required so next/image
+ * can reserve layout space and avoid CLS. Use intrinsic file dimensions. */
+export interface GalleryImage {
+  src: string;       // path under /public, e.g. /images/operators/{slug}/photo.webp
+  alt: string;       // descriptive, operator-specific (no 'image of')
+  width: number;
+  height: number;
+  caption?: string;  // optional short caption rendered under the image
 }
 
 export interface County {
