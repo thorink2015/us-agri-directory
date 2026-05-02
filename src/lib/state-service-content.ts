@@ -5,11 +5,10 @@
 // state-crop-content.ts pattern (see _memory/code-patterns.md).
 // ────────────────────────────────────────────────────────────────────────────
 
-import type { StateData, Crop, County, ServiceDefinition, ServiceType } from '@/data/types';
+import type { StateData, County, ServiceDefinition, ServiceType } from '@/data/types';
 import type { FAQ } from '@/data/faqs';
 import { SERVICE_LABELS } from '@/data/types';
-import { getStateData } from '@/data/states';
-import { counties, getCountyBySlug } from '@/data/counties';
+import { counties } from '@/data/counties';
 import { getCropBySlug } from '@/data/crops';
 import { services as servicesList, getServiceBySlug } from '@/data/services';
 import { getOperatorsByCounty } from '@/data/operators';
