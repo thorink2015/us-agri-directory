@@ -19,31 +19,41 @@ Author placeholders filled and photo uploaded 2026-04-24 (see
 
 ## Phase A follow-up (from PR #90 audit, 2026-05-02)
 
-Findings written to `audit/phase-a-followup-audit.md`. Recommended
-follow-up PRs, ranked by leverage:
+Findings written to `audit/phase-a-followup-audit.md`. Three 404
+fixes shipped 2026-05-02 (this PR), four remaining items below.
 
-1. **Fix `/newsletter` form action** (`src/app/page.tsx:624`) —
-   real user-impacting bug. Repoint to a Formspree endpoint
-   reusing `NEXT_PUBLIC_FORMSPREE_ID`, OR build `/api/newsletter`
-   + `/newsletter` thank-you page.
-2. **Create `dji-agras-t25p` catalog entry** in
-   `src/data/drone-model.ts` — 27 operators reference this slug;
-   currently 404 unless interim 301'd to `dji-agras-t25`.
-3. **Lift the state-crop template** at
+Done (PR #91 — three 404s):
+
+- ✅ `/regions/delta` 301 → `/regions/mississippi-delta` (force=true
+  in `netlify.toml`)
+- ✅ `dji-agras-t25p` full catalog entry in `src/data/drone-model.ts`
+  (mirrors T25 specs, US-spec variant noted, NDAA non-compliance
+  called out, 6 FAQs, 5 authority links). Removed the no-longer-
+  needed fallback label from `DRONE_NAME_FALLBACKS`.
+- ✅ Homepage newsletter form rewired to Formspree via the new
+  `src/components/ui/HomepageNewsletterForm.tsx` client component
+  (mirrors Footer + ContactForm + ExitIntentPopup pattern). Hidden
+  `_form_type=newsletter-homepage` plus `_subject` so the inbox can
+  distinguish from the footer signup.
+
+Still pending (template-level lifts and optional extras):
+
+1. **Lift the state-crop template** at
    `src/app/states/[slug]/crops/[crop]/page.tsx` — thread
    `crop.longDescription`, `crop.faqs`, `state.sprayWindows`,
    and state licensing context into the page; gate the obviously
    weak combos via `generateStaticParams` filter or noindex meta.
    Affects 408 URLs.
-4. **Lift thin operator profiles** at
+2. **Lift thin operator profiles** at
    `src/app/operators/[slug]/page.tsx` — auto-generated state +
    licensing + crop-pricing paragraphs when `description` is short.
    Lifts the cluster of "crawled, not indexed" operators without
    per-operator outreach.
-5. **Add `/regions/delta` → `/regions/mississippi-delta` 301** in
-   `netlify.toml` for safety against external citations.
-6. **Fill `organizationSchema().sameAs`** when company social
+3. **Fill `organizationSchema().sameAs`** when company social
    accounts exist (also tracked above).
+4. **Pull a Search Console crawl-error export** and audit operator
+   slug duplicates / orphan pages in bulk (flagged in the PR #90
+   audit "bonus finding" section).
 
 ## Blocked on research files
 
