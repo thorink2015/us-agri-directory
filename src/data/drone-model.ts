@@ -209,6 +209,82 @@ export const drones: DroneModel[] = [
     lastReviewedAt: '2026-04-16',
   },
   {
+    slug: 'dji-agras-t25p',
+    name: 'DJI Agras T25P',
+    manufacturer: 'DJI',
+    countryOfManufacture: 'China',
+    ndaaCompliant: false,
+    status: 'active',
+    description:
+      'US-spec sibling of the DJI Agras T25, configured for the US market. 20-liter tank, same LX8060SZ sprinkler and pump architecture as the T25 and T50. Chinese-made and not NDAA-compliant; ineligible for federal procurement and many state cost-share programs that require NDAA Section 848 status. Specs below are largely shared with the global T25; for any US-specific differentiated configuration details, contact DJI Agriculture or your authorized dealer.',
+    longDescription:
+      'The DJI Agras T25P is the US-market variant of the T25 platform, sold through DJI authorized agriculture dealers and flown by farmer-operators and small commercial applicators across the United States. It carries the same 20-liter (5.3 gallon) liquid tank and 35-liter (25 kg) dry hopper as the global T25, sharing the LX8060SZ sprinkler and the pump and nozzle architecture used across the Agras lineup. Empty weight is approximately 25.4 kg (56 lbs), with full-payload MTOW around 52 kg (115 lbs); loaded operation exceeds the FAA 55 lb threshold and triggers the Section 44807 exemption requirement for commercial use. Spray swath runs 4 to 7 meters (13 to 23 feet) at 16 L/min on 2 nozzles or 24 L/min on 4 nozzles. Battery is the DB800 (15.5 Ah, 52.22 V, ~809 Wh) with a 9 to 12 minute charge cycle. Like the rest of the Agras line, the T25P is Chinese-made and is not NDAA Section 848 compliant — federal agencies, USDA-funded projects with Buy American restrictions, and several state programs (Florida, Mississippi, Arkansas DOT and others) bar procurement of non-NDAA UAS. Operators evaluating cost-share or contract eligibility should verify NDAA status with the funding agency before purchase. Where US-specific T25P configuration or pricing differs from the global T25, those details have not been comprehensively published by primary sources at the time of this writing; treat the T25 specs as the operating baseline and confirm any US-only differences with DJI Agriculture or the dealer at quote time.',
+    aeoBlock:
+      'The DJI Agras T25P is the US-market variant of the DJI Agras T25, with a 20-liter tank, 25 kg dry hopper, and the same LX8060SZ sprinkler architecture as the T50. It is Chinese-made and not NDAA Section 848 compliant, which makes it ineligible for federal procurement and several state cost-share programs that require NDAA status. Best suited for farmer-operators spraying their own fields and small commercial applicators not bound by NDAA contract terms.',
+    specs: {
+      emptyWeightKg: 25.4,
+      emptyWeightLbs: 56,
+      mtowKg: 52,
+      mtowLbs: 115,
+      tankLiters: 20,
+      tankGallons: 5.3,
+      granularCapacityLiters: 35,
+      granularCapacityKg: 25,
+      swathWidthMeters: '4 to 7',
+      swathWidthFeet: '13 to 23',
+      maxFlowRateLMin: '16 (2 nozzles), 24 (4 nozzles)',
+      battery: 'DB800, 15.5 Ah, 52.22 V',
+      batteryWh: 809,
+      chargeTimeMin: '9 to 12',
+      maxWindMs: 6,
+      maxWindMph: 13.4,
+      ipRating: 'Relay IP55; aircraft body not rated',
+    },
+    msrpUsd: 'Pending DJI / dealer confirmation; expect post-tariff pricing in the same band as the T25 ($16,000 to $20,000 range)',
+    usDealerPresence: 'Sold through the DJI authorized agriculture dealer network alongside the T25, T50 and T100',
+    bestFor: 'Farmer-operators spraying their own fields at 200 to 800 acres per season and small commercial applicators not bound by NDAA Section 848 contract terms; not appropriate for operators bidding on federal or NDAA-restricted state contracts',
+    authorityLinks: [
+      { label: 'DJI Agriculture (US)', url: 'https://ag.dji.com' },
+      { label: 'DJI Agras T25 Official Specs (baseline)', url: 'https://ag.dji.com/t25/specs' },
+      { label: 'DJI Agriculture Dealer Locator', url: 'https://www.dji.com/where-to-buy/agriculture-dealers' },
+      { label: 'NDAA Section 848 covered foreign UAS guidance', url: 'https://www.acquisition.gov/far/52.204-25' },
+      { label: 'FAA Part 137 Agricultural Aircraft Operator Certificate', url: 'https://www.faa.gov/uas/advanced_operations/agriculture' },
+    ],
+    faqs: [
+      {
+        question: 'Is the DJI Agras T25P NDAA compliant?',
+        answer:
+          'No. The T25P is manufactured by DJI in China and is not NDAA Section 848 compliant. Federal agencies, USDA-funded projects with Buy American restrictions and several state programs bar procurement of non-NDAA UAS. Operators bidding on federal or NDAA-restricted state contracts should look at NDAA-compliant alternatives such as the Hylio AG-230 or Hylio AG-272 instead.',
+      },
+      {
+        question: 'Can I use the T25P for FAA Part 137 commercial spraying?',
+        answer:
+          'Yes, eligibility under Part 137 does not depend on NDAA status. Loaded T25P weight exceeds the 55 lb threshold for unmanned aircraft, so commercial operation also requires a Section 44807 exemption (or operation under a granted exemption number) and the Part 137 Agricultural Aircraft Operator Certificate. State pesticide applicator licensing with the aerial category endorsement is also required wherever you fly.',
+      },
+      {
+        question: 'How is the T25P different from the global T25?',
+        answer:
+          'DJI sells the T25P as the US-market configuration of the T25 platform. Tank size, dry hopper, sprinkler, pump and battery are the same; any US-specific software, regulatory, or hardware differences should be confirmed with DJI Agriculture or your authorized dealer at quote time. For pricing, payload, and configuration questions where US-specific data is not published, treat the global T25 specs as the operating baseline.',
+      },
+      {
+        question: 'What does the T25P cost in 2026?',
+        answer:
+          'DJI has not published a separate T25P MSRP at the time of this writing. With 170 percent cumulative tariffs on Chinese drones, expect dealer pricing in the same band as the T25 — roughly $16,000 to $20,000 depending on inventory vintage and dealer terms. Get a written quote from a DJI authorized agriculture dealer before committing.',
+      },
+      {
+        question: 'Should I buy the T25P or the T50?',
+        answer:
+          'For under 800 acres per year on your own fields, the T25P (or T25) saves $5,000 to $8,000 upfront and handles the work. For commercial custom spraying or 1,000+ acres per season, the T50 daily throughput advantage usually pays for itself within the first season through fewer refill stops per acre and lower labor hours.',
+      },
+      {
+        question: 'Where can I buy the DJI Agras T25P in the US?',
+        answer:
+          'Through DJI authorized agriculture dealers. The DJI dealer locator at dji.com/where-to-buy/agriculture-dealers lists current dealers by state. Dealers handle Part 137 readiness, Section 44807 paperwork support and post-sale service alongside the hardware sale.',
+      },
+    ],
+    lastReviewedAt: '2026-05-02',
+  },
+  {
     slug: 'hylio-ag-272',
     name: 'Hylio AG-272',
     manufacturer: 'Hylio',
@@ -724,7 +800,6 @@ export function getDroneBySlug(slug: string): DroneModel | undefined {
 // fallbacks so operator pages never show a raw slug like "dji-agras-t30".
 const DRONE_NAME_FALLBACKS: Record<string, string> = {
   'dji-agras-t10': 'DJI Agras T10',
-  'dji-agras-t25p': 'DJI Agras T25P',
   'dji-agras-t30': 'DJI Agras T30',
   'dji-agras-t40': 'DJI Agras T40',
   'dji-agras-t60x': 'DJI Agras T60X',
