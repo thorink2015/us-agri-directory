@@ -327,6 +327,21 @@
 - **Commit 3 — `fix(form): repoint homepage newsletter form to Formspree`:** extracted `src/components/ui/HomepageNewsletterForm.tsx` as a client component (page.tsx is a server component, so the form needed extraction). Mirrors the Footer / ContactForm / ExitIntentPopup pattern: client-side fetch to `https://formspree.io/f/${NEXT_PUBLIC_FORMSPREE_ID}`, hidden `_form_type=newsletter-homepage` + `_subject` so the inbox can distinguish homepage signups from the footer signup, inline subscribed/loading/error states. Dropped the now-unused `Mail` import from `page.tsx`.
 - **Override called out in PR #91:** none. Took option 1 from the audit (Formspree repoint) over option 2 (build `/api/newsletter` + `/newsletter` thank-you page) because four other forms on the site already use the exact Formspree pattern; following the established convention beats building a new pipeline.
 
+## 2026-05-02 — Operator template content uplift (branch claude/audit-public-content-w2Iz1, PR #93)
+
+- **Trigger:** `audit/phase-a-followup-audit.md §2.2` (PR #90) flagged the cluster of "crawled, not indexed" operator profiles. Approach: lift the template, not 100+ individual records.
+- **Commit 1 — `feat(lib): operator-content helpers for template-level enrichment`:** new pure-helpers module `src/lib/operator-content.ts`. Exports `wordCount`, `getOperatorRegion`, `getCoveredStateContext`, `composeAutoParagraph`, `getCropPricingLines`, `composeOperatorFAQs`, `operatorFAQSchema`. All helpers degrade gracefully when input data is sparse (return null or empty array) and pull only from existing `src/data/*` records.
+- **Commit 2 — `feat(operators): wire content-enrichment helpers into operator template`:** 5 new sections in `src/app/operators/[slug]/page.tsx`. (1) Auto-paragraph rendered after the description when `wordCount(description) < 30`. (2) Region context line cross-linking to `/regions/[slug]` when the resolved region has a hub page. (3) Crop-specific pricing context block (one line per crop the operator services that has a real `/crops/[slug]` entry). (4) State licensing context block before the existing 'States served' coverage chips. (5) 2-FAQ block via the existing `FAQAccordion` component plus inline FAQPage JSON-LD `<script>`.
+- **Verified word counts** (rendered HTML, main column only — sidebar / chrome / breadcrumb / scripts excluded by regex):
+
+  - lnp-ag-drone-spraying: **40 → 448** words
+  - sphex-ag: **51 → 462** words
+  - agronix: **51 → 495** words
+  - agriforce-drone (rich control): **164 → 735** words, no regression
+
+- **Override called out in PR #93:** none against the spec, but explicitly **excluded** audit recommendations 4 (expand the verification banner) and 6 (default operator price to state median) per the user's instructions. Recommendation 6 is harmful to farmers, so this stays out permanently — flagged in code-patterns.md note.
+- **Pattern documented:** `_memory/code-patterns.md` — "Template-level content enrichment via helper module." Reusable for the state-crop combo template lift that's still pending.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

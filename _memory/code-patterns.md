@@ -326,6 +326,54 @@ in the figcaption).
 as part of the HTML. Any single SVG over ~10 KB inlined should be split
 or simplified.
 
+## Template-level content enrichment via helper module
+
+**Used on:** `/operators/[slug]` (PR-thin-profile uplift, 2026-05-02).
+
+**Purpose:** lift sparse profile pages above Google's indexation
+threshold without manual data entry on individual records. Every
+helper composes copy or structured data from existing `src/data/*`
+(operators, states, crops, regions, counties, services).
+
+**Pattern:**
+
+1. Pure helpers in `src/lib/<entity>-content.ts` — no JSX, no side
+   effects. Return strings, structured data, or null when input is
+   too thin to produce something useful.
+2. Template imports helpers and renders new sections conditionally.
+3. JSON-LD emitted inline via
+   `<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />`.
+
+**For the operator template specifically (`src/lib/operator-content.ts`):**
+
+- `composeAutoParagraph(operator)` — only fires when description
+  word count < 30. Returns 2–3 factual sentences derived from
+  services + states + crops + region + licensing agency.
+- `getOperatorRegion(operator)` — prefers `states.ts.regionSlug`,
+  falls back to `counties.ts.region` with a free-form-to-slug map
+  (only the 4 regions that have a real `/regions/[slug]` page).
+- `getCoveredStateContext(operator)` — joins counties + states.ts
+  to surface licensingAgency + aerialCategory per covered state.
+- `getCropPricingLines(operator)` — only when operator services
+  'spraying' AND crops are listed. Pulls priceMinUsd/Max from
+  `src/data/crops.ts`. Never defaults the operator's own price.
+- `composeOperatorFAQs(operator)` — 2 FAQs: how to verify the
+  operator's licensing in their primary state (interpolates the
+  state agency name) and what their effective rate range
+  typically includes/excludes.
+- `operatorFAQSchema(faqs)` — FAQPage JSON-LD object.
+
+**Why this beats manual data entry:** ~400 operator records would
+otherwise need per-record copy. Template-level helpers lift every
+profile uniformly, including future imports.
+
+**Verified lift on three thin-profile canaries (2026-05-02):**
+
+  lnp-ag-drone-spraying  40  -> 448 words
+  sphex-ag               51  -> 462 words
+  agronix                51  -> 495 words
+  agriforce-drone        164 -> 735 words (rich profile, no regression)
+
 ## Commit message format
 
 ```

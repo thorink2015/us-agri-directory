@@ -36,7 +36,18 @@ Done (PR #91 — three 404s):
   `_form_type=newsletter-homepage` plus `_subject` so the inbox can
   distinguish from the footer signup.
 
-Still pending (template-level lifts and optional extras):
+Done (PR #93 — operator template uplift):
+
+- ✅ Thin operator profile uplift via `src/lib/operator-content.ts`
+  helpers and 5 new sections in `src/app/operators/[slug]/page.tsx`
+  (auto paragraph, region context line, crop pricing context,
+  state licensing context, 2-FAQ block + FAQPage JSON-LD). Verified
+  rendered word counts on three canaries: lnp-ag-drone-spraying
+  40 → 448, sphex-ag 51 → 462, agronix 51 → 495. Rich profile
+  (agriforce-drone) 164 → 735, no regression. Pattern documented
+  in `_memory/code-patterns.md`.
+
+Still pending:
 
 1. **Lift the state-crop template** at
    `src/app/states/[slug]/crops/[crop]/page.tsx` — thread
@@ -44,14 +55,9 @@ Still pending (template-level lifts and optional extras):
    and state licensing context into the page; gate the obviously
    weak combos via `generateStaticParams` filter or noindex meta.
    Affects 408 URLs.
-2. **Lift thin operator profiles** at
-   `src/app/operators/[slug]/page.tsx` — auto-generated state +
-   licensing + crop-pricing paragraphs when `description` is short.
-   Lifts the cluster of "crawled, not indexed" operators without
-   per-operator outreach.
-3. **Fill `organizationSchema().sameAs`** when company social
+2. **Fill `organizationSchema().sameAs`** when company social
    accounts exist (also tracked above).
-4. **Pull a Search Console crawl-error export** and audit operator
+3. **Pull a Search Console crawl-error export** and audit operator
    slug duplicates / orphan pages in bulk (flagged in the PR #90
    audit "bonus finding" section).
 
