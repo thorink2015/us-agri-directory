@@ -119,14 +119,27 @@ Done (PR #97 — cleanup batch):
   fallbacks from DRONE_NAME_FALLBACKS now that no operator
   references them.
 
+Done (PR #98 — city seed data):
+
+- ✅ 196 ag-relevant US cities seeded from USDA NASS + Census
+  Bureau Places into `src/data/seed-cities.ts`. 48 of 50 states
+  covered; per-state cap of 5; lower counts for weak-ag states
+  (Hawaii 1, Alaska 1, MA/NH/CT/DE 2; UT/AZ/WV/MD/NJ/VT/ME/WY 3).
+- ✅ Merged into `src/data/cities.ts` via two-pass buildCityIndex
+  with `isSeed` flag. Qualifying cities: **23 → 216**.
+- ✅ City template extended for graceful 0-operator handling:
+  AEO/FAQ branches, county callout, statewide operator fallback
+  (up to 12 in the grid), crop table fallback to county.mainCrops.
+  All 216 pages clear 700-word threshold.
+- ✅ Noindex gate at metadata layer for seeded cities with 0
+  direct ops AND <3 statewide operators. **1 of 216** pages
+  gated (alaska/palmer).
+
 Still pending:
 
-1. **City pages: layer USDA NASS county-level + Census Bureau
-   Places seed data on the operator-derived set** — ~1 day,
-   lifts 23 → ~225. Now the next focus.
-2. **Fill `organizationSchema().sameAs`** when company social
+1. **Fill `organizationSchema().sameAs`** when company social
    accounts exist.
-3. **Pull a Search Console crawl-error export** and audit operator
+2. **Pull a Search Console crawl-error export** and audit operator
    slug duplicates / orphan pages in bulk (flagged in the PR #90
    audit "bonus finding" section).
 

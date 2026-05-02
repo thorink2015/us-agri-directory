@@ -1,6 +1,7 @@
 import { Operator, ServiceType } from './types';
 import { operators } from './operators';
 import { counties } from './counties';
+import { seedCities } from './seed-cities';
 
 const CITY_OPERATOR_THRESHOLD = 2;
 
@@ -78,6 +79,20 @@ export interface CityData {
   stateSlug: string;
   stateName: string;
   operators: Operator[];
+  /** True when the city was seeded from src/data/seed-cities.ts (USDA NASS +
+   *  Census Places anchored), as opposed to being derived from the operator
+   *  data alone. Seeded cities qualify for the static-params build even when
+   *  their operator count is below the operator-derived threshold. */
+  isSeed?: boolean;
+  /** County the city sits in (USDA NASS / Census Bureau Places). Only set
+   *  for seeded entries; operator-derived cities don't carry this. */
+  county?: string;
+  /** Census Bureau Places population estimate. Set for seeded entries
+   *  where the figure is verified against primary sources. */
+  population?: number;
+  /** Short ag-relevance note rendered on seeded city pages where the city
+   *  has no direct operator coverage. Empty for operator-derived cities. */
+  agNote?: string;
 }
 
 function isValidCityName(city: string, stateSlug: string): boolean {
@@ -124,6 +139,7 @@ const stateBySlug = new Map(counties.map((c) => [c.slug, c]));
 function buildCityIndex(): CityData[] {
   const map = new Map<string, CityData>();
 
+  // Pass 1: operator-derived cities (any operator with op.city populated).
   for (const op of operators) {
     if (!op.city || !op.counties || op.counties.length === 0) continue;
     const stateSlug = op.counties[0];
@@ -145,18 +161,60 @@ function buildCityIndex(): CityData[] {
     map.get(key)!.operators.push(op);
   }
 
+  // Pass 2: seeded cities (USDA NASS + Census Places anchored). Merges into
+  // operator-derived entries where the slug already exists, otherwise adds
+  // a new entry with isSeed=true and any operators in the same state who
+  // explicitly list this city.
+  for (const seed of seedCities) {
+    const stateRow = stateBySlug.get(seed.stateSlug);
+    if (!stateRow) continue;
+    if (!isValidCityName(seed.name, seed.stateSlug)) continue;
+
+    const slug = citySlug(seed.name);
+    const key = `${seed.stateSlug}__${slug}`;
+    const existing = map.get(key);
+    if (existing) {
+      // Merge metadata into the operator-derived entry — don't overwrite the
+      // operator list. Keep isSeed=true so the page knows this city has
+      // curator-confirmed ag relevance even if the operator count is low.
+      existing.isSeed = true;
+      if (seed.county && !existing.county) existing.county = seed.county;
+      if (seed.population && !existing.population) existing.population = seed.population;
+      if (seed.agNote && !existing.agNote) existing.agNote = seed.agNote;
+      continue;
+    }
+    map.set(key, {
+      city: seed.name.trim(),
+      slug,
+      stateSlug: seed.stateSlug,
+      stateName: stateRow.name,
+      operators: [],
+      isSeed: true,
+      county: seed.county,
+      population: seed.population,
+      agNote: seed.agNote,
+    });
+  }
+
   return Array.from(map.values());
 }
 
 const ALL_CITIES = buildCityIndex();
 
+/** A city qualifies for static build if it either has at least
+ *  CITY_OPERATOR_THRESHOLD direct operators OR was explicitly seeded as an
+ *  ag-relevant city in src/data/seed-cities.ts (NASS + Census Places). */
+function qualifies(c: CityData): boolean {
+  return c.isSeed === true || c.operators.length >= CITY_OPERATOR_THRESHOLD;
+}
+
 export function getQualifyingCities(threshold: number = CITY_OPERATOR_THRESHOLD): CityData[] {
-  return ALL_CITIES.filter((c) => c.operators.length >= threshold);
+  return ALL_CITIES.filter((c) => c.isSeed === true || c.operators.length >= threshold);
 }
 
 export function getCity(stateSlug: string, citySlugParam: string): CityData | undefined {
   return ALL_CITIES.find(
-    (c) => c.stateSlug === stateSlug && c.slug === citySlugParam && c.operators.length >= CITY_OPERATOR_THRESHOLD,
+    (c) => c.stateSlug === stateSlug && c.slug === citySlugParam && qualifies(c),
   );
 }
 

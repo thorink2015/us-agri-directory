@@ -16,6 +16,8 @@ import {
 import { CROP_NAME_MAP, crops as allCrops } from '@/data/crops';
 import { SERVICE_LABELS } from '@/data/types';
 import { getStateData } from '@/data/states';
+import { getCountyBySlug } from '@/data/counties';
+import { getOperatorsByCounty } from '@/data/operators';
 import { AUTHOR, SITE } from '@/data/author';
 
 import Breadcrumb from '@/components/layout/Breadcrumb';
@@ -60,8 +62,9 @@ function monthsToWindow(months: number[]): string {
 }
 
 function resolveCityCrops(city: CityData): ResolvedCrop[] {
+  // Operator-derived breakdown first.
   const breakdown = getCityCropBreakdown(city);
-  return breakdown
+  const operatorDriven = breakdown
     .filter((b) => CROP_NAME_MAP[b.slug])
     .map((b) => {
       const cropMeta = allCrops.find((c) => c.slug === b.slug);
@@ -69,6 +72,26 @@ function resolveCityCrops(city: CityData): ResolvedCrop[] {
         slug: b.slug,
         name: CROP_NAME_MAP[b.slug],
         count: b.count,
+        rateMin: cropMeta?.priceMinUsd,
+        rateMax: cropMeta?.priceMaxUsd,
+        window: cropMeta ? monthsToWindow(cropMeta.treatmentMonths) : undefined,
+      };
+    });
+  if (operatorDriven.length > 0) return operatorDriven;
+
+  // Fallback for seeded cities with zero operator-derived crops: use the
+  // state-level mainCrops list from counties.ts so the page still surfaces
+  // a state-specific crop table and rate range.
+  const county = getCountyBySlug(city.stateSlug);
+  if (!county || !county.mainCrops || county.mainCrops.length === 0) return [];
+  return county.mainCrops
+    .filter((s) => CROP_NAME_MAP[s])
+    .map((s): ResolvedCrop => {
+      const cropMeta = allCrops.find((c) => c.slug === s);
+      return {
+        slug: s,
+        name: CROP_NAME_MAP[s],
+        count: 0,
         rateMin: cropMeta?.priceMinUsd,
         rateMax: cropMeta?.priceMaxUsd,
         window: cropMeta ? monthsToWindow(cropMeta.treatmentMonths) : undefined,
@@ -88,10 +111,18 @@ function buildAeoBlock(city: CityData): string {
     .slice(0, 4)
     .map((s) => SERVICE_LABELS[s.service].toLowerCase());
 
-  const opCountSentence = `${city.city}, ${city.stateName} has ${city.operators.length} verified agricultural drone operators listed in the directory, serving farms across the surrounding area.`;
+  // Branch the opener on whether the city has direct operators or is a
+  // seeded ag-anchor with state-wide fallback coverage.
+  const opCountSentence = city.operators.length > 0
+    ? `${city.city}, ${city.stateName} has ${city.operators.length} verified agricultural drone operator${city.operators.length === 1 ? '' : 's'} listed in the directory, serving farms across the surrounding area.`
+    : `${city.city}, ${city.stateName} sits in${city.county ? ` ${city.county},` : ''} an ag-relevant region with statewide drone-spray operator coverage available; this page surfaces the crops, rates and licensing context for ${city.city} farmers booking work.`;
+
+  const agNoteSentence = city.agNote ? ` ${city.agNote}` : '';
 
   const cropsSentence = topCropNames.length
-    ? ` Together they list ${topCropNames.join(' and ')} as the primary crops treated by drone, with additional coverage across other regional commodities.`
+    ? city.operators.length > 0
+      ? ` Together they list ${topCropNames.join(' and ')} as the primary crops treated by drone, with additional coverage across other regional commodities.`
+      : ` Primary crops in ${city.stateName} include ${topCropNames.join(' and ')}, each with established 2026 drone-spray rate bands.`
     : '';
 
   const rateSentence = ` ${city.stateName} drone application rates run ${stateRate} depending on field size, crop and application timing, in line with 2026 statewide benchmarks.`;
@@ -104,10 +135,13 @@ function buildAeoBlock(city: CityData): string {
 
   const licensingSentence = ` Every operator working over ${city.stateName} fields must hold FAA Part 107 plus ${aerialCat} from ${agency}, and many also carry FAA Part 137 for commercial agricultural aircraft operations.`;
 
-  const ctaSentence = ` Contact the operators below directly for season availability, exact per-acre pricing and to confirm license and insurance status before booking.`;
+  const ctaSentence = city.operators.length > 0
+    ? ` Contact the operators below directly for season availability, exact per-acre pricing and to confirm license and insurance status before booking.`
+    : ` Contact statewide operators in the ${city.stateName} directory below for ${city.city} availability, or list your business free if you serve ${city.city}.`;
 
   return (
     opCountSentence +
+    agNoteSentence +
     cropsSentence +
     rateSentence +
     servicesSentence +
@@ -151,7 +185,10 @@ function buildServiceCopy(
   }
 }
 
-function buildFaqs(city: CityData): { question: string; answer: string }[] {
+function buildFaqs(
+  city: CityData,
+  fallbackOps: ReturnType<typeof getOperatorsByCounty>,
+): { question: string; answer: string }[] {
   const stateData = getStateData(city.stateSlug);
   const stateRate = stateData?.rateRange ?? '$12 to $30 per acre nationally';
   const aerialCat = stateData?.aerialCategory ?? 'a state aerial pesticide applicator license';
@@ -166,34 +203,68 @@ function buildFaqs(city: CityData): { question: string; answer: string }[] {
     ? operatorNames.join(', ')
     : `${operatorNames.slice(0, 3).join(', ')} and ${operatorNames.length - 3} more`;
 
-  return [
-    {
-      question: `How much does drone spraying cost in ${city.city}, ${city.stateName}?`,
-      answer:
-        `Drone spraying in ${city.city} typically runs ${stateRate}, in line with the broader ${city.stateName} 2026 benchmark.` +
-        ` Application-only rates exclude chemical, and quotes vary based on field size, terrain and crop.` +
-        (topCrop
-          ? ` ${topCrop} jobs in ${city.stateName} sit toward the lower end of that range when fields are large and contiguous.`
-          : '') +
-        ` Use the spray cost calculator to model your specific acreage before requesting quotes.`,
-    },
-    {
-      question: `How many drone operators serve ${city.city}?`,
-      answer:
-        `${city.operators.length} verified agricultural drone operators are listed in the directory for ${city.city}, ${city.stateName}: ${namesText}.` +
-        ` All listings are reviewed for licensing claims and contact information before publication.`,
-    },
-    {
-      question: `What certifications do ${city.city} drone operators hold?`,
-      answer:
-        `Of the ${creds.total} ${city.city} operators listed, ${creds.part107} hold FAA Part 107 (Remote Pilot Certificate) and ${creds.part137} hold FAA Part 137 (Agricultural Aircraft Operator), which is the federal credential required for commercial agricultural application.` +
-        ` ${creds.ndaa} list NDAA Section 848 compliant equipment.` +
-        ` On the state side, ${city.stateName} requires ${aerialCat} from ${agency} for any commercial drone pesticide application.`,
-    },
-  ];
+  const cost: { question: string; answer: string } = {
+    question: `How much does drone spraying cost in ${city.city}, ${city.stateName}?`,
+    answer:
+      `Drone spraying in ${city.city} typically runs ${stateRate}, in line with the broader ${city.stateName} 2026 benchmark.` +
+      ` Application-only rates exclude chemical, and quotes vary based on field size, terrain and crop.` +
+      (topCrop
+        ? ` ${topCrop} jobs in ${city.stateName} sit toward the lower end of that range when fields are large and contiguous.`
+        : '') +
+      ` Use the spray cost calculator to model your specific acreage before requesting quotes.`,
+  };
+
+  // Operator-count FAQ branches on whether this city has direct listings
+  // or is a seeded ag-anchor pulling from the broader state directory.
+  const operatorCount: { question: string; answer: string } =
+    city.operators.length > 0
+      ? {
+          question: `How many drone operators serve ${city.city}?`,
+          answer:
+            `${city.operators.length} verified agricultural drone operators are listed in the directory for ${city.city}, ${city.stateName}: ${namesText}.` +
+            ` All listings are reviewed for licensing claims and contact information before publication.`,
+        }
+      : {
+          question: `Are there drone operators serving ${city.city}, ${city.stateName}?`,
+          answer:
+            `${city.city} does not yet have an operator listed at the city level, but ${fallbackOps.length} drone operator${fallbackOps.length === 1 ? '' : 's'} cover${fallbackOps.length === 1 ? 's' : ''} ${city.stateName} statewide and most can serve ${city.city} fields with reasonable travel.` +
+            ` See the statewide grid below or use the spray cost calculator to estimate a job before reaching out.` +
+            ` If you provide drone services in ${city.city}, list your business free to anchor this page.`,
+        };
+
+  // Credentials FAQ uses city-direct numbers when available, falls back to
+  // statewide credential counts for seeded zero-operator cities.
+  const credentials: { question: string; answer: string } =
+    city.operators.length > 0
+      ? {
+          question: `What certifications do ${city.city} drone operators hold?`,
+          answer:
+            `Of the ${creds.total} ${city.city} operators listed, ${creds.part107} hold FAA Part 107 (Remote Pilot Certificate) and ${creds.part137} hold FAA Part 137 (Agricultural Aircraft Operator), which is the federal credential required for commercial agricultural application.` +
+            ` ${creds.ndaa} list NDAA Section 848 compliant equipment.` +
+            ` On the state side, ${city.stateName} requires ${aerialCat} from ${agency} for any commercial drone pesticide application.`,
+        }
+      : {
+          question: `What certifications should an operator serving ${city.city} hold?`,
+          answer:
+            `Any operator booking commercial drone pesticide application over ${city.city} fields needs three credentials: FAA Part 107 (Remote Pilot Certificate) for the pilot, FAA Part 137 (Agricultural Aircraft Operator Certificate) for the business, and ${aerialCat} from ${agency}.` +
+            ` Confirm all three before any application; many operators also carry NDAA Section 848 compliance for cost-share eligible work.`,
+        };
+
+  return [cost, operatorCount, credentials];
 }
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
+
+/** A seeded city is gated noindex when it has no direct operators AND its
+ *  state's overall operator-coverage is also thin (<3 operators statewide).
+ *  The URL stays buildable so internal links resolve, but Google stops
+ *  competing for crawl budget on the weakest seeded combos. */
+function shouldNoindexCity(city: CityData): boolean {
+  if (!city.isSeed) return false;
+  if (city.operators.length > 0) return false;
+  const stateOps = getOperatorsByCounty(city.stateSlug);
+  return stateOps.length < 3;
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCity(params.slug, params.city);
@@ -202,16 +273,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const abbr = stateData?.abbreviation ?? '';
   const topCrop = resolveCityCrops(city)[0]?.name;
   const rate = stateData?.rateRange;
+  const noindex = shouldNoindexCity(city);
 
   const title = `Drone Spraying in ${city.city}, ${abbr || city.stateName} | Rates 2026`;
-  const description = topCrop
-    ? `${city.operators.length} verified drone operators in ${city.city}, ${abbr || city.stateName}. Top crop: ${topCrop}. ${rate ?? 'Compare rates'} and contact info.`
-    : `${city.operators.length} verified agricultural drone operators in ${city.city}, ${abbr || city.stateName}. ${rate ?? 'Compare rates'}, services and contact info.`;
+  const description = city.operators.length > 0
+    ? topCrop
+      ? `${city.operators.length} verified drone operators in ${city.city}, ${abbr || city.stateName}. Top crop: ${topCrop}. ${rate ?? 'Compare rates'} and contact info.`
+      : `${city.operators.length} verified agricultural drone operators in ${city.city}, ${abbr || city.stateName}. ${rate ?? 'Compare rates'}, services and contact info.`
+    : `Drone spraying coverage for ${city.city}, ${abbr || city.stateName}${topCrop ? `, top crop ${topCrop}` : ''}. Statewide operators, ${rate ?? 'rate guidance'}, licensing and crops.`;
 
   return {
     title,
     description,
     alternates: { canonical: `/states/${city.stateSlug}/${city.slug}` },
+    robots: noindex ? { index: false, follow: true } : undefined,
     openGraph: {
       type: 'website',
       locale: 'en_US',
@@ -230,9 +305,13 @@ export default function CityPage({ params }: Props) {
   if (!city) notFound();
 
   const stateData = getStateData(city.stateSlug);
+  // For seeded zero-operator cities, surface the broader state operator set
+  // in the operator grid so the page never renders an empty list.
+  const stateOps = getOperatorsByCounty(city.stateSlug);
+  const fallbackOps = city.operators.length > 0 ? city.operators : stateOps;
   const ops = city.operators;
   const aeoBlock = buildAeoBlock(city);
-  const faqs = buildFaqs(city);
+  const faqs = buildFaqs(city, stateOps);
 
   const services = getCityServiceBreakdown(city);
   const servicesWithMultiple = services.filter((s) => s.count >= 2);
@@ -408,17 +487,70 @@ export default function CityPage({ params }: Props) {
           </section>
         )}
 
-        {/* Operator grid */}
+        {/* Operator grid — falls back to state-wide ops for seeded zero-op cities */}
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
-            Drone operators in {city.city}, {city.stateName}
+            Drone operators {ops.length > 0 ? `in ${city.city}, ${city.stateName}` : `serving ${city.stateName}`}
+            {ops.length === 0 && fallbackOps.length > 0 && (
+              <span className="block text-sm font-normal text-gray-500 mt-1">
+                No operator listed at the {city.city} city level yet. {fallbackOps.length} statewide
+                operator{fallbackOps.length === 1 ? '' : 's'} cover {city.stateName} and most can serve
+                {' '}{city.city} fields with reasonable travel.
+              </span>
+            )}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {ops.map((op) => (
-              <OperatorCard key={op.slug} operator={op} />
-            ))}
-          </div>
+          {fallbackOps.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {fallbackOps.slice(0, 12).map((op) => (
+                <OperatorCard key={op.slug} operator={op} />
+              ))}
+            </div>
+          ) : (
+            <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center">
+              <p className="text-amber-800 font-medium mb-3">
+                No operators listed for {city.stateName} yet.
+              </p>
+              <Link
+                href="/list-your-business"
+                className="inline-block px-4 py-2 bg-green-700 text-white rounded-lg text-sm font-medium hover:bg-green-800 transition-colors"
+              >
+                List your business free
+              </Link>
+            </div>
+          )}
         </section>
+
+        {/* County / ag-context callout for seeded cities */}
+        {city.isSeed && (city.county || city.agNote) && (
+          <section className="mb-10">
+            <div className="bg-white border border-gray-200 rounded-xl p-5">
+              <h2 className="text-base font-bold text-gray-900 mb-2">
+                {city.city} ag-county context
+              </h2>
+              {city.county && (
+                <p className="text-sm text-gray-700 mb-2">
+                  <span className="font-medium">{city.city}</span> sits in{' '}
+                  <span className="font-medium">{city.county}</span>
+                  {typeof city.population === 'number' && (
+                    <>
+                      {' '}with a population of approximately{' '}
+                      {city.population.toLocaleString('en-US')} (US Census Bureau Places)
+                    </>
+                  )}
+                  .
+                </p>
+              )}
+              {city.agNote && (
+                <p className="text-sm text-gray-700 leading-relaxed">{city.agNote}</p>
+              )}
+              <p className="text-xs text-gray-500 mt-3">
+                Sources: USDA NASS Census of Agriculture (county-level cropland and farm-receipts
+                tables) and US Census Bureau Places gazetteer. Confirm exact figures via primary
+                source for any decision-grade use.
+              </p>
+            </div>
+          </section>
+        )}
 
         {/* Crops served */}
         {resolvedCrops.length > 0 && (
@@ -467,34 +599,36 @@ export default function CityPage({ params }: Props) {
           </section>
         )}
 
-        {/* Operator credentials */}
+        {/* Operator credentials — shown for cities with direct operators only */}
         <section className="mb-10">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
-            {city.city} drone operator credentials
+            {ops.length > 0 ? `${city.city} drone operator credentials` : `Required credentials for drone operators serving ${city.city}`}
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
-            <div className="bg-white border border-gray-200 rounded-xl p-4">
-              <Shield className="w-5 h-5 text-green-600 mb-2" />
-              <div className="font-bold text-gray-900 text-sm">
-                {credentials.part107} of {credentials.total}
+          {ops.length > 0 && (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+              <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <Shield className="w-5 h-5 text-green-600 mb-2" />
+                <div className="font-bold text-gray-900 text-sm">
+                  {credentials.part107} of {credentials.total}
+                </div>
+                <div className="text-xs text-gray-500">FAA Part 107 (Remote Pilot)</div>
               </div>
-              <div className="text-xs text-gray-500">FAA Part 107 (Remote Pilot)</div>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-xl p-4">
-              <Shield className="w-5 h-5 text-green-600 mb-2" />
-              <div className="font-bold text-gray-900 text-sm">
-                {credentials.part137} of {credentials.total}
+              <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <Shield className="w-5 h-5 text-green-600 mb-2" />
+                <div className="font-bold text-gray-900 text-sm">
+                  {credentials.part137} of {credentials.total}
+                </div>
+                <div className="text-xs text-gray-500">FAA Part 137 (Ag Aircraft)</div>
               </div>
-              <div className="text-xs text-gray-500">FAA Part 137 (Ag Aircraft)</div>
-            </div>
-            <div className="bg-white border border-gray-200 rounded-xl p-4">
-              <Shield className="w-5 h-5 text-green-600 mb-2" />
-              <div className="font-bold text-gray-900 text-sm">
-                {credentials.ndaa} of {credentials.total}
+              <div className="bg-white border border-gray-200 rounded-xl p-4">
+                <Shield className="w-5 h-5 text-green-600 mb-2" />
+                <div className="font-bold text-gray-900 text-sm">
+                  {credentials.ndaa} of {credentials.total}
+                </div>
+                <div className="text-xs text-gray-500">NDAA Section 848 compliant</div>
               </div>
-              <div className="text-xs text-gray-500">NDAA Section 848 compliant</div>
             </div>
-          </div>
+          )}
           <p className="text-sm text-gray-600 leading-relaxed">
             Commercial agricultural drone application in {city.stateName} requires the federal
             FAA Part 137 certificate plus{' '}
