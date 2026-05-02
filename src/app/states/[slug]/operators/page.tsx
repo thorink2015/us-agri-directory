@@ -11,6 +11,17 @@ interface Props {
   params: { slug: string };
 }
 
+// States with fewer than this many operators render with a noindex meta tag
+// so internal links stay resolvable but Google stops competing for crawl
+// budget on near-empty list pages. Catches the 8 thin pages flagged in
+// audit/crawl-budget-check.md plus Wisconsin (7 ops, 399 words rendered,
+// same near-empty pattern).
+const STATE_OPERATORS_NOINDEX_BELOW = 9;
+
+function shouldNoindexStateOperators(stateSlug: string): boolean {
+  return getOperatorsByCounty(stateSlug).length < STATE_OPERATORS_NOINDEX_BELOW;
+}
+
 export async function generateStaticParams() {
   return counties.map((c) => ({ slug: c.slug }));
 }
@@ -18,11 +29,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const county = getCountyBySlug(params.slug);
   if (!county) return {};
+  const noindex = shouldNoindexStateOperators(params.slug);
   const desc = `Verified agricultural drone operators serving ${county.name} farms. Compare services, coverage areas, and 2026 spray rates, then contact directly.`;
   return {
     title: `${county.name} Drone Operators: Rates & Contact`,
     description: desc,
     alternates: { canonical: `/states/${params.slug}/operators` },
+    robots: noindex ? { index: false, follow: true } : undefined,
     openGraph: {
       type: 'website',
       locale: 'en_US',

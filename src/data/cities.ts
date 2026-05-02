@@ -15,13 +15,51 @@ const DIRECTIONAL_OR_STATEWIDE = new Set([
   'western',
   'northern',
   'southern',
+  'midwest',
+  'mid-west',
+  'mountain',
+  'pacific',
+  'plains',
+  'delta',
   'statewide',
   'unknown',
   'remote',
   'na',
+  'tbd',
 ]);
 
+// Multi-word prefixes that mark a region rather than a city. Anything
+// starting with one of these is rejected (e.g. "Eastern Iowa", "SE Kansas",
+// "Northern OK", "West TX"). The trailing space anchors to the start of
+// the second token so single words like "West" are still caught above.
+const REGIONAL_PREFIXES = [
+  'northern ', 'southern ', 'eastern ', 'western ', 'central ',
+  'north ', 'south ', 'east ', 'west ',
+  'northeast ', 'northwest ', 'southeast ', 'southwest ',
+  'ne ', 'nw ', 'se ', 'sw ',
+  'mid-', 'mid ',
+  'upper ', 'lower ',
+];
+
+// Trailing words that mark a region or a county/jurisdiction descriptor
+// rather than a city name.
+const REGIONAL_SUFFIXES = [
+  ' county',
+  ' counties',
+  ' parish',
+  ' shore',
+  ' coast',
+  ' region',
+  ' area',
+  ' valley region',  // 'spring valley' alone is a real city, but '... valley region' is regional
+  ' watershed',
+];
+
 const STATE_NAMES_LOWER = new Set(counties.map((c) => c.name.toLowerCase()));
+const STATE_ABBRS = new Set(counties.map((c) => c.slug));
+// Matches any 2-letter uppercase token that could be a state abbr embedded
+// in the city string (e.g. "Lehi, UT" or "Texas (serves OK and NM)").
+const EMBEDDED_STATE_ABBR = /(?:^|\s|,|\()([A-Z]{2})(?:\s|,|\)|\/|$)/;
 
 export function citySlug(city: string): string {
   return city
@@ -45,14 +83,39 @@ export interface CityData {
 function isValidCityName(city: string, stateSlug: string): boolean {
   const trimmed = city.trim();
   if (!trimmed) return false;
+
+  // Reject obvious junk before slug normalization eats the signal.
+  if (trimmed.includes('/')) return false;            // multi-state e.g. "Iowa/Illinois"
+  if (trimmed.includes('(') || trimmed.includes(')')) return false; // parenthetical qualifier
+  if (trimmed.includes(';')) return false;            // multi-city blob with semicolons
+  if (/\d/.test(trimmed)) return false;               // digits = zip code or address noise
+  if (EMBEDDED_STATE_ABBR.test(trimmed)) return false; // "Lehi, UT" or "Texas (serves OK and NM)"
+  if (/\s+(and|or|to|via)\s+/i.test(trimmed)) return false; // "Iowa and Illinois", "OK to NM"
+
   const lower = trimmed.toLowerCase();
   const slug = citySlug(trimmed);
   if (!slug) return false;
   if (RESERVED_CHILD_SLUGS.has(slug)) return false;
   if (DIRECTIONAL_OR_STATEWIDE.has(lower)) return false;
   if (STATE_NAMES_LOWER.has(lower)) return false;
-  // Disallow "<state-name> City" collision with the state slug itself
+  if (STATE_ABBRS.has(slug)) return false;            // 2-letter state abbr that slugified
+
+  // Disallow regional prefixes ("Eastern Iowa", "SE Kansas", "Northern OK", "West TX").
+  for (const prefix of REGIONAL_PREFIXES) {
+    if (lower.startsWith(prefix)) return false;
+  }
+  // Disallow regional suffixes ("Polk County", "Eastern Shore", "Magic Valley region").
+  for (const suffix of REGIONAL_SUFFIXES) {
+    if (lower.endsWith(suffix)) return false;
+  }
+
+  // Reject all-uppercase strings — usually a state abbr or placeholder
+  // ("TX", "STATEWIDE", "NA") that survived the prior checks.
+  if (trimmed === trimmed.toUpperCase() && /[A-Z]/.test(trimmed)) return false;
+
+  // Disallow "<state-name> City" collision with the state slug itself.
   if (slug === stateSlug) return false;
+
   return true;
 }
 

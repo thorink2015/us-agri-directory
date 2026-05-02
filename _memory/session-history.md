@@ -368,6 +368,16 @@
 - **Override called out in PR #96:** none against the spec. ESLint flagged `Calendar` icon import and a couple of unused helper imports during the first build pass; cleaned up before commit.
 - **Discovered:** to push the medium tier comfortably above 1,400 words, added two extra sections beyond the spec: (1) a `service.aeoBlock` AEO callout near the top, and (2) an authority-links list before the FAQ. Both pull from data already populated on every `services.ts` entry. Lifted the medium tier 100–150 words on average.
 
+## 2026-05-02 — Cleanup batch: thin operators noindex + 8 orphan slugs scaffolded + data fixes (branch claude/audit-public-content-w2Iz1, PR #97)
+
+- **Trigger:** three follow-up items from `audit/crawl-budget-check.md` (PR #95) packaged into one cleanup PR.
+- **Commit 1 — `feat(state-operators): noindex gate on thin /states/[slug]/operators pages`:** threshold `<9 operators` gates 9 states (alaska 1 op, arizona 3, hawaii 6, nevada 0, new-mexico 4, rhode-island 5, utah 7, wisconsin 7, wyoming 8). Captures the 8 audit-flagged plus Wisconsin which is also <500 words rendered.
+- **Commit 2a — `feat(catalog): scaffold 4 orphan crop slugs (row-crops, pasture, alfalfa, potatoes)`:** full Crop entries modeled on the existing corn/soybeans shape. Acreage and pricing from primary sources (USDA NASS, university extension). 230 lines added. Unlocks cross-linking from 117 operator profiles to real crop pages.
+- **Commit 2b — `feat(catalog): scaffold 4 orphan drone slugs (T40, T10, P100, J100)`:** full DroneModel entries mirroring the T25/T25P shape. NDAA non-compliance called out on all four (Chinese-made). Removed dji-agras-t10 / dji-agras-t40 / xag-p100 from DRONE_NAME_FALLBACKS now that real entries supersede them.
+- **Commit 3 — `chore(data): tighten city validator + fix j100/j150 operator slug typos`:** new validator rejects multi-state separators, parentheticals, county/region suffixes, regional prefixes (Northern/Southern/Eastern/Western/SE/SW/etc.), embedded state abbreviations, all-caps placeholders. 25 → 23 qualifying cities (the 2 dropped are exactly the audit-flagged `southern-california` and `colorado-weld-county` anomalies). Fixed rafter-7-agritech operator record `j100`/`j150` typos to `joyance-j100`/`joyance-j150`. Dropped the j100/j150 fallback labels.
+- **Override called out in PR #97:** noindex threshold of `<9 operators` over-gates by 1 state vs the 8 audit-flagged (Wisconsin at 7 ops/399 words is also borderline thin and is included). Defensible as a clean integer threshold that catches the audit-flagged set.
+- **Discovered:** drone-model.ts had two unexpected fallback labels (`j100`, `j150`) for what were clearly operator-data typos rather than legitimate orphan slugs. Cleaned up as part of commit 3.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

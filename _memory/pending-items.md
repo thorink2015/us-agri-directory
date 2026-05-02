@@ -89,25 +89,44 @@ Done (PR #96 — service-state template uplift):
   605→1101 (+82%, noindex). Pattern documented in
   `_memory/code-patterns.md`.
 
+Done (PR #97 — cleanup batch):
+
+- ✅ Noindex gate on thin `/states/[slug]/operators` pages.
+  Threshold of <9 operators captures the 8 audit-flagged plus
+  Wisconsin (also 7 ops/399 words). 9 states gated:
+  alaska, arizona, hawaii, nevada, new-mexico, rhode-island,
+  utah, wisconsin, wyoming.
+- ✅ Scaffolded 4 orphan crop slugs in `src/data/crops.ts`:
+  `row-crops` (240M acres umbrella), `pasture` (650M acres),
+  `alfalfa` (16M acres), `potatoes` (1M acres). Full Crop
+  entries with 5 FAQs each, 4-5 authority links each, primary
+  sources (USDA NASS, university extension).
+- ✅ Scaffolded 4 orphan drone slugs in
+  `src/data/drone-model.ts`: `dji-agras-t40`, `dji-agras-t10`,
+  `xag-p100`, `eavision-j100`. Full DroneModel entries mirroring
+  the dji-agras-t25/t25p shape from PR #91. NDAA non-compliance
+  called out for all four (Chinese-made). Removed corresponding
+  fallback labels.
+- ✅ Tightened `cities.ts` `isValidCityName()` — rejects multi-
+  state separators, parentheticals, county/region suffixes,
+  regional prefixes, embedded state abbreviations, all-caps
+  placeholders, digits. 25 → 23 qualifying cities; the 2
+  dropped are the audit-flagged anomalies (`southern-california`,
+  `colorado-weld-county`).
+- ✅ Fixed `j100` / `j150` operator slug typos in
+  `src/data/operators.ts` (rafter-7-agritech now references
+  `joyance-j100` / `joyance-j150`). Removed the j100/j150
+  fallbacks from DRONE_NAME_FALLBACKS now that no operator
+  references them.
+
 Still pending:
 
-1. **Noindex gate on `/states/[slug]/operators` empty states** —
-   8 thin pages (alaska 21 words, nevada 28, arizona 154, etc.).
-   ~30 min of work, mirrors the same metadata-layer pattern.
-2. **Scaffold top 4 orphan crop slugs** (`row-crops`, `pasture`,
-   `alfalfa`, `potatoes`) and **top 4 orphan drone slugs**
-   (`dji-agras-t40`, `xag-p100`, `eavision-j100`, `dji-agras-t10`)
-   — ~2 hr, unlocks 117+ operator cross-links and 8 new hubs.
-3. **City pages: layer USDA NASS county-level + Census Bureau
+1. **City pages: layer USDA NASS county-level + Census Bureau
    Places seed data on the operator-derived set** — ~1 day,
-   lifts 25 → ~225.
-4. **Two minor data cleanups** — tighten `cities.ts`
-   `isValidCityName()` to reject `southern-california` / county
-   names; fix `j100` / `j150` operator-data typos to
-   `joyance-j100` / `joyance-j150`.
-5. **Fill `organizationSchema().sameAs`** when company social
-   accounts exist (also tracked above).
-6. **Pull a Search Console crawl-error export** and audit operator
+   lifts 23 → ~225. Now the next focus.
+2. **Fill `organizationSchema().sameAs`** when company social
+   accounts exist.
+3. **Pull a Search Console crawl-error export** and audit operator
    slug duplicates / orphan pages in bulk (flagged in the PR #90
    audit "bonus finding" section).
 
