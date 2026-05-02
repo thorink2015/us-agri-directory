@@ -297,6 +297,35 @@ Long-form numeric tables go inside a `<figure>` to get the `.guide-table-callout
 </figure>
 ```
 
+## Inline SVG charts for guide pages
+
+**Used on:** `/guides/agricultural-drone-spraying-statistics-2026`.
+Pattern: ship statistics visualizations as inline SVG React components,
+not raster image files. Lives in `src/components/guides/StatsCharts.tsx`.
+
+**Why:**
+- Zero extra HTTP requests, ~1–2 KB per chart, no image-decode work
+- Crisp at any DPI/zoom, print-friendly, no LCP penalty
+- AEO-friendly: `<text>` nodes are readable by AI engines and screen readers
+- Easy to brand-match (uses Tailwind palette directly)
+
+**Required scaffolding per chart:**
+- `viewBox`, `preserveAspectRatio="xMidYMid meet"`, `role="img"`
+- `<title>` + `<desc>` referenced by `aria-labelledby`
+- Real `<text>` for every value label, axis tick, source line — never
+  embed text in raster
+- Brand colors: green-700 `#15803d`, green-900 `#14532d`, green-500
+  `#22c55e`, amber-700 `#b45309`, amber-400 `#fbbf24`, slate-500/700
+  for neutrals, stone-200 `#e7e5e4` for gridlines
+
+**Wrap in the existing `guide-figure` figure with a real figcaption** (no
+"image slot N of 6" placeholder text — write the actual source attribution
+in the figcaption).
+
+**No `next/image`** for these — they are SVG, not raster, so they ship
+as part of the HTML. Any single SVG over ~10 KB inlined should be split
+or simplified.
+
 ## Commit message format
 
 ```
