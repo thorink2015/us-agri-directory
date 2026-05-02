@@ -1074,8 +1074,6 @@ export function getDroneBySlug(slug: string): DroneModel | undefined {
 const DRONE_NAME_FALLBACKS: Record<string, string> = {
   'dji-agras-t30': 'DJI Agras T30',
   'dji-agras-t60x': 'DJI Agras T60X',
-  'j100': 'J100',
-  'j150': 'J150',
 };
 
 export const DRONE_NAME_MAP: Record<string, string> = {

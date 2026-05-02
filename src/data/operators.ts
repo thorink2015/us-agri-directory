@@ -4877,7 +4877,7 @@ export const operators: Operator[] = [
     email: 'rafter7.rod@gmail.com',
     website: 'https://www.rafter7agritech.com?utm_source=agdronedirectory&utm_medium=referral&utm_campaign=operator_profile',
     services: ['spraying', 'spreading'],
-    drones: ['j100', 'j150'],
+    drones: ['joyance-j100', 'joyance-j150'],
     crops: ['cotton', 'corn', 'pasture', 'rangeland'],
     featured: false,
     verified: true,
