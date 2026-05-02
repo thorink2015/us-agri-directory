@@ -275,6 +275,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : `${city.operators.length} verified agricultural drone operators in ${city.city}, ${abbr || city.stateName}. ${rate ?? 'Compare rates'}, services and contact info.`
     : `Drone spraying coverage for ${city.city}, ${abbr || city.stateName}${topCrop ? `, top crop ${topCrop}` : ''}. Statewide operators, ${rate ?? 'rate guidance'}, licensing and crops.`;
 
+  // Per-city dynamic og:image — rendered at /states/[slug]/[city]/opengraph-image
+  const ogImageUrl = `${SITE.domain}/states/${city.stateSlug}/${city.slug}/opengraph-image`;
+  const ogImageAlt = `${city.city}, ${abbr || city.stateName} drone spraying — US Ag Drone Directory`;
+
   return {
     title,
     description,
@@ -287,6 +291,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title,
       description,
       url: `${SITE.domain}/states/${city.stateSlug}/${city.slug}`,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: ogImageAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [ogImageUrl],
     },
   };
 }
