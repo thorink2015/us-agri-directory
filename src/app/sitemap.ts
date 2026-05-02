@@ -9,6 +9,13 @@ import { blogPosts } from '@/data/blog-posts';
 import { guides } from '@/data/guides';
 import { getQualifyingCities } from '@/data/cities';
 import { SERVICE_LABELS } from '@/data/types';
+import {
+  shouldIndexCity,
+  shouldIndexOperator,
+  shouldIndexStateCrop,
+  shouldIndexStateOperators,
+  shouldIndexStateService,
+} from '@/lib/indexing-gates';
 
 const BASE_URL = 'https://agdronedirectory.com';
 
@@ -49,13 +56,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/affiliate-disclosure`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ];
 
-  // ─── Operator profiles ───────────────────────────────────────────────────
-  const operatorPages: MetadataRoute.Sitemap = operators.map((op) => ({
-    url: `${BASE_URL}/operators/${op.slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.85,
-  }));
+  // ─── Operator profiles (filter ultra-thin) ───────────────────────────────
+  const operatorPages: MetadataRoute.Sitemap = operators
+    .filter(shouldIndexOperator)
+    .map((op) => ({
+      url: `${BASE_URL}/operators/${op.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    }));
 
   // ─── State pages (50 × 1 = 50) ───────────────────────────────────────────
   const countyPages: MetadataRoute.Sitemap = counties.map((c) => ({
@@ -65,42 +74,50 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // ─── State + Crop pages (50 × 8 = 400) ───────────────────────────────────
+  // ─── State + Crop pages (filter weak combos noindex'd in PR #94) ─────────
   const countyCropPages: MetadataRoute.Sitemap = counties.flatMap((county) =>
-    crops.map((crop) => ({
-      url: `${BASE_URL}/states/${county.slug}/crops/${crop.slug}`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    }))
+    crops
+      .filter((crop) => shouldIndexStateCrop(county.slug, crop.slug))
+      .map((crop) => ({
+        url: `${BASE_URL}/states/${county.slug}/crops/${crop.slug}`,
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      }))
   );
 
-  // ─── State + Service pages (50 × N) ─────────────────────────────────────
+  // ─── State + Service pages (filter weak combos noindex'd in PR #96) ──────
   const serviceKeys = Object.keys(SERVICE_LABELS);
   const countyServicePages: MetadataRoute.Sitemap = counties.flatMap((county) =>
-    serviceKeys.map((serviceKey) => ({
-      url: `${BASE_URL}/states/${county.slug}/services/${serviceKey}`,
+    serviceKeys
+      .filter((serviceKey) => shouldIndexStateService(county.slug, serviceKey))
+      .map((serviceKey) => ({
+        url: `${BASE_URL}/states/${county.slug}/services/${serviceKey}`,
+        lastModified: now,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      }))
+  );
+
+  // ─── State operator index pages (filter thin states noindex'd in PR #97) ─
+  const countyOperatorPages: MetadataRoute.Sitemap = counties
+    .filter((c) => shouldIndexStateOperators(c.slug))
+    .map((c) => ({
+      url: `${BASE_URL}/states/${c.slug}/operators`,
+      lastModified: now,
+      changeFrequency: 'weekly' as const,
+      priority: 0.75,
+    }));
+
+  // ─── City pages (filter seeded zero-op cities in thin states) ────────────
+  const cityPages: MetadataRoute.Sitemap = getQualifyingCities()
+    .filter(shouldIndexCity)
+    .map((c) => ({
+      url: `${BASE_URL}/states/${c.stateSlug}/${c.slug}`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
-    }))
-  );
-
-  // ─── State operator index pages (50) ─────────────────────────────────────
-  const countyOperatorPages: MetadataRoute.Sitemap = counties.map((c) => ({
-    url: `${BASE_URL}/states/${c.slug}/operators`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.75,
-  }));
-
-  // ─── City pages (cities meeting the operator threshold) ──────────────────
-  const cityPages: MetadataRoute.Sitemap = getQualifyingCities().map((c) => ({
-    url: `${BASE_URL}/states/${c.stateSlug}/${c.slug}`,
-    lastModified: now,
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-  }));
+    }));
 
   // ─── Crop pages (8) ──────────────────────────────────────────────────────
   const cropPages: MetadataRoute.Sitemap = crops.map((c) => ({
@@ -162,19 +179,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [
-    ...staticPages,          // 27
-    ...operatorPages,        // N operators
-    ...countyPages,          // 50
-    ...countyOperatorPages,  // 50
-    ...cityPages,            // N qualifying cities (≥2 operators)
-    ...countyCropPages,      // 50 × 8 = 400
-    ...countyServicePages,   // 50 × 10 = 500
-    ...cropPages,            // 8
-    ...servicePages,         // 10
-    ...dronePages,           // 8
-    ...regionPages,          // 5
-    ...blogPages,            // 10
-    ...guidePages,           // N guides
-    ...toolPages,            // 7
+    ...staticPages,
+    ...operatorPages,
+    ...countyPages,
+    ...countyOperatorPages,
+    ...cityPages,
+    ...countyCropPages,
+    ...countyServicePages,
+    ...cropPages,
+    ...servicePages,
+    ...dronePages,
+    ...regionPages,
+    ...blogPages,
+    ...guidePages,
+    ...toolPages,
   ];
 }
