@@ -17,6 +17,34 @@ Author placeholders filled and photo uploaded 2026-04-24 (see
 - `organizationSchema().sameAs` — add company LinkedIn / X when
   those accounts exist
 
+## Phase A follow-up (from PR #90 audit, 2026-05-02)
+
+Findings written to `audit/phase-a-followup-audit.md`. Recommended
+follow-up PRs, ranked by leverage:
+
+1. **Fix `/newsletter` form action** (`src/app/page.tsx:624`) —
+   real user-impacting bug. Repoint to a Formspree endpoint
+   reusing `NEXT_PUBLIC_FORMSPREE_ID`, OR build `/api/newsletter`
+   + `/newsletter` thank-you page.
+2. **Create `dji-agras-t25p` catalog entry** in
+   `src/data/drone-model.ts` — 27 operators reference this slug;
+   currently 404 unless interim 301'd to `dji-agras-t25`.
+3. **Lift the state-crop template** at
+   `src/app/states/[slug]/crops/[crop]/page.tsx` — thread
+   `crop.longDescription`, `crop.faqs`, `state.sprayWindows`,
+   and state licensing context into the page; gate the obviously
+   weak combos via `generateStaticParams` filter or noindex meta.
+   Affects 408 URLs.
+4. **Lift thin operator profiles** at
+   `src/app/operators/[slug]/page.tsx` — auto-generated state +
+   licensing + crop-pricing paragraphs when `description` is short.
+   Lifts the cluster of "crawled, not indexed" operators without
+   per-operator outreach.
+5. **Add `/regions/delta` → `/regions/mississippi-delta` 301** in
+   `netlify.toml` for safety against external citations.
+6. **Fill `organizationSchema().sameAs`** when company social
+   accounts exist (also tracked above).
+
 ## Blocked on research files
 
 See `_research/README.md` for what's uploaded and what's missing.
