@@ -303,6 +303,14 @@
 - **Schema schema.org cleanup — `OperatorSchema.tsx`:** `priceRange` now emits `$15` instead of `$15-$15` when min === max. Truthful schema for AEO + Google.
 - **Atomic commits:** 4 (price fix, sort, badge priority, drone labels). No data file edits beyond adding `lastUpdated: '2026-04-29'` to `kuhns-aerial-applications` (was missed in PR #83).
 
+## 2026-05-02 — Stats-2026 guide visualizations (branch claude/add-report-images-IJ9Va)
+
+- **Trigger:** `/guides/agricultural-drone-spraying-statistics-2026` had 6 grey image placeholders that needed to ship as actual visuals.
+- **Approach:** built 6 inline-SVG components in `src/components/guides/StatsCharts.tsx` — `HeroDroneIllustration`, `AdoptionCurveChart`, `MarketSizeSpreadChart`, `PriceComparisonChart`, `OriginShareChart`, `EnvironmentalPerformanceChart`. Each has `<title>` + `<desc>` for AT/AEO, role="img" + aria-labelledby, brand greens (#15803d / #14532d) and amber accents (#b45309 / #fbbf24), real `<text>` data labels (so AI engines + screen readers can lift the numbers), and an inline source attribution.
+- **Why inline SVG:** zero extra HTTP requests, ~1–2 KB per chart, crisp at any DPI/zoom, print-friendly, no image-decode jank, no LCP penalty. Total page weight after swap: 244 KB raw / 54 KB gzipped including all 6 charts + prose + tables + JSON-LD.
+- **Wired in:** `src/app/guides/[slug]/content.tsx` swaps placeholders for components; figcaptions now carry the real source line instead of "image slot N of 6". Bumped `lastUpdated` on the guide entry in `src/data/guides.ts` to 2026-05-02 so the Article schema, OG meta, and the visible byline all reflect the update.
+- **Verified:** `npx tsc --noEmit` clean, `next build` generates the page successfully into the 1,514-page static set.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
