@@ -162,6 +162,47 @@ Done (PR #100 — operator + city template fixes per PR #99 audits):
 - ✅ Added authority-links section to city template. City rankability
   authority-link check: **FAIL → PASS** (5/5 sampled).
 
+Done (PR #100/#101 — full technical SEO + AEO + perf audit + critical fixes):
+
+- ✅ 8 audit files in `audit/` (schema, indexing-config, meta,
+  performance, AEO, internal-link-graph, http-security,
+  onpage-issues).
+- ✅ **CRITICAL** (PR #101 commit 1): sitemap noindex filter via
+  new `src/lib/indexing-gates.ts`. Sitemap **1,903 → 1,419** URLs
+  (-484 noindex'd pages excluded). Page templates and sitemap
+  share predicates so no more drift.
+- ✅ **HIGH** (commit 2): drone catalog Product schema with brand,
+  model, additionalProperty, offers (when MSRP parseable). All 17
+  drone pages now ship 4 JSON-LD blocks (FAQPage, BreadcrumbList,
+  Article, Product).
+- ✅ **HIGH** (commit 3): state-operators CollectionPage + ItemList
+  schema across all 50 pages. Was zero-schema; now 2 JSON-LD blocks.
+- ✅ **HIGH** (commit 4): per-city dynamic og:image generation.
+  216 city pages each generate a unique 1200×630 PNG with city +
+  state + top crop/service + operator count + brand chrome.
+
+Still pending — MEDIUM and LOW from PR #100 audits (post-launch polish):
+
+- MEDIUM: state-crop and state-service routes missing `BreadcrumbList`
+  schema (1,100 pages).
+- MEDIUM: operator template uses `ProfessionalService` instead of
+  `LocalBusiness` (drops geo + priceRange Rich Results on ~250
+  operators with full address+lat+lng).
+- MEDIUM: homepage missing `WebSite` + `SearchAction` schema.
+- MEDIUM: per-route og:image generation for state, crop, service,
+  operator routes (cities done in PR #101).
+- MEDIUM: 19 orphan pages — 17 sparse-state /states/[slug]/operators
+  (PR #97 noindex'd; still no inbound links from state hub).
+- MEDIUM: `/operators/agnomy` anomaly to investigate.
+- MEDIUM: homepage 50-word direct-answer to "how much does drone
+  spraying cost".
+- MEDIUM: `HowTo` schema on city template's "How to hire" 3-step
+  section.
+- MEDIUM: state-hub HTML weight averaging 206 KB (raw, gzip-friendly
+  but worth investigating if LCP regresses).
+- MEDIUM: 16 long-H1 pages (descriptive, accurate; just truncation).
+- LOW (15 across 8 audits): see audit files for individual items.
+
 Still pending:
 
 1. **Fill `organizationSchema().sameAs`** when company social
