@@ -47,17 +47,25 @@ Done (PR #93 — operator template uplift):
   (agriforce-drone) 164 → 735, no regression. Pattern documented
   in `_memory/code-patterns.md`.
 
+Done (PR #94 — state-crop template uplift):
+
+- ✅ State-crop combo template uplift via
+  `src/lib/state-crop-content.ts` helpers and 6 new/rewired sections
+  in `src/app/states/[slug]/crops/[crop]/page.tsx` (state-specific
+  intro paragraph, spray-window callout, crop.longDescription
+  swap, state licensing block, combined 7–11 FAQ block, FAQPage
+  JSON-LD, page-level noindex gate). Audit's stated 408 combos was
+  actually 50 × 8 = **400** combos (counties.ts has 50 entries,
+  not 51). Build-time log emits the noindex-gate distribution.
+  Verified word counts: mississippi/corn 1934→2753, iowa/corn
+  774→1656, texas/cotton 834→1732 (all clear the 700-word target).
+  99 of 400 combos correctly emit `<meta robots="noindex,follow">`.
+
 Still pending:
 
-1. **Lift the state-crop template** at
-   `src/app/states/[slug]/crops/[crop]/page.tsx` — thread
-   `crop.longDescription`, `crop.faqs`, `state.sprayWindows`,
-   and state licensing context into the page; gate the obviously
-   weak combos via `generateStaticParams` filter or noindex meta.
-   Affects 408 URLs.
-2. **Fill `organizationSchema().sameAs`** when company social
+1. **Fill `organizationSchema().sameAs`** when company social
    accounts exist (also tracked above).
-3. **Pull a Search Console crawl-error export** and audit operator
+2. **Pull a Search Console crawl-error export** and audit operator
    slug duplicates / orphan pages in bulk (flagged in the PR #90
    audit "bonus finding" section).
 

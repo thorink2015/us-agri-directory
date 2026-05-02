@@ -1,11 +1,21 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import { MapPin, CheckCircle } from 'lucide-react';
+import { MapPin, CheckCircle, Calendar, Sprout, FileCheck, HelpCircle } from 'lucide-react';
 import { counties, getCountyBySlug } from '@/data/counties';
 import { crops, getCropBySlug } from '@/data/crops';
+import { getStateData } from '@/data/states';
 import { getOperatorsByCounty } from '@/data/operators';
 import { formatPrice } from '@/lib/utils';
+import {
+  composeStateCropFAQs,
+  composeStateCropIntro,
+  findCropSprayWindows,
+  getNoindexBreakdown,
+  getStateTopCropEntry,
+  shouldNoindexStateCrop,
+  stateCropFAQSchema,
+} from '@/lib/state-crop-content';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
@@ -15,9 +25,27 @@ interface Props {
   params: { slug: string; crop: string };
 }
 
+// Build-time logging of the noindex gate distribution. `generateStaticParams`
+// is called once during `next build`, so this is a stable single emit.
+let logged = false;
+function logNoindexBreakdownOnce() {
+  if (logged) return;
+  logged = true;
+  const { total, totalCombos, perCrop } = getNoindexBreakdown();
+  // Single console.log so build output stays scannable.
+  // eslint-disable-next-line no-console
+  console.log(
+    `[state-crops] ${total} of ${totalCombos} combos gated as noindex,follow. ` +
+      `Per crop: ${Object.entries(perCrop)
+        .map(([k, v]) => `${k}=${v.length}`)
+        .join(', ')}`,
+  );
+}
+
 export async function generateStaticParams() {
+  logNoindexBreakdownOnce();
   return counties.flatMap((county) =>
-    crops.map((crop) => ({ slug: county.slug, crop: crop.slug }))
+    crops.map((crop) => ({ slug: county.slug, crop: crop.slug })),
   );
 }
 
@@ -26,13 +54,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const crop = getCropBySlug(params.crop);
   if (!county || !crop) return {};
 
+  const noindex = shouldNoindexStateCrop(params.slug, params.crop);
   const desc = `Drone spraying operators for ${crop.name.toLowerCase()} in ${county.name}, 2026 rates ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}. Compare verified operators and contact directly for quotes.`;
+
   return {
     title: `${crop.name} Drone Spraying: ${county.name} 2026`,
     description: desc,
     alternates: {
       canonical: `/states/${params.slug}/crops/${params.crop}`,
     },
+    robots: noindex
+      ? { index: false, follow: true }
+      : undefined,
     openGraph: {
       type: 'website',
       locale: 'en_US',
@@ -57,29 +90,27 @@ export default function CountyCropPage({ params }: Props) {
   const crop = getCropBySlug(params.crop);
   if (!county || !crop) notFound();
 
+  const state = getStateData(county.slug);
+  const sprayWindows = findCropSprayWindows(state, crop.slug);
+  const topCropEntry = getStateTopCropEntry(state, crop.slug);
+  const intro = composeStateCropIntro(county, crop, state, sprayWindows, topCropEntry);
+  const faqs = composeStateCropFAQs(county, crop, state, sprayWindows);
+  const faqSchema = stateCropFAQSchema(faqs);
+
   const allCountyOps = getOperatorsByCounty(county.slug);
   const cropOps = allCountyOps.filter((op) => op.crops.includes(crop.slug));
   const displayOps = cropOps.length > 0 ? cropOps : allCountyOps;
 
   const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  const faqs = [
-    {
-      question: `How much does drone spraying for ${crop.name.toLowerCase()} cost in ${county.name}?`,
-      answer: `Drone spraying rates for ${crop.name.toLowerCase()} in ${county.name} typically run ${formatPrice(crop.priceMinUsd, crop.priceMaxUsd)} per acre for application only, the farmer supplies the chemical product. Pricing varies based on total acreage, distance from the operator's base and product type.`,
-    },
-    {
-      question: `When should I schedule drone applications for ${crop.name.toLowerCase()}?`,
-      answer: `Optimal timing for ${crop.name.toLowerCase()} drone applications is: ${crop.treatmentMonths.map((m) => monthNames[m - 1]).join(', ')}. Exact timing depends on weather conditions and pest or disease pressure each season. Contact a local operator in ${county.name} for scheduling.`,
-    },
-    {
-      question: `What advantages does drone spraying offer for ${crop.name.toLowerCase()} vs. ground equipment?`,
-      answer: `Drone spraying on ${crop.name.toLowerCase()} offers several advantages: zero soil compaction, ability to operate when fields are too wet for tractors, GPS-guided uniform coverage at 95%+ accuracy and the ability to treat small or irregularly shaped fields. It also reduces product waste by 20 to 30% compared to ground equipment.`,
-    },
-  ];
-
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <Breadcrumb
         items={[
           { label: 'States', href: '/states' },
@@ -92,28 +123,80 @@ export default function CountyCropPage({ params }: Props) {
       <div className="mb-8">
         <div className="flex items-center gap-2 text-green-700 text-sm font-medium mb-2">
           <MapPin className="w-4 h-4" />
-          <span>{county.region}</span>
+          {state?.regionSlug ? (
+            <Link href={`/regions/${state.regionSlug}`} className="hover:underline">
+              {state.regionName}
+            </Link>
+          ) : (
+            <span>{county.region}</span>
+          )}
         </div>
         <h1 className="text-3xl font-bold text-gray-900 mb-3">
           {crop.name} Drone Spraying in {county.name}
         </h1>
         <p className="text-gray-600 text-lg">
           Agricultural drone services for {crop.name.toLowerCase()} in {county.name}.{' '}
-          Typical rate: <span className="font-semibold text-green-700">{formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre</span>
+          Typical rate:{' '}
+          <span className="font-semibold text-green-700">
+            {formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}
+          </span>
         </p>
       </div>
 
-      {/* Crop info card */}
-      <div className="bg-green-50 border border-green-200 rounded-xl p-6 mb-8">
+      {/* State-specific intro paragraph (template enrichment) */}
+      <div className="bg-green-50 border-l-4 border-green-600 px-5 py-4 rounded-r-xl mb-8">
+        <p className="text-sm text-gray-700 leading-relaxed">{intro}</p>
+      </div>
+
+      {/* State spray-window callout (template enrichment) */}
+      {sprayWindows.length > 0 && (
+        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+          <h2 className="font-semibold text-gray-900 mb-3 text-lg flex items-center gap-2">
+            <Calendar className="w-5 h-5 text-green-600" />
+            {county.name} {crop.name.toLowerCase()} spray windows and rates
+          </h2>
+          <ul className="space-y-2">
+            {sprayWindows.map((w, i) => (
+              <li
+                key={`${w.crop}-${i}`}
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-3 text-sm border-b border-gray-100 pb-2 last:border-b-0 last:pb-0"
+              >
+                <span className="font-semibold text-gray-900">{w.crop}</span>
+                <span className="text-gray-600">{w.window}</span>
+                <span className="font-semibold text-green-700 whitespace-nowrap">
+                  {w.rateRange} per acre
+                </span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-xs text-gray-500 mt-3">
+            Source: state custom-rate guidance and operator-reported windows compiled in{' '}
+            <Link href={`/states/${county.slug}`} className="text-green-700 underline hover:text-green-800">
+              {county.name}
+            </Link>
+            .
+          </p>
+        </section>
+      )}
+
+      {/* Crop info card — now uses crop.longDescription instead of crop.description */}
+      <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8">
         <div className="flex items-start gap-4">
-          <span className="text-4xl">{crop.icon}</span>
+          <span className="text-4xl flex-shrink-0">{crop.icon}</span>
           <div>
-            <h2 className="font-semibold text-gray-900 mb-2">About {crop.name.toLowerCase()}</h2>
-            <p className="text-gray-700 text-sm leading-relaxed mb-3">{crop.description}</p>
+            <h2 className="font-semibold text-gray-900 mb-2 text-lg flex items-center gap-2">
+              <Sprout className="w-5 h-5 text-green-600" />
+              About {crop.name.toLowerCase()} drone spraying
+            </h2>
+            <p className="text-gray-700 text-sm leading-relaxed mb-4">
+              {crop.longDescription}
+            </p>
             <div className="flex flex-wrap gap-4 text-sm">
               <div>
                 <span className="text-gray-500">Typical rate: </span>
-                <span className="font-semibold text-green-700">{formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}/acre</span>
+                <span className="font-semibold text-green-700">
+                  {formatPrice(crop.priceMinUsd, crop.priceMaxUsd)}
+                </span>
               </div>
               {crop.haUS && (
                 <div>
@@ -130,7 +213,9 @@ export default function CountyCropPage({ params }: Props) {
 
       {/* Treatment calendar */}
       <div className="bg-white border border-gray-200 rounded-xl p-6 mb-8">
-        <h2 className="font-semibold text-gray-900 mb-4">Application calendar for {crop.name.toLowerCase()}</h2>
+        <h2 className="font-semibold text-gray-900 mb-4">
+          Application calendar for {crop.name.toLowerCase()}
+        </h2>
         <div className="grid grid-cols-6 sm:grid-cols-12 gap-2">
           {monthNames.map((month, idx) => {
             const isActive = crop.treatmentMonths.includes(idx + 1);
@@ -154,12 +239,60 @@ export default function CountyCropPage({ params }: Props) {
         </p>
       </div>
 
+      {/* State licensing block (template enrichment) */}
+      {state?.aerialCategory && state.licensingAgency && (
+        <section className="bg-white border border-gray-200 rounded-xl p-6 mb-8">
+          <h2 className="font-semibold text-gray-900 mb-3 text-lg flex items-center gap-2">
+            <FileCheck className="w-5 h-5 text-green-600" />
+            Aerial pesticide licensing in {county.name}
+          </h2>
+          <p className="text-sm text-gray-700 leading-relaxed mb-2">
+            {county.name} requires{' '}
+            <span className="font-medium text-gray-900">{state.aerialCategory}</span>{' '}
+            for aerial pesticide application. The licensing authority is{' '}
+            <span className="font-medium text-gray-900">{state.licensingAgency}</span>.
+          </p>
+          <p className="text-xs text-gray-500 leading-relaxed">
+            Full agency, exam and renewal-cycle details:{' '}
+            <Link
+              href={`/states/${county.slug}`}
+              className="text-green-700 underline hover:text-green-800"
+            >
+              {county.name} state page
+            </Link>
+            {' · '}
+            <Link
+              href="/regulations/state-licensing"
+              className="text-green-700 underline hover:text-green-800"
+            >
+              50-state licensing reference
+            </Link>
+            {state.extensionUrl && (
+              <>
+                {' · '}
+                <a
+                  href={state.extensionUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-700 underline hover:text-green-800"
+                >
+                  state extension service
+                </a>
+              </>
+            )}
+            .
+          </p>
+        </section>
+      )}
+
       {/* Operators */}
       <div className="mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">
           {crop.name} drone operators in {county.name}
           {cropOps.length === 0 && allCountyOps.length > 0 && (
-            <span className="text-sm font-normal text-gray-500 ml-2">(all operators in state)</span>
+            <span className="text-sm font-normal text-gray-500 ml-2">
+              (all operators in state)
+            </span>
           )}
         </h2>
 
@@ -192,9 +325,10 @@ export default function CountyCropPage({ params }: Props) {
         )}
       </div>
 
-      {/* FAQ */}
+      {/* FAQ — combined state-crop generic + crop.faqs */}
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">
+        <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+          <HelpCircle className="w-5 h-5 text-green-600" />
           FAQ: {crop.name.toLowerCase()} drone spraying in {county.name}
         </h2>
         <FAQAccordion faqs={faqs} />
@@ -202,7 +336,9 @@ export default function CountyCropPage({ params }: Props) {
 
       {/* Related crops in state */}
       <div className="mb-8">
-        <h2 className="text-base font-semibold text-gray-900 mb-3">Other crops in {county.name}</h2>
+        <h2 className="text-base font-semibold text-gray-900 mb-3">
+          Other crops in {county.name}
+        </h2>
         <div className="flex flex-wrap gap-2">
           {crops
             .filter((c) => c.slug !== crop.slug)
