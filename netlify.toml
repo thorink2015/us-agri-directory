@@ -1,6 +1,7 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  # Redeploy trigger: 2026-04-30 (force rebuild after build-minute throttling)
 
 [build.environment]
   NODE_VERSION = "20"
