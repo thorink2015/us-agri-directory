@@ -18,6 +18,7 @@ import { SERVICE_LABELS } from '@/data/types';
 import { getStateData } from '@/data/states';
 import { getCountyBySlug } from '@/data/counties';
 import { getOperatorsByCounty } from '@/data/operators';
+import { shouldNoindexCity } from '@/lib/indexing-gates';
 import { AUTHOR, SITE } from '@/data/author';
 
 import Breadcrumb from '@/components/layout/Breadcrumb';
@@ -255,16 +256,8 @@ function buildFaqs(
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
-/** A seeded city is gated noindex when it has no direct operators AND its
- *  state's overall operator-coverage is also thin (<3 operators statewide).
- *  The URL stays buildable so internal links resolve, but Google stops
- *  competing for crawl budget on the weakest seeded combos. */
-function shouldNoindexCity(city: CityData): boolean {
-  if (!city.isSeed) return false;
-  if (city.operators.length > 0) return false;
-  const stateOps = getOperatorsByCounty(city.stateSlug);
-  return stateOps.length < 3;
-}
+// City noindex gate moved to src/lib/indexing-gates.ts for sitemap reuse;
+// imported at the top of this file.
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const city = getCity(params.slug, params.city);

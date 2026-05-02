@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { counties, getCountyBySlug } from '@/data/counties';
 import { getOperatorsByCounty } from '@/data/operators';
+import { shouldNoindexStateOperators } from '@/lib/indexing-gates';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import OperatorCard from '@/components/operators/OperatorCard';
 import { SITE } from '@/data/author';
@@ -9,17 +10,6 @@ import Link from 'next/link';
 
 interface Props {
   params: { slug: string };
-}
-
-// States with fewer than this many operators render with a noindex meta tag
-// so internal links stay resolvable but Google stops competing for crawl
-// budget on near-empty list pages. Catches the 8 thin pages flagged in
-// audit/crawl-budget-check.md plus Wisconsin (7 ops, 399 words rendered,
-// same near-empty pattern).
-const STATE_OPERATORS_NOINDEX_BELOW = 9;
-
-function shouldNoindexStateOperators(stateSlug: string): boolean {
-  return getOperatorsByCounty(stateSlug).length < STATE_OPERATORS_NOINDEX_BELOW;
 }
 
 export async function generateStaticParams() {
