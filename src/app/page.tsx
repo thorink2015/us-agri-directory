@@ -3,8 +3,9 @@ import Link from 'next/link';
 import {
   CheckCircle, ArrowRight, Calculator, Clock, DollarSign, Shield,
   ShieldCheck, MapPin, Sprout, Droplets, Map as MapIcon, Radar, Settings, ShoppingCart,
-  Search, BarChart3, Ruler, GitCompare, CalendarDays, Mail,
+  Search, BarChart3, Ruler, GitCompare, CalendarDays,
 } from 'lucide-react';
+import HomepageNewsletterForm from '@/components/ui/HomepageNewsletterForm';
 import { operators, getFeaturedOperators } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
@@ -610,40 +611,7 @@ export default function HomePage() {
       </section>
 
       {/* SECTION 14: Newsletter */}
-      <section className="py-12 bg-white border-t border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <div className="flex-shrink-0 w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center">
-              <Mail className="w-6 h-6 text-green-700" />
-            </div>
-            <div className="flex-1 text-center sm:text-left">
-              <h2 className="text-lg font-bold text-gray-900">Get drone spraying updates for your region</h2>
-              <p className="text-sm text-gray-500 mt-1">Short monthly briefings. No spam. Unsubscribe anytime.</p>
-            </div>
-            <form
-              action="/newsletter"
-              method="post"
-              className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto"
-            >
-              <label htmlFor="newsletter-email" className="sr-only">Email address</label>
-              <input
-                id="newsletter-email"
-                type="email"
-                name="email"
-                required
-                placeholder="you@farm.com"
-                className="flex-1 sm:w-64 px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="px-5 py-2.5 bg-green-700 text-white text-sm font-semibold rounded-xl hover:bg-green-800 transition-colors whitespace-nowrap"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
+      <HomepageNewsletterForm />
 
       {/* SECTION 15: Operator CTA */}
       <section className="py-14 bg-green-700 text-white">
