@@ -1923,6 +1923,7 @@ export const operators: Operator[] = [
     certFAAPart107: true,
     verified: true,
     featured: false,
+    lastUpdated: '2026-04-29',
   },
   {
     slug: 'wvu-extension',
@@ -7092,7 +7093,17 @@ export function getOperatorBySlug(slug: string): Operator | undefined {
 }
 
 export function getOperatorsByCounty(stateSlug: string): Operator[] {
-  return operators.filter((op) => op.counties.includes(stateSlug));
+  return operators
+    .filter((op) => op.counties.includes(stateSlug))
+    .sort((a, b) => {
+      const aFeat = a.featured ? 1 : 0;
+      const bFeat = b.featured ? 1 : 0;
+      if (aFeat !== bFeat) return bFeat - aFeat;
+      const aVer = a.verified && !a.pendingConfirmation ? 1 : 0;
+      const bVer = b.verified && !b.pendingConfirmation ? 1 : 0;
+      if (aVer !== bVer) return bVer - aVer;
+      return 0;
+    });
 }
 
 export function getFeaturedOperators(): Operator[] {
