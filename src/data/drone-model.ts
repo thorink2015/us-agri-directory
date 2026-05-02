@@ -719,6 +719,19 @@ export function getDroneBySlug(slug: string): DroneModel | undefined {
   return droneBySlug[slug];
 }
 
-export const DRONE_NAME_MAP: Record<string, string> = Object.fromEntries(
-  drones.map((d) => [d.slug, d.name])
-);
+// Display labels for slugs referenced by operators that don't yet have a
+// full DroneModel entry. Profile pages render a non-link span using these
+// fallbacks so operator pages never show a raw slug like "dji-agras-t30".
+const DRONE_NAME_FALLBACKS: Record<string, string> = {
+  'dji-agras-t10': 'DJI Agras T10',
+  'dji-agras-t25p': 'DJI Agras T25P',
+  'dji-agras-t30': 'DJI Agras T30',
+  'dji-agras-t40': 'DJI Agras T40',
+  'dji-agras-t60x': 'DJI Agras T60X',
+  'xag-p100': 'XAG P100',
+};
+
+export const DRONE_NAME_MAP: Record<string, string> = {
+  ...DRONE_NAME_FALLBACKS,
+  ...Object.fromEntries(drones.map((d) => [d.slug, d.name])),
+};
