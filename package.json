@@ -1,7 +1,8 @@
 {
-  "name": "directory-agri",
+  "name": "ag-drone-directory",
   "version": "0.1.0",
   "private": true,
+  "description": "Farmer-direct directory of US agricultural drone spray operators.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
