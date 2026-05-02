@@ -388,6 +388,25 @@
 - **Override called out in PR #98:** the city route already shipped at `/states/[slug]/[city]` (the request mentioned "the existing /states/[slug]/[city] route" so this is aligned). The original spec said to "add to src/data/cities.ts (or wherever the city seed data lives)" — chose to add a separate `src/data/seed-cities.ts` file rather than baking the seed list into the runtime `cities.ts` index, so the data layer separation between operator-derived and curator-confirmed entries is explicit and the merge logic stays diffable.
 - **Discovered:** the original `cities.ts` code already had a comment "// Disallow '<state-name> City' collision with the state slug itself" handling. Worked correctly with my seeds — `nebraska-city` (a real Nebraska city of 7,000 pop) passes because the slug `nebraska-city` doesn't equal the state slug `nebraska`. Honest data, no weird collisions.
 
+## 2026-05-02 — Three content-quality audits (branch claude/audit-public-content-w2Iz1, PR #99)
+
+- **Trigger:** prove the recently-uplifted templates produce genuinely unique pages. Three audits: internal duplication (Jaccard shingle similarity), external uniqueness (Google verbatim search), rankability indicators (7 checks per page).
+- **Verdicts:** internal duplication 4 PASS / 1 WARN (operators 41.3%); external uniqueness 9/9 zero competitor hits; rankability operators FAIL + cities WARN. Single highest-leverage next move identified: operator-template revision.
+- **Helper script committed** at `tools/content-audits/duplicate_check.py` for reproducibility on future template changes.
+
+## 2026-05-02 — Operator + city template fixes per PR #99 audits (branch claude/audit-public-content-w2Iz1, PR #100)
+
+- **Trigger:** PR #99 flagged operators WARN (41.3% mean Jaccard) + FAIL (no external authority links + ultra-thin word counts), cities WARN (no external authority links).
+- **Commit 1 — `fix(operators): diversify auto-paragraph + FAQ + licensing prose, add authority links, gate ultra-thin profiles`:** added `hash32` (FNV-1a) and `pickVariant` helpers in `src/lib/operator-content.ts`. `composeAutoParagraph` now picks among 6 lead variants (lead with services / city / region / crops / founded year / fleet size), 2-5 locality follow-ups, and 3 licensing-sentence variants — ~18 distinct compositions per state. `composeOperatorFAQs` rotates 3 question phrasings + 3 answer leads per FAQ. New `composeLicensingSentences(operator)` returns 3 sentence shapes per state, picked from hash(slug+state). New `getOperatorAuthorityLinks(operator)` returns 4-5 outbound links (state regulator URL from `licensingAgencyUrl`, state extension from `extensionUrl`, FAA Part 137, NAAA, optional NDAA reference). New `shouldNoindexUltraThinOperator(operator)` gate: <30-word desc AND no city/phone/email/website/fleetSize/haTreated/priceMin. 1 operator gated (`applied-ag`).
+- **Commit 2 — `fix(city-template): add external authority links section`:** city template now renders a "Verify [City] drone operator credentials" block with up to 4 outbound primary-source links (state regulator URL, state extension URL, FAA Part 137, NAAA), per-state composition.
+- **Verified outcomes:**
+  - Operator route similarity: **41.3% → 19.5%** mean (PASS), max 58.5% → 49.0%.
+  - Operator authority-link rankability: **FAIL → PASS** (5/5 sampled).
+  - City authority-link rankability: **FAIL → PASS** (5/5 sampled).
+  - Word counts on PR #93 canaries: lnp-ag-drone-spraying 448→471, sphex-ag 462→497, agronix 495→482, agriforce-drone (control) 735→734. No regression.
+- **Override called out in PR #100:** the city H1 still shows `kw_in_h1` failure on the over-strict rankability check because the H1 uses "Agricultural Drone Services in [City], [State]" rather than "Drone Spraying in [City], [State]". Documented in `audit/rankability-check.md` as artefactual; left unchanged in this PR since both shapes are keyword-relevant and the broader "Agricultural Drone Services" framing matches the multi-service surface of the city page. Flagged for cosmetic tonal review later.
+- **Discovered:** ESLint flagged `primaryCrop` as unused in the new auto-paragraph composer (the variable was kept from an earlier draft). Cleaned up before commit. Build clean post-fix.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

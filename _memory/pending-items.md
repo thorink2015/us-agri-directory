@@ -135,6 +135,33 @@ Done (PR #98 — city seed data):
   direct ops AND <3 statewide operators. **1 of 216** pages
   gated (alaska/palmer).
 
+Done (PR #99 — content quality audits, audit-only):
+
+- ✅ `audit/internal-duplication.md` — 4 PASS, 1 WARN (operators
+  41.3% mean). Helper script committed at
+  `tools/content-audits/duplicate_check.py`.
+- ✅ `audit/external-uniqueness.md` — 9 of 9 strategic Google
+  searches returned zero competitor hits across 5 routes.
+- ✅ `audit/rankability-check.md` — 1,758 unique titles. Operators
+  FAIL (no external authority links + ultra-thin word counts);
+  cities WARN (no external authority links).
+
+Done (PR #100 — operator + city template fixes per PR #99 audits):
+
+- ✅ Diversified operator auto-paragraph (6 lead variants × 3 locality
+  × 3 licensing = ~18 prose combinations per state), FAQ wording
+  (3 question + 3 answer variants per FAQ), and per-state licensing
+  block sentence (3 variants). All keyed on hash(operator.slug) or
+  hash(operator.slug + state.slug) so same-state peers diverge
+  deterministically. Operator route mean similarity: **41.3% → 19.5%**
+  (PASS). 1 ultra-thin operator (`applied-ag`) noindex'd.
+- ✅ Added per-operator authority-links block (state regulator URL,
+  state extension URL, FAA Part 137, NAAA, optional NDAA Section
+  848). Operator rankability authority-link check: **FAIL → PASS**
+  (5/5 sampled pass post-fix).
+- ✅ Added authority-links section to city template. City rankability
+  authority-link check: **FAIL → PASS** (5/5 sampled).
+
 Still pending:
 
 1. **Fill `organizationSchema().sameAs`** when company social
@@ -142,6 +169,13 @@ Still pending:
 2. **Pull a Search Console crawl-error export** and audit operator
    slug duplicates / orphan pages in bulk (flagged in the PR #90
    audit "bonus finding" section).
+3. **City H1 tonal review** — current "Agricultural Drone Services
+   in [City], [State]" vs alternative "Drone Spraying in [City],
+   [State]". Both keyword-relevant; current framing is broader
+   since city pages surface multiple services. Cosmetic.
+4. **Alaska state hub content lift** — single state hub at 521
+   words, fails the 700 threshold. Not template-fixable; needs a
+   one-time content pass on `states.ts` Alaska entry.
 
 ## Blocked on research files
 
