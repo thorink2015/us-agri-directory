@@ -351,6 +351,23 @@
 - **Override called out in PR #94:** the audit said `408` combos but the actual matrix is `400` (counties.ts has exactly 50 entries, not 51 — DC is not in the data). Also broadened the noindex gate to also exclude `state.topCrops` (curator-confirmed signal) on top of `county.mainCrops`, so e.g. Mississippi/corn stays indexable because Mississippi explicitly lists 800K acres of corn in its topCrops, even though `county.mainCrops` only carries the top 3.
 - **Discovered:** Mississippi `state.sprayWindows` is empty `[]`, so the spray-window callout block is suppressed gracefully there. Same fallback pattern works for any state with thin window data.
 
+## 2026-05-02 — Three feasibility audits (branch claude/audit-public-content-w2Iz1, PR #95)
+
+- **Trigger:** user requested feasibility audits for (a) city pages, (b) service-state combos, (c) post-#94 crawl budget. Audit-only PR, no source code changes.
+- **City audit override:** the city route already ships at `/states/[slug]/[city]` (not `/states/[slug]/cities/[city]` as the request proposed). 25 pages today at threshold ≥2 operators, 791-word avg. Recommended USDA NASS county-level + Census Places gazetteer as the seed source to scale to ~225 cities.
+- **Service-state audit:** confirmed the 500-combo route exists with 1,002 word avg, identified 276/500 combos at ≥3 ops, mapped per-service coverage (spraying 46, seeding 43, sales 42, training 39, ..., emergency 0), recommended same uplift pattern as PR #94.
+- **Crawl-budget audit:** ~1,499 indexable URLs post-#94. Zero internal 404s confirmed via linkcheck pass. Flagged: 8 thin /states/[slug]/operators pages, 224 thin state-services combos (subsumed by PR #96), 23 orphan crop/drone slugs (15 crops, 8 drones).
+
+## 2026-05-02 — Service-state template uplift (branch claude/audit-public-content-w2Iz1, PR #96)
+
+- **Trigger:** `audit/service-state-feasibility.md` (PR #95) recommended the same uplift pattern as PR #94. Same helper-module + noindex-gate approach.
+- **Commit 1 — `feat(lib): state-service-content helpers for template-level enrichment`:** new pure-helpers module `src/lib/state-service-content.ts` (~270 lines). Exports `hasCropAffinity`, `countOperatorsForServiceInState`, `getStateCropsForService`, `composeStateServiceIntro`, `composeStateServiceFAQs`, `stateServiceFAQSchema`, `shouldNoindexStateService`, `getServiceStateNoindexBreakdown`. Crop-affinity binds to 6 of 10 services (spraying, seeding, monitoring, spreading, mapping, emergency); the other 4 (training, rental, sales, consultancy) are operational/business and skip the crop callout.
+- **Commit 2 — `feat(state-services): wire helpers + noindex gate + AEO callouts into template`:** 8 new/rewired sections in `src/app/states/[slug]/services/[service]/page.tsx`. Region-link header, state-specific intro, service AEO callout (uses the rich `service.aeoBlock` already in services.ts), service.longDescription, crop-affinity callout, state licensing block, authority links section, combined FAQ + FAQPage JSON-LD. Noindex gate at metadata layer for combos with <3 ops. `generateStaticParams` logs gate distribution once per build.
+- **Verified word counts** (rendered HTML, full main column): iowa/spraying 1554→1946 (+25%), ohio/mapping 893→1401 (+57%), iowa/spreading 930→1372 (+48%), indiana/sales 832→1167 (+40%), alaska/emergency 605→1101 (+82% AND noindex), hawaii/rental ~600→1220 (+103% AND noindex). Strong + medium combos clear the user's 1,400-word target (iowa/spreading lands at 1372, the closest-edge medium case).
+- **224 of 500 combos** correctly emit `<meta robots="noindex,follow">`. Distribution: emergency=50, rental=46, consultancy=38, mapping=24, monitoring=19, spreading=17, training=11, sales=8, seeding=7, spraying=4 — matches the PR #95 audit prediction exactly.
+- **Override called out in PR #96:** none against the spec. ESLint flagged `Calendar` icon import and a couple of unused helper imports during the first build pass; cleaned up before commit.
+- **Discovered:** to push the medium tier comfortably above 1,400 words, added two extra sections beyond the spec: (1) a `service.aeoBlock` AEO callout near the top, and (2) an authority-links list before the FAQ. Both pull from data already populated on every `services.ts` entry. Lifted the medium tier 100–150 words on average.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
