@@ -17,11 +17,13 @@ import { formatPrice, getStateAbbr, normalizeSocialUrl } from '@/lib/utils';
 import { buildOperatorMetadata } from '@/lib/seo';
 import {
   composeAutoParagraph,
+  composeLicensingSentences,
   composeOperatorFAQs,
-  getCoveredStateContext,
   getCropPricingLines,
+  getOperatorAuthorityLinks,
   getOperatorRegion,
   operatorFAQSchema,
+  shouldNoindexUltraThinOperator,
 } from '@/lib/operator-content';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
@@ -42,7 +44,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const op = getOperatorBySlug(params.slug);
   if (!op) return {};
-  return buildOperatorMetadata(op);
+  const meta = buildOperatorMetadata(op);
+  if (shouldNoindexUltraThinOperator(op)) {
+    return { ...meta, robots: { index: false, follow: true } };
+  }
+  return meta;
 }
 
 const LANGUAGE_LABELS: Record<string, string> = {
@@ -77,8 +83,8 @@ export default function OperatorPage({ params }: Props) {
   // ── Template-level enrichment (audit/phase-a-followup-audit.md §2.2) ──
   const autoParagraph = composeAutoParagraph(operator);
   const region = getOperatorRegion(operator);
-  const stateContext = getCoveredStateContext(operator);
-  const licensedStates = stateContext.filter((s) => s.licensingAgency && s.aerialCategory);
+  const licensingSentences = composeLicensingSentences(operator);
+  const authorityLinks = getOperatorAuthorityLinks(operator);
   const cropPricingLines = getCropPricingLines(operator);
   const operatorFAQs = composeOperatorFAQs(operator);
   const faqSchema = operatorFAQSchema(operatorFAQs);
@@ -394,7 +400,7 @@ export default function OperatorPage({ params }: Props) {
             )}
 
             {/* State licensing context (template enrichment) */}
-            {licensedStates.length > 0 && (
+            {licensingSentences.length > 0 && (
               <section className="bg-white border border-gray-200 rounded-xl p-6">
                 <h2 className="font-bold text-gray-900 mb-2 text-lg flex items-center gap-2">
                   <FileCheck className="w-5 h-5 text-green-600" />
@@ -407,18 +413,18 @@ export default function OperatorPage({ params }: Props) {
                   area:
                 </p>
                 <ul className="space-y-2">
-                  {licensedStates.map((s) => (
-                    <li key={s.slug} className="text-sm text-gray-700 leading-relaxed">
+                  {licensingSentences.map((s) => (
+                    <li key={s.stateSlug} className="text-sm text-gray-700 leading-relaxed">
                       <Link
-                        href={`/states/${s.slug}`}
+                        href={`/states/${s.stateSlug}`}
                         className="font-semibold text-gray-900 hover:text-green-700"
                       >
-                        {s.name}
+                        {s.stateName}
                       </Link>
-                      {' requires '}
-                      <span className="text-gray-700">{s.aerialCategory}</span>
-                      {' for aerial pesticide application; the licensing authority is '}
-                      <span className="text-gray-700">{s.licensingAgency}</span>.
+                      {' — '}
+                      <span className="text-gray-700">
+                        {s.text.replace(new RegExp(`^${s.stateName}\\s*`), '')}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -433,6 +439,34 @@ export default function OperatorPage({ params }: Props) {
                   </Link>
                   .
                 </p>
+              </section>
+            )}
+
+            {/* Authority links — verify and resources */}
+            {authorityLinks.length > 0 && (
+              <section className="bg-white border border-gray-200 rounded-xl p-6">
+                <h2 className="font-bold text-gray-900 mb-2 text-lg flex items-center gap-2">
+                  <Shield className="w-5 h-5 text-green-600" />
+                  Verify and resources
+                </h2>
+                <p className="text-xs text-gray-500 mb-4">
+                  Primary-source references for verifying credentials and looking up
+                  state-specific rules in {operator.shortName || operator.name}{`'s`} service area.
+                </p>
+                <ul className="space-y-1.5 text-sm">
+                  {authorityLinks.map((link) => (
+                    <li key={link.url}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-green-700 underline hover:text-green-800"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </section>
             )}
 
