@@ -61,11 +61,53 @@ Done (PR #94 — state-crop template uplift):
   774→1656, texas/cotton 834→1732 (all clear the 700-word target).
   99 of 400 combos correctly emit `<meta robots="noindex,follow">`.
 
+Done (PR #95 — three feasibility audits, audit-only):
+
+- ✅ `audit/city-pages-feasibility.md` — city route already exists
+  at `/states/[slug]/[city]`; realistic ceiling ~225 cities with
+  USDA NASS + Census Places seed data.
+- ✅ `audit/service-state-feasibility.md` — service-state route
+  exists, 500 pages, 276 of 500 combos at ≥3 ops, recommended
+  uplift pattern (now shipped in PR #96 below).
+- ✅ `audit/crawl-budget-check.md` — ~1,499 indexable URLs after
+  PR #94. Zero internal 404s. Three follow-up issues flagged.
+
+Done (PR #96 — service-state template uplift):
+
+- ✅ Service-state combo template uplift via
+  `src/lib/state-service-content.ts` helpers and 8 new/rewired
+  sections in `src/app/states/[slug]/services/[service]/page.tsx`
+  (state-specific intro paragraph, service AEO callout, crop
+  affinity callout for the 6 crop-binding services, state
+  licensing block, authority links section, combined 4–9 FAQ
+  block + FAQPage JSON-LD, page-level noindex gate). 224 of 500
+  combos correctly noindex'd post-build (emergency=50, rental=46,
+  consultancy=38, mapping=24, monitoring=19, spreading=17,
+  training=11, sales=8, seeding=7, spraying=4). Verified word
+  counts: iowa/spraying 1554→1946 (+25%), ohio/mapping 893→1401
+  (+57%), iowa/spreading 930→1372 (+48%), alaska/emergency
+  605→1101 (+82%, noindex). Pattern documented in
+  `_memory/code-patterns.md`.
+
 Still pending:
 
-1. **Fill `organizationSchema().sameAs`** when company social
+1. **Noindex gate on `/states/[slug]/operators` empty states** —
+   8 thin pages (alaska 21 words, nevada 28, arizona 154, etc.).
+   ~30 min of work, mirrors the same metadata-layer pattern.
+2. **Scaffold top 4 orphan crop slugs** (`row-crops`, `pasture`,
+   `alfalfa`, `potatoes`) and **top 4 orphan drone slugs**
+   (`dji-agras-t40`, `xag-p100`, `eavision-j100`, `dji-agras-t10`)
+   — ~2 hr, unlocks 117+ operator cross-links and 8 new hubs.
+3. **City pages: layer USDA NASS county-level + Census Bureau
+   Places seed data on the operator-derived set** — ~1 day,
+   lifts 25 → ~225.
+4. **Two minor data cleanups** — tighten `cities.ts`
+   `isValidCityName()` to reject `southern-california` / county
+   names; fix `j100` / `j150` operator-data typos to
+   `joyance-j100` / `joyance-j150`.
+5. **Fill `organizationSchema().sameAs`** when company social
    accounts exist (also tracked above).
-2. **Pull a Search Console crawl-error export** and audit operator
+6. **Pull a Search Console crawl-error export** and audit operator
    slug duplicates / orphan pages in bulk (flagged in the PR #90
    audit "bonus finding" section).
 
