@@ -563,7 +563,10 @@ export default function OperatorPage({ params }: Props) {
                 {!operator.phone && !operator.email && (
                   <p className="text-xs text-gray-600 leading-snug">
                     Contact info not yet provided. If this is your business,{' '}
-                    <Link href="/list-your-business" className="text-green-700 underline hover:text-green-800">
+                    <Link
+                      href={`/list-your-business?claim=${operator.slug}`}
+                      className="text-green-700 underline hover:text-green-800"
+                    >
                       claim your listing
                     </Link>{' '}
                     to add direct contact details.
@@ -642,7 +645,7 @@ export default function OperatorPage({ params }: Props) {
             </div>
 
             <Link
-              href="/list-your-business"
+              href={`/list-your-business?claim=${operator.slug}`}
               className="block w-full text-center px-4 py-2.5 border border-green-700 text-green-700 rounded-xl text-sm font-medium hover:bg-green-50 transition-colors"
             >
               Update this listing

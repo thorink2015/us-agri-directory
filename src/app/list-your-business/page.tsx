@@ -4,7 +4,7 @@ import { CheckCircle, Clock, Globe } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import SubmitForm from './SubmitForm';
-import { operators } from '@/data/operators';
+import { operators, getOperatorBySlug } from '@/data/operators';
 import { AUTHOR, SITE } from '@/data/author';
 
 const FAQS = [
@@ -48,8 +48,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ListYourBusinessPage() {
+interface PageProps {
+  searchParams?: { claim?: string };
+}
+
+export default function ListYourBusinessPage({ searchParams }: PageProps) {
   const operatorCount = operators.length;
+  const claimSlug = searchParams?.claim;
+  const claimOperator = claimSlug ? getOperatorBySlug(claimSlug) : undefined;
 
   const webPageSchema = {
     '@context': 'https://schema.org',
@@ -152,8 +158,15 @@ export default function ListYourBusinessPage() {
 
       {/* Form */}
       <div className="bg-white border border-gray-200 rounded-xl p-6">
-        <h2 className="font-semibold text-gray-900 mb-5">Business registration form</h2>
-        <SubmitForm />
+        <h2 className="font-semibold text-gray-900 mb-5">
+          {claimOperator
+            ? `Claim or update: ${claimOperator.name}`
+            : 'Business registration form'}
+        </h2>
+        <SubmitForm
+          claimSlug={claimOperator?.slug}
+          claimName={claimOperator?.name}
+        />
       </div>
 
       {/* FAQ */}
