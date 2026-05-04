@@ -1,0 +1,414 @@
+rank,city,state,state_slug,city_slug,county,cropland_acres,farm_count,ag_receipts_usd,ag_score,existing_operator_count,coverage_status,in_directory
+1,Corpus Christi,Texas,texas,corpus-christi,Nueces County,,,,0.7261,0,gap,true
+2,Lubbock,Texas,texas,lubbock,Lubbock County,,,,0.6734,1,light,true
+3,Amarillo,Texas,texas,amarillo,Potter County,,,,0.6241,0,gap,true
+4,Memphis,Tennessee,tennessee,memphis,Shelby County,,,,0.5863,0,gap,true
+5,Fresno,California,california,fresno,Fresno County,,,,0.5575,1,light,true
+6,College Station,Texas,texas,college-station,Brazos County,,,,0.5547,0,gap,true
+7,Plainview,Texas,texas,plainview,Hale County,,,,0.4672,0,gap,true
+8,Bakersfield,California,california,bakersfield,Kern County,,,,0.437,0,gap,true
+9,Raleigh,North Carolina,north-carolina,raleigh,Wake County,,,,0.4357,1,light,true
+10,Lincoln,Nebraska,nebraska,lincoln,Lancaster County,,,,0.4086,1,light,true
+11,Houston,Texas,texas,houston,,,,,0.376,2,light,true
+12,Grapevine,Texas,texas,grapevine,,,,,0.368,1,light,false
+13,Llano,Texas,texas,llano,,,,,0.368,1,light,false
+14,Robinson,Texas,texas,robinson,,,,,0.368,1,light,false
+15,Frisco,Texas,texas,frisco,,,,,0.368,1,light,false
+16,Palestine,Texas,texas,palestine,,,,,0.368,1,light,false
+17,Decatur,Texas,texas,decatur,,,,,0.368,1,light,false
+18,Perryton,Texas,texas,perryton,,,,,0.368,1,light,false
+19,Pittsburg,Texas,texas,pittsburg,,,,,0.368,1,light,false
+20,Alvarado,Texas,texas,alvarado,,,,,0.368,1,light,false
+21,Sioux Falls,South Dakota,south-dakota,sioux-falls,Minnehaha County,,,,0.3196,0,gap,true
+22,Madison,Wisconsin,wisconsin,madison,Dane County,,,,0.2881,0,gap,true
+23,Modesto,California,california,modesto,Stanislaus County,,,,0.2759,0,gap,true
+24,Great Falls,Montana,montana,great-falls,Cascade County,,,,0.2567,0,gap,true
+25,Fort Collins,Colorado,colorado,fort-collins,Larimer County,,,,0.2548,0,gap,true
+26,Bozeman,Montana,montana,bozeman,Gallatin County,,,,0.2505,0,gap,true
+27,Springfield,Missouri,missouri,springfield,Greene County,,,,0.2456,0,gap,true
+28,Las Cruces,New Mexico,new-mexico,las-cruces,Doña Ana County,,,,0.2456,0,gap,true
+29,Boise,Idaho,idaho,boise,Ada County,,,,0.2452,0,gap,true
+30,Fargo,North Dakota,north-dakota,fargo,Cass County,,,,0.2445,0,gap,true
+31,Cedar Rapids,Iowa,iowa,cedar-rapids,Linn County,,,,0.2249,0,gap,true
+32,Huntsville,Alabama,alabama,huntsville,Madison County,,,,0.2179,0,gap,true
+33,Havre,Montana,montana,havre,Hill County,,,,0.2124,0,gap,true
+34,Sidney,Montana,montana,sidney,Richland County,,,,0.2098,1,light,true
+35,Salem,Oregon,oregon,salem,Marion County,,,,0.2096,1,light,true
+36,Visalia,California,california,visalia,Tulare County,,,,0.2094,1,light,true
+37,Glendive,Montana,montana,glendive,Dawson County,,,,0.2085,0,gap,true
+38,Columbia,Missouri,missouri,columbia,Boone County,,,,0.2083,0,gap,true
+39,Rochester,New York,new-york,rochester,Monroe County,,,,0.2078,0,gap,true
+40,Manhattan,Kansas,kansas,manhattan,Riley County,,,,0.2062,0,gap,true
+41,Pueblo,Colorado,colorado,pueblo,Pueblo County,,,,0.2045,0,gap,true
+42,Grand Island,Nebraska,nebraska,grand-island,Hall County,,,,0.2019,0,gap,true
+43,Greeley,Colorado,colorado,greeley,Weld County,,,,0.2018,0,gap,true
+44,Salina,Kansas,kansas,salina,Saline County,,,,0.1997,1,light,true
+45,Rochester,Minnesota,minnesota,rochester,Olmsted County,,,,0.1989,0,gap,true
+46,Davenport,Iowa,iowa,davenport,Scott County,,,,0.1936,0,gap,true
+47,Springfield,Illinois,illinois,springfield,Sangamon County,,,,0.1928,0,gap,true
+48,Peoria,Illinois,illinois,peoria,Peoria County,,,,0.1918,1,light,true
+49,Roswell,New Mexico,new-mexico,roswell,Chaves County,,,,0.1909,0,gap,true
+50,Grand Forks,North Dakota,north-dakota,grand-forks,Grand Forks County,,,,0.1864,0,gap,true
+51,Kearney,Nebraska,nebraska,kearney,Buffalo County,,,,0.1851,0,gap,true
+52,Garden City,Kansas,kansas,garden-city,Finney County,,,,0.1837,0,gap,true
+53,Dodge City,Kansas,kansas,dodge-city,Ford County,,,,0.1834,0,gap,true
+54,Clovis,New Mexico,new-mexico,clovis,Curry County,,,,0.1823,0,gap,true
+55,Billings,Montana,montana,billings,,,,,0.1794,2,light,true
+56,Norfolk,Nebraska,nebraska,norfolk,Madison County,,,,0.1774,0,gap,true
+57,Minot,North Dakota,north-dakota,minot,Ward County,,,,0.1765,0,gap,true
+58,Liberal,Kansas,kansas,liberal,Seward County,,,,0.1762,0,gap,true
+59,North Platte,Nebraska,nebraska,north-platte,Lincoln County,,,,0.1761,0,gap,true
+60,Yuma,Arizona,arizona,yuma,Yuma County,,,,0.1761,0,gap,true
+61,Aberdeen,South Dakota,south-dakota,aberdeen,Brown County,,,,0.1734,0,gap,true
+62,Harrisburg,Montana,montana,harrisburg,,,,,0.1714,1,light,false
+63,Livingston,Montana,montana,livingston,,,,,0.1714,1,light,false
+64,Hamilton,Montana,montana,hamilton,,,,,0.1714,1,light,false
+65,Townsend,Montana,montana,townsend,,,,,0.1714,1,light,false
+66,Brookings,South Dakota,south-dakota,brookings,Brookings County,,,,0.1696,0,gap,true
+67,Buckeye,Arizona,arizona,buckeye,Maricopa County,,,,0.1695,0,gap,true
+68,Murfreesboro,Tennessee,tennessee,murfreesboro,Rutherford County,,,,0.1691,0,gap,true
+69,Watertown,South Dakota,south-dakota,watertown,Codington County,,,,0.1685,0,gap,true
+70,Ames,Iowa,iowa,ames,Story County,,,,0.1629,1,light,true
+71,Mitchell,South Dakota,south-dakota,mitchell,Davison County,,,,0.1625,1,light,true
+72,Bloomington,Illinois,illinois,bloomington,McLean County,,,,0.1618,0,gap,true
+73,Stillwater,Oklahoma,oklahoma,stillwater,Payne County,,,,0.1607,0,gap,true
+74,Enid,Oklahoma,oklahoma,enid,Garfield County,,,,0.1606,0,gap,true
+75,Williston,North Dakota,north-dakota,williston,Williams County,,,,0.1603,0,gap,true
+76,Portales,New Mexico,new-mexico,portales,Roosevelt County,,,,0.1593,0,gap,true
+77,Decatur,Illinois,illinois,decatur,Macon County,,,,0.1532,0,gap,true
+78,Jamestown,North Dakota,north-dakota,jamestown,Stutsman County,,,,0.1486,0,gap,true
+79,Athens,Georgia,georgia,athens,Clarke County,,,,0.1452,0,gap,true
+80,Davis,California,california,davis,Yolo County,,,,0.1446,0,gap,true
+81,Overland Park,Kansas,kansas,overland-park,,,,,0.1434,2,light,true
+82,Hiawatha,Kansas,kansas,hiawatha,,,,,0.1434,2,light,true
+83,Wichita,Kansas,kansas,wichita,,,,,0.1434,2,light,true
+84,Nebraska City,Nebraska,nebraska,nebraska-city,,,,,0.1406,2,light,true
+85,Casa Grande,Arizona,arizona,casa-grande,Pinal County,,,,0.1397,0,gap,true
+86,Kansas City,Kansas,kansas,kansas-city,,,,,0.1354,1,light,false
+87,Westmoreland,Kansas,kansas,westmoreland,,,,,0.1354,1,light,false
+88,Seneca,Kansas,kansas,seneca,,,,,0.1354,1,light,false
+89,Spring Hill,Kansas,kansas,spring-hill,,,,,0.1354,1,light,false
+90,Hutchinson,Kansas,kansas,hutchinson,,,,,0.1354,1,light,false
+91,Pratt,Kansas,kansas,pratt,,,,,0.1354,1,light,false
+92,Thayer,Kansas,kansas,thayer,,,,,0.1354,1,light,false
+93,Fort Scott,Kansas,kansas,fort-scott,,,,,0.1354,1,light,false
+94,Ulysses,Kansas,kansas,ulysses,,,,,0.1354,1,light,false
+95,Yakima,Washington,washington,yakima,Yakima County,,,,0.1344,0,gap,true
+96,Altus,Oklahoma,oklahoma,altus,Jackson County,,,,0.134,0,gap,true
+97,Lafayette,Louisiana,louisiana,lafayette,Lafayette Parish,,,,0.1331,1,light,true
+98,Dundee,Nebraska,nebraska,dundee,,,,,0.1326,1,light,false
+99,Spalding,Nebraska,nebraska,spalding,,,,,0.1326,1,light,false
+100,Springfield,Nebraska,nebraska,springfield,,,,,0.1326,1,light,false
+101,Belgrade,Nebraska,nebraska,belgrade,,,,,0.1326,1,light,false
+102,Holdrege,Nebraska,nebraska,holdrege,,,,,0.1326,1,light,false
+103,Fairfield,Nebraska,nebraska,fairfield,,,,,0.1326,1,light,false
+104,Greenwood,Nebraska,nebraska,greenwood,,,,,0.1326,1,light,false
+105,Leigh,Nebraska,nebraska,leigh,,,,,0.1326,1,light,false
+106,Hastings,Nebraska,nebraska,hastings,,,,,0.1326,1,light,false
+107,Hartington,Nebraska,nebraska,hartington,,,,,0.1326,1,light,false
+108,Lansing,Michigan,michigan,lansing,Ingham County,,,,0.1325,0,gap,true
+109,Mankato,Minnesota,minnesota,mankato,Blue Earth County,,,,0.1321,0,gap,true
+110,Laramie,Wyoming,wyoming,laramie,Albany County,,,,0.1311,0,gap,true
+111,Fayetteville,Arkansas,arkansas,fayetteville,Washington County,,,,0.1301,1,light,true
+112,Mason City,Iowa,iowa,mason-city,Cerro Gordo County,,,,0.1291,0,gap,true
+113,Guymon,Oklahoma,oklahoma,guymon,Texas County,,,,0.129,1,light,true
+114,Woodward,Oklahoma,oklahoma,woodward,Woodward County,,,,0.1282,0,gap,true
+115,Quincy,Illinois,illinois,quincy,Adams County,,,,0.1277,0,gap,true
+116,Highmore,South Dakota,south-dakota,highmore,,,,,0.1271,1,light,false
+117,Alcester,South Dakota,south-dakota,alcester,,,,,0.1271,1,light,false
+118,Huron,South Dakota,south-dakota,huron,,,,,0.1271,1,light,false
+119,Ottumwa,Iowa,iowa,ottumwa,Wapello County,,,,0.127,0,gap,true
+120,Bismarck,North Dakota,north-dakota,bismarck,,,,,0.124,2,light,true
+121,Pasco,Washington,washington,pasco,Franklin County,,,,0.1202,0,gap,true
+122,Sterling,Colorado,colorado,sterling,Logan County,,,,0.1193,0,gap,true
+123,Tuscaloosa,Alabama,alabama,tuscaloosa,Tuscaloosa County,,,,0.1186,0,gap,true
+124,Jonesboro,Arkansas,arkansas,jonesboro,Craighead County,,,,0.1167,2,light,true
+125,Kenmare,North Dakota,north-dakota,kenmare,,,,,0.116,1,light,false
+126,Killdeer,North Dakota,north-dakota,killdeer,,,,,0.116,1,light,false
+127,Eau Claire,Wisconsin,wisconsin,eau-claire,Eau Claire County,,,,0.114,0,gap,true
+128,Lamar,Colorado,colorado,lamar,Prowers County,,,,0.1138,0,gap,true
+129,Lafayette,Indiana,indiana,lafayette,Tippecanoe County,,,,0.1137,1,light,true
+130,Hannibal,Missouri,missouri,hannibal,Marion County,,,,0.1135,0,gap,true
+131,Sikeston,Missouri,missouri,sikeston,Scott County,,,,0.1127,0,gap,true
+132,Willmar,Minnesota,minnesota,willmar,Kandiyohi County,,,,0.112,0,gap,true
+133,Marshall,Missouri,missouri,marshall,Saline County,,,,0.1099,0,gap,true
+134,Suffolk,Virginia,virginia,suffolk,Suffolk City,,,,0.1099,1,light,true
+135,Powell,Wyoming,wyoming,powell,Park County,,,,0.1094,0,gap,true
+136,Corvallis,Oregon,oregon,corvallis,Benton County,,,,0.1092,0,gap,true
+137,Torrington,Wyoming,wyoming,torrington,Goshen County,,,,0.1091,0,gap,true
+138,Muncie,Indiana,indiana,muncie,Delaware County,,,,0.1085,0,gap,true
+139,Bowling Green,Kentucky,kentucky,bowling-green,Warren County,,,,0.1078,1,light,true
+140,Worthington,Minnesota,minnesota,worthington,Nobles County,,,,0.1056,0,gap,true
+141,Greenville,North Carolina,north-carolina,greenville,Pitt County,,,,0.1055,0,gap,true
+142,Marshall,Minnesota,minnesota,marshall,Lyon County,,,,0.1053,0,gap,true
+143,Kokomo,Indiana,indiana,kokomo,Howard County,,,,0.1036,0,gap,true
+144,Terre Haute,Indiana,indiana,terre-haute,Vigo County,,,,0.1026,0,gap,true
+145,Duncan,Oklahoma,oklahoma,duncan,,,,,0.1022,1,light,false
+146,Tulsa,Oklahoma,oklahoma,tulsa,,,,,0.1022,1,light,false
+147,Kalamazoo,Michigan,michigan,kalamazoo,Kalamazoo County,,,,0.0986,0,gap,true
+148,Owensboro,Kentucky,kentucky,owensboro,Daviess County,,,,0.0973,0,gap,true
+149,Idaho Falls,Idaho,idaho,idaho-falls,Bonneville County,,,,0.0968,0,gap,true
+150,Columbus,Indiana,indiana,columbus,Bartholomew County,,,,0.0958,0,gap,true
+151,Albany,Georgia,georgia,albany,Dougherty County,,,,0.0951,0,gap,true
+152,Jackson,Tennessee,tennessee,jackson,Madison County,,,,0.0951,1,light,true
+153,Windsor,Colorado,colorado,windsor,,,,,0.0938,1,light,false
+154,Eaton,Colorado,colorado,eaton,,,,,0.0938,1,light,false
+155,Brighton,Colorado,colorado,brighton,,,,,0.0938,1,light,false
+156,Kersey,Colorado,colorado,kersey,,,,,0.0938,1,light,false
+157,Wray,Colorado,colorado,wray,,,,,0.0938,1,light,false
+158,Loveland,Colorado,colorado,loveland,,,,,0.0938,1,light,false
+159,Grand Junction,Colorado,colorado,grand-junction,,,,,0.0938,1,light,false
+160,Englewood,Colorado,colorado,englewood,,,,,0.0938,1,light,false
+161,Salinas,California,california,salinas,,,,,0.0932,3,covered_well,true
+162,Dothan,Alabama,alabama,dothan,Houston County,,,,0.0929,1,light,true
+163,Fond du Lac,Wisconsin,wisconsin,fond-du-lac,Fond du Lac County,,,,0.0925,0,gap,true
+164,Ely,Iowa,iowa,ely,,,,,0.0922,1,light,false
+165,Alden,Iowa,iowa,alden,,,,,0.0922,1,light,false
+166,Des Moines,Iowa,iowa,des-moines,,,,,0.0922,1,light,false
+167,Harlan,Iowa,iowa,harlan,,,,,0.0922,1,light,false
+168,Iowa City,Iowa,iowa,iowa-city,,,,,0.0922,1,light,false
+169,Grinnell,Iowa,iowa,grinnell,,,,,0.0922,1,light,false
+170,Runnells,Iowa,iowa,runnells,,,,,0.0922,1,light,false
+171,Morris,Iowa,iowa,morris,,,,,0.0922,1,light,false
+172,Overbrook,Iowa,iowa,overbrook,,,,,0.0922,1,light,false
+173,Nebraska City,Iowa,iowa,nebraska-city,,,,,0.0922,1,light,false
+174,Dayton,Wyoming,wyoming,dayton,,,,,0.0911,1,light,false
+175,Lander,Wyoming,wyoming,lander,,,,,0.0911,1,light,false
+176,Champaign,Illinois,illinois,champaign,,,,,0.0908,2,light,true
+177,Effingham,Illinois,illinois,effingham,,,,,0.0908,2,light,true
+178,Wausau,Wisconsin,wisconsin,wausau,Marathon County,,,,0.0884,0,gap,true
+179,Rolla,Missouri,missouri,rolla,,,,,0.0869,1,light,false
+180,Bonnots Mill,Missouri,missouri,bonnots-mill,,,,,0.0869,1,light,false
+181,Arbela,Missouri,missouri,arbela,,,,,0.0869,1,light,false
+182,Twin Falls,Idaho,idaho,twin-falls,Twin Falls County,,,,0.0855,1,light,true
+183,Findlay,Ohio,ohio,findlay,Hancock County,,,,0.0843,0,gap,true
+184,Pine Bluff,Arkansas,arkansas,pine-bluff,Jefferson County,,,,0.0843,0,gap,true
+185,Logan,Utah,utah,logan,Cache County,,,,0.0839,0,gap,true
+186,Mendon,Illinois,illinois,mendon,,,,,0.0828,1,light,false
+187,Jacksonville,Illinois,illinois,jacksonville,,,,,0.0828,1,light,false
+188,Heyworth,Illinois,illinois,heyworth,,,,,0.0828,1,light,false
+189,El Paso,Illinois,illinois,el-paso,,,,,0.0828,1,light,false
+190,Winfield,Illinois,illinois,winfield,,,,,0.0828,1,light,false
+191,Elgin,Minnesota,minnesota,elgin,,,,,0.0828,1,light,false
+192,Near Minneapolis,Minnesota,minnesota,near-minneapolis,,,,,0.0828,1,light,false
+193,Southwest,Minnesota,minnesota,southwest,,,,,0.0828,1,light,false
+194,Plymouth,Minnesota,minnesota,plymouth,,,,,0.0828,1,light,false
+195,New York Mills,Minnesota,minnesota,new-york-mills,,,,,0.0828,1,light,false
+196,Menahga,Minnesota,minnesota,menahga,,,,,0.0828,1,light,false
+197,West-central,Minnesota,minnesota,west-central,,,,,0.0828,1,light,false
+198,Tonica,Illinois,illinois,tonica,,,,,0.0828,1,light,false
+199,Byron,Minnesota,minnesota,byron,,,,,0.0828,1,light,false
+200,Seneca,Illinois,illinois,seneca,,,,,0.0828,1,light,false
+201,Valdosta,Georgia,georgia,valdosta,Lowndes County,,,,0.0827,1,light,true
+202,Decatur,Alabama,alabama,decatur,Morgan County,,,,0.0815,0,gap,true
+203,Wenatchee,Washington,washington,wenatchee,Chelan County,,,,0.081,1,light,true
+204,Hattiesburg,Mississippi,mississippi,hattiesburg,Forrest County,,,,0.0798,0,gap,true
+205,Marion,Ohio,ohio,marion,Marion County,,,,0.0797,0,gap,true
+206,Walla Walla,Washington,washington,walla-walla,Walla Walla County,,,,0.0797,0,gap,true
+207,Lima,Ohio,ohio,lima,Allen County,,,,0.0794,0,gap,true
+208,Pullman,Washington,washington,pullman,Whitman County,,,,0.0784,0,gap,true
+209,Napa,California,california,napa,,,,,0.0772,1,light,false
+210,City of Industry,California,california,city-of-industry,,,,,0.0772,1,light,false
+211,Sacramento Delta,California,california,sacramento-delta,,,,,0.0772,1,light,false
+212,Plymouth,California,california,plymouth,,,,,0.0772,1,light,false
+213,Exeter,California,california,exeter,,,,,0.0772,1,light,false
+214,Tracy,California,california,tracy,,,,,0.0772,1,light,false
+215,Santa Cruz,California,california,santa-cruz,,,,,0.0772,1,light,false
+216,Garden Grove,California,california,garden-grove,,,,,0.0772,1,light,false
+217,Burlingame,California,california,burlingame,,,,,0.0772,1,light,false
+218,Paso Robles,California,california,paso-robles,,,,,0.0772,1,light,false
+219,Riverside,California,california,riverside,,,,,0.0772,1,light,false
+220,Stevens Point,Wisconsin,wisconsin,stevens-point,Portage County,,,,0.076,0,gap,true
+221,Lancaster,Pennsylvania,pennsylvania,lancaster,Lancaster County,,,,0.0757,0,gap,true
+222,Frederick,Maryland,maryland,frederick,Frederick County,,,,0.0748,0,gap,true
+223,Rexburg,Idaho,idaho,rexburg,Madison County,,,,0.0747,1,light,true
+224,Hermiston,Oregon,oregon,hermiston,Umatilla County,,,,0.0745,0,gap,true
+225,Saginaw,Michigan,michigan,saginaw,Saginaw County,,,,0.073,0,gap,true
+226,Wooster,Ohio,ohio,wooster,Wayne County,,,,0.0721,0,gap,true
+227,Hopkinsville,Kentucky,kentucky,hopkinsville,Christian County,,,,0.0721,0,gap,true
+228,Pendleton,Oregon,oregon,pendleton,Umatilla County,,,,0.072,0,gap,true
+229,Tupelo,Mississippi,mississippi,tupelo,Lee County,,,,0.0711,1,light,true
+230,Wilson,North Carolina,north-carolina,wilson,Wilson County,,,,0.0711,1,light,true
+231,West Memphis,Arkansas,arkansas,west-memphis,Crittenden County,,,,0.0701,0,gap,true
+232,Henderson,Kentucky,kentucky,henderson,Henderson County,,,,0.07,0,gap,true
+233,Monroe,Louisiana,louisiana,monroe,Ouachita Parish,,,,0.0691,0,gap,true
+234,Paducah,Kentucky,kentucky,paducah,McCracken County,,,,0.0686,1,light,true
+235,Plant City,Florida,florida,plant-city,Hillsborough County,,,,0.0674,0,gap,true
+236,Alexandria,Louisiana,louisiana,alexandria,Rapides Parish,,,,0.067,1,light,true
+237,Blacksburg,Virginia,virginia,blacksburg,Montgomery County,,,,0.0659,1,light,true
+238,Hood River,Oregon,oregon,hood-river,Hood River County,,,,0.0643,0,gap,true
+239,Greenville,Mississippi,mississippi,greenville,Washington County,,,,0.063,1,light,true
+240,Defiance,Ohio,ohio,defiance,Defiance County,,,,0.0628,0,gap,true
+241,Bay City,Michigan,michigan,bay-city,Bay County,,,,0.0627,0,gap,true
+242,Harrisburg,Oregon,oregon,harrisburg,,,,,0.0617,2,light,true
+243,State College,Pennsylvania,pennsylvania,state-college,Centre County,,,,0.0605,0,gap,true
+244,Goldsboro,North Carolina,north-carolina,goldsboro,Wayne County,,,,0.0585,1,light,true
+245,Immokalee,Florida,florida,immokalee,Collier County,,,,0.0563,0,gap,true
+246,Stuttgart,Arkansas,arkansas,stuttgart,Arkansas County,,,,0.0554,0,gap,true
+247,Vineland,New Jersey,new-jersey,vineland,Cumberland County,,,,0.0553,0,gap,true
+248,Plymouth,Massachusetts,massachusetts,plymouth,Plymouth County,,,,0.0549,0,gap,true
+249,Sumter,South Carolina,south-carolina,sumter,Sumter County,,,,0.0544,0,gap,true
+250,Port Orford,Oregon,oregon,port-orford,,,,,0.0537,1,light,false
+251,Eugene,Oregon,oregon,eugene,,,,,0.0537,1,light,false
+252,Pilot Rock,Oregon,oregon,pilot-rock,,,,,0.0537,1,light,false
+253,Lexington,Kentucky,kentucky,lexington,,,,,0.052,2,light,true
+254,Winchester,Virginia,virginia,winchester,Frederick County,,,,0.0514,0,gap,true
+255,Clarksdale,Mississippi,mississippi,clarksdale,Coahoma County,,,,0.051,0,gap,true
+256,Marshfield,Wisconsin,wisconsin,marshfield,,,,,0.0509,1,light,false
+257,Antigo,Wisconsin,wisconsin,antigo,,,,,0.0509,1,light,false
+258,Burley,Idaho,idaho,burley,Cassia County,,,,0.0508,0,gap,true
+259,Florence,South Carolina,south-carolina,florence,Florence County,,,,0.0504,1,light,true
+260,Dyersburg,Tennessee,tennessee,dyersburg,Dyer County,,,,0.0504,0,gap,true
+261,Tifton,Georgia,georgia,tifton,Tift County,,,,0.0496,1,light,true
+262,Wingate,Indiana,indiana,wingate,,,,,0.0495,1,light,false
+263,Fowler,Indiana,indiana,fowler,,,,,0.0495,1,light,false
+264,Knox,Indiana,indiana,knox,,,,,0.0495,1,light,false
+265,Kouts,Indiana,indiana,kouts,,,,,0.0495,1,light,false
+266,Indianapolis,Indiana,indiana,indianapolis,,,,,0.0495,1,light,false
+267,Berne,Indiana,indiana,berne,,,,,0.0495,1,light,false
+268,Sullivan,Indiana,indiana,sullivan,,,,,0.0495,1,light,false
+269,Brownstown,Indiana,indiana,brownstown,,,,,0.0495,1,light,false
+270,Staunton,Virginia,virginia,staunton,Augusta County,,,,0.0494,0,gap,true
+271,Auburn,Alabama,alabama,auburn,,,,,0.0489,3,covered_well,true
+272,Traverse City,Michigan,michigan,traverse-city,Grand Traverse County,,,,0.0482,0,gap,true
+273,Cle Elum,Washington,washington,cle-elum,,,,,0.0482,1,light,false
+274,Richland,Washington,washington,richland,,,,,0.0482,1,light,false
+275,Omak,Washington,washington,omak,,,,,0.0482,1,light,false
+276,Seattle,Washington,washington,seattle,,,,,0.0482,1,light,false
+277,Issaquah,Washington,washington,issaquah,,,,,0.0482,1,light,false
+278,Selah,Washington,washington,selah,,,,,0.0482,1,light,false
+279,Medical Lake,Washington,washington,medical-lake,,,,,0.0482,1,light,false
+280,Belle Glade,Florida,florida,belle-glade,Palm Beach County,,,,0.0481,0,gap,true
+281,Cleveland,Mississippi,mississippi,cleveland,Bolivar County,,,,0.0478,0,gap,true
+282,Lake Wales,Florida,florida,lake-wales,Polk County,,,,0.0476,0,gap,true
+283,Vernal,Utah,utah,vernal,Uintah County,,,,0.0473,0,gap,true
+284,Tremonton,Utah,utah,tremonton,Box Elder County,,,,0.0468,0,gap,true
+285,Greenfield,Ohio,ohio,greenfield,,,,,0.0468,1,light,false
+286,Delphos,Ohio,ohio,delphos,,,,,0.0468,1,light,false
+287,Fredericktown,Ohio,ohio,fredericktown,,,,,0.0468,1,light,false
+288,Ohio statewide,Ohio,ohio,ohio-statewide,,,,,0.0468,1,light,false
+289,Bucyrus,Ohio,ohio,bucyrus,,,,,0.0468,1,light,false
+290,Wauseon,Ohio,ohio,wauseon,,,,,0.0468,1,light,false
+291,Continental,Ohio,ohio,continental,,,,,0.0468,1,light,false
+292,Starkville,Mississippi,mississippi,starkville,,,,,0.0465,2,light,true
+293,Watertown,New York,new-york,watertown,Jefferson County,,,,0.0457,0,gap,true
+294,Nashville,Tennessee,tennessee,nashville,,,,,0.0451,2,light,true
+295,Knoxville,Tennessee,tennessee,knoxville,,,,,0.0451,2,light,true
+296,Hilo,Hawaii,hawaii,hilo,Hawaii County,,,,0.045,1,light,true
+297,Chambersburg,Pennsylvania,pennsylvania,chambersburg,Franklin County,,,,0.0443,0,gap,true
+298,Elizabethtown,Kentucky,kentucky,elizabethtown,,,,,0.044,1,light,false
+299,Vidalia,Georgia,georgia,vidalia,Toombs County,,,,0.0437,0,gap,true
+300,Six Lakes,Michigan,michigan,six-lakes,,,,,0.0437,2,light,true
+301,Burlington,Vermont,vermont,burlington,Chittenden County,,,,0.0432,0,gap,true
+302,Daytona Beach,Florida,florida,daytona-beach,,,,,0.0423,2,light,true
+303,Caldwell,Idaho,idaho,caldwell,,,,,0.0404,1,light,false
+304,Weiser,Idaho,idaho,weiser,,,,,0.0404,1,light,false
+305,New Plymouth,Idaho,idaho,new-plymouth,,,,,0.0404,1,light,false
+306,South-central Idaho,Idaho,idaho,south-central-idaho,,,,,0.0404,1,light,false
+307,Homedale,Idaho,idaho,homedale,,,,,0.0404,1,light,false
+308,Ellensburg,Idaho,idaho,ellensburg,,,,,0.0404,1,light,false
+309,Quincy,Florida,florida,quincy,Gadsden County,,,,0.0399,0,gap,true
+310,Concord,New Hampshire,new-hampshire,concord,Merrimack County,,,,0.0398,0,gap,true
+311,Cortland,New York,new-york,cortland,Cortland County,,,,0.0395,0,gap,true
+312,Morgantown,West Virginia,west-virginia,morgantown,Monongalia County,,,,0.0392,0,gap,true
+313,Leland,Mississippi,mississippi,leland,,,,,0.0385,1,light,false
+314,Indianola,Mississippi,mississippi,indianola,,,,,0.0385,1,light,false
+315,Paynesville,Mississippi,mississippi,paynesville,,,,,0.0385,1,light,false
+316,Baton Rouge,Louisiana,louisiana,baton-rouge,,,,,0.0382,2,light,true
+317,Crowley,Louisiana,louisiana,crowley,Acadia Parish,,,,0.0381,0,gap,true
+318,Harrisonburg,Virginia,virginia,harrisonburg,,,,,0.0376,2,light,true
+319,Dover,Delaware,delaware,dover,Kent County,,,,0.0359,0,gap,true
+320,Geneva,New York,new-york,geneva,Ontario County,,,,0.0358,0,gap,true
+321,Amherst,Massachusetts,massachusetts,amherst,Hampshire County,,,,0.0358,0,gap,true
+322,Salisbury,Maryland,maryland,salisbury,Wicomico County,,,,0.0357,0,gap,true
+323,Atlanta,Georgia,georgia,atlanta,,,,,0.0357,1,light,false
+324,Birmingham,Georgia,georgia,birmingham,,,,,0.0357,1,light,false
+325,Smithville,Georgia,georgia,smithville,,,,,0.0357,1,light,false
+326,Hahira,Georgia,georgia,hahira,,,,,0.0357,1,light,false
+327,Tate,Georgia,georgia,tate,,,,,0.0357,1,light,false
+328,Sylvester,Georgia,georgia,sylvester,,,,,0.0357,1,light,false
+329,Blissfield,Michigan,michigan,blissfield,,,,,0.0357,1,light,false
+330,Coloma,Michigan,michigan,coloma,,,,,0.0357,1,light,false
+331,Battle Creek,Michigan,michigan,battle-creek,,,,,0.0357,1,light,false
+332,Deford,Michigan,michigan,deford,,,,,0.0357,1,light,false
+333,Macomb,Michigan,michigan,macomb,,,,,0.0357,1,light,false
+334,Davison,Michigan,michigan,davison,,,,,0.0357,1,light,false
+335,Clyde,Michigan,michigan,clyde,,,,,0.0357,1,light,false
+336,Sandusky,Michigan,michigan,sandusky,,,,,0.0357,1,light,false
+337,Syracuse,New York,new-york,syracuse,,,,,0.0354,2,light,true
+338,Tampa,Florida,florida,tampa,,,,,0.0343,1,light,false
+339,Miami,Florida,florida,miami,,,,,0.0343,1,light,false
+340,Gainesville,Florida,florida,gainesville,,,,,0.0343,1,light,false
+341,Key West,Florida,florida,key-west,,,,,0.0343,1,light,false
+342,Vero Beach,Florida,florida,vero-beach,,,,,0.0343,1,light,false
+343,Fort Myers,Florida,florida,fort-myers,,,,,0.0343,1,light,false
+344,Port St. Lucie,Florida,florida,port-st-lucie,,,,,0.0343,1,light,false
+345,Lake Okeechobee,Florida,florida,lake-okeechobee,,,,,0.0343,1,light,false
+346,Naples,Florida,florida,naples,,,,,0.0343,1,light,false
+347,Casselberry,Florida,florida,casselberry,,,,,0.0343,1,light,false
+348,Mount Olive,North Carolina,north-carolina,mount-olive,Wayne County,,,,0.0332,0,gap,true
+349,Atlanta,Alabama,alabama,atlanta,,,,,0.0329,1,light,false
+350,Cullman,Alabama,alabama,cullman,,,,,0.0329,1,light,false
+351,Vina,Alabama,alabama,vina,,,,,0.0329,1,light,false
+352,Coastal Alabama,Alabama,alabama,coastal-alabama,,,,,0.0329,1,light,false
+353,Bangor,Maine,maine,bangor,Penobscot County,,,,0.0321,0,gap,true
+354,Clemson,South Carolina,south-carolina,clemson,Pickens County,,,,0.032,0,gap,true
+355,Charlotte,North Carolina,north-carolina,charlotte,,,,,0.0315,1,light,false
+356,Hendersonville,North Carolina,north-carolina,hendersonville,,,,,0.0315,1,light,false
+357,Gettysburg,Pennsylvania,pennsylvania,gettysburg,Adams County,,,,0.0314,0,gap,true
+358,Winnsboro,Louisiana,louisiana,winnsboro,,,,,0.0302,1,light,false
+359,New Iberia,Louisiana,louisiana,new-iberia,,,,,0.0302,1,light,false
+360,Raleigh,Virginia,virginia,raleigh,,,,,0.0296,1,light,false
+361,Weyers Cave,Virginia,virginia,weyers-cave,,,,,0.0296,1,light,false
+362,Richmond,Virginia,virginia,richmond,,,,,0.0296,1,light,false
+363,Charlottesville,Virginia,virginia,charlottesville,,,,,0.0296,1,light,false
+364,Martinsburg,West Virginia,west-virginia,martinsburg,Berkeley County,,,,0.0291,0,gap,true
+365,Orangeburg,South Carolina,south-carolina,orangeburg,Orangeburg County,,,,0.0287,0,gap,true
+366,National,Pennsylvania,pennsylvania,national,,,,,0.0282,1,light,false
+367,Saegertown,Pennsylvania,pennsylvania,saegertown,,,,,0.0282,1,light,false
+368,Carlisle,Pennsylvania,pennsylvania,carlisle,,,,,0.0282,1,light,false
+369,Waterford,Pennsylvania,pennsylvania,waterford,,,,,0.0282,1,light,false
+370,Muncy,Pennsylvania,pennsylvania,muncy,,,,,0.0282,1,light,false
+371,Huntingdon,Pennsylvania,pennsylvania,huntingdon,,,,,0.0282,1,light,false
+372,National,New York,new-york,national,,,,,0.0274,1,light,false
+373,Canandaigua,New York,new-york,canandaigua,,,,,0.0274,1,light,false
+374,Clarence,New York,new-york,clarence,,,,,0.0274,1,light,false
+375,Herkimer,New York,new-york,herkimer,,,,,0.0274,1,light,false
+376,Ithaca,New York,new-york,ithaca,,,,,0.0274,1,light,false
+377,Le Roy,New York,new-york,le-roy,,,,,0.0274,1,light,false
+378,Bridgeton,New Jersey,new-jersey,bridgeton,Cumberland County,,,,0.0261,0,gap,true
+379,New Milford,Connecticut,connecticut,new-milford,Litchfield County,,,,0.0257,0,gap,true
+380,Easton,Maryland,maryland,easton,Talbot County,,,,0.0217,0,gap,true
+381,Keene,New Hampshire,new-hampshire,keene,Cheshire County,,,,0.0217,0,gap,true
+382,Columbia,South Carolina,south-carolina,columbia,,,,,0.0213,1,light,false
+383,Honolulu,Hawaii,hawaii,honolulu,,,,,0.0213,2,light,true
+384,Huntington,West Virginia,west-virginia,huntington,,,,,0.0182,1,light,false
+385,Weston,West Virginia,west-virginia,weston,,,,,0.0182,1,light,false
+386,Lewisburg,West Virginia,west-virginia,lewisburg,Greenbrier County,,,,0.0161,0,gap,true
+387,Hammonton,New Jersey,new-jersey,hammonton,Atlantic County,,,,0.0153,0,gap,true
+388,Storrs,Connecticut,connecticut,storrs,Tolland County,,,,0.0146,0,gap,true
+389,Arnold,Maryland,maryland,arnold,,,,,0.0135,1,light,false
+390,Wye Mills,Maryland,maryland,wye-mills,,,,,0.0135,1,light,false
+391,Largo,Maryland,maryland,largo,,,,,0.0135,1,light,false
+392,Adelphi,Maryland,maryland,adelphi,,,,,0.0135,1,light,false
+393,Queenstown,Maryland,maryland,queenstown,,,,,0.0135,1,light,false
+394,Parkville,Maryland,maryland,parkville,,,,,0.0135,1,light,false
+395,Smithsburg,Maryland,maryland,smithsburg,,,,,0.0135,1,light,false
+396,Maui,Hawaii,hawaii,maui,,,,,0.0133,1,light,false
+397,Middlebury,Vermont,vermont,middlebury,Addison County,,,,0.0125,0,gap,true
+398,Presque Isle,Maine,maine,presque-isle,Aroostook County,,,,0.0125,0,gap,true
+399,Rockland,Maine,maine,rockland,,,,,0.0116,1,light,false
+400,Dedham,Maine,maine,dedham,,,,,0.0116,1,light,false
+401,Caribou,Maine,maine,caribou,Aroostook County,,,,0.0109,0,gap,true
+402,St. Albans,Vermont,vermont,st-albans,Franklin County,,,,0.0105,0,gap,true
+403,Valdez,Alaska,alaska,valdez,,,,,0.0105,1,light,false
+404,Glassboro,New Jersey,new-jersey,glassboro,,,,,0.01,1,light,false
+405,Manasquan,New Jersey,new-jersey,manasquan,,,,,0.01,1,light,false
+406,Morristown,New Jersey,new-jersey,morristown,,,,,0.01,1,light,false
+407,Marlton,New Jersey,new-jersey,marlton,,,,,0.01,1,light,false
+408,Concord,Massachusetts,massachusetts,concord,,,,,0.0094,1,light,false
+409,Woburn,Massachusetts,massachusetts,woburn,,,,,0.0094,1,light,false
+410,Nashua,New Hampshire,new-hampshire,nashua,,,,,0.0093,1,light,false
+411,Lebanon,Connecticut,connecticut,lebanon,,,,,0.009,1,light,false
+412,Palmer,Alaska,alaska,palmer,Matanuska-Susitna Borough,,,,0.0083,0,gap,true
+413,Georgetown,Delaware,delaware,georgetown,Sussex County,,,,0.0082,0,gap,true
