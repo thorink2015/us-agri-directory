@@ -1986,6 +1986,14 @@ export const operators: Operator[] = [
     womenLed: true,
     featured: false,
     lastUpdated: '2026-05-04',
+    gallery: [
+      {
+        src: '/images/operators/swift-aeroseed/swift-aeroseed-team.webp',
+        alt: 'Swift Aeroseed team next to a LeadingEdge PV40X agricultural drone in Pennsylvania',
+        width: 900,
+        height: 1600,
+      },
+    ],
   },
   {
     slug: 'penn-state-extension',
@@ -7103,6 +7111,11 @@ export function getOperatorsByCounty(stateSlug: string): Operator[] {
       const aVer = a.verified && !a.pendingConfirmation ? 1 : 0;
       const bVer = b.verified && !b.pendingConfirmation ? 1 : 0;
       if (aVer !== bVer) return bVer - aVer;
+      // Among ties, prefer operators with a hero image so listing cards
+      // showing real photography rank above icon-only placeholders.
+      const aImg = a.gallery && a.gallery.length > 0 ? 1 : 0;
+      const bImg = b.gallery && b.gallery.length > 0 ? 1 : 0;
+      if (aImg !== bImg) return bImg - aImg;
       return 0;
     });
 }
