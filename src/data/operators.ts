@@ -1990,8 +1990,8 @@ export const operators: Operator[] = [
       {
         src: '/images/operators/swift-aeroseed/swift-aeroseed-team.webp',
         alt: 'Swift Aeroseed team next to a LeadingEdge PV40X agricultural drone in Pennsylvania',
-        width: 900,
-        height: 1600,
+        width: 320,
+        height: 240,
       },
     ],
   },
