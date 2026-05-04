@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {
   Globe, MapPin, CheckCircle, BadgeCheck, Calendar, Plane,
   Clock, Languages, CreditCard, Shield, Award, Zap, Users,
+  HelpCircle, FileCheck, Sprout,
 } from 'lucide-react';
 import {
   FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon, TiktokIcon,
@@ -14,7 +15,18 @@ import { DRONE_NAME_MAP, getDroneBySlug } from '@/data/drone-model';
 import { SERVICE_LABELS } from '@/data/types';
 import { formatPrice, getStateAbbr, normalizeSocialUrl } from '@/lib/utils';
 import { buildOperatorMetadata } from '@/lib/seo';
+import {
+  composeAutoParagraph,
+  composeLicensingSentences,
+  composeOperatorFAQs,
+  getCropPricingLines,
+  getOperatorAuthorityLinks,
+  getOperatorRegion,
+  operatorFAQSchema,
+  shouldNoindexUltraThinOperator,
+} from '@/lib/operator-content';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import FAQAccordion from '@/components/ui/FAQAccordion';
 import OperatorSchema from '@/components/schema/OperatorSchema';
 import ExternalLink from '@/components/ui/ExternalLink';
 import OperatorContactLinks from '@/components/operators/OperatorContactLinks';
@@ -32,7 +44,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const op = getOperatorBySlug(params.slug);
   if (!op) return {};
-  return buildOperatorMetadata(op);
+  const meta = buildOperatorMetadata(op);
+  if (shouldNoindexUltraThinOperator(op)) {
+    return { ...meta, robots: { index: false, follow: true } };
+  }
+  return meta;
 }
 
 const LANGUAGE_LABELS: Record<string, string> = {
@@ -64,9 +80,23 @@ export default function OperatorPage({ params }: Props) {
   const tiktokUrl = normalizeSocialUrl('tiktok', operator.tiktok);
   const hasAnySocial = facebookUrl || instagramUrl || linkedinUrl || youtubeUrl || tiktokUrl;
 
+  // ── Template-level enrichment (audit/phase-a-followup-audit.md §2.2) ──
+  const autoParagraph = composeAutoParagraph(operator);
+  const region = getOperatorRegion(operator);
+  const licensingSentences = composeLicensingSentences(operator);
+  const authorityLinks = getOperatorAuthorityLinks(operator);
+  const cropPricingLines = getCropPricingLines(operator);
+  const operatorFAQs = composeOperatorFAQs(operator);
+  const faqSchema = operatorFAQSchema(operatorFAQs);
+
   return (
     <>
       <OperatorSchema operator={operator} />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb
           items={[
@@ -132,6 +162,27 @@ export default function OperatorPage({ params }: Props) {
 
               <p className="mt-4 text-gray-700 leading-relaxed">{operator.description}</p>
 
+              {autoParagraph && (
+                <p className="mt-3 text-gray-700 leading-relaxed">{autoParagraph}</p>
+              )}
+
+              {region && (
+                <p className="mt-3 text-sm text-gray-600">
+                  Operations are based in the{' '}
+                  {region.slug ? (
+                    <Link
+                      href={`/regions/${region.slug}`}
+                      className="text-green-700 underline hover:text-green-800"
+                    >
+                      {region.name}
+                    </Link>
+                  ) : (
+                    <span className="font-medium text-gray-700">{region.name}</span>
+                  )}{' '}
+                  region.
+                </p>
+              )}
+
               {/* Quick stats bar */}
               {(operator.haTreated || operator.fleetSize || operator.pilotsCount || operator.clientsCount) && (
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-6 pt-6 border-t border-gray-200">
@@ -182,6 +233,37 @@ export default function OperatorPage({ params }: Props) {
                 ))}
               </div>
             </section>
+
+            {/* Crop-specific pricing context (template enrichment) */}
+            {cropPricingLines.length > 0 && (
+              <section className="bg-white border border-gray-200 rounded-xl p-6">
+                <h2 className="font-bold text-gray-900 mb-2 text-lg flex items-center gap-2">
+                  <Sprout className="w-5 h-5 text-green-600" />
+                  Pricing context for the crops {operator.shortName || operator.name} services
+                </h2>
+                <p className="text-xs text-gray-500 mb-4">
+                  Typical 2026 per-acre rates for drone spraying by crop, based on US ag
+                  drone industry data. {operator.priceMinUsd
+                    ? <>{operator.shortName || operator.name}{`'s`} stated rate is {formatPrice(operator.priceMinUsd, operator.priceMaxUsd)}.</>
+                    : <>Contact the operator for a quote on your specific fields.</>}
+                </p>
+                <ul className="space-y-2">
+                  {cropPricingLines.map((line) => (
+                    <li key={line.cropSlug} className="flex items-start justify-between gap-3 text-sm">
+                      <Link
+                        href={`/crops/${line.cropSlug}`}
+                        className="text-gray-700 hover:text-green-700 hover:underline"
+                      >
+                        Drone spraying for {line.cropName.toLowerCase()}
+                      </Link>
+                      <span className="font-semibold text-green-700 whitespace-nowrap">
+                        ${line.priceMinUsd} to ${line.priceMaxUsd} per acre
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             {/* Crops */}
             {operator.crops.length > 0 && (
@@ -316,6 +398,86 @@ export default function OperatorPage({ params }: Props) {
                 </div>
               </section>
             )}
+
+            {/* State licensing context (template enrichment) */}
+            {licensingSentences.length > 0 && (
+              <section className="bg-white border border-gray-200 rounded-xl p-6">
+                <h2 className="font-bold text-gray-900 mb-2 text-lg flex items-center gap-2">
+                  <FileCheck className="w-5 h-5 text-green-600" />
+                  Aerial pesticide licensing in states served
+                </h2>
+                <p className="text-xs text-gray-500 mb-4">
+                  Every state requires a pesticide applicator license with the aerial
+                  category endorsement on top of FAA Part 137. The agencies that issue
+                  these licenses in {operator.shortName || operator.name}{`'s`} service
+                  area:
+                </p>
+                <ul className="space-y-2">
+                  {licensingSentences.map((s) => (
+                    <li key={s.stateSlug} className="text-sm text-gray-700 leading-relaxed">
+                      <Link
+                        href={`/states/${s.stateSlug}`}
+                        className="font-semibold text-gray-900 hover:text-green-700"
+                      >
+                        {s.stateName}
+                      </Link>
+                      {' — '}
+                      <span className="text-gray-700">
+                        {s.text.replace(new RegExp(`^${s.stateName}\\s*`), '')}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-xs text-gray-500 mt-4">
+                  Full agency, exam and renewal-cycle details by state are catalogued
+                  on the{' '}
+                  <Link
+                    href="/regulations/state-licensing"
+                    className="text-green-700 underline hover:text-green-800"
+                  >
+                    state pesticide licensing reference
+                  </Link>
+                  .
+                </p>
+              </section>
+            )}
+
+            {/* Authority links — verify and resources */}
+            {authorityLinks.length > 0 && (
+              <section className="bg-white border border-gray-200 rounded-xl p-6">
+                <h2 className="font-bold text-gray-900 mb-2 text-lg flex items-center gap-2">
+                  <Shield className="w-5 h-5 text-green-600" />
+                  Verify and resources
+                </h2>
+                <p className="text-xs text-gray-500 mb-4">
+                  Primary-source references for verifying credentials and looking up
+                  state-specific rules in {operator.shortName || operator.name}{`'s`} service area.
+                </p>
+                <ul className="space-y-1.5 text-sm">
+                  {authorityLinks.map((link) => (
+                    <li key={link.url}>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-green-700 underline hover:text-green-800"
+                      >
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {/* Auto-generated FAQ block + FAQPage schema */}
+            <section className="bg-white border border-gray-200 rounded-xl p-6">
+              <h2 className="font-bold text-gray-900 mb-4 text-lg flex items-center gap-2">
+                <HelpCircle className="w-5 h-5 text-green-600" />
+                Frequently asked questions
+              </h2>
+              <FAQAccordion faqs={operatorFAQs} />
+            </section>
           </div>
 
           {/* ─── Sidebar ─────────────────────────────────────── */}

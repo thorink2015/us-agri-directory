@@ -42,7 +42,13 @@ export default function VerificationBadges({
 }: Props) {
   const all: { key: string; label: string; color: string; icon?: BadgeIcon }[] = [];
 
-  // Priority order: regulatory > compliance > verified > identity tags > manufacturer certs.
+  // Verified Operator pinned first — operator confirmed their listing directly,
+  // distinct trust signal that should never be clipped by the `max` slice.
+  // pendingConfirmation suppresses Verified (mutually exclusive at data layer).
+  if (operator.verified && !operator.pendingConfirmation) {
+    all.push({ key: 'verified', label: 'Verified Operator', color: EMERALD, icon: 'badge' });
+  }
+  // Then regulatory > compliance > identity tags > manufacturer certs.
   if (operator.certFAAPart137) {
     all.push({ key: 'faa137', label: 'FAA Part 137 ✓', color: GREEN });
   }
@@ -51,11 +57,6 @@ export default function VerificationBadges({
   }
   if (operator.ndaaCompliant) {
     all.push({ key: 'ndaa', label: 'NDAA Compliant ✓', color: BLUE });
-  }
-  // Verified takes precedence over pendingConfirmation; the two are mutually
-  // exclusive at the data layer (see operator profile rendering).
-  if (operator.verified && !operator.pendingConfirmation) {
-    all.push({ key: 'verified', label: 'Verified Operator', color: EMERALD, icon: 'badge' });
   }
   if (operator.veteranOwned) {
     all.push({ key: 'veteran', label: 'Veteran-Owned', color: SLATE, icon: 'shield' });

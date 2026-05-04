@@ -1923,6 +1923,7 @@ export const operators: Operator[] = [
     certFAAPart107: true,
     verified: true,
     featured: false,
+    lastUpdated: '2026-04-29',
   },
   {
     slug: 'wvu-extension',
@@ -3236,11 +3237,11 @@ export const operators: Operator[] = [
     services: ['spraying'],
     drones: ['dji-agras-t50'],
     crops: ['corn', 'soybeans', 'grapes', 'orchards', 'cover-crops'],
-    priceMinUsd: 15,
-    priceMaxUsd: 15,
+    priceMinUsd: 14,
+    priceMaxUsd: 18,
     featured: false,
     verified: true,
-    lastUpdated: '2026-04-29',
+    lastUpdated: '2026-05-02',
   },
   {
     slug: 'spray-drone-solutions',
@@ -4868,7 +4869,7 @@ export const operators: Operator[] = [
     name: 'Rafter 7 AgriTech',
     tagline: 'No job too big or too small',
     description:
-      'Texas-based operator covering TX, OK, and NM. Retired ag teacher Rodney "Rod" Brents combines traditional ranching with drone technology. Services include spraying, brush control (Brush Bullet), pasture management, right-of-way and solar farm spraying.',
+      'Texas-based operator covering TX, OK, and NM. Retired ag teacher Rod Brents combines traditional ranching with drone technology. Services include spraying, brush control (Brush Bullet), pasture management, right-of-way and solar farm spraying.',
     country: 'US',
     counties: ['texas', 'oklahoma', 'new-mexico'],
     city: 'Texas (serves OK and NM)',
@@ -4880,7 +4881,7 @@ export const operators: Operator[] = [
     crops: ['cotton', 'corn', 'pasture', 'rangeland'],
     featured: false,
     verified: true,
-    lastUpdated: '2026-04-29',
+    lastUpdated: '2026-05-02',
   },
   {
     slug: 'tracye-beer-independent',
@@ -7092,7 +7093,17 @@ export function getOperatorBySlug(slug: string): Operator | undefined {
 }
 
 export function getOperatorsByCounty(stateSlug: string): Operator[] {
-  return operators.filter((op) => op.counties.includes(stateSlug));
+  return operators
+    .filter((op) => op.counties.includes(stateSlug))
+    .sort((a, b) => {
+      const aFeat = a.featured ? 1 : 0;
+      const bFeat = b.featured ? 1 : 0;
+      if (aFeat !== bFeat) return bFeat - aFeat;
+      const aVer = a.verified && !a.pendingConfirmation ? 1 : 0;
+      const bVer = b.verified && !b.pendingConfirmation ? 1 : 0;
+      if (aVer !== bVer) return bVer - aVer;
+      return 0;
+    });
 }
 
 export function getFeaturedOperators(): Operator[] {

@@ -511,6 +511,236 @@ export const crops: Crop[] = [
     ],
     lastReviewedAt: '2026-04-16',
   },
+  {
+    slug: 'row-crops',
+    name: 'Row Crops',
+    nameRo: 'Row Crops',
+    description:
+      'Row crops is the umbrella category for corn, soybeans, wheat, cotton, sorghum and the other field crops planted in defined rows that dominate US drone spraying volume — roughly 240 million planted acres in 2024 per USDA NASS.',
+    longDescription:
+      'Row crops in US agriculture covers corn (over 90 million acres), soybeans (87 million), wheat (45 million), cotton (10 million), sorghum (6 to 8 million), and rice (2.5 million), plus smaller-acreage entries like dry beans, peanuts and sunflowers. Together these account for roughly 240 million planted acres each year per USDA NASS, and they are the single largest customer for commercial agricultural drone spraying in the United States. Row-crop spraying is dominated by foliar fungicide and insecticide programs in the canopy-tall middle of the season, plus burndown and pre-emerge herbicide work at the edges. Drone economics work because row-crop fields are large and flat enough to support 200 to 600 acres-per-day throughput on a single DJI Agras T50 or Hylio AG-272 class machine, and tall canopies (corn at VT/R1, soybeans at R2/R3) make ground equipment costly or impossible. Operators serving row crops should hold FAA Part 107 plus FAA Part 137, the state commercial pesticide applicator license with aerial endorsement, and a chemical drift insurance rider. The four major drone-treated row crops have their own profile pages — corn, soybeans, wheat and cotton — with crop-specific timing, pests and rate ranges. Operators listing "row-crops" generally service multiple of these crops within a region.',
+    aeoBlock:
+      'Row crops in the United States cover roughly 240 million planted acres per year and are the single largest customer for commercial agricultural drone spraying. Drone fungicide and insecticide rates run $12 to $22 per acre depending on crop and product. The four highest-volume drone-sprayed row crops are corn (90M acres, VT/R1 fungicide), soybeans (87M, R2/R3 fungicide), wheat (45M, T3 heading) and cotton (10M, defoliant Sep-Oct).',
+    priceMinUsd: 12,
+    priceMaxUsd: 22,
+    treatmentMonths: [5, 6, 7, 8, 9, 10],
+    haUS: 240000000,
+    icon: '🌾',
+    mainPests: [
+      'Variable by crop, see corn, soybeans, wheat and cotton profile pages for crop-specific pest and disease lists',
+    ],
+    uvlNormLHa: '2 to 5 gpa',
+    authorityLinks: [
+      { label: 'USDA NASS Crop Production Annual Summary', url: 'https://www.nass.usda.gov/Publications/Todays_Reports/reports/crop0125.pdf' },
+      { label: 'USDA NASS QuickStats: Field Crops', url: 'https://quickstats.nass.usda.gov/' },
+      { label: 'University of Illinois Extension: Row Crops', url: 'https://extension.illinois.edu/' },
+      { label: 'Iowa State Extension Custom Rate Survey', url: 'https://www.extension.iastate.edu/agdm/crops/pdf/a3-10.pdf' },
+    ],
+    faqs: [
+      {
+        question: 'What counts as a "row crop" for drone spraying purposes?',
+        answer:
+          'In US ag, "row crops" means field crops planted in distinct rows on large acreage — corn, soybeans, wheat, cotton, sorghum, rice, dry beans and peanuts are the main entries. Specialty crops, vegetables, orchards, vineyards and pasture are usually grouped separately because their drone application patterns and rates differ.',
+      },
+      {
+        question: 'Which row crop has the highest drone spraying volume nationally?',
+        answer:
+          'Corn. Corn fungicide at the VT/R1 tassel stage is the single largest use case for agricultural drones in America, covering over 90 million acres annually. Soybean fungicide at R2/R3 is a close second.',
+      },
+      {
+        question: 'How much does drone spraying cost per acre on row crops?',
+        answer:
+          'National averages run $12 to $18 per acre for fungicide and insecticide on corn, soybeans and wheat. Cotton defoliant runs $14 to $20 per acre. The 2026 Iowa State Custom Rate Survey is the cleanest university-validated benchmark, with an average of $12.50 per acre across 47 Iowa operator responses.',
+      },
+      {
+        question: 'When are the peak drone spray windows on row crops?',
+        answer:
+          'Mid-July through early August for corn fungicide (VT/R1), mid-July through mid-August for soybeans (R2/R3), late May through early June for wheat heading, and September through October for cotton defoliation. The windows overlap heavily; book operators 4 to 6 weeks ahead.',
+      },
+      {
+        question: 'Are drone rates the same across all row crops?',
+        answer:
+          'No. Per-acre rates vary by crop based on field size, target pest pressure and product complexity. Corn and soybeans are the cheapest because fields are large and operators run high volume. Cotton defoliant runs higher because the application window is short and the work is concentrated. Specialty row crops like rice and peanuts see narrower per-acre ranges.',
+      },
+    ],
+    lastReviewedAt: '2026-05-02',
+  },
+  {
+    slug: 'pasture',
+    name: 'Pasture and Rangeland',
+    nameRo: 'Pasture and Rangeland',
+    description:
+      'Pasture and rangeland covers more than 650 million acres in the United States per USDA NASS. Drone spraying is dominated by broadleaf weed control, brush and mesquite knockdown, and fertilizer or seed broadcast on grazing land too rough for ground rigs.',
+    longDescription:
+      'Pasture and rangeland is the largest land-use category in US agriculture at roughly 650 million acres (USDA NASS Census of Agriculture 2022), spanning improved pasture in the eastern half of the country, native rangeland on the Great Plains, and arid range across the western states. Drone spraying on pasture is fundamentally different from row-crop work: rather than canopy-level fungicide passes, the most common services are broadleaf weed control (2,4-D, dicamba, picloram), brush and mesquite knockdown (triclopyr, aminopyralid), and pasture seeding or fertilizer broadcast on terrain that ground equipment cannot easily reach. Per-acre rates run $14 to $25 because pasture work involves more travel, more spot-treat patterns and longer ferry distances between fields than row-crop spraying. Drones excel where ground rigs fail: ridges, wooded transition zones, riparian buffers, and rocky or hilly grazing land where airplane applicators are inefficient on small acreages. Operators serving pasture and rangeland should hold FAA Part 137 plus the state commercial pesticide applicator license with aerial endorsement; some states require a separate "pasture and rangeland" sub-category endorsement on top of the basic aerial credential. The Texas Department of Agriculture, Oklahoma Department of Agriculture, and Mountain West state ag departments publish state-specific guidance on aerial pasture work, including buffer zones for pollinator habitat and watershed protection.',
+    aeoBlock:
+      'Pasture and rangeland covers approximately 650 million acres in the United States per USDA NASS, the largest single ag land-use category. Drone spraying on pasture costs $14 to $25 per acre, primarily for broadleaf weed control, brush and mesquite knockdown, and seed or fertilizer broadcast. Drones win on terrain where ground rigs cannot operate — ridges, wooded transition zones, and rocky or hilly grazing land.',
+    priceMinUsd: 14,
+    priceMaxUsd: 25,
+    treatmentMonths: [4, 5, 6, 7, 8, 9],
+    haUS: 650000000,
+    icon: '🌿',
+    mainPests: [
+      'Mesquite (Prosopis spp.)',
+      'Eastern Red Cedar',
+      'Multiflora Rose',
+      'Musk Thistle, Canada Thistle, Bull Thistle',
+      'Prickly Pear Cactus',
+      'Sericea Lespedeza',
+    ],
+    uvlNormLHa: '2 to 8 gpa',
+    authorityLinks: [
+      { label: 'USDA NASS Census of Agriculture: Pasture and Rangeland', url: 'https://www.nass.usda.gov/AgCensus/' },
+      { label: 'Texas A&M AgriLife Extension: Brush and Weed Control', url: 'https://agrilifeextension.tamu.edu/' },
+      { label: 'Oklahoma State Extension: Rangeland Management', url: 'https://extension.okstate.edu/' },
+      { label: 'USDA NRCS: Pasture and Hayland Conservation Practices', url: 'https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/plants-animals/pollinator-habitat' },
+    ],
+    faqs: [
+      {
+        question: 'What does drone spraying cost per acre on pasture?',
+        answer:
+          'Pasture work runs $14 to $25 per acre, higher than row-crop rates because of more travel between fields, more spot-treat patterns, and rougher terrain. Brush and mesquite knockdown often runs at the upper end of the range. Spot-treat work on small infestations may be billed per hour or per visit rather than per acre.',
+      },
+      {
+        question: 'When is the right time to spray pasture by drone?',
+        answer:
+          'Most broadleaf weed control happens April through June while target species are actively growing and before grazing turn-out. Brush and mesquite knockdown is timed to leaf-out in late spring through early summer. Fall applications target perennial weeds going dormant. Local extension service guidance for your state is the best timing reference.',
+      },
+      {
+        question: 'Which herbicides are most commonly used on pasture by drone?',
+        answer:
+          '2,4-D and dicamba dominate broadleaf weed control. Triclopyr and aminopyralid are common for brush and mesquite. All three product classes have aerial application labels with specific droplet, wind and buffer requirements. Confirm the specific product label permits aerial application before booking.',
+      },
+      {
+        question: 'Can drones reach pasture terrain that ground rigs cannot?',
+        answer:
+          'Yes. Drones excel on hilly, wooded, rocky and riparian-adjacent pasture where ground sprayers either cannot enter or risk soil compaction and water-quality issues. The economics tip toward drones whenever target acres are scattered across a property rather than concentrated in one large block.',
+      },
+      {
+        question: 'Do I need a special license to spray pasture by drone?',
+        answer:
+          'Same FAA Part 107 plus Part 137 plus state aerial applicator endorsement that any commercial drone spraying requires. Some states (Texas, Oklahoma, Mountain West) have a separate pasture or rangeland sub-category on the state license; verify with your state department of agriculture before booking work.',
+      },
+    ],
+    lastReviewedAt: '2026-05-02',
+  },
+  {
+    slug: 'alfalfa',
+    name: 'Alfalfa',
+    nameRo: 'Alfalfa',
+    description:
+      'Alfalfa covers roughly 16 million harvested acres in the United States per USDA NASS, the highest-yielding hay forage crop. Drone spraying targets alfalfa weevil in spring and leaf spot fungicide between cuttings.',
+    longDescription:
+      'Alfalfa is the dominant US hay forage crop, with approximately 16 million harvested acres in 2024 per USDA NASS — concentrated in California, the Mountain West, and the Northern Plains states (Idaho, Montana, South Dakota, Nebraska, Iowa, Wisconsin). Drone spraying on alfalfa is dominated by alfalfa weevil insecticide passes in early spring (late March through May depending on latitude), leaf spot fungicide applications between cuttings during disease pressure years, and pre-cutting harvest aids in seed production fields. Established alfalfa stands are typically cut three to five times per growing season in the Midwest and up to 10 times in California; each cutting interval is a potential drone application window. Per-acre rates run $14 to $20, slightly above corn fungicide because alfalfa stands are denser and operators run lower-volume passes for canopy penetration. The drone advantage on alfalfa is timing: weevil and aphid outbreaks move fast and the canopy regrows quickly between cuttings, so the 24-to-48-hour turnaround a drone operator can offer beats waiting for ground rig availability. University of California IPM, University of Wisconsin Extension and Mississippi State University Extension publish current scouting and treatment thresholds for the major alfalfa pests.',
+    aeoBlock:
+      'Alfalfa covers approximately 16 million harvested acres in the United States, concentrated in California, the Mountain West and the Northern Plains. Drone spraying on alfalfa costs $14 to $20 per acre, primarily for alfalfa weevil insecticide in early spring and leaf spot fungicide between cuttings. The drone advantage is timing — the 24-to-48-hour turnaround on weevil and aphid outbreaks beats ground-rig availability during peak pest pressure.',
+    priceMinUsd: 14,
+    priceMaxUsd: 20,
+    treatmentMonths: [4, 5, 6, 7, 8, 9],
+    haUS: 16000000,
+    icon: '🍀',
+    mainPests: [
+      'Alfalfa Weevil (Hypera postica)',
+      'Pea Aphid, Spotted Alfalfa Aphid, Blue Alfalfa Aphid',
+      'Potato Leafhopper',
+      'Common Leaf Spot, Lepto Leaf Spot, Spring Black Stem',
+      'Anthracnose',
+    ],
+    uvlNormLHa: '2 to 5 gpa',
+    authorityLinks: [
+      { label: 'USDA NASS Crop Production: Hay and Alfalfa', url: 'https://www.nass.usda.gov/Statistics_by_Subject/index.php?sector=CROPS' },
+      { label: 'University of California IPM: Alfalfa', url: 'https://ipm.ucanr.edu/agriculture/alfalfa/' },
+      { label: 'University of Wisconsin Extension: Alfalfa', url: 'https://learningstore.extension.wisc.edu/' },
+      { label: 'University of Idaho Extension: Alfalfa', url: 'https://www.uidaho.edu/extension' },
+    ],
+    faqs: [
+      {
+        question: 'What does drone spraying cost per acre on alfalfa?',
+        answer:
+          'Alfalfa drone spraying runs $14 to $20 per acre, slightly above corn fungicide because the canopy is denser and operators run lower-volume passes for full coverage. Multi-cutting properties often book a season-long contract at a per-cutting discount.',
+      },
+      {
+        question: 'When should I spray alfalfa weevil by drone?',
+        answer:
+          'Treatment timing depends on degree-day accumulation and stem-tip count thresholds, typically late March through early May depending on latitude. Iowa State and University of Wisconsin Extension publish current scouting thresholds. The 24-to-48-hour turnaround a drone operator can offer is critical because weevil populations spike fast.',
+      },
+      {
+        question: 'Can drones spray alfalfa during the regrowth window between cuttings?',
+        answer:
+          'Yes. The 5-to-7-day regrowth window after cutting is ideal for low-volume insecticide and fungicide passes — the canopy is short enough that drift is minimal and the chemical reaches the entire canopy on a single pass. Time the application before pollinators return to the field; aerial labels specify pollinator buffers.',
+      },
+      {
+        question: 'How does drone spraying compare to ground-rig and airplane work on alfalfa?',
+        answer:
+          'Ground rigs trample stand cuts and compact moist soil between cuttings, reducing yield. Airplanes are economical on 500+ contiguous acres but inefficient on smaller mixed-cropping operations. Drones land in between: ideal for 40 to 500 acre fields, fast turnaround, no soil compaction or trampling.',
+      },
+      {
+        question: 'Do I need a different state license to spray alfalfa vs. corn?',
+        answer:
+          'No. The same state commercial pesticide applicator license with aerial category endorsement covers both. Some states require an additional "field crop" sub-category endorsement that covers both row crops and forages; confirm with your state department of agriculture.',
+      },
+    ],
+    lastReviewedAt: '2026-05-02',
+  },
+  {
+    slug: 'potatoes',
+    name: 'Potatoes',
+    nameRo: 'Potatoes',
+    description:
+      'Potatoes cover roughly 1 million harvested acres in the United States per USDA NASS, concentrated in Idaho, Washington, Wisconsin and Maine. Drone spraying targets late blight, Colorado potato beetle and an intensive 8-to-12-pass fungicide program per season.',
+    longDescription:
+      'US potato production runs roughly 1 million harvested acres per year per USDA NASS, with Idaho the dominant state at over 300,000 acres followed by Washington, Wisconsin, North Dakota, Colorado and Maine. Potatoes are one of the most pesticide-intensive row crops in US agriculture, with an 8-to-12-pass fungicide program per season targeting late blight (Phytophthora infestans), early blight (Alternaria solani) and white mold. Drones serve potato growers in two niches: late-season fungicide work after the canopy closes and ground rigs cause yield-damaging row crush, and Colorado potato beetle insecticide work on small or irregularly shaped fields where airplane setup time is uneconomic. Per-acre rates run $16 to $24, higher than corn or soybean fungicide because of the application frequency and the precision required to keep pesticide off neighboring sensitive crops. Idaho potato operators book through season contracts that cover the full disease program; spot work for beetle outbreaks runs at premium rates with 24-to-48-hour turnaround. Operators serving potato growers should hold FAA Part 137 plus the state commercial pesticide applicator license with aerial endorsement and, on Idaho fields, a Confidentiality Agreement with the grower for scheduling against neighboring fields. University of Idaho Extension and the Pacific Northwest Pest Management Handbook are the authoritative scouting references.',
+    aeoBlock:
+      'Potatoes cover approximately 1 million harvested acres in the United States, concentrated in Idaho, Washington, Wisconsin and Maine. Drone spraying on potatoes costs $16 to $24 per acre, with an 8-to-12-pass fungicide program per season targeting late blight and early blight. The drone advantage is late-season canopy work after row closure when ground rigs would crush rows and reduce yield.',
+    priceMinUsd: 16,
+    priceMaxUsd: 24,
+    treatmentMonths: [5, 6, 7, 8, 9],
+    haUS: 1000000,
+    icon: '🥔',
+    mainPests: [
+      'Late Blight (Phytophthora infestans)',
+      'Early Blight (Alternaria solani)',
+      'White Mold (Sclerotinia sclerotiorum)',
+      'Colorado Potato Beetle',
+      'Potato Leafhopper',
+      'Verticillium Wilt',
+    ],
+    uvlNormLHa: '5 to 15 gpa',
+    authorityLinks: [
+      { label: 'USDA NASS Potato Statistics', url: 'https://www.nass.usda.gov/Statistics_by_Subject/index.php?sector=CROPS' },
+      { label: 'University of Idaho Extension: Potato', url: 'https://www.uidaho.edu/extension/potatoes' },
+      { label: 'Pacific Northwest Pest Management Handbooks', url: 'https://pnwhandbooks.org/' },
+      { label: 'University of Wisconsin Vegetable Pathology', url: 'https://vegpath.plantpath.wisc.edu/' },
+    ],
+    faqs: [
+      {
+        question: 'What does drone spraying cost per acre on potatoes?',
+        answer:
+          'Potato drone spraying runs $16 to $24 per acre, the highest average among major US row crops because of the 8-to-12-pass disease program per season and the precision required to manage drift onto sensitive neighboring crops. Season contracts covering the full program are typically discounted 10 to 15% from spot rates.',
+      },
+      {
+        question: 'How many drone passes does a potato fungicide program need?',
+        answer:
+          'Most Idaho and Washington programs run 8 to 12 passes per season, starting at row closure and continuing through vine-kill. Late blight pressure years can push the count to 14 or more passes on susceptible varieties. Pacific Northwest Pest Management Handbooks publish current threshold and rotation guidance.',
+      },
+      {
+        question: 'Why use drones instead of airplanes on potatoes?',
+        answer:
+          'Drift control on neighboring sensitive crops, smaller-field economics, and faster turnaround on Colorado potato beetle outbreaks. Airplanes are still the workhorse on contiguous 500+ acre Idaho fields, but drones win on fragmented production, drift-sensitive borders, and the late-season canopy work after row closure when airplane wingtip drift becomes a liability.',
+      },
+      {
+        question: 'When is the peak potato drone spraying season in the US?',
+        answer:
+          'June through September is the heart of the disease program in the Pacific Northwest. Wisconsin and Maine peak slightly earlier in June through August. Vine-kill applications in September close the season. Operators serving Idaho potato country are typically fully booked into season contracts by mid-May.',
+      },
+      {
+        question: 'Do potato drone applications need any special licensing on top of Part 137?',
+        answer:
+          'Same FAA Part 107 plus Part 137 plus state commercial pesticide applicator license with aerial endorsement that any commercial drone spraying requires. Idaho and Washington both publish potato-specific drift management guidance under their state department of agriculture; some Idaho operators voluntarily certify under the Idaho Potato Commission grower-operator coordination program.',
+      },
+    ],
+    lastReviewedAt: '2026-05-02',
+  },
 ];
 
 export function getCropBySlug(slug: string): Crop | undefined {

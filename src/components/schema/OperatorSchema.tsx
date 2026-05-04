@@ -48,7 +48,9 @@ export default function OperatorSchema({ operator }: Props) {
       name: stateNameMap[c] || c,
     })),
     priceRange: operator.priceMinUsd
-      ? `$${operator.priceMinUsd}-$${operator.priceMaxUsd || operator.priceMinUsd}`
+      ? operator.priceMaxUsd && operator.priceMaxUsd !== operator.priceMinUsd
+        ? `$${operator.priceMinUsd}-$${operator.priceMaxUsd}`
+        : `$${operator.priceMinUsd}`
       : '$$',
   };
 

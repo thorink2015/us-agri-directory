@@ -297,6 +297,139 @@ Long-form numeric tables go inside a `<figure>` to get the `.guide-table-callout
 </figure>
 ```
 
+## Inline SVG charts for guide pages
+
+**Used on:** `/guides/agricultural-drone-spraying-statistics-2026`.
+Pattern: ship statistics visualizations as inline SVG React components,
+not raster image files. Lives in `src/components/guides/StatsCharts.tsx`.
+
+**Why:**
+- Zero extra HTTP requests, ~1–2 KB per chart, no image-decode work
+- Crisp at any DPI/zoom, print-friendly, no LCP penalty
+- AEO-friendly: `<text>` nodes are readable by AI engines and screen readers
+- Easy to brand-match (uses Tailwind palette directly)
+
+**Required scaffolding per chart:**
+- `viewBox`, `preserveAspectRatio="xMidYMid meet"`, `role="img"`
+- `<title>` + `<desc>` referenced by `aria-labelledby`
+- Real `<text>` for every value label, axis tick, source line — never
+  embed text in raster
+- Brand colors: green-700 `#15803d`, green-900 `#14532d`, green-500
+  `#22c55e`, amber-700 `#b45309`, amber-400 `#fbbf24`, slate-500/700
+  for neutrals, stone-200 `#e7e5e4` for gridlines
+
+**Wrap in the existing `guide-figure` figure with a real figcaption** (no
+"image slot N of 6" placeholder text — write the actual source attribution
+in the figcaption).
+
+**No `next/image`** for these — they are SVG, not raster, so they ship
+as part of the HTML. Any single SVG over ~10 KB inlined should be split
+or simplified.
+
+## Template-level content enrichment via helper module
+
+**Used on:** `/operators/[slug]` (PR-thin-profile uplift, 2026-05-02).
+
+**Purpose:** lift sparse profile pages above Google's indexation
+threshold without manual data entry on individual records. Every
+helper composes copy or structured data from existing `src/data/*`
+(operators, states, crops, regions, counties, services).
+
+**Pattern:**
+
+1. Pure helpers in `src/lib/<entity>-content.ts` — no JSX, no side
+   effects. Return strings, structured data, or null when input is
+   too thin to produce something useful.
+2. Template imports helpers and renders new sections conditionally.
+3. JSON-LD emitted inline via
+   `<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />`.
+
+**For the operator template specifically (`src/lib/operator-content.ts`):**
+
+- `composeAutoParagraph(operator)` — only fires when description
+  word count < 30. Returns 2–3 factual sentences derived from
+  services + states + crops + region + licensing agency.
+- `getOperatorRegion(operator)` — prefers `states.ts.regionSlug`,
+  falls back to `counties.ts.region` with a free-form-to-slug map
+  (only the 4 regions that have a real `/regions/[slug]` page).
+- `getCoveredStateContext(operator)` — joins counties + states.ts
+  to surface licensingAgency + aerialCategory per covered state.
+- `getCropPricingLines(operator)` — only when operator services
+  'spraying' AND crops are listed. Pulls priceMinUsd/Max from
+  `src/data/crops.ts`. Never defaults the operator's own price.
+- `composeOperatorFAQs(operator)` — 2 FAQs: how to verify the
+  operator's licensing in their primary state (interpolates the
+  state agency name) and what their effective rate range
+  typically includes/excludes.
+- `operatorFAQSchema(faqs)` — FAQPage JSON-LD object.
+
+**Why this beats manual data entry:** ~400 operator records would
+otherwise need per-record copy. Template-level helpers lift every
+profile uniformly, including future imports.
+
+**Verified lift on three thin-profile canaries (2026-05-02):**
+
+  lnp-ag-drone-spraying  40  -> 448 words
+  sphex-ag               51  -> 462 words
+  agronix                51  -> 495 words
+  agriforce-drone        164 -> 735 words (rich profile, no regression)
+
+## Lead capture wizard (`src/components/leads/`)
+
+**Used on:** `/get-matched` standalone page (Batch 1). Future placements
+will reuse via `<GetMatchedButton />` for click-triggered modals or
+`<GetMatchedWizard />` for inline embeds.
+
+**Three pieces:**
+
+- `GetMatchedWizard.tsx` (client) is the actual 4-step form. Props:
+  `defaultStateSlug`, `source`, `headingOverride`, `subheadingOverride`,
+  `compact`, `onSubmitted`. Auto-advances on tile click for crop and
+  acreage steps. Honeypot field `company_website` always present.
+  Turnstile site key from `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (optional —
+  if unset, only honeypot guards). Submits JSON to existing Formspree
+  endpoint with `_form_type=get-matched-lead`.
+- `GetMatchedModal.tsx` (client) is an Esc-to-close, scroll-locked
+  modal that wraps the wizard. Auto-closes 4s after submit. Used by
+  the button trigger.
+- `GetMatchedButton.tsx` (client) is a click-triggered CTA that
+  `dynamic(..., { ssr: false })`-loads the modal so pages that just
+  show the CTA never pay for the wizard JS until someone clicks.
+
+**Required submission fields** (always sent):
+
+- `_form_type: 'get-matched-lead'`, `_subject`, `source`
+- `zip`, `state_slug`, `state_name`
+- `crop`, `crop_slug`, `acreage`, `acreage_value`
+- `name`, `phone` (REQUIRED), `email` (OPTIONAL)
+- `tcpa_consent: boolean`
+- `tcpa_consent_text` (verbatim agreed text, from
+  `wizard-options.ts:TCPA_CONSENT_TEXT`)
+- `tcpa_consent_at` (ISO timestamp at submit)
+- `page_url`, `referrer`, `user_agent`
+- `cf-turnstile-response` (only when Turnstile is configured)
+
+**Voice rules for placements:** keep CTA labels under 5 words. Use
+"Get my 3 matches" or "Text me my matches", never "Submit" / "Get
+Started". Body lines should reuse phrasings from
+`wizard-options.ts:REASSURANCE_LINE` and
+`wizard-options.ts:PRICING_CONTEXT_LINE`.
+
+**Pre-pick state on a state page:**
+
+```tsx
+import GetMatchedButton from '@/components/leads/GetMatchedButton';
+
+<GetMatchedButton
+  defaultStateSlug={state.slug}
+  source={`state-${state.slug}`}
+  headingOverride={`Find drone operators in ${state.name}`}
+  subheadingOverride={`Tell us your ZIP and crop. We will text you up to 3 verified operators in ${state.name} within 24 hours.`}
+>
+  Get my 3 matches in {state.name}
+</GetMatchedButton>
+```
+
 ## Commit message format
 
 ```

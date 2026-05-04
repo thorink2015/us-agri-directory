@@ -17,6 +17,207 @@ Author placeholders filled and photo uploaded 2026-04-24 (see
 - `organizationSchema().sameAs` — add company LinkedIn / X when
   those accounts exist
 
+## Phase A follow-up (from PR #90 audit, 2026-05-02)
+
+Findings written to `audit/phase-a-followup-audit.md`. Three 404
+fixes shipped 2026-05-02 (this PR), four remaining items below.
+
+Done (PR #91 — three 404s):
+
+- ✅ `/regions/delta` 301 → `/regions/mississippi-delta` (force=true
+  in `netlify.toml`)
+- ✅ `dji-agras-t25p` full catalog entry in `src/data/drone-model.ts`
+  (mirrors T25 specs, US-spec variant noted, NDAA non-compliance
+  called out, 6 FAQs, 5 authority links). Removed the no-longer-
+  needed fallback label from `DRONE_NAME_FALLBACKS`.
+- ✅ Homepage newsletter form rewired to Formspree via the new
+  `src/components/ui/HomepageNewsletterForm.tsx` client component
+  (mirrors Footer + ContactForm + ExitIntentPopup pattern). Hidden
+  `_form_type=newsletter-homepage` plus `_subject` so the inbox can
+  distinguish from the footer signup.
+
+Done (PR #93 — operator template uplift):
+
+- ✅ Thin operator profile uplift via `src/lib/operator-content.ts`
+  helpers and 5 new sections in `src/app/operators/[slug]/page.tsx`
+  (auto paragraph, region context line, crop pricing context,
+  state licensing context, 2-FAQ block + FAQPage JSON-LD). Verified
+  rendered word counts on three canaries: lnp-ag-drone-spraying
+  40 → 448, sphex-ag 51 → 462, agronix 51 → 495. Rich profile
+  (agriforce-drone) 164 → 735, no regression. Pattern documented
+  in `_memory/code-patterns.md`.
+
+Done (PR #94 — state-crop template uplift):
+
+- ✅ State-crop combo template uplift via
+  `src/lib/state-crop-content.ts` helpers and 6 new/rewired sections
+  in `src/app/states/[slug]/crops/[crop]/page.tsx` (state-specific
+  intro paragraph, spray-window callout, crop.longDescription
+  swap, state licensing block, combined 7–11 FAQ block, FAQPage
+  JSON-LD, page-level noindex gate). Audit's stated 408 combos was
+  actually 50 × 8 = **400** combos (counties.ts has 50 entries,
+  not 51). Build-time log emits the noindex-gate distribution.
+  Verified word counts: mississippi/corn 1934→2753, iowa/corn
+  774→1656, texas/cotton 834→1732 (all clear the 700-word target).
+  99 of 400 combos correctly emit `<meta robots="noindex,follow">`.
+
+Done (PR #95 — three feasibility audits, audit-only):
+
+- ✅ `audit/city-pages-feasibility.md` — city route already exists
+  at `/states/[slug]/[city]`; realistic ceiling ~225 cities with
+  USDA NASS + Census Places seed data.
+- ✅ `audit/service-state-feasibility.md` — service-state route
+  exists, 500 pages, 276 of 500 combos at ≥3 ops, recommended
+  uplift pattern (now shipped in PR #96 below).
+- ✅ `audit/crawl-budget-check.md` — ~1,499 indexable URLs after
+  PR #94. Zero internal 404s. Three follow-up issues flagged.
+
+Done (PR #96 — service-state template uplift):
+
+- ✅ Service-state combo template uplift via
+  `src/lib/state-service-content.ts` helpers and 8 new/rewired
+  sections in `src/app/states/[slug]/services/[service]/page.tsx`
+  (state-specific intro paragraph, service AEO callout, crop
+  affinity callout for the 6 crop-binding services, state
+  licensing block, authority links section, combined 4–9 FAQ
+  block + FAQPage JSON-LD, page-level noindex gate). 224 of 500
+  combos correctly noindex'd post-build (emergency=50, rental=46,
+  consultancy=38, mapping=24, monitoring=19, spreading=17,
+  training=11, sales=8, seeding=7, spraying=4). Verified word
+  counts: iowa/spraying 1554→1946 (+25%), ohio/mapping 893→1401
+  (+57%), iowa/spreading 930→1372 (+48%), alaska/emergency
+  605→1101 (+82%, noindex). Pattern documented in
+  `_memory/code-patterns.md`.
+
+Done (PR #97 — cleanup batch):
+
+- ✅ Noindex gate on thin `/states/[slug]/operators` pages.
+  Threshold of <9 operators captures the 8 audit-flagged plus
+  Wisconsin (also 7 ops/399 words). 9 states gated:
+  alaska, arizona, hawaii, nevada, new-mexico, rhode-island,
+  utah, wisconsin, wyoming.
+- ✅ Scaffolded 4 orphan crop slugs in `src/data/crops.ts`:
+  `row-crops` (240M acres umbrella), `pasture` (650M acres),
+  `alfalfa` (16M acres), `potatoes` (1M acres). Full Crop
+  entries with 5 FAQs each, 4-5 authority links each, primary
+  sources (USDA NASS, university extension).
+- ✅ Scaffolded 4 orphan drone slugs in
+  `src/data/drone-model.ts`: `dji-agras-t40`, `dji-agras-t10`,
+  `xag-p100`, `eavision-j100`. Full DroneModel entries mirroring
+  the dji-agras-t25/t25p shape from PR #91. NDAA non-compliance
+  called out for all four (Chinese-made). Removed corresponding
+  fallback labels.
+- ✅ Tightened `cities.ts` `isValidCityName()` — rejects multi-
+  state separators, parentheticals, county/region suffixes,
+  regional prefixes, embedded state abbreviations, all-caps
+  placeholders, digits. 25 → 23 qualifying cities; the 2
+  dropped are the audit-flagged anomalies (`southern-california`,
+  `colorado-weld-county`).
+- ✅ Fixed `j100` / `j150` operator slug typos in
+  `src/data/operators.ts` (rafter-7-agritech now references
+  `joyance-j100` / `joyance-j150`). Removed the j100/j150
+  fallbacks from DRONE_NAME_FALLBACKS now that no operator
+  references them.
+
+Done (PR #98 — city seed data):
+
+- ✅ 196 ag-relevant US cities seeded from USDA NASS + Census
+  Bureau Places into `src/data/seed-cities.ts`. 48 of 50 states
+  covered; per-state cap of 5; lower counts for weak-ag states
+  (Hawaii 1, Alaska 1, MA/NH/CT/DE 2; UT/AZ/WV/MD/NJ/VT/ME/WY 3).
+- ✅ Merged into `src/data/cities.ts` via two-pass buildCityIndex
+  with `isSeed` flag. Qualifying cities: **23 → 216**.
+- ✅ City template extended for graceful 0-operator handling:
+  AEO/FAQ branches, county callout, statewide operator fallback
+  (up to 12 in the grid), crop table fallback to county.mainCrops.
+  All 216 pages clear 700-word threshold.
+- ✅ Noindex gate at metadata layer for seeded cities with 0
+  direct ops AND <3 statewide operators. **1 of 216** pages
+  gated (alaska/palmer).
+
+Done (PR #99 — content quality audits, audit-only):
+
+- ✅ `audit/internal-duplication.md` — 4 PASS, 1 WARN (operators
+  41.3% mean). Helper script committed at
+  `tools/content-audits/duplicate_check.py`.
+- ✅ `audit/external-uniqueness.md` — 9 of 9 strategic Google
+  searches returned zero competitor hits across 5 routes.
+- ✅ `audit/rankability-check.md` — 1,758 unique titles. Operators
+  FAIL (no external authority links + ultra-thin word counts);
+  cities WARN (no external authority links).
+
+Done (PR #100 — operator + city template fixes per PR #99 audits):
+
+- ✅ Diversified operator auto-paragraph (6 lead variants × 3 locality
+  × 3 licensing = ~18 prose combinations per state), FAQ wording
+  (3 question + 3 answer variants per FAQ), and per-state licensing
+  block sentence (3 variants). All keyed on hash(operator.slug) or
+  hash(operator.slug + state.slug) so same-state peers diverge
+  deterministically. Operator route mean similarity: **41.3% → 19.5%**
+  (PASS). 1 ultra-thin operator (`applied-ag`) noindex'd.
+- ✅ Added per-operator authority-links block (state regulator URL,
+  state extension URL, FAA Part 137, NAAA, optional NDAA Section
+  848). Operator rankability authority-link check: **FAIL → PASS**
+  (5/5 sampled pass post-fix).
+- ✅ Added authority-links section to city template. City rankability
+  authority-link check: **FAIL → PASS** (5/5 sampled).
+
+Done (PR #100/#101 — full technical SEO + AEO + perf audit + critical fixes):
+
+- ✅ 8 audit files in `audit/` (schema, indexing-config, meta,
+  performance, AEO, internal-link-graph, http-security,
+  onpage-issues).
+- ✅ **CRITICAL** (PR #101 commit 1): sitemap noindex filter via
+  new `src/lib/indexing-gates.ts`. Sitemap **1,903 → 1,419** URLs
+  (-484 noindex'd pages excluded). Page templates and sitemap
+  share predicates so no more drift.
+- ✅ **HIGH** (commit 2): drone catalog Product schema with brand,
+  model, additionalProperty, offers (when MSRP parseable). All 17
+  drone pages now ship 4 JSON-LD blocks (FAQPage, BreadcrumbList,
+  Article, Product).
+- ✅ **HIGH** (commit 3): state-operators CollectionPage + ItemList
+  schema across all 50 pages. Was zero-schema; now 2 JSON-LD blocks.
+- ✅ **HIGH** (commit 4): per-city dynamic og:image generation.
+  216 city pages each generate a unique 1200×630 PNG with city +
+  state + top crop/service + operator count + brand chrome.
+
+Still pending — MEDIUM and LOW from PR #100 audits (post-launch polish):
+
+- MEDIUM: state-crop and state-service routes missing `BreadcrumbList`
+  schema (1,100 pages).
+- MEDIUM: operator template uses `ProfessionalService` instead of
+  `LocalBusiness` (drops geo + priceRange Rich Results on ~250
+  operators with full address+lat+lng).
+- MEDIUM: homepage missing `WebSite` + `SearchAction` schema.
+- MEDIUM: per-route og:image generation for state, crop, service,
+  operator routes (cities done in PR #101).
+- MEDIUM: 19 orphan pages — 17 sparse-state /states/[slug]/operators
+  (PR #97 noindex'd; still no inbound links from state hub).
+- MEDIUM: `/operators/agnomy` anomaly to investigate.
+- MEDIUM: homepage 50-word direct-answer to "how much does drone
+  spraying cost".
+- MEDIUM: `HowTo` schema on city template's "How to hire" 3-step
+  section.
+- MEDIUM: state-hub HTML weight averaging 206 KB (raw, gzip-friendly
+  but worth investigating if LCP regresses).
+- MEDIUM: 16 long-H1 pages (descriptive, accurate; just truncation).
+- LOW (15 across 8 audits): see audit files for individual items.
+
+Still pending:
+
+1. **Fill `organizationSchema().sameAs`** when company social
+   accounts exist.
+2. **Pull a Search Console crawl-error export** and audit operator
+   slug duplicates / orphan pages in bulk (flagged in the PR #90
+   audit "bonus finding" section).
+3. **City H1 tonal review** — current "Agricultural Drone Services
+   in [City], [State]" vs alternative "Drone Spraying in [City],
+   [State]". Both keyword-relevant; current framing is broader
+   since city pages surface multiple services. Cosmetic.
+4. **Alaska state hub content lift** — single state hub at 521
+   words, fails the 700 threshold. Not template-fixable; needs a
+   one-time content pass on `states.ts` Alaska entry.
+
 ## Blocked on research files
 
 See `_research/README.md` for what's uploaded and what's missing.

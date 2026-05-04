@@ -1,4 +1,4 @@
-Contact: mailto:contact@terradron.ro
-Expires: 2027-04-11T00:00:00.000Z
-Preferred-Languages: ro, en
-Canonical: https://terradron.ro/.well-known/security.txt
+Contact: mailto:eugen@agdronedirectory.com
+Expires: 2027-05-02T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://agdronedirectory.com/.well-known/security.txt

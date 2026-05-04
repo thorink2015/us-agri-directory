@@ -86,6 +86,47 @@ export default function DronePage({ params }: Props) {
     image: `${SITE.domain}/images/og-default.jpg`,
   };
 
+  // ─── Product schema (PR #101 — schema audit HIGH) ──────────────────────
+  // Try to parse a numeric MSRP from drone.msrpUsd (data is free-form like
+  // "18,000 pre-tariff; 22,000 to 28,000 post-tariff" or "Pending"). When
+  // we can extract the lowest figure, emit Offer with it; otherwise emit
+  // Product without an Offer (still passes Rich Results validation).
+  const msrpDigits = drone.msrpUsd.match(/\d{1,3}(?:,\d{3})+|\d{4,}/g) || [];
+  const msrpLowest = msrpDigits.length > 0
+    ? Math.min(...msrpDigits.map((d) => Number(d.replace(/,/g, ''))))
+    : null;
+  const productSchema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: drone.name,
+    description: drone.description,
+    url: `${SITE.domain}/drones/${drone.slug}`,
+    brand: { '@type': 'Brand', name: drone.manufacturer },
+    manufacturer: { '@type': 'Organization', name: drone.manufacturer },
+    model: drone.name,
+    category: 'Agricultural drone',
+    image: `${SITE.domain}/opengraph-image`,
+    additionalProperty: [
+      { '@type': 'PropertyValue', name: 'Country of manufacture', value: drone.countryOfManufacture },
+      { '@type': 'PropertyValue', name: 'NDAA Section 848 compliant', value: drone.ndaaCompliant ? 'Yes' : 'No' },
+      { '@type': 'PropertyValue', name: 'Status', value: drone.status === 'active' ? 'Active' : 'Discontinued' },
+      ...(drone.specs.tankLiters != null ? [{ '@type': 'PropertyValue', name: 'Spray tank capacity (liters)', value: String(drone.specs.tankLiters) }] : []),
+      ...(drone.specs.swathWidthMeters != null ? [{ '@type': 'PropertyValue', name: 'Swath width (meters)', value: drone.specs.swathWidthMeters }] : []),
+      ...(drone.specs.mtowKg != null ? [{ '@type': 'PropertyValue', name: 'MTOW (kg)', value: String(drone.specs.mtowKg) }] : []),
+    ],
+  };
+  if (msrpLowest != null) {
+    productSchema.offers = {
+      '@type': 'Offer',
+      price: String(msrpLowest),
+      priceCurrency: 'USD',
+      availability: drone.status === 'active'
+        ? 'https://schema.org/InStock'
+        : 'https://schema.org/Discontinued',
+      seller: { '@type': 'Organization', name: drone.manufacturer },
+    };
+  }
+
   const specsRows = [
     { label: 'Manufacturer', value: drone.manufacturer },
     { label: 'Country of manufacture', value: drone.countryOfManufacture },
@@ -111,6 +152,7 @@ export default function DronePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb items={[{ label: 'Drone Models', href: '/drones' }, { label: drone.name }]} />
 

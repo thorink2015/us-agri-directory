@@ -1,6 +1,14 @@
 import { ReactNode } from 'react';
 import Link from 'next/link';
 import AffiliateCard from '@/components/affiliate/AffiliateCard';
+import {
+  HeroDroneIllustration,
+  AdoptionCurveChart,
+  MarketSizeSpreadChart,
+  PriceComparisonChart,
+  OriginShareChart,
+  EnvironmentalPerformanceChart,
+} from '@/components/guides/StatsCharts';
 
 /**
  * Guide content keyed by slug (matching guides.ts).
@@ -894,12 +902,13 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>If you are a farmer trying to decide whether to hire a drone operator, an operator pricing your services, a manufacturer building a market deck, or a journalist looking for citable data, the numbers below are the ones to use.</p>
 
-      <figure className="guide-figure" aria-label="Hero image placeholder">
-        <div className="guide-figure-placeholder" role="img" aria-label="Agricultural spray drone treating US cropland in 2025">
-          <span className="guide-figure-label">Figure</span>
-          <span className="guide-figure-caption-inline">Hero image, ag spray drone over US row crops at low altitude (placeholder).</span>
-        </div>
-        <figcaption>Image slot 1 of 6. Real artwork pending. Alt text on swap: &ldquo;Agricultural spray drone treating US cropland in 2025.&rdquo;</figcaption>
+      <figure className="guide-figure">
+        <HeroDroneIllustration className="w-full h-auto" />
+        <figcaption>
+          The headline number for US ag drone spraying in 2025: 16.4 million
+          acres treated, per the American Spray Drone Coalition&apos;s 2025
+          Impact Survey.
+        </figcaption>
       </figure>
 
       <h2 id="adoption">Adoption is real and accelerating</h2>
@@ -908,12 +917,13 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>ASDC member-distributors represent about 80% of the US ag spray drone market, so the number is a defensible industry estimate rather than a partial sample. It is the cleanest single proxy for adoption.</p>
 
-      <figure className="guide-figure" aria-label="Adoption curve placeholder">
-        <div className="guide-figure-placeholder" role="img" aria-label="US ag spray drone treated acreage 2023 to 2025, source ASDC">
-          <span className="guide-figure-label">Chart</span>
-          <span className="guide-figure-caption-inline">Adoption curve: 3.7M (2023), 10.3M (2024), 16.4M (2025) US acres treated.</span>
-        </div>
-        <figcaption>Image slot 2 of 6. Source: ASDC 2025 Impact Survey. Alt text on swap: &ldquo;US ag spray drone treated acreage 2023-2025, source ASDC.&rdquo;</figcaption>
+      <figure className="guide-figure">
+        <AdoptionCurveChart className="w-full h-auto" />
+        <figcaption>
+          US ag spray drone treated acreage tripled in 24 months: 3.7M acres
+          (2023) → 10.3M (2024) → 16.4M (2025). Source: ASDC 2025 Impact
+          Survey.
+        </figcaption>
       </figure>
 
       <p>The pilot side of the story tracks the same curve. The FAA had certificated <strong>1,710 Part 137 unmanned aircraft operators</strong> by September 2025, per the agency&apos;s <em>Safety Briefing</em> (Sept/Oct 2025 issue, cited in the ASDC report). That is a 58.3% increase year over year. The same figure is corroborated by the FAA&apos;s <a href="https://www.faa.gov/newsroom/BVLOS_NPRM_website_version.pdf" target="_blank" rel="noopener noreferrer">BVLOS Notice of Proposed Rulemaking</a> (Docket FAA-2025-1908, August 2025), which references over 1,700 cumulative ag UAS operator certificates. For context, this number was effectively zero in 2020. See our breakdown of <Link href="/regulations/faa-part-137">Part 137 certification</Link> for what the certificate covers.</p>
@@ -1018,12 +1028,13 @@ export const guideContent: Record<string, ReactNode> = {
         </table>
       </figure>
 
-      <figure className="guide-figure" aria-label="Market-size spread chart placeholder">
-        <div className="guide-figure-placeholder" role="img" aria-label="2025 global ag drone market size estimates by research firm">
-          <span className="guide-figure-label">Chart</span>
-          <span className="guide-figure-caption-inline">Bar chart of nine research firms&apos; 2025 ag drone market estimates, $1.5B to $7.4B range.</span>
-        </div>
-        <figcaption>Image slot 3 of 6. Alt text on swap: &ldquo;2025 global ag drone market size estimates by research firm.&rdquo;</figcaption>
+      <figure className="guide-figure">
+        <MarketSizeSpreadChart className="w-full h-auto" />
+        <figcaption>
+          Nine research firms&apos; 2025 ag drone market size estimates span
+          a 5x range. The amber-highlighted bar is Grand View Research&apos;s
+          US-only figure ($614.7M), the cleanest US-specific number.
+        </figcaption>
       </figure>
 
       <p>For a US-focused decision, <strong>use Grand View Research&apos;s US-specific figure: $506.3M in 2024 growing to roughly $1.77B by 2030 at a 23.5% CAGR</strong>. It is the only major firm publishing a dedicated US report rather than estimating a regional split off a global headline.</p>
@@ -1042,12 +1053,13 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>The headline: <strong>the average US drone spray service charged $13 per acre in 2025, down 38% from $21 per acre in 2024</strong>, per ASDC&apos;s 2025 Impact Survey. The price collapse was driven by rapid operator entry plus discounting from non-Part-137 actors competing on price. In a market where Chinese-made drones run roughly $30,000 to $40,000 fully kitted and a single-pilot operation can amortize quickly, new entrants undercut established services to fill schedule.</p>
 
-      <figure className="guide-figure" aria-label="Per-acre price comparison placeholder">
-        <div className="guide-figure-placeholder" role="img" aria-label="US drone spray price per acre 2024 vs 2025">
-          <span className="guide-figure-label">Chart</span>
-          <span className="guide-figure-caption-inline">$21 (2024) vs $13 (2025) ASDC average, with MU Extension G1274 reference points.</span>
-        </div>
-        <figcaption>Image slot 4 of 6. Alt text on swap: &ldquo;US drone spray price per acre 2024 vs 2025.&rdquo;</figcaption>
+      <figure className="guide-figure">
+        <PriceComparisonChart className="w-full h-auto" />
+        <figcaption>
+          The ASDC national average per-acre price fell 38% in 2025. University
+          of Missouri Extension G1274 reference points show owner-operator and
+          custom-hire economics for context.
+        </figcaption>
       </figure>
 
       <p>Owner-operator economics still pencil out at the new lower price for many. The <a href="https://extension.missouri.edu/publications/g1274" target="_blank" rel="noopener noreferrer">University of Missouri Extension Guide G1274</a> puts owner-operator drone cost at <strong>$12.27 per acre at the Midwest-typical scale</strong>, with custom-hire low end at $7.39 per acre and a typical custom-hire price of around $16 per acre. Pricing varies meaningfully by region, crop, and product complexity. See our <Link href="/pricing">drone spraying cost guide</Link> for current per-acre ranges by service type.</p>
@@ -1091,12 +1103,13 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>Per ASDC&apos;s <a href="https://www.reginfo.gov" target="_blank" rel="noopener noreferrer">comments to the Department of Commerce BIS</a> (filed December 19, 2025): <strong>93.5% of agricultural spray drones sold in the United States in 2024 were Chinese-made (predominantly DJI Agras), and that share fell to 75.75% in 2025</strong> after Customs and Border Protection&apos;s UFLPA enforcement actions and the FCC&apos;s December 22, 2025 Covered List ruling.</p>
 
-      <figure className="guide-figure" aria-label="Made in USA vs China share placeholder">
-        <div className="guide-figure-placeholder" role="img" aria-label="US ag spray drone manufacturer origin share 2024 vs 2025">
-          <span className="guide-figure-label">Chart</span>
-          <span className="guide-figure-caption-inline">Stacked bar: 2024 (93.5% Chinese, 6.48% US) vs 2025 (75.75% Chinese, 24.25% US).</span>
-        </div>
-        <figcaption>Image slot 5 of 6. Alt text on swap: &ldquo;US ag spray drone manufacturer origin share 2024 vs 2025.&rdquo;</figcaption>
+      <figure className="guide-figure">
+        <OriginShareChart className="w-full h-auto" />
+        <figcaption>
+          The Chinese-made share of new US ag spray drone sales fell from
+          93.5% in 2024 to 75.75% in 2025 after CBP UFLPA action and the FCC
+          Covered List ruling. Source: ASDC BIS submission, December 2025.
+        </figcaption>
       </figure>
 
       <p>DJI&apos;s specific share dropped harder. ASDC reports <strong>DJI&apos;s US ag drone unit sales fell roughly 95% from 2024 to 2025</strong>. Eric Ringer of ASDC has stated DJI accounts for approximately 80% of US spray drone flights (existing fleet), though new sales have stalled. The fleet is still mostly DJI; the new orders are not.</p>
@@ -1141,12 +1154,14 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p><strong>Carbon and soil.</strong> An LCA case study in Idaho measured drone application at <strong>14.49 kg CO2 per hectare versus 41.28 kg per hectare for ground rig</strong>, roughly a 65% reduction. Soil compaction is effectively zero with drones (no ground contact) versus ground rigs that apply 15,000 to 20,000 lb of pressure per pass (Purdue Extension PPP-154). The same Idaho case documented an ~8% yield improvement after switching from ground to drone application in compacted fields, attributed to compaction relief. Yield numbers from a single case study, so flag accordingly. Pressure and CO2 figures are solid.</p>
 
-      <figure className="guide-figure" aria-label="Environmental performance bar chart placeholder">
-        <div className="guide-figure-placeholder" role="img" aria-label="Drone vs ground spraying environmental performance, peer-reviewed studies">
-          <span className="guide-figure-label">Chart</span>
-          <span className="guide-figure-caption-inline">Pesticide reduction 46 to 75%, drift 65 to 70%, operator exposure 90 to 99%, water 71.8%.</span>
-        </div>
-        <figcaption>Image slot 6 of 6. Alt text on swap: &ldquo;Drone vs ground spraying environmental performance, peer-reviewed studies.&rdquo;</figcaption>
+      <figure className="guide-figure">
+        <EnvironmentalPerformanceChart className="w-full h-auto" />
+        <figcaption>
+          Drone application reductions versus ground or backpack equipment
+          across four peer-reviewed metrics. Solid bars mark the conservative
+          (low) end of each published range; the tick at the right marks the
+          high end.
+        </figcaption>
       </figure>
 
       <p><strong>Field efficacy.</strong> UC Davis trials at the Rice Experiment Station documented <strong>over 90% weed control efficacy with drone application matching or exceeding ground-rig benchmarks</strong>, though drift was recorded up to 100 feet from sprayed plots in early-stage trials. Mississippi State&apos;s MAFES work on cotton, soybean, and sorghum confirmed drone insecticide application is equally effective as ground rigs at lower gallons-per-acre. See our comparison page on <Link href="/comparisons/drone-vs-ground-rig">drone vs ground rig spraying</Link> for the full performance picture.</p>

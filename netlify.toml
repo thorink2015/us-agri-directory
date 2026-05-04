@@ -124,3 +124,13 @@
   to = "/operators/american-drone"
   status = 301
   force = true
+
+# ── Region slug redirects ────────────────────────────────────────────────
+# Delta is colloquial for the Mississippi Delta region. External citations
+# and abbreviated URLs land on /regions/delta — point them at the canonical
+# /regions/mississippi-delta page so they stop returning soft 404s.
+[[redirects]]
+  from = "/regions/delta"
+  to = "/regions/mississippi-delta"
+  status = 301
+  force = true
