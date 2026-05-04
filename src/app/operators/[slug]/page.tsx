@@ -32,6 +32,7 @@ import ExternalLink from '@/components/ui/ExternalLink';
 import OperatorContactLinks from '@/components/operators/OperatorContactLinks';
 import OperatorGallery from '@/components/operators/OperatorGallery';
 import VerificationBadges from '@/components/ui/VerificationBadges';
+import GetMatchedWizard from '@/components/leads/GetMatchedWizard';
 
 interface Props {
   params: { slug: string };
@@ -482,6 +483,23 @@ export default function OperatorPage({ params }: Props) {
 
           {/* ─── Sidebar ─────────────────────────────────────── */}
           <aside className="space-y-4">
+            {/* Lead capture: get 3 quotes (this operator + 2 similar) */}
+            {(() => {
+              const primaryStateSlug = operator.counties[0];
+              const primaryState = counties.find((c) => c.slug === primaryStateSlug);
+              const stateName = primaryState?.name ?? 'your state';
+              const opShort = operator.shortName ?? operator.name;
+              return (
+                <GetMatchedWizard
+                  defaultStateSlug={primaryStateSlug}
+                  source={`operator-profile-${operator.slug}`}
+                  compact
+                  headingOverride={`Get quotes from ${opShort} plus 2 similar operators`}
+                  subheadingOverride={`Tell us a bit about your fields. We will text you up to 3 verified, FAA Part 137 operators in ${stateName} within 24 hours. Free, takes 60 seconds.`}
+                />
+              );
+            })()}
+
             {/* Price */}
             <div className="bg-gradient-to-br from-green-50 to-white border border-green-200 rounded-xl p-5">
               <h3 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wide">
