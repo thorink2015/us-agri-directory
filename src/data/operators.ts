@@ -1967,11 +1967,11 @@ export const operators: Operator[] = [
     slug: 'swift-aeroseed',
     name: 'Swift Aeroseed LLC',
     shortName: 'Swift Aeroseed',
-    tagline: 'PA/MD seeding specialist · $52K PA Agriculture Innovation Grant recipient',
+    tagline: 'PA/MD/VA/DE seeding specialist · $52K PA Agriculture Innovation Grant recipient',
     description:
-      'Pennsylvania-based agricultural drone seeding company specializing in regenerative cover crop establishment, native grass and habitat seeding. Co-founded by Molly Cheatum and Bill Chain. Services include aerial cover crop seeding, native grass and broadleaf seeding, meadow and grass buffer seeding, wildlife habitat seeding, multispecies seed mixes and conservation cost-share program connection. Partnership with King\'s Agriseed; recipient of a $52,000 Pennsylvania Agricultural Innovation Grant.',
+      'Pennsylvania-based agricultural drone seeding company specializing in regenerative cover crop establishment, native grass and habitat seeding. Services include aerial cover crop seeding, native grass and broadleaf seeding, meadow and grass buffer seeding, wildlife habitat seeding, multispecies seed mixes, and conservation cost-share program connection. Partnership with King\'s Agriseed.',
     country: 'US',
-    counties: ['pennsylvania', 'maryland'],
+    counties: ['pennsylvania', 'maryland', 'virginia', 'delaware'],
     city: 'Carlisle',
     phone: '(717) 448-8639',
     email: 'molly@swiftaeroseed.com',
@@ -1981,10 +1981,19 @@ export const operators: Operator[] = [
     drones: ['leadingedge-pv40x'],
     crops: ['cover-crops', 'wheat', 'corn', 'soybeans', 'pasture'],
     certFAAPart107: true,
-    pendingConfirmation: true,
+    certFAAPart137: true,
+    verified: true,
     womenLed: true,
     featured: false,
-    lastUpdated: '2026-04-29',
+    lastUpdated: '2026-05-04',
+    gallery: [
+      {
+        src: '/images/operators/swift-aeroseed/swift-aeroseed-team.webp',
+        alt: 'Swift Aeroseed team next to a LeadingEdge PV40X agricultural drone in Pennsylvania',
+        width: 900,
+        height: 1600,
+      },
+    ],
   },
   {
     slug: 'penn-state-extension',
@@ -7102,6 +7111,11 @@ export function getOperatorsByCounty(stateSlug: string): Operator[] {
       const aVer = a.verified && !a.pendingConfirmation ? 1 : 0;
       const bVer = b.verified && !b.pendingConfirmation ? 1 : 0;
       if (aVer !== bVer) return bVer - aVer;
+      // Among ties, prefer operators with a hero image so listing cards
+      // showing real photography rank above icon-only placeholders.
+      const aImg = a.gallery && a.gallery.length > 0 ? 1 : 0;
+      const bImg = b.gallery && b.gallery.length > 0 ? 1 : 0;
+      if (aImg !== bImg) return bImg - aImg;
       return 0;
     });
 }

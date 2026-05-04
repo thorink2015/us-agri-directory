@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { MapPin, Phone, Globe, BadgeCheck, Plane, Zap } from 'lucide-react';
 import { Operator, SERVICE_LABELS } from '@/data/types';
 import { SITE } from '@/data/author';
@@ -22,6 +23,8 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
   const displayName = operator.shortName || operator.name;
   const visibleServices = operator.services.slice(0, MAX_VISIBLE_TAGS);
   const hiddenCount = operator.services.length - MAX_VISIBLE_TAGS;
+  const heroImage = operator.gallery && operator.gallery.length > 0 ? operator.gallery[0] : null;
+  const itemImageUrl = heroImage ? `${SITE.domain}${heroImage.src}` : `${SITE.domain}/og-image.png`;
 
   return (
     <article
@@ -31,7 +34,26 @@ export default function OperatorCard({ operator, showCounty = true }: OperatorCa
     >
       <meta itemProp="name" content={operator.name} />
       <link itemProp="url" href={`/operators/${operator.slug}`} />
-      <meta itemProp="image" content={`${SITE.domain}/og-image.png`} />
+      <meta itemProp="image" content={itemImageUrl} />
+
+      {heroImage && (
+        <Link
+          href={`/operators/${operator.slug}`}
+          aria-label={`View profile for ${operator.name}`}
+          className="block -mx-5 -mt-5 mb-4 overflow-hidden rounded-t-xl bg-gray-100"
+        >
+          <div className="relative w-full aspect-[16/9]">
+            <Image
+              src={heroImage.src}
+              alt={heroImage.alt}
+              fill
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
+              loading="lazy"
+            />
+          </div>
+        </Link>
+      )}
       <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
         <meta itemProp="addressLocality" content={operator.city} />
         <meta itemProp="addressRegion" content={getStateAbbr(operator.counties)} />
