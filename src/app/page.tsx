@@ -6,6 +6,7 @@ import {
   Search, BarChart3, Ruler, GitCompare, CalendarDays,
 } from 'lucide-react';
 import HomepageNewsletterForm from '@/components/ui/HomepageNewsletterForm';
+import GetMatchedWizard from '@/components/leads/GetMatchedWizard';
 import { operators, getFeaturedOperators } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
@@ -205,6 +206,16 @@ export default function HomePage() {
 
           <SearchBar />
 
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
+            <a
+              href="#get-matched"
+              className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold rounded-xl transition-colors"
+            >
+              Get my 3 free quotes <ArrowRight className="w-4 h-4" />
+            </a>
+            <span className="text-green-200">or browse by state</span>
+          </div>
+
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-green-200">
             <span className="text-green-300 font-medium">Top states:</span>
             {TOP_STATES.map((s, i) => (
@@ -219,6 +230,47 @@ export default function HomePage() {
             <Link href="/states" className="hover:text-white underline underline-offset-2">
               View all states
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2: Get Matched (lead capture) */}
+      <section
+        id="get-matched"
+        aria-label="Get matched with verified ag drone operators"
+        className="bg-gray-50 border-b border-gray-100"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(360px,460px)] gap-10 items-start">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-green-50 text-green-800 text-xs font-semibold px-3 py-1.5 rounded-full border border-green-200 mb-4">
+                <CheckCircle className="w-3.5 h-3.5" />
+                Free, takes 60 seconds
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 leading-tight">
+                Get 3 free quotes from FAA Part 137 drone operators near you
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
+                Tell us your ZIP, crop, and acreage. We will text you up to 3 verified operators in your area within 24 hours.
+              </p>
+              <ul className="space-y-2.5 text-sm text-gray-700">
+                <li className="flex items-start gap-2">
+                  <ShieldCheck className="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0" />
+                  <span><strong>3 operators max, never more.</strong> No 50-call free-for-all like Bark or Thumbtack.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <ShieldCheck className="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0" />
+                  <span>Every operator holds <strong>FAA Part 107 + Part 137</strong> and a current state pesticide applicator license.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <DollarSign className="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0" />
+                  <span>$12 to $18 per acre typical for row crops. Operators pay us, not you. We never sell your info.</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <GetMatchedWizard source="homepage-hero" />
+            </div>
           </div>
         </div>
       </section>

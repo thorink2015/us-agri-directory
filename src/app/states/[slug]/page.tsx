@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { MapPin, Wheat, TrendingUp, Users, Shield, DollarSign } from 'lucide-react';
+import { MapPin, Wheat, TrendingUp, Users, Shield, DollarSign, CheckCircle } from 'lucide-react';
 import { Metadata } from 'next';
 import { counties, getCountyBySlug, getAdjacentCounties, getCountyOperatorCount } from '@/data/counties';
 import { getOperatorsByCounty } from '@/data/operators';
@@ -17,6 +17,7 @@ import { getStateData } from '@/data/states';
 import { getCitiesInState } from '@/data/cities';
 import { AUTHOR, SITE } from '@/data/author';
 import USMap from '@/components/ui/USMap';
+import GetMatchedWizard from '@/components/leads/GetMatchedWizard';
 
 import { addUtm } from '@/lib/utm';
 interface Props {
@@ -142,6 +143,41 @@ function RichStatePage({ slug }: { slug: string }) {
         <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
           <p className="text-sm text-gray-700 leading-relaxed">{data.aeoBlock}</p>
         </div>
+
+        {/* 2b, Lead capture banner */}
+        <section
+          aria-label={`Get matched with drone operators in ${data.name}`}
+          className="mb-8 grid grid-cols-1 lg:grid-cols-[1fr_minmax(320px,420px)] gap-5 bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white rounded-2xl overflow-hidden p-5 sm:p-7"
+        >
+          <div className="self-center">
+            <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-xs px-3 py-1 rounded-full mb-3 border border-white/20">
+              <CheckCircle className="w-3.5 h-3.5 text-yellow-400" />
+              FAA Part 137 operators in {data.name}
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2 leading-tight">
+              Get 3 free quotes from drone operators in {data.name}
+            </h2>
+            <p className="text-green-100 text-sm sm:text-base leading-relaxed">
+              {ops.length > 0
+                ? `${ops.length} verified operators serve ${data.name}. Tell us your ZIP and crop. We will text you up to 3 matches within 24 hours.`
+                : `Tell us your ZIP and crop. We will text you up to 3 matches within 24 hours, drawn from the closest verified operators in your region.`}
+            </p>
+            <ul className="mt-3 space-y-1 text-sm text-green-100">
+              <li>3 operators max, never more.</li>
+              <li>{data.rateRange} per acre typical.</li>
+              <li>Operators pay us, not you. We never sell your info.</li>
+            </ul>
+          </div>
+          <div>
+            <GetMatchedWizard
+              defaultStateSlug={slug}
+              source={`state-${slug}`}
+              compact
+              headingOverride={`Get matched in ${data.name}`}
+              subheadingOverride={`Tell us your ZIP and crop. We will text you up to 3 verified ${data.name} operators within 24 hours.`}
+            />
+          </div>
+        </section>
 
         {/* 3, Stats row + mini map */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 mb-8 items-start">
@@ -489,6 +525,39 @@ function FallbackStatePage({ slug }: { slug: string }) {
               : `Be the first drone operator listed in ${state.name}.`}
           </p>
         </div>
+
+        {/* Lead capture banner */}
+        <section
+          aria-label={`Get matched with drone operators in ${state.name}`}
+          className="mb-8 grid grid-cols-1 lg:grid-cols-[1fr_minmax(320px,420px)] gap-5 bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white rounded-2xl overflow-hidden p-5 sm:p-7"
+        >
+          <div className="self-center">
+            <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-xs px-3 py-1 rounded-full mb-3 border border-white/20">
+              <CheckCircle className="w-3.5 h-3.5 text-yellow-400" />
+              FAA Part 137 operators in {state.name}
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-2 leading-tight">
+              Get 3 free quotes from drone operators in {state.name}
+            </h2>
+            <p className="text-green-100 text-sm sm:text-base leading-relaxed">
+              Tell us your ZIP and crop. We will text you up to 3 matches within 24 hours, drawn from the closest verified operators in {state.region}.
+            </p>
+            <ul className="mt-3 space-y-1 text-sm text-green-100">
+              <li>3 operators max, never more.</li>
+              <li>$12 to $18 per acre typical for row crops.</li>
+              <li>Operators pay us, not you. We never sell your info.</li>
+            </ul>
+          </div>
+          <div>
+            <GetMatchedWizard
+              defaultStateSlug={state.slug}
+              source={`state-${state.slug}`}
+              compact
+              headingOverride={`Get matched in ${state.name}`}
+              subheadingOverride={`Tell us your ZIP and crop. We will text you up to 3 verified ${state.name} operators within 24 hours.`}
+            />
+          </div>
+        </section>
 
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 mb-8 items-start">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
