@@ -421,6 +421,21 @@
 - **Override called out in PR #101:** moved the city and state-operators noindex predicates OUT of their inline page-template helpers into `src/lib/indexing-gates.ts`. The instructions said "extract each gate into a small predicate function in src/lib/indexing-gates.ts" — this exactly aligns. The state-crop, state-service, and ultra-thin-operator predicates already lived in their domain modules (`state-crop-content.ts`, `state-service-content.ts`, `operator-content.ts`); rather than relocate them physically, `indexing-gates.ts` re-exports them so a single import surface serves both page templates and sitemap.
 - **Discovered:** the ImageResponse renderer requires `<div>` elements with multiple children to have explicit `display: flex`. The first build pass of the city og:image errored on the city-name div which had two children (city text + comma+state span); fixed by wrapping the city text in a span and adding `display: flex` to the parent.
 
+## 2026-05-04 — Lead capture overhaul, Batch 1: GetMatched wizard (branch claude/lead-capture-overhaul-qoohP)
+
+- **Trigger:** request to replace single-step exit-intent popup with a multi-placement wizard system. Phone-required (email optional), 4-step (ZIP/state, crop tiles, acreage tiles, contact + TCPA), TCPA + honeypot + Turnstile-ready, Formspree-backed (no new dep).
+- **Commit 1 (this batch) ships only the wizard primitives, not placements:**
+  - `src/components/leads/wizard-options.ts` shared option lists (acreage ranges, crop tiles, TCPA consent text, reassurance line, pricing-context line). Pure data, server-readable.
+  - `src/components/leads/GetMatchedWizard.tsx` 4-step wizard. Auto-advances on tile click for steps 2 and 3. Honeypot field always present (`company_website`, off-screen). Cloudflare Turnstile lazy-loaded only on step 4 and only when `NEXT_PUBLIC_TURNSTILE_SITE_KEY` is set (degrades gracefully). Submits to existing Formspree endpoint with `_form_type=get-matched-lead`. Captures `tcpa_consent_text`, `tcpa_consent_at` (ISO timestamp), `page_url`, `referrer`, `user_agent`, `source`. Confirmation state shows "matching you with up to 3 operators in [State]" and a "you will get a text within 24 hours" line.
+  - `src/components/leads/GetMatchedModal.tsx` modal wrapper with Esc-to-close, scroll lock, focus management. Auto-closes 4s after submit so the user can read the confirmation.
+  - `src/components/leads/GetMatchedButton.tsx` lazy-mounts the modal via `dynamic(() => import('./GetMatchedModal'), { ssr: false })` so pages with the button but no click never pay for the wizard JS. Three style variants: `primary` (green CTA), `secondary` (outlined), `inline` (text link).
+  - `src/app/get-matched/page.tsx` standalone landing page with the wizard rendered inline (not in a modal). Used as the test surface this batch and as a destination link for sticky bars and exit-intent later.
+  - `src/app/sitemap.ts` adds `/get-matched`. priority 0.9, monthly changefreq.
+- **Voice/copy compliance (standing-rules §9, copy-source-of-truth):** wizard copy is UI microcopy only, no fact claims. The single dollar reference ("$12 to $18 per acre") is sourced from the homepage FAQ which cites Iowa State 2026 Custom Rate Survey. No banned words. No em dashes anywhere in user-facing strings or code comments after final pass.
+- **Mobile/perf:** `/get-matched` page weight 5.31 kB, first load JS 107 kB (under the 200 KB ceiling). Modal not in initial bundle on placement pages because of `dynamic(..., { ssr: false })`. Turnstile script only loads on step 4 + only when site key configured.
+- **Build + lint:** `npm run build` green, `npm run lint` clean. No new third-party JS dep.
+- **Not in this batch (per small-batches rule):** placements (homepage hero, state pages, operator profiles, sticky header), cost calculator, exit-intent demotion, confirmation email setup. Each gets its own batch per `pending-items.md`.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)

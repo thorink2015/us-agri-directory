@@ -374,6 +374,62 @@ profile uniformly, including future imports.
   agronix                51  -> 495 words
   agriforce-drone        164 -> 735 words (rich profile, no regression)
 
+## Lead capture wizard (`src/components/leads/`)
+
+**Used on:** `/get-matched` standalone page (Batch 1). Future placements
+will reuse via `<GetMatchedButton />` for click-triggered modals or
+`<GetMatchedWizard />` for inline embeds.
+
+**Three pieces:**
+
+- `GetMatchedWizard.tsx` (client) is the actual 4-step form. Props:
+  `defaultStateSlug`, `source`, `headingOverride`, `subheadingOverride`,
+  `compact`, `onSubmitted`. Auto-advances on tile click for crop and
+  acreage steps. Honeypot field `company_website` always present.
+  Turnstile site key from `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (optional —
+  if unset, only honeypot guards). Submits JSON to existing Formspree
+  endpoint with `_form_type=get-matched-lead`.
+- `GetMatchedModal.tsx` (client) is an Esc-to-close, scroll-locked
+  modal that wraps the wizard. Auto-closes 4s after submit. Used by
+  the button trigger.
+- `GetMatchedButton.tsx` (client) is a click-triggered CTA that
+  `dynamic(..., { ssr: false })`-loads the modal so pages that just
+  show the CTA never pay for the wizard JS until someone clicks.
+
+**Required submission fields** (always sent):
+
+- `_form_type: 'get-matched-lead'`, `_subject`, `source`
+- `zip`, `state_slug`, `state_name`
+- `crop`, `crop_slug`, `acreage`, `acreage_value`
+- `name`, `phone` (REQUIRED), `email` (OPTIONAL)
+- `tcpa_consent: boolean`
+- `tcpa_consent_text` (verbatim agreed text, from
+  `wizard-options.ts:TCPA_CONSENT_TEXT`)
+- `tcpa_consent_at` (ISO timestamp at submit)
+- `page_url`, `referrer`, `user_agent`
+- `cf-turnstile-response` (only when Turnstile is configured)
+
+**Voice rules for placements:** keep CTA labels under 5 words. Use
+"Get my 3 matches" or "Text me my matches", never "Submit" / "Get
+Started". Body lines should reuse phrasings from
+`wizard-options.ts:REASSURANCE_LINE` and
+`wizard-options.ts:PRICING_CONTEXT_LINE`.
+
+**Pre-pick state on a state page:**
+
+```tsx
+import GetMatchedButton from '@/components/leads/GetMatchedButton';
+
+<GetMatchedButton
+  defaultStateSlug={state.slug}
+  source={`state-${state.slug}`}
+  headingOverride={`Find drone operators in ${state.name}`}
+  subheadingOverride={`Tell us your ZIP and crop. We will text you up to 3 verified operators in ${state.name} within 24 hours.`}
+>
+  Get my 3 matches in {state.name}
+</GetMatchedButton>
+```
+
 ## Commit message format
 
 ```
