@@ -436,6 +436,62 @@
 - **Build + lint:** `npm run build` green, `npm run lint` clean. No new third-party JS dep.
 - **Not in this batch (per small-batches rule):** placements (homepage hero, state pages, operator profiles, sticky header), cost calculator, exit-intent demotion, confirmation email setup. Each gets its own batch per `pending-items.md`.
 
+## 2026-05-04 — Swift Aeroseed verification + claim/update form bug fix
+
+- **Operator data update (`content(operators): swift-aeroseed verified, expand to PA/MD/VA/DE`):**
+  Confirmed-by-operator (Molly Cheatum). Drops `pendingConfirmation`, sets
+  `verified: true`, adds `certFAAPart137: true`, expands `counties` to
+  `['pennsylvania', 'maryland', 'virginia', 'delaware']`, refreshes
+  description per operator-supplied copy. Verified post-build: profile
+  renders Verified Operator badge (4× in HTML), awaiting-verification
+  notice gone (0 occurrences), all four states listed, swift-aeroseed
+  appears on each /states/[state] hub and on each
+  /states/[state]/services/seeding combo page.
+- **Image asset:** Operator-supplied `swiftaeroseed.jpeg` is **not**
+  present in `_research/` (only generic `IMG_8597.jpeg`,
+  `IMG_9357.png`, `IMG_9359.png` are there). Image step deferred until
+  the file lands. Note: current `OperatorCard` does not render any
+  operator-specific image regardless — the only place an image renders
+  is the profile page via the optional `gallery` field
+  (`pro-ag-solutions` is the only operator using it). When the file
+  arrives, the work is: convert to .webp, drop into
+  `public/images/operators/swift-aeroseed/`, add a single-entry `gallery`
+  array to the operator record. To also surface images on listing cards
+  is a separate larger change to `OperatorCard.tsx`.
+- **Bug fix (`fix(list-business): add claim/update mode to prevent duplicate listings`):**
+  Root cause was that `/list-your-business` was the only form for both
+  new listings and updates. The "Update this listing" + "claim your
+  listing" links on operator profile pages dropped users into the same
+  form with no slug context, no mode toggle, and no submission tag, so
+  Eugen's Formspree inbox could not distinguish updates from new
+  listings — the natural workflow created duplicates. Fix:
+  - `/list-your-business?claim=<slug>` is now read server-side; the page
+    looks up the operator by slug via `getOperatorBySlug()` and passes
+    `claimSlug` and `claimName` props down to `SubmitForm`.
+  - `SubmitForm` now has an always-visible mode toggle (radio):
+    "List a new business" vs "Claim or update an existing listing".
+    When ?claim=&lt;slug&gt; arrives, the form auto-defaults to update
+    mode, pre-fills the business-name field, and shows an amber banner:
+    "Updating &lt;Operator&gt;. Submitting this form will not create a
+    duplicate listing."
+  - In update mode, the submission carries `_form_type: 'listing-update'`
+    (instead of `'list-your-business'`), `_subject: 'UPDATE: <name>
+    [<slug>]'` (vs `'NEW LISTING: ...'`), `submission_intent: 'update'`,
+    and `existing_slug: <slug>`. Eugen's inbox can now route updates to
+    a separate folder/label and merge into the right entry instead of
+    creating a duplicate.
+  - Three claim links on `/operators/[slug]/page.tsx` ("claim your
+    listing", "Update this listing", and the conditional "this is your
+    business" prompt) now pass `?claim=&lt;operator.slug&gt;`. The
+    "List your business free" CTA below them stays unchanged for
+    actual new operators.
+- **Voice/copy compliance:** new copy passes the banned-words /
+  em-dash check. New microcopy is form-specific and not body-content,
+  so no copy-source-of-truth conflict.
+- **Build + lint:** `npm run build` green (`/list-your-business`
+  flipped from static to dynamic, expected because the page now reads
+  `searchParams`). `npm run lint` clean.
+
 ## What's next (see pending-items.md for detail)
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
