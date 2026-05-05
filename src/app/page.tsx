@@ -238,38 +238,81 @@ export default function HomePage() {
       <section
         id="get-matched"
         aria-label="Get matched with verified ag drone operators"
-        className="bg-gray-50 border-b border-gray-100"
+        className="relative bg-gradient-to-b from-green-50 via-white to-white border-b border-gray-100 overflow-hidden"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(360px,460px)] gap-10 items-start">
-            <div>
-              <div className="inline-flex items-center gap-2 bg-green-50 text-green-800 text-xs font-semibold px-3 py-1.5 rounded-full border border-green-200 mb-4">
-                <CheckCircle className="w-3.5 h-3.5" />
+        {/* Subtle dotted backdrop, same family as the hero so the section reads as a continuation. */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-[0.06] pointer-events-none"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 25% 30%, #14532d 1px, transparent 1.5px), radial-gradient(circle at 75% 70%, #14532d 1px, transparent 1.5px)',
+            backgroundSize: '36px 36px',
+          }}
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(380px,480px)] gap-10 lg:gap-14 items-center">
+            {/* LEFT side: pitch */}
+            <div className="max-w-xl">
+              <div className="inline-flex items-center gap-2 bg-white text-green-800 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border border-green-200 shadow-sm mb-5">
+                <CheckCircle className="w-3.5 h-3.5 text-green-600" />
                 Free, takes 60 seconds
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 leading-tight">
-                Get 3 free quotes from FAA Part 137 drone operators near you
+
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-[1.1] tracking-tight">
+                Get 3 free quotes from{' '}
+                <span className="relative inline-block">
+                  <span className="relative z-10">FAA Part 137</span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute bottom-1 left-0 right-0 h-3 bg-yellow-300/70 -z-0"
+                  />
+                </span>{' '}
+                drone operators near you.
               </h2>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6">
-                Tell us your ZIP, crop, and acreage. We will text you up to 3 verified operators in your area within 24 hours.
+
+              <p className="text-lg text-gray-600 leading-relaxed mb-7">
+                Tell us your ZIP, crop, and acreage. We text you up to 3 verified operators in your area within 24 hours. No SaaS app, no signup, no spam.
               </p>
-              <ul className="space-y-2.5 text-sm text-gray-700">
-                <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0" />
-                  <span><strong>3 operators max, never more.</strong> No 50-call free-for-all like Bark or Thumbtack.</span>
+
+              <ul className="space-y-3.5">
+                <li className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
+                  <div className="w-9 h-9 rounded-full bg-green-50 border border-green-200 flex items-center justify-center flex-shrink-0">
+                    <ShieldCheck className="w-4 h-4 text-green-700" />
+                  </div>
+                  <p className="text-sm text-gray-700 leading-snug">
+                    <strong className="text-gray-900">3 operators max, never more.</strong>{' '}
+                    No 50-call free-for-all like Bark or Thumbtack.
+                  </p>
                 </li>
-                <li className="flex items-start gap-2">
-                  <ShieldCheck className="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0" />
-                  <span>Every operator holds <strong>FAA Part 107 + Part 137</strong> and a current state pesticide applicator license.</span>
+                <li className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
+                  <div className="w-9 h-9 rounded-full bg-green-50 border border-green-200 flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-4 h-4 text-green-700" />
+                  </div>
+                  <p className="text-sm text-gray-700 leading-snug">
+                    Every match holds <strong className="text-gray-900">FAA Part 107 + Part 137</strong> and a current state pesticide applicator license.
+                  </p>
                 </li>
-                <li className="flex items-start gap-2">
-                  <DollarSign className="w-4 h-4 text-green-700 mt-0.5 flex-shrink-0" />
-                  <span>$12 to $18 per acre typical for row crops. Operators pay us, not you. We never sell your info.</span>
+                <li className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
+                  <div className="w-9 h-9 rounded-full bg-green-50 border border-green-200 flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="w-4 h-4 text-green-700" />
+                  </div>
+                  <p className="text-sm text-gray-700 leading-snug">
+                    <strong className="text-gray-900">$12 to $18 per acre</strong> typical for row crops. Operators pay us, not you. We never sell your info.
+                  </p>
                 </li>
               </ul>
             </div>
-            <div>
-              <GetMatchedWizard source="homepage-hero" />
+
+            {/* RIGHT side: wizard, made the visual centerpiece */}
+            <div className="relative">
+              <div
+                aria-hidden="true"
+                className="absolute -inset-2 bg-gradient-to-br from-green-200/60 via-white to-yellow-200/40 rounded-3xl blur-xl"
+              />
+              <div className="relative">
+                <GetMatchedWizard source="homepage-hero" />
+              </div>
             </div>
           </div>
         </div>

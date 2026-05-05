@@ -47,10 +47,13 @@ interface FormState {
   stateSlug: string;
   crop: CropValue | '';
   acreage: AcreageValue | '';
+  acresExact: string;
   name: string;
   phone: string;
   email: string;
   consent: boolean;
+  addNote: boolean;
+  notes: string;
 }
 
 const INITIAL: FormState = {
@@ -58,10 +61,13 @@ const INITIAL: FormState = {
   stateSlug: '',
   crop: '',
   acreage: '',
+  acresExact: '',
   name: '',
   phone: '',
   email: '',
   consent: false,
+  addNote: false,
+  notes: '',
 };
 
 /**
@@ -97,7 +103,9 @@ export default function GetMatchedWizard({
 
   const canAdvanceStep1 = form.zip.trim().length >= 5 || !!selectedState;
   const canAdvanceStep2 = !!form.crop;
-  const canAdvanceStep3 = !!form.acreage;
+  const exactAcresNum = form.acresExact ? parseInt(form.acresExact, 10) : NaN;
+  const exactAcresValid = Number.isFinite(exactAcresNum) && exactAcresNum >= 1 && exactAcresNum <= 100000;
+  const canAdvanceStep3 = !!form.acreage || exactAcresValid;
   const canSubmit =
     !!form.phone.trim() &&
     form.consent &&
@@ -179,13 +187,31 @@ export default function GetMatchedWizard({
     }
 
     const cropLabel = CROP_OPTIONS.find((c) => c.value === form.crop)?.label ?? form.crop;
+    // If the farmer entered an exact acreage, derive the bucket so the inbox
+    // gets both fields populated. Otherwise use whatever tile was clicked.
+    const exactNum = form.acresExact ? parseInt(form.acresExact, 10) : NaN;
+    const acresExact = Number.isFinite(exactNum) && exactNum >= 1 ? exactNum : null;
+    const derivedBucket: AcreageValue | '' =
+      acresExact !== null
+        ? acresExact < 40
+          ? 'under-40'
+          : acresExact < 160
+            ? '40-160'
+            : acresExact < 500
+              ? '160-500'
+              : acresExact < 2000
+                ? '500-2000'
+                : '2000-plus'
+        : form.acreage;
     const acreageLabel =
-      ACREAGE_RANGES.find((a) => a.value === form.acreage)?.label ?? form.acreage;
+      ACREAGE_RANGES.find((a) => a.value === derivedBucket)?.label ?? derivedBucket;
     const stateName = selectedState?.name ?? '';
+    const trimmedNotes = form.addNote ? form.notes.trim().slice(0, 1000) : '';
+    const acresForSubject = acresExact !== null ? `${acresExact} ac` : acreageLabel;
 
     const payload: Record<string, unknown> = {
       _form_type: 'get-matched-lead',
-      _subject: `New lead: ${stateName || form.zip || 'unknown area'}, ${cropLabel || 'crop TBC'}`,
+      _subject: `New lead: ${stateName || form.zip || 'unknown area'}, ${cropLabel || 'crop TBC'}, ${acresForSubject}`,
       source,
       zip: form.zip.trim(),
       state_slug: form.stateSlug,
@@ -193,7 +219,9 @@ export default function GetMatchedWizard({
       crop: cropLabel,
       crop_slug: form.crop,
       acreage: acreageLabel,
-      acreage_value: form.acreage,
+      acreage_value: derivedBucket,
+      acres_exact: acresExact,
+      notes: trimmedNotes,
       name: form.name.trim(),
       phone: form.phone.trim(),
       email: form.email.trim(),
@@ -240,12 +268,12 @@ export default function GetMatchedWizard({
           <CheckCircle className="w-6 h-6 text-green-700" />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">
-          Got it. We are matching you with up to 3 operators
+          Got it. Matching you with up to 3 FAA Part 137 operators
           {selectedState ? ` in ${selectedState.name}` : ''}.
         </h3>
         <p className="text-sm text-gray-600 leading-relaxed max-w-md mx-auto">
-          You will get a text within 24 hours, often faster during spray season.
-          If you do not hear back, reply to the confirmation email or call us.
+          Expect a text within 24 hours. Often faster during spray season.
+          If nothing arrives, reply to the confirmation email and we will chase it.
         </p>
         <div className="mt-5 flex flex-wrap items-center justify-center gap-3 text-sm">
           <Link
@@ -310,7 +338,7 @@ export default function GetMatchedWizard({
             heading={headingOverride ?? 'Where are your fields?'}
             subheading={
               subheadingOverride ??
-              'Tell us your ZIP code and we will match you with up to 3 verified operators in your area within 24 hours.'
+              'Drop your ZIP. We text you up to 3 verified Part 137 operators in 24 hours.'
             }
             zip={form.zip}
             stateSlug={form.stateSlug}
@@ -337,9 +365,15 @@ export default function GetMatchedWizard({
           <Step3
             formId={formId}
             acreage={form.acreage}
+            acresExact={form.acresExact}
             onPick={(v) => {
               update('acreage', v);
+              update('acresExact', '');
               window.setTimeout(() => setStep(4), 120);
+            }}
+            onExact={(v) => {
+              update('acresExact', v);
+              if (v.length > 0) update('acreage', '');
             }}
           />
         )}
@@ -351,11 +385,15 @@ export default function GetMatchedWizard({
             phone={form.phone}
             email={form.email}
             consent={form.consent}
+            addNote={form.addNote}
+            notes={form.notes}
             stateName={selectedState?.name ?? ''}
             onName={(v) => update('name', v)}
             onPhone={(v) => update('phone', v)}
             onEmail={(v) => update('email', v)}
             onConsent={(v) => update('consent', v)}
+            onAddNote={(v) => update('addNote', v)}
+            onNotes={(v) => update('notes', v)}
             turnstileSlot={
               TURNSTILE_SITE_KEY ? (
                 <div ref={turnstileWidgetRef} className="my-3" />
@@ -533,10 +571,10 @@ function Step2({
   return (
     <div>
       <h3 id={`${formId}-h`} className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
-        What&apos;s your main crop?
+        What are you treating?
       </h3>
       <p className="text-sm text-gray-600 mb-5 leading-relaxed">
-        We will match you with operators who already work this crop in your area.
+        We match you with operators who already spray this crop in your area.
       </p>
 
       <div
@@ -575,24 +613,62 @@ function Step2({
 function Step3({
   formId,
   acreage,
+  acresExact,
   onPick,
+  onExact,
 }: {
   formId: string;
   acreage: AcreageValue | '';
+  acresExact: string;
   onPick: (v: AcreageValue) => void;
+  onExact: (v: string) => void;
 }) {
+  const usingExact = acresExact.length > 0;
+  const exactNum = acresExact ? parseInt(acresExact, 10) : NaN;
+  const exactValid = Number.isFinite(exactNum) && exactNum >= 1 && exactNum <= 100000;
   return (
     <div>
       <h3 id={`${formId}-h`} className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
-        About how many acres?
+        How many acres are you treating?
       </h3>
       <p className="text-sm text-gray-600 mb-5 leading-relaxed">
-        A rough range is fine. Operators use this to size their quote.
+        Pick a range or type the exact number. Operators use this to size your quote.
       </p>
+
+      {/* Exact-acres input (always visible, primary path for farmers who know the number) */}
+      <label
+        htmlFor={`${formId}-acres-exact`}
+        className="block text-xs font-semibold text-gray-700 mb-1.5 uppercase tracking-wide"
+      >
+        Exact acres (if you know it)
+      </label>
+      <div className="relative mb-4">
+        <input
+          id={`${formId}-acres-exact`}
+          type="number"
+          inputMode="numeric"
+          min={1}
+          max={100000}
+          step={1}
+          value={acresExact}
+          onChange={(e) => onExact(e.target.value.replace(/[^0-9]/g, ''))}
+          placeholder="e.g. 320"
+          className="w-full px-4 py-3 pr-16 border border-gray-300 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-gray-500 pointer-events-none">
+          acres
+        </span>
+      </div>
+
+      <div className="flex items-center gap-3 mb-3">
+        <div className="flex-1 h-px bg-gray-200" />
+        <span className="text-xs text-gray-500 uppercase tracking-wide">Or pick a range</span>
+        <div className="flex-1 h-px bg-gray-200" />
+      </div>
 
       <div role="radiogroup" aria-label="Acreage range" className="grid grid-cols-1 gap-2">
         {ACREAGE_RANGES.map((opt) => {
-          const selected = acreage === opt.value;
+          const selected = !usingExact && acreage === opt.value;
           return (
             <button
               key={opt.value}
@@ -601,7 +677,7 @@ function Step3({
               aria-checked={selected}
               onClick={() => onPick(opt.value)}
               className={
-                'flex items-center justify-between px-4 py-3.5 rounded-xl border text-sm font-semibold transition-all ' +
+                'flex items-center justify-between px-4 py-3 rounded-xl border text-sm font-semibold transition-all ' +
                 (selected
                   ? 'border-green-700 bg-green-50 text-green-900 ring-2 ring-green-200'
                   : 'border-gray-200 bg-white text-gray-800 hover:border-green-400 hover:bg-green-50')
@@ -613,6 +689,12 @@ function Step3({
           );
         })}
       </div>
+
+      {usingExact && !exactValid && (
+        <p className="mt-3 text-xs text-amber-700">
+          Enter a whole number between 1 and 100,000.
+        </p>
+      )}
     </div>
   );
 }
@@ -623,11 +705,15 @@ function Step4({
   phone,
   email,
   consent,
+  addNote,
+  notes,
   stateName,
   onName,
   onPhone,
   onEmail,
   onConsent,
+  onAddNote,
+  onNotes,
   turnstileSlot,
 }: {
   formId: string;
@@ -635,21 +721,25 @@ function Step4({
   phone: string;
   email: string;
   consent: boolean;
+  addNote: boolean;
+  notes: string;
   stateName: string;
   onName: (v: string) => void;
   onPhone: (v: string) => void;
   onEmail: (v: string) => void;
   onConsent: (v: boolean) => void;
+  onAddNote: (v: boolean) => void;
+  onNotes: (v: string) => void;
   turnstileSlot: React.ReactNode;
 }) {
   return (
     <div>
       <h3 id={`${formId}-h`} className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
-        How should the operators reach you?
+        Last step. How do operators reach you?
       </h3>
       <p className="text-sm text-gray-600 mb-5 leading-relaxed">
-        We will text your match list within 24 hours. Most farmers prefer text.
-        {stateName ? ` We will only share your info with up to 3 operators in ${stateName}.` : ''}
+        We text your matches within 24 hours.
+        {stateName ? ` Your info goes only to up to 3 operators in ${stateName}, never more.` : ' Your info goes only to up to 3 matched operators, never more.'}
       </p>
 
       <div className="space-y-3.5">
@@ -704,6 +794,39 @@ function Step4({
             placeholder="you@example.com"
             className="w-full px-3 py-2.5 border border-gray-300 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-green-500"
           />
+        </div>
+
+        {/* Optional note for the matched operators */}
+        <div className="rounded-xl border border-gray-200 bg-white">
+          <label className="flex items-center gap-2 px-3 py-2.5 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={addNote}
+              onChange={(e) => onAddNote(e.target.checked)}
+              className="w-4 h-4 text-green-700 border-gray-400 rounded focus:ring-green-500"
+            />
+            <span className="text-sm font-semibold text-gray-800">
+              Add a note for the operators
+            </span>
+            <span className="text-xs text-gray-400 font-normal">(optional)</span>
+          </label>
+          {addNote && (
+            <div className="px-3 pb-3">
+              <textarea
+                id={`${formId}-notes`}
+                value={notes}
+                onChange={(e) => onNotes(e.target.value.slice(0, 1000))}
+                rows={3}
+                maxLength={1000}
+                placeholder="Anything operators should know? Target spray window, product, field access, when you want to be called, etc."
+                className="w-full px-3 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
+              />
+              <div className="mt-1 flex items-center justify-between text-[11px] text-gray-500">
+                <span>Plain text. No links, no contact info needed here.</span>
+                <span>{notes.length} / 1000</span>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="bg-gray-50 border border-gray-200 rounded-xl px-3 py-3 text-xs text-gray-700 leading-relaxed">
