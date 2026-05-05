@@ -11,6 +11,12 @@ interface Props {
   source?: string;
   headingOverride?: string;
   subheadingOverride?: string;
+  operatorContext?: {
+    slug: string;
+    name: string;
+    stateSlug: string;
+    stateName: string;
+  };
 }
 
 export default function GetMatchedModal({
@@ -20,6 +26,7 @@ export default function GetMatchedModal({
   source,
   headingOverride,
   subheadingOverride,
+  operatorContext,
 }: Props) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -47,7 +54,11 @@ export default function GetMatchedModal({
       className="fixed inset-0 z-[9999] flex items-start sm:items-center justify-center p-3 sm:p-4 bg-black/60 backdrop-blur-sm overflow-y-auto"
       role="dialog"
       aria-modal="true"
-      aria-label="Get matched with a drone operator"
+      aria-label={
+        operatorContext
+          ? `Request a quote from ${operatorContext.name}`
+          : 'Get matched with a drone operator'
+      }
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -70,6 +81,7 @@ export default function GetMatchedModal({
           source={source}
           headingOverride={headingOverride}
           subheadingOverride={subheadingOverride}
+          operatorContext={operatorContext}
           onSubmitted={() => {
             // Auto-close after 4s so the user can read the confirmation.
             window.setTimeout(onClose, 4000);
