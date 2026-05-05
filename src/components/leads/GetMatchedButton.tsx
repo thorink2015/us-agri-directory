@@ -19,6 +19,17 @@ interface Props {
   children?: ReactNode;
   variant?: 'primary' | 'secondary' | 'inline';
   ariaLabel?: string;
+  /**
+   * When set, the modal opens in operator-first mode (skips location step,
+   * targets a specific operator, offers an "also broaden to 2 more" toggle).
+   * Used on operator profile pages.
+   */
+  operatorContext?: {
+    slug: string;
+    name: string;
+    stateSlug: string;
+    stateName: string;
+  };
 }
 
 const VARIANTS: Record<NonNullable<Props['variant']>, string> = {
@@ -45,6 +56,7 @@ export default function GetMatchedButton({
   children = 'Get my 3 matches',
   variant = 'primary',
   ariaLabel,
+  operatorContext,
 }: Props) {
   const [open, setOpen] = useState(false);
   return (
@@ -65,6 +77,7 @@ export default function GetMatchedButton({
         source={source}
         headingOverride={headingOverride}
         subheadingOverride={subheadingOverride}
+        operatorContext={operatorContext}
       />
     </>
   );
