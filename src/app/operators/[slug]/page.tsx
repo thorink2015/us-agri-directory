@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import {
   Globe, MapPin, CheckCircle, BadgeCheck, Calendar, Plane,
-  Clock, Languages, CreditCard, Shield, Award, Zap, Users,
+  Clock, Languages, CreditCard, Shield, ShieldCheck, Award, Zap, Users,
   HelpCircle, FileCheck, Sprout,
 } from 'lucide-react';
 import {
@@ -33,6 +33,7 @@ import OperatorContactLinks from '@/components/operators/OperatorContactLinks';
 import OperatorGallery from '@/components/operators/OperatorGallery';
 import VerificationBadges from '@/components/ui/VerificationBadges';
 import GetMatchedWizard from '@/components/leads/GetMatchedWizard';
+import GetMatchedButton from '@/components/leads/GetMatchedButton';
 
 interface Props {
   params: { slug: string };
@@ -489,23 +490,6 @@ export default function OperatorPage({ params }: Props) {
 
           {/* ─── Sidebar ─────────────────────────────────────── */}
           <aside className="space-y-4">
-            {/* Lead capture: get 3 quotes (this operator + 2 similar) */}
-            {(() => {
-              const primaryStateSlug = operator.counties[0];
-              const primaryState = counties.find((c) => c.slug === primaryStateSlug);
-              const stateName = primaryState?.name ?? 'your state';
-              const opShort = operator.shortName ?? operator.name;
-              return (
-                <GetMatchedWizard
-                  defaultStateSlug={primaryStateSlug}
-                  source={`operator-profile-${operator.slug}`}
-                  compact
-                  headingOverride={`Get quotes from ${opShort} plus 2 similar operators`}
-                  subheadingOverride={`Tell us a bit about your fields. We will text you up to 3 verified, FAA Part 137 operators in ${stateName} within 24 hours. Free, takes 60 seconds.`}
-                />
-              );
-            })()}
-
             {/* Price */}
             <div className="bg-gradient-to-br from-green-50 to-white border border-green-200 rounded-xl p-5">
               <h3 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wide">
@@ -668,6 +652,42 @@ export default function OperatorPage({ params }: Props) {
               )}
             </div>
 
+            {/* Request a quote: structured form, click-triggered modal.
+                Placed AFTER the no-friction contact card so callers/texters
+                are not slowed down. The CTA pulls the operator's primary
+                state for the operator-first wizard mode. */}
+            {(() => {
+              const primaryStateSlug = operator.counties[0];
+              const primaryState = counties.find((c) => c.slug === primaryStateSlug);
+              const stateName = primaryState?.name ?? 'your state';
+              const opShort = operator.shortName ?? operator.name;
+              return (
+                <div className="bg-gradient-to-br from-green-700 to-green-800 text-white rounded-xl p-5 shadow-sm">
+                  <h3 className="font-bold text-base mb-1.5 leading-tight">
+                    Request a quote from {opShort}
+                  </h3>
+                  <p className="text-xs text-green-100 mb-4 leading-relaxed">
+                    Send your fields, crop and acreage. {opShort} replies within 24 hours. Free, no obligation.
+                  </p>
+                  <GetMatchedButton
+                    source={`operator-profile-cta-${operator.slug}`}
+                    operatorContext={{
+                      slug: operator.slug,
+                      name: opShort,
+                      stateSlug: primaryStateSlug,
+                      stateName,
+                    }}
+                    className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 bg-white text-green-800 text-sm font-bold rounded-lg hover:bg-green-50 transition-colors"
+                  >
+                    Request a quote
+                  </GetMatchedButton>
+                  <p className="mt-3 text-[11px] text-green-100/80 leading-snug">
+                    Want to compare? You can also ask for 2 more quotes from verified operators in {stateName}.
+                  </p>
+                </div>
+              );
+            })()}
+
             <Link
               href={`/list-your-business?claim=${operator.slug}`}
               className="block w-full text-center px-4 py-2.5 border border-green-700 text-green-700 rounded-xl text-sm font-medium hover:bg-green-50 transition-colors"
@@ -682,6 +702,68 @@ export default function OperatorPage({ params }: Props) {
             </Link>
           </aside>
         </div>
+
+        {/* ─── Inline quote-request section (bottom of page) ──────────── */}
+        {/* Triggered by scroll, not visible above the fold. By the time
+            visitors reach this they have read the operator's profile,
+            verified credentials and seen pricing. Highest-intent moment
+            to convert. Operator-first wizard with broaden toggle. */}
+        {(() => {
+          const primaryStateSlug = operator.counties[0];
+          const primaryState = counties.find((c) => c.slug === primaryStateSlug);
+          const stateName = primaryState?.name ?? 'your state';
+          const opShort = operator.shortName ?? operator.name;
+          return (
+            <section
+              id="request-quote"
+              aria-label={`Request a quote from ${opShort}`}
+              className="mt-12 grid grid-cols-1 lg:grid-cols-[1fr_minmax(360px,460px)] gap-8 items-start bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white rounded-2xl overflow-hidden p-6 sm:p-8"
+            >
+              <div className="self-center">
+                <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-full mb-4 border border-white/20">
+                  <CheckCircle className="w-3.5 h-3.5 text-yellow-400" />
+                  Free, takes 60 seconds
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-3 leading-tight">
+                  Request a quote from {opShort}
+                </h2>
+                <p className="text-green-100 text-sm sm:text-base leading-relaxed mb-4">
+                  Tell {opShort} about your fields. They reply within 24 hours, often faster during spray season. Free, no obligation, and you can also ask for 2 more quotes from verified operators in {stateName} to compare.
+                </p>
+                <ul className="space-y-2 text-sm text-green-100">
+                  <li className="flex items-start gap-2">
+                    <ShieldCheck className="w-4 h-4 text-green-300 mt-0.5 flex-shrink-0" />
+                    <span>Goes directly to {opShort}, not a call center.</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <ShieldCheck className="w-4 h-4 text-green-300 mt-0.5 flex-shrink-0" />
+                    <span>3 quotes max if you broaden, never more. We never sell your info.</span>
+                  </li>
+                  {operator.priceMinUsd && (
+                    <li className="flex items-start gap-2">
+                      <ShieldCheck className="w-4 h-4 text-green-300 mt-0.5 flex-shrink-0" />
+                      <span>
+                        {opShort}&apos;s typical rate: {formatPrice(operator.priceMinUsd, operator.priceMaxUsd)} per acre.
+                      </span>
+                    </li>
+                  )}
+                </ul>
+              </div>
+              <div>
+                <GetMatchedWizard
+                  source={`operator-profile-bottom-${operator.slug}`}
+                  compact
+                  operatorContext={{
+                    slug: operator.slug,
+                    name: opShort,
+                    stateSlug: primaryStateSlug,
+                    stateName,
+                  }}
+                />
+              </div>
+            </section>
+          );
+        })()}
       </div>
     </>
   );

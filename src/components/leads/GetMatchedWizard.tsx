@@ -40,6 +40,20 @@ interface Props {
   compact?: boolean;
   /** Called after a successful submit. Modal wrapper uses this to keep focus / auto-close. */
   onSubmitted?: () => void;
+  /**
+   * When provided, the wizard becomes an operator-first quote request:
+   * step 1 (location) is skipped, the operator's primary state is used
+   * automatically, headings reframe around the targeted operator, the
+   * contact step gains a "broaden to 2 more operators" toggle, and the
+   * submission is tagged `_form_type=operator-quote-request` with the
+   * target operator slug + name. Used on operator profile pages.
+   */
+  operatorContext?: {
+    slug: string;
+    name: string;
+    stateSlug: string;
+    stateName: string;
+  };
 }
 
 interface FormState {
@@ -54,6 +68,8 @@ interface FormState {
   consent: boolean;
   addNote: boolean;
   notes: string;
+  /** Operator-first mode only: also broaden to 2 more operators in state. Default ON. */
+  broaden: boolean;
 }
 
 const INITIAL: FormState = {
@@ -68,6 +84,7 @@ const INITIAL: FormState = {
   consent: false,
   addNote: false,
   notes: '',
+  broaden: true,
 };
 
 /**
@@ -81,16 +98,23 @@ export default function GetMatchedWizard({
   subheadingOverride,
   compact = false,
   onSubmitted,
+  operatorContext,
 }: Props) {
   const formId = useId();
-  const [step, setStep] = useState<Step>(1);
+  // Operator-first mode: skip step 1 entirely. Total visible steps = 3.
+  const isOperatorMode = !!operatorContext;
+  const initialStep: Step = isOperatorMode ? 2 : 1;
+  const totalSteps = isOperatorMode ? 3 : 4;
+  const visibleStepNumber = (s: Step) => (isOperatorMode ? s - 1 : s);
+
+  const [step, setStep] = useState<Step>(initialStep);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [usePicker, setUsePicker] = useState(!!defaultStateSlug);
   const [form, setForm] = useState<FormState>({
     ...INITIAL,
-    stateSlug: defaultStateSlug ?? '',
+    stateSlug: operatorContext?.stateSlug ?? defaultStateSlug ?? '',
   });
   const turnstileTokenRef = useRef<string>('');
   const turnstileWidgetRef = useRef<HTMLDivElement>(null);
@@ -162,7 +186,9 @@ export default function GetMatchedWizard({
 
   function back() {
     setError('');
-    setStep((s) => (s > 1 ? ((s - 1) as Step) : s));
+    // In operator mode, step 1 (location) is skipped entirely; clamp to 2.
+    const minStep: Step = isOperatorMode ? 2 : 1;
+    setStep((s) => (s > minStep ? ((s - 1) as Step) : s));
   }
 
   function update<K extends keyof FormState>(key: K, value: FormState[K]) {
@@ -209,13 +235,20 @@ export default function GetMatchedWizard({
     const trimmedNotes = form.addNote ? form.notes.trim().slice(0, 1000) : '';
     const acresForSubject = acresExact !== null ? `${acresExact} ac` : acreageLabel;
 
+    const operatorSubjectPrefix = isOperatorMode
+      ? `Quote request for ${operatorContext!.name}`
+      : `New lead`;
+    const operatorAreaPart = isOperatorMode
+      ? operatorContext!.stateName
+      : stateName || form.zip || 'unknown area';
+
     const payload: Record<string, unknown> = {
-      _form_type: 'get-matched-lead',
-      _subject: `New lead: ${stateName || form.zip || 'unknown area'}, ${cropLabel || 'crop TBC'}, ${acresForSubject}`,
+      _form_type: isOperatorMode ? 'operator-quote-request' : 'get-matched-lead',
+      _subject: `${operatorSubjectPrefix}: ${operatorAreaPart}, ${cropLabel || 'crop TBC'}, ${acresForSubject}`,
       source,
       zip: form.zip.trim(),
-      state_slug: form.stateSlug,
-      state_name: stateName,
+      state_slug: isOperatorMode ? operatorContext!.stateSlug : form.stateSlug,
+      state_name: isOperatorMode ? operatorContext!.stateName : stateName,
       crop: cropLabel,
       crop_slug: form.crop,
       acreage: acreageLabel,
@@ -231,6 +264,10 @@ export default function GetMatchedWizard({
       page_url: typeof window !== 'undefined' ? window.location.href : '',
       referrer: typeof document !== 'undefined' ? document.referrer : '',
       user_agent: typeof navigator !== 'undefined' ? navigator.userAgent : '',
+      // Operator-first mode metadata. Empty/null when not in operator mode.
+      target_operator_slug: operatorContext?.slug ?? '',
+      target_operator_name: operatorContext?.name ?? '',
+      also_match_others: isOperatorMode ? form.broaden : null,
     };
     if (TURNSTILE_SITE_KEY && turnstileTokenRef.current) {
       payload['cf-turnstile-response'] = turnstileTokenRef.current;
@@ -268,8 +305,11 @@ export default function GetMatchedWizard({
           <CheckCircle className="w-6 h-6 text-green-700" />
         </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">
-          Got it. Matching you with up to 3 FAA Part 137 operators
-          {selectedState ? ` in ${selectedState.name}` : ''}.
+          {isOperatorMode
+            ? form.broaden
+              ? `Got it. ${operatorContext!.name} plus up to 2 more operators in ${operatorContext!.stateName} will reach out.`
+              : `Got it. ${operatorContext!.name} will reach out shortly.`
+            : `Got it. Matching you with up to 3 FAA Part 137 operators${selectedState ? ` in ${selectedState.name}` : ''}.`}
         </h3>
         <p className="text-sm text-gray-600 leading-relaxed max-w-md mx-auto">
           Expect a text within 24 hours. Often faster during spray season.
@@ -307,14 +347,14 @@ export default function GetMatchedWizard({
       <div className="mb-5">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-semibold uppercase tracking-wide text-green-700">
-            Step {step} of 4
+            Step {visibleStepNumber(step)} of {totalSteps}
           </span>
           <span className="text-xs text-gray-500">Free, takes 60 seconds</span>
         </div>
         <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
           <div
             className="h-full bg-green-700 transition-all duration-300"
-            style={{ width: `${(step / 4) * 100}%` }}
+            style={{ width: `${(visibleStepNumber(step) / totalSteps) * 100}%` }}
             aria-hidden="true"
           />
         </div>
@@ -353,6 +393,7 @@ export default function GetMatchedWizard({
           <Step2
             formId={formId}
             crop={form.crop}
+            operatorName={operatorContext?.name}
             onPick={(v) => {
               update('crop', v);
               // auto-advance. The tile click is the answer.
@@ -387,13 +428,16 @@ export default function GetMatchedWizard({
             consent={form.consent}
             addNote={form.addNote}
             notes={form.notes}
-            stateName={selectedState?.name ?? ''}
+            stateName={isOperatorMode ? operatorContext!.stateName : (selectedState?.name ?? '')}
+            operatorContext={operatorContext}
+            broaden={form.broaden}
             onName={(v) => update('name', v)}
             onPhone={(v) => update('phone', v)}
             onEmail={(v) => update('email', v)}
             onConsent={(v) => update('consent', v)}
             onAddNote={(v) => update('addNote', v)}
             onNotes={(v) => update('notes', v)}
+            onBroaden={(v) => update('broaden', v)}
             turnstileSlot={
               TURNSTILE_SITE_KEY ? (
                 <div ref={turnstileWidgetRef} className="my-3" />
@@ -562,19 +606,25 @@ function Step1({
 function Step2({
   formId,
   crop,
+  operatorName,
   onPick,
 }: {
   formId: string;
   crop: CropValue | '';
+  operatorName?: string;
   onPick: (v: CropValue) => void;
 }) {
   return (
     <div>
       <h3 id={`${formId}-h`} className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
-        What are you treating?
+        {operatorName
+          ? `What are you asking ${operatorName} to treat?`
+          : 'What are you treating?'}
       </h3>
       <p className="text-sm text-gray-600 mb-5 leading-relaxed">
-        We match you with operators who already spray this crop in your area.
+        {operatorName
+          ? `${operatorName} can quote on each of these.`
+          : 'We match you with operators who already spray this crop in your area.'}
       </p>
 
       <div
@@ -708,12 +758,15 @@ function Step4({
   addNote,
   notes,
   stateName,
+  operatorContext,
+  broaden,
   onName,
   onPhone,
   onEmail,
   onConsent,
   onAddNote,
   onNotes,
+  onBroaden,
   turnstileSlot,
 }: {
   formId: string;
@@ -724,22 +777,29 @@ function Step4({
   addNote: boolean;
   notes: string;
   stateName: string;
+  operatorContext?: { slug: string; name: string; stateSlug: string; stateName: string };
+  broaden: boolean;
   onName: (v: string) => void;
   onPhone: (v: string) => void;
   onEmail: (v: string) => void;
   onConsent: (v: boolean) => void;
   onAddNote: (v: boolean) => void;
   onNotes: (v: string) => void;
+  onBroaden: (v: boolean) => void;
   turnstileSlot: React.ReactNode;
 }) {
+  const isOperatorMode = !!operatorContext;
   return (
     <div>
       <h3 id={`${formId}-h`} className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
-        Last step. How do operators reach you?
+        {isOperatorMode
+          ? `Last step. How does ${operatorContext!.name} reach you?`
+          : 'Last step. How do operators reach you?'}
       </h3>
       <p className="text-sm text-gray-600 mb-5 leading-relaxed">
-        We text your matches within 24 hours.
-        {stateName ? ` Your info goes only to up to 3 operators in ${stateName}, never more.` : ' Your info goes only to up to 3 matched operators, never more.'}
+        {isOperatorMode
+          ? `${operatorContext!.name} will text or call within 24 hours${broaden ? ` along with up to 2 more verified operators in ${operatorContext!.stateName}` : ''}.`
+          : `We text your matches within 24 hours.${stateName ? ` Your info goes only to up to 3 operators in ${stateName}, never more.` : ' Your info goes only to up to 3 matched operators, never more.'}`}
       </p>
 
       <div className="space-y-3.5">
@@ -795,6 +855,26 @@ function Step4({
             className="w-full px-3 py-2.5 border border-gray-300 rounded-xl text-base focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
+
+        {/* Operator-mode only: optional broaden to 2 more operators in state */}
+        {isOperatorMode && (
+          <label className="flex items-start gap-2.5 px-3 py-3 bg-green-50 border border-green-200 rounded-xl cursor-pointer">
+            <input
+              type="checkbox"
+              checked={broaden}
+              onChange={(e) => onBroaden(e.target.checked)}
+              className="mt-0.5 w-4 h-4 text-green-700 border-gray-400 rounded focus:ring-green-500 flex-shrink-0"
+            />
+            <span className="text-sm leading-snug">
+              <span className="block font-semibold text-green-900">
+                Also send me 2 more quotes from verified operators in {operatorContext!.stateName}
+              </span>
+              <span className="block text-xs text-green-800/80 mt-0.5">
+                Compare {operatorContext!.name}&apos;s quote against 2 nearby Part 137 operators. 3 max, never more.
+              </span>
+            </span>
+          </label>
+        )}
 
         {/* Optional note for the matched operators */}
         <div className="rounded-xl border border-gray-200 bg-white">
