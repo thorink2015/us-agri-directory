@@ -143,6 +143,12 @@ export default function OperatorPage({ params }: Props) {
                       <MapPin className="w-4 h-4" />
                       {operator.city}, {getStateAbbr(operator.counties)}
                     </span>
+                    {operator.ownerName && (
+                      <span className="flex items-center gap-1" title="Owner / lead operator">
+                        <Users className="w-3.5 h-3.5" />
+                        Run by {operator.ownerName}
+                      </span>
+                    )}
                     {operator.founded && (
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3.5 h-3.5" />

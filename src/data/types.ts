@@ -42,6 +42,7 @@ export interface Operator {
   tiktok?: string;
   youtube?: string;
   founded?: number;
+  ownerName?: string;             // Owner / lead operator name (surfaced on profile when present)
   services: ServiceType[];
   drones: string[];
   crops: string[];
