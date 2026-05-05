@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Plane, ChevronDown } from 'lucide-react';
+import GetMatchedButton from '@/components/leads/GetMatchedButton';
 
 type NavLink = { href: string; label: string; description?: string };
 type NavTopItem =
@@ -147,24 +148,40 @@ export default function Header() {
               ),
             )}
 
+            <GetMatchedButton
+              source="header-desktop"
+              variant="primary"
+              className="ml-2 inline-flex items-center justify-center gap-1.5 px-4 py-2 text-white text-sm font-semibold rounded-lg bg-green-700 hover:bg-green-800 transition-colors"
+            >
+              Get free quotes
+            </GetMatchedButton>
             <Link
               href="/list-your-business"
-              className="ml-2 px-4 py-2 text-white text-sm font-semibold rounded-lg bg-green-700 hover:bg-green-800 transition-colors"
+              className="ml-1 px-3 py-2 text-green-700 hover:text-green-800 hover:bg-green-50 text-sm font-medium rounded-lg border border-green-200 hover:border-green-300 transition-colors"
             >
-              List Your Business
+              List business
             </Link>
           </nav>
 
-          {/* Mobile toggle */}
-          <button
-            className="lg:hidden p-2 text-gray-600 hover:text-green-700"
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-nav"
-          >
-            {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile right side: always-visible Get quotes pill + hamburger */}
+          <div className="lg:hidden flex items-center gap-1">
+            <GetMatchedButton
+              source="header-mobile-bar"
+              variant="primary"
+              className="inline-flex items-center justify-center px-3 py-1.5 text-white text-xs font-semibold rounded-full bg-green-700 hover:bg-green-800 transition-colors whitespace-nowrap"
+            >
+              Get quotes
+            </GetMatchedButton>
+            <button
+              className="p-2 text-gray-600 hover:text-green-700"
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-nav"
+            >
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu */}
@@ -200,13 +217,22 @@ export default function Header() {
                 ),
               )}
 
-              <Link
-                href="/list-your-business"
-                className="mt-3 mx-3 px-4 py-2 text-white text-sm font-semibold rounded-lg text-center bg-green-700 hover:bg-green-800 transition-colors"
-                onClick={() => setMobileOpen(false)}
-              >
-                List Your Business
-              </Link>
+              <div className="mt-3 mx-3 flex flex-col gap-2">
+                <GetMatchedButton
+                  source="header-mobile"
+                  variant="primary"
+                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-3 text-white text-sm font-semibold rounded-lg bg-green-700 hover:bg-green-800 transition-colors"
+                >
+                  Get my 3 free quotes
+                </GetMatchedButton>
+                <Link
+                  href="/list-your-business"
+                  className="w-full text-center px-4 py-2.5 text-green-700 text-sm font-medium rounded-lg border border-green-200 hover:bg-green-50 transition-colors"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Are you an operator? List your business
+                </Link>
+              </div>
             </nav>
           </div>
         )}
