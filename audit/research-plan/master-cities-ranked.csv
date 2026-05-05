@@ -1,0 +1,860 @@
+rank,city,state,state_slug,city_slug,county,cropland_acres,farm_count,ag_receipts_usd,state_cropland_acres,ag_score,existing_operator_count,coverage_status,in_directory
+1,Lubbock,Texas,texas,lubbock,Lubbock,,,,130000000,0.8732,1,light,false
+2,Perryton,Texas,texas,perryton,Ochiltree,,,,130000000,0.8732,1,light,false
+3,Houston,Texas,texas,houston,,,,,130000000,0.7449,2,light,true
+4,Plainview,Texas,texas,plainview,Hale,,,,130000000,0.7,0,gap,false
+5,Dumas,Texas,texas,dumas,Moore,,,,130000000,0.7,0,gap,false
+6,Hereford,Texas,texas,hereford,Deaf Smith,,,,130000000,0.7,0,gap,false
+7,Harlingen,Texas,texas,harlingen,Cameron,,,,130000000,0.7,0,gap,false
+8,Weslaco,Texas,texas,weslaco,Hidalgo,,,,130000000,0.7,0,gap,false
+9,Uvalde,Texas,texas,uvalde,Uvalde,,,,130000000,0.7,0,gap,false
+10,Victoria,Texas,texas,victoria,Victoria,,,,130000000,0.7,0,gap,false
+11,Lamesa,Texas,texas,lamesa,Dawson,,,,130000000,0.7,0,gap,false
+12,Levelland,Texas,texas,levelland,Hockley,,,,130000000,0.7,0,gap,false
+13,Brownfield,Texas,texas,brownfield,Terry,,,,130000000,0.7,0,gap,false
+14,Muleshoe,Texas,texas,muleshoe,Bailey,,,,130000000,0.7,0,gap,false
+15,Floydada,Texas,texas,floydada,Floyd,,,,130000000,0.7,0,gap,false
+16,Tulia,Texas,texas,tulia,Swisher,,,,130000000,0.7,0,gap,false
+17,Dimmitt,Texas,texas,dimmitt,Castro,,,,130000000,0.7,0,gap,false
+18,Pampa,Texas,texas,pampa,Gray,,,,130000000,0.7,0,gap,false
+19,Edinburg,Texas,texas,edinburg,Hidalgo,,,,130000000,0.7,0,gap,false
+20,Mercedes,Texas,texas,mercedes,Hidalgo,,,,130000000,0.7,0,gap,false
+21,Raymondville,Texas,texas,raymondville,Willacy,,,,130000000,0.7,0,gap,false
+22,Texas (serves OK and NM),Texas,texas,texas-serves-ok-and-nm,,,,,130000000,0.6732,1,light,false
+23,Grapevine,Texas,texas,grapevine,,,,,130000000,0.6732,1,light,false
+24,Llano,Texas,texas,llano,,,,,130000000,0.6732,1,light,false
+25,Palestine/Longview,Texas,texas,palestinelongview,,,,,130000000,0.6732,1,light,false
+26,Robinson,Texas,texas,robinson,,,,,130000000,0.6732,1,light,false
+27,Washington County,Texas,texas,washington-county,,,,,130000000,0.6732,1,light,false
+28,Frisco,Texas,texas,frisco,,,,,130000000,0.6732,1,light,false
+29,Palestine,Texas,texas,palestine,,,,,130000000,0.6732,1,light,false
+30,Decatur,Texas,texas,decatur,,,,,130000000,0.6732,1,light,false
+31,Multiple TX offices,Texas,texas,multiple-tx-offices,,,,,130000000,0.6732,1,light,false
+32,Gonzales (Harwood),Texas,texas,gonzales-harwood,,,,,130000000,0.6732,1,light,false
+33,Pittsburg,Texas,texas,pittsburg,,,,,130000000,0.6732,1,light,false
+34,West TX (Lubbock area),Texas,texas,west-tx-lubbock-area,,,,,130000000,0.6732,1,light,false
+35,Jackson County,Texas,texas,jackson-county,,,,,130000000,0.6732,1,light,false
+36,Alvarado,Texas,texas,alvarado,,,,,130000000,0.6732,1,light,false
+37,West TX,Texas,texas,west-tx,,,,,130000000,0.6732,1,light,false
+38,Sidney,Montana,montana,sidney,Richland,,,,59000000,0.6,1,light,false
+39,Salinas,California,california,salinas,Monterey,,,,25000000,0.5959,3,covered_well,true
+40,Hutchinson,Kansas,kansas,hutchinson,Reno,,,,46000000,0.55,1,light,false
+41,Pratt,Kansas,kansas,pratt,Pratt,,,,46000000,0.55,1,light,false
+42,Ulysses,Kansas,kansas,ulysses,Grant,,,,46000000,0.55,1,light,false
+43,Champaign,Illinois,illinois,champaign,Champaign,,,,27000000,0.5486,2,light,true
+44,Effingham,Illinois,illinois,effingham,Effingham,,,,27000000,0.5486,2,light,true
+45,Holdrege,Nebraska,nebraska,holdrege,Phelps,,,,45000000,0.5461,1,light,false
+46,Hastings,Nebraska,nebraska,hastings,Adams,,,,45000000,0.5461,1,light,false
+47,Huron,South Dakota,south-dakota,huron,Beadle,,,,43000000,0.5384,1,light,false
+48,Mitchell,South Dakota,south-dakota,mitchell,Davison,,,,43000000,0.5384,1,light,false
+49,Guymon,Oklahoma,oklahoma,guymon,Texas,,,,34000000,0.5038,1,light,false
+50,Jonesboro,Arkansas,arkansas,jonesboro,Craighead,,,,14000000,0.4986,2,light,true
+51,Wray,Colorado,colorado,wray,Yuma,,,,31000000,0.4922,1,light,false
+52,Lander,Wyoming,wyoming,lander,Fremont,,,,30000000,0.4884,1,light,false
+53,Billings,Montana,montana,billings,,,,,59000000,0.4717,2,light,true
+54,Fresno,California,california,fresno,Fresno,,,,25000000,0.4691,1,light,false
+55,Visalia,California,california,visalia,Tulare,,,,25000000,0.4691,1,light,false
+56,Salem,Oregon,oregon,salem,Marion,,,,16500000,0.4364,1,light,false
+57,Marshfield,Wisconsin,wisconsin,marshfield,Wood,,,,15500000,0.4326,1,light,false
+58,Antigo,Wisconsin,wisconsin,antigo,Langlade,,,,15500000,0.4326,1,light,false
+59,Lafayette,Indiana,indiana,lafayette,Tippecanoe,,,,15000000,0.4307,1,light,false
+60,Wenatchee,Washington,washington,wenatchee,Chelan,,,,14500000,0.4287,1,light,false
+61,Bucyrus,Ohio,ohio,bucyrus,Crawford,,,,14000000,0.4268,1,light,false
+62,Great Falls,Montana,montana,great-falls,Cascade,,,,59000000,0.4268,0,gap,false
+63,Havre,Montana,montana,havre,Hill,,,,59000000,0.4268,0,gap,false
+64,Glendive,Montana,montana,glendive,Dawson,,,,59000000,0.4268,0,gap,false
+65,Glasgow,Montana,montana,glasgow,Valley,,,,59000000,0.4268,0,gap,false
+66,Lewistown,Montana,montana,lewistown,Fergus,,,,59000000,0.4268,0,gap,false
+67,Conrad,Montana,montana,conrad,Pondera,,,,59000000,0.4268,0,gap,false
+68,Choteau,Montana,montana,choteau,Teton,,,,59000000,0.4268,0,gap,false
+69,Cut Bank,Montana,montana,cut-bank,Glacier,,,,59000000,0.4268,0,gap,false
+70,Plentywood,Montana,montana,plentywood,Sheridan,,,,59000000,0.4268,0,gap,false
+71,Elizabethtown,Kentucky,kentucky,elizabethtown,Hardin,,,,13000000,0.423,1,light,false
+72,Overland Park,Kansas,kansas,overland-park,,,,,46000000,0.4217,2,light,true
+73,Hiawatha,Kansas,kansas,hiawatha,,,,,46000000,0.4217,2,light,true
+74,Wichita,Kansas,kansas,wichita,,,,,46000000,0.4217,2,light,true
+75,Twin Falls,Idaho,idaho,twin-falls,Twin Falls,,,,11700000,0.418,1,light,false
+76,Caldwell,Idaho,idaho,caldwell,Canyon,,,,11700000,0.418,1,light,false
+77,Nebraska City,Nebraska,nebraska,nebraska-city,,,,,45000000,0.4179,2,light,true
+78,Indianola,Mississippi,mississippi,indianola,Sunflower,,,,11000000,0.4153,1,light,false
+79,Jackson,Tennessee,tennessee,jackson,Madison,,,,10500000,0.4133,1,light,false
+80,Tifton,Georgia,georgia,tifton,Tift,,,,10000000,0.4114,1,light,false
+81,Sylvester,Georgia,georgia,sylvester,Worth,,,,10000000,0.4114,1,light,false
+82,Sandusky,Michigan,michigan,sandusky,Sanilac,,,,10000000,0.4114,1,light,false
+83,Dothan,Alabama,alabama,dothan,Houston,,,,9000000,0.4076,1,light,false
+84,Cullman,Alabama,alabama,cullman,Cullman,,,,9000000,0.4076,1,light,false
+85,Wilson,North Carolina,north-carolina,wilson,Wilson,,,,8500000,0.4057,1,light,false
+86,Goldsboro,North Carolina,north-carolina,goldsboro,Wayne,,,,8500000,0.4057,1,light,false
+87,Winnsboro,Louisiana,louisiana,winnsboro,Franklin Parish,,,,8000000,0.4037,1,light,false
+88,New Iberia,Louisiana,louisiana,new-iberia,Iberia Parish,,,,8000000,0.4037,1,light,false
+89,Suffolk,Virginia,virginia,suffolk,Suffolk,,,,7800000,0.403,1,light,false
+90,Carlisle,Pennsylvania,pennsylvania,carlisle,Cumberland,,,,7300000,0.401,1,light,false
+91,Harrisburg,Montana,montana,harrisburg,,,,,59000000,0.4,1,light,false
+92,Livingston,Montana,montana,livingston,,,,,59000000,0.4,1,light,false
+93,Hamilton,Montana,montana,hamilton,,,,,59000000,0.4,1,light,false
+94,Helena area,Montana,montana,helena-area,,,,,59000000,0.4,1,light,false
+95,Townsend,Montana,montana,townsend,,,,,59000000,0.4,1,light,false
+96,Southwest Montana,Montana,montana,southwest-montana,,,,,59000000,0.4,1,light,false
+97,Canandaigua,New York,new-york,canandaigua,Ontario,,,,7000000,0.3999,1,light,false
+98,Bismarck,North Dakota,north-dakota,bismarck,,,,,39000000,0.3948,2,light,true
+99,Florence,South Carolina,south-carolina,florence,Florence,,,,4800000,0.3914,1,light,false
+100,Hilo,Hawaii,hawaii,hilo,Hawaii,,,,1900000,0.3803,1,light,false
+101,Hays,Kansas,kansas,hays,Ellis,,,,46000000,0.3768,0,gap,false
+102,Garden City,Kansas,kansas,garden-city,Finney,,,,46000000,0.3768,0,gap,false
+103,Liberal,Kansas,kansas,liberal,Seward,,,,46000000,0.3768,0,gap,false
+104,Dodge City,Kansas,kansas,dodge-city,Ford,,,,46000000,0.3768,0,gap,false
+105,Colby,Kansas,kansas,colby,Thomas,,,,46000000,0.3768,0,gap,false
+106,Goodland,Kansas,kansas,goodland,Sherman,,,,46000000,0.3768,0,gap,false
+107,Scott City,Kansas,kansas,scott-city,Scott,,,,46000000,0.3768,0,gap,false
+108,Phillipsburg,Kansas,kansas,phillipsburg,Phillips,,,,46000000,0.3768,0,gap,false
+109,Beloit,Kansas,kansas,beloit,Mitchell,,,,46000000,0.3768,0,gap,false
+110,Concordia,Kansas,kansas,concordia,Cloud,,,,46000000,0.3768,0,gap,false
+111,McPherson,Kansas,kansas,mcpherson,McPherson,,,,46000000,0.3768,0,gap,false
+112,Glassboro,New Jersey,new-jersey,glassboro,Gloucester,,,,733000,0.3758,1,light,false
+113,Lebanon,Connecticut,connecticut,lebanon,New London,,,,375000,0.3744,1,light,false
+114,Grand Island,Nebraska,nebraska,grand-island,Hall,,,,45000000,0.3729,0,gap,false
+115,Kearney,Nebraska,nebraska,kearney,Buffalo,,,,45000000,0.3729,0,gap,false
+116,North Platte,Nebraska,nebraska,north-platte,Lincoln,,,,45000000,0.3729,0,gap,false
+117,Norfolk,Nebraska,nebraska,norfolk,Madison,,,,45000000,0.3729,0,gap,false
+118,Columbus,Nebraska,nebraska,columbus,Platte,,,,45000000,0.3729,0,gap,false
+119,Scottsbluff,Nebraska,nebraska,scottsbluff,Scotts Bluff,,,,45000000,0.3729,0,gap,false
+120,McCook,Nebraska,nebraska,mccook,Red Willow,,,,45000000,0.3729,0,gap,false
+121,Sidney,Nebraska,nebraska,sidney,Cheyenne,,,,45000000,0.3729,0,gap,false
+122,Imperial,Nebraska,nebraska,imperial,Chase,,,,45000000,0.3729,0,gap,false
+123,Beatrice,Nebraska,nebraska,beatrice,Gage,,,,45000000,0.3729,0,gap,false
+124,York,Nebraska,nebraska,york,York,,,,45000000,0.3729,0,gap,false
+125,Lexington,Nebraska,nebraska,lexington,Dawson,,,,45000000,0.3729,0,gap,false
+126,Aberdeen,South Dakota,south-dakota,aberdeen,Brown,,,,43000000,0.3652,0,gap,false
+127,Watertown,South Dakota,south-dakota,watertown,Codington,,,,43000000,0.3652,0,gap,false
+128,Brookings,South Dakota,south-dakota,brookings,Brookings,,,,43000000,0.3652,0,gap,false
+129,Yankton,South Dakota,south-dakota,yankton,Yankton,,,,43000000,0.3652,0,gap,false
+130,Pierre,South Dakota,south-dakota,pierre,Hughes,,,,43000000,0.3652,0,gap,false
+131,Vermillion,South Dakota,south-dakota,vermillion,Clay,,,,43000000,0.3652,0,gap,false
+132,Madison,South Dakota,south-dakota,madison,Lake,,,,43000000,0.3652,0,gap,false
+133,Redfield,South Dakota,south-dakota,redfield,Spink,,,,43000000,0.3652,0,gap,false
+134,Webster,South Dakota,south-dakota,webster,Day,,,,43000000,0.3652,0,gap,false
+135,Clovis,New Mexico,new-mexico,clovis,Curry,,,,43000000,0.3652,0,gap,false
+136,Portales,New Mexico,new-mexico,portales,Roosevelt,,,,43000000,0.3652,0,gap,false
+137,Roswell,New Mexico,new-mexico,roswell,Chaves,,,,43000000,0.3652,0,gap,false
+138,Carlsbad,New Mexico,new-mexico,carlsbad,Eddy,,,,43000000,0.3652,0,gap,false
+139,Hatch,New Mexico,new-mexico,hatch,Doña Ana,,,,43000000,0.3652,0,gap,false
+140,Las Cruces,New Mexico,new-mexico,las-cruces,Doña Ana,,,,43000000,0.3652,0,gap,false
+141,Deming,New Mexico,new-mexico,deming,Luna,,,,43000000,0.3652,0,gap,false
+142,Tucumcari,New Mexico,new-mexico,tucumcari,Quay,,,,43000000,0.3652,0,gap,false
+143,Hobbs,New Mexico,new-mexico,hobbs,Lea,,,,43000000,0.3652,0,gap,false
+144,Artesia,New Mexico,new-mexico,artesia,Eddy,,,,43000000,0.3652,0,gap,false
+145,Lovington,New Mexico,new-mexico,lovington,Lea,,,,43000000,0.3652,0,gap,false
+146,Colorado (Weld County),Colorado,colorado,colorado-weld-county,,,,,31000000,0.364,2,light,true
+147,Salina,Kansas,kansas,salina,,,,,46000000,0.35,1,light,false
+148,Kansas City,Kansas,kansas,kansas-city,,,,,46000000,0.35,1,light,false
+149,Westmoreland,Kansas,kansas,westmoreland,,,,,46000000,0.35,1,light,false
+150,Seneca,Kansas,kansas,seneca,,,,,46000000,0.35,1,light,false
+151,Spring Hill,Kansas,kansas,spring-hill,,,,,46000000,0.35,1,light,false
+152,Kansas City area,Kansas,kansas,kansas-city-area,,,,,46000000,0.35,1,light,false
+153,Thayer,Kansas,kansas,thayer,,,,,46000000,0.35,1,light,false
+154,SE Kansas,Kansas,kansas,se-kansas,,,,,46000000,0.35,1,light,false
+155,Fort Scott,Kansas,kansas,fort-scott,,,,,46000000,0.35,1,light,false
+156,Fargo,North Dakota,north-dakota,fargo,Cass,,,,39000000,0.3498,0,gap,false
+157,Grand Forks,North Dakota,north-dakota,grand-forks,Grand Forks,,,,39000000,0.3498,0,gap,false
+158,Minot,North Dakota,north-dakota,minot,Ward,,,,39000000,0.3498,0,gap,false
+159,Williston,North Dakota,north-dakota,williston,Williams,,,,39000000,0.3498,0,gap,false
+160,Jamestown,North Dakota,north-dakota,jamestown,Stutsman,,,,39000000,0.3498,0,gap,false
+161,Devils Lake,North Dakota,north-dakota,devils-lake,Ramsey,,,,39000000,0.3498,0,gap,false
+162,Dickinson,North Dakota,north-dakota,dickinson,Stark,,,,39000000,0.3498,0,gap,false
+163,Wahpeton,North Dakota,north-dakota,wahpeton,Richland,,,,39000000,0.3498,0,gap,false
+164,Valley City,North Dakota,north-dakota,valley-city,Barnes,,,,39000000,0.3498,0,gap,false
+165,Bottineau,North Dakota,north-dakota,bottineau,Bottineau,,,,39000000,0.3498,0,gap,false
+166,Cavalier,North Dakota,north-dakota,cavalier,Pembina,,,,39000000,0.3498,0,gap,false
+167,Carrington,North Dakota,north-dakota,carrington,Foster,,,,39000000,0.3498,0,gap,false
+168,Lincoln,Nebraska,nebraska,lincoln,,,,,45000000,0.3461,1,light,false
+169,Dundee,Nebraska,nebraska,dundee,,,,,45000000,0.3461,1,light,false
+170,Spalding,Nebraska,nebraska,spalding,,,,,45000000,0.3461,1,light,false
+171,Springfield,Nebraska,nebraska,springfield,,,,,45000000,0.3461,1,light,false
+172,Belgrade,Nebraska,nebraska,belgrade,,,,,45000000,0.3461,1,light,false
+173,Central NE,Nebraska,nebraska,central-ne,,,,,45000000,0.3461,1,light,false
+174,Lincoln/Brainard,Nebraska,nebraska,lincolnbrainard,,,,,45000000,0.3461,1,light,false
+175,Fairfield,Nebraska,nebraska,fairfield,,,,,45000000,0.3461,1,light,false
+176,Greenwood,Nebraska,nebraska,greenwood,,,,,45000000,0.3461,1,light,false
+177,West Point area,Nebraska,nebraska,west-point-area,,,,,45000000,0.3461,1,light,false
+178,Leigh,Nebraska,nebraska,leigh,,,,,45000000,0.3461,1,light,false
+179,Hartington,Nebraska,nebraska,hartington,,,,,45000000,0.3461,1,light,false
+180,Southern California,California,california,southern-california,,,,,25000000,0.3409,2,light,true
+181,Highmore,South Dakota,south-dakota,highmore,,,,,43000000,0.3384,1,light,false
+182,Alcester,South Dakota,south-dakota,alcester,,,,,43000000,0.3384,1,light,false
+183,Auburn,Alabama,alabama,auburn,,,,,9000000,0.3344,3,covered_well,true
+184,Enid,Oklahoma,oklahoma,enid,Garfield,,,,34000000,0.3306,0,gap,false
+185,Woodward,Oklahoma,oklahoma,woodward,Woodward,,,,34000000,0.3306,0,gap,false
+186,Altus,Oklahoma,oklahoma,altus,Jackson,,,,34000000,0.3306,0,gap,false
+187,Frederick,Oklahoma,oklahoma,frederick,Tillman,,,,34000000,0.3306,0,gap,false
+188,Hobart,Oklahoma,oklahoma,hobart,Kiowa,,,,34000000,0.3306,0,gap,false
+189,Stillwater,Oklahoma,oklahoma,stillwater,Payne,,,,34000000,0.3306,0,gap,false
+190,Ponca City,Oklahoma,oklahoma,ponca-city,Kay,,,,34000000,0.3306,0,gap,false
+191,Ardmore,Oklahoma,oklahoma,ardmore,Carter,,,,34000000,0.3306,0,gap,false
+192,Lawton,Oklahoma,oklahoma,lawton,Comanche,,,,34000000,0.3306,0,gap,false
+193,Elk City,Oklahoma,oklahoma,elk-city,Beckham,,,,34000000,0.3306,0,gap,false
+194,Weatherford,Oklahoma,oklahoma,weatherford,Custer,,,,34000000,0.3306,0,gap,false
+195,Kenmare,North Dakota,north-dakota,kenmare,,,,,39000000,0.323,1,light,false
+196,Killdeer,North Dakota,north-dakota,killdeer,,,,,39000000,0.323,1,light,false
+197,Yuma,Colorado,colorado,yuma,Yuma,,,,31000000,0.319,0,gap,false
+198,Burlington,Colorado,colorado,burlington,Kit Carson,,,,31000000,0.319,0,gap,false
+199,Sterling,Colorado,colorado,sterling,Logan,,,,31000000,0.319,0,gap,false
+200,Lamar,Colorado,colorado,lamar,Prowers,,,,31000000,0.319,0,gap,false
+201,Holyoke,Colorado,colorado,holyoke,Phillips,,,,31000000,0.319,0,gap,false
+202,Akron,Colorado,colorado,akron,Washington,,,,31000000,0.319,0,gap,false
+203,Greeley,Colorado,colorado,greeley,Weld,,,,31000000,0.319,0,gap,false
+204,Fort Morgan,Colorado,colorado,fort-morgan,Morgan,,,,31000000,0.319,0,gap,false
+205,La Junta,Colorado,colorado,la-junta,Otero,,,,31000000,0.319,0,gap,false
+206,Rocky Ford,Colorado,colorado,rocky-ford,Otero,,,,31000000,0.319,0,gap,false
+207,Brush,Colorado,colorado,brush,Morgan,,,,31000000,0.319,0,gap,false
+208,Storm Lake,Iowa,iowa,storm-lake,Buena Vista,,,,30400000,0.3167,0,gap,false
+209,Le Mars,Iowa,iowa,le-mars,Plymouth,,,,30400000,0.3167,0,gap,false
+210,Orange City,Iowa,iowa,orange-city,Sioux,,,,30400000,0.3167,0,gap,false
+211,Algona,Iowa,iowa,algona,Kossuth,,,,30400000,0.3167,0,gap,false
+212,Carroll,Iowa,iowa,carroll,Carroll,,,,30400000,0.3167,0,gap,false
+213,Spencer,Iowa,iowa,spencer,Clay,,,,30400000,0.3167,0,gap,false
+214,Mason City,Iowa,iowa,mason-city,Cerro Gordo,,,,30400000,0.3167,0,gap,false
+215,Atlantic,Iowa,iowa,atlantic,Cass,,,,30400000,0.3167,0,gap,false
+216,Decorah,Iowa,iowa,decorah,Winneshiek,,,,30400000,0.3167,0,gap,false
+217,Ottumwa,Iowa,iowa,ottumwa,Wapello,,,,30400000,0.3167,0,gap,false
+218,Council Bluffs,Iowa,iowa,council-bluffs,Pottawattamie,,,,30400000,0.3167,0,gap,false
+219,Sioux Center,Iowa,iowa,sioux-center,Sioux,,,,30400000,0.3167,0,gap,false
+220,Iowa Falls,Iowa,iowa,iowa-falls,Hardin,,,,30400000,0.3167,0,gap,false
+221,Newton,Iowa,iowa,newton,Jasper,,,,30400000,0.3167,0,gap,false
+222,Oskaloosa,Iowa,iowa,oskaloosa,Mahaska,,,,30400000,0.3167,0,gap,false
+223,Powell,Wyoming,wyoming,powell,Park,,,,30000000,0.3152,0,gap,false
+224,Worland,Wyoming,wyoming,worland,Washakie,,,,30000000,0.3152,0,gap,false
+225,Torrington,Wyoming,wyoming,torrington,Goshen,,,,30000000,0.3152,0,gap,false
+226,Wheatland,Wyoming,wyoming,wheatland,Platte,,,,30000000,0.3152,0,gap,false
+227,Riverton,Wyoming,wyoming,riverton,Fremont,,,,30000000,0.3152,0,gap,false
+228,Lovell,Wyoming,wyoming,lovell,Big Horn,,,,30000000,0.3152,0,gap,false
+229,Greybull,Wyoming,wyoming,greybull,Big Horn,,,,30000000,0.3152,0,gap,false
+230,Sikeston,Missouri,missouri,sikeston,Scott,,,,28500000,0.3094,0,gap,false
+231,Cape Girardeau,Missouri,missouri,cape-girardeau,Cape Girardeau,,,,28500000,0.3094,0,gap,false
+232,Sedalia,Missouri,missouri,sedalia,Pettis,,,,28500000,0.3094,0,gap,false
+233,Marshall,Missouri,missouri,marshall,Saline,,,,28500000,0.3094,0,gap,false
+234,Chillicothe,Missouri,missouri,chillicothe,Livingston,,,,28500000,0.3094,0,gap,false
+235,Hannibal,Missouri,missouri,hannibal,Marion,,,,28500000,0.3094,0,gap,false
+236,Kirksville,Missouri,missouri,kirksville,Adair,,,,28500000,0.3094,0,gap,false
+237,Macon,Missouri,missouri,macon,Macon,,,,28500000,0.3094,0,gap,false
+238,Bowling Green,Missouri,missouri,bowling-green,Pike,,,,28500000,0.3094,0,gap,false
+239,Mexico,Missouri,missouri,mexico,Audrain,,,,28500000,0.3094,0,gap,false
+240,Carthage,Missouri,missouri,carthage,Jasper,,,,28500000,0.3094,0,gap,false
+241,Maryville,Missouri,missouri,maryville,Nodaway,,,,28500000,0.3094,0,gap,false
+242,Harrisburg,Oregon,oregon,harrisburg,,,,,16500000,0.3082,2,light,true
+243,Tulsa area,Oklahoma,oklahoma,tulsa-area,,,,,34000000,0.3038,1,light,false
+244,Duncan,Oklahoma,oklahoma,duncan,,,,,34000000,0.3038,1,light,false
+245,Northern OK,Oklahoma,oklahoma,northern-ok,,,,,34000000,0.3038,1,light,false
+246,Tulsa,Oklahoma,oklahoma,tulsa,,,,,34000000,0.3038,1,light,false
+247,Bloomington,Illinois,illinois,bloomington,McLean,,,,27000000,0.3036,0,gap,false
+248,Decatur,Illinois,illinois,decatur,Macon,,,,27000000,0.3036,0,gap,false
+249,Springfield,Illinois,illinois,springfield,Sangamon,,,,27000000,0.3036,0,gap,false
+250,Quincy,Illinois,illinois,quincy,Adams,,,,27000000,0.3036,0,gap,false
+251,Galesburg,Illinois,illinois,galesburg,Knox,,,,27000000,0.3036,0,gap,false
+252,Mt. Vernon,Illinois,illinois,mt-vernon,Jefferson,,,,27000000,0.3036,0,gap,false
+253,Pontiac,Illinois,illinois,pontiac,Livingston,,,,27000000,0.3036,0,gap,false
+254,Mattoon,Illinois,illinois,mattoon,Coles,,,,27000000,0.3036,0,gap,false
+255,Paxton,Illinois,illinois,paxton,Ford,,,,27000000,0.3036,0,gap,false
+256,Monticello,Illinois,illinois,monticello,Piatt,,,,27000000,0.3036,0,gap,false
+257,Watseka,Illinois,illinois,watseka,Iroquois,,,,27000000,0.3036,0,gap,false
+258,Macomb,Illinois,illinois,macomb,McDonough,,,,27000000,0.3036,0,gap,false
+259,Marshall,Minnesota,minnesota,marshall,Lyon,,,,27000000,0.3036,0,gap,false
+260,Worthington,Minnesota,minnesota,worthington,Nobles,,,,27000000,0.3036,0,gap,false
+261,Willmar,Minnesota,minnesota,willmar,Kandiyohi,,,,27000000,0.3036,0,gap,false
+262,Mankato,Minnesota,minnesota,mankato,Blue Earth,,,,27000000,0.3036,0,gap,false
+263,Owatonna,Minnesota,minnesota,owatonna,Steele,,,,27000000,0.3036,0,gap,false
+264,Albert Lea,Minnesota,minnesota,albert-lea,Freeborn,,,,27000000,0.3036,0,gap,false
+265,Faribault,Minnesota,minnesota,faribault,Rice,,,,27000000,0.3036,0,gap,false
+266,Crookston,Minnesota,minnesota,crookston,Polk,,,,27000000,0.3036,0,gap,false
+267,Moorhead,Minnesota,minnesota,moorhead,Clay,,,,27000000,0.3036,0,gap,false
+268,Fairmont,Minnesota,minnesota,fairmont,Martin,,,,27000000,0.3036,0,gap,false
+269,Glencoe,Minnesota,minnesota,glencoe,McLeod,,,,27000000,0.3036,0,gap,false
+270,Hutchinson,Minnesota,minnesota,hutchinson,McLeod,,,,27000000,0.3036,0,gap,false
+271,Olivia,Minnesota,minnesota,olivia,Renville,,,,27000000,0.3036,0,gap,false
+272,Redwood Falls,Minnesota,minnesota,redwood-falls,Redwood,,,,27000000,0.3036,0,gap,false
+273,Yuma,Arizona,arizona,yuma,Yuma,,,,26000000,0.2998,0,gap,false
+274,Casa Grande,Arizona,arizona,casa-grande,Pinal,,,,26000000,0.2998,0,gap,false
+275,Maricopa,Arizona,arizona,maricopa,Pinal,,,,26000000,0.2998,0,gap,false
+276,Buckeye,Arizona,arizona,buckeye,Maricopa,,,,26000000,0.2998,0,gap,false
+277,Eloy,Arizona,arizona,eloy,Pinal,,,,26000000,0.2998,0,gap,false
+278,Marana,Arizona,arizona,marana,Pima,,,,26000000,0.2998,0,gap,false
+279,Willcox,Arizona,arizona,willcox,Cochise,,,,26000000,0.2998,0,gap,false
+280,Safford,Arizona,arizona,safford,Graham,,,,26000000,0.2998,0,gap,false
+281,Cottonwood,Arizona,arizona,cottonwood,Yavapai,,,,26000000,0.2998,0,gap,false
+282,Camp Verde,Arizona,arizona,camp-verde,Yavapai,,,,26000000,0.2998,0,gap,false
+283,Somerton,Arizona,arizona,somerton,Yuma,,,,26000000,0.2998,0,gap,false
+284,Bakersfield,California,california,bakersfield,Kern,,,,25000000,0.2959,0,gap,false
+285,Modesto,California,california,modesto,Stanislaus,,,,25000000,0.2959,0,gap,false
+286,Stockton,California,california,stockton,San Joaquin,,,,25000000,0.2959,0,gap,false
+287,Tulare,California,california,tulare,Tulare,,,,25000000,0.2959,0,gap,false
+288,Hanford,California,california,hanford,Kings,,,,25000000,0.2959,0,gap,false
+289,Merced,California,california,merced,Merced,,,,25000000,0.2959,0,gap,false
+290,Madera,California,california,madera,Madera,,,,25000000,0.2959,0,gap,false
+291,Yuba City,California,california,yuba-city,Sutter,,,,25000000,0.2959,0,gap,false
+292,El Centro,California,california,el-centro,Imperial,,,,25000000,0.2959,0,gap,false
+293,Brawley,California,california,brawley,Imperial,,,,25000000,0.2959,0,gap,false
+294,Watsonville,California,california,watsonville,Santa Cruz,,,,25000000,0.2959,0,gap,false
+295,Santa Maria,California,california,santa-maria,Santa Barbara,,,,25000000,0.2959,0,gap,false
+296,Lompoc,California,california,lompoc,Santa Barbara,,,,25000000,0.2959,0,gap,false
+297,Oxnard,California,california,oxnard,Ventura,,,,25000000,0.2959,0,gap,false
+298,Calexico,California,california,calexico,Imperial,,,,25000000,0.2959,0,gap,false
+299,Lodi,California,california,lodi,San Joaquin,,,,25000000,0.2959,0,gap,false
+300,Wasco,California,california,wasco,Kern,,,,25000000,0.2959,0,gap,false
+301,Delano,California,california,delano,Kern,,,,25000000,0.2959,0,gap,false
+302,Arvin,California,california,arvin,Kern,,,,25000000,0.2959,0,gap,false
+303,Coalinga,California,california,coalinga,Fresno,,,,25000000,0.2959,0,gap,false
+304,Mendota,California,california,mendota,Fresno,,,,25000000,0.2959,0,gap,false
+305,Reedley,California,california,reedley,Fresno,,,,25000000,0.2959,0,gap,false
+306,Lexington,Kentucky,kentucky,lexington,,,,,13000000,0.2947,2,light,true
+307,Windsor,Colorado,colorado,windsor,,,,,31000000,0.2922,1,light,false
+308,Western Colorado,Colorado,colorado,western-colorado,,,,,31000000,0.2922,1,light,false
+309,Eaton,Colorado,colorado,eaton,,,,,31000000,0.2922,1,light,false
+310,Brighton,Colorado,colorado,brighton,,,,,31000000,0.2922,1,light,false
+311,Kersey,Colorado,colorado,kersey,,,,,31000000,0.2922,1,light,false
+312,Loveland,Colorado,colorado,loveland,,,,,31000000,0.2922,1,light,false
+313,Grand Junction,Colorado,colorado,grand-junction,,,,,31000000,0.2922,1,light,false
+314,Englewood,Colorado,colorado,englewood,,,,,31000000,0.2922,1,light,false
+315,Ames,Iowa,iowa,ames,,,,,30400000,0.2899,1,light,false
+316,West Bend,Iowa,iowa,west-bend,,,,,30400000,0.2899,1,light,false
+317,Ely,Iowa,iowa,ely,,,,,30400000,0.2899,1,light,false
+318,Southeast Iowa,Iowa,iowa,southeast-iowa,,,,,30400000,0.2899,1,light,false
+319,Alden,Iowa,iowa,alden,,,,,30400000,0.2899,1,light,false
+320,Des Moines,Iowa,iowa,des-moines,,,,,30400000,0.2899,1,light,false
+321,Harlan,Iowa,iowa,harlan,,,,,30400000,0.2899,1,light,false
+322,Iowa City,Iowa,iowa,iowa-city,,,,,30400000,0.2899,1,light,false
+323,Grinnell,Iowa,iowa,grinnell,,,,,30400000,0.2899,1,light,false
+324,Eastern Iowa,Iowa,iowa,eastern-iowa,,,,,30400000,0.2899,1,light,false
+325,Runnells,Iowa,iowa,runnells,,,,,30400000,0.2899,1,light,false
+326,Iowa/South Dakota,Iowa,iowa,iowasouth-dakota,,,,,30400000,0.2899,1,light,false
+327,Odebolt IA (HQ); Casey IA; Pella,Iowa,iowa,odebolt-ia-hq-casey-ia-pella,,,,,30400000,0.2899,1,light,false
+328,Morris,Iowa,iowa,morris,,,,,30400000,0.2899,1,light,false
+329,Overbrook,Iowa,iowa,overbrook,,,,,30400000,0.2899,1,light,false
+330,Nebraska City,Iowa,iowa,nebraska-city,,,,,30400000,0.2899,1,light,false
+331,Northern Wyoming,Wyoming,wyoming,northern-wyoming,,,,,30000000,0.2884,1,light,false
+332,Dayton,Wyoming,wyoming,dayton,,,,,30000000,0.2884,1,light,false
+333,"Iowa City, IA (HQ); serves WY",Wyoming,wyoming,iowa-city-ia-hq-serves-wy,,,,,30000000,0.2884,1,light,false
+334,Starkville,Mississippi,mississippi,starkville,,,,,11000000,0.287,2,light,true
+335,Nashville,Tennessee,tennessee,nashville,,,,,10500000,0.2851,2,light,true
+336,Knoxville,Tennessee,tennessee,knoxville,,,,,10500000,0.2851,2,light,true
+337,Six Lakes,Michigan,michigan,six-lakes,,,,,10000000,0.2832,2,light,true
+338,Rolla,Missouri,missouri,rolla,,,,,28500000,0.2826,1,light,false
+339,Bonnots Mill,Missouri,missouri,bonnots-mill,,,,,28500000,0.2826,1,light,false
+340,Arbela,Missouri,missouri,arbela,,,,,28500000,0.2826,1,light,false
+341,Daytona Beach,Florida,florida,daytona-beach,,,,,9500000,0.2812,2,light,true
+342,Peoria,Illinois,illinois,peoria,,,,,27000000,0.2768,1,light,false
+343,Mendon,Illinois,illinois,mendon,,,,,27000000,0.2768,1,light,false
+344,Jacksonville,Illinois,illinois,jacksonville,,,,,27000000,0.2768,1,light,false
+345,Heyworth,Illinois,illinois,heyworth,,,,,27000000,0.2768,1,light,false
+346,Cass County,Illinois,illinois,cass-county,,,,,27000000,0.2768,1,light,false
+347,El Paso,Illinois,illinois,el-paso,,,,,27000000,0.2768,1,light,false
+348,Winfield,Illinois,illinois,winfield,,,,,27000000,0.2768,1,light,false
+349,Iowa/Illinois/Missouri,Illinois,illinois,iowaillinoismissouri,,,,,27000000,0.2768,1,light,false
+350,Elgin,Minnesota,minnesota,elgin,,,,,27000000,0.2768,1,light,false
+351,Near Minneapolis,Minnesota,minnesota,near-minneapolis,,,,,27000000,0.2768,1,light,false
+352,Southwest,Minnesota,minnesota,southwest,,,,,27000000,0.2768,1,light,false
+353,Plymouth,Minnesota,minnesota,plymouth,,,,,27000000,0.2768,1,light,false
+354,New York Mills,Minnesota,minnesota,new-york-mills,,,,,27000000,0.2768,1,light,false
+355,Menahga,Minnesota,minnesota,menahga,,,,,27000000,0.2768,1,light,false
+356,West-central,Minnesota,minnesota,west-central,,,,,27000000,0.2768,1,light,false
+357,Tonica,Illinois,illinois,tonica,,,,,27000000,0.2768,1,light,false
+358,Byron,Minnesota,minnesota,byron,,,,,27000000,0.2768,1,light,false
+359,Seneca,Illinois,illinois,seneca,,,,,27000000,0.2768,1,light,false
+360,Baton Rouge,Louisiana,louisiana,baton-rouge,,,,,8000000,0.2755,2,light,true
+361,Harrisonburg,Virginia,virginia,harrisonburg,,,,,7800000,0.2747,2,light,true
+362,Syracuse,New York,new-york,syracuse,,,,,7000000,0.2716,2,light,true
+363,Napa,California,california,napa,,,,,25000000,0.2691,1,light,false
+364,(statewide),California,california,statewide,,,,,25000000,0.2691,1,light,false
+365,Napa/Sonoma,California,california,napasonoma,,,,,25000000,0.2691,1,light,false
+366,City of Industry,California,california,city-of-industry,,,,,25000000,0.2691,1,light,false
+367,Sacramento Delta,California,california,sacramento-delta,,,,,25000000,0.2691,1,light,false
+368,Plymouth,California,california,plymouth,,,,,25000000,0.2691,1,light,false
+369,"Southern CA (serves Fresno, Bakersfield",California,california,southern-ca-serves-fresno-bakersfield,,,,,25000000,0.2691,1,light,false
+370,Exeter,California,california,exeter,,,,,25000000,0.2691,1,light,false
+371,Iowa City  (national),California,california,iowa-city-national,,,,,25000000,0.2691,1,light,false
+372,Tracy,California,california,tracy,,,,,25000000,0.2691,1,light,false
+373,Monterey County,California,california,monterey-county,,,,,25000000,0.2691,1,light,false
+374,Santa Cruz,California,california,santa-cruz,,,,,25000000,0.2691,1,light,false
+375,Colusa County,California,california,colusa-county,,,,,25000000,0.2691,1,light,false
+376,National (3 pilots in ),California,california,national-3-pilots-in,,,,,25000000,0.2691,1,light,false
+377,Seattle  (CA ops via Cal Forest Nurseries),California,california,seattle-ca-ops-via-cal-forest-nurseries,,,,,25000000,0.2691,1,light,false
+378,Garden Grove,California,california,garden-grove,,,,,25000000,0.2691,1,light,false
+379,Burlingame,California,california,burlingame,,,,,25000000,0.2691,1,light,false
+380,Santa Clara County,California,california,santa-clara-county,,,,,25000000,0.2691,1,light,false
+381,Santa Cruz County,California,california,santa-cruz-county,,,,,25000000,0.2691,1,light,false
+382,Paso Robles,California,california,paso-robles,,,,,25000000,0.2691,1,light,false
+383,San Diego County,California,california,san-diego-county,,,,,25000000,0.2691,1,light,false
+384,Riverside,California,california,riverside,,,,,25000000,0.2691,1,light,false
+385,Salinas  (HQ San Francisco),California,california,salinas-hq-san-francisco,,,,,25000000,0.2691,1,light,false
+386,Napa County Airport; Cypress  (HQ),California,california,napa-county-airport-cypress-hq,,,,,25000000,0.2691,1,light,false
+387,Hermiston,Oregon,oregon,hermiston,Umatilla,,,,16500000,0.2632,0,gap,false
+388,Pendleton,Oregon,oregon,pendleton,Umatilla,,,,16500000,0.2632,0,gap,false
+389,Ontario,Oregon,oregon,ontario,Malheur,,,,16500000,0.2632,0,gap,false
+390,Klamath Falls,Oregon,oregon,klamath-falls,Klamath,,,,16500000,0.2632,0,gap,false
+391,Madras,Oregon,oregon,madras,Jefferson,,,,16500000,0.2632,0,gap,false
+392,Hood River,Oregon,oregon,hood-river,Hood River,,,,16500000,0.2632,0,gap,false
+393,Albany,Oregon,oregon,albany,Linn,,,,16500000,0.2632,0,gap,false
+394,Corvallis,Oregon,oregon,corvallis,Benton,,,,16500000,0.2632,0,gap,false
+395,Milton-Freewater,Oregon,oregon,milton-freewater,Umatilla,,,,16500000,0.2632,0,gap,false
+396,Boardman,Oregon,oregon,boardman,Morrow,,,,16500000,0.2632,0,gap,false
+397,Nyssa,Oregon,oregon,nyssa,Malheur,,,,16500000,0.2632,0,gap,false
+398,Wausau,Wisconsin,wisconsin,wausau,Marathon,,,,15500000,0.2594,0,gap,false
+399,Stevens Point,Wisconsin,wisconsin,stevens-point,Portage,,,,15500000,0.2594,0,gap,false
+400,Plover,Wisconsin,wisconsin,plover,Portage,,,,15500000,0.2594,0,gap,false
+401,Fond du Lac,Wisconsin,wisconsin,fond-du-lac,Fond du Lac,,,,15500000,0.2594,0,gap,false
+402,Sheboygan,Wisconsin,wisconsin,sheboygan,Sheboygan,,,,15500000,0.2594,0,gap,false
+403,Manitowoc,Wisconsin,wisconsin,manitowoc,Manitowoc,,,,15500000,0.2594,0,gap,false
+404,Eau Claire,Wisconsin,wisconsin,eau-claire,Eau Claire,,,,15500000,0.2594,0,gap,false
+405,Janesville,Wisconsin,wisconsin,janesville,Rock,,,,15500000,0.2594,0,gap,false
+406,Beloit,Wisconsin,wisconsin,beloit,Rock,,,,15500000,0.2594,0,gap,false
+407,Reedsburg,Wisconsin,wisconsin,reedsburg,Sauk,,,,15500000,0.2594,0,gap,false
+408,Kokomo,Indiana,indiana,kokomo,Howard,,,,15000000,0.2575,0,gap,false
+409,Logansport,Indiana,indiana,logansport,Cass,,,,15000000,0.2575,0,gap,false
+410,Frankfort,Indiana,indiana,frankfort,Clinton,,,,15000000,0.2575,0,gap,false
+411,Crawfordsville,Indiana,indiana,crawfordsville,Montgomery,,,,15000000,0.2575,0,gap,false
+412,Greensburg,Indiana,indiana,greensburg,Decatur,,,,15000000,0.2575,0,gap,false
+413,Vincennes,Indiana,indiana,vincennes,Knox,,,,15000000,0.2575,0,gap,false
+414,Princeton,Indiana,indiana,princeton,Gibson,,,,15000000,0.2575,0,gap,false
+415,Rensselaer,Indiana,indiana,rensselaer,Jasper,,,,15000000,0.2575,0,gap,false
+416,Rushville,Indiana,indiana,rushville,Rush,,,,15000000,0.2575,0,gap,false
+417,Tipton,Indiana,indiana,tipton,Tipton,,,,15000000,0.2575,0,gap,false
+418,Winchester,Indiana,indiana,winchester,Randolph,,,,15000000,0.2575,0,gap,false
+419,Pasco,Washington,washington,pasco,Franklin,,,,14500000,0.2555,0,gap,false
+420,Yakima,Washington,washington,yakima,Yakima,,,,14500000,0.2555,0,gap,false
+421,Moses Lake,Washington,washington,moses-lake,Grant,,,,14500000,0.2555,0,gap,false
+422,Quincy,Washington,washington,quincy,Grant,,,,14500000,0.2555,0,gap,false
+423,Othello,Washington,washington,othello,Adams,,,,14500000,0.2555,0,gap,false
+424,Walla Walla,Washington,washington,walla-walla,Walla Walla,,,,14500000,0.2555,0,gap,false
+425,Sunnyside,Washington,washington,sunnyside,Yakima,,,,14500000,0.2555,0,gap,false
+426,Prosser,Washington,washington,prosser,Benton,,,,14500000,0.2555,0,gap,false
+427,Mount Vernon,Washington,washington,mount-vernon,Skagit,,,,14500000,0.2555,0,gap,false
+428,Connell,Washington,washington,connell,Franklin,,,,14500000,0.2555,0,gap,false
+429,Royal City,Washington,washington,royal-city,Grant,,,,14500000,0.2555,0,gap,false
+430,Wooster,Ohio,ohio,wooster,Wayne,,,,14000000,0.2536,0,gap,false
+431,Findlay,Ohio,ohio,findlay,Hancock,,,,14000000,0.2536,0,gap,false
+432,Lima,Ohio,ohio,lima,Allen,,,,14000000,0.2536,0,gap,false
+433,Marion,Ohio,ohio,marion,Marion,,,,14000000,0.2536,0,gap,false
+434,Fremont,Ohio,ohio,fremont,Sandusky,,,,14000000,0.2536,0,gap,false
+435,Defiance,Ohio,ohio,defiance,Defiance,,,,14000000,0.2536,0,gap,false
+436,Tiffin,Ohio,ohio,tiffin,Seneca,,,,14000000,0.2536,0,gap,false
+437,Bowling Green,Ohio,ohio,bowling-green,Wood,,,,14000000,0.2536,0,gap,false
+438,Mansfield,Ohio,ohio,mansfield,Richland,,,,14000000,0.2536,0,gap,false
+439,Upper Sandusky,Ohio,ohio,upper-sandusky,Wyandot,,,,14000000,0.2536,0,gap,false
+440,Van Wert,Ohio,ohio,van-wert,Van Wert,,,,14000000,0.2536,0,gap,false
+441,Stuttgart,Arkansas,arkansas,stuttgart,Arkansas,,,,14000000,0.2536,0,gap,false
+442,Pine Bluff,Arkansas,arkansas,pine-bluff,Jefferson,,,,14000000,0.2536,0,gap,false
+443,Forrest City,Arkansas,arkansas,forrest-city,St. Francis,,,,14000000,0.2536,0,gap,false
+444,Helena-West Helena,Arkansas,arkansas,helena-west-helena,Phillips,,,,14000000,0.2536,0,gap,false
+445,Brinkley,Arkansas,arkansas,brinkley,Monroe,,,,14000000,0.2536,0,gap,false
+446,McGehee,Arkansas,arkansas,mcgehee,Desha,,,,14000000,0.2536,0,gap,false
+447,Dumas,Arkansas,arkansas,dumas,Desha,,,,14000000,0.2536,0,gap,false
+448,Wynne,Arkansas,arkansas,wynne,Cross,,,,14000000,0.2536,0,gap,false
+449,Marianna,Arkansas,arkansas,marianna,Lee,,,,14000000,0.2536,0,gap,false
+450,DeWitt,Arkansas,arkansas,dewitt,Arkansas,,,,14000000,0.2536,0,gap,false
+451,Hazen,Arkansas,arkansas,hazen,Prairie,,,,14000000,0.2536,0,gap,false
+452,Honolulu,Hawaii,hawaii,honolulu,,,,,1900000,0.252,2,light,true
+453,Hopkinsville,Kentucky,kentucky,hopkinsville,Christian,,,,13000000,0.2498,0,gap,false
+454,Owensboro,Kentucky,kentucky,owensboro,Daviess,,,,13000000,0.2498,0,gap,false
+455,Henderson,Kentucky,kentucky,henderson,Henderson,,,,13000000,0.2498,0,gap,false
+456,Mayfield,Kentucky,kentucky,mayfield,Graves,,,,13000000,0.2498,0,gap,false
+457,Madisonville,Kentucky,kentucky,madisonville,Hopkins,,,,13000000,0.2498,0,gap,false
+458,Russellville,Kentucky,kentucky,russellville,Logan,,,,13000000,0.2498,0,gap,false
+459,Murray,Kentucky,kentucky,murray,Calloway,,,,13000000,0.2498,0,gap,false
+460,Princeton,Kentucky,kentucky,princeton,Caldwell,,,,13000000,0.2498,0,gap,false
+461,Cadiz,Kentucky,kentucky,cadiz,Trigg,,,,13000000,0.2498,0,gap,false
+462,Bardstown,Kentucky,kentucky,bardstown,Nelson,,,,13000000,0.2498,0,gap,false
+463,Paris,Kentucky,kentucky,paris,Bourbon,,,,13000000,0.2498,0,gap,false
+464,Burley,Idaho,idaho,burley,Cassia,,,,11700000,0.2448,0,gap,false
+465,Rupert,Idaho,idaho,rupert,Minidoka,,,,11700000,0.2448,0,gap,false
+466,Idaho Falls,Idaho,idaho,idaho-falls,Bonneville,,,,11700000,0.2448,0,gap,false
+467,Pocatello,Idaho,idaho,pocatello,Bannock,,,,11700000,0.2448,0,gap,false
+468,Nampa,Idaho,idaho,nampa,Canyon,,,,11700000,0.2448,0,gap,false
+469,Jerome,Idaho,idaho,jerome,Jerome,,,,11700000,0.2448,0,gap,false
+470,Blackfoot,Idaho,idaho,blackfoot,Bingham,,,,11700000,0.2448,0,gap,false
+471,Preston,Idaho,idaho,preston,Franklin,,,,11700000,0.2448,0,gap,false
+472,American Falls,Idaho,idaho,american-falls,Power,,,,11700000,0.2448,0,gap,false
+473,Buhl,Idaho,idaho,buhl,Twin Falls,,,,11700000,0.2448,0,gap,false
+474,Cleveland,Mississippi,mississippi,cleveland,Bolivar,,,,11000000,0.2421,0,gap,false
+475,Greenwood,Mississippi,mississippi,greenwood,Leflore,,,,11000000,0.2421,0,gap,false
+476,Clarksdale,Mississippi,mississippi,clarksdale,Coahoma,,,,11000000,0.2421,0,gap,false
+477,Grenada,Mississippi,mississippi,grenada,Grenada,,,,11000000,0.2421,0,gap,false
+478,Yazoo City,Mississippi,mississippi,yazoo-city,Yazoo,,,,11000000,0.2421,0,gap,false
+479,Tunica,Mississippi,mississippi,tunica,Tunica,,,,11000000,0.2421,0,gap,false
+480,Belzoni,Mississippi,mississippi,belzoni,Humphreys,,,,11000000,0.2421,0,gap,false
+481,Rolling Fork,Mississippi,mississippi,rolling-fork,Sharkey,,,,11000000,0.2421,0,gap,false
+482,Drew,Mississippi,mississippi,drew,Sunflower,,,,11000000,0.2421,0,gap,false
+483,Ruleville,Mississippi,mississippi,ruleville,Sunflower,,,,11000000,0.2421,0,gap,false
+484,Hollandale,Mississippi,mississippi,hollandale,Washington,,,,11000000,0.2421,0,gap,false
+485,Logan,Utah,utah,logan,Cache,,,,11000000,0.2421,0,gap,false
+486,Tremonton,Utah,utah,tremonton,Box Elder,,,,11000000,0.2421,0,gap,false
+487,Brigham City,Utah,utah,brigham-city,Box Elder,,,,11000000,0.2421,0,gap,false
+488,Delta,Utah,utah,delta,Millard,,,,11000000,0.2421,0,gap,false
+489,Richfield,Utah,utah,richfield,Sevier,,,,11000000,0.2421,0,gap,false
+490,Vernal,Utah,utah,vernal,Uintah,,,,11000000,0.2421,0,gap,false
+491,Roosevelt,Utah,utah,roosevelt,Duchesne,,,,11000000,0.2421,0,gap,false
+492,Cedar City,Utah,utah,cedar-city,Iron,,,,11000000,0.2421,0,gap,false
+493,Tooele,Utah,utah,tooele,Tooele,,,,11000000,0.2421,0,gap,false
+494,Spanish Fork,Utah,utah,spanish-fork,Utah,,,,11000000,0.2421,0,gap,false
+495,Dyersburg,Tennessee,tennessee,dyersburg,Dyer,,,,10500000,0.2401,0,gap,false
+496,Union City,Tennessee,tennessee,union-city,Obion,,,,10500000,0.2401,0,gap,false
+497,Brownsville,Tennessee,tennessee,brownsville,Haywood,,,,10500000,0.2401,0,gap,false
+498,Ripley,Tennessee,tennessee,ripley,Lauderdale,,,,10500000,0.2401,0,gap,false
+499,Humboldt,Tennessee,tennessee,humboldt,Gibson,,,,10500000,0.2401,0,gap,false
+500,Tiptonville,Tennessee,tennessee,tiptonville,Lake,,,,10500000,0.2401,0,gap,false
+501,Trenton,Tennessee,tennessee,trenton,Gibson,,,,10500000,0.2401,0,gap,false
+502,Martin,Tennessee,tennessee,martin,Weakley,,,,10500000,0.2401,0,gap,false
+503,Lexington,Tennessee,tennessee,lexington,Henderson,,,,10500000,0.2401,0,gap,false
+504,Covington,Tennessee,tennessee,covington,Tipton,,,,10500000,0.2401,0,gap,false
+505,Moultrie,Georgia,georgia,moultrie,Colquitt,,,,10000000,0.2382,0,gap,false
+506,Cordele,Georgia,georgia,cordele,Crisp,,,,10000000,0.2382,0,gap,false
+507,Bainbridge,Georgia,georgia,bainbridge,Decatur,,,,10000000,0.2382,0,gap,false
+508,Vidalia,Georgia,georgia,vidalia,Toombs,,,,10000000,0.2382,0,gap,false
+509,Camilla,Georgia,georgia,camilla,Mitchell,,,,10000000,0.2382,0,gap,false
+510,Donalsonville,Georgia,georgia,donalsonville,Seminole,,,,10000000,0.2382,0,gap,false
+511,Adel,Georgia,georgia,adel,Cook,,,,10000000,0.2382,0,gap,false
+512,Quitman,Georgia,georgia,quitman,Brooks,,,,10000000,0.2382,0,gap,false
+513,Ashburn,Georgia,georgia,ashburn,Turner,,,,10000000,0.2382,0,gap,false
+514,Pelham,Georgia,georgia,pelham,Mitchell,,,,10000000,0.2382,0,gap,false
+515,Dawson,Georgia,georgia,dawson,Terrell,,,,10000000,0.2382,0,gap,false
+516,Saginaw,Michigan,michigan,saginaw,Saginaw,,,,10000000,0.2382,0,gap,false
+517,Hart,Michigan,michigan,hart,Oceana,,,,10000000,0.2382,0,gap,false
+518,Hartford,Michigan,michigan,hartford,Van Buren,,,,10000000,0.2382,0,gap,false
+519,Sturgis,Michigan,michigan,sturgis,St. Joseph,,,,10000000,0.2382,0,gap,false
+520,Coldwater,Michigan,michigan,coldwater,Branch,,,,10000000,0.2382,0,gap,false
+521,Cassopolis,Michigan,michigan,cassopolis,Cass,,,,10000000,0.2382,0,gap,false
+522,Caro,Michigan,michigan,caro,Tuscola,,,,10000000,0.2382,0,gap,false
+523,Ithaca,Michigan,michigan,ithaca,Gratiot,,,,10000000,0.2382,0,gap,false
+524,Bad Axe,Michigan,michigan,bad-axe,Huron,,,,10000000,0.2382,0,gap,false
+525,Allegan,Michigan,michigan,allegan,Allegan,,,,10000000,0.2382,0,gap,false
+526,Paw Paw,Michigan,michigan,paw-paw,Van Buren,,,,10000000,0.2382,0,gap,false
+527,Traverse City,Michigan,michigan,traverse-city,Grand Traverse,,,,10000000,0.2382,0,gap,false
+528,Albany/Corvallis,Oregon,oregon,albanycorvallis,,,,,16500000,0.2364,1,light,false
+529,Port Orford,Oregon,oregon,port-orford,,,,,16500000,0.2364,1,light,false
+530,NH (HQ); Pendleton,Oregon,oregon,nh-hq-pendleton,,,,,16500000,0.2364,1,light,false
+531,Eugene,Oregon,oregon,eugene,,,,,16500000,0.2364,1,light,false
+532,Pilot Rock,Oregon,oregon,pilot-rock,,,,,16500000,0.2364,1,light,false
+533,Plant City,Florida,florida,plant-city,Hillsborough,,,,9500000,0.2363,0,gap,false
+534,Immokalee,Florida,florida,immokalee,Collier,,,,9500000,0.2363,0,gap,false
+535,Belle Glade,Florida,florida,belle-glade,Palm Beach,,,,9500000,0.2363,0,gap,false
+536,Wauchula,Florida,florida,wauchula,Hardee,,,,9500000,0.2363,0,gap,false
+537,Homestead,Florida,florida,homestead,Miami-Dade,,,,9500000,0.2363,0,gap,false
+538,Lake Wales,Florida,florida,lake-wales,Polk,,,,9500000,0.2363,0,gap,false
+539,Lake Placid,Florida,florida,lake-placid,Highlands,,,,9500000,0.2363,0,gap,false
+540,Arcadia,Florida,florida,arcadia,DeSoto,,,,9500000,0.2363,0,gap,false
+541,Pahokee,Florida,florida,pahokee,Palm Beach,,,,9500000,0.2363,0,gap,false
+542,Florida City,Florida,florida,florida-city,Miami-Dade,,,,9500000,0.2363,0,gap,false
+543,Bowling Green,Florida,florida,bowling-green,Hardee,,,,9500000,0.2363,0,gap,false
+544,Zolfo Springs,Florida,florida,zolfo-springs,Hardee,,,,9500000,0.2363,0,gap,false
+545,LaBelle,Florida,florida,labelle,Hendry,,,,9500000,0.2363,0,gap,false
+546,Clewiston,Florida,florida,clewiston,Hendry,,,,9500000,0.2363,0,gap,false
+547,Decatur,Alabama,alabama,decatur,Morgan,,,,9000000,0.2344,0,gap,false
+548,Athens,Alabama,alabama,athens,Limestone,,,,9000000,0.2344,0,gap,false
+549,Tuscumbia,Alabama,alabama,tuscumbia,Colbert,,,,9000000,0.2344,0,gap,false
+550,Florence,Alabama,alabama,florence,Lauderdale,,,,9000000,0.2344,0,gap,false
+551,Albertville,Alabama,alabama,albertville,Marshall,,,,9000000,0.2344,0,gap,false
+552,Demopolis,Alabama,alabama,demopolis,Marengo,,,,9000000,0.2344,0,gap,false
+553,Selma,Alabama,alabama,selma,Dallas,,,,9000000,0.2344,0,gap,false
+554,Enterprise,Alabama,alabama,enterprise,Coffee,,,,9000000,0.2344,0,gap,false
+555,Ozark,Alabama,alabama,ozark,Dale,,,,9000000,0.2344,0,gap,false
+556,Headland,Alabama,alabama,headland,Henry,,,,9000000,0.2344,0,gap,false
+557,Kinston,North Carolina,north-carolina,kinston,Lenoir,,,,8500000,0.2324,0,gap,false
+558,Rocky Mount,North Carolina,north-carolina,rocky-mount,Nash,,,,8500000,0.2324,0,gap,false
+559,Tarboro,North Carolina,north-carolina,tarboro,Edgecombe,,,,8500000,0.2324,0,gap,false
+560,Williamston,North Carolina,north-carolina,williamston,Martin,,,,8500000,0.2324,0,gap,false
+561,Edenton,North Carolina,north-carolina,edenton,Chowan,,,,8500000,0.2324,0,gap,false
+562,Smithfield,North Carolina,north-carolina,smithfield,Johnston,,,,8500000,0.2324,0,gap,false
+563,Clinton,North Carolina,north-carolina,clinton,Sampson,,,,8500000,0.2324,0,gap,false
+564,Plymouth,North Carolina,north-carolina,plymouth,Washington,,,,8500000,0.2324,0,gap,false
+565,Elizabeth City,North Carolina,north-carolina,elizabeth-city,Pasquotank,,,,8500000,0.2324,0,gap,false
+566,Roanoke Rapids,North Carolina,north-carolina,roanoke-rapids,Halifax,,,,8500000,0.2324,0,gap,false
+567,Whiteville,North Carolina,north-carolina,whiteville,Columbus,,,,8500000,0.2324,0,gap,false
+568,Wingate,Indiana,indiana,wingate,,,,,15000000,0.2307,1,light,false
+569,Fowler,Indiana,indiana,fowler,,,,,15000000,0.2307,1,light,false
+570,Knox,Indiana,indiana,knox,,,,,15000000,0.2307,1,light,false
+571,Kouts,Indiana,indiana,kouts,,,,,15000000,0.2307,1,light,false
+572,Indianapolis,Indiana,indiana,indianapolis,,,,,15000000,0.2307,1,light,false
+573,Berne,Indiana,indiana,berne,,,,,15000000,0.2307,1,light,false
+574,Covington  (+ Botkins Mechanicsburg WCH OH; West College Corner IN),Indiana,indiana,covington-botkins-mechanicsburg-wch-oh-west-college-corner-in,,,,,15000000,0.2307,1,light,false
+575,Sullivan,Indiana,indiana,sullivan,,,,,15000000,0.2307,1,light,false
+576,Brownstown,Indiana,indiana,brownstown,,,,,15000000,0.2307,1,light,false
+577,Crowley,Louisiana,louisiana,crowley,Acadia Parish,,,,8000000,0.2305,0,gap,false
+578,Rayville,Louisiana,louisiana,rayville,Richland Parish,,,,8000000,0.2305,0,gap,false
+579,Tallulah,Louisiana,louisiana,tallulah,Madison Parish,,,,8000000,0.2305,0,gap,false
+580,Bunkie,Louisiana,louisiana,bunkie,Avoyelles Parish,,,,8000000,0.2305,0,gap,false
+581,Marksville,Louisiana,louisiana,marksville,Avoyelles Parish,,,,8000000,0.2305,0,gap,false
+582,Opelousas,Louisiana,louisiana,opelousas,St. Landry Parish,,,,8000000,0.2305,0,gap,false
+583,Lake Providence,Louisiana,louisiana,lake-providence,East Carroll Parish,,,,8000000,0.2305,0,gap,false
+584,Jonesville,Louisiana,louisiana,jonesville,Catahoula Parish,,,,8000000,0.2305,0,gap,false
+585,Eunice,Louisiana,louisiana,eunice,St. Landry Parish,,,,8000000,0.2305,0,gap,false
+586,Tappahannock,Virginia,virginia,tappahannock,Essex,,,,7800000,0.2298,0,gap,false
+587,Warsaw,Virginia,virginia,warsaw,Richmond,,,,7800000,0.2298,0,gap,false
+588,Onancock,Virginia,virginia,onancock,Accomack,,,,7800000,0.2298,0,gap,false
+589,Chase City,Virginia,virginia,chase-city,Mecklenburg,,,,7800000,0.2298,0,gap,false
+590,South Hill,Virginia,virginia,south-hill,Mecklenburg,,,,7800000,0.2298,0,gap,false
+591,Emporia,Virginia,virginia,emporia,Greensville,,,,7800000,0.2298,0,gap,false
+592,Bowling Green,Virginia,virginia,bowling-green,Caroline,,,,7800000,0.2298,0,gap,false
+593,Halifax,Virginia,virginia,halifax,Halifax,,,,7800000,0.2298,0,gap,false
+594,Lawrenceville,Virginia,virginia,lawrenceville,Brunswick,,,,7800000,0.2298,0,gap,false
+595,Smithfield,Virginia,virginia,smithfield,Isle of Wight,,,,7800000,0.2298,0,gap,false
+596,Cle Elum,Washington,washington,cle-elum,,,,,14500000,0.2287,1,light,false
+597,Richland,Washington,washington,richland,,,,,14500000,0.2287,1,light,false
+598,"Union Gap/Yakima, WA; Wenatchee, WA; Hood River",Washington,washington,union-gapyakima-wa-wenatchee-wa-hood-river,,,,,14500000,0.2287,1,light,false
+599,Omak,Washington,washington,omak,,,,,14500000,0.2287,1,light,false
+600,Seattle,Washington,washington,seattle,,,,,14500000,0.2287,1,light,false
+601,Issaquah,Washington,washington,issaquah,,,,,14500000,0.2287,1,light,false
+602,Selah,Washington,washington,selah,,,,,14500000,0.2287,1,light,false
+603,Medical Lake,Washington,washington,medical-lake,,,,,14500000,0.2287,1,light,false
+604,Lancaster,Pennsylvania,pennsylvania,lancaster,Lancaster,,,,7300000,0.2278,0,gap,false
+605,Lebanon,Pennsylvania,pennsylvania,lebanon,Lebanon,,,,7300000,0.2278,0,gap,false
+606,Chambersburg,Pennsylvania,pennsylvania,chambersburg,Franklin,,,,7300000,0.2278,0,gap,false
+607,York,Pennsylvania,pennsylvania,york,York,,,,7300000,0.2278,0,gap,false
+608,Gettysburg,Pennsylvania,pennsylvania,gettysburg,Adams,,,,7300000,0.2278,0,gap,false
+609,Hanover,Pennsylvania,pennsylvania,hanover,York,,,,7300000,0.2278,0,gap,false
+610,Bedford,Pennsylvania,pennsylvania,bedford,Bedford,,,,7300000,0.2278,0,gap,false
+611,Honesdale,Pennsylvania,pennsylvania,honesdale,Wayne,,,,7300000,0.2278,0,gap,false
+612,Bloomsburg,Pennsylvania,pennsylvania,bloomsburg,Columbia,,,,7300000,0.2278,0,gap,false
+613,Lewisburg,Pennsylvania,pennsylvania,lewisburg,Union,,,,7300000,0.2278,0,gap,false
+614,Mifflinburg,Pennsylvania,pennsylvania,mifflinburg,Union,,,,7300000,0.2278,0,gap,false
+615,New Holland,Pennsylvania,pennsylvania,new-holland,Lancaster,,,,7300000,0.2278,0,gap,false
+616,Fayetteville,Arkansas,arkansas,fayetteville,,,,,14000000,0.2268,1,light,false
+617,Greenfield,Ohio,ohio,greenfield,,,,,14000000,0.2268,1,light,false
+618,Delphos,Ohio,ohio,delphos,,,,,14000000,0.2268,1,light,false
+619,Fredericktown,Ohio,ohio,fredericktown,,,,,14000000,0.2268,1,light,false
+620,Adams County,Ohio,ohio,adams-county,,,,,14000000,0.2268,1,light,false
+621,South Charleston,Ohio,ohio,south-charleston,,,,,14000000,0.2268,1,light,false
+622,Ohio statewide,Ohio,ohio,ohio-statewide,,,,,14000000,0.2268,1,light,false
+623,Wauseon,Ohio,ohio,wauseon,,,,,14000000,0.2268,1,light,false
+624,Continental,Ohio,ohio,continental,,,,,14000000,0.2268,1,light,false
+625,Geneva,New York,new-york,geneva,Ontario,,,,7000000,0.2267,0,gap,false
+626,Penn Yan,New York,new-york,penn-yan,Yates,,,,7000000,0.2267,0,gap,false
+627,Lockport,New York,new-york,lockport,Niagara,,,,7000000,0.2267,0,gap,false
+628,Batavia,New York,new-york,batavia,Genesee,,,,7000000,0.2267,0,gap,false
+629,Warsaw,New York,new-york,warsaw,Wyoming,,,,7000000,0.2267,0,gap,false
+630,Cooperstown,New York,new-york,cooperstown,Otsego,,,,7000000,0.2267,0,gap,false
+631,Watertown,New York,new-york,watertown,Jefferson,,,,7000000,0.2267,0,gap,false
+632,Auburn,New York,new-york,auburn,Cayuga,,,,7000000,0.2267,0,gap,false
+633,Cobleskill,New York,new-york,cobleskill,Schoharie,,,,7000000,0.2267,0,gap,false
+634,Lyons,New York,new-york,lyons,Wayne,,,,7000000,0.2267,0,gap,false
+635,Newark,New York,new-york,newark,Wayne,,,,7000000,0.2267,0,gap,false
+636,Albion,New York,new-york,albion,Orleans,,,,7000000,0.2267,0,gap,false
+637,Medina,New York,new-york,medina,Orleans,,,,7000000,0.2267,0,gap,false
+638,Bowling Green,Kentucky,kentucky,bowling-green,,,,,13000000,0.223,1,light,false
+639,Paducah,Kentucky,kentucky,paducah,,,,,13000000,0.223,1,light,false
+640,Fallon,Nevada,nevada,fallon,Churchill,,,,6000000,0.2228,0,gap,false
+641,Lovelock,Nevada,nevada,lovelock,Pershing,,,,6000000,0.2228,0,gap,false
+642,Winnemucca,Nevada,nevada,winnemucca,Humboldt,,,,6000000,0.2228,0,gap,false
+643,Yerington,Nevada,nevada,yerington,Lyon,,,,6000000,0.2228,0,gap,false
+644,Fernley,Nevada,nevada,fernley,Lyon,,,,6000000,0.2228,0,gap,false
+645,Elko,Nevada,nevada,elko,Elko,,,,6000000,0.2228,0,gap,false
+646,Pahrump,Nevada,nevada,pahrump,Nye,,,,6000000,0.2228,0,gap,false
+647,Sumter,South Carolina,south-carolina,sumter,Sumter,,,,4800000,0.2182,0,gap,false
+648,Orangeburg,South Carolina,south-carolina,orangeburg,Orangeburg,,,,4800000,0.2182,0,gap,false
+649,Bamberg,South Carolina,south-carolina,bamberg,Bamberg,,,,4800000,0.2182,0,gap,false
+650,Bishopville,South Carolina,south-carolina,bishopville,Lee,,,,4800000,0.2182,0,gap,false
+651,Walterboro,South Carolina,south-carolina,walterboro,Colleton,,,,4800000,0.2182,0,gap,false
+652,Marion,South Carolina,south-carolina,marion,Marion,,,,4800000,0.2182,0,gap,false
+653,Hartsville,South Carolina,south-carolina,hartsville,Darlington,,,,4800000,0.2182,0,gap,false
+654,Allendale,South Carolina,south-carolina,allendale,Allendale,,,,4800000,0.2182,0,gap,false
+655,Manning,South Carolina,south-carolina,manning,Clarendon,,,,4800000,0.2182,0,gap,false
+656,Kingstree,South Carolina,south-carolina,kingstree,Williamsburg,,,,4800000,0.2182,0,gap,false
+657,Washington (serves ),Idaho,idaho,washington-serves,,,,,11700000,0.218,1,light,false
+658,"Lehi, UT (hubs: Boise, Twin Falls",Idaho,idaho,lehi-ut-hubs-boise-twin-falls,,,,,11700000,0.218,1,light,false
+659,Oregon (serves ID,Idaho,idaho,oregon-serves-id,,,,,11700000,0.218,1,light,false
+660,Eastern Idaho,Idaho,idaho,eastern-idaho,,,,,11700000,0.218,1,light,false
+661,Rexburg,Idaho,idaho,rexburg,,,,,11700000,0.218,1,light,false
+662,Weiser,Idaho,idaho,weiser,,,,,11700000,0.218,1,light,false
+663,Magic Valley / Nampa,Idaho,idaho,magic-valley-nampa,,,,,11700000,0.218,1,light,false
+664,New Plymouth,Idaho,idaho,new-plymouth,,,,,11700000,0.218,1,light,false
+665,South-central Idaho,Idaho,idaho,south-central-idaho,,,,,11700000,0.218,1,light,false
+666,Homedale,Idaho,idaho,homedale,,,,,11700000,0.218,1,light,false
+667,Ellensburg,Idaho,idaho,ellensburg,,,,,11700000,0.218,1,light,false
+668,Greenville,Mississippi,mississippi,greenville,,,,,11000000,0.2153,1,light,false
+669,Tupelo,Mississippi,mississippi,tupelo,,,,,11000000,0.2153,1,light,false
+670,Leland,Mississippi,mississippi,leland,,,,,11000000,0.2153,1,light,false
+671,Paynesville,Mississippi,mississippi,paynesville,,,,,11000000,0.2153,1,light,false
+672,Utah (serves UT,Utah,utah,utah-serves-ut,,,,,11000000,0.2153,1,light,false
+673,North Ogden,Utah,utah,north-ogden,,,,,11000000,0.2153,1,light,false
+674,Moorefield,West Virginia,west-virginia,moorefield,Hardy,,,,3700000,0.214,0,gap,false
+675,Petersburg,West Virginia,west-virginia,petersburg,Grant,,,,3700000,0.214,0,gap,false
+676,Romney,West Virginia,west-virginia,romney,Hampshire,,,,3700000,0.214,0,gap,false
+677,Lewisburg,West Virginia,west-virginia,lewisburg,Greenbrier,,,,3700000,0.214,0,gap,false
+678,Buckhannon,West Virginia,west-virginia,buckhannon,Upshur,,,,3700000,0.214,0,gap,false
+679,Elkins,West Virginia,west-virginia,elkins,Randolph,,,,3700000,0.214,0,gap,false
+680,Martinsburg,West Virginia,west-virginia,martinsburg,Berkeley,,,,3700000,0.214,0,gap,false
+681,Charles Town,West Virginia,west-virginia,charles-town,Jefferson,,,,3700000,0.214,0,gap,false
+682,Keyser,West Virginia,west-virginia,keyser,Mineral,,,,3700000,0.214,0,gap,false
+683,Franklin,West Virginia,west-virginia,franklin,Pendleton,,,,3700000,0.214,0,gap,false
+684,Valdosta,Georgia,georgia,valdosta,,,,,10000000,0.2114,1,light,false
+685,Atlanta,Georgia,georgia,atlanta,,,,,10000000,0.2114,1,light,false
+686,Birmingham,Georgia,georgia,birmingham,,,,,10000000,0.2114,1,light,false
+687,Smithville,Georgia,georgia,smithville,,,,,10000000,0.2114,1,light,false
+688,Hahira,Georgia,georgia,hahira,,,,,10000000,0.2114,1,light,false
+689,Southeast Georgia,Georgia,georgia,southeast-georgia,,,,,10000000,0.2114,1,light,false
+690,Tate,Georgia,georgia,tate,,,,,10000000,0.2114,1,light,false
+691,Blissfield,Michigan,michigan,blissfield,,,,,10000000,0.2114,1,light,false
+692,Coloma,Michigan,michigan,coloma,,,,,10000000,0.2114,1,light,false
+693,Huron County,Michigan,michigan,huron-county,,,,,10000000,0.2114,1,light,false
+694,Battle Creek,Michigan,michigan,battle-creek,,,,,10000000,0.2114,1,light,false
+695,Deford,Michigan,michigan,deford,,,,,10000000,0.2114,1,light,false
+696,Macomb,Michigan,michigan,macomb,,,,,10000000,0.2114,1,light,false
+697,Davison,Michigan,michigan,davison,,,,,10000000,0.2114,1,light,false
+698,Clyde,Michigan,michigan,clyde,,,,,10000000,0.2114,1,light,false
+699,Tampa,Florida,florida,tampa,,,,,9500000,0.2095,1,light,false
+700,Miami,Florida,florida,miami,,,,,9500000,0.2095,1,light,false
+701,Polk County,Florida,florida,polk-county,,,,,9500000,0.2095,1,light,false
+702,Gainesville,Florida,florida,gainesville,,,,,9500000,0.2095,1,light,false
+703,Key West,Florida,florida,key-west,,,,,9500000,0.2095,1,light,false
+704,Vero Beach,Florida,florida,vero-beach,,,,,9500000,0.2095,1,light,false
+705,Fort Myers,Florida,florida,fort-myers,,,,,9500000,0.2095,1,light,false
+706,Port St. Lucie,Florida,florida,port-st-lucie,,,,,9500000,0.2095,1,light,false
+707,Lake Okeechobee,Florida,florida,lake-okeechobee,,,,,9500000,0.2095,1,light,false
+708,Broward County,Florida,florida,broward-county,,,,,9500000,0.2095,1,light,false
+709,Naples,Florida,florida,naples,,,,,9500000,0.2095,1,light,false
+710,Casselberry,Florida,florida,casselberry,,,,,9500000,0.2095,1,light,false
+711,Atlanta,Alabama,alabama,atlanta,,,,,9000000,0.2076,1,light,false
+712,Vina,Alabama,alabama,vina,,,,,9000000,0.2076,1,light,false
+713,Coastal Alabama,Alabama,alabama,coastal-alabama,,,,,9000000,0.2076,1,light,false
+714,Salisbury,Maryland,maryland,salisbury,Wicomico,,,,2000000,0.2074,0,gap,false
+715,Easton,Maryland,maryland,easton,Talbot,,,,2000000,0.2074,0,gap,false
+716,Cambridge,Maryland,maryland,cambridge,Dorchester,,,,2000000,0.2074,0,gap,false
+717,Denton,Maryland,maryland,denton,Caroline,,,,2000000,0.2074,0,gap,false
+718,Princess Anne,Maryland,maryland,princess-anne,Somerset,,,,2000000,0.2074,0,gap,false
+719,Centreville,Maryland,maryland,centreville,Queen Anne’s,,,,2000000,0.2074,0,gap,false
+720,Chestertown,Maryland,maryland,chestertown,Kent,,,,2000000,0.2074,0,gap,false
+721,Federalsburg,Maryland,maryland,federalsburg,Caroline,,,,2000000,0.2074,0,gap,false
+722,Pocomoke City,Maryland,maryland,pocomoke-city,Worcester,,,,2000000,0.2074,0,gap,false
+723,Snow Hill,Maryland,maryland,snow-hill,Worcester,,,,2000000,0.2074,0,gap,false
+724,Hurlock,Maryland,maryland,hurlock,Dorchester,,,,2000000,0.2074,0,gap,false
+725,Waimea,Hawaii,hawaii,waimea,Hawaii,,,,1900000,0.207,0,gap,false
+726,Kahului,Hawaii,hawaii,kahului,Maui,,,,1900000,0.207,0,gap,false
+727,Wailuku,Hawaii,hawaii,wailuku,Maui,,,,1900000,0.207,0,gap,false
+728,Lihue,Hawaii,hawaii,lihue,Kauai,,,,1900000,0.207,0,gap,false
+729,Kapaa,Hawaii,hawaii,kapaa,Kauai,,,,1900000,0.207,0,gap,false
+730,Kailua-Kona,Hawaii,hawaii,kailua-kona,Hawaii,,,,1900000,0.207,0,gap,false
+731,Honokaa,Hawaii,hawaii,honokaa,Hawaii,,,,1900000,0.207,0,gap,false
+732,Charlotte,North Carolina,north-carolina,charlotte,,,,,8500000,0.2057,1,light,false
+733,Hendersonville,North Carolina,north-carolina,hendersonville,,,,,8500000,0.2057,1,light,false
+734,Raleigh,North Carolina,north-carolina,raleigh,,,,,8500000,0.2057,1,light,false
+735,St. Albans,Vermont,vermont,st-albans,Franklin,,,,1300000,0.2047,0,gap,false
+736,Newport,Vermont,vermont,newport,Orleans,,,,1300000,0.2047,0,gap,false
+737,Middlebury,Vermont,vermont,middlebury,Addison,,,,1300000,0.2047,0,gap,false
+738,Vergennes,Vermont,vermont,vergennes,Addison,,,,1300000,0.2047,0,gap,false
+739,Brandon,Vermont,vermont,brandon,Rutland,,,,1300000,0.2047,0,gap,false
+740,Rutland,Vermont,vermont,rutland,Rutland,,,,1300000,0.2047,0,gap,false
+741,Bennington,Vermont,vermont,bennington,Bennington,,,,1300000,0.2047,0,gap,false
+742,St. Johnsbury,Vermont,vermont,st-johnsbury,Caledonia,,,,1300000,0.2047,0,gap,false
+743,Lyndonville,Vermont,vermont,lyndonville,Caledonia,,,,1300000,0.2047,0,gap,false
+744,Enosburg Falls,Vermont,vermont,enosburg-falls,Franklin,,,,1300000,0.2047,0,gap,false
+745,Caribou,Maine,maine,caribou,Aroostook,,,,1300000,0.2047,0,gap,false
+746,Presque Isle,Maine,maine,presque-isle,Aroostook,,,,1300000,0.2047,0,gap,false
+747,Houlton,Maine,maine,houlton,Aroostook,,,,1300000,0.2047,0,gap,false
+748,Fort Fairfield,Maine,maine,fort-fairfield,Aroostook,,,,1300000,0.2047,0,gap,false
+749,Madawaska,Maine,maine,madawaska,Aroostook,,,,1300000,0.2047,0,gap,false
+750,Fort Kent,Maine,maine,fort-kent,Aroostook,,,,1300000,0.2047,0,gap,false
+751,Skowhegan,Maine,maine,skowhegan,Somerset,,,,1300000,0.2047,0,gap,false
+752,Waterville,Maine,maine,waterville,Kennebec,,,,1300000,0.2047,0,gap,false
+753,Augusta,Maine,maine,augusta,Kennebec,,,,1300000,0.2047,0,gap,false
+754,Newport,Maine,maine,newport,Penobscot,,,,1300000,0.2047,0,gap,false
+755,Lafayette,Louisiana,louisiana,lafayette,,,,,8000000,0.2037,1,light,false
+756,Alexandria,Louisiana,louisiana,alexandria,,,,,8000000,0.2037,1,light,false
+757,Palmer,Alaska,alaska,palmer,Matanuska-Susitna Borough,,,,900000,0.2032,0,gap,false
+758,Wasilla,Alaska,alaska,wasilla,Matanuska-Susitna Borough,,,,900000,0.2032,0,gap,false
+759,Delta Junction,Alaska,alaska,delta-junction,Southeast Fairbanks,,,,900000,0.2032,0,gap,false
+760,Fairbanks,Alaska,alaska,fairbanks,Fairbanks North Star Borough,,,,900000,0.2032,0,gap,false
+761,Homer,Alaska,alaska,homer,Kenai Peninsula Borough,,,,900000,0.2032,0,gap,false
+762,Soldotna,Alaska,alaska,soldotna,Kenai Peninsula Borough,,,,900000,0.2032,0,gap,false
+763,Big Lake,Alaska,alaska,big-lake,Matanuska-Susitna Borough,,,,900000,0.2032,0,gap,false
+764,Raleigh,Virginia,virginia,raleigh,,,,,7800000,0.203,1,light,false
+765,Weyers Cave,Virginia,virginia,weyers-cave,,,,,7800000,0.203,1,light,false
+766,Richmond,Virginia,virginia,richmond,,,,,7800000,0.203,1,light,false
+767,Blacksburg,Virginia,virginia,blacksburg,,,,,7800000,0.203,1,light,false
+768,Charlottesville,Virginia,virginia,charlottesville,,,,,7800000,0.203,1,light,false
+769,Vineland,New Jersey,new-jersey,vineland,Cumberland,,,,733000,0.2026,0,gap,false
+770,Bridgeton,New Jersey,new-jersey,bridgeton,Cumberland,,,,733000,0.2026,0,gap,false
+771,Hammonton,New Jersey,new-jersey,hammonton,Atlantic,,,,733000,0.2026,0,gap,false
+772,Salem,New Jersey,new-jersey,salem,Salem,,,,733000,0.2026,0,gap,false
+773,Woodstown,New Jersey,new-jersey,woodstown,Salem,,,,733000,0.2026,0,gap,false
+774,Pennsville,New Jersey,new-jersey,pennsville,Salem,,,,733000,0.2026,0,gap,false
+775,Millville,New Jersey,new-jersey,millville,Cumberland,,,,733000,0.2026,0,gap,false
+776,Pemberton,New Jersey,new-jersey,pemberton,Burlington,,,,733000,0.2026,0,gap,false
+777,Hadley,Massachusetts,massachusetts,hadley,Hampshire,,,,498000,0.2017,0,gap,false
+778,Hatfield,Massachusetts,massachusetts,hatfield,Hampshire,,,,498000,0.2017,0,gap,false
+779,Deerfield,Massachusetts,massachusetts,deerfield,Franklin,,,,498000,0.2017,0,gap,false
+780,Sunderland,Massachusetts,massachusetts,sunderland,Franklin,,,,498000,0.2017,0,gap,false
+781,Greenfield,Massachusetts,massachusetts,greenfield,Franklin,,,,498000,0.2017,0,gap,false
+782,Northampton,Massachusetts,massachusetts,northampton,Hampshire,,,,498000,0.2017,0,gap,false
+783,Pittsfield,Massachusetts,massachusetts,pittsfield,Berkshire,,,,498000,0.2017,0,gap,false
+784,Carver,Massachusetts,massachusetts,carver,Plymouth,,,,498000,0.2017,0,gap,false
+785,Westport,Massachusetts,massachusetts,westport,Bristol,,,,498000,0.2017,0,gap,false
+786,Dover,Delaware,delaware,dover,Kent,,,,494000,0.2016,0,gap,false
+787,Harrington,Delaware,delaware,harrington,Kent,,,,494000,0.2016,0,gap,false
+788,Milford,Delaware,delaware,milford,Sussex,,,,494000,0.2016,0,gap,false
+789,Georgetown,Delaware,delaware,georgetown,Sussex,,,,494000,0.2016,0,gap,false
+790,Seaford,Delaware,delaware,seaford,Sussex,,,,494000,0.2016,0,gap,false
+791,Bridgeville,Delaware,delaware,bridgeville,Sussex,,,,494000,0.2016,0,gap,false
+792,Laurel,Delaware,delaware,laurel,Sussex,,,,494000,0.2016,0,gap,false
+793,Smyrna,Delaware,delaware,smyrna,Kent,,,,494000,0.2016,0,gap,false
+794,Greenwood,Delaware,delaware,greenwood,Sussex,,,,494000,0.2016,0,gap,false
+795,Lancaster,New Hampshire,new-hampshire,lancaster,Coos,,,,474000,0.2016,0,gap,false
+796,Conway,New Hampshire,new-hampshire,conway,Carroll,,,,474000,0.2016,0,gap,false
+797,Plymouth,New Hampshire,new-hampshire,plymouth,Grafton,,,,474000,0.2016,0,gap,false
+798,Lebanon,New Hampshire,new-hampshire,lebanon,Grafton,,,,474000,0.2016,0,gap,false
+799,Keene,New Hampshire,new-hampshire,keene,Cheshire,,,,474000,0.2016,0,gap,false
+800,Walpole,New Hampshire,new-hampshire,walpole,Cheshire,,,,474000,0.2016,0,gap,false
+801,Rochester,New Hampshire,new-hampshire,rochester,Strafford,,,,474000,0.2016,0,gap,false
+802,Hillsboro,New Hampshire,new-hampshire,hillsboro,Hillsborough,,,,474000,0.2016,0,gap,false
+803,Peterborough,New Hampshire,new-hampshire,peterborough,Hillsborough,,,,474000,0.2016,0,gap,false
+804,Storrs,Connecticut,connecticut,storrs,Tolland,,,,375000,0.2012,0,gap,false
+805,Suffield,Connecticut,connecticut,suffield,Hartford,,,,375000,0.2012,0,gap,false
+806,Windsor,Connecticut,connecticut,windsor,Hartford,,,,375000,0.2012,0,gap,false
+807,East Windsor,Connecticut,connecticut,east-windsor,Hartford,,,,375000,0.2012,0,gap,false
+808,Ellington,Connecticut,connecticut,ellington,Tolland,,,,375000,0.2012,0,gap,false
+809,Tolland,Connecticut,connecticut,tolland,Tolland,,,,375000,0.2012,0,gap,false
+810,Litchfield,Connecticut,connecticut,litchfield,Litchfield,,,,375000,0.2012,0,gap,false
+811,Pomfret,Connecticut,connecticut,pomfret,Windham,,,,375000,0.2012,0,gap,false
+812,Woodbury,Connecticut,connecticut,woodbury,Litchfield,,,,375000,0.2012,0,gap,false
+813,National,Pennsylvania,pennsylvania,national,,,,,7300000,0.201,1,light,false
+814,"Iowa City, IA",Pennsylvania,pennsylvania,iowa-city-ia,,,,,7300000,0.201,1,light,false
+815,"Boonville, MO",Pennsylvania,pennsylvania,boonville-mo,,,,,7300000,0.201,1,light,false
+816,Saegertown,Pennsylvania,pennsylvania,saegertown,,,,,7300000,0.201,1,light,false
+817,Waterford,Pennsylvania,pennsylvania,waterford,,,,,7300000,0.201,1,light,false
+818,Muncy,Pennsylvania,pennsylvania,muncy,,,,,7300000,0.201,1,light,false
+819,Huntingdon,Pennsylvania,pennsylvania,huntingdon,,,,,7300000,0.201,1,light,false
+820,Foster,Rhode Island,rhode-island,foster,Providence,,,,68000,0.2,0,gap,false
+821,Burrillville,Rhode Island,rhode-island,burrillville,Providence,,,,68000,0.2,0,gap,false
+822,Tiverton,Rhode Island,rhode-island,tiverton,Newport,,,,68000,0.2,0,gap,false
+823,Little Compton,Rhode Island,rhode-island,little-compton,Newport,,,,68000,0.2,0,gap,false
+824,Glocester,Rhode Island,rhode-island,glocester,Providence,,,,68000,0.2,0,gap,false
+825,Exeter,Rhode Island,rhode-island,exeter,Washington,,,,68000,0.2,0,gap,false
+826,Charlestown,Rhode Island,rhode-island,charlestown,Washington,,,,68000,0.2,0,gap,false
+827,Hopkinton,Rhode Island,rhode-island,hopkinton,Washington,,,,68000,0.2,0,gap,false
+828,"Dundee, OH",New York,new-york,dundee-oh,,,,,7000000,0.1999,1,light,false
+829,National,New York,new-york,national,,,,,7000000,0.1999,1,light,false
+830,Northeast US,New York,new-york,northeast-us,,,,,7000000,0.1999,1,light,false
+831,Clarence,New York,new-york,clarence,,,,,7000000,0.1999,1,light,false
+832,Herkimer,New York,new-york,herkimer,,,,,7000000,0.1999,1,light,false
+833,Ithaca,New York,new-york,ithaca,,,,,7000000,0.1999,1,light,false
+834,Le Roy,New York,new-york,le-roy,,,,,7000000,0.1999,1,light,false
+835,Columbia,South Carolina,south-carolina,columbia,,,,,4800000,0.1914,1,light,false
+836,Huntington,West Virginia,west-virginia,huntington,,,,,3700000,0.1872,1,light,false
+837,Arnold,Maryland,maryland,arnold,,,,,2000000,0.1806,1,light,false
+838,Wye Mills,Maryland,maryland,wye-mills,,,,,2000000,0.1806,1,light,false
+839,Largo,Maryland,maryland,largo,,,,,2000000,0.1806,1,light,false
+840,Adelphi,Maryland,maryland,adelphi,,,,,2000000,0.1806,1,light,false
+841,Queenstown,Maryland,maryland,queenstown,,,,,2000000,0.1806,1,light,false
+842,Parkville,Maryland,maryland,parkville,,,,,2000000,0.1806,1,light,false
+843,Baltimore County,Maryland,maryland,baltimore-county,,,,,2000000,0.1806,1,light,false
+844,Smithsburg,Maryland,maryland,smithsburg,,,,,2000000,0.1806,1,light,false
+845,Eastern Shore,Maryland,maryland,eastern-shore,,,,,2000000,0.1806,1,light,false
+846,Maui,Hawaii,hawaii,maui,,,,,1900000,0.1803,1,light,false
+847,Maui and Kauai,Hawaii,hawaii,maui-and-kauai,,,,,1900000,0.1803,1,light,false
+848,Big Island / Maui,Hawaii,hawaii,big-island-maui,,,,,1900000,0.1803,1,light,false
+849,Rockland,Maine,maine,rockland,,,,,1300000,0.1779,1,light,false
+850,Dedham,Maine,maine,dedham,,,,,1300000,0.1779,1,light,false
+851,Valdez,Alaska,alaska,valdez,,,,,900000,0.1764,1,light,false
+852,"Tyler, TX",New Jersey,new-jersey,tyler-tx,,,,,733000,0.1758,1,light,false
+853,Manasquan,New Jersey,new-jersey,manasquan,,,,,733000,0.1758,1,light,false
+854,Warren County,New Jersey,new-jersey,warren-county,,,,,733000,0.1758,1,light,false
+855,Morristown,New Jersey,new-jersey,morristown,,,,,733000,0.1758,1,light,false
+856,Marlton,New Jersey,new-jersey,marlton,,,,,733000,0.1758,1,light,false
+857,Concord,Massachusetts,massachusetts,concord,,,,,498000,0.1749,1,light,false
+858,Woburn,Massachusetts,massachusetts,woburn,,,,,498000,0.1749,1,light,false
+859,Nashua,New Hampshire,new-hampshire,nashua,,,,,474000,0.1748,1,light,false
