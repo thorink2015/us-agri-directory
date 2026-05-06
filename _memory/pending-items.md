@@ -254,10 +254,77 @@ See `_research/README.md` for what's uploaded and what's missing.
 
 ## Known gaps to patch
 
-- `/advertise` (merged PR #58, 2026-04-21) is NOT listed in
-  `src/app/sitemap.ts` `staticPages`. Append
-  `{ url: `${BASE_URL}/advertise`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 }`
-  in the next small batch. Flagged by `standing-rules.md` §3.1.
+- ✅ `/advertise` sitemap gap — fixed in PR #118 (2026-05-06,
+  Tier 1 sweep). Robots.ts already permitted; page had no
+  noindex; one-line addition to `src/app/sitemap.ts` `staticPages`.
+
+## Open decisions before May-16 freeze ends (Tier 2 gating)
+
+These three answers unblock the operator-research batch run.
+Recommendations are in `_research/import-script-extension-spec.md`
+(2026-05-06).
+
+1. **Working branch for Tier 2 deliverables.** `T0YnN` is fully
+   merged into main per `_handoff/branch-audit-2026-05-06.md`;
+   recommend a fresh branch (e.g. `claude/research-batches-2026-05`)
+   rather than resurrecting the merged one.
+2. **Citation persistence.** `audit/research-plan` deliverables
+   include a `Source URL` column. Recommended: add
+   `sourceUrl?: string` to the `Operator` interface and render in
+   the profile footer (one schema line + one `<a>`).
+3. **Geocoding.** New operators land without `lat`/`lng` today.
+   Recommended: wire Nominatim (1 req/sec, cached) with a static
+   gazetteer fallback. Drops nothing if you defer.
+
+## Actionable findings from 2026-05-06 Tier 1 audits
+
+These are concrete, freeze-safe data-side moves that came out of
+the eight audit files committed in PR #118.
+
+- **`Applied Ag` is the only ultra-thin operator.** `city` blank,
+  `services` and `drones` empty, no contact. Either flesh out
+  (add city, contact, services tags) or remove from
+  `src/data/operators.ts`. See
+  `audit/indexing-gates-review-2026-05-06.md`.
+- **Re-tag existing operators for `mapping` and `consultancy`.**
+  44 (state, service) pages are at count = 2, one operator away
+  from indexed. Bulk of the near-thresholds are mapping and
+  consultancy — services many operators offer but don't tag.
+  Likely flips 15–20 state-service pages to indexed without new
+  research. Same audit file.
+- **Three near-threshold states for state-operators index.**
+  Wyoming (8 ops, needs 1), Utah (7, needs 2), Wisconsin (7,
+  needs 2). Tier 2 batch should prioritize these for
+  highest-leverage flips.
+- **Drop Nebraska City, NE from Batch 4.** Recount shows it now
+  has 3 ops (covered_well). See
+  `audit/research-plan/priority-batches-recount-2026-05-06.md`.
+- **~20 likely-real operator misses in `_research/` files.** Names
+  in the dedupe audit (Kuhn's Aerial Applications, Application
+  Insight, SkySkopes, Saxon Aerospace, etc.) appear in research
+  but not in `operators.ts`. Re-import after the May-16 script
+  extension lands. See
+  `audit/research-plan/dedupe-audit-2026-05-06.md`.
+- **`operators-batch-4b-mountain-west.md` (no -v2) parses to 0
+  rows.** Format differs from -v2; either delete (if superseded)
+  or re-extract.
+- **Regenerate `existing-operators-name-list.txt`** before the
+  next research prompt fires. Current snapshot is missing 6 ops
+  from `operators.ts`. One-liner in the dedupe-audit file.
+- **Romanian-URL redirects from `_handoff/launch-checklist.md`
+  Part 6 are not implemented.** No `_redirects` file exists;
+  `netlify.toml` only handles HTTPS canonicalization. Verify
+  Search Console for any Romanian-URL impressions; if zero,
+  mark Part 6 not-applicable.
+- **`_handoff/launch-checklist.md` page counts are stale**
+  (says 8 crops + 9 drones; actual 12 + 17). Total "~120+ pages"
+  should be ~1,200+. Plus 5 missing static routes (`/advertise`,
+  `/get-matched`, `/affiliate-disclosure`, `/map`, `/guides` hub
+  + 4 guide slugs).
+- **Stale draft PR #106** (research priority list) closed without
+  merge; orphan source branch `claude/build-priority-list-K0o2R`
+  can be deleted after confirming `-e3WZt` (the merged sibling)
+  has the same content.
 
 ## Optional polish (not blocking)
 

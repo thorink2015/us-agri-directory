@@ -492,7 +492,59 @@
   flipped from static to dynamic, expected because the page now reads
   `searchParams`). `npm run lint` clean.
 
-## What's next (see pending-items.md for detail)
+## 2026-05-06 — Tier 1 freeze-safe audit batch (branch claude/review-codebase-docs-sJEBA, PR #118 draft)
+
+Eight items in one push, all freeze-safe (one code edit + seven
+audit/spec/memory files). Follows the prior session's stalled
+Batch 1 attempt; goal was to do everything that didn't depend on
+the three open Tier 2 decisions (branch, citation field, geocoding).
+
+- **Code:** `src/app/sitemap.ts` — `/advertise` added to
+  `staticPages`. Sweep of every other top-level
+  `src/app/*/page.tsx` confirmed no other gaps.
+- **Memory:** `_memory/known-issues.md` — documents why the prior
+  session stalled on the 1-3 batch rule and records the override
+  for single-file research-artifact deliverables.
+- **Audit:** `audit/research-plan/priority-batches-recount-2026-05-06.md`
+  — 198 of 200 priority cities valid as recorded; one threshold
+  flip (Nebraska City NE 2→3 ops, drop from Batch 4).
+- **Audit:** `audit/research-plan/dedupe-audit-2026-05-06.md` —
+  cross-checks `operators.ts` (392 unique), existing-list (386,
+  stale subset), and `_research/operators-batch-*.md` (494 rows /
+  423 unique). ~20 likely-real operator misses listed.
+- **Audit:** `audit/indexing-gates-review-2026-05-06.md` — 41/50
+  states clear the state-operator index threshold; 3 are 1-2 ops
+  away (Wyoming, Utah, Wisconsin); 44 state-service pages at
+  count==2 (mostly mapping/consultancy retag opportunities); only
+  Applied Ag triggers the ultra-thin gate.
+- **Audit:** `_handoff/launch-checklist-review-2026-05-06.md` —
+  page counts stale (12 crops not 8, 17 drones not 9); 5 missing
+  static routes; total should be ~1,200+ not ~120+; no
+  `_redirects` file exists for Romanian URLs.
+- **Audit:** `_handoff/branch-audit-2026-05-06.md` — 49 remote
+  branches, 36 merged, 12 unmerged, 1 open PR. Critical finding:
+  `T0YnN` "working branch" per project-facts is fully merged into
+  main; documented and project-facts updated this session.
+- **Spec:** `_research/import-script-extension-spec.md` —
+  technical reference for the May-16 implementer covering
+  source-path glob, canonical batch schema, normName dedupe pass,
+  citation persistence options (rec: `sourceUrl?: string` field),
+  and geocoding options (rec: Nominatim with gazetteer fallback).
+- **Memory housekeeping (this commit):** project-facts.md
+  corrected (repo is `us-agri-directory` not `usss-terra`; T0YnN
+  is retired; main is the live US site); pending-items.md updated
+  to reflect Tier 1 completion plus the Tier 2 open decisions and
+  the audit-derived actionable items.
+
+## What's next
+
+Tier 2 (the actual operator-research batches) is gated on Eugen's
+three open decisions, all listed in `pending-items.md` § "Open
+decisions". Recommendations are in
+`_research/import-script-extension-spec.md`.
+
+Earlier "what's next" entries (still relevant where Eugen hasn't
+acted):
 
 1. Eugen fills bio placeholders (last name, country, field, LinkedIn, photo)
 2. Research files research-03, research-04, research-05 unblock regulations hub, grants pages, pricing rewrite, homepage rewrite
