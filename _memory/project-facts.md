@@ -10,12 +10,19 @@ Last updated: 2026-04-15
 
 - **Site name:** US Ag Drone Directory
 - **Production domain:** `https://agdronedirectory.com`
-- **Repo:** `thorink2015/usss-terra`
-- **Working branch:** `claude/add-drone-operators-directory-T0YnN`
-  - **Domain submission branch:** `claude/setup-domain-submission-KXRq7` (open PRs for Netlify/IndexNow/SEO work)
+- **Repo:** `thorink2015/us-agri-directory`
+- **Working branch:** rotates per session. The harness assigns the
+  branch name in each session prompt; develop and push only on
+  that branch unless Eugen says otherwise.
+  - **Historical note:** `claude/add-drone-operators-directory-T0YnN`
+    was the long-running working branch through April. Fully merged
+    into `main` on 2026-05-05 (per
+    `_handoff/branch-audit-2026-05-06.md`); do not resurrect.
   - **Never push to other branches without explicit user approval.**
-- **Main branch:** contains the OLD Romanian `droneagricol.ro` codebase
-  plus research file uploads. Do NOT merge main → working branch.
+- **Main branch:** holds the live US Ag Drone Directory site
+  (Netlify production branch as of 2026-04-17 fix; see
+  `_memory/known-issues.md`). PRs land here after review. The
+  pre-2026-04-17 Romanian codebase is no longer on main.
 - **Stack:** Next.js 14 App Router, TypeScript, Tailwind CSS, deployed to Netlify
 - **Data:** TypeScript files in `src/data/` — no database, no CMS
 

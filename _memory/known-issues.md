@@ -26,6 +26,29 @@ writes (big translations, 12+ article rewrites in one go).
 commit + push + wait for user "next". This is documented in CLAUDE.md
 as a hard rule.
 
+### 2026-05-06 — Research-artifact deliverables stalled by 1–3 batch rule
+**Symptom:** Batch 1 of `audit/research-plan/batch-01-results.md`
+never started in a prior session because CC kept stopping after the
+"architecture note" phase, waiting for a "next" that never came. The
+deliverable is a single markdown file containing 30+ operator
+profiles — slicing it into 1-operator commits doesn't make sense and
+the prior session interpreted the hard rule as a hard stop after one
+operator.
+**Cause:** The CLAUDE.md "1–3 items per response" rule was written
+for code edits where each item is an independent file change. For
+research-artifact files (one markdown file containing many
+operators), the per-response unit is naturally a slice of operators
+inside the same file, not the whole file.
+**Fix / override:** For deliverables that live under
+`audit/research-plan/batch-*-results.md`, slice into 8–10 operators
+per response and continue automatically without waiting for "next".
+The 1–3 items rule still applies to multi-file code edits. When in
+doubt: if the per-batch payload is a single growing markdown file,
+keep going; if each item is a separate file commit, stop and wait.
+**Prevention:** Any prompt that kicks off a research batch should
+restate this override inline so the per-session model doesn't
+re-derive the conflict.
+
 ### 2026-04-21 — Post-compaction rate limits on long-form guide content
 **Symptom:** After a context compaction, the first attempt to `Write`
 a full 5,000-word TSX guide body hits "API Error" / rate limit before
