@@ -69,15 +69,31 @@ export function personSchema() {
   };
 }
 
-// Canonical Organization JSON-LD object
+// Canonical Organization JSON-LD object.
+// `address` + `email` + `foundingDate` are emitted here (not in a separate
+// component) so the same canonical Organization @id carries the postal
+// address site-wide via the existing emit points on `/` and `/about`. Adding
+// a second component in layout.tsx would render two Organization blocks per
+// page and confuse Google's Knowledge Graph.
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     '@id': AUTHOR.organizationId,
     name: SITE.name,
+    alternateName: 'agdronedirectory.com',
     url: SITE.domain,
     logo: SITE.logoUrl,
+    email: AUTHOR.publicEmail,
+    foundingDate: '2025',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '2351 Sunset Boulevard, Ste. 170-716',
+      addressLocality: 'Rocklin',
+      addressRegion: 'CA',
+      postalCode: '95765',
+      addressCountry: 'US',
+    },
     founder: { '@id': AUTHOR.personId },
     description:
       'Directory of verified US agricultural drone operators, with regulations, pricing and resources for farmers.',

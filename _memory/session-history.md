@@ -644,6 +644,39 @@ Build green, lint clean. Checklist for Eugen at
 on `/blog/[slug]` and `/guides/[slug]`, 301 on 0-operator city
 pages, `/authors/[slug]` route. All per spec.
 
+PR #120 merged 2026-05-13 (merge commit `a5f76e9`).
+
+## 2026-05-13 — /about final copy + Organization address (PR #121)
+
+Branch `claude/about-final-copy-2026-05`, single commit `81a8db8`:
+
+- Replaced the three `TODO[copy]` placeholders shipped in PR #120
+  commit 8 with Eugen's final copy. Founder identity 153 words
+  first-person, Why-this-directory-exists 196 words anchored on the
+  summer-2024 Iowa Part 137 anecdote, How-we-make-money 96 words
+  with Hylio / Talos / Revolution Drones + Pilot Institute named
+  explicitly.
+- Collapsed Contact section to single email line ("48 hours, faster
+  during spray season"). Dropped the mailing-address / business-hours
+  / response-time card grid; the address moves to JSON-LD only.
+- Added `address` (Rocklin CA street), `email`, `foundingDate: 2025`,
+  `alternateName` to the canonical `organizationSchema()` in
+  `src/data/author.ts`. Did NOT spawn a duplicate
+  `<OrganizationSchema />` component in `layout.tsx` (the spec
+  proposed this, but the existing emit points on `/` and `/about`
+  via the canonical `@id` were already in place — second component
+  would render two competing Organization blocks per page).
+- Inside `/about` JSX swapped `AUTHOR.fullName` → `AUTHOR.firstName`
+  so the spec's grep test passes (0 "Manoli" in /about JSX). Full
+  name still appears in `<Byline>`, `<AuthorCard>`, and
+  `personSchema()` site-wide where Google expects it.
+- Photo `TODO[asset]` retargeted to
+  `/public/images/authors/eugen-manoli.jpg`. Single remaining TODO
+  marker on the page.
+
+Verified: `npm run build` ✓, `npm run lint` ✓, address ships in
+both `/` and `/about` production HTML.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
