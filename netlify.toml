@@ -73,6 +73,19 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow"
 
+# Dynamic OpenGraph image endpoints are not pages. Stop Google from
+# bucketing them under "Crawled - currently not indexed" by serving an
+# explicit noindex header. Social crawlers still receive the image.
+[[headers]]
+  for = "/states/*/*/opengraph-image"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
+[[headers]]
+  for = "/states/*/*/opengraph-image/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+
 # Canonical domain redirects (enforce HTTPS + non-www in a single hop)
 # All variants jump directly to https://agdronedirectory.com/:splat
 [[redirects]]
@@ -132,5 +145,26 @@
 [[redirects]]
   from = "/regions/delta"
   to = "/regions/mississippi-delta"
+  status = 301
+  force = true
+
+# ── Drone slug redirects ────────────────────────────────────────────────
+# Inbound link to /drones/hylio-ag272 (missing the hyphen before 272)
+# lands on a 404. Canonical slug in src/data/drone-model.ts is
+# hylio-ag-272; redirect inbound traffic so Google can drop the 404
+# from Page indexing reports on next crawl.
+[[redirects]]
+  from = "/drones/hylio-ag272"
+  to = "/drones/hylio-ag-272"
+  status = 301
+  force = true
+
+# ── Standalone /newsletter route ────────────────────────────────────────
+# There is no /newsletter page. The newsletter signup is rendered on the
+# homepage (HomepageNewsletterForm) and in the global Footer, so 301
+# external references back to the homepage where the form lives.
+[[redirects]]
+  from = "/newsletter"
+  to = "/"
   status = 301
   force = true

@@ -536,6 +536,27 @@ the three open Tier 2 decisions (branch, citation field, geocoding).
   to reflect Tier 1 completion plus the Tier 2 open decisions and
   the audit-derived actionable items.
 
+## 2026-05-13 — Google Search Console error sweep
+
+- **Fix (netlify.toml):** 301 redirect `/drones/hylio-ag272` →
+  `/drones/hylio-ag-272`. Inbound link dropped the second hyphen;
+  canonical slug in `src/data/drone-model.ts` is `hylio-ag-272`.
+- **Fix (netlify.toml):** 301 redirect `/newsletter` → `/`.
+  No internal links exist; newsletter signup is rendered on the
+  homepage (`HomepageNewsletterForm`) and in the global Footer, so
+  external `/newsletter` references resolve to where the form lives.
+- **Fix (netlify.toml):** added `X-Robots-Tag: noindex` for
+  `/states/*/*/opengraph-image` and child paths to stop Google
+  bucketing 17 dynamic OG image endpoints under "Crawled - currently
+  not indexed". Social crawlers still receive the image binary.
+- **Confirmed no action needed:** `/regions/delta` and
+  `/drones/dji-agras-t25p` 404s are stale GSC cache (already fixed
+  in PR #91). "Page with redirect" entries for http/www variants of
+  the homepage are the intentional canonical redirects. 153
+  "Excluded by noindex" pages are intentional per
+  `src/lib/indexing-gates.ts` (thin state-crop, state-service,
+  state-operators, city pages).
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
