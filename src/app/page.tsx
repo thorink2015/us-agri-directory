@@ -17,6 +17,8 @@ import { SITE, organizationSchema, personSchema } from '@/data/author';
 import SearchBar from '@/components/search/SearchBar';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import AdSlot from '@/components/ads/AdSlot';
+import { AD_SLOTS } from '@/lib/adSlots';
 
 const SERVICE_CARDS = [
   { slug: 'spraying', icon: Droplets, label: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', price: '$12 to $22/acre' },
@@ -344,6 +346,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* AdSense: below-hero placement, after stats row, before trust cards */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AdSlot slot={AD_SLOTS.HOME_BELOW_HERO} />
+      </div>
+
       {/* SECTION 4: Why Farmers Use This Directory */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -432,6 +439,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* AdSense: mid-page placement, between crop types and featured operators */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AdSlot slot={AD_SLOTS.HOME_MID} />
+      </div>
 
       {/* SECTION 7: Featured Operators */}
       <section className="py-14 bg-white">

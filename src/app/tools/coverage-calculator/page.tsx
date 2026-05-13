@@ -5,6 +5,8 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import CoverageCalculator from './CoverageCalculator';
+import AdSlot from '@/components/ads/AdSlot';
+import { AD_SLOTS } from '@/lib/adSlots';
 import { AUTHOR, SITE } from '@/data/author';
 
 const LAST_REVIEWED = '2026-04-16';
@@ -110,6 +112,9 @@ export default function CoverageCalculatorPage() {
 
         {/* Calculator */}
         <CoverageCalculator />
+
+        {/* AdSense: below calculator result */}
+        <AdSlot slot={AD_SLOTS.TOOLS_BELOW_RESULT} />
 
         {/* How it works */}
         <section className="mt-10 space-y-4">

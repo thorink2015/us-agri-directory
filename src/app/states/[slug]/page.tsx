@@ -18,8 +18,15 @@ import { getCitiesInState } from '@/data/cities';
 import { AUTHOR, SITE } from '@/data/author';
 import USMap from '@/components/ui/USMap';
 import GetMatchedWizard from '@/components/leads/GetMatchedWizard';
+import AdSlot from '@/components/ads/AdSlot';
+import { AD_SLOTS } from '@/lib/adSlots';
 
 import { addUtm } from '@/lib/utm';
+
+// AdSense placements only render on state pages with a healthy operator
+// count. Mirrors the AdSense quality-bar guidance in the policy fix plan
+// and the existing noindex gate at `STATE_OPERATORS_NOINDEX_BELOW = 9`.
+const AD_RENDER_MIN_OPERATORS = 10;
 interface Props {
   params: { slug: string };
 }
@@ -144,6 +151,11 @@ function RichStatePage({ slug }: { slug: string }) {
           <p className="text-sm text-gray-700 leading-relaxed">{data.aeoBlock}</p>
         </div>
 
+        {/* AdSense: below intro, gated on operator count for content quality */}
+        {ops.length >= AD_RENDER_MIN_OPERATORS && (
+          <AdSlot slot={AD_SLOTS.STATE_BELOW_INTRO} />
+        )}
+
         {/* 2b, Lead capture banner */}
         <section
           aria-label={`Get matched with drone operators in ${data.name}`}
@@ -245,6 +257,11 @@ function RichStatePage({ slug }: { slug: string }) {
             </div>
           )}
         </section>
+
+        {/* AdSense: after operator list, before browse-by-city / spray-windows */}
+        {ops.length >= AD_RENDER_MIN_OPERATORS && (
+          <AdSlot slot={AD_SLOTS.STATE_AFTER_OPERATORS} />
+        )}
 
         {/* 4b, Browse by city (only when ≥2 ops in a city) */}
         {cities.length > 0 && (
