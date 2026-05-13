@@ -13,6 +13,16 @@ const stateNameMap: Record<string, string> = Object.fromEntries(
   countiesData.map((c) => [c.slug, c.name]),
 );
 
+// ─── LocalBusiness vs ProfessionalService ────────────────────────────────
+// Switched from ProfessionalService -> LocalBusiness to unlock Google's
+// geo + priceRange Rich Results on the ~250 operators that ship a full
+// address + lat + lng. ProfessionalService is a sibling, not a parent, so
+// the change is type-flat (no nested @type needed). The previously emitted
+// fields (areaServed, telephone, sameAs, foundingDate, geo) are all valid
+// on LocalBusiness and remain in place. Adds `hasCredential` for FAA Part
+// 137-verified operators so the credential is machine-readable.
+// Tracked in `_memory/pending-items.md` under MEDIUM follow-ups.
+
 export default function OperatorSchema({ operator }: Props) {
   const addressRegion = getStateAbbr(operator.counties);
   const canonicalUrl = `${SITE.domain}/operators/${operator.slug}`;
@@ -27,7 +37,7 @@ export default function OperatorSchema({ operator }: Props) {
 
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': 'LocalBusiness',
     '@id': canonicalUrl,
     name: operator.name,
     description: operator.description,
@@ -56,6 +66,8 @@ export default function OperatorSchema({ operator }: Props) {
 
   if (operator.phone) schema.telephone = operator.phone;
   if (operator.email) schema.email = operator.email;
+  if (operator.website) schema.sameAs = [operator.website, ...socialLinks];
+  else if (socialLinks.length > 0) schema.sameAs = socialLinks;
   if (operator.lat && operator.lng) {
     schema.geo = {
       '@type': 'GeoCoordinates',
@@ -63,8 +75,24 @@ export default function OperatorSchema({ operator }: Props) {
       longitude: operator.lng,
     };
   }
-  if (socialLinks.length > 0) schema.sameAs = socialLinks;
   if (operator.founded) schema.foundingDate = operator.founded.toString();
+
+  // ── Verified FAA Part 137 credential ────────────────────────────────────
+  // Emit hasCredential only when both `verified` and `certFAAPart137` are
+  // true on the operator record. Avoids machine-readable claims of a
+  // certification we haven't confirmed.
+  if (operator.verified && operator.certFAAPart137) {
+    schema.hasCredential = {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'license',
+      name: 'FAA Part 137 Agricultural Aircraft Operator Certificate',
+      recognizedBy: {
+        '@type': 'GovernmentOrganization',
+        name: 'Federal Aviation Administration',
+        url: 'https://www.faa.gov/',
+      },
+    };
+  }
 
   return (
     <script

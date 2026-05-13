@@ -185,9 +185,10 @@ Still pending — MEDIUM and LOW from PR #100 audits (post-launch polish):
 
 - MEDIUM: state-crop and state-service routes missing `BreadcrumbList`
   schema (1,100 pages).
-- MEDIUM: operator template uses `ProfessionalService` instead of
-  `LocalBusiness` (drops geo + priceRange Rich Results on ~250
-  operators with full address+lat+lng).
+- ✅ Operator template now emits `LocalBusiness` (PR #120 commit
+  `94b4280`, 2026-05-13). Adds `hasCredential` (FAA Part 137) when
+  `verified && certFAAPart137`. Geo + priceRange Rich Results
+  available on the ~250 operators with full address+lat+lng.
 - MEDIUM: homepage missing `WebSite` + `SearchAction` schema.
 - MEDIUM: per-route og:image generation for state, crop, service,
   operator routes (cities done in PR #101).

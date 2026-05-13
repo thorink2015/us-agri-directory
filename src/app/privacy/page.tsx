@@ -6,14 +6,14 @@ import MailtoLink from '@/components/ui/MailtoLink';
 export const metadata: Metadata = {
   title: 'Privacy Policy | US Ag Drone Directory',
   description:
-    'How we handle your data. Google Analytics (GA4) for anonymous traffic stats. No ads, no behavioral profiling, no data sales.',
+    'How we handle your data. Google Analytics (GA4) for traffic stats, Google AdSense for display ads, cookie disclosure and opt-out links.',
   alternates: { canonical: '/privacy' },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     title: 'Privacy Policy | US Ag Drone Directory',
     description:
-      'How we handle your data. Google Analytics (GA4) for anonymous traffic stats. No ads, no behavioral profiling, no data sales.',
+      'How we handle your data. Google Analytics (GA4) for traffic stats, Google AdSense for display ads, cookie disclosure and opt-out links.',
     url: `${SITE.domain}/privacy`,
     siteName: 'US Ag Drone Directory',
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 };
 
 const CONTACT_EMAIL = 'contact@agdronedirectory.com';
-const LAST_UPDATED = 'April 17, 2026';
+const LAST_UPDATED = 'May 13, 2026';
 
 export default function PrivacyPage() {
   const webPageSchema = {
@@ -37,8 +37,8 @@ export default function PrivacyPage() {
     name: 'Privacy Policy',
     url: `${SITE.domain}/privacy`,
     description:
-      'Privacy policy for US Ag Drone Directory. Google Analytics (GA4) for anonymous traffic stats, no ads, no data sales.',
-    dateModified: '2026-04-17',
+      'Privacy policy for US Ag Drone Directory. Covers Google Analytics (GA4) traffic stats, Google AdSense display advertising, cookies and opt-out links.',
+    dateModified: '2026-05-13',
     publisher: { '@id': `${SITE.domain}/#organization` },
   };
 
@@ -86,35 +86,110 @@ export default function PrivacyPage() {
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">Analytics</h2>
             <p className="leading-relaxed">
-              We use Google Analytics (GA4) for anonymous traffic statistics. GA4 uses first-party
-              cookies. We do not use advertising trackers, Facebook Pixel or behavioral profiling
-              tools.
+              We use Google Analytics (GA4) for traffic statistics. GA4 uses first-party cookies
+              to measure page views, referral sources and aggregate device data. We do not use
+              Facebook Pixel or any social-media retargeting trackers.
             </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-gray-900 mb-3">Advertising and cookies</h2>
+            <p className="leading-relaxed mb-3">
+              This site uses Google AdSense to display ads on selected content pages. Google and
+              its third-party vendors use cookies (including the DoubleClick DART cookie) and
+              similar technologies to serve ads based on a user&rsquo;s prior visits to this site
+              or other sites.
+            </p>
+            <p className="leading-relaxed mb-3">
+              Google&rsquo;s use of advertising cookies enables it and its partners to serve ads
+              to users based on their visit to this site and other sites on the internet. Users
+              may opt out of personalized advertising by visiting{' '}
+              <a
+                href="https://www.google.com/settings/ads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-700 underline"
+              >
+                Google Ads Settings
+              </a>
+              .
+            </p>
+            <p className="leading-relaxed mb-3">
+              Third-party vendors, including Google, may also use cookies to serve ads based on a
+              user&rsquo;s prior visits to this and other websites. Users may opt out of
+              third-party vendor cookie use for personalized advertising by visiting{' '}
+              <a
+                href="https://www.aboutads.info/choices"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-700 underline"
+              >
+                aboutads.info/choices
+              </a>{' '}
+              or{' '}
+              <a
+                href="https://www.youronlinechoices.eu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-700 underline"
+              >
+                youronlinechoices.eu
+              </a>{' '}
+              (for users in the EU/UK).
+            </p>
+            <p className="leading-relaxed">
+              For more information on how Google uses data from this site, visit{' '}
+              <a
+                href="https://policies.google.com/technologies/partner-sites"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-green-700 underline"
+              >
+                How Google uses information from sites or apps that use our services
+              </a>
+              .
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold text-gray-900 mb-3">Cookies on this site</h2>
+            <p className="leading-relaxed mb-3">
+              This site uses three classes of cookies:
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                <strong>Strictly necessary:</strong> set by Next.js and Netlify for site
+                functionality (no opt-out available, no personal data collected).
+              </li>
+              <li>
+                <strong>Analytics:</strong> first-party Google Analytics (GA4) cookies for
+                aggregate traffic measurement.
+              </li>
+              <li>
+                <strong>Advertising:</strong> Google AdSense and its certified third-party
+                vendors may set cookies to serve and measure ads, including personalized ads
+                when a user has consented elsewhere on the web. Opt-out links are in the
+                section above.
+              </li>
+            </ul>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">What we do NOT do</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li>We do not sell your data to anyone</li>
-              <li>We do not share your data with advertisers</li>
-              <li>We do not build behavioral profiles</li>
-              <li>We do not serve ads</li>
+              <li>We do not sell your personal data to anyone</li>
+              <li>We do not build our own behavioral profiles</li>
+              <li>We do not use Facebook Pixel or social retargeting trackers</li>
+              <li>We do not share contact-form or List Your Business submissions with advertisers</li>
             </ul>
-          </section>
-
-          <section>
-            <h2 className="text-xl font-bold text-gray-900 mb-3">Cookies</h2>
-            <p className="leading-relaxed">
-              This site uses strictly necessary cookies for site functionality and first-party
-              cookies from Google Analytics (GA4) for anonymous traffic measurement. No marketing
-              or advertising cookies are used.
-            </p>
           </section>
 
           <section>
             <h2 className="text-xl font-bold text-gray-900 mb-3">Third-party services</h2>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Google Analytics (GA4): anonymous traffic statistics</li>
+              <li>Google Analytics (GA4): aggregate traffic statistics</li>
+              <li>Google AdSense: display advertising on selected content pages</li>
+              <li>Formspree (formspree.io): contact and List Your Business form delivery</li>
               <li>Netlify (netlify.com): hosting</li>
               <li>Cloudflare (cloudflare.com): CDN and security</li>
             </ul>
