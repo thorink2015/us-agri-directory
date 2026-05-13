@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, ExternalLink, AlertTriangle, BookOpen, CheckCircle, DollarSign, MapPin, Clock } from 'lucide-react';
+import { Mail, ExternalLink, AlertTriangle, BookOpen, CheckCircle, DollarSign } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import MailtoLink from '@/components/ui/MailtoLink';
@@ -118,19 +118,22 @@ export default function AboutPage() {
         </p>
       </div>
 
-      {/* 2. Founder identity */}
+      {/* 2. Founder identity — visible page shows first name only.
+          Full legal name lives in personSchema()/organizationSchema()
+          (JSON-LD) and in <Byline>/<AuthorCard> on content pages. */}
       <section className="mb-10" aria-labelledby="founder-identity">
         <h2 id="founder-identity" className="text-2xl font-bold text-gray-900 mb-4">Founder</h2>
         <div className="bg-white border border-gray-200 rounded-xl p-6">
           <div className="flex items-start gap-5 flex-wrap sm:flex-nowrap">
-            {/* TODO[asset]: confirm canonical author photo path. Current file
-                lives at /images/eugen-author.jpg per _memory/project-facts.md.
-                The AdSense pre-review spec proposed /images/authors/eugen-manoli.jpg;
-                Eugen to either move the file or update this src. */}
+            {/* TODO[asset]: founder photo. File expected at
+                /public/images/authors/eugen-manoli.jpg. Until it's added the
+                next/image below will 404 in dev. The existing file at
+                /public/images/eugen-author.jpg is the fallback the Byline /
+                AuthorCard components still use. */}
             <div className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-gray-200 bg-gray-50">
               <Image
-                src="/images/eugen-author.jpg"
-                alt={`${AUTHOR.fullName}, ${AUTHOR.jobTitle}`}
+                src="/images/authors/eugen-manoli.jpg"
+                alt={`${AUTHOR.firstName}, ${AUTHOR.jobTitle}`}
                 width={112}
                 height={112}
                 className="w-full h-full object-cover"
@@ -138,17 +141,31 @@ export default function AboutPage() {
               />
             </div>
             <div className="min-w-0 flex-1">
-              <div className="text-xl font-bold text-gray-900">{AUTHOR.fullName}</div>
-              <div className="text-sm text-green-700 font-medium mb-3">{AUTHOR.jobTitle}</div>
-              <p className="text-sm text-gray-700 leading-relaxed mb-3">{AUTHOR.bio}</p>
-              {/* TODO[copy]: expand founder bio to 120-180 words. Current
-                  AUTHOR.bio in src/data/author.ts is ~95 words. Per
-                  standing-rules.md section 11 the bio is canonical there,
-                  so Eugen edits src/data/author.ts directly, not this page. */}
-              <p className="text-xs text-gray-400 italic">
-                TODO[copy]: expand founder bio in <code className="font-mono">src/data/author.ts</code> to 120-180 words
-              </p>
-              <div className="flex flex-wrap gap-4 text-sm mt-3">
+              <div className="text-xl font-bold text-gray-900">{AUTHOR.firstName}</div>
+              <div className="text-sm text-green-700 font-medium mb-4">{AUTHOR.jobTitle}</div>
+              <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+                <p>
+                  I&apos;m {AUTHOR.firstName}. Solo founder, Florida-based, this is a side project I run after my 9-to-5.
+                </p>
+                <p>
+                  I grew up in an agricultural family. Spent enough time around fields and equipment to
+                  know what a hard year does to people. A few years back I started messing around with
+                  drones, more out of curiosity than anything, and it hit. I flew commercially for a
+                  couple of years and sat on both sides of the transaction, as the operator taking calls
+                  and as the buyer trying to find someone reliable in peak season. The two views taught
+                  me different things.
+                </p>
+                <p>
+                  I also have about ten years in marketing, mostly B2B and ag tech. That&apos;s the angle
+                  I bring here. Operators need farmers. Farmers need verified operators. They don&apos;t
+                  always find each other in time.
+                </p>
+                <p>
+                  This directory is my attempt to close that gap. Free for farmers, free baseline listing
+                  for operators, verification done by hand.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-4 text-sm mt-4">
                 {hasLinkedin && (
                   <a
                     href={AUTHOR.linkedin}
@@ -176,23 +193,24 @@ export default function AboutPage() {
         <h2 id="why-exists" className="text-2xl font-bold text-gray-900 mb-4">Why this directory exists</h2>
         <div className="space-y-4 text-gray-700 leading-relaxed">
           <p>
-            The US agricultural drone services market is growing at over 30% per year. But farmers
-            searching for a local spray operator found generic search results, equipment retailers,
-            and outdated forum threads, not service providers. Operators, on the other side, had no
-            cost-effective way to reach the farmers in their coverage area.
+            Sometime in summer 2024 I watched a corn farmer in Iowa spend four nights calling around
+            trying to find someone with a real FAA Part 137 to put VT/R1 fungicide on 800 acres before
+            the canopy got too tall for the ground rig. He called four operators. Two never returned
+            the call. One had let his Part 137 lapse two years earlier and didn&apos;t know it. One
+            showed up. The job got done. But the missed window cost him somewhere around four bushels
+            per acre.
           </p>
           <p>
-            I built {SITE.name} after spending years tracking the agricultural drone industry in
-            European markets, where operator directories are more mature. The US market is larger and
-            more fragmented, but the information problem is the same: farmers need a single trusted
-            place to find verified operators, compare pricing and understand the FAA, EPA and state
-            regulations that govern every application.
+            The information was always out there. Just scattered across fifteen different places. The
+            FAA&apos;s FOIA-released Part 137 list. State pesticide applicator registries that
+            don&apos;t talk to each other. Operator websites that load in 12 seconds on a phone.
+            Facebook groups where the same five questions repeat every week.
           </p>
           <p>
-            This site is free for operators to list, free for farmers to use and will remain that way.
-            It is not a lead-generation marketplace, not an affiliate network and not a software
-            vendor. It is a directory, researched, verified and maintained by one person who cares
-            about getting the facts right.
+            This site is the consolidation work. Verified operators, public, free for any farmer to
+            use. Operators who want a featured slot can pay for one. Base listings stay free.
+            Verification isn&apos;t tied to payment. If that ever changes, I&apos;ll say so on this
+            page first.
           </p>
         </div>
       </section>
@@ -217,43 +235,28 @@ export default function AboutPage() {
         </ol>
       </section>
 
-      {/* 5. How we make money — condensed from /affiliate-disclosure and
-          /advertise (existing site copy). Required for AdSense reviewer
-          transparency now that display ads are live. */}
+      {/* 5. How we make money */}
       <section className="mb-10" aria-labelledby="how-we-make-money">
         <h2 id="how-we-make-money" className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <DollarSign className="w-6 h-6 text-green-600" /> How we make money
         </h2>
         <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+          <p>I&apos;ll be direct because farmers ask.</p>
           <p>
-            Base operator listings are free, permanently, and verification is independent of payment.
-            Revenue comes from three streams that never influence which operators get verified or how
-            regulatory facts are reported.
+            Three revenue streams keep this running. Featured listings at $99 to $499 per year,
+            state-locked. Sponsored placements from US ag drone manufacturers (Hylio, Talos, Revolution
+            Drones at the moment). Affiliate commissions on Part 107 training, mainly through Pilot
+            Institute. Base listings are free for any verified operator and that isn&apos;t changing.
+            Featured status doesn&apos;t affect verification, and it doesn&apos;t move anyone up in the
+            regular state listings. The quote-form data stays on our servers. I won&apos;t sell those
+            names or contact details. Ever.
           </p>
-          <ul className="list-disc pl-5 space-y-1.5">
-            <li>
-              <strong>Featured operator placement</strong> on state and service pages, clearly labeled,
-              rotated and capped per page.
-            </li>
-            <li>
-              <strong>Sponsored manufacturer and category placements</strong> on the pricing and tool
-              pages and in the newsletter, as set out on the{' '}
-              <Link href="/advertise" className="text-green-700 hover:underline">advertising page</Link>.
-            </li>
-            <li>
-              <strong>Affiliate links</strong> to certification courses, insurance carriers and equipment,
-              flagged inline and routed through <code className="text-[12px] bg-gray-100 px-1 rounded">/go/</code>,
-              detailed in the{' '}
-              <Link href="/affiliate-disclosure" className="text-green-700 hover:underline">affiliate disclosure</Link>.
-            </li>
-            <li>
-              <strong>Display advertising</strong> via Google AdSense on a small allow-list of content-rich
-              pages (homepage, state hubs with 10+ operators, calculator tools). Never on operator profiles,
-              city pages, state-crop or state-service combos. See the{' '}
-              <Link href="/privacy" className="text-green-700 hover:underline">privacy policy</Link>{' '}
-              for cookie disclosure and opt-out links.
-            </li>
-          </ul>
+          <p className="text-xs text-gray-500 pt-1">
+            Detail in the{' '}
+            <Link href="/affiliate-disclosure" className="text-green-700 hover:underline">affiliate disclosure</Link>,{' '}
+            the <Link href="/advertise" className="text-green-700 hover:underline">advertising page</Link>{' '}
+            and the <Link href="/privacy" className="text-green-700 hover:underline">privacy policy</Link>.
+          </p>
         </div>
       </section>
 
@@ -326,51 +329,19 @@ export default function AboutPage() {
         <FAQAccordion faqs={FAQS} />
       </section>
 
-      {/* 9. Contact and address */}
-      <section className="mb-10" aria-labelledby="contact-address">
-        <h2 id="contact-address" className="text-2xl font-bold text-gray-900 mb-4">Contact and address</h2>
-        <p className="text-gray-700 leading-relaxed mb-3">
-          Found an error? Know an operator who should be listed? Want to suggest a page? Email me
-          directly or use the contact form.
+      {/* 9. Contact — email only on visible page. Mailing address lives in
+          organizationSchema() (JSON-LD) so AdSense and Google's Knowledge
+          Graph can read it, but it's not exposed in the rendered body. */}
+      <section className="mb-10" aria-labelledby="contact">
+        <h2 id="contact" className="text-2xl font-bold text-gray-900 mb-4">Contact</h2>
+        <p className="text-gray-700 leading-relaxed mb-4">
+          Reach me at{' '}
+          <MailtoLink email={AUTHOR.publicEmail} className="text-green-700 hover:underline font-medium">
+            {AUTHOR.publicEmail}
+          </MailtoLink>
+          . I read every message and reply within 48 hours, faster during spray season (June through
+          October).
         </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-4">
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <div className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-wider mb-2">
-              <Mail className="w-3.5 h-3.5" /> Email
-            </div>
-            <MailtoLink email={AUTHOR.publicEmail} className="text-green-700 hover:underline font-medium">
-              {AUTHOR.publicEmail}
-            </MailtoLink>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <div className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-wider mb-2">
-              <MapPin className="w-3.5 h-3.5" /> Mailing address
-            </div>
-            {/* TODO[asset]: business mailing address (at minimum city + state).
-                AdSense reviewers expect a verifiable address on /about or
-                /contact. Eugen to fill in the line below. */}
-            <p className="text-gray-400 italic">TODO[asset]: business mailing address (city + state minimum)</p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <div className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-wider mb-2">
-              <Clock className="w-3.5 h-3.5" /> Business hours
-            </div>
-            {/* TODO[copy]: business hours in the operator's local timezone. */}
-            <p className="text-gray-400 italic">TODO[copy]: business hours (timezone + days/hours)</p>
-          </div>
-
-          <div className="bg-white border border-gray-200 rounded-lg p-4">
-            <div className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-wider mb-2">
-              <Clock className="w-3.5 h-3.5" /> Response time
-            </div>
-            {/* TODO[copy]: response-time commitment, e.g. "within 1 business day". */}
-            <p className="text-gray-400 italic">TODO[copy]: response-time commitment</p>
-          </div>
-        </div>
-
         <div className="flex flex-wrap gap-3 text-sm">
           <Link
             href="/contact"
@@ -385,7 +356,6 @@ export default function AboutPage() {
             List your business
           </Link>
         </div>
-
         <p className="text-sm text-gray-600 leading-relaxed mt-6">
           Running a business that serves US farmers or drone operators? See the{' '}
           <Link href="/advertise" className="text-green-700 hover:underline">advertising options</Link>.
