@@ -430,6 +430,47 @@ import GetMatchedButton from '@/components/leads/GetMatchedButton';
 </GetMatchedButton>
 ```
 
+## AdSense display ad slots (added 2026-05-13)
+
+Display ads live on a small allow-list of content-rich pages. Never
+on operator profiles, city pages, state-crop, state-service, /map,
+/contact, /privacy, /terms, /list-your-business, /advertise.
+
+**Render a slot:**
+
+```tsx
+import AdSlot from '@/components/ads/AdSlot';
+import { AD_SLOTS } from '@/lib/adSlots';
+
+<AdSlot slot={AD_SLOTS.STATE_BELOW_INTRO} />
+```
+
+The component is a `'use client'` wrapper that re-keys on
+`usePathname()`, pushes `(adsbygoogle).push({})` once per route, skips
+in non-production builds, and skips while the slot ID is still a
+`TODO_*` placeholder. Wraps in `<aside aria-label="Advertisement">`.
+
+**Gate on content quality:** state pages render ads only when
+`ops.length >= 10` (`AD_RENDER_MIN_OPERATORS` in
+`src/app/states/[slug]/page.tsx`). Mirrors the existing
+`STATE_OPERATORS_NOINDEX_BELOW = 9` gate.
+
+**Slot ID registry:** `src/lib/adSlots.ts`. Seven keys, all
+placeholders until Eugen creates units in the AdSense dashboard and
+drops the real IDs into the file.
+
+**AdSense crawler walling:** `src/app/robots.ts` adds a
+`Mediapartners-Google` block disallowing the URL classes the
+indexing-gate predicates already noindex (state-operators thin
+pages, all of `/states/*/cities/`, `/states/*/crops/`,
+`/states/*/services/`). The `User-agent: *` rule (Googlebot) is
+untouched so search rankings aren't affected.
+
+**Privacy policy:** must include the AdSense + DoubleClick DART
+disclosure block at `src/app/privacy/page.tsx` (Google Ads Settings,
+aboutads.info, youronlinechoices, partner-sites link). Do not
+re-introduce "We do not serve ads" or similar contradictions.
+
 ## Commit message format
 
 ```

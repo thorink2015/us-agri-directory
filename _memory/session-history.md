@@ -557,6 +557,57 @@ the three open Tier 2 decisions (branch, citation field, geocoding).
   `src/lib/indexing-gates.ts` (thin state-crop, state-service,
   state-operators, city pages).
 
+## 2026-05-13 — AdSense approval batch (PR #120, branch `claude/adsense-batch-setup-hadDu`)
+
+Three-batch ship to clear the AdSense "Low value content" policy
+violation and stand up display ad units without disturbing existing
+Googlebot crawl or rankings. Verified before starting that the script
+tag (`src/app/layout.tsx:104-109`), the `google-adsense-account`
+meta (`src/app/layout.tsx:84`) and `public/ads.txt` were already
+correct. No `<meta name="keywords">` anywhere in `src/`. Thin-page
+walls already in place via `src/lib/indexing-gates.ts` (PR #97/98/100/101).
+
+- **Batch 1 (`3a76bf1`):** AdSlot infrastructure.
+  - `src/components/ads/AdSlot.tsx`: `'use client'`, re-keys + re-pushes
+    on `usePathname()` change, skips push in non-production and when
+    slot ID is a `TODO_*` placeholder, up to 2× 800 ms retries, wraps
+    in `<aside aria-label="Advertisement">`.
+  - `src/lib/adSlots.ts`: central registry of 7 slot IDs
+    (`HOME_BELOW_HERO`, `HOME_MID`, `STATE_BELOW_INTRO`,
+    `STATE_AFTER_OPERATORS`, `GUIDE_IN_ARTICLE_1`, `GUIDE_IN_ARTICLE_2`,
+    `TOOLS_BELOW_RESULT`) plus `isPlaceholderSlot()` helper.
+  - `src/app/robots.ts`: added `Mediapartners-Google` block mirroring
+    the indexing-gate predicates (9 sparse state-operator pages plus
+    the whole `/states/*/cities/`, `/states/*/crops/`, `/states/*/services/`
+    URL classes). Googlebot `*` rule unchanged.
+
+- **Batch 2 (`1acdae6`):** Privacy policy rewrite at
+  `src/app/privacy/page.tsx`. Removed direct contradictions of
+  running AdSense ("We do not serve ads", "We do not share your data
+  with advertisers"). Added Google-required Advertising and cookies
+  section (DoubleClick DART, partner-sites link, Google Ads Settings
+  + aboutads.info + youronlinechoices opt-outs), reclassified
+  cookies into three buckets, added AdSense + Formspree to
+  Third-party services.
+
+- **Batch 3 (`c64c195`):** Ad placements.
+  - Homepage: `HOME_BELOW_HERO` after stats row, `HOME_MID` between
+    crop-services and Featured Operators.
+  - State pages (`src/app/states/[slug]/page.tsx`, rich-data path,
+    `ops.length >= 10`): `STATE_BELOW_INTRO` after AEO block,
+    `STATE_AFTER_OPERATORS` after operator grid. Fallback path (no
+    rich state data) is intentionally ad-free.
+  - Tool pages: `spray-cost-calculator`, `roi-calculator`,
+    `coverage-calculator`, `acreage-converter` each render
+    `TOOLS_BELOW_RESULT` directly below the calculator. `treatment-calendar`
+    and `drone-comparison` intentionally skipped (different shape;
+    revisit later if Eugen wants them).
+
+Pattern documented in `_memory/code-patterns.md`. Eugen's manual
+steps after PR #120 merges: create 7 ad units in the AdSense
+dashboard, swap placeholder IDs in `src/lib/adSlots.ts`, disable
+Auto Ads, then click Request Review in Policy center.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
