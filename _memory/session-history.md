@@ -608,6 +608,42 @@ steps after PR #120 merges: create 7 ad units in the AdSense
 dashboard, swap placeholder IDs in `src/lib/adSlots.ts`, disable
 Auto Ads, then click Request Review in Policy center.
 
+Second-half ship on the same PR (still draft, four more commits):
+
+- **Commit 5 (`92a4e7b`):** AdSlot returns null in prod when disabled.
+  Gates production rendering on `NEXT_PUBLIC_ADS_ENABLED`. Default
+  (unset / "false") emits zero `<ins class="adsbygoogle">` markup in
+  production HTML; non-prod renders a dashed dev placeholder showing
+  the slot key. Confirmed by `grep -rcE 'class="adsbygoogle"'
+  .next/server/app/` returning 0 after `npm run build`.
+- **Commit 6: SKIPPED.** PR #100 already diversified operator FAQs
+  (3x3 question/answer matrix hash-keyed on `operator.slug`, mean
+  similarity 41.3% → 19.5%). No site-wide identical FAQ block to
+  remove; operators have no `faq` data field.
+- **Commit 7 (`94b4280`):** Operator schema `@type` switched from
+  `ProfessionalService` to `LocalBusiness` in
+  `src/components/schema/OperatorSchema.tsx`. Adds `hasCredential`
+  referencing FAA Part 137 when `verified && certFAAPart137`. Blog
+  and guides already emit `Article` schema via the canonical `@id`
+  pattern (`AUTHOR.personId` + `AUTHOR.organizationId`), so no
+  change there.
+- **Commit 8 (`2f6a240`):** `/about` structural enrichment in spec
+  section order — H1 + AEO lead, Founder identity (with `next/image`
+  of `/images/eugen-author.jpg`), Why this directory exists,
+  Verification methodology (exact 5-step list), How we make money
+  (condensed from `/affiliate-disclosure` + `/advertise` + AdSense
+  disclosure), What this site is not, How operators get listed,
+  FAQ (removed stale "directory is not monetized" answer), Contact
+  and address. Four visible `TODO[copy]` / `TODO[asset]` markers
+  rendered as italic placeholders for Eugen to fill: founder bio
+  expansion to 120-180 words in `src/data/author.ts`, business
+  mailing address, business hours, response-time commitment.
+
+Build green, lint clean. Checklist for Eugen at
+`_research/adsense-prereview-checklist.md`. Deferred: `<AdSlot />`
+on `/blog/[slug]` and `/guides/[slug]`, 301 on 0-operator city
+pages, `/authors/[slug]` route. All per spec.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

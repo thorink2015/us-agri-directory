@@ -471,6 +471,33 @@ disclosure block at `src/app/privacy/page.tsx` (Google Ads Settings,
 aboutads.info, youronlinechoices, partner-sites link). Do not
 re-introduce "We do not serve ads" or similar contradictions.
 
+**Production kill switch.** `AdSlot` returns null in production
+unless `NEXT_PUBLIC_ADS_ENABLED === 'true'`. In non-production builds
+the component renders a dashed dev placeholder showing the slot key
+so layout stays visible during dev / Netlify Deploy Previews. The env
+var stays unset on Netlify production until AdSense approves and the
+seven slot IDs in `src/lib/adSlots.ts` are real. Verify the off state
+with `grep -rcE 'class="adsbygoogle"' .next/server/app/` returning 0.
+
+**Operator schema.** `src/components/schema/OperatorSchema.tsx` emits
+`LocalBusiness` (not `ProfessionalService`) so geo + priceRange Rich
+Results unlock for operators with `lat`/`lng`. Adds `hasCredential`
+referencing the FAA Part 137 Agricultural Aircraft Operator
+Certificate only when `operator.verified && operator.certFAAPart137`
+— never claim a credential that isn't both flags-true on the data.
+
+**About-page TODO markers.** Visible italic placeholders for fields
+Claude Code cannot fabricate (founder bio length, mailing address,
+business hours, response time). Pattern:
+
+```tsx
+{/* TODO[copy]: description of what's needed */}
+<p className="text-gray-400 italic">TODO[copy]: short label</p>
+```
+
+Grep with `grep -rn "TODO\[copy\]\|TODO\[asset\]" src/` to surface
+the open items.
+
 ## Commit message format
 
 ```
