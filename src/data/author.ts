@@ -31,9 +31,12 @@ export const AUTHOR = {
   linkedin: 'https://www.linkedin.com/in/manoli-eugen/',
   x: '',
 
-  // Bio, canonical, do NOT paraphrase
+  // Bio, canonical, do NOT paraphrase. Eugen-approved 153-word first-person
+  // narrative dropped on 2026-05-13. Used by reference where a long bio is
+  // needed; short third-person variant lives in AUTHOR.shortBio below for
+  // Person JSON-LD description and AuthorCard.
   bio:
-    'Eugen is the founder and editor of US Ag Drone Directory. He grew up in an agricultural family in Florida, United States, studied Agricultural Economics at university, and has worked hands-on with agricultural drone technology in European markets. He built this directory after seeing how scattered and incomplete US ag drone information was for the farmers who need it most. Every page on this site is written or edited by him personally.',
+    "I'm Eugen. Solo founder, Florida-based, this is a side project I run after my 9-to-5.\n\nI grew up in an agricultural family. Spent enough time around fields and equipment to know what a hard year does to people. A few years back I started messing around with drones, more out of curiosity than anything, and it hit. I flew commercially for a couple of years and sat on both sides of the transaction, as the operator taking calls and as the buyer trying to find someone reliable in peak season. The two views taught me different things.\n\nI also have about ten years in marketing, mostly B2B and ag tech. That's the angle I bring here. Operators need farmers. Farmers need verified operators. They don't always find each other in time.\n\nThis directory is my attempt to close that gap. Free for farmers, free baseline listing for operators, verification done by hand.",
 
   shortBio:
     'Eugen is the founder and editor of US Ag Drone Directory. He built this directory to give US farmers a single trusted place to find verified ag drone operators, regulations and pricing.',

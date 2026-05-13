@@ -1,0 +1,123 @@
+{
+  "generated": "2026-05-13",
+  "branch": "claude/adsense-final-closeout-2026-05",
+  "context": "Audit run BEFORE the close-out batch lands. Recorded state lets future sessions tell what shipped in PR #120 + #121 vs. what this PR adds.",
+  "checks": {
+    "1_organization_schema_component": {
+      "path": "src/components/seo/OrganizationSchema.tsx",
+      "exists": false,
+      "decision": "skip-creation",
+      "rationale": "Canonical organizationSchema() in src/data/author.ts already emits @type Organization with @id, address (Rocklin CA), email, foundingDate 2025, alternateName, logo, founder via @id ref. Emitted from src/app/page.tsx:183 and src/app/about/page.tsx:99. Creating a duplicate component mounted in layout.tsx would render two Organization JSON-LD blocks per page and confuse Google's Knowledge Graph."
+    },
+    "2_organization_schema_imports": {
+      "imports_found": []
+    },
+    "3_author_object": {
+      "file": "src/data/author.ts",
+      "fields": {
+        "firstName": "Eugen",
+        "lastName": "Manoli",
+        "fullName": "computed getter: firstName + ' ' + lastName",
+        "jobTitle": "Founder and Editor",
+        "photoUrl": "https://agdronedirectory.com/images/eugen-author.jpg",
+        "publicEmail": "eugen@agdronedirectory.com",
+        "linkedin": "https://www.linkedin.com/in/manoli-eugen/",
+        "bio_word_count": 73,
+        "bio_voice": "third-person",
+        "shortBio_word_count": 31,
+        "personId": "https://agdronedirectory.com/about#eugen",
+        "organizationId": "https://agdronedirectory.com/#organization"
+      },
+      "consumers": {
+        "AUTHOR.bio": ["zero live consumers as of PR #121 merge; safe to update"],
+        "AUTHOR.shortBio": ["src/components/author/AuthorCard.tsx:11", "src/data/author.ts:68 (personSchema description)"],
+        "AUTHOR.fullName": ["src/components/author/Byline.tsx:28", "src/app/guides/[slug]/page.tsx:39", "src/app/guides/page.tsx:136", "src/data/author.ts:62 (personSchema name)"]
+      }
+    },
+    "4_about_page_state": {
+      "file": "src/app/about/page.tsx",
+      "todo_markers": [
+        { "line": 128, "type": "TODO[asset]", "text": "founder photo — file expected at /public/images/authors/eugen-manoli.jpg" }
+      ],
+      "h2_sections_in_order": [
+        "Founder",
+        "Why this directory exists",
+        "Verification methodology",
+        "How we make money",
+        "What this site is not",
+        "How operators get listed",
+        "Frequently asked questions",
+        "Contact"
+      ]
+    },
+    "5_manoli_in_about_jsx": {
+      "count": 0
+    },
+    "6_address_outside_author_ts": {
+      "results": [
+        "src/data/author.ts:91 streetAddress '2351 Sunset Boulevard, Ste. 170-716'",
+        "src/data/author.ts:92 addressLocality 'Rocklin'",
+        "src/data/author.ts:94 postalCode '95765'"
+      ],
+      "leaks_to_visible_jsx": false
+    },
+    "7_eugen_photo_files": {
+      "/public/images/eugen-author.jpg": "39774 bytes, present",
+      "/public/images/eugen-author.jpeg": "38087 bytes, present (duplicate of .jpg)",
+      "/public/images/authors/": "directory does not exist"
+    },
+    "8_operator_localbusiness": {
+      "file": "src/components/schema/OperatorSchema.tsx",
+      "@type": "LocalBusiness",
+      "shipped_in": "PR #120 commit 94b4280"
+    },
+    "9_mediapartners_disallow": {
+      "file": "src/app/robots.ts",
+      "patterns": [
+        "/states/alaska/operators",
+        "/states/arizona/operators",
+        "/states/hawaii/operators",
+        "/states/nevada/operators",
+        "/states/new-mexico/operators",
+        "/states/rhode-island/operators",
+        "/states/utah/operators",
+        "/states/wisconsin/operators",
+        "/states/wyoming/operators",
+        "/states/*/cities/",
+        "/states/*/crops/",
+        "/states/*/services/"
+      ],
+      "googlebot_rules_changed": false
+    },
+    "10_ad_slot_ids": {
+      "file": "src/lib/adSlots.ts",
+      "real_count": 0,
+      "placeholder_count": 7,
+      "placeholders": [
+        "HOME_BELOW_HERO",
+        "HOME_MID",
+        "STATE_BELOW_INTRO",
+        "STATE_AFTER_OPERATORS",
+        "GUIDE_IN_ARTICLE_1",
+        "GUIDE_IN_ARTICLE_2",
+        "TOOLS_BELOW_RESULT"
+      ],
+      "ads_enabled_env_default": "off"
+    }
+  },
+  "real_gaps_to_close_in_this_pr": [
+    "Photo path in src/app/about/page.tsx line 135 points at /images/authors/eugen-manoli.jpg which does not exist. Ships a broken <Image> in production. Fix: point at /images/eugen-author.jpg (existing file) and drop the TODO[asset] marker.",
+    "AUTHOR.bio in src/data/author.ts is 73 words third-person. Eugen approved a canonical 153-word first-person bio. Update the field; zero live consumers means no other surface changes."
+  ],
+  "spec_items_already_shipped_in_pr_120_or_121": [
+    "Eugen's canonical Block 1 founder bio (153 words) hardcoded in /about Founder section",
+    "Eugen's canonical Block 2 origin story (196 words) hardcoded in /about Why-this-directory-exists section",
+    "Eugen's canonical Block 3 monetization disclosure (96 words) hardcoded in /about How-we-make-money section",
+    "Block 4 email-only contact section (single paragraph, no address / hours / response card)",
+    "Address + email + foundingDate + alternateName already in canonical organizationSchema()",
+    "operator @type switched from ProfessionalService to LocalBusiness",
+    "AdSense disclosure + DART + opt-out links in /privacy",
+    "Mediapartners-Google disallow block in robots.ts",
+    "AdSlot null-in-prod kill switch via NEXT_PUBLIC_ADS_ENABLED"
+  ]
+}

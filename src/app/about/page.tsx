@@ -125,14 +125,9 @@ export default function AboutPage() {
         <h2 id="founder-identity" className="text-2xl font-bold text-gray-900 mb-4">Founder</h2>
         <div className="bg-white border border-gray-200 rounded-xl p-6">
           <div className="flex items-start gap-5 flex-wrap sm:flex-nowrap">
-            {/* TODO[asset]: founder photo. File expected at
-                /public/images/authors/eugen-manoli.jpg. Until it's added the
-                next/image below will 404 in dev. The existing file at
-                /public/images/eugen-author.jpg is the fallback the Byline /
-                AuthorCard components still use. */}
             <div className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-gray-200 bg-gray-50">
               <Image
-                src="/images/authors/eugen-manoli.jpg"
+                src="/images/eugen-author.jpg"
                 alt={`${AUTHOR.firstName}, ${AUTHOR.jobTitle}`}
                 width={112}
                 height={112}

@@ -677,6 +677,43 @@ Branch `claude/about-final-copy-2026-05`, single commit `81a8db8`:
 Verified: `npm run build` ✓, `npm run lint` ✓, address ships in
 both `/` and `/about` production HTML.
 
+PR #121 merged 2026-05-13 (merge commit `6488fe3`).
+
+## 2026-05-13 — AdSense final close-out batch (PR #122 *)
+
+Branch `claude/adsense-final-closeout-2026-05`, three commits +
+audit + ready-state doc:
+
+- `47c460f` **audit:** `_research/adsense-final-audit-2026-05-13.json`
+  with the post-merge state of every spec item. Most items already
+  shipped in PR #120 or #121.
+- `37677e2` **fix(about):** `<Image src>` retargeted from
+  `/images/authors/eugen-manoli.jpg` (file never existed) to the
+  canonical `/images/eugen-author.jpg`. Drops the photo `TODO[asset]`.
+  PR #121 had pointed at the new path on Eugen's spec; the new file
+  was never dropped, so production was rendering a broken image.
+- `e3b7b15` **content(author):** `AUTHOR.bio` replaced with Eugen's
+  canonical 153-word first-person bio. As of PR #121 there were zero
+  live consumers of `AUTHOR.bio` (the /about Founder section already
+  hardcoded the same text), so this is purely data-side
+  canonicalization. `AUTHOR.shortBio` (31-word third-person) stays
+  the source for `personSchema.description` + AuthorCard.
+- `_research/adsense-ready-state-2026-05-13.md` documents the
+  reconsideration message, Rich Results Test URL, manual checklist
+  for Eugen, and an AI-content audit on top-traffic surfaces (no
+  new fixes needed; PR #100/93/94/96/98 had already diversified the
+  templated routes to 19.5% mean similarity).
+
+Deliberately skipped from the spec: creating
+`src/components/seo/OrganizationSchema.tsx`. Reason: the canonical
+`organizationSchema()` in `src/data/author.ts` already emits the
+Rocklin address from `/` and `/about`. A second component mounted in
+`layout.tsx` would render two competing Organization JSON-LD blocks
+per page, which Google's Knowledge Graph flags. The address signal is
+fully delivered through the existing emit points.
+
+(*PR number assigned at push time.)
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
