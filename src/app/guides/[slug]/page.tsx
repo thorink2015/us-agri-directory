@@ -16,6 +16,8 @@ import GuideTOC from '@/components/guides/GuideTOC';
 import ShareButtons from '@/components/guides/ShareButtons';
 import { AUTHOR, SITE } from '@/data/author';
 import { guideContent } from './content';
+import { injectInArticleAds } from '@/lib/inject-article-ads';
+import { MultiplexAd } from '@/components/ads/AdUnits';
 
 interface Props {
   params: { slug: string };
@@ -268,7 +270,7 @@ export default function GuidePage({ params }: Props) {
               )}
 
               {/* Article body — long-form serif */}
-              <div className="guide-body">{content}</div>
+              <div className="guide-body">{injectInArticleAds(content)}</div>
 
               {/* FAQ section */}
               {guide.faqs.length > 0 && (
@@ -328,6 +330,8 @@ export default function GuidePage({ params }: Props) {
                   </p>
                 </div>
               </div>
+
+              <MultiplexAd />
 
               <div className="mt-10">
                 <AuthorCard />

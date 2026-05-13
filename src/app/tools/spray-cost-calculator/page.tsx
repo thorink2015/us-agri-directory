@@ -5,8 +5,7 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import PriceCalculator from './PriceCalculator';
-import AdSlot from '@/components/ads/AdSlot';
-import { AD_SLOTS } from '@/lib/adSlots';
+import { DisplayAd } from '@/components/ads/AdUnits';
 import { AUTHOR, SITE } from '@/data/author';
 
 const LAST_REVIEWED = '2026-04-16';
@@ -114,7 +113,7 @@ export default function SprayCostPage() {
         <PriceCalculator />
 
         {/* AdSense: below calculator result */}
-        <AdSlot slot={AD_SLOTS.TOOLS_BELOW_RESULT} />
+        <DisplayAd />
 
         {/* How we calculated this */}
         <section className="mt-10 space-y-4">

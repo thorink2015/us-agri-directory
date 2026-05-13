@@ -28,9 +28,9 @@
 
 import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { ADSENSE_CLIENT, isPlaceholderSlot } from '@/lib/adSlots';
+import { ADSENSE_CLIENT } from '@/lib/adSlots';
 
-type AdFormat = 'auto' | 'fluid' | 'rectangle' | 'horizontal' | 'vertical';
+type AdFormat = 'auto' | 'fluid' | 'rectangle' | 'horizontal' | 'vertical' | 'autorelaxed';
 
 interface AdSlotProps {
   slot: string;
@@ -94,7 +94,6 @@ export default function AdSlot({
     if (pushed.current) return;
     if (!ADS_ENABLED) return;
     if (process.env.NODE_ENV !== 'production') return;
-    if (isPlaceholderSlot(slot)) return;
 
     const tryPush = (attempt = 0) => {
       try {

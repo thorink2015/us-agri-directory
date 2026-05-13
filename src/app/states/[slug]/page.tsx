@@ -18,8 +18,7 @@ import { getCitiesInState } from '@/data/cities';
 import { AUTHOR, SITE } from '@/data/author';
 import USMap from '@/components/ui/USMap';
 import GetMatchedWizard from '@/components/leads/GetMatchedWizard';
-import AdSlot from '@/components/ads/AdSlot';
-import { AD_SLOTS } from '@/lib/adSlots';
+import { DisplayAd, InfeedAd } from '@/components/ads/AdUnits';
 
 import { addUtm } from '@/lib/utm';
 
@@ -152,9 +151,7 @@ function RichStatePage({ slug }: { slug: string }) {
         </div>
 
         {/* AdSense: below intro, gated on operator count for content quality */}
-        {ops.length >= AD_RENDER_MIN_OPERATORS && (
-          <AdSlot slot={AD_SLOTS.STATE_BELOW_INTRO} />
-        )}
+        {ops.length >= AD_RENDER_MIN_OPERATORS && <DisplayAd />}
 
         {/* 2b, Lead capture banner */}
         <section
@@ -225,7 +222,13 @@ function RichStatePage({ slug }: { slug: string }) {
           {ops.length > 0 ? (
             <>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {ops.slice(0, 12).map((op) => (
+                {ops.slice(0, 5).map((op) => (
+                  <OperatorCard key={op.slug} operator={op} />
+                ))}
+                {ops.length >= AD_RENDER_MIN_OPERATORS && (
+                  <InfeedAd className="h-full" />
+                )}
+                {ops.slice(5, 12).map((op) => (
                   <OperatorCard key={op.slug} operator={op} />
                 ))}
               </div>
@@ -259,9 +262,7 @@ function RichStatePage({ slug }: { slug: string }) {
         </section>
 
         {/* AdSense: after operator list, before browse-by-city / spray-windows */}
-        {ops.length >= AD_RENDER_MIN_OPERATORS && (
-          <AdSlot slot={AD_SLOTS.STATE_AFTER_OPERATORS} />
-        )}
+        {ops.length >= AD_RENDER_MIN_OPERATORS && <DisplayAd />}
 
         {/* 4b, Browse by city (only when ≥2 ops in a city) */}
         {cities.length > 0 && (
