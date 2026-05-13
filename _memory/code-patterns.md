@@ -486,6 +486,18 @@ referencing the FAA Part 137 Agricultural Aircraft Operator
 Certificate only when `operator.verified && operator.certFAAPart137`
 — never claim a credential that isn't both flags-true on the data.
 
+**Organization postal address.** Lives in `organizationSchema()` in
+`src/data/author.ts` (single source). Ships site-wide through the
+canonical `@id` emit points on `/` and `/about`. Do NOT spawn a
+second Organization component in `layout.tsx` — duplicates fight
+Google Knowledge Graph.
+
+**About-page name handling.** `AUTHOR.fullName` is used by
+`<Byline>`, `<AuthorCard>`, and `personSchema()`. On the visible
+`/about` page, prefer `{AUTHOR.firstName}` so the page reads
+conversational. The last-name signal still ships through the schema
+and content-page bylines.
+
 **About-page TODO markers.** Visible italic placeholders for fields
 Claude Code cannot fabricate (founder bio length, mailing address,
 business hours, response time). Pattern:
