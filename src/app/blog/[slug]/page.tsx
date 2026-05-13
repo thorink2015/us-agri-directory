@@ -9,6 +9,8 @@ import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import { AUTHOR, SITE } from '@/data/author';
 import { blogContent } from './content';
+import { injectInArticleAds } from '@/lib/inject-article-ads';
+import { MultiplexAd } from '@/components/ads/AdUnits';
 
 interface Props {
   params: { slug: string };
@@ -132,7 +134,9 @@ export default function BlogPostPage({ params }: Props) {
             </div>
           )}
 
-          <div className="prose prose-sm sm:prose-base max-w-none text-gray-700 leading-relaxed">{content}</div>
+          <div className="prose prose-sm sm:prose-base max-w-none text-gray-700 leading-relaxed">
+            {injectInArticleAds(content)}
+          </div>
 
           {post.faqs && post.faqs.length > 0 && (
             <section className="mt-10">
@@ -151,6 +155,8 @@ export default function BlogPostPage({ params }: Props) {
             </div>
           </div>
         </article>
+
+        <MultiplexAd />
 
         <div className="mt-10">
           <AuthorCard />

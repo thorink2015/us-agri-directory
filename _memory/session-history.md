@@ -714,6 +714,47 @@ fully delivered through the existing emit points.
 
 (*PR number assigned at push time.)
 
+PR #122 merged 2026-05-13 (merge commit `ab5a1a4`).
+
+## 2026-05-13 — Real AdSense slot IDs + infeed / in-article / multiplex (PR #*)
+
+Branch `claude/ad-slots-and-placements-2026-05`, single commit
+`2a63962`. PR stays **DRAFT** until Eugen confirms AdSense approval.
+
+- `src/lib/adSlots.ts` rewritten to the 4-real-ID shape: `displayAuto`
+  `8100046551`, `infeed` `5473883213`, `inArticle` `9935267161`,
+  `multiplex` `6731124568`. `AD_LAYOUT_KEYS.infeed` carries
+  `-h0-6+22-5f+52`. All 7 `TODO_REPLACE_WITH_REAL_SLOT_ID`
+  placeholders gone.
+- `src/components/ads/AdSlot.tsx`: `AdFormat` extended with
+  `'autorelaxed'`. Dead `isPlaceholderSlot` import dropped; the helper
+  is no longer exported from `adSlots.ts`.
+- `src/components/ads/AdUnits.tsx` (new): four format-specific
+  wrappers — `<DisplayAd>` `<InfeedAd>` `<InArticleAd>` `<MultiplexAd>`
+  — so consumer pages don't restate AdSense magic strings.
+- `src/lib/inject-article-ads.tsx` (new): walks a prose `ReactNode`,
+  inserts `<InArticleAd>` after the first `<h2>` and at the earlier
+  of (a) after the third `<h2>` or (b) after the element that crosses
+  800 cumulative words.
+- 5 existing display consumers migrated from old `AD_SLOTS.*` keys to
+  `<DisplayAd />`: homepage (×2), state hubs (×2), 4 tool calculators
+  (×1 each).
+- New placements:
+  - State hubs with `ops.length >= 10`: `<InfeedAd>` between operator
+    card 5 and card 6 inside the existing 2-col grid (array sliced).
+    Fallback non-rich state path untouched.
+  - `/blog/[slug]` and `/guides/[slug]`: in-article ads injected via
+    `injectInArticleAds(content)` around the prose body. Multiplex
+    emitted right before `<AuthorCard />`.
+  - `/crops/[crop]`: multiplex emitted right before `<AuthorCard />`.
+- Untouched per spec: `ads.txt`, `robots.ts`, `OrganizationSchema`,
+  `AUTHOR` data, the three `/about` copy blocks.
+
+Verified: `npm run build` ✓, `npm run lint` ✓, 0 hits for
+`TODO_REPLACE_WITH_REAL_SLOT_ID`, slot IDs only in `src/lib/adSlots.ts`,
+0 `<ins class="adsbygoogle">` in production HTML
+(`NEXT_PUBLIC_ADS_ENABLED` still unset).
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

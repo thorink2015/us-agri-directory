@@ -9,6 +9,7 @@ import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
+import { MultiplexAd } from '@/components/ads/AdUnits';
 
 import { addUtm } from '@/lib/utm';
 // Default last-reviewed date used when an individual crop entry does not
@@ -304,6 +305,11 @@ export default function CropPage({ params }: Props) {
           </div>
         </div>
       )}
+
+      {/* Bottom-of-page related-content unit (AdSense Multiplex). Replaces a
+          generic "related crops" grid Eugen has not built yet; Google's
+          autorelaxed multiplex serves contextually-related content cards. */}
+      <MultiplexAd />
 
       {/* Author card, E-E-A-T footer */}
       <AuthorCard />

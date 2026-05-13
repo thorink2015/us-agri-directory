@@ -17,8 +17,7 @@ import { SITE, organizationSchema, personSchema } from '@/data/author';
 import SearchBar from '@/components/search/SearchBar';
 import OperatorCard from '@/components/operators/OperatorCard';
 import FAQAccordion from '@/components/ui/FAQAccordion';
-import AdSlot from '@/components/ads/AdSlot';
-import { AD_SLOTS } from '@/lib/adSlots';
+import { DisplayAd } from '@/components/ads/AdUnits';
 
 const SERVICE_CARDS = [
   { slug: 'spraying', icon: Droplets, label: 'Drone Spraying', desc: 'Fungicides, herbicides, insecticides, defoliants', price: '$12 to $22/acre' },
@@ -348,7 +347,7 @@ export default function HomePage() {
 
       {/* AdSense: below-hero placement, after stats row, before trust cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AdSlot slot={AD_SLOTS.HOME_BELOW_HERO} />
+        <DisplayAd />
       </div>
 
       {/* SECTION 4: Why Farmers Use This Directory */}
@@ -442,7 +441,7 @@ export default function HomePage() {
 
       {/* AdSense: mid-page placement, between crop types and featured operators */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AdSlot slot={AD_SLOTS.HOME_MID} />
+        <DisplayAd />
       </div>
 
       {/* SECTION 7: Featured Operators */}
