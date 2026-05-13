@@ -498,6 +498,39 @@ Google Knowledge Graph.
 conversational. The last-name signal still ships through the schema
 and content-page bylines.
 
+**Four AdSense formats, four wrappers.** Consumer pages render the
+right unit type via thin wrappers from `src/components/ads/AdUnits.tsx`:
+
+```tsx
+import { DisplayAd, InfeedAd, InArticleAd, MultiplexAd } from '@/components/ads/AdUnits';
+
+<DisplayAd />     // responsive auto, 5 placements site-wide
+<InfeedAd />      // fluid + layout key, between operator cards
+<InArticleAd />   // fluid + data-ad-layout="in-article", inside prose
+<MultiplexAd />   // autorelaxed, bottom of long-form content
+```
+
+Each wraps the generic `<AdSlot>` with the right `format` and
+`layout`/`layoutKey`, reading the real slot IDs from `src/lib/adSlots.ts`.
+All four respect the `NEXT_PUBLIC_ADS_ENABLED` gate. Never restate
+AdSense magic strings (slot IDs, layout keys, format names) outside
+those two files.
+
+**In-article ad injection into prose Fragments.** Blog and guide
+content lives as `ReactNode` Fragments in `content.tsx`. To insert
+`<InArticleAd>` between top-level prose children:
+
+```tsx
+import { injectInArticleAds } from '@/lib/inject-article-ads';
+
+<div className="prose">{injectInArticleAds(content)}</div>
+```
+
+The helper walks `React.Children.toArray(fragment.props.children)`,
+counts `<h2>` elements + cumulative word count, and inserts an ad
+after the first `<h2>` and at the earlier of (after the third `<h2>`)
+or (after the element that crosses 800 cumulative words).
+
 **About-page TODO markers.** Visible italic placeholders for fields
 Claude Code cannot fabricate (founder bio length, mailing address,
 business hours, response time). Pattern:
