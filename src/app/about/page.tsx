@@ -1,22 +1,22 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, ExternalLink, AlertTriangle, BookOpen, Users, CheckCircle } from 'lucide-react';
+import { Mail, ExternalLink, AlertTriangle, BookOpen, CheckCircle, DollarSign, MapPin, Clock } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import MailtoLink from '@/components/ui/MailtoLink';
 import { operators } from '@/data/operators';
 import { AUTHOR, SITE, personSchema, organizationSchema } from '@/data/author';
 
+// ─── FAQ ──────────────────────────────────────────────────────────────────
+// Removed the older "How do you make money?" FAQ that read "the directory
+// is not monetized" — superseded by the "How we make money" section below
+// once display advertising and the affiliate program shipped.
 const FAQS = [
   {
     question: 'Is this directory really free for operators?',
     answer:
       'Yes. Listing is free. No commission, no booking fee. We may offer optional premium features (featured placement) in the future but basic listings will always be free, permanently.',
-  },
-  {
-    question: 'How do you make money?',
-    answer:
-      'Currently, the directory is not monetized. Future revenue may include premium operator listings, manufacturer partnerships and educational resources. The directory will never charge farmers for access or take commissions on jobs.',
   },
   {
     question: 'How often is information updated?',
@@ -48,8 +48,19 @@ export const metadata: Metadata = {
   },
 };
 
+// ─── Verification methodology ─────────────────────────────────────────────
+// Five-step list, exact wording per the AdSense pre-review spec. Keep this
+// list stable; Eugen edits it directly in this file when the methodology
+// changes, not via a separate copy file.
+const VERIFICATION_STEPS = [
+  'FAA Part 107 Remote Pilot Certificate lookup against FAADroneZone.',
+  'FAA Part 137 Agricultural Aircraft Operator Certificate verification via the FAA FOIA-released list.',
+  'State pesticide applicator license check with the issuing state agency.',
+  'Liability insurance certificate review with chemical drift coverage confirmed.',
+  'Operator interview by phone or video to confirm equipment, fleet, and service area.',
+];
+
 export default function AboutPage() {
-  const verifiedCount = operators.filter((op) => op.verified).length;
   const hasLinkedin = !AUTHOR.linkedin.includes('{{');
 
   const breadcrumbSchema = {
@@ -93,10 +104,9 @@ export default function AboutPage() {
 
       <Breadcrumb items={[{ label: 'About' }]} />
 
-      {/* 1. H1 */}
+      {/* 1. H1 + lead AEO block */}
       <h1 className="text-3xl font-bold text-gray-900 mb-4">About {SITE.name}</h1>
 
-      {/* 2. AEO block, what the site is, who runs it, why it exists (contains a number) */}
       <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
         <p className="text-sm text-gray-700 leading-relaxed">
           {SITE.name} is a single-author directory of {operators.length}+ agricultural drone operators
@@ -108,9 +118,62 @@ export default function AboutPage() {
         </p>
       </div>
 
+      {/* 2. Founder identity */}
+      <section className="mb-10" aria-labelledby="founder-identity">
+        <h2 id="founder-identity" className="text-2xl font-bold text-gray-900 mb-4">Founder</h2>
+        <div className="bg-white border border-gray-200 rounded-xl p-6">
+          <div className="flex items-start gap-5 flex-wrap sm:flex-nowrap">
+            {/* TODO[asset]: confirm canonical author photo path. Current file
+                lives at /images/eugen-author.jpg per _memory/project-facts.md.
+                The AdSense pre-review spec proposed /images/authors/eugen-manoli.jpg;
+                Eugen to either move the file or update this src. */}
+            <div className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border border-gray-200 bg-gray-50">
+              <Image
+                src="/images/eugen-author.jpg"
+                alt={`${AUTHOR.fullName}, ${AUTHOR.jobTitle}`}
+                width={112}
+                height={112}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="text-xl font-bold text-gray-900">{AUTHOR.fullName}</div>
+              <div className="text-sm text-green-700 font-medium mb-3">{AUTHOR.jobTitle}</div>
+              <p className="text-sm text-gray-700 leading-relaxed mb-3">{AUTHOR.bio}</p>
+              {/* TODO[copy]: expand founder bio to 120-180 words. Current
+                  AUTHOR.bio in src/data/author.ts is ~95 words. Per
+                  standing-rules.md section 11 the bio is canonical there,
+                  so Eugen edits src/data/author.ts directly, not this page. */}
+              <p className="text-xs text-gray-400 italic">
+                TODO[copy]: expand founder bio in <code className="font-mono">src/data/author.ts</code> to 120-180 words
+              </p>
+              <div className="flex flex-wrap gap-4 text-sm mt-3">
+                {hasLinkedin && (
+                  <a
+                    href={AUTHOR.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
+                  >
+                    <ExternalLink className="w-4 h-4" /> LinkedIn
+                  </a>
+                )}
+                <MailtoLink
+                  email={AUTHOR.publicEmail}
+                  className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
+                >
+                  <Mail className="w-4 h-4" /> {AUTHOR.publicEmail}
+                </MailtoLink>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. Why this directory exists */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Why this directory exists</h2>
+      <section className="mb-10" aria-labelledby="why-exists">
+        <h2 id="why-exists" className="text-2xl font-bold text-gray-900 mb-4">Why this directory exists</h2>
         <div className="space-y-4 text-gray-700 leading-relaxed">
           <p>
             The US agricultural drone services market is growing at over 30% per year. But farmers
@@ -134,79 +197,67 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 4. Who runs this site */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <Users className="w-6 h-6 text-green-600" /> Who runs this site
+      {/* 4. Verification methodology — exact 5-step list */}
+      <section className="mb-10" aria-labelledby="verification-methodology">
+        <h2 id="verification-methodology" className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+          <BookOpen className="w-6 h-6 text-green-600" /> Verification methodology
         </h2>
-        <div className="bg-white border border-gray-200 rounded-xl p-6">
-          <div className="text-xl font-bold text-gray-900">{AUTHOR.fullName}</div>
-          <div className="text-sm text-green-700 font-medium mb-3">{AUTHOR.jobTitle}</div>
-          <p className="text-sm text-gray-700 leading-relaxed mb-4">{AUTHOR.bio}</p>
-          <div className="flex flex-wrap gap-4 text-sm">
-            {hasLinkedin && (
-              <a
-                href={AUTHOR.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
-              >
-                <ExternalLink className="w-4 h-4" /> LinkedIn
-              </a>
-            )}
-            <MailtoLink
-              email={AUTHOR.publicEmail}
-              className="inline-flex items-center gap-1.5 text-green-700 hover:underline"
-            >
-              <Mail className="w-4 h-4" /> {AUTHOR.publicEmail}
-            </MailtoLink>
-          </div>
+        <p className="text-sm text-gray-700 leading-relaxed mb-4">
+          Every operator listed with the verified badge is run through the following five-step check:
+        </p>
+        <ol className="space-y-3 text-sm text-gray-700 leading-relaxed list-decimal pl-5 marker:font-semibold marker:text-green-700">
+          {VERIFICATION_STEPS.map((step, idx) => (
+            <li key={idx} className="pl-1">
+              <div className="flex gap-2 items-start">
+                <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                <span>{step}</span>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {/* 5. How we make money — condensed from /affiliate-disclosure and
+          /advertise (existing site copy). Required for AdSense reviewer
+          transparency now that display ads are live. */}
+      <section className="mb-10" aria-labelledby="how-we-make-money">
+        <h2 id="how-we-make-money" className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+          <DollarSign className="w-6 h-6 text-green-600" /> How we make money
+        </h2>
+        <div className="space-y-3 text-sm text-gray-700 leading-relaxed">
+          <p>
+            Base operator listings are free, permanently, and verification is independent of payment.
+            Revenue comes from three streams that never influence which operators get verified or how
+            regulatory facts are reported.
+          </p>
+          <ul className="list-disc pl-5 space-y-1.5">
+            <li>
+              <strong>Featured operator placement</strong> on state and service pages, clearly labeled,
+              rotated and capped per page.
+            </li>
+            <li>
+              <strong>Sponsored manufacturer and category placements</strong> on the pricing and tool
+              pages and in the newsletter, as set out on the{' '}
+              <Link href="/advertise" className="text-green-700 hover:underline">advertising page</Link>.
+            </li>
+            <li>
+              <strong>Affiliate links</strong> to certification courses, insurance carriers and equipment,
+              flagged inline and routed through <code className="text-[12px] bg-gray-100 px-1 rounded">/go/</code>,
+              detailed in the{' '}
+              <Link href="/affiliate-disclosure" className="text-green-700 hover:underline">affiliate disclosure</Link>.
+            </li>
+            <li>
+              <strong>Display advertising</strong> via Google AdSense on a small allow-list of content-rich
+              pages (homepage, state hubs with 10+ operators, calculator tools). Never on operator profiles,
+              city pages, state-crop or state-service combos. See the{' '}
+              <Link href="/privacy" className="text-green-700 hover:underline">privacy policy</Link>{' '}
+              for cookie disclosure and opt-out links.
+            </li>
+          </ul>
         </div>
       </section>
 
-      {/* 5. How we research */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <BookOpen className="w-6 h-6 text-green-600" /> How we research
-        </h2>
-        <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
-          <div className="flex gap-3">
-            <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-            <p>
-              <strong>Primary sources only.</strong> Every regulatory fact on this site, FAA Part 107 and
-              Part 137 requirements, EPA FIFRA labeling, state pesticide licensing, USDA program rules
-              cites its primary source directly. No secondary aggregators, no unverified forum posts.
-            </p>
-          </div>
-          <div className="flex gap-3">
-            <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-            <p>
-              <strong>Operator verification.</strong> Each listed operator is reviewed against the public
-              FAA Airmen database for Part 107 Remote Pilot Certificate, against publicly searchable state
-              pesticide applicator records where available, and by direct contact. Operators displaying the
-              verified badge have completed this review. {verifiedCount} operators are currently verified.
-            </p>
-          </div>
-          <div className="flex gap-3">
-            <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-            <p>
-              <strong>Pricing data.</strong> Per-acre rate ranges are compiled from operator surveys, public
-              quotes, USDA cost-of-production data and direct interviews. Rates are reviewed each spray
-              season (spring and fall) and updated to reflect current market conditions.
-            </p>
-          </div>
-          <div className="flex gap-3">
-            <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-            <p>
-              <strong>Last-reviewed dates.</strong> Every content page displays the date it was last
-              reviewed. Regulatory pages older than 90 days and pricing pages older than 180 days are
-              flagged for refresh before the next season.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. What this site is NOT */}
+      {/* 6. What this site is not (kept for E-E-A-T honesty) */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
           <AlertTriangle className="w-6 h-6 text-amber-500" /> What this site is not
@@ -275,27 +326,66 @@ export default function AboutPage() {
         <FAQAccordion faqs={FAQS} />
       </section>
 
-      {/* 9. Contact */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact</h2>
+      {/* 9. Contact and address */}
+      <section className="mb-10" aria-labelledby="contact-address">
+        <h2 id="contact-address" className="text-2xl font-bold text-gray-900 mb-4">Contact and address</h2>
         <p className="text-gray-700 leading-relaxed mb-3">
           Found an error? Know an operator who should be listed? Want to suggest a page? Email me
           directly or use the contact form.
         </p>
-        <div className="flex flex-wrap gap-4 text-sm">
-          <MailtoLink
-            email={AUTHOR.publicEmail}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:text-green-700 transition-colors"
-          >
-            <Mail className="w-4 h-4 text-green-600" /> {AUTHOR.publicEmail}
-          </MailtoLink>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm mb-4">
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <div className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-wider mb-2">
+              <Mail className="w-3.5 h-3.5" /> Email
+            </div>
+            <MailtoLink email={AUTHOR.publicEmail} className="text-green-700 hover:underline font-medium">
+              {AUTHOR.publicEmail}
+            </MailtoLink>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <div className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-wider mb-2">
+              <MapPin className="w-3.5 h-3.5" /> Mailing address
+            </div>
+            {/* TODO[asset]: business mailing address (at minimum city + state).
+                AdSense reviewers expect a verifiable address on /about or
+                /contact. Eugen to fill in the line below. */}
+            <p className="text-gray-400 italic">TODO[asset]: business mailing address (city + state minimum)</p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <div className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-wider mb-2">
+              <Clock className="w-3.5 h-3.5" /> Business hours
+            </div>
+            {/* TODO[copy]: business hours in the operator's local timezone. */}
+            <p className="text-gray-400 italic">TODO[copy]: business hours (timezone + days/hours)</p>
+          </div>
+
+          <div className="bg-white border border-gray-200 rounded-lg p-4">
+            <div className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-wider mb-2">
+              <Clock className="w-3.5 h-3.5" /> Response time
+            </div>
+            {/* TODO[copy]: response-time commitment, e.g. "within 1 business day". */}
+            <p className="text-gray-400 italic">TODO[copy]: response-time commitment</p>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3 text-sm">
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:text-green-700 transition-colors"
           >
             Contact form
           </Link>
+          <Link
+            href="/list-your-business"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg hover:border-green-300 hover:text-green-700 transition-colors"
+          >
+            List your business
+          </Link>
         </div>
+
         <p className="text-sm text-gray-600 leading-relaxed mt-6">
           Running a business that serves US farmers or drone operators? See the{' '}
           <Link href="/advertise" className="text-green-700 hover:underline">advertising options</Link>.
