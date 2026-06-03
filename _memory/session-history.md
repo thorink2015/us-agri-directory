@@ -714,6 +714,27 @@ fully delivered through the existing emit points.
 
 (*PR number assigned at push time.)
 
+## 2026-06-03 — Reusable-assets inventory (FOUND.md)
+
+- Ran the "find reusable assets" request scoped to this repo only
+  (ephemeral container, no external machine to scan, `gh` absent, GitHub
+  access scoped to this repo). Confirmed the pasted prompt targeted a
+  different project (`local-marketing-site`); its referenced folders
+  (`reference/`, `site/`, `copy/`, `site/styles.css`) do not exist here.
+- Wrote `FOUND.md` at repo root. Section 1 catalogues reusable assets
+  already in the repo (~50 routes, design tokens in `globals.css` +
+  `tailwind.config.ts`, 34 components, 8 `src/lib` helpers, 16 `src/data`
+  modules, SEO/schema/AEO files, brand assets, the 3 legal pages,
+  scripts/tooling), pointing at `_memory/code-patterns.md` as the
+  canonical pattern library. Section 2 is a grounded gap list.
+- New findings surfaced while verifying: the Geist `.woff` files in
+  `src/app/fonts/` are orphaned (no `localFont`/`@font-face`; the
+  `system-ui` stack is the real font system); there is no EPA
+  `/regulations` sub-page (blocked on research-02); a duplicate author
+  photo exists (`eugen-author.jpg` + `eugen-author.jpeg`).
+- No site code touched. Inventory + memory only. Branch
+  `claude/festive-bardeen-9J82G`.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
