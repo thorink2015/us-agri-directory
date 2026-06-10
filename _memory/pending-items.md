@@ -327,6 +327,19 @@ the eight audit files committed in PR #118.
   can be deleted after confirming `-e3WZt` (the merged sibling)
   has the same content.
 
+## Follow-ups from 2026-06-10 FINAL-merged CSV import
+
+- **142 CSV rows matched existing operators** and were NOT merged into
+  their profiles (only linked in the CSV's new `directory_url` column).
+  Many carry contact_name / phone / email the existing records lack.
+  Decide whether to run a contact-enrichment pass on those 142.
+- **47 of the 221 new profiles are noindex-gated** (ultra-thin: no
+  city, contact or website — mostly FAA 44807 docket rows). They flip
+  to indexed automatically once contact/city data is added to
+  `operators.ts`.
+- New entries carry `pendingConfirmation: true`. Flip to
+  `verified: true` per operator only after Eugen's review.
+
 ## Optional polish (not blocking)
 
 - Netlify post-deploy GitHub Action to auto-run IndexNow ping

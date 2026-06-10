@@ -1,6 +1,6 @@
 # US Ag Drone Directory
 
-> Free directory of 391 verified agricultural drone operators across all 50 US states. Find spraying, seeding, mapping, and crop monitoring services by state, crop, or drone model. Published pricing, regulations, and interactive tools for farmers and operators.
+> Free directory of 614 listed agricultural drone operators across all 50 US states. Find spraying, seeding, mapping, and crop monitoring services by state, crop, or drone model. Published pricing, regulations, and interactive tools for farmers and operators.
 
 **Full content for AI agents:** [llms-full.txt](https://agdronedirectory.com/llms-full.txt). Deeper AEO blocks, pillar guide digests, and primary sources for all key pages.
 
@@ -14,7 +14,7 @@ US Ag Drone Directory publishes the only public, primary-source-cited index of c
 - [Contact](https://agdronedirectory.com/contact): editorial contact and corrections
 
 ## Find operators
-- [All operators](https://agdronedirectory.com/operators): searchable index of 391 verified US operators
+- [All operators](https://agdronedirectory.com/operators): searchable index of 614 US operators
 - [States hub](https://agdronedirectory.com/states): entry point to all 50 state pages
 - [Iowa](https://agdronedirectory.com/states/iowa): Corn Belt anchor, 2026 Iowa State benchmark at $12.50 per acre
 - [Texas](https://agdronedirectory.com/states/texas): cotton defoliant, wheat heading, TDA aerial license

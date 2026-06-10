@@ -15,8 +15,7 @@ const LAST_REVIEWED = '2026-04-21';
 
 export const metadata: Metadata = {
   title: 'Agricultural Drone Operator Map | US Ag Drone Directory',
-  description:
-    'Interactive map of 391+ verified drone operators across all 50 US states. Click any state to browse operators by location.',
+  description: `Interactive map of ${operators.length}+ verified drone operators across all 50 US states. Click any state to browse operators by location.`,
   alternates: { canonical: '/map' },
   openGraph: {
     type: 'website',

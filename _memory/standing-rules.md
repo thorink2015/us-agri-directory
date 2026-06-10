@@ -28,7 +28,7 @@
 - Domain: `https://agdronedirectory.com`
 - Stack: Next.js 14 App Router, TypeScript strict, Tailwind, Netlify
 - Data: TypeScript modules in `src/data/` — no database, no CMS
-  - `operators.ts` (391 today; use `operators.length`, never hard-code)
+  - `operators.ts` (614 as of 2026-06-10; use `operators.length`, never hard-code)
   - `counties.ts` (50 US states — includes Alaska + Hawaii, no DC)
   - `crops.ts` (9 crops)
   - `drone-model.ts` (9 models; exported as `drones`)
