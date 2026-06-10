@@ -735,6 +735,35 @@ fully delivered through the existing emit points.
 - No site code touched. Inventory + memory only. Branch
   `claude/festive-bardeen-9J82G`.
 
+## 2026-06-10 — FINAL-merged CSV operator import (221 net new, 393 → 614)
+
+- **Source:** `_research/ag-drone-operators-FINAL-merged - ag-drone-operators-FINAL-merged.csv`
+  (363 rows uploaded by Eugen). New one-shot importer at
+  `scripts/import-final-merged-csv.ts` (RFC 4180 parser, notes-to-sentence
+  description builder, strict drone/crop slug mapping, dedupe by
+  normalized name + website domain + phone digits + email).
+- **Result:** 142 rows matched operators already in `operators.ts`
+  (no new pages); 221 net-new entries appended as IMPORTED BATCH 4 with
+  `pendingConfirmation: true`, `verified: false`, `lastUpdated: 2026-06-10`.
+  Total operators 393 → **614**.
+- **Uniqueness / ranking protection:** every new page gets the PR #100
+  hash-keyed template variants (auto paragraph, FAQs, licensing block,
+  authority links). 47 ultra-thin entries (mostly FAA 44807 docket rows
+  with no city/contact/website) are live but `noindex,follow` via the
+  existing `shouldNoindexUltraThinOperator` gate and are excluded from
+  the sitemap. Verified in build output: sitemap operator URLs 566 of
+  614; canary check ian-parker = noindex, monarch-drone-solutions = index.
+- **CSV annotated in place** with two new columns: `directory_url` (the
+  live page for every row, new and existing) and `directory_status`
+  (`new` / `existing`). Kept in `_research/` deliberately because the
+  annotated file IS the deliverable Eugen asked for.
+- **Counts updated:** `public/llms.txt` (2 lines), `public/llms-full.txt`
+  (5 lines incl. recomputed top states: CA 44, NE 38, TX 38, IA 35,
+  MN 35, TN 35; softened the unverifiable "All operators hold Part 107"
+  claim), `/map` metadata and `/get-matched` body now compute from
+  `operators.length`.
+- **Build:** clean, 2,363 static pages. Branch `claude/exciting-planck-s9hh04`.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
