@@ -1286,4 +1286,9 @@ export const guideContent: Record<string, ReactNode> = {
       <p>This guide is updated quarterly. If you spot a figure that has been superseded, email Eugen at the address on the <Link href="/about">About page</Link> and we will update it.</p>
     </>
   ),
+  'is-drone-spraying-worth-it': (
+    <>
+      {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
+    </>
+  ),
 };

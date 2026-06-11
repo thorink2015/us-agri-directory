@@ -66,6 +66,8 @@ export type GuideCategory =
 export interface Guide {
   slug: string;
   title: string;
+  /** Optional shorter <title> tag override (< 60 chars). Falls back to title. */
+  metaTitle?: string;
   /** Used in cards, breadcrumb, "more guides" lists */
   shortTitle: string;
   description: string;
@@ -632,6 +634,141 @@ export const guides: Guide[] = [
         'Grand View Research US Agriculture Drone Market Report, 2025',
       ],
     },
+  },
+  {
+    slug: 'is-drone-spraying-worth-it',
+    title:
+      "Is Drone Spraying Worth It in 2026? A Farmer's Honest Guide to Hiring a Drone Sprayer",
+    metaTitle: "Is Drone Spraying Worth It in 2026? A Farmer's Guide",
+    shortTitle: 'Is drone spraying worth it in 2026?',
+    description:
+      'See real 2026 drone spraying costs, when a drone beats a plane or ground rig, and how to vet an operator before they fly your fields. Written for farmers.',
+    primaryKeyword: 'is drone spraying worth it',
+    secondaryKeywords: [
+      'hiring a drone sprayer',
+      'drone crop spraying near me',
+      'drone vs airplane crop spraying',
+      'drone spraying for corn fungicide',
+      'questions to ask a drone spraying operator',
+    ],
+    category: 'For Farmers',
+    publishDate: '2026-06-11',
+    lastUpdated: '2026-06-11',
+    readMinutes: 14,
+    aeoBlock:
+      'Drone spraying is worth hiring in 2026 when the job is a tall-canopy fungicide pass, a wet field, a small or irregular field, or spot weed work. Expect $12 to $18 per acre for row crops, application only. The Iowa State 2026 Custom Rate Survey average is $12.50 per acre, and the national average rate fell 38% in one year to $13. Drones apply 30 to 50% less chemical than ground rigs, leave zero wheel tracks, and take the small fields airplanes turn down. For big flat contiguous acres on dry ground, an airplane or your own ground rig still wins on raw speed. Below roughly 980 acres of drone work per year, hiring beats owning. Book in spring for a July fungicide pass: drone-treated acres jumped 58.7% to 16.4 million in 2025 while new drone sales fell 59%, so certified operators fill their windows early.',
+    toc: [
+      { id: 'costs', label: 'What drone spraying costs in 2026' },
+      { id: 'total-cost', label: 'Total cost, not rate: the math that matters' },
+      { id: 'your-operation', label: 'Is it worth it for your operation?' },
+      { id: 'drone-vs-airplane-vs-ground', label: 'Drone vs airplane vs ground rig' },
+      { id: 'whats-new-2026', label: "What's new in 2026" },
+      { id: 'fungicide-case', label: 'The fungicide case' },
+      { id: 'how-to-hire', label: 'How to hire without getting burned' },
+      { id: 'beyond-spraying', label: 'Beyond spraying' },
+      { id: 'bottom-line', label: 'The bottom line' },
+    ],
+    quickFacts: [
+      { label: '2026 row crop rate', value: '$12 to $18 per acre, Iowa State avg $12.50' },
+      { label: 'Acres drone-sprayed in 2025', value: '16.4 million, up 58.7% YoY (ASDC)' },
+      {
+        label: 'Corn fungicide ROI by method',
+        value: "$13.17 drone vs $8.44 ground vs $3.13 plane (Beck's PFR)",
+      },
+      { label: 'Hire vs own breakeven', value: '~980 acres per year (MU Extension G1274)' },
+    ],
+    pullQuotes: [
+      {
+        quote:
+          "Fewer new drones, way more acres. Nobody rebooks a service that didn't work.",
+        attribution: 'On the 2025 supply squeeze',
+      },
+      {
+        quote:
+          'A fungicide applied in the right week beats a perfect one applied ten days late, every time.',
+        attribution: 'On the VT to R1 application window',
+      },
+      {
+        quote:
+          'An operator who gets cagey on insurance or tank cleanout just saved you a much more expensive lesson.',
+        attribution: 'On the nine questions to ask before they fly',
+      },
+    ],
+    featuredPullQuote: {
+      quote:
+        "Your corn doesn't care how the fungicide arrives. It cares that it arrives on time.",
+      attribution: 'From: the bottom line',
+    },
+    howToTitle: 'How to hire a drone sprayer',
+    howToSteps: [
+      {
+        name: 'Match the job to the tool',
+        text: 'Drones earn their keep on tasseling-stage fungicide passes, wet fields, small or irregular fields, and spot work. For large flat contiguous acres on dry ground, an airplane or ground rig may still win on raw speed.',
+      },
+      {
+        name: 'Get quotes in spring, not summer',
+        text: 'Capacity is tight: drone-treated acres jumped 58.7% in 2025 while new drone sales fell 59%. Operators worth hiring fill their July fungicide window by May, so collect two or three itemized quotes early.',
+      },
+      {
+        name: 'Verify the four-credential stack',
+        text: 'A legal spray drone operation holds an FAA Part 107 certificate, a Section 44807 exemption, a Part 137 Agricultural Aircraft Operator Certificate, and a state pesticide applicator license. Anyone missing a piece is operating illegally.',
+      },
+      {
+        name: 'Get the insurance certificate before the job',
+        text: 'Read it and confirm it includes chemical liability. Many general drone policies specifically exclude chemical application, which transfers drift risk to you.',
+      },
+      {
+        name: 'Ask the nine questions',
+        text: 'Part 137 certificate, insurance, state license number, crop experience, drone and nozzles, as-applied maps, tank cleanout procedure, weather and reschedule policy, and the itemized quote in writing.',
+      },
+      {
+        name: 'Book the calendar slot',
+        text: 'Pick the operator who answers all nine cleanly and get on their schedule before the disease window opens. A fungicide applied in the right week beats a perfect one applied ten days late.',
+      },
+    ],
+    relatedInternal: [
+      { href: '/pricing', label: 'Drone spraying cost per acre: 2026 rates' },
+      { href: '/crops/corn', label: 'Drone spraying for corn' },
+      { href: '/operators', label: 'Find a verified Part 137 operator' },
+      { href: '/regions', label: 'Browse operators by region' },
+      {
+        href: '/guides/hire-drone-spray-operator-checklist',
+        label: 'The complete operator vetting checklist',
+      },
+      { href: '/comparisons/drone-vs-airplane', label: 'Drone vs airplane crop spraying' },
+    ],
+    faqs: [
+      {
+        question: 'How much does drone spraying cost in 2026?',
+        answer:
+          "$12 to $18 per acre for row crops, application only. Iowa State's 2026 survey average came in at $12.50. Fungicide passes typically run $13 to $16, vineyards and orchards $18 to $35. Expect job minimums around $300 to $500. The full regional breakdown is on our pricing page.",
+      },
+      {
+        question: 'Is drone spraying as effective as ground spraying?',
+        answer:
+          "For fungicides, trial data says equal or slightly better yield at a fraction of the carrier water, with zero wheel-track loss. Beck's 2025 trials measured 237 bushels from drone-applied fungicide versus 235 from a ground rig and 227 untreated. For high-volume jobs that genuinely need 15 or more gallons of water per acre, the ground rig still has its place.",
+      },
+      {
+        question: 'Will a drone operator take my 25-acre field?',
+        answer:
+          'Yes, and this is the quiet revolution. Airplanes usually want 40 to 80 acre minimums. Drone operators built their businesses on the fields aerial applicators turn down. Expect a minimum charge rather than a minimum acreage.',
+      },
+      {
+        question: 'How do I find a drone sprayer near me?',
+        answer:
+          "Search our directory by state and crop. Every listed operator is verified against the FAA's Part 137 database, so the legality check is already done before you make the first call.",
+      },
+      {
+        question: 'Is my operator legally allowed to spray my chemicals?',
+        answer:
+          "Only if they hold a Part 107 certificate, a Section 44807 exemption, a Part 137 certificate and your state's applicator license. Also know that no US pesticide label has drone-specific directions yet. Operators legally apply under existing aerial labels, so the product must carry an aerial application label. A good operator checks this before mixing. So should you.",
+      },
+      {
+        question: 'Should I buy a drone instead of hiring an operator?',
+        answer:
+          "University of Missouri Extension's breakeven sits around 980 acres of drone work per year. Below that, hiring at $12 to $16 an acre beats owning a $30,000 to $40,000 machine plus $4,000 to $6,000 a year in insurance, batteries, repairs and your own certification grind. Above 2,000 acres a year, run the ownership numbers seriously.",
+      },
+    ],
   },
 ];
 
