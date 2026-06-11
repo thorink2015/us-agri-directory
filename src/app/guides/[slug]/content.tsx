@@ -1560,7 +1560,15 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p><strong>Spot work</strong> on pasture, fence lines, waterways and CRP edges, where you pay for the acres that need treatment instead of all of them.</p>
 
-      {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
+      <h2 id="bottom-line">The bottom line</h2>
+
+      <p>Is drone spraying worth it in 2026? For the tasseling-stage fungicide pass, the wet field, the small field, the odd field and the spot job: yes, clearly, and the trial data plus 16.4 million acres of paying customers back it up. For massive contiguous acres on dry ground, the airplane and the ground rig still earn their keep, and a smart operation uses all three.</p>
+
+      <p>The real risk this season isn&apos;t overpaying. Rates already fell 38% and they&apos;re still drifting down. The risk is calling in July, when every certified operator within 100 miles is booked through the fungicide window, or worse, hiring whoever&apos;s left and finding out their insurance excludes the one thing you hired them to do.</p>
+
+      <p>So do it in the right order. Figure out which fields and which passes fit the drone. Get two or three quotes in spring, not summer. Ask the nine questions. Then <Link href="/operators">find a verified Part 137 operator near you</Link> and get on their calendar before your neighbor does.</p>
+
+      <p>Your corn doesn&apos;t care how the fungicide arrives. It cares that it arrives on time.</p>
     </>
   ),
 };
