@@ -1550,6 +1550,16 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>An operator who answers all nine cleanly is an operator you&apos;ll hire for years. An operator who gets cagey on numbers 2 or 7 just saved you a much more expensive lesson. For the deep version of this process, contract clauses and red flags included, work through our <Link href="/guides/hire-drone-spray-operator-checklist">complete operator vetting checklist</Link>.</p>
 
+      <h2 id="beyond-spraying">Beyond spraying: what else these crews do</h2>
+
+      <p>Once you&apos;ve got a good operator&apos;s number in your phone, they&apos;re useful more than once a season.</p>
+
+      <p><strong>Cover crop seeding</strong> runs $12 to $20 per acre and the timing trick is the whole point: a drone seeds rye or clover into standing corn or beans in late August, weeks before any drill could get in after harvest. Earlier establishment, better stands, and the work often qualifies for NRCS and state cost-share programs that cover a chunk of the bill.</p>
+
+      <p><strong>Dry spreading</strong> of fertilizer or seed into wet ground, the same no-compaction logic as spraying.</p>
+
+      <p><strong>Spot work</strong> on pasture, fence lines, waterways and CRP edges, where you pay for the acres that need treatment instead of all of them.</p>
+
       {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
     </>
   ),
