@@ -1288,6 +1288,69 @@ export const guideContent: Record<string, ReactNode> = {
   ),
   'is-drone-spraying-worth-it': (
     <>
+      <p>Short answer: yes, if the job is right. No, if you expect a drone to out-muscle an airplane on 2,000 flat contiguous acres.</p>
+
+      <p>Here&apos;s the longer answer, with real numbers.</p>
+
+      <p>In 2025, spray drones covered 16.4 million acres in the US. That&apos;s a 58.7% jump in one year, and it happened while new drone sales actually fell 59% because of import restrictions. Read that again. Fewer new drones, way more acres. The operators who already own birds are flying them harder than ever, and farmers keep calling them back. Nobody rebooks a service that didn&apos;t work.</p>
+
+      <p>So the market already voted. The question isn&apos;t whether drone spraying works. It&apos;s whether it&apos;s worth it for your fields, your crops and your checkbook this season. That depends on four things: what you&apos;re spraying, how tall it is, how wet your ground gets and how big your fields are.</p>
+
+      <p>This guide walks through all of it. What you&apos;ll actually pay in 2026, when a drone beats a plane or a ground rig, when it doesn&apos;t, and exactly how to vet an operator before you let anyone fly chemicals over your corn. No sales pitch. We don&apos;t sell drones and we don&apos;t spray fields. We run a directory of FAA Part 137 verified operators, which means our only job is connecting you with someone legal, insured and good.</p>
+
+      <h2 id="costs">What drone spraying costs in 2026</h2>
+
+      <p>Let&apos;s start where every farmer starts. The number.</p>
+
+      <p>For row crops in 2026, expect <strong>$12 to $18 per acre</strong> for application only. You supply the chemical. Iowa State&apos;s 2026 Custom Rate Survey, the first university survey to track drone work as its own line item, put the average at <strong>$12.50 per acre</strong> with a median of $12.00 across 47 operator responses. The low end hit $8.</p>
+
+      <p>The American Spray Drone Coalition&apos;s national survey tells the same story from the operator side: the average rate fell from $21 per acre in 2024 to <strong>$13 per acre in 2025</strong>. That&apos;s a 38% drop in one year. Bigger drones, more competition, better routes. Good news if you&apos;re the one writing the check.</p>
+
+      <p>Here&apos;s the quick reference by job:</p>
+
+      <figure className="guide-table-callout" aria-label="2026 drone spraying rates by job type">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Job</th>
+              <th scope="col">2026 rate</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Row crop pass (herbicide, insecticide)</td>
+              <td>$12 to $18/acre</td>
+              <td>Iowa State avg: $12.50</td>
+            </tr>
+            <tr>
+              <td>Corn or soybean fungicide</td>
+              <td>$13 to $16/acre</td>
+              <td>The bread and butter job</td>
+            </tr>
+            <tr>
+              <td>Cover crop seeding</td>
+              <td>$12 to $20/acre</td>
+              <td>Iowa State aerial seeding avg: $13.60</td>
+            </tr>
+            <tr>
+              <td>Vineyard and orchard</td>
+              <td>$18 to $35/acre</td>
+              <td>Terrain and canopy drive the price</td>
+            </tr>
+            <tr>
+              <td>Pasture spot spraying</td>
+              <td>Varies, see below</td>
+              <td>Spot work can cut paid acres 80%</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>A few things hide behind those numbers. Most operators carry a minimum, often $300 to $500 per stop, because driving a trailer 40 miles to spray 15 acres doesn&apos;t pay otherwise. Some charge mobilization on top. Always ask for the itemized quote: rate per acre, minimum, travel and what counts as a billable acre. We keep a deeper breakdown with regional rates on our <Link href="/pricing">pricing page</Link>, updated through this season.</p>
+
+      <p>One more thing the rate sheet hides. Many operators are clearing barely $5 an acre at these compressed rates. That&apos;s not your problem, but it explains why minimums exist and why the cheapest quote in the county sometimes comes from someone cutting corners on insurance. More on that later.</p>
+
       {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
     </>
   ),
