@@ -1471,6 +1471,27 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>Throughput, by the way, is closing fast. Drones that covered 4 to 5 acres an hour a couple years back now routinely run 20 to 25, and the newest generation goes well beyond that. Which brings us to the hardware.</p>
 
+      <h2 id="whats-new-2026">What&apos;s new in 2026 (and why it affects your price)</h2>
+
+      <p>Three developments this year directly change what you&apos;ll pay and how easy it is to book.</p>
+
+      <h3>Bigger drones, faster work</h3>
+
+      <p>DJI launched the <Link href="/drones/dji-agras-t100">Agras T100</Link> globally in July 2025: a 26-gallon tank, 220-pound payload and a 42-foot spray swath. Dealers report real-world coverage of 70 to 80 acres per hour in good conditions. Compare that to the 2022-era drones doing 25 and you understand why per-acre rates fell 38% in a year. Its smaller sibling, the T70P, and US-built options like the <Link href="/drones/hylio-ag-272">Hylio AG-272</Link> out of Texas round out a 2026 fleet that simply does more acres per battery. Fewer refill stops means more acres per hour means lower rates. The hardware is doing the negotiating for you.</p>
+
+      <h3>The supply squeeze</h3>
+
+      <p>Here&apos;s the wrinkle. While acres flown jumped 58.7%, sales of new spray drones fell from about 8,950 units in 2024 to roughly 3,711 in 2025. US Customs has been blocking DJI shipments over forced labor allegations, which DJI calls unsubstantiated and categorically false. Whoever turns out to be right, the practical effect for you is the same: operators can&apos;t easily add aircraft, and existing fleets are booked harder. <strong>If you&apos;re planning a fungicide pass for July, call in May.</strong> The operators worth hiring fill their tasseling window early, and 2026 capacity is tighter than the demand curve.</p>
+
+      <figure className="guide-pullquote">
+        <p>Fewer new drones, way more acres. Nobody rebooks a service that didn&apos;t work.</p>
+        <cite>On the 2025 supply squeeze</cite>
+      </figure>
+
+      <h3>New federal rules coming</h3>
+
+      <p>The FAA&apos;s Part 108 rule, covering flights beyond the pilot&apos;s visual line of sight, carried a final rule deadline of March 16, 2026. Once it phases in, operators will be able to cover more ground per crew with fewer waivers and less paperwork. Don&apos;t expect it to change your quote this summer. The rule phases in over time. But the direction of travel is clear: more capacity, more competition and continued pressure on rates over the next few seasons. Hiring beats buying right now partly because the service keeps getting cheaper while the regulations keep getting friendlier.</p>
+
       {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
     </>
   ),
