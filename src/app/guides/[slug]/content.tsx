@@ -1390,6 +1390,87 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>Rates run higher, $18 to $35 per acre, because the flying is harder. But this is terrain where ground rigs struggle and airplanes simply can&apos;t operate, and where drift onto a neighboring block can cost you a relationship or a lawsuit. Drones fly 6 to 10 feet above the canopy. The drift profile is a different sport entirely.</p>
 
+      <h2 id="drone-vs-airplane-vs-ground">Drone vs. airplane vs. ground rig: the honest comparison</h2>
+
+      <p>No tool wins everything. Here&apos;s the actual scorecard for 2026:</p>
+
+      <figure className="guide-table-callout" aria-label="Drone versus airplane versus ground rig scorecard for 2026">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Factor</th>
+              <th scope="col">Drone</th>
+              <th scope="col">Airplane</th>
+              <th scope="col">Ground rig</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cost per acre (application)</td>
+              <td>$12 to $18</td>
+              <td>$12 to $13</td>
+              <td>$10 to $14</td>
+            </tr>
+            <tr>
+              <td>Field minimum</td>
+              <td>Small fields fine</td>
+              <td>Often 40 to 80 acres</td>
+              <td>None, it&apos;s yours</td>
+            </tr>
+            <tr>
+              <td>Acres per day</td>
+              <td>Hundreds</td>
+              <td>Thousands</td>
+              <td>Hundreds to thousands</td>
+            </tr>
+            <tr>
+              <td>Wet field access</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Tall canopy (VT corn)</td>
+              <td>Excellent</td>
+              <td>Good</td>
+              <td>Crop damage</td>
+            </tr>
+            <tr>
+              <td>Wheel track loss</td>
+              <td>None</td>
+              <td>None</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Drift profile</td>
+              <td>Lowest</td>
+              <td>Highest</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <td>Small or irregular fields</td>
+              <td>Best</td>
+              <td>Worst</td>
+              <td>Depends</td>
+            </tr>
+            <tr>
+              <td>Obstacles (pivots, lines, trees)</td>
+              <td>Handles well</td>
+              <td>Avoids or declines</td>
+              <td>Handles well</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+
+      <p>The airplane still owns raw volume. A turbine ag plane covers more acres before lunch than most drone crews cover in a day, and at roughly the same per-acre rate. If you&apos;ve got big rectangular fields and a good relationship with an aerial applicator, that&apos;s not a relationship to drop.</p>
+
+      <p>What the airplane can&apos;t do: your 25-acre field. Your field under the flight path. Your field with the pivot in the middle. Your odd-shaped bottom ground along the creek. And the airplane carries the worst drift profile of the three, which matters more every year as labels tighten and neighbors get lawyers. The full head-to-head is on our <Link href="/comparisons/drone-vs-airplane">drone vs airplane page</Link>.</p>
+
+      <p>The ground rig is paid for and parked in your shed, which is hard to argue with. Until it rains for a week in July and your corn needs a fungicide pass right now, and the rig would sink to the axles. That exact scenario is how most farmers hire their first drone.</p>
+
+      <p>Throughput, by the way, is closing fast. Drones that covered 4 to 5 acres an hour a couple years back now routinely run 20 to 25, and the newest generation goes well beyond that. Which brings us to the hardware.</p>
+
       {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
     </>
   ),
