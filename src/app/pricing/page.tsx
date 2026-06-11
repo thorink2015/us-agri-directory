@@ -360,7 +360,11 @@ export default function PricingPage() {
             </table>
           </div>
           <p className="text-sm text-gray-700 mt-4 leading-relaxed">
-            For tall-crop fungicide on corn at VT stage, drones are often the only viable option: ground rigs cause canopy damage and airplanes cannot target the upper canopy with enough carrier volume. The Beck&apos;s 2025 Practical Farm Research data shows a $27.26 per-acre ROI on drone-applied fungicide in corn, justifying the premium over ground application.
+            For tall-crop fungicide on corn at VT stage, drones are often the only viable option: ground rigs cause canopy damage and airplanes cannot target the upper canopy with enough carrier volume. The Beck&apos;s 2025 Practical Farm Research data shows a $27.26 per-acre ROI on drone-applied fungicide in corn, justifying the premium over ground application. Still deciding whether to hire at all this season? Our farmer-side guide{' '}
+            <Link href="/guides/is-drone-spraying-worth-it" className="text-green-700 font-semibold hover:underline">
+              Is drone spraying worth it in 2026?
+            </Link>{' '}
+            walks the decision by farm type, job and field shape.
           </p>
           <div className="mt-4 flex gap-3 flex-wrap">
             <Link href="/comparisons/drone-vs-airplane" className="inline-flex items-center gap-2 px-4 py-2 border border-green-700 text-green-700 font-medium rounded-lg hover:bg-green-50 transition-colors text-sm">
