@@ -1351,6 +1351,23 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>One more thing the rate sheet hides. Many operators are clearing barely $5 an acre at these compressed rates. That&apos;s not your problem, but it explains why minimums exist and why the cheapest quote in the county sometimes comes from someone cutting corners on insurance. More on that later.</p>
 
+      <h2 id="total-cost">The math that actually matters: total cost, not rate</h2>
+
+      <p>Here&apos;s where the rate sheet lies to you a little.</p>
+
+      <p>A ground rig might quote $12 an acre against a drone&apos;s $16. Case closed, right? Not quite. Drones apply chemical in 1.5 to 2 gallons of water per acre instead of 15 to 20 from a ground rig, and operators consistently report using 30 to 50% less product to get the same coverage. The downwash from the rotors pushes droplets into the canopy instead of letting half your spend drift off or run down the stalk.</p>
+
+      <p>Run a real comparison, the kind Nelson Drone Solutions in Nebraska published from their own books:</p>
+
+      <ul>
+        <li><strong>Ground rig:</strong> $12/acre application + $18/acre chemical = <strong>$30/acre</strong></li>
+        <li><strong>Drone:</strong> $16/acre application + $11/acre chemical (40% less product) = <strong>$27/acre</strong></li>
+      </ul>
+
+      <p>The drone costs more per acre to hire and less per acre to run. And that math leaves out the part the ground rig can never fix: wheel tracks. Every pass with a ground rig in standing corn drives down rows. Depending on boom width and crop stage, those tracks cost real bushels. A drone leaves zero. The ASDC pegged the chemical savings alone at around $13.42 per acre across their member operators in 2025.</p>
+
+      <p>So when you compare quotes this season, compare totals. Application plus chemical plus crop damage plus compaction. That&apos;s the number that hits your ledger in November. Our <Link href="/comparisons/drone-vs-ground-rig">drone vs ground rig comparison</Link> runs this math in more depth.</p>
+
       {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
     </>
   ),
