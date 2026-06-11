@@ -764,6 +764,33 @@ fully delivered through the existing emit points.
   `operators.length`.
 - **Build:** clean, 2,363 static pages. Branch `claude/exciting-planck-s9hh04`.
 
+## 2026-06-11 — Pillar guide #5: is drone spraying worth it (branch claude/bold-pascal-9layu9)
+
+- **Source:** full article copy + research pack pasted by Eugen in chat
+  (browser-session deliverable per copy-source-of-truth; not a
+  `_research/` file drop). Primary keyword `is drone spraying worth it`.
+- **Shipped `/guides/is-drone-spraying-worth-it`** via the sentinel
+  append loop (9 H2 sections, 2 `.guide-table-callout` tables, 2 inline
+  pullquotes, ~3,000 body words, 14-min read). Data entry with AEO
+  block, 4 quickFacts, 3 pullQuotes, featuredPullQuote, 6 HowTo steps,
+  6 FAQs, 6 relatedInternal links. Category For Farmers.
+- **New template field:** optional `metaTitle?: string` on the `Guide`
+  interface; `generateMetadata` uses `guide.metaTitle ?? guide.title`
+  so the title tag (52 chars) can differ from the long H1. Existing
+  guides unaffected.
+- **Internal links placed** per Eugen's SEO package: /pricing,
+  /crops/corn, /operators (x3 incl. closing CTA), /regions (related
+  footer), /drones/dji-agras-t100, /drones/hylio-ag-272, both
+  comparison pages, and the hire-checklist guide (anti-cannibalization
+  cross-link from the nine-questions section).
+- **Reciprocal inbound links** from /pricing section 6 and both
+  comparison pages' footer clusters. Guides hub hero + homepage
+  latest-guide callout switched automatically via `getLatestGuides`.
+- **AI discovery:** llms.txt one-liner + full llms-full.txt AEO block.
+- **Verified:** build clean, 2,364 static pages; route prerenders with
+  Article + BreadcrumbList + FAQPage + HowTo JSON-LD; 0 em/en dashes;
+  title tag renders the short metaTitle; sitemap auto-includes the URL.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
