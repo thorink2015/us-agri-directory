@@ -1368,6 +1368,28 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>So when you compare quotes this season, compare totals. Application plus chemical plus crop damage plus compaction. That&apos;s the number that hits your ledger in November. Our <Link href="/comparisons/drone-vs-ground-rig">drone vs ground rig comparison</Link> runs this math in more depth.</p>
 
+      <h2 id="your-operation">Is it worth it for your operation?</h2>
+
+      <p>Different farms, different answers. Find yours.</p>
+
+      <h3>Large row crop operation (1,000+ acres of corn and beans)</h3>
+
+      <p>Worth it for specific jobs, not as your only applicator. Your fungicide pass at tasseling is the killer use case, and we&apos;ll get into why below. Your big early season herbicide passes on flat, dry, rectangular ground? An airplane or your own ground rig still wins on raw speed. Most large operations in 2026 use drones as the precision tool in the rotation: the wet spring when the rig can&apos;t get in, the late pass when the corn is 9 feet tall, the field with the irrigation pivot and the power lines that the air strip won&apos;t touch.</p>
+
+      <p>One number worth knowing if you&apos;re tempted to buy instead of hire: University of Missouri Extension ran the ownership math and found custom hiring costs about $16 per acre while owning your own rig works out to $12.27 per acre at 1,000 acres a year, dropping to $7.39 at 4,000 acres. Their breakeven lands around <strong>980 acres of drone work per year</strong>. Below that, hire it out and let someone else eat the battery costs. Above it, owning starts to pencil, if you also want a second job as a drone mechanic.</p>
+
+      <h3>Small and mid-size farms (under 500 acres)</h3>
+
+      <p>This is where drones quietly changed the game. Fixed-wing aerial applicators typically carry 40-acre minimums, and plenty won&apos;t roll for less than 80. If you farm 120 acres across four fields, the airplane guy wasn&apos;t returning your calls anyway. Drone operators take those jobs happily. The field that was always too small, too cut up or too close to the neighbor&apos;s organic certification finally has an aerial option.</p>
+
+      <h3>Ranchers and pasture</h3>
+
+      <p>Here&apos;s a fun one. Broadcast spraying pasture with a drone usually runs $5 or more per acre above ground broadcast rates, so on a pure broadcast basis the drone loses. But most pasture weed problems aren&apos;t broadcast problems. They&apos;re a thistle patch here, a stand of blackberry there, mesquite creeping along the fence line. A drone with spot spray capability treats only the weeds, and University of Florida extension work found spot programs can cut your paid acreage by 80% or more. You stop paying to spray grass that didn&apos;t need spraying.</p>
+
+      <h3>Specialty crops, vineyards and orchards</h3>
+
+      <p>Rates run higher, $18 to $35 per acre, because the flying is harder. But this is terrain where ground rigs struggle and airplanes simply can&apos;t operate, and where drift onto a neighboring block can cost you a relationship or a lawsuit. Drones fly 6 to 10 feet above the canopy. The drift profile is a different sport entirely.</p>
+
       {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
     </>
   ),
