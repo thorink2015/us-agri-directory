@@ -340,6 +340,17 @@ the eight audit files committed in PR #118.
 - New entries carry `pendingConfirmation: true`. Flip to
   `verified: true` per operator only after Eugen's review.
 
+## Follow-up from 2026-06-11 worth-it guide (Eugen to verify)
+
+- **Part 108 status check.** `/guides/is-drone-spraying-worth-it`
+  (whats-new-2026 section) says the FAA Part 108 BVLOS rule "carried a
+  final rule deadline of March 16, 2026" per Eugen's research pack,
+  which predates that deadline. Today is past it. Eugen should confirm
+  whether the final rule actually published and drop one corrected
+  sentence if so; the same March 16 framing also exists in the
+  statistics guide ("final rule expected Spring 2026" in llms-full.txt).
+  Do not invent the outcome.
+
 ## Optional polish (not blocking)
 
 - Netlify post-deploy GitHub Action to auto-run IndexNow ping

@@ -236,6 +236,8 @@ already in `src/data/guides.ts`. Per-guide work:
 1. Read `_research/<slug>.md`.
 2. Append a new entry to `guides` in `src/data/guides.ts` filling every
    required field. Optional fields to populate for quality:
+   - `metaTitle` (short < 60-char title tag when the H1 runs long;
+     `generateMetadata` falls back to `title` — added 2026-06-11)
    - `howToSteps` + `howToTitle` (HowTo JSON-LD)
    - `featuredPullQuote` (hero card on /guides hub when this guide is
      newest)

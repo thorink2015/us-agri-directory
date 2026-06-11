@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const absoluteUrl = `${SITE.domain}${canonical}`;
 
   return {
-    title: guide.title,
+    title: guide.metaTitle ?? guide.title,
     description: guide.description,
     keywords: [guide.primaryKeyword, ...guide.secondaryKeywords],
     alternates: { canonical },
