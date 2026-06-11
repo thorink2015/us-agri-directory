@@ -1492,6 +1492,31 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>The FAA&apos;s Part 108 rule, covering flights beyond the pilot&apos;s visual line of sight, carried a final rule deadline of March 16, 2026. Once it phases in, operators will be able to cover more ground per crew with fewer waivers and less paperwork. Don&apos;t expect it to change your quote this summer. The rule phases in over time. But the direction of travel is clear: more capacity, more competition and continued pressure on rates over the next few seasons. Hiring beats buying right now partly because the service keeps getting cheaper while the regulations keep getting friendlier.</p>
 
+      <h2 id="fungicide-case">The fungicide case: where drones earn their keep</h2>
+
+      <p>If there&apos;s one job that settles the worth-it question, it&apos;s the corn fungicide pass.</p>
+
+      <p>The 2025 season brought some of the worst tar spot and southern rust pressure on record across the Corn Belt, and agronomists are telling growers to plan for elevated risk again in 2026. Tar spot, gray leaf spot and northern corn leaf blight all overwinter in residue right here. They&apos;re not going anywhere.</p>
+
+      <p>The best return on a one-pass fungicide program comes at VT to R1, tasseling through early silk. That&apos;s the window every university pathologist points to. It&apos;s also the exact window when your options get ugly. The corn is 8 to 10 feet tall. A ground rig means crop damage and wheel tracks. An airplane flies fast and high and struggles to drive spray down into the canopy where the disease lives.</p>
+
+      <p>A drone flies 6 to 10 feet over the tassels and uses rotor downwash to push droplets into the plant. The data backs up what that sounds like it should do:</p>
+
+      <ul>
+        <li><strong>Beck&apos;s Hybrids Practical Farm Research</strong>, three years of multi-location trials, found corn fungicide return on investment of <strong>$13.17 per acre applied by drone</strong>, versus $8.44 by ground rig and $3.13 by airplane.</li>
+        <li>Beck&apos;s 2025 trials across Indiana, Illinois and Ohio: untreated corn made 227 bushels. Ground rig at 10 to 20 gallons of water per acre made 235. The drone at 2 to 3 gallons made <strong>237</strong>. Equal or better yield with one-eighth the carrier water.</li>
+        <li><strong>University of Missouri</strong> ran a DJI T40 against an airplane at three sites in 2025 and measured higher spray coverage from the drone, plus lower tar spot and gray leaf spot severity by R6.</li>
+      </ul>
+
+      <p>Honest caveat, because we promised honest: the often-quoted 3.4 bushel drone advantage over ground application came from a single lower-pressure trial year. The multi-year ROI numbers are stronger evidence, but this is on-farm trial data in an evolving field, not fifty years of settled science. What&apos;s already settled is the practical part. When your corn hits VT in a wet July and disease is moving, the drone is frequently the only applicator that can physically make the pass on time. A fungicide applied in the right week beats a perfect one applied ten days late, every time.</p>
+
+      <figure className="guide-pullquote">
+        <p>A fungicide applied in the right week beats a perfect one applied ten days late, every time.</p>
+        <cite>On the VT to R1 application window</cite>
+      </figure>
+
+      <p>If corn is your main concern, our <Link href="/crops/corn">corn page</Link> covers timing, products and operators by region.</p>
+
       {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
     </>
   ),
