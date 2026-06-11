@@ -1517,6 +1517,39 @@ export const guideContent: Record<string, ReactNode> = {
 
       <p>If corn is your main concern, our <Link href="/crops/corn">corn page</Link> covers timing, products and operators by region.</p>
 
+      <h2 id="how-to-hire">How to hire a drone sprayer (without getting burned)</h2>
+
+      <p>The industry grew from about 40 certified ag drone operations in 2021 to somewhere between 1,000 and 1,700 by the end of 2025, depending on whose count you use. Either number means the same thing for you: lots of new operators, and a real spread between the pros and the guy who bought a drone in March and printed business cards in April.</p>
+
+      <p>A legal ag spray drone operation in the US needs three federal pieces, plus state licensing:</p>
+
+      <ol>
+        <li><strong>A Part 107 Remote Pilot Certificate.</strong> The basic FAA drone pilot license.</li>
+        <li><strong>A Section 44807 exemption.</strong> Permission to fly a heavy spray drone at all.</li>
+        <li><strong>A Part 137 Agricultural Aircraft Operator Certificate.</strong> The license to dispense chemicals from an aircraft. This is the big one, the same certificate category crop dusters hold.</li>
+        <li><strong>A state pesticide applicator license</strong>, usually the commercial aerial category, often with restricted-use endorsement depending on what&apos;s in the tank.</li>
+      </ol>
+
+      <p>Anyone missing a piece of that stack is operating illegally, and here&apos;s why you should care beyond principle: if an uncertified operator drifts dicamba onto your neighbor&apos;s beans, the liability conversation lands in your lap fast. Every operator listed in <Link href="/operators">our directory</Link> is verified against the FAA&apos;s Part 137 database before they go live. That&apos;s the whole reason this site exists.</p>
+
+      <h3>The nine questions to ask before they fly</h3>
+
+      <p>Print this. Ask all nine.</p>
+
+      <ol>
+        <li><strong>&ldquo;Can I see your Part 137 certificate?&rdquo;</strong> A real operator hands it over without blinking. You can also verify them in the FAA database or search our directory.</li>
+        <li><strong>&ldquo;Send me your insurance certificate before the job.&rdquo;</strong> Not after. And read it: confirm it includes <strong>chemical liability</strong>, because many general drone policies specifically exclude chemical application. An operator carrying hull coverage only is transferring drift risk to you.</li>
+        <li><strong>&ldquo;What&apos;s your state applicator license number?&rdquo;</strong> Every state lets you look this up.</li>
+        <li><strong>&ldquo;Have you sprayed my crop before?&rdquo;</strong> Vineyard work isn&apos;t corn work isn&apos;t pasture work.</li>
+        <li><strong>&ldquo;What drone and what nozzles?&rdquo;</strong> You don&apos;t need to be an expert. You need to hear a confident, specific answer about droplet size and drift control.</li>
+        <li><strong>&ldquo;Do I get as-applied maps?&rdquo;</strong> Good operators hand you a digital record of exactly where product went. You want this for your files, your agronomist and your crop insurance.</li>
+        <li><strong>&ldquo;What&apos;s your tank cleanout procedure between jobs?&rdquo;</strong> The job before yours might have been a hot herbicide. One hesitant answer here should end the conversation.</li>
+        <li><strong>&ldquo;What&apos;s your weather and reschedule policy?&rdquo;</strong> Disease doesn&apos;t wait for a convenient calendar slot. Know where you sit in the queue when the window opens.</li>
+        <li><strong>&ldquo;Give me the itemized quote.&rdquo;</strong> Per-acre rate, minimum charge, travel, chemical handling if any. The whole number, in writing.</li>
+      </ol>
+
+      <p>An operator who answers all nine cleanly is an operator you&apos;ll hire for years. An operator who gets cagey on numbers 2 or 7 just saved you a much more expensive lesson. For the deep version of this process, contract clauses and red flags included, work through our <Link href="/guides/hire-drone-spray-operator-checklist">complete operator vetting checklist</Link>.</p>
+
       {/* GUIDE-INSERT-POINT: is-drone-spraying-worth-it */}
     </>
   ),
