@@ -869,6 +869,29 @@ fully delivered through the existing emit points.
 - Verified: build clean; 12 crop + 8 drone + 50 state links in rendered
   HTML; FAQ cost answer + FAQPage schema present.
 
+## 2026-06-17 — GSC indexing audit + fixes
+
+- Triaged Eugen's GSC "why pages aren't indexed" export. Full writeup in
+  `audit/gsc-indexing-audit-2026-06-17.md`.
+- **Fixed (real bug):** drone `Product` JSON-LD was emitted even with no
+  parseable price, tripping Google's "Either offers, review, or
+  aggregateRating should be specified" error (T100 + ~8 quote-only
+  models). Now gated on `msrpLowest != null` (no fabricated ratings).
+  Logged in `known-issues.md`.
+- **Fixed (cleanup):** 301'd two genuine 404s
+  (`/states/california/southern-california`,
+  `/states/west-virginia/weston`) to their state hubs in `netlify.toml`.
+- **Confirmed expected (no action):** all 7 "page with redirect"
+  (canonical domain + intentional operator/drone/region 301s), the 9
+  "alternate with canonical" (?claim= deep links + SearchAction
+  template), and the bulk of the 267 noindex (thin-combo gates). Stale
+  404s for `/regions/delta`, `/newsletter`, `/drones/dji-agras-t25p`
+  already redirect/exist and clear on recrawl.
+- **Flagged strategic (not code bugs):** thin state/region hubs in
+  "crawled - not indexed" need a content lift; the 4 umbrella crops
+  (alfalfa/pasture/potatoes/row-crops) spawn ~200 noindex combos worth
+  de-linking to save crawl budget.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
