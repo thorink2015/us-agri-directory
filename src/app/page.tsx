@@ -3,7 +3,7 @@ import Link from 'next/link';
 import {
   CheckCircle, ArrowRight, Calculator, Clock, DollarSign,
   ShieldCheck, MapPin, Sprout, Droplets, Map as MapIcon, Radar, Settings, ShoppingCart,
-  Search, BarChart3, Ruler, GitCompare, CalendarDays, Plane,
+  Search, BarChart3, Ruler, GitCompare, CalendarDays,
 } from 'lucide-react';
 import NewsletterCTA from '@/components/newsletter/NewsletterCTA';
 import FAQAccordion from '@/components/ui/FAQAccordion';
@@ -648,42 +648,6 @@ export default function HomePage() {
 
       {/* SECTION: Newsletter (Tank Mix by AgDrone) */}
       <NewsletterCTA />
-
-      {/* SECTION: Operator CTA */}
-      <section className="py-14 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-3xl border border-green-200 bg-green-50 px-6 sm:px-10 py-8 sm:py-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
-            <div className="flex-1">
-              <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-green-700 mb-3">
-                <Plane className="w-3.5 h-3.5 rotate-45" /> For operators
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Are you a drone operator?</h2>
-              <p className="text-gray-600 leading-relaxed mb-4 max-w-xl">
-                List your business free and reach farmers searching for drone services in your state. No commission, no booking fee.
-              </p>
-              <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-600">
-                <span className="inline-flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" /> Free basic listing
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" /> Verified badge after FAA review
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" /> Featured placement available
-                </span>
-              </div>
-            </div>
-            <div className="flex-shrink-0">
-              <Link
-                href="/list-your-business"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-700 text-white font-bold rounded-xl hover:bg-green-800 transition-colors shadow-sm"
-              >
-                List your business <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </>
   );
 }

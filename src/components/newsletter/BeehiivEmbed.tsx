@@ -33,7 +33,7 @@ export default function BeehiivEmbed() {
   return (
     <div
       ref={containerRef}
-      className="beehiiv-embed w-full min-h-[80px]"
+      className="beehiiv-embed w-full min-h-[48px]"
       aria-label="Tank Mix newsletter signup form"
     />
   );
