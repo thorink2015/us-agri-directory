@@ -918,6 +918,21 @@ fully delivered through the existing emit points.
   Drone Spraying Service Near Your Farm"); newsletter untouched; no link
   removed; no new route/redirect. Build clean.
 
+## 2026-06-17 — Newsletter panel polish + drop homepage operator CTA
+
+- **Newsletter signup panel** (`NewsletterCTA` + `BeehiivEmbed`, applies
+  everywhere the newsletter renders): enlarged the "Get the next issue,
+  free" label (text-xl/2xl bold), pushed the form to the bottom of the
+  panel via `flex h-full` + `mt-auto` (grid switched to `items-stretch`)
+  so the title takes the space above the form, and tightened the gap to
+  the reassurance line (`mt-1`). Reduced `BeehiivEmbed` reserved height
+  80px -> 48px (the over-reservation was the visible gap).
+- **Removed the homepage operator CTA** ("Are you a drone operator?") per
+  Eugen. `/list-your-business` stays linked site-wide via the footer, so
+  no orphan. Dropped the now-unused `Plane` import.
+- Verified: build clean; one H1; heading order has no skips; homepage
+  First Load JS 112 kB.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

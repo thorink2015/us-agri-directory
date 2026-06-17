@@ -27,7 +27,7 @@ export default function NewsletterCTA() {
             }}
           />
           <div className="relative px-6 sm:px-10 py-10 sm:py-12">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
               {/* Copy */}
               <div className="text-white">
                 <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full border border-white/20 mb-5">
@@ -47,15 +47,17 @@ export default function NewsletterCTA() {
               </div>
 
               {/* Signup panel */}
-              <div className="w-full">
-                <div className="rounded-2xl bg-black/15 ring-1 ring-white/10 p-5 sm:p-6">
-                  <p className="text-sm font-semibold text-white mb-3">
+              <div className="w-full h-full">
+                <div className="flex h-full flex-col rounded-2xl bg-black/15 ring-1 ring-white/10 p-5 sm:p-6">
+                  <p className="text-xl sm:text-2xl font-bold text-white leading-snug">
                     Get the next issue, free
                   </p>
-                  <BeehiivEmbed />
-                  <p className="mt-3 text-xs text-green-200/90">
-                    One email a week. No spam. Unsubscribe anytime.
-                  </p>
+                  <div className="mt-auto pt-6">
+                    <BeehiivEmbed />
+                    <p className="mt-1 text-xs text-green-200/90">
+                      One email a week. No spam. Unsubscribe anytime.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
