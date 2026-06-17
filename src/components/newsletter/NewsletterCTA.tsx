@@ -50,12 +50,12 @@ export default function NewsletterCTA() {
               <div className="w-full h-full">
                 <div className="flex h-full flex-col justify-center rounded-2xl bg-black/15 ring-1 ring-white/10 p-6 sm:p-7">
                   <p className="text-lg font-semibold text-white">
-                    For drone operators and farmers
+                    For drone operators
                   </p>
                   <div className="mt-4">
                     <BeehiivEmbed />
                   </div>
-                  <p className="mt-3 text-xs text-green-200/90">
+                  <p className="mt-3.5 text-xs text-green-200/90">
                     One email a week. No spam. Unsubscribe anytime.
                   </p>
                 </div>
