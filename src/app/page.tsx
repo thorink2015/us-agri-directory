@@ -7,13 +7,16 @@ import {
 } from 'lucide-react';
 import NewsletterCTA from '@/components/newsletter/NewsletterCTA';
 import FAQAccordion from '@/components/ui/FAQAccordion';
+import OperatorCard from '@/components/operators/OperatorCard';
 import { operators } from '@/data/operators';
+import type { Operator } from '@/data/types';
 import { crops } from '@/data/crops';
 import { drones } from '@/data/drone-model';
 import { getServiceBySlug } from '@/data/services';
 import { blogPosts } from '@/data/blog-posts';
 import { getLatestGuides } from '@/data/guides';
 import { SITE, organizationSchema, personSchema } from '@/data/author';
+import { getStateAbbr } from '@/lib/utils';
 import SearchBar from '@/components/search/SearchBar';
 import USMap from '@/components/ui/USMap';
 import AdSlot from '@/components/ads/AdSlot';
@@ -74,6 +77,41 @@ const FAQS = [
   },
 ];
 
+// Pick a stable, build-time set of operators to feature on the homepage so
+// the most authoritative page passes link equity to real profiles. Featured
+// first, then other verified profiles, spread across states so it does not
+// look like one region. Deterministic (data-file order), never random, so
+// crawlers see a consistent link set.
+function pickHomepageOperators(count: number): Operator[] {
+  const complete = (op: Operator) =>
+    op.verified === true &&
+    op.pendingConfirmation !== true &&
+    !!op.city &&
+    op.counties.length > 0 &&
+    op.services.length > 0;
+
+  const pool = operators.filter(complete);
+  const tiered = [...pool.filter((op) => op.featured), ...pool.filter((op) => !op.featured)];
+
+  const chosen: Operator[] = [];
+  const usedStates = new Set<string>();
+  for (const op of tiered) {
+    if (usedStates.has(op.counties[0])) continue;
+    chosen.push(op);
+    usedStates.add(op.counties[0]);
+    if (chosen.length === count) break;
+  }
+  // Backfill if there were not enough distinct home states.
+  if (chosen.length < count) {
+    for (const op of tiered) {
+      if (chosen.includes(op)) continue;
+      chosen.push(op);
+      if (chosen.length === count) break;
+    }
+  }
+  return chosen;
+}
+
 export async function generateMetadata(): Promise<Metadata> {
   const operatorCount = operators.length;
   return {
@@ -110,18 +148,17 @@ export default function HomePage() {
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
     .slice(0, 3);
   const latestGuide = getLatestGuides(1)[0];
+  const homepageOperators = pickHomepageOperators(6);
 
+  // SearchAction (sitelinks searchbox) is intentionally omitted: Google
+  // deprecated the feature, and the literal urlTemplate was getting crawled
+  // as /operators?q={search_term_string} (see the 2026-06-17 GSC audit).
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     '@id': `${SITE.domain}/#website`,
     name: SITE.name,
     url: SITE.domain,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${SITE.domain}/operators?q={search_term_string}` },
-      'query-input': 'required name=search_term_string',
-    },
   };
 
   const breadcrumbSchema = {
@@ -142,6 +179,33 @@ export default function HomePage() {
     })),
   };
 
+  // ItemList of the operator cards actually rendered in the Verified
+  // operators section. Real data only, no aggregateRating (no real reviews).
+  const operatorsItemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Verified drone spray operators',
+    itemListElement: homepageOperators.map((op, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'LocalBusiness',
+        name: op.name,
+        url: `${SITE.domain}/operators/${op.slug}`,
+        ...(op.city
+          ? {
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: op.city,
+                addressRegion: getStateAbbr(op.counties),
+                addressCountry: 'US',
+              },
+            }
+          : {}),
+      },
+    })),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
@@ -149,6 +213,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(operatorsItemListSchema) }} />
 
       {/* SECTION 1: Hero */}
       <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white overflow-hidden">
@@ -223,6 +288,24 @@ export default function HomePage() {
           <p className="text-center text-xs text-gray-600 mt-6">
             Acreage: American Spray Drone Coalition. Pricing: Iowa State Extension 2026 Custom Rate Survey.
           </p>
+        </div>
+      </section>
+
+      {/* SECTION 3: Verified operators (homepage -> profile link equity) */}
+      <section className="py-14 bg-gray-50 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-2 gap-4">
+            <h2 className="text-2xl font-bold text-gray-900">Verified drone spray operators</h2>
+            <Link href="/operators" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
+              See all operators <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+          <p className="text-gray-500 mb-8">Real operators, FAA checked, ready to spray your fields.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {homepageOperators.map((op) => (
+              <OperatorCard key={op.slug} operator={op} />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -384,6 +467,52 @@ export default function HomePage() {
               Find an Operator <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* SECTION: How we verify (E-E-A-T trust block) */}
+      <section className="py-14 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">How we verify operators</h2>
+          <p className="text-gray-500 mb-8 max-w-2xl">
+            The verified badge is not automatic. Here is what stands behind it.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              {
+                icon: ShieldCheck,
+                title: 'FAA credential check',
+                desc: 'Before an operator earns the verified badge, we confirm they hold the FAA Part 107 and Part 137 certificates that spray for hire work requires.',
+              },
+              {
+                icon: CheckCircle,
+                title: 'Free for farmers',
+                desc: 'Searching, comparing and contacting operators costs you nothing. No account needed.',
+              },
+              {
+                icon: CheckCircle,
+                title: 'No booking fee',
+                desc: 'You deal with the operator direct. We never take a cut of the job.',
+              },
+              {
+                icon: DollarSign,
+                title: 'Real pricing data',
+                desc: 'Our per acre rates come from the Iowa State Extension Custom Rate Survey and the American Spray Drone Coalition.',
+              },
+            ].map((point) => {
+              const Icon = point.icon;
+              return (
+                <div key={point.title} className="bg-white border border-gray-200 rounded-xl p-5">
+                  <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center mb-3">
+                    <Icon className="w-5 h-5 text-green-700" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 text-sm mb-1.5">{point.title}</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">{point.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+          {/* TODO[copy]: real farmer testimonials go here once collected. Do not fabricate quotes. */}
         </div>
       </section>
 
