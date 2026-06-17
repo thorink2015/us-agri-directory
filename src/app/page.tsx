@@ -3,10 +3,13 @@ import Link from 'next/link';
 import {
   CheckCircle, ArrowRight, Calculator, Clock, DollarSign,
   ShieldCheck, MapPin, Sprout, Droplets, Map as MapIcon, Radar, Settings, ShoppingCart,
-  Search, BarChart3, Ruler, GitCompare, CalendarDays,
+  Search, BarChart3, Ruler, GitCompare, CalendarDays, Plane,
 } from 'lucide-react';
 import NewsletterCTA from '@/components/newsletter/NewsletterCTA';
+import FAQAccordion from '@/components/ui/FAQAccordion';
 import { operators } from '@/data/operators';
+import { crops } from '@/data/crops';
+import { drones } from '@/data/drone-model';
 import { getServiceBySlug } from '@/data/services';
 import { blogPosts } from '@/data/blog-posts';
 import { getLatestGuides } from '@/data/guides';
@@ -49,6 +52,25 @@ const HOW_IT_WORKS = [
     icon: CheckCircle,
     title: 'Contact and book',
     desc: 'Reach out directly to operators that fit your needs. Request quotes, ask questions and schedule your application window.',
+  },
+];
+
+const FAQS = [
+  {
+    question: 'How much does drone crop spraying cost per acre?',
+    answer: 'Row crop applications (corn, soybeans, wheat) run $12 to $18 per acre for application only, with the farmer supplying the chemical. Vineyard and orchard work runs $18 to $35 per acre because of terrain and more passes per season. The 2026 Iowa State Custom Rate Survey established the first university benchmark at $12.50 per acre average.',
+  },
+  {
+    question: 'Is drone crop spraying legal in the United States?',
+    answer: 'Yes. Commercial drone spraying requires three credentials: FAA Part 107 remote pilot certificate, FAA Part 137 agricultural aircraft operator certificate and a state commercial pesticide applicator license with aerial endorsement. Every operator in this directory holds all three.',
+  },
+  {
+    question: 'How many acres can a drone spray per day?',
+    answer: 'A single DJI Agras T50 covers 40 to 60 acres per flight hour, or 300 to 600 acres per day. Two-drone crews hit 600 to 1,000 acres per day during peak season. The DJI Agras T100 at 100 liters per flight pushes daily throughput higher on large contiguous fields.',
+  },
+  {
+    question: 'Does USDA offer cost-share for drone spraying or drone purchases?',
+    answer: 'Yes. USDA NRCS EQIP Practice Code 595 (Precision Agriculture) offers 40 to 90 percent cost-share on qualifying drone purchases. Cover crop seeding by drone qualifies under Practice Standard 340 at $25 to $55 per acre. Beginning farmers and socially disadvantaged producers qualify for higher rates.',
   },
 ];
 
@@ -110,12 +132,23 @@ export default function HomePage() {
     ],
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* SECTION 1: Hero */}
       <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white overflow-hidden">
@@ -266,7 +299,53 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AdSense: mid-page placement, after the map */}
+      {/* SECTION: Browse by crop and equipment (internal-link surface) */}
+      <section className="py-12 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div>
+            <div className="flex items-end justify-between mb-4 gap-4">
+              <h2 className="text-lg font-bold text-gray-900">Browse by crop type</h2>
+              <Link href="/crops" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
+                All crops <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {crops.map((crop) => (
+                <Link
+                  key={crop.slug}
+                  href={`/crops/${crop.slug}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-700 hover:border-green-300 hover:text-green-700 transition-colors"
+                >
+                  <span aria-hidden="true">{crop.icon}</span>
+                  {crop.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="flex items-end justify-between mb-4 gap-4">
+              <h2 className="text-lg font-bold text-gray-900">Popular spray drones</h2>
+              <Link href="/drones" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
+                All drones <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {drones.slice(0, 8).map((drone) => (
+                <Link
+                  key={drone.slug}
+                  href={`/drones/${drone.slug}`}
+                  className="inline-flex items-center px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-700 hover:border-green-300 hover:text-green-700 transition-colors"
+                >
+                  {drone.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AdSense: mid-page placement, after the browse links */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AdSlot slot={AD_SLOTS.HOME_MID} />
       </div>
@@ -424,27 +503,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 8: Newsletter (Tank Mix by AgDrone) */}
+      {/* SECTION: FAQ */}
+      <section className="py-14 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">Common questions about drone spraying</h2>
+          <p className="text-gray-500 text-center mb-8">Straight answers for farmers and operators</p>
+          <FAQAccordion faqs={FAQS} />
+          <div className="text-center mt-6">
+            <Link href="/pricing" className="text-green-700 font-medium text-sm hover:underline">
+              View the complete pricing guide
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION: Newsletter (Tank Mix by AgDrone) */}
       <NewsletterCTA />
 
-      {/* SECTION 9: Operator CTA */}
-      <section className="py-14 bg-green-700 text-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Are you a drone operator?</h2>
-          <p className="text-green-100 mb-6 leading-relaxed">
-            List your business for free. Reach farmers searching for drone services in your state. No commission, no booking fee.
-          </p>
-          <ul className="text-green-100 text-sm mb-8 space-y-1">
-            <li><CheckCircle className="inline w-4 h-4 mr-1.5 text-green-300" />Free basic listing with unlimited profile edits</li>
-            <li><CheckCircle className="inline w-4 h-4 mr-1.5 text-green-300" />Verified badge after FAA credential review</li>
-            <li><CheckCircle className="inline w-4 h-4 mr-1.5 text-green-300" />Featured placement available for your state pages</li>
-          </ul>
-          <Link
-            href="/list-your-business"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-white text-green-800 font-bold rounded-xl hover:bg-green-50 transition-colors"
-          >
-            List Your Business <ArrowRight className="w-5 h-5" />
-          </Link>
+      {/* SECTION: Operator CTA */}
+      <section className="py-14 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border border-green-200 bg-green-50 px-6 sm:px-10 py-8 sm:py-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-green-700 mb-3">
+                <Plane className="w-3.5 h-3.5 rotate-45" /> For operators
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Are you a drone operator?</h2>
+              <p className="text-gray-600 leading-relaxed mb-4 max-w-xl">
+                List your business free and reach farmers searching for drone services in your state. No commission, no booking fee.
+              </p>
+              <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-600">
+                <span className="inline-flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" /> Free basic listing
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" /> Verified badge after FAA review
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" /> Featured placement available
+                </span>
+              </div>
+            </div>
+            <div className="flex-shrink-0">
+              <Link
+                href="/list-your-business"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-green-700 text-white font-bold rounded-xl hover:bg-green-800 transition-colors shadow-sm"
+              >
+                List your business <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </>
