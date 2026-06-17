@@ -7,6 +7,8 @@ import GoogleAnalytics from '@/components/analytics/GoogleAnalytics';
 import GAPageView from '@/components/analytics/GAPageView';
 import AIReferrerTracker from '@/components/analytics/AIReferrerTracker';
 import ExitIntentPopup from '@/components/ui/ExitIntentPopup';
+import NewsletterCTA from '@/components/newsletter/NewsletterCTA';
+import GlobalNewsletter from '@/components/newsletter/GlobalNewsletter';
 import { defaultMetadata } from '@/lib/seo';
 
 export const viewport: Viewport = {
@@ -106,6 +108,9 @@ export default function RootLayout({
         />
         <Header />
         <main id="main-content" className="flex-1">{children}</main>
+        <GlobalNewsletter>
+          <NewsletterCTA />
+        </GlobalNewsletter>
         <Footer />
         <ExitIntentPopup />
       </body>

@@ -160,9 +160,9 @@
   force = true
 
 # ── Standalone /newsletter route ────────────────────────────────────────
-# There is no /newsletter page. The newsletter signup is rendered on the
-# homepage (HomepageNewsletterForm) and in the global Footer, so 301
-# external references back to the homepage where the form lives.
+# There is no /newsletter page. The "Tank Mix by AgDrone" signup is rendered
+# prominently on the homepage (NewsletterCTA) and at the bottom of every
+# other page, so 301 external references back to the homepage.
 [[redirects]]
   from = "/newsletter"
   to = "/"

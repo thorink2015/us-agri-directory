@@ -791,6 +791,30 @@ fully delivered through the existing emit points.
   Article + BreadcrumbList + FAQPage + HowTo JSON-LD; 0 em/en dashes;
   title tag renders the short metaTitle; sitemap auto-includes the URL.
 
+## 2026-06-17 — Tank Mix newsletter (beehiiv)
+
+- **Newsletter relaunch:** Replaced both legacy Formspree newsletter
+  forms (footer "Stay updated" block + `HomepageNewsletterForm`) with a
+  single branded "Tank Mix by AgDrone" section powered by the beehiiv
+  embed (form id `f05ad8ce-3cc6-4a42-8c44-e02383e7059b`).
+- **New components** in `src/components/newsletter/`: `NewsletterCTA`
+  (branded chrome: eyebrow, title, Eugen byline + photo, copy,
+  subscriber count), `BeehiivEmbed` (lazy IntersectionObserver script
+  inject into its own container so the form lands in place),
+  `SubscriberCount` (SSR-safe display counter, baseline 708 on
+  2026-06-17, +~2.3/day), `GlobalNewsletter` (renders the CTA above the
+  footer on every page except `/`, which keeps its own in-flow copy).
+- **Removed:** `src/components/ui/HomepageNewsletterForm.tsx`; footer
+  newsletter form + its Formspree handler/state. Exit-intent popup
+  untouched (it is operator lead-gen, not newsletter).
+- **Verified:** build clean (compiled + lint + types); exactly one
+  beehiiv form per page (home in-flow, all others above footer); old
+  "Stay updated" copy gone from SSR HTML.
+- **Caveat flagged to Eugen:** the subscriber counter is a synthetic
+  display figure (conflicts with the "numbers from primary sources"
+  rule); constants in `SubscriberCount.tsx` make it trivial to re-anchor
+  or remove.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
