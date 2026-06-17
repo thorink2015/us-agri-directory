@@ -825,6 +825,26 @@ fully delivered through the existing emit points.
   instead of via IntersectionObserver for more reliable rendering. One
   shared component, so homepage + every other page update together.
 
+## 2026-06-17 — Homepage trim + newsletter panel polish (Eugen feedback)
+
+- **Homepage de-cluttered** (`src/app/page.tsx`): removed the inline
+  Get-Matched wizard, "Why farmers use this directory", "Drone services
+  by crop type", "Featured operators this season", the states grid, the
+  FAQ section (+ its FAQPage JSON-LD), and the "Agricultural spray
+  drones" grid. Hero "Get my 3 free quotes" now links to the standalone
+  `/get-matched` page. New flow: Hero → Stats → Services → **Map** → How
+  it works → Tools → Guides/news → Newsletter → Operator CTA.
+- **Embedded the operator map** on the homepage via the existing
+  server-rendered `USMap` (zero client JS), constrained to `max-w-3xl`
+  inside a card, with links to `/states` and the full `/map`. Removed
+  sections' routes stay reachable via the footer/hubs (no orphans).
+- **Newsletter form** now sits in a defined signup panel (translucent
+  `bg-black/15` over the green, still no white) with a short label and a
+  reassurance line, so the right column reads as an intentional card
+  instead of a floating input.
+- Verified: build clean; removed sections absent from rendered HTML; map
+  + one beehiiv form present; hero CTA points to `/get-matched`.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
