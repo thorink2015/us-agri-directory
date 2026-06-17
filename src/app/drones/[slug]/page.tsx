@@ -88,9 +88,13 @@ export default function DronePage({ params }: Props) {
 
   // ─── Product schema (PR #101 — schema audit HIGH) ──────────────────────
   // Try to parse a numeric MSRP from drone.msrpUsd (data is free-form like
-  // "18,000 pre-tariff; 22,000 to 28,000 post-tariff" or "Pending"). When
-  // we can extract the lowest figure, emit Offer with it; otherwise emit
-  // Product without an Offer (still passes Rich Results validation).
+  // "18,000 pre-tariff; 22,000 to 28,000 post-tariff" or "Pending"). A
+  // Product is only valid for Google rich results when it carries one of
+  // offers, review or aggregateRating. We have no review/rating data, so we
+  // build the Product (with an Offer) ONLY when a price is parseable and
+  // render it conditionally below. Quote-only models ("Pending", "contact
+  // dealer") get no Product node, which avoids the GSC error "Either offers,
+  // review, or aggregateRating should be specified" (seen on the T100).
   const msrpDigits = drone.msrpUsd.match(/\d{1,3}(?:,\d{3})+|\d{4,}/g) || [];
   const msrpLowest = msrpDigits.length > 0
     ? Math.min(...msrpDigits.map((d) => Number(d.replace(/,/g, ''))))
@@ -152,7 +156,9 @@ export default function DronePage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      {msrpLowest != null && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
+      )}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb items={[{ label: 'Drone Models', href: '/drones' }, { label: drone.name }]} />
 

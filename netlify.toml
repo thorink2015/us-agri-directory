@@ -138,6 +138,22 @@
   status = 301
   force = true
 
+# ── Dropped-city redirects ───────────────────────────────────────────────
+# These slugs are not valid standalone city pages (removed from / never in
+# src/data/cities.ts). 301 the stragglers Google still has to the state hub
+# so they stop returning 404s.
+[[redirects]]
+  from = "/states/california/southern-california"
+  to = "/states/california"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/states/west-virginia/weston"
+  to = "/states/west-virginia"
+  status = 301
+  force = true
+
 # ── Region slug redirects ────────────────────────────────────────────────
 # Delta is colloquial for the Mississippi Delta region. External citations
 # and abbreviated URLs land on /regions/delta — point them at the canonical

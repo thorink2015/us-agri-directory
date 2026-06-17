@@ -134,6 +134,25 @@ routes, map over the data source (e.g. `regions.map(r => ({ url: ... }))`).
 **Cause:** `regions/page.tsx` referenced three fields that weren't declared in the `Region` interface in `types.ts`.
 **Fix:** Add fields to interface (optional), populate in `regions.ts`, add nullish fallbacks in template. Run `npm run build` locally before pushing to catch this class of error early.
 
+## SEO / schema gotchas
+
+### 2026-06-17 — Product schema needs offers/review/aggregateRating
+**Symptom:** GSC Rich Results error "Either 'offers', 'review', or
+'aggregateRating' should be specified" on `/drones/dji-agras-t100` (and
+~8 other quote-only drones once crawled).
+**Cause:** `src/app/drones/[slug]/page.tsx` rendered the `Product`
+JSON-LD unconditionally. `offers` is only attached when a numeric MSRP is
+parseable from the free-form `drone.msrpUsd`. Quote-only models
+("Pending", "contact dealer", "quote-based") emitted a `Product` with
+none of offers/review/aggregateRating, which Google rejects. An old code
+comment wrongly claimed an offer-less Product "still passes Rich Results
+validation."
+**Fix:** Render the Product `<script>` only when `msrpLowest != null`. Do
+NOT fabricate review/aggregateRating to satisfy the rule. Quote-only
+drones keep FAQPage + BreadcrumbList + Article schema.
+**Prevention:** Any future Product/Offer schema must gate on real price
+(or real review/rating) data. Never emit a bare Product.
+
 ## Data / content gotchas
 
 ### Romanian URLs in canonicals or internal links
