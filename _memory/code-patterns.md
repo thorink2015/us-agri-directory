@@ -512,6 +512,40 @@ business hours, response time). Pattern:
 Grep with `grep -rn "TODO\[copy\]\|TODO\[asset\]" src/` to surface
 the open items.
 
+## Newsletter CTA (Tank Mix by AgDrone, beehiiv embed)
+
+**Lives in:** `src/components/newsletter/`. Shipped 2026-06-17,
+replacing the two old Formspree newsletter forms.
+
+- `NewsletterCTA.tsx` (server) — the branded section. Two-tone card:
+  dark green header band (eyebrow pill, `Tank Mix by AgDrone` h2,
+  small Eugen byline + `/images/eugen-author.jpg` avatar, the verbatim
+  description) over a light body (subscriber-count pill + the embed +
+  reassurance line). Pure presentational; safe to drop anywhere.
+- `BeehiivEmbed.tsx` (client) — injects
+  `https://subscribe-forms.beehiiv.com/v3/loader.js` with
+  `data-beehiiv-form="<id>"` **into its own container ref** (not the
+  document head) because the beehiiv loader places the form as a sibling
+  of its script tag. Lazy-loaded via `IntersectionObserver`
+  (`rootMargin: 400px`) so it costs nothing on first paint — this is how
+  we satisfy standing-rules § 8 without `next/script` (the loader needs
+  in-DOM placement, which `next/script` can't guarantee).
+- `SubscriberCount.tsx` (client) — SSR-safe display counter.
+  `useState(BASE_COUNT)` then settles to today's value in `useEffect`
+  (no hydration mismatch). Deterministic growth from `BASE_DATE`.
+  **Synthetic figure** — re-anchor `BASE_COUNT`/`BASE_DATE` when a real
+  count is known, or delete the component to drop it.
+- `GlobalNewsletter.tsx` (client) — takes `<NewsletterCTA />` as
+  **children** (so the server-rendered copy still ships in SSR HTML) and
+  returns `null` on `pathname === '/'`. Wired in `layout.tsx` directly
+  above `<Footer />`. The homepage renders its own `<NewsletterCTA />`
+  in-flow (section 14) so `/` is never doubled up.
+
+**Reusing this pattern for any third-party form/widget loader** that
+injects relative to its own `<script>`: append the script into a
+component-owned ref via `useEffect` + `IntersectionObserver`, never
+`next/script` (which appends to head/body and breaks placement).
+
 ## Commit message format
 
 ```

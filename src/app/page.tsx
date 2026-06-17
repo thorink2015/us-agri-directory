@@ -5,7 +5,7 @@ import {
   ShieldCheck, MapPin, Sprout, Droplets, Map as MapIcon, Radar, Settings, ShoppingCart,
   Search, BarChart3, Ruler, GitCompare, CalendarDays,
 } from 'lucide-react';
-import HomepageNewsletterForm from '@/components/ui/HomepageNewsletterForm';
+import NewsletterCTA from '@/components/newsletter/NewsletterCTA';
 import GetMatchedWizard from '@/components/leads/GetMatchedWizard';
 import { operators, getFeaturedOperators } from '@/data/operators';
 import { counties } from '@/data/counties';
@@ -717,8 +717,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 14: Newsletter */}
-      <HomepageNewsletterForm />
+      {/* SECTION 14: Newsletter (Tank Mix by AgDrone) */}
+      <NewsletterCTA />
 
       {/* SECTION 15: Operator CTA */}
       <section className="py-14 bg-green-700 text-white">
