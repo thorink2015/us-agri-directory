@@ -892,6 +892,32 @@ fully delivered through the existing emit points.
   (alfalfa/pasture/potatoes/row-crops) spawn ~200 noindex combos worth
   de-linking to save crawl budget.
 
+## 2026-06-17 — Homepage operator proof + E-E-A-T (from a Claude prompt)
+
+- Acted on an external homepage-upgrade prompt, taking the high-value
+  ideas and skipping the rest to protect the "shorter page" preference.
+- **Verified operators section (NEW):** the homepage passed ZERO links to
+  operator profiles; now renders 6 real `OperatorCard`s right under the
+  stats bar (reused component, lazy images, min-h reserves height so no
+  CLS). `pickHomepageOperators()` is deterministic (build-time, featured
+  first, verified + complete, one-per-home-state spread) so crawlers see a
+  stable link set. Homepage now links to 6 profiles it never did.
+- **How we verify section (NEW, compact):** 4-point E-E-A-T trust block
+  (FAA Part 107/137 credential check, free for farmers, no booking fee,
+  pricing from Iowa State + ASDC). Copy reuses established site claims,
+  no fabrication; commented `TODO[copy]` slot for real testimonials.
+- **Schema:** added `ItemList` of the 6 rendered operators (LocalBusiness
+  items, real city/region, no aggregateRating). **Removed the deprecated
+  WebSite `SearchAction`** (Google killed the sitelinks searchbox; it was
+  the source of the `/operators?q={search_term_string}` crawl noise in the
+  GSC audit).
+- **Skipped:** "Recently added operators" (no created/added date field on
+  `Operator`, only `lastUpdated`); footer newsletter link (low value, no
+  newsletter page). FAQ answers already lead with capsule answers.
+- **Respected hard rules:** title/meta/H1 unchanged (one H1, "Find a
+  Drone Spraying Service Near Your Farm"); newsletter untouched; no link
+  removed; no new route/redirect. Build clean.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
