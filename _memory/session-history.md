@@ -845,6 +845,30 @@ fully delivered through the existing emit points.
 - Verified: build clean; removed sections absent from rendered HTML; map
   + one beehiiv form present; hero CTA points to `/get-matched`.
 
+## 2026-06-17 — Homepage SEO recovery + operator-CTA redesign
+
+- Audited the homepage trim for SEO loss. Findings + fixes:
+  - State internal links **improved** (map links all 50 vs the old 8).
+  - Crop pages lost 12 homepage links, drones lost 4 → **restored** as a
+    compact chip section ("Browse by crop type" + "Popular spray
+    drones", 12 + 8 links). Much smaller than the old card grids.
+  - FAQ removal dropped the homepage's "how much does drone spraying
+    cost per acre" AEO answer + FAQPage schema → **restored** a trimmed
+    4-question `FAQAccordion` (cost, legality, acres/day, USDA EQIP) +
+    FAQPage JSON-LD. Answers sit in the SSR DOM even when collapsed, so
+    they stay crawlable; cost answer is open by default. Also restores
+    the `/pricing` link. Resolves the pending "homepage cost answer"
+    item.
+  - "Why farmers use this directory" + featured operators left removed
+    (no unique link value; covered elsewhere).
+- **Operator CTA redesigned**: was a flat green block with a bulleted
+  list (looked cheap, and stacked green-on-green-on-green with the
+  newsletter + footer). Now a clean light card (green-50 panel, white
+  section) with a "For operators" eyebrow, inline check items and a
+  green button to `/list-your-business`. Breaks the green monotony.
+- Verified: build clean; 12 crop + 8 drone + 50 state links in rendered
+  HTML; FAQ cost answer + FAQPage schema present.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
