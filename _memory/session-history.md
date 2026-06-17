@@ -815,6 +815,16 @@ fully delivered through the existing emit points.
   rule); constants in `SubscriberCount.tsx` make it trivial to re-anchor
   or remove.
 
+## 2026-06-17 — Tank Mix newsletter redesign (Eugen feedback)
+
+- Per Eugen: made the card **all green** (removed the white body),
+  **dropped the synthetic subscriber counter** (deleted
+  `SubscriberCount.tsx`) and the **"Written by Eugen Manoli" byline**,
+  and moved to a **two-column layout** (copy left / beehiiv form right on
+  desktop, stacked on mobile). `BeehiivEmbed` now injects on mount
+  instead of via IntersectionObserver for more reliable rendering. One
+  shared component, so homepage + every other page update together.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

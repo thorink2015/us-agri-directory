@@ -517,24 +517,21 @@ the open items.
 **Lives in:** `src/components/newsletter/`. Shipped 2026-06-17,
 replacing the two old Formspree newsletter forms.
 
-- `NewsletterCTA.tsx` (server) — the branded section. Two-tone card:
-  dark green header band (eyebrow pill, `Tank Mix by AgDrone` h2,
-  small Eugen byline + `/images/eugen-author.jpg` avatar, the verbatim
-  description) over a light body (subscriber-count pill + the embed +
-  reassurance line). Pure presentational; safe to drop anywhere.
+- `NewsletterCTA.tsx` (server) — the branded section. One green card
+  (gradient green-900 → green-800, dotted texture) with a two-column
+  layout on `lg`: copy left (eyebrow pill, `Tank Mix by AgDrone` h2, the
+  verbatim description) and the beehiiv form right; stacked on mobile.
+  Pure presentational; safe to drop anywhere. (No subscriber counter and
+  no author byline — both were removed 2026-06-17 per Eugen.)
 - `BeehiivEmbed.tsx` (client) — injects
   `https://subscribe-forms.beehiiv.com/v3/loader.js` with
   `data-beehiiv-form="<id>"` **into its own container ref** (not the
   document head) because the beehiiv loader places the form as a sibling
-  of its script tag. Lazy-loaded via `IntersectionObserver`
-  (`rootMargin: 400px`) so it costs nothing on first paint — this is how
-  we satisfy standing-rules § 8 without `next/script` (the loader needs
-  in-DOM placement, which `next/script` can't guarantee).
-- `SubscriberCount.tsx` (client) — SSR-safe display counter.
-  `useState(BASE_COUNT)` then settles to today's value in `useEffect`
-  (no hydration mismatch). Deterministic growth from `BASE_DATE`.
-  **Synthetic figure** — re-anchor `BASE_COUNT`/`BASE_DATE` when a real
-  count is known, or delete the component to drop it.
+  of its script tag, and because React will not execute a `<script>`
+  rendered as JSX markup. Created/appended in `useEffect` on mount
+  (afterInteractive), which satisfies standing-rules § 8 without
+  `next/script` (the loader needs in-DOM placement `next/script` can't
+  guarantee).
 - `GlobalNewsletter.tsx` (client) — takes `<NewsletterCTA />` as
   **children** (so the server-rendered copy still ships in SSR HTML) and
   returns `null` on `pathname === '/'`. Wired in `layout.tsx` directly

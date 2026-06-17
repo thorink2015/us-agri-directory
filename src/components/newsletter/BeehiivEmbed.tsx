@@ -1,60 +1,39 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 const BEEHIIV_FORM_ID = 'f05ad8ce-3cc6-4a42-8c44-e02383e7059b';
 const LOADER_SRC = 'https://subscribe-forms.beehiiv.com/v3/loader.js';
 
 /**
- * Embeds the beehiiv "Tank Mix" subscribe form.
+ * Embeds the beehiiv "Tank Mix" subscribe form:
+ *   <script async src="https://subscribe-forms.beehiiv.com/v3/loader.js"
+ *           data-beehiiv-form="f05ad8ce-3cc6-4a42-8c44-e02383e7059b"></script>
  *
- * The beehiiv loader injects the form as a sibling of its own <script> tag,
- * so the script is appended into our own container (not the document head)
- * to keep the form where we want it. It is loaded lazily, only once the
- * section is near the viewport, so it never costs anything on first paint and
- * keeps the PageSpeed budget intact (standing-rules § 8: no synchronous
- * external scripts).
+ * The script is created and appended into this component's own container on
+ * mount (afterInteractive) rather than written into JSX, because React does
+ * not execute <script> tags rendered as markup. The beehiiv loader injects
+ * the form as a sibling of its script tag, so appending into our container
+ * keeps the form exactly where we place it.
  */
 export default function BeehiivEmbed() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [injected, setInjected] = useState(false);
 
   useEffect(() => {
     const el = containerRef.current;
-    if (!el || injected) return;
+    if (!el || el.querySelector('script')) return;
 
-    const inject = () => {
-      if (el.querySelector('script')) return;
-      const script = document.createElement('script');
-      script.src = LOADER_SRC;
-      script.async = true;
-      script.setAttribute('data-beehiiv-form', BEEHIIV_FORM_ID);
-      el.appendChild(script);
-      setInjected(true);
-    };
-
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          if (entries.some((entry) => entry.isIntersecting)) {
-            inject();
-            observer.disconnect();
-          }
-        },
-        { rootMargin: '400px' },
-      );
-      observer.observe(el);
-      return () => observer.disconnect();
-    }
-
-    // Older browsers without IntersectionObserver: just load it.
-    inject();
-  }, [injected]);
+    const script = document.createElement('script');
+    script.src = LOADER_SRC;
+    script.async = true;
+    script.setAttribute('data-beehiiv-form', BEEHIIV_FORM_ID);
+    el.appendChild(script);
+  }, []);
 
   return (
     <div
       ref={containerRef}
-      className="beehiiv-embed min-h-[78px]"
+      className="beehiiv-embed w-full min-h-[80px]"
       aria-label="Tank Mix newsletter signup form"
     />
   );

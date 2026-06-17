@@ -90,15 +90,12 @@ and `AUTHOR.organizationId` getters.
   `f05ad8ce-3cc6-4a42-8c44-e02383e7059b`.
 - **Components:** `src/components/newsletter/` (see
   `code-patterns.md § Newsletter CTA`). Rendered prominently on the
-  homepage (section 14) and above the footer on every other page.
+  homepage (section 14) and above the footer on every other page. One
+  green card, copy left / beehiiv form right on desktop.
 - **Replaced** the two old Formspree newsletter forms (footer "Stay
   updated" + `HomepageNewsletterForm`) on 2026-06-17. The `newsletter`
   and `newsletter-homepage` Formspree `_form_type` values are now
   unused.
-- **Subscriber counter** is a synthetic display figure
-  (`SubscriberCount.tsx`, baseline 708 on 2026-06-17). Not a
-  primary-source number — re-anchor or remove if it should reflect the
-  real beehiiv count.
 
 ## Internal folders (not served by the site)
 
