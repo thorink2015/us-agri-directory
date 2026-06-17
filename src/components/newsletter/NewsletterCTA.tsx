@@ -6,8 +6,8 @@ import BeehiivEmbed from './BeehiivEmbed';
  *
  * Rendered prominently in the homepage flow and at the bottom of every other
  * page (above the footer) via GlobalNewsletter. One green card throughout:
- * copy on the left, the beehiiv signup form on the right on desktop (stacked
- * on mobile).
+ * copy on the left, a defined signup panel (form + reassurance) on the right
+ * on desktop, stacked on mobile.
  */
 export default function NewsletterCTA() {
   return (
@@ -46,9 +46,17 @@ export default function NewsletterCTA() {
                 </p>
               </div>
 
-              {/* Signup form */}
+              {/* Signup panel */}
               <div className="w-full">
-                <BeehiivEmbed />
+                <div className="rounded-2xl bg-black/15 ring-1 ring-white/10 p-5 sm:p-6">
+                  <p className="text-sm font-semibold text-white mb-3">
+                    Get the next issue, free
+                  </p>
+                  <BeehiivEmbed />
+                  <p className="mt-3 text-xs text-green-200/90">
+                    One email a week. No spam. Unsubscribe anytime.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

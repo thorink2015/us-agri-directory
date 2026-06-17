@@ -1,22 +1,18 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  CheckCircle, ArrowRight, Calculator, Clock, DollarSign, Shield,
+  CheckCircle, ArrowRight, Calculator, Clock, DollarSign,
   ShieldCheck, MapPin, Sprout, Droplets, Map as MapIcon, Radar, Settings, ShoppingCart,
   Search, BarChart3, Ruler, GitCompare, CalendarDays,
 } from 'lucide-react';
 import NewsletterCTA from '@/components/newsletter/NewsletterCTA';
-import GetMatchedWizard from '@/components/leads/GetMatchedWizard';
-import { operators, getFeaturedOperators } from '@/data/operators';
-import { counties } from '@/data/counties';
-import { crops } from '@/data/crops';
+import { operators } from '@/data/operators';
 import { getServiceBySlug } from '@/data/services';
 import { blogPosts } from '@/data/blog-posts';
 import { getLatestGuides } from '@/data/guides';
 import { SITE, organizationSchema, personSchema } from '@/data/author';
 import SearchBar from '@/components/search/SearchBar';
-import OperatorCard from '@/components/operators/OperatorCard';
-import FAQAccordion from '@/components/ui/FAQAccordion';
+import USMap from '@/components/ui/USMap';
 import AdSlot from '@/components/ads/AdSlot';
 import { AD_SLOTS } from '@/lib/adSlots';
 
@@ -27,25 +23,6 @@ const SERVICE_CARDS = [
   { slug: 'monitoring', icon: Radar, label: 'Crop Monitoring', desc: 'Pest pressure, disease, stress identification', price: '$3 to $10/acre' },
   { slug: 'spreading', icon: Settings, label: 'Granular Spreading', desc: 'Urea, gypsum, lime and cover crop seed', price: '$10 to $18/acre' },
   { slug: 'sales', icon: ShoppingCart, label: 'Drone Sales', desc: 'New and used ag drones from authorized dealers', price: '$18K to $75K' },
-];
-
-const TRUST_CARDS = [
-  {
-    title: 'Verified operators only',
-    desc: "Every listed operator holds a valid FAA Part 107 certificate and Part 137 agricultural exemption. We confirm credentials so you don't have to chase paperwork.",
-  },
-  {
-    title: 'Search by crop and location',
-    desc: 'Filter operators by your state, county, crop type and service needed. Whether you grow corn in Iowa or grapes in Napa, find someone who knows your operation.',
-  },
-  {
-    title: 'Transparent pricing',
-    desc: 'See estimated per-acre rates before you reach out. No guessing, no surprise quotes. Know what drone spraying costs in your area before you pick up the phone.',
-  },
-  {
-    title: 'Direct contact',
-    desc: 'Reach operators directly by phone, email or web form. No intermediaries, no platform fees, no commission taken from either side.',
-  },
 ];
 
 const TOP_STATES = [
@@ -72,36 +49,6 @@ const HOW_IT_WORKS = [
     icon: CheckCircle,
     title: 'Contact and book',
     desc: 'Reach out directly to operators that fit your needs. Request quotes, ask questions and schedule your application window.',
-  },
-];
-
-const DRONE_CARDS = [
-  { name: 'DJI Agras T50', tank: '40L', price: '$22K to $28K', ndaa: false, slug: 'dji-agras-t50' },
-  { name: 'DJI Agras T100', tank: '100L', price: 'Contact dealer', ndaa: false, slug: 'dji-agras-t100' },
-  { name: 'Hylio AG-272', tank: '68L', price: '$55K to $75K est.', ndaa: true, slug: 'hylio-ag-272' },
-  { name: 'Talos T60X', tank: '50L', price: 'From $17,899', ndaa: null, slug: 'talos-t60x' },
-];
-
-const FAQS = [
-  {
-    question: 'How much does drone crop spraying cost per acre?',
-    answer: 'Row crop applications (corn, soybeans, wheat) run $12 to $18 per acre for application only, with the farmer supplying the chemical. Vineyard and orchard work runs $18 to $35 per acre because of terrain and more passes per season. The 2026 Iowa State Custom Rate Survey established the first university benchmark at $12.50 per acre average.',
-  },
-  {
-    question: 'Is drone crop spraying legal in the United States?',
-    answer: 'Yes. Commercial drone spraying requires three credentials: FAA Part 107 remote pilot certificate, FAA Part 137 agricultural aircraft operator certificate and a state commercial pesticide applicator license with aerial endorsement. Every operator in this directory holds all three.',
-  },
-  {
-    question: 'How many acres can a drone spray per day?',
-    answer: 'A single DJI Agras T50 covers 40 to 60 acres per flight hour, or 300 to 600 acres per day. Two-drone crews hit 600 to 1,000 acres per day during peak season. The DJI Agras T100 at 100 liters per flight pushes daily throughput higher on large contiguous fields.',
-  },
-  {
-    question: 'Does USDA offer cost-share for drone spraying or drone purchases?',
-    answer: 'Yes. USDA NRCS EQIP Practice Code 595 (Precision Agriculture) offers 40 to 90 percent cost-share on qualifying drone purchases. Cover crop seeding by drone qualifies under Practice Standard 340 at $25 to $55 per acre. Beginning farmers and socially disadvantaged producers qualify for higher rates.',
-  },
-  {
-    question: 'How far ahead should I book a drone operator?',
-    answer: 'Corn fungicide in July: book 4 to 6 weeks out. Wheat heading in June: book in April. Full-season vineyard and orchard contracts: sign in January or February. Cover crop seeding: book by late July for September slots.',
   },
 ];
 
@@ -137,11 +84,6 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function HomePage() {
   const operatorCount = operators.length;
   const stateCount = new Set(operators.flatMap((op) => op.counties)).size;
-  const featuredOperators = getFeaturedOperators().slice(0, 3);
-  const topStatesByOps = counties
-    .map((c) => ({ ...c, count: operators.filter((op) => op.counties.includes(c.slug)).length }))
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 8);
   const latestBlogPosts = [...blogPosts]
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
     .slice(0, 3);
@@ -168,23 +110,12 @@ export default function HomePage() {
     ],
   };
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: FAQS.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    })),
-  };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* SECTION 1: Hero */}
       <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-green-700 text-white overflow-hidden">
@@ -209,12 +140,12 @@ export default function HomePage() {
           <SearchBar />
 
           <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
-            <a
-              href="#get-matched"
+            <Link
+              href="/get-matched"
               className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold rounded-xl transition-colors"
             >
               Get my 3 free quotes <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
             <span className="text-green-200">or browse by state</span>
           </div>
 
@@ -236,91 +167,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 2: Get Matched (lead capture) */}
-      <section
-        id="get-matched"
-        aria-label="Get matched with verified ag drone operators"
-        className="relative bg-gradient-to-b from-green-50 via-white to-white border-b border-gray-100 overflow-hidden"
-      >
-        {/* Subtle dotted backdrop, same family as the hero so the section reads as a continuation. */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 opacity-[0.06] pointer-events-none"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle at 25% 30%, #14532d 1px, transparent 1.5px), radial-gradient(circle at 75% 70%, #14532d 1px, transparent 1.5px)',
-            backgroundSize: '36px 36px',
-          }}
-        />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_minmax(380px,480px)] gap-10 lg:gap-14 items-center">
-            {/* LEFT side: pitch */}
-            <div className="max-w-xl">
-              <div className="inline-flex items-center gap-2 bg-white text-green-800 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border border-green-200 shadow-sm mb-5">
-                <CheckCircle className="w-3.5 h-3.5 text-green-600" />
-                Free, takes 60 seconds
-              </div>
-
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-[1.1] tracking-tight">
-                Get 3 free quotes from{' '}
-                <span className="relative inline-block">
-                  <span className="relative z-10">FAA Part 137</span>
-                  <span
-                    aria-hidden="true"
-                    className="absolute bottom-1 left-0 right-0 h-3 bg-yellow-300/70 -z-0"
-                  />
-                </span>{' '}
-                drone operators near you.
-              </h2>
-
-              <p className="text-lg text-gray-600 leading-relaxed mb-7">
-                Tell us your ZIP, crop, and acreage. We text you up to 3 verified operators in your area within 24 hours. No SaaS app, no signup, no spam.
-              </p>
-
-              <ul className="space-y-3.5">
-                <li className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <div className="w-9 h-9 rounded-full bg-green-50 border border-green-200 flex items-center justify-center flex-shrink-0">
-                    <ShieldCheck className="w-4 h-4 text-green-700" />
-                  </div>
-                  <p className="text-sm text-gray-700 leading-snug">
-                    <strong className="text-gray-900">3 operators max, never more.</strong>{' '}
-                    No 50-call free-for-all like Bark or Thumbtack.
-                  </p>
-                </li>
-                <li className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <div className="w-9 h-9 rounded-full bg-green-50 border border-green-200 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-4 h-4 text-green-700" />
-                  </div>
-                  <p className="text-sm text-gray-700 leading-snug">
-                    Every match holds <strong className="text-gray-900">FAA Part 107 + Part 137</strong> and a current state pesticide applicator license.
-                  </p>
-                </li>
-                <li className="flex items-start gap-3 bg-white border border-gray-200 rounded-xl px-4 py-3 shadow-sm">
-                  <div className="w-9 h-9 rounded-full bg-green-50 border border-green-200 flex items-center justify-center flex-shrink-0">
-                    <DollarSign className="w-4 h-4 text-green-700" />
-                  </div>
-                  <p className="text-sm text-gray-700 leading-snug">
-                    <strong className="text-gray-900">$12 to $18 per acre</strong> typical for row crops. Operators pay us, not you. We never sell your info.
-                  </p>
-                </li>
-              </ul>
-            </div>
-
-            {/* RIGHT side: wizard, made the visual centerpiece */}
-            <div className="relative">
-              <div
-                aria-hidden="true"
-                className="absolute -inset-2 bg-gradient-to-br from-green-200/60 via-white to-yellow-200/40 rounded-3xl blur-xl"
-              />
-              <div className="relative">
-                <GetMatchedWizard source="homepage-hero" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3: Stats Row */}
+      {/* SECTION 2: Stats Row */}
       <section className="bg-white border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -346,31 +193,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* AdSense: below-hero placement, after stats row, before trust cards */}
+      {/* AdSense: below-hero placement, after stats row */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AdSlot slot={AD_SLOTS.HOME_BELOW_HERO} />
       </div>
 
-      {/* SECTION 4: Why Farmers Use This Directory */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Why farmers use this directory</h2>
-          <p className="text-gray-500 text-center mb-10">Everything you need to find and hire the right drone applicator</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {TRUST_CARDS.map((card) => (
-              <div key={card.title} className="flex flex-col p-5 bg-white rounded-xl border border-gray-200 hover:border-green-300 hover:shadow-sm transition-all">
-                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                  <CheckCircle className="w-5 h-5 text-green-700" />
-                </div>
-                <h3 className="font-bold text-gray-900 text-sm mb-2">{card.title}</h3>
-                <p className="text-xs text-gray-600 leading-relaxed">{card.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: Services */}
+      {/* SECTION 3: Services */}
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-8 gap-4">
@@ -408,101 +236,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 6: Crops */}
+      {/* SECTION 4: Operator map */}
       <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Drone services by crop type</h2>
-          <p className="text-gray-500 mb-8">Find operators with hands-on experience in your production system</p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {crops.map((crop) => {
-              const months = crop.treatmentMonths;
-              const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-              const window = months.length >= 2
-                ? `${monthNames[months[0] - 1]} to ${monthNames[months[months.length - 1] - 1]}`
-                : monthNames[months[0] - 1];
-              return (
-                <Link
-                  key={crop.slug}
-                  href={`/crops/${crop.slug}`}
-                  className="bg-white border border-gray-200 rounded-xl p-4 hover:border-green-300 hover:shadow-sm transition-all group"
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl">{crop.icon}</span>
-                    <span className="font-semibold text-sm text-gray-900 group-hover:text-green-700">{crop.name}</span>
-                  </div>
-                  <div className="text-xs text-gray-500 mb-1">{window}</div>
-                  <div className="text-xs text-green-700 font-medium">${crop.priceMinUsd} to ${crop.priceMaxUsd}/acre</div>
-                  <div className="mt-2 text-xs text-green-700 group-hover:underline">Find operators</div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* AdSense: mid-page placement, between crop types and featured operators */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AdSlot slot={AD_SLOTS.HOME_MID} />
-      </div>
-
-      {/* SECTION 7: Featured Operators */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8 gap-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-end justify-between mb-8 gap-4">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">Featured operators this season</h2>
-              <p className="text-gray-500 mt-1">Verified, insured and actively booking</p>
-            </div>
-            <Link href="/operators" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
-              View all operators <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {featuredOperators.map((op) => (
-              <OperatorCard key={op.slug} operator={op} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 8: States */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8 gap-4">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">Find drone services in your state</h2>
-              <p className="text-gray-500 mt-1">Pick from the top states below or explore the full US map</p>
+              <h2 className="text-2xl font-bold text-gray-900">Find drone operators in your state</h2>
+              <p className="text-gray-500 mt-1">Tap any state to see verified operators near you. Darker green means more operators.</p>
             </div>
             <Link href="/states" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors whitespace-nowrap">
-              All states <ArrowRight className="w-4 h-4" />
+              Browse all states <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mb-6">
-            {topStatesByOps.map((state) => (
-              <Link
-                key={state.slug}
-                href={`/states/${state.slug}`}
-                className="flex flex-col items-center p-3 bg-white border border-gray-200 rounded-xl hover:border-green-300 hover:shadow-sm transition-all group"
-              >
-                <span className="text-sm font-semibold text-gray-900 group-hover:text-green-700">{state.name}</span>
-                <span className="mt-1 text-xs text-gray-500">{state.count} operator{state.count === 1 ? '' : 's'}</span>
-              </Link>
-            ))}
+          <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-sm">
+            <div className="max-w-3xl mx-auto">
+              <USMap />
+            </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center mt-6">
             <Link
               href="/map"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-green-200 text-green-700 font-semibold rounded-xl hover:border-green-400 hover:bg-green-50 transition-colors"
             >
-              <MapIcon className="w-4 h-4" /> Explore the map
+              <MapIcon className="w-4 h-4" /> Open the full map with filters
             </Link>
           </div>
         </div>
       </section>
 
-      {/* SECTION 9: How It Works */}
+      {/* AdSense: mid-page placement, after the map */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AdSlot slot={AD_SLOTS.HOME_MID} />
+      </div>
+
+      {/* SECTION 5: How It Works */}
       <section className="py-14 bg-green-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">How it works</h2>
@@ -539,7 +308,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 10: Tools */}
+      {/* SECTION 6: Tools */}
       <section className="py-14 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Free tools for farmers and operators</h2>
@@ -603,69 +372,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 11: FAQ */}
-      <section className="py-14 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 text-center mb-2">Common questions about drone spraying</h2>
-          <p className="text-gray-500 text-center mb-8">Straight answers for farmers and operators</p>
-          <FAQAccordion faqs={FAQS} />
-          <div className="text-center mt-6">
-            <Link href="/pricing" className="text-green-700 font-medium text-sm hover:underline">
-              View the complete pricing guide
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 12: Popular Drones */}
-      <section className="py-14 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <div>
-              <h2 className="text-2xl font-bold text-gray-900">Agricultural spray drones</h2>
-              <p className="text-gray-500 mt-1">The most common models in US commercial ag drone fleets</p>
-            </div>
-            <Link href="/drones" className="flex items-center gap-1 text-green-700 font-medium text-sm hover:text-green-800 transition-colors">
-              All drones <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {DRONE_CARDS.map((drone) => (
-              <Link
-                key={drone.slug}
-                href={`/drones/${drone.slug}`}
-                className="bg-white border border-gray-200 rounded-xl p-5 hover:border-green-300 hover:shadow-sm transition-all group"
-              >
-                <div className="font-semibold text-sm text-gray-900 group-hover:text-green-700 mb-3">{drone.name}</div>
-                <div className="space-y-1.5 text-xs text-gray-600">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Tank</span>
-                    <span className="font-medium">{drone.tank}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Price</span>
-                    <span className="font-medium">{drone.price}</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">NDAA</span>
-                    {drone.ndaa === true ? (
-                      <span className="inline-flex items-center gap-0.5 text-blue-700 font-medium">
-                        <Shield className="w-3 h-3" /> Yes
-                      </span>
-                    ) : drone.ndaa === false ? (
-                      <span className="text-gray-500">No</span>
-                    ) : (
-                      <span className="text-gray-600">TBC</span>
-                    )}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 13: Blog */}
+      {/* SECTION 7: Guides and news */}
       <section className="py-14 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between mb-8">
@@ -717,10 +424,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 14: Newsletter (Tank Mix by AgDrone) */}
+      {/* SECTION 8: Newsletter (Tank Mix by AgDrone) */}
       <NewsletterCTA />
 
-      {/* SECTION 15: Operator CTA */}
+      {/* SECTION 9: Operator CTA */}
       <section className="py-14 bg-green-700 text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Are you a drone operator?</h2>
