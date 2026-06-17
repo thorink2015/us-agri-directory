@@ -4,7 +4,7 @@ import { CheckCircle, Clock, Globe } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import SubmitForm from './SubmitForm';
-import { operators, getOperatorBySlug } from '@/data/operators';
+import { getOperatorBySlug, OPERATOR_DISPLAY_COUNT } from '@/data/operators';
 import { AUTHOR, SITE } from '@/data/author';
 
 const FAQS = [
@@ -53,7 +53,7 @@ interface PageProps {
 }
 
 export default function ListYourBusinessPage({ searchParams }: PageProps) {
-  const operatorCount = operators.length;
+  const operatorCount = OPERATOR_DISPLAY_COUNT;
   const claimSlug = searchParams?.claim;
   const claimOperator = claimSlug ? getOperatorBySlug(claimSlug) : undefined;
 

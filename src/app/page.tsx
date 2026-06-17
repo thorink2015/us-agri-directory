@@ -8,7 +8,7 @@ import {
 import NewsletterCTA from '@/components/newsletter/NewsletterCTA';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import OperatorCard from '@/components/operators/OperatorCard';
-import { operators } from '@/data/operators';
+import { operators, OPERATOR_DISPLAY_COUNT } from '@/data/operators';
 import type { Operator } from '@/data/types';
 import { crops } from '@/data/crops';
 import { drones } from '@/data/drone-model';
@@ -113,7 +113,7 @@ function pickHomepageOperators(count: number): Operator[] {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const operatorCount = operators.length;
+  const operatorCount = OPERATOR_DISPLAY_COUNT;
   return {
     title: 'Find Drone Spraying Near You | US Ag Drone Directory',
     description: `Search ${operatorCount}+ verified ag drone operators in all 50 states. Compare per-acre rates from $12, check FAA credentials and contact operators directly.`,
@@ -142,7 +142,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function HomePage() {
-  const operatorCount = operators.length;
+  const operatorCount = OPERATOR_DISPLAY_COUNT;
   const stateCount = new Set(operators.flatMap((op) => op.counties)).size;
   const latestBlogPosts = [...blogPosts]
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))

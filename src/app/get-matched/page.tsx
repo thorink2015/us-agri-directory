@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { CheckCircle, ShieldCheck, DollarSign } from 'lucide-react';
 import GetMatchedWizard from '@/components/leads/GetMatchedWizard';
 import { SITE } from '@/data/author';
-import { operators } from '@/data/operators';
+import { OPERATOR_DISPLAY_COUNT } from '@/data/operators';
 
 export const metadata: Metadata = {
   title: 'Get 3 Free Quotes from FAA Part 137 Drone Operators',
@@ -86,7 +86,7 @@ export default function GetMatchedPage() {
             </Link>{' '}
             or{' '}
             <Link href="/operators" className="text-green-700 font-medium hover:underline">
-              browse all {operators.length}+ operators
+              browse all {OPERATOR_DISPLAY_COUNT}+ operators
             </Link>
             .
           </p>

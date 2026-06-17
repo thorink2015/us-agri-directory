@@ -5,7 +5,7 @@ import { Mail, ExternalLink, AlertTriangle, BookOpen, CheckCircle, DollarSign } 
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 import MailtoLink from '@/components/ui/MailtoLink';
-import { operators } from '@/data/operators';
+import { OPERATOR_DISPLAY_COUNT } from '@/data/operators';
 import { AUTHOR, SITE, personSchema, organizationSchema } from '@/data/author';
 
 // ─── FAQ ──────────────────────────────────────────────────────────────────
@@ -109,7 +109,7 @@ export default function AboutPage() {
 
       <div className="bg-green-50 border-l-4 border-green-600 px-4 py-3 rounded-r-xl mb-8">
         <p className="text-sm text-gray-700 leading-relaxed">
-          {SITE.name} is a single-author directory of {operators.length}+ agricultural drone operators
+          {SITE.name} is a single-author directory of {OPERATOR_DISPLAY_COUNT}+ agricultural drone operators
           across all 50 US states, founded and personally edited by {AUTHOR.firstName}. Every listing
           is independently reviewed against FAA Part 107 and Part 137 records, and every regulatory or
           pricing page on this site cites primary sources from the FAA, EPA, USDA or land-grant

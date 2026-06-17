@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Mail } from 'lucide-react';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import MailtoLink from '@/components/ui/MailtoLink';
-import { operators } from '@/data/operators';
+import { OPERATOR_DISPLAY_COUNT } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
 import { blogPosts } from '@/data/blog-posts';
@@ -14,14 +14,14 @@ const TOOL_COUNT = 6;
 export const metadata: Metadata = {
   title: `Advertise on the ${SITE.name}`,
   description:
-    `Advertising for DJI and Hylio dealers, ag insurers, Part 107 trainers and equipment makers. Reach farmers and ${operators.length}+ verified ag drone operators in all 50 states.`,
+    `Advertising for DJI and Hylio dealers, ag insurers, Part 107 trainers and equipment makers. Reach farmers and ${OPERATOR_DISPLAY_COUNT}+ verified ag drone operators in all 50 states.`,
   alternates: { canonical: '/advertise' },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     title: `Advertise on the ${SITE.name}`,
     description:
-      `Sponsored listings, newsletter placements and category sponsorships reaching US farmers and ${operators.length}+ verified ag drone operators.`,
+      `Sponsored listings, newsletter placements and category sponsorships reaching US farmers and ${OPERATOR_DISPLAY_COUNT}+ verified ag drone operators.`,
     url: `${SITE.domain}/advertise`,
     siteName: SITE.name,
     images: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 export default function AdvertisePage() {
-  const operatorCount = operators.length;
+  const operatorCount = OPERATOR_DISPLAY_COUNT;
   const stateCount = counties.length;
   const cropCount = crops.length;
   const guideCount = blogPosts.length;

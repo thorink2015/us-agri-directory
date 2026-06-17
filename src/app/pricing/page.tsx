@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
-import { operators } from '@/data/operators';
+import { OPERATOR_DISPLAY_COUNT } from '@/data/operators';
 import { AUTHOR, SITE } from '@/data/author';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import FAQAccordion from '@/components/ui/FAQAccordion';
@@ -66,7 +66,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function PricingPage() {
-  const operatorCount = operators.length;
+  const operatorCount = OPERATOR_DISPLAY_COUNT;
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
