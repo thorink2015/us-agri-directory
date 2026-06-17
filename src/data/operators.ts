@@ -11067,3 +11067,12 @@ export function getFeaturedOperators(): Operator[] {
 export function getVerifiedOperators(): Operator[] {
   return operators.filter((op) => op.verified);
 }
+
+// Marketing display count for the site-wide "verified operators" headline
+// claim (hero, stats, meta descriptions, OG image, advertise/pricing/about
+// copy). Hard-set above the live operators.length per Eugen (2026-06-17).
+// The real operators.length still drives the sitemap, ItemList/LocalBusiness
+// schema and every per-state / per-city / per-county count and listing —
+// only this one headline figure is fixed. Bump or revert to operators.length
+// once the real count catches up.
+export const OPERATOR_DISPLAY_COUNT = 700;

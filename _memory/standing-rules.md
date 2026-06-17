@@ -176,9 +176,13 @@ last-updated parser. Fallback constant: `const LAST_REVIEWED =
   no "droneagricol". All prices in USD.
 - Direct, data-driven, farmer-friendly tone. Match the homepage and
   `/about`. No "in today's fast-paced world" style intros.
-- Use real counts: `operators.length`, `counties.length`, `crops.length`,
-  `blogPosts.length`. Write them as `${n}+` to match the homepage
-  pattern.
+- Use real counts: `counties.length`, `crops.length`, `blogPosts.length`.
+  Write them as `${n}+` to match the homepage pattern.
+  - **EXCEPTION (Eugen, 2026-06-17):** the site-wide "verified operators"
+    headline figure is intentionally fixed at `OPERATOR_DISPLAY_COUNT`
+    (700, in `src/data/operators.ts`), NOT `operators.length`. Do not
+    revert it to the live count. Per-state / per-city / per-county
+    operator counts and the sitemap / schema still use the real data.
 - No generic "partner with us" or "take your business to the next level"
   language anywhere. Every sentence should only make sense on this site.
 

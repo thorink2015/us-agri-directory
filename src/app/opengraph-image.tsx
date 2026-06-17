@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { operators } from '@/data/operators';
+import { OPERATOR_DISPLAY_COUNT } from '@/data/operators';
 
 export const runtime = 'edge';
 export const alt = 'US Agricultural Drone Directory, Find Verified Ag Drone Operators Near You';
@@ -7,7 +7,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export default async function Image() {
-  const operatorCount = operators.length;
+  const operatorCount = OPERATOR_DISPLAY_COUNT;
   return new ImageResponse(
     (
       <div

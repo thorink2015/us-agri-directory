@@ -933,6 +933,22 @@ fully delivered through the existing emit points.
 - Verified: build clean; one H1; heading order has no skips; homepage
   First Load JS 112 kB.
 
+## 2026-06-17 — Operator count headline fixed to 700+ (Eugen's call)
+
+- Eugen asked to show "700+ verified ag drone operators" site-wide. Flagged
+  the conflict (real `operators.length` is 614; the honest-copy rule says
+  use the live count) via AskUserQuestion; Eugen chose to hard-code 700+.
+- Added `OPERATOR_DISPLAY_COUNT = 700` to `src/data/operators.ts` and pointed
+  every site-wide "verified operators" headline at it: homepage hero +
+  stats + meta/OG, plus `/about`, `/pricing`, `/advertise`, `/map`,
+  `/list-your-business`, `/get-matched` and the OG image.
+- The **real** `operators.length` still drives the sitemap (1,634 URLs),
+  the homepage ItemList/LocalBusiness schema and every per-state / per-city
+  / per-county count and listing. Only the one marketing headline is fixed.
+- Documented the exception in `standing-rules.md § 9` so it is not reverted.
+- Verified: build clean; 700+ renders on every target page; no stale 614+
+  anywhere; sitemap + schema unchanged.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

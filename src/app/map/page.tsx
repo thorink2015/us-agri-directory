@@ -5,7 +5,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import Byline from '@/components/author/Byline';
 import AuthorCard from '@/components/author/AuthorCard';
 import MapClient, { type StateSummary } from './MapClient';
-import { operators } from '@/data/operators';
+import { operators, OPERATOR_DISPLAY_COUNT } from '@/data/operators';
 import { counties } from '@/data/counties';
 import { crops } from '@/data/crops';
 import { SITE, AUTHOR } from '@/data/author';
@@ -15,7 +15,7 @@ const LAST_REVIEWED = '2026-04-21';
 
 export const metadata: Metadata = {
   title: 'Agricultural Drone Operator Map | US Ag Drone Directory',
-  description: `Interactive map of ${operators.length}+ verified drone operators across all 50 US states. Click any state to browse operators by location.`,
+  description: `Interactive map of ${OPERATOR_DISPLAY_COUNT}+ verified drone operators across all 50 US states. Click any state to browse operators by location.`,
   alternates: { canonical: '/map' },
   openGraph: {
     type: 'website',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 };
 
 export default function MapPage() {
-  const operatorCount = operators.length;
+  const operatorCount = OPERATOR_DISPLAY_COUNT;
   const stateCount = new Set(
     operators.flatMap((op) => op.counties),
   ).size;
