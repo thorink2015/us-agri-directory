@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Clock, Calendar, ArrowRight, BookOpen } from 'lucide-react';
+import { Clock, Calendar, ArrowRight, BookOpen, Download, FileText } from 'lucide-react';
 import {
   guides,
   getLatestGuides,
@@ -199,6 +199,58 @@ export default function GuidesHubPage() {
           </Link>
         </section>
       )}
+
+      {/* Free download / lead magnet */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+        <div className="flex items-baseline justify-between mb-5">
+          <h2 className="text-sm font-semibold uppercase tracking-widest text-gray-500">
+            Free download
+          </h2>
+        </div>
+        <Link
+          href="/guides/fields-only-a-drone-can-fly"
+          className="group block bg-gradient-to-br from-green-900 to-green-950 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow"
+        >
+          <div className="grid md:grid-cols-[1.1fr_1fr] gap-0 items-center">
+            <div className="p-6 md:p-10 text-white">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-green-300 bg-green-800/40 px-3 py-1 rounded-full mb-4">
+                <FileText className="w-3.5 h-3.5" />
+                Free PDF · Tank Mix field guide
+              </div>
+              <h3 className="font-serif text-2xl md:text-3xl font-bold leading-tight mb-3">
+                Fields Only a Drone Can Fly
+              </h3>
+              <p className="text-green-100 leading-relaxed mb-5 max-w-lg">
+                Find the wet bottoms, tall corn, odd fields and boxed-in fields a
+                plane and a ground rig cannot touch, look up who owns them, and
+                charge real money. Eight free tools, a price guide, and a
+                printable worksheet.
+              </p>
+              <span className="inline-flex items-center gap-2 font-semibold text-white">
+                <Download className="w-4 h-4" />
+                Get the free field guide
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </div>
+            <div className="hidden md:flex p-10 items-center justify-center">
+              <div className="bg-white/95 rounded-xl shadow-lg px-7 py-9 w-full max-w-xs">
+                <div className="text-[11px] font-semibold uppercase tracking-widest text-green-700 mb-4">
+                  A Tank Mix Field Guide
+                </div>
+                <p className="font-serif text-2xl font-bold text-gray-900 leading-tight mb-2">
+                  Fields Only a Drone Can Fly
+                </p>
+                <p className="text-sm text-gray-500 mb-6">
+                  How to find them and what to charge.
+                </p>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-green-800">
+                  <Download className="w-4 h-4" /> Download PDF
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </section>
 
       {/* Category sections */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

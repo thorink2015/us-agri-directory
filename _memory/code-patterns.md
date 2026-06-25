@@ -543,6 +543,62 @@ injects relative to its own `<script>`: append the script into a
 component-owned ref via `useEffect` + `IntersectionObserver`, never
 `next/script` (which appends to head/body and breaks placement).
 
+## Downloadable PDF / lead-magnet landing page (added 2026-06-25)
+
+**Used on:** `/guides/fields-only-a-drone-can-fly` (the Tank Mix field
+guide PDF). Reuse this whenever Eugen drops a PDF to host + link from the
+newsletter.
+
+**Two drops:**
+
+1. The PDF goes in `/public/guides/<slug>.pdf`. Public files are served
+   verbatim, so the stable URL is
+   `https://agdronedirectory.com/guides/<slug>.pdf`. That is the direct
+   download link to hand Eugen for a newsletter button. robots.ts does
+   NOT disallow PDFs, so no change needed there.
+2. A static landing page at `src/app/guides/<slug>/page.tsx`. This is a
+   plain static route living **beside** the dynamic `guides/[slug]`
+   route. No collision as long as `<slug>` is NOT added to
+   `src/data/guides.ts` (the dynamic route only generates the data-file
+   slugs; a static sibling segment always wins anyway). Do NOT add the
+   slug to `guides` in the data file, or both routes will claim it.
+
+**Landing page must have** (so the newsletter link unfurls + ranks):
+
+- `metadata`: title < 60 chars with the PDF name in the first 40,
+  description < 155 chars with a CTA verb + a number, relative
+  `alternates.canonical`, openGraph (type 'article', `/opengraph-image`)
+  + twitter card.
+- `<Byline lastUpdated={...} />` under H1 and `<AuthorCard />` at the
+  foot (standing-rules §6). One AEO block (green-50 left-border) with a
+  real number, quoting the PDF.
+- The download itself as `<a href="/guides/<slug>.pdf" download>` (forces
+  a download) plus an optional `target="_blank"` open-in-browser link.
+- JSON-LD: `BreadcrumbList` + an `Article` whose `associatedMedia` is a
+  `MediaObject` with `encodingFormat: 'application/pdf'` and
+  `contentUrl` = the absolute PDF URL. `isAccessibleForFree: true`.
+
+**Wiring (standing-rules §3):**
+
+- Add the landing page URL to `staticPages` in `src/app/sitemap.ts`
+  (priority ~0.7). Leave the raw `.pdf` OUT of the sitemap so the HTML
+  page stays the single canonical indexable URL.
+- Internal links: a card on the `/guides` hub (1 inbound) + reciprocal
+  `relatedInternal` entries on ≥1 related guide so the page has ≥2
+  inbound links and is not an orphan. Link FROM the page to ≥2 related
+  pages (/pricing, /operators, related guides).
+- Add a line to `public/llms.txt` under `## Pillar guides` describing the
+  free download and pointing at both the landing page and the `.pdf`.
+
+**Newsletter CTA:** the site-wide beehiiv `GlobalNewsletter` already
+renders above the footer on every non-home route, so the landing page
+gets a signup block for free. Do not hand-add one.
+
+**All landing-page copy comes from the PDF** (Eugen's own deliverable),
+so it satisfies copy-source-of-truth. Keep the forbidden-token rules:
+no em/en dashes, JSX apostrophes as `&apos;`, curly quotes as
+`&ldquo;`/`&rdquo;`.
+
 ## Commit message format
 
 ```

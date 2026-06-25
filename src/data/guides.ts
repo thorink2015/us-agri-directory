@@ -345,6 +345,7 @@ export const guides: Guide[] = [
       { href: '/buyers-guide', label: 'Spray drone buyer\'s guide' },
       { href: '/regulations/faa-part-137', label: 'FAA Part 137 for drones' },
       { href: '/insurance', label: 'Insurance for drone applicators' },
+      { href: '/guides/fields-only-a-drone-can-fly', label: 'Free field guide: fields only a drone can fly' },
     ],
   },
   {
@@ -484,6 +485,7 @@ export const guides: Guide[] = [
       { href: '/buyers-guide', label: 'Spray drone buyer\'s guide' },
       { href: '/start-a-drone-business', label: 'Start a drone business' },
       { href: '/training-and-certification', label: 'Training and certification' },
+      { href: '/guides/fields-only-a-drone-can-fly', label: 'Free field guide: fields only a drone can fly' },
     ],
   },
   {
