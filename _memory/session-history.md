@@ -949,6 +949,34 @@ fully delivered through the existing emit points.
 - Verified: build clean; 700+ renders on every target page; no stale 614+
   anywhere; sitemap + schema unchanged.
 
+## 2026-06-25 — "Fields Only a Drone Can Fly" PDF lead magnet (branch claude/charming-gauss-n86pr1)
+
+- Eugen dropped a 9-page Tank Mix field guide PDF ("Fields Only a Drone
+  Can Fly: how to find them and what to charge") to host on the site and
+  link from the newsletter.
+- Hosted the file at `/public/guides/fields-only-a-drone-can-fly.pdf`
+  (stable URL `https://agdronedirectory.com/guides/fields-only-a-drone-can-fly.pdf`).
+- Built an SEO download landing page at
+  `src/app/guides/fields-only-a-drone-can-fly/page.tsx` (static segment
+  beside the dynamic `guides/[slug]` route; no collision since the slug
+  is not in `src/data/guides.ts`). Has metadata + OG/Twitter, Byline +
+  AuthorCard, AEO block, "what's inside" + four-fields + eight-tools
+  sections, two download CTAs (`<a download>` + open-in-browser), and
+  Article + BreadcrumbList JSON-LD with the PDF as `associatedMedia`
+  (encodingFormat application/pdf). All copy drawn from the PDF (Eugen's
+  own deliverable).
+- Wired internal linking: "Free download" card on the `/guides` hub +
+  reciprocal `relatedInternal` links from the two Operators guides
+  (year-round-revenue, how-to-become-a-pilot). New page links back to
+  /pricing, /operators and both guides. No orphan.
+- Added the landing page to `sitemap.ts` (priority 0.7; PDF itself left
+  out so the HTML page is the single canonical indexable URL) and a line
+  to `public/llms.txt` under Pillar guides.
+- The site-wide beehiiv newsletter CTA already auto-renders above the
+  footer on this page (GlobalNewsletter), so no extra signup block added.
+- Verified: `npm run build` clean; route prerenders static; built HTML
+  carries the PDF download links + JSON-LD.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
