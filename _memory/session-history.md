@@ -977,6 +977,40 @@ fully delivered through the existing emit points.
 - Verified: `npm run build` clean; route prerenders static; built HTML
   carries the PDF download links + JSON-LD.
 
+## 2026-06-30 — "The Premium Acre Playbook" PDF lead magnet (branch claude/pdf-guide-publication-ovy9xk)
+
+- Eugen dropped a second 9-page Tank Mix field guide PDF ("The Premium
+  Acre Playbook: the spray work that never joined the price war") to host
+  the same way as Fields Only a Drone Can Fly (free, ungated, download
+  button). Followed that exact pattern.
+- Hosted the file at `/public/guides/premium-acre-playbook.pdf` (stable
+  URL `https://agdronedirectory.com/guides/premium-acre-playbook.pdf`).
+- Built the SEO download landing page at
+  `src/app/guides/premium-acre-playbook/page.tsx` (static segment beside
+  the dynamic `guides/[slug]` route; no collision since the slug is not
+  in `src/data/guides.ts`). Metadata + OG/Twitter (title 55 chars, desc
+  138 chars), Byline + AuthorCard, AEO block (~150 words, numbers $13 /
+  $7 / $400 / $10-20 / $20 / $18-40 / $36), "what is inside" grid, the
+  four lanes (sensor jobs, cover crop seeding, specialty rows, ROW +
+  brush) with per-acre price badges, the four season-pricing levers, the
+  license stack, two download CTAs (`<a download>` + open-in-browser),
+  and Article + BreadcrumbList JSON-LD with the PDF as `associatedMedia`
+  (encodingFormat application/pdf, isAccessibleForFree true). All copy
+  drawn from the PDF (Eugen's own deliverable).
+- Wired internal linking: the `/guides` hub "Free download" section
+  refactored to a 2-card grid ("Free downloads") holding both PDFs.
+  Reciprocal `relatedInternal` links added from the two Operators guides
+  (year-round-revenue, how-to-become-a-pilot). New page links back to the
+  sister field guide, year-round-revenue, /pricing and /regulations/faa-part-137.
+  No orphan.
+- Added the landing page to `sitemap.ts` (priority 0.7; PDF itself left
+  out so the HTML page is the single canonical indexable URL) and a line
+  to `public/llms.txt` under Pillar guides.
+- Verified: `npm run build` clean; route prerenders static (220 B /
+  96.8 kB first load, no page-speed regression); rendered HTML carries
+  the PDF download link, BreadcrumbList + Article + MediaObject JSON-LD,
+  canonical, single H1, zero em/en dashes.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
