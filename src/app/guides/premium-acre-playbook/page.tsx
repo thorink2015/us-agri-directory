@@ -455,6 +455,10 @@ export default function PremiumAcrePlaybookPage() {
                 },
                 { href: '/pricing', label: 'Drone spraying cost per acre: 2026 rates' },
                 {
+                  href: '/premium-acre',
+                  label: 'The Premium Acre: join the founding newsletter list',
+                },
+                {
                   href: '/regulations/faa-part-137',
                   label: 'FAA Part 137 for drone applicators',
                 },

@@ -147,7 +147,8 @@ last-updated parser. Fallback constant: `const LAST_REVIEWED =
   as JSON.
 - Every form MUST include `<input type="hidden" name="_form_type" value="..." />`
   so Formspree submissions are categorizable. Existing values in use:
-  `contact`, `list-your-business`, `newsletter`, `exit-intent-lead`.
+  `contact`, `list-your-business`, `newsletter`, `exit-intent-lead`,
+  `premium-acre-signup` (paid-newsletter founding list, added 2026-06-30).
   Reuse before inventing new ones.
 - Emails on pages use `<MailtoLink email={AUTHOR.publicEmail}>...</MailtoLink>`,
   never a raw `<a href="mailto:...">`. The component defers the `href`

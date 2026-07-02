@@ -389,6 +389,10 @@ export default function FieldGuideDownloadPage() {
                   href: '/guides/how-to-become-an-agricultural-drone-pilot',
                   label: 'How to become an agricultural drone pilot',
                 },
+                {
+                  href: '/premium-acre',
+                  label: 'The Premium Acre: join the founding newsletter list',
+                },
                 { href: '/operators', label: 'Find or list a verified operator' },
               ].map((link) => (
                 <li key={link.href}>
