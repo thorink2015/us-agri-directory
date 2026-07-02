@@ -1010,6 +1010,35 @@ fully delivered through the existing emit points.
   96.8 kB first load, no page-speed regression); rendered HTML carries
   the PDF download link, BreadcrumbList + Article + MediaObject JSON-LD,
   canonical, single H1, zero em/en dashes.
+- Shipped as PR #137, merged to main by Eugen the same day.
+
+## 2026-06-30 — /premium-acre founding-list landing page (branch claude/pdf-guide-publication-ovy9xk)
+
+- Coming-soon signup page for a NEW paid newsletter, "The Premium Acre"
+  (distinct from the free beehiiv "Tank Mix" newsletter). Copy supplied
+  verbatim by Eugen. Centered, form-first, minimal, reuses the global
+  header/footer.
+- `src/app/premium-acre/page.tsx` (server: metadata + BreadcrumbList +
+  WebPage JSON-LD + centered copy) and `PremiumAcreForm.tsx` (client:
+  first_name + email, inline success state "You're on the list… Talk
+  soon, Eugen", error + loading states).
+- **Independent calls vs. the supplied prompt:** (1) used the site's
+  Formspree convention (plain fetch to `NEXT_PUBLIC_FORMSPREE_ID` +
+  hidden `_form_type="premium-acre-signup"`) instead of a pasted form ID
+  or the `@formspree/react` dep, so signups land in Eugen's existing
+  inbox and add zero deps; (2) the prompt asked for an "orange/cream"
+  accent, but the site has no orange (bg is #F8F9FA, accent is green with
+  gold only on dark hero) so used the site's real green eyebrow-pill
+  convention; (3) emitted BreadcrumbList JSON-LD but skipped a visible
+  breadcrumb bar to keep the centered focal-point design.
+- Internal linking: inbound from both Tank Mix PDF guide pages
+  (`/guides/premium-acre-playbook` and `/guides/fields-only-a-drone-can-fly`
+  related-reading lists) as a natural cross-sell; outbound via the shared
+  footer. Added to `sitemap.ts` (priority 0.6, indexable, no noindex).
+- `_form_type=premium-acre-signup` recorded in standing-rules §7.
+- Verified: `npm run build` clean; /premium-acre static at 2.94 kB /
+  90.3 kB; rendered HTML has correct title, canonical, single H1,
+  BreadcrumbList + WebPage schema, the Formspree wiring, zero em/en dashes.
 
 ## What's next
 
