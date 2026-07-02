@@ -2,12 +2,42 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Plane, ChevronDown } from 'lucide-react';
 import { counties } from '@/data/counties';
 import { SITE } from '@/data/author';
 
 export default function Footer() {
   const [showAll, setShowAll] = useState(false);
+  const pathname = usePathname();
+
+  // Focused landing pages get a single-line footer: brand + copyright +
+  // the two policy links, nothing else (and no top margin, so there is no
+  // gray gap above it).
+  if (pathname === '/premium-acre') {
+    return (
+      <footer className="bg-green-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-7 h-7 bg-white/20 rounded-lg flex items-center justify-center">
+              <Plane className="w-4 h-4 text-white rotate-45" />
+            </div>
+            <span className="font-bold text-white">
+              US Ag Drone
+              <span className="text-yellow-400"> Directory</span>
+            </span>
+          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-green-300">
+            <span>© 2026 {SITE.name}</span>
+            <span className="text-green-700">|</span>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <span className="text-green-700">|</span>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+          </div>
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer className="bg-green-900 text-white mt-16">

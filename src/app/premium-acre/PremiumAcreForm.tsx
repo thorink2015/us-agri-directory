@@ -56,16 +56,16 @@ export default function PremiumAcreForm() {
     <form onSubmit={handleSubmit} className="space-y-3 text-left">
       <input type="hidden" name="_form_type" value="premium-acre-signup" />
       <div>
-        <label htmlFor="first_name" className="sr-only">
-          First name
+        <label htmlFor="full_name" className="sr-only">
+          Full name
         </label>
         <input
-          id="first_name"
-          name="first_name"
+          id="full_name"
+          name="full_name"
           type="text"
           required
-          autoComplete="given-name"
-          placeholder="First name"
+          autoComplete="name"
+          placeholder="Full name"
           className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
         />
       </div>

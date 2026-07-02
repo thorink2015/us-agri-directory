@@ -1058,6 +1058,29 @@ fully delivered through the existing emit points.
   90.3 kB; SSR HTML drops the two deleted paragraphs and keeps the form +
   fine print.
 
+## 2026-07-02 — /premium-acre distraction-free landing chrome (Eugen feedback)
+
+- Turned `/premium-acre` into a focused, distraction-free landing page.
+  All via the site's existing `usePathname()` self-suppression pattern
+  (no route-group refactor):
+  - **ExitIntentPopup:** added `/premium-acre` to `EXCLUDED_PATHS`.
+  - **Header:** renders a minimal variant on `/premium-acre` (logo +
+    single "List your business" button, no nav/dropdowns). Early return
+    after all hooks.
+  - **Footer:** renders a one-line variant on `/premium-acre` (brand +
+    "© 2026 US Ag Drone Directory" + Privacy + Terms). Dropped the full
+    footer's `mt-16`, which was the transparent margin over the
+    `bg-gray-50` body showing as the "gray section" Eugen saw.
+  - **Page:** fixed a nested `<main>` (the root layout already provides
+    the landmark) by switching the page wrapper to a `<div>`; page stays
+    full-white.
+  - **Form:** swapped the first-name field for a single full-name field
+    (`name="full_name"`, autoComplete="name").
+- Verified in built HTML: minimal header (0 nav links), minimal footer
+  (no "All 50 States", no gray band), exactly one `<main>`, full_name
+  field, newsletter band only in the invisible RSC payload (not visible
+  DOM). `npm run build` clean; /premium-acre still 2.94 kB / 90.3 kB.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

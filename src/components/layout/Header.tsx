@@ -97,6 +97,36 @@ export default function Header() {
     [],
   );
 
+  // Focused landing pages (e.g. the newsletter signup) get a stripped-down
+  // header: just the logo and the operator CTA, no nav or dropdowns.
+  const minimal = pathname === '/premium-acre';
+
+  if (minimal) {
+    return (
+      <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
+              <div className="w-8 h-8 bg-green-700 rounded-lg flex items-center justify-center">
+                <Plane className="w-5 h-5 text-white rotate-45" />
+              </div>
+              <span className="font-bold text-xl text-green-900 group-hover:opacity-80 transition-opacity">
+                US Ag Drone
+                <span className="text-yellow-700"> Directory</span>
+              </span>
+            </Link>
+            <Link
+              href="/list-your-business"
+              className="px-3 py-2 text-green-700 hover:text-green-800 hover:bg-green-50 text-sm font-medium rounded-lg border border-green-200 hover:border-green-300 transition-colors"
+            >
+              List your business
+            </Link>
+          </div>
+        </div>
+      </header>
+    );
+  }
+
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
