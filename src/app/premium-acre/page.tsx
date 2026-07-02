@@ -84,7 +84,7 @@ export default function PremiumAcrePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
       />
 
-      <main className="min-h-[calc(100vh-4rem)] bg-white flex items-center justify-center px-4 py-16">
+      <div className="min-h-[calc(100vh-4rem)] bg-white flex items-center justify-center px-4 py-16">
         <div className="w-full max-w-lg text-center">
           <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-green-800 bg-green-50 border border-green-200 px-3 py-1 rounded-full mb-6">
             <Mail className="w-3.5 h-3.5" />
@@ -112,7 +112,7 @@ export default function PremiumAcrePage() {
             business found online, so farmers come looking for you.
           </p>
         </div>
-      </main>
+      </div>
     </>
   );
 }

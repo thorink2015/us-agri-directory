@@ -9,7 +9,7 @@ import { crops } from '@/data/crops';
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
 const SESSION_FLAG = 'exit_intent_shown';
 const MOBILE_DELAY_MS = 45_000;
-const EXCLUDED_PATHS = ['/privacy', '/terms', '/contact'];
+const EXCLUDED_PATHS = ['/privacy', '/terms', '/contact', '/premium-acre'];
 
 export default function ExitIntentPopup() {
   const pathname = usePathname();
