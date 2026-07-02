@@ -1040,6 +1040,24 @@ fully delivered through the existing emit points.
   90.3 kB; rendered HTML has correct title, canonical, single H1,
   BreadcrumbList + WebPage schema, the Formspree wiring, zero em/en dashes.
 
+## 2026-07-02 — /premium-acre polish (Eugen feedback, branch claude/pdf-guide-publication-ovy9xk)
+
+- Two tweaks after Eugen saw the live page:
+  1. Suppress the site-wide Tank Mix newsletter band on `/premium-acre`
+     (visitors here are already the newsletter audience). Extended the
+     existing `GlobalNewsletter` client suppress list from `['/']` to
+     `['/', '/premium-acre']` — same client-side `usePathname()` removal
+     the homepage already uses.
+  2. Made the form the first thing visitors see: deleted the two body
+     paragraphs above it (the "Twice a month…" pitch and the "not open
+     yet / founding members lock the lowest price" reassurance), moved the
+     form directly under the "You do the flying. I do the digging." line,
+     and kept the work-you-find line as fine print BELOW the form (Eugen
+     reworded it to open with "Every month").
+- Verified: `npm run build` clean; /premium-acre still static 2.94 kB /
+  90.3 kB; SSR HTML drops the two deleted paragraphs and keeps the form +
+  fine print.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

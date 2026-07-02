@@ -98,24 +98,19 @@ export default function PremiumAcrePage() {
           <p className="text-lg text-gray-700 leading-relaxed">
             A paid newsletter for ag drone operators.
           </p>
-          <p className="text-lg font-bold text-gray-900 leading-relaxed mb-5">
+          <p className="text-lg font-bold text-gray-900 leading-relaxed mb-8">
             You do the flying. I do the digging.
-          </p>
-
-          <p className="text-[15px] text-gray-600 leading-relaxed mb-4">
-            Twice a month I find the work that pays more than commodity acres,
-            who buys it, what it pays and how to land it. Plus how to get your
-            own business found online, so farmers come looking for you.
-          </p>
-          <p className="text-[15px] text-gray-600 leading-relaxed mb-8">
-            It&apos;s not open yet and there&apos;s nothing to pay now. Add your
-            name and I&apos;ll let you know when it&apos;s ready. Founding
-            members lock the lowest price I ever offer.
           </p>
 
           <div className="bg-white border border-stone-200 rounded-2xl shadow-sm p-6 sm:p-8 text-left">
             <PremiumAcreForm />
           </div>
+
+          <p className="text-xs text-gray-500 leading-relaxed mt-6">
+            Every month I find the work that pays more than commodity acres, who
+            buys it, what it pays and how to land it. Plus how to get your own
+            business found online, so farmers come looking for you.
+          </p>
         </div>
       </main>
     </>
