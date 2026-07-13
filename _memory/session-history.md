@@ -1081,6 +1081,35 @@ fully delivered through the existing emit points.
   field, newsletter band only in the invisible RSC payload (not visible
   DOM). `npm run build` clean; /premium-acre still 2.94 kB / 90.3 kB.
 
+## 2026-07-09 — Tank Mix advertising terms page + downloadable PDF
+
+- New noindex legal landing page at `/advertising-terms`
+  (`src/app/advertising-terms/page.tsx`). Terms for advertising,
+  sponsorship and dedicated email placements in the Tank Mix
+  newsletter. Copy is Eugen's own deliverable (verbatim from his
+  provided doc), so copy-source-of-truth is satisfied.
+- Minimalist design matching `/terms` (max-w-3xl, green/stone,
+  Breadcrumb, WebPage + BreadcrumbList JSON-LD, `MailtoLink` for the
+  contact email). No Byline/AuthorCard (legal-page precedent, like
+  `/terms` and `/privacy`).
+- `robots: { index: false, follow: true }` (source doc was
+  `noindex`). Intentionally kept OUT of `sitemap.ts` per
+  standing-rules §3.1 (noindex pages are excluded). robots.ts
+  untouched.
+- Download button links to a branded PDF snapshot at
+  `/public/tank-mix-advertising-terms.pdf` (66 KB, 2pp), generated
+  from a clean self-contained HTML via headless Chromium
+  (`chrome --headless --no-pdf-header-footer --print-to-pdf`).
+  Regenerate the same way if the copy changes. Matches the existing
+  committed-PDF download precedent (field guide, code-patterns.md).
+- Added one contextual inbound link from `/advertise` (Newsletter
+  sponsorship block) so the page has a natural home.
+- `npm run build` clean; `/advertising-terms` prerenders static
+  (391 B / 97 kB). Verified built HTML emits
+  `<meta name="robots" content="noindex, follow">`, the download
+  link with `download="Tank-Mix-Advertising-Terms.pdf"`, and the
+  canonical.
+
 ## 2026-07-13 — "The Solar Book" PDF lead magnet (branch claude/pdf-guide-publication-ovy9xk)
 
 - Third Tank Mix PDF field guide hosted the same free/ungated way as

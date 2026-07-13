@@ -139,7 +139,11 @@ export default function AdvertisePage() {
             <p>
               A short sponsored block in the monthly farmer and operator newsletter, between the editorial
               sections. One sponsor per send, clearly marked. Good fit for new drone model launches, training
-              cohort enrolment windows, or insurance and financing offers tied to a season.
+              cohort enrolment windows, or insurance and financing offers tied to a season. See the{' '}
+              <Link href="/advertising-terms" className="text-green-700 hover:underline">
+                advertising terms
+              </Link>{' '}
+              for how placements, payment and the open-rate guarantee work.
             </p>
           </div>
           <div>
