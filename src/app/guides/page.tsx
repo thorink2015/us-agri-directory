@@ -207,7 +207,7 @@ export default function GuidesHubPage() {
             Free downloads
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               href: '/guides/fields-only-a-drone-can-fly',
@@ -222,6 +222,13 @@ export default function GuidesHubPage() {
               tagline: 'The spray work that never joined the price war.',
               blurb:
                 'Four lanes that pay more than commodity corn, the license stack in plain English, and the one pricing move that protects your whole summer. Sell the season, not the pass.',
+            },
+            {
+              href: '/guides/the-solar-book',
+              title: 'The Solar Book',
+              tagline: 'How to win solar farm vegetation work.',
+              blurb:
+                'Three routes into solar farm vegetation spraying, the map that finds the sites near you, who to call, what to say, and the license and insurance it takes to say yes.',
             },
           ].map((dl) => (
             <Link

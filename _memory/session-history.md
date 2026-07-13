@@ -1081,6 +1081,31 @@ fully delivered through the existing emit points.
   field, newsletter band only in the invisible RSC payload (not visible
   DOM). `npm run build` clean; /premium-acre still 2.94 kB / 90.3 kB.
 
+## 2026-07-13 — "The Solar Book" PDF lead magnet (branch claude/pdf-guide-publication-ovy9xk)
+
+- Third Tank Mix PDF field guide hosted the same free/ungated way as
+  Fields Only a Drone Can Fly and The Premium Acre Playbook. Source: the
+  Tank Mix Issue 13 companion "The Solar Book: how to win solar farm
+  vegetation work" (14 pages, Eugen's own deliverable).
+- PDF at `/public/guides/the-solar-book.pdf`. SEO download landing page at
+  `src/app/guides/the-solar-book/page.tsx` (static segment beside the
+  dynamic `guides/[slug]` route; slug not in `src/data/guides.ts` so no
+  collision). Metadata + OG/Twitter (title 49 chars, meta desc 150),
+  Byline + AuthorCard, AEO block (~150 words, numbers 1 MW / 5-40 ac /
+  100-2,000 ac / 4-8 wk / 54 sites / $293 gravel), "what is inside" grid,
+  the three routes (Side Door / Sub / Bid) with detail badges, the
+  license + insurance gate list, the aerial-label deal-killer note, two
+  download CTAs, Article + BreadcrumbList + MediaObject JSON-LD
+  (isAccessibleForFree). All copy from the PDF.
+- Wiring: `/guides` hub "Free downloads" grid widened to 3 cards
+  (`sm:grid-cols-2 lg:grid-cols-3`). Reciprocal `relatedInternal` links
+  added from the two Operators guides. Page links back to
+  premium-acre-playbook, year-round-revenue, faa-part-137 and the
+  /premium-acre newsletter. Added to `sitemap.ts` (0.7) and `llms.txt`.
+- Verified: `npm run build` clean; route static 225 B / 96.8 kB; HTML has
+  title, canonical, single H1, all three schema types, the PDF download
+  link, zero em/en dashes.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
