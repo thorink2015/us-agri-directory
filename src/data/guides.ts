@@ -347,6 +347,7 @@ export const guides: Guide[] = [
       { href: '/insurance', label: 'Insurance for drone applicators' },
       { href: '/guides/fields-only-a-drone-can-fly', label: 'Free field guide: fields only a drone can fly' },
       { href: '/guides/premium-acre-playbook', label: 'Free guide: the premium acre playbook' },
+      { href: '/guides/the-solar-book', label: 'Free guide: the solar book' },
     ],
   },
   {
@@ -488,6 +489,7 @@ export const guides: Guide[] = [
       { href: '/training-and-certification', label: 'Training and certification' },
       { href: '/guides/fields-only-a-drone-can-fly', label: 'Free field guide: fields only a drone can fly' },
       { href: '/guides/premium-acre-playbook', label: 'Free guide: the premium acre playbook' },
+      { href: '/guides/the-solar-book', label: 'Free guide: the solar book' },
     ],
   },
   {
