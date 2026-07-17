@@ -1247,6 +1247,32 @@ fully delivered through the existing emit points.
   guides first if you want proof" cut from the closer. Verified in
   built HTML: zero leftover pay-challenge/day-one strings.
 
+## 2026-07-17 — /premium-acre/subscribe twin page for the Tank Mix wave (branch claude/paid-newsletter-landing-7khc1e, PR after #145)
+
+- Eugen sends a standalone issue to the WIDER Tank Mix list next week
+  (readers who never joined the founding list) and needs a separate
+  link with the same sales flow. Branch restarted from main.
+- Extracted the whole sales page into
+  `src/components/premium-acre/SalesPage.tsx` (props: pagePath,
+  pageName, description, breadcrumbLeafName). Both routes render it,
+  so the two pages can never drift; copy edits belong in the shared
+  component from now on.
+- `/premium-acre/join`: unchanged content, now a thin metadata wrapper.
+- `/premium-acre/subscribe` (new): identical page, own title ("The
+  Premium Acre for Tank Mix Readers: $17/mo"), `robots noindex,follow`,
+  NOT in sitemap, no internal links (email-only landing; mirrors the
+  /advertising-terms noindex precedent, avoids duplicate content vs
+  /join).
+- Chrome: subscribe added to minimal Header/Footer conditions and
+  GlobalNewsletter suppress list (ExitIntentPopup already covers via
+  startsWith). Header logo/CTA logic generalized: logo self-links on
+  whichever sales page you are on (keeps each wave on its own URL for
+  attribution), CTA falls back to that page's #founder-deal.
+- Verified: build clean (2,371 pages, +1); subscribe.html has
+  noindex,follow + canonical + own title + identical H1/hero/chrome;
+  join.html unchanged and indexable; sitemap contains /join but not
+  /subscribe.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

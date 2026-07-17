@@ -105,9 +105,17 @@ and `AUTHOR.organizationId` getters.
 - **Pricing (2026-07-17, per Eugen):** founding members $17/month
   locked for life; public anchor price $49/month.
 - **Pages:** `/premium-acre` = founding-list email signup (Formspree
-  `premium-acre-signup`); `/premium-acre/join` = founding sales page,
-  CTAs go to the Stripe Payment Link via
-  `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL`.
+  `premium-acre-signup`); `/premium-acre/join` = founding sales page
+  (indexable, for the founding-list wave); `/premium-acre/subscribe` =
+  identical email-only twin for the wider Tank Mix reader wave
+  (noindex, not in sitemap, no internal links; per the
+  /advertising-terms precedent). Both sales routes render the shared
+  `src/components/premium-acre/SalesPage.tsx`, so copy edits go THERE
+  (one file changes both pages). CTAs go to the Stripe Payment Link
+  via `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL`.
+- **Public links for Eugen's emails:**
+  founding wave `https://agdronedirectory.com/premium-acre/join`,
+  Tank Mix wave `https://agdronedirectory.com/premium-acre/subscribe`.
 - **Starter Binder (founder day-one delivery):** Job Quoting Sheet,
   Spray Application Record, Spray Service Agreement, Subcontract Spray
   Agreement, Pre-Season Compliance Checklist. Documents themselves live
