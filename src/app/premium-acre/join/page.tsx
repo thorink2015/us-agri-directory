@@ -6,8 +6,8 @@ import {
   ArrowRight,
   CheckCircle,
   TrendingUp,
-  Shield,
-  FileText,
+  BarChart3,
+  Target,
   MapPin,
   Download,
 } from 'lucide-react';
@@ -17,12 +17,13 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 
 // ─── Founding-member sales page for The Premium Acre (paid newsletter) ───────
 // Light, minimal, conversion-focused. Sits below the /premium-acre founding
-// list signup: that page collects emails, this one takes the payment. All
-// facts come from Eugen's Premium Acre deliverable (pillars, binder docs,
-// founder stack); founding price $17/month per Eugen. Copy was reworked
-// 2026-07-17 from a three-agent review (direct-response, operator proxy,
-// plain-English editor): honest price framing instead of a strikethrough,
-// one CTA label everywhere, trade language over marketing language.
+// list signup: that page collects emails, this one takes the payment.
+// Positioning per Eugen (2026-07-17): hero in his own newsletter-ad voice
+// (product name as the title, his "I do the digging, you get the playbook"
+// line), money-making content center stage (playbooks, real numbers, how to
+// land the work, getting found online), and the binder documents demoted to
+// a welcome bonus instead of a headline section. Facts trace to Eugen's
+// deliverable and his in-chat inputs; founding price $17/month.
 // Uses the same distraction-free chrome as /premium-acre (minimal header +
 // footer, no newsletter band, no exit popup).
 // -----------------------------------------------------------------------------
@@ -36,7 +37,7 @@ const STRIPE_CHECKOUT_URL = PREMIUM_ACRE_STRIPE_URL || '#founder-deal';
 
 const PAGE_PATH = '/premium-acre/join';
 const DESCRIPTION =
-  'Twice a month for spray drone operators: one money lane priced to the dollar, one compliance trap taken apart, one binder document. Get the founding rate, $17 a month.';
+  'A paid newsletter for ag drone operators: the work that pays more, who is buying and how to land it. Get the founding rate, $17 a month.';
 
 export const metadata: Metadata = {
   title: 'Join The Premium Acre: $17 Founding Member Rate',
@@ -73,54 +74,23 @@ export const metadata: Metadata = {
   },
 };
 
-// ─── Page content (facts from Eugen's Premium Acre deliverable) ──────────────
+// ─── Page content (facts from Eugen's deliverable + his in-chat copy) ────────
 
-const PILLARS = [
+const PLAYBOOK_CARDS = [
   {
     icon: TrendingUp,
-    tag: 'Offense',
-    title: 'The Money Lane',
-    body: 'One money lane broken down to the dollar. Who pays, what to quote, who to call and the words to use. Solar sites pay vegetation contractors five figures a year. Almost nobody flies herbicide on them. I dig up lanes like that while everyone else fights over $13 corn acres.',
+    title: 'The work that pays more',
+    body: 'Every issue digs up work that beats $13 corn acres. Solar sites pay vegetation contractors five figures a year and almost nobody flies herbicide on them. Lanes like that, priced to the dollar.',
   },
   {
-    icon: Shield,
-    tag: 'Defense',
-    title: 'The Fine Print',
-    body: "One missing line on a spray record is a $750 fine. A label that does not cover drones is your liability, not the manufacturer's. Every issue, I take one compliance trap apart so you do not lose a season to an inspector, a label or the cheap guy down the road.",
+    icon: BarChart3,
+    title: 'The numbers, researched for you',
+    body: 'Who pays, what it pays and what to quote. Real rates and real numbers you can price a job on, not guesses.',
   },
   {
-    icon: FileText,
-    tag: 'Paperwork that pays',
-    title: 'The Binder Doc',
-    body: 'Every issue ships a document straight into your Operator Binder. Quoting sheets. Spray records. Contracts. A year from now you own the binder that survives an audit.',
-  },
-];
-
-const BINDER_DOCS = [
-  {
-    num: '01',
-    title: 'Job Quoting Sheet',
-    desc: 'Price jobs on your numbers, with the words for when the farmer brings up the cheaper guy',
-  },
-  {
-    num: '02',
-    title: 'Spray Application Record',
-    desc: 'The audit-ready record built on FAA Part 137, plus the fields your state fines you for missing',
-  },
-  {
-    num: '03',
-    title: 'Spray Service Agreement',
-    desc: 'The operator-to-farmer contract that does the talking before anything goes wrong',
-  },
-  {
-    num: '04',
-    title: 'Subcontract Spray Agreement',
-    desc: 'Terms for dealer and co-op work: rates, acreage counts and who answers for drift',
-  },
-  {
-    num: '05',
-    title: 'Pre-Season Compliance Checklist',
-    desc: 'FAA, state licenses, insurance and FCC paperwork checked before the first job',
+    icon: Target,
+    title: 'How to land it',
+    body: 'Who to call and the words to use. Plus how to get your business found online, so farmers come looking for you.',
   },
 ];
 
@@ -148,20 +118,20 @@ const FOUNDER_PERKS = [
     rest: 'New members after founding pay $49.',
   },
   {
-    lead: 'The Starter Binder the day you join.',
-    rest: 'All five documents up front.',
+    lead: 'First look at farmer leads in your area, starting day one.',
+    rest: 'When an inquiry comes through the directory, members see it first. A perk, not a quota.',
   },
   {
     lead: 'I go through your operation myself.',
     rest: 'How farmers find you, what an inspector would see, and the three fixes I would make first, sent to you.',
   },
   {
-    lead: 'First look at farmer leads in your area, starting day one.',
-    rest: 'When an inquiry comes through the directory, members see it first. A perk, not a quota.',
+    lead: 'Bonus: five ready-to-use documents the day you join.',
+    rest: 'Quoting sheet, spray record, service agreement, subcontract agreement and a compliance checklist.',
   },
   {
-    lead: 'A vote on every Money Lane and Fine Print topic.',
-    rest: 'You help pick the jobs and the traps each issue takes apart.',
+    lead: 'A vote on what I dig into next.',
+    rest: 'You help pick the work and the numbers each issue breaks down.',
   },
 ];
 
@@ -179,17 +149,17 @@ const FAQS = [
   {
     question: 'What do I get the day I join?',
     answer:
-      'The full Starter Binder: the Job Quoting Sheet, Spray Application Record, Spray Service Agreement, Subcontract Spray Agreement and Pre-Season Compliance Checklist. All five documents up front.',
+      'A welcome bonus of five ready-to-use documents (quoting sheet, spray record, service agreement, subcontract agreement and a compliance checklist), first look at farmer leads in your area, and the next issue on the 1st or the 15th.',
   },
   {
     question: 'How is this different from Tank Mix?',
     answer:
-      'Tank Mix is the free weekly that shows you the industry. The Premium Acre shows you the invoice and the inspection: exact numbers, what to say and the documents you use on the job.',
+      'Tank Mix is the free weekly that shows you the industry. The Premium Acre is the paid playbook: the work that pays more, the numbers researched for you and how to land it.',
   },
   {
     question: 'I spray part time. Is this for me?',
     answer:
-      'Yes. A part-time operator signs the same contracts, keeps the same spray records and faces the same inspector as a full-time outfit. And better-paying work matters most when your flying hours are limited.',
+      'Yes. Better-paying work matters most when your flying hours are limited, and the documents and leads work the same for a part-time operator as for a full-time outfit.',
   },
   {
     question: 'How does payment work?',
@@ -198,8 +168,7 @@ const FAQS = [
   },
   {
     question: 'When do issues arrive?',
-    answer:
-      'Twice a month, on the 1st and the 15th, straight to your inbox. Every issue carries one Money Lane, one Fine Print and one Binder Doc.',
+    answer: 'Twice a month, on the 1st and the 15th, straight to your inbox.',
   },
 ];
 
@@ -286,23 +255,22 @@ export default function PremiumAcreJoinPage() {
       />
 
       <div className="bg-white">
-        {/* ─── Hero ──────────────────────────────────────────────────────── */}
+        {/* ─── Hero (Eugen's own newsletter-ad voice) ─────────────────────── */}
         <section className="bg-gradient-to-b from-stone-50 to-white px-4 pt-16 pb-20 sm:pt-20">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-green-800 bg-green-50 border border-green-200 px-3 py-1 rounded-full mb-6">
               <Mail className="w-3.5 h-3.5" />
-              For US spray drone operators
+              Now open
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-6 text-balance">
-              Get off the $13 acre.
+              The Premium Acre
             </h1>
 
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
-              The average spray acre paid $21 last year. It pays $13 now. The
-              Premium Acre finds the work that never joined the price war: who
-              pays, what to quote, and the paperwork that gets you paid and
-              through an inspection. Twice a month, on the 1st and the 15th.
+              A paid newsletter for ag drone operators. I do the digging, you
+              get the playbook: the work that pays more, who&apos;s buying and
+              how to land it. Founding members lock the lowest price.
             </p>
 
             <div className="mb-2 flex items-baseline justify-center gap-2">
@@ -343,36 +311,36 @@ export default function PremiumAcreJoinPage() {
                     </span>
                     <div>
                       <p className="text-sm font-semibold text-gray-900">
-                        The Money Lane
+                        The work that pays more
                       </p>
                       <p className="text-xs text-gray-500">
-                        Who pays, what to quote, who to call
+                        Priced to the dollar
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-8 h-8 rounded-full bg-green-50 flex items-center justify-center">
-                      <Shield className="w-4 h-4 text-green-800" />
+                      <BarChart3 className="w-4 h-4 text-green-800" />
                     </span>
                     <div>
                       <p className="text-sm font-semibold text-gray-900">
-                        The Fine Print
+                        Who&apos;s buying
                       </p>
                       <p className="text-xs text-gray-500">
-                        One compliance trap, taken apart
+                        Real rates, real numbers
                       </p>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-8 h-8 rounded-full bg-green-50 flex items-center justify-center">
-                      <FileText className="w-4 h-4 text-green-800" />
+                      <Target className="w-4 h-4 text-green-800" />
                     </span>
                     <div>
                       <p className="text-sm font-semibold text-gray-900">
-                        The Binder Doc
+                        How to land it
                       </p>
                       <p className="text-xs text-gray-500">
-                        One document for your Operator Binder
+                        Who to call and what to say
                       </p>
                     </div>
                   </li>
@@ -382,79 +350,45 @@ export default function PremiumAcreJoinPage() {
           </div>
         </section>
 
-        {/* ─── The three pillars ─────────────────────────────────────────── */}
+        {/* ─── The playbook (money first) ────────────────────────────────── */}
         <section className="px-4 py-20">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">
-                Every issue, the 1st and the 15th
+                I do the digging. You get the playbook.
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Tank Mix, the free weekly, shows you the industry. The Premium
-                Acre shows you the invoice and the inspection.
+                Twice a month, on the 1st and the 15th. Built to make you money,
+                not to fill your inbox.
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              {PILLARS.map((pillar) => (
+              {PLAYBOOK_CARDS.map((card) => (
                 <div
-                  key={pillar.title}
+                  key={card.title}
                   className="bg-white border border-stone-200 rounded-2xl p-7"
                 >
                   <span className="inline-flex w-11 h-11 rounded-full bg-green-50 items-center justify-center mb-5">
-                    <pillar.icon className="w-5 h-5 text-green-800" />
+                    <card.icon className="w-5 h-5 text-green-800" />
                   </span>
-                  <p className="text-[11px] font-semibold uppercase tracking-widest text-green-700 mb-1">
-                    {pillar.tag}
-                  </p>
                   <h3 className="font-serif text-xl font-bold text-gray-900 mb-3">
-                    {pillar.title}
+                    {card.title}
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    {pillar.body}
+                    {card.body}
                   </p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
 
-        {/* ─── The Starter Binder + leads callout ────────────────────────── */}
-        <section className="px-4 py-20 bg-stone-50">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">
-                Your binder starts with five documents, day one
-              </h2>
-              <p className="text-gray-600">
-                Founding members get the full Starter Binder the day they join.
-                Nothing held back for later.
-              </p>
-            </div>
+            <p className="text-center text-sm text-gray-500 max-w-xl mx-auto mt-8">
+              Also inside: the compliance traps that cost real fines (one
+              missing spray-record line is $750) and ready-to-use documents
+              when a job calls for them.
+            </p>
 
-            <ul className="space-y-3">
-              {BINDER_DOCS.map((doc) => (
-                <li
-                  key={doc.num}
-                  className="flex items-center gap-4 bg-white border border-stone-200 rounded-xl px-5 py-4"
-                >
-                  <span className="font-serif text-lg font-bold text-green-700 w-8 flex-shrink-0">
-                    {doc.num}
-                  </span>
-                  <div>
-                    <p className="text-sm font-semibold text-gray-900">
-                      {doc.title}
-                    </p>
-                    <p className="text-xs text-gray-500">{doc.desc}</p>
-                  </div>
-                </li>
-              ))}
-              <li className="text-center text-sm text-gray-500 pt-2">
-                A new document lands in your binder with every issue.
-              </li>
-            </ul>
-
-            <div className="mt-10 bg-white border border-stone-200 rounded-2xl p-6 flex items-start gap-4">
+            <div className="max-w-2xl mx-auto mt-10 bg-stone-50 border border-stone-200 rounded-2xl p-6 flex items-start gap-4">
               <span className="flex-shrink-0 w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
                 <MapPin className="w-5 h-5 text-green-800" />
               </span>
@@ -468,31 +402,6 @@ export default function PremiumAcreJoinPage() {
                   not a quota: leads land when farmers ask.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── Who writes this ───────────────────────────────────────────── */}
-        <section className="px-4 py-20">
-          <div className="max-w-xl mx-auto">
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight text-center mb-8">
-              Who writes this
-            </h2>
-            <div className="flex items-start gap-5">
-              <Image
-                src="/images/eugen-author.jpg"
-                alt="AgDrone Eugen"
-                width={112}
-                height={112}
-                className="w-16 h-16 rounded-full object-cover flex-shrink-0"
-              />
-              <p className="text-base text-gray-600 leading-relaxed">
-                I am <strong className="text-gray-900">AgDrone Eugen</strong>. I
-                edit Tank Mix, the free weekly that goes out to 1,000+ drone
-                operators across the country, and I run agdronedirectory.com,
-                the national operator directory. The Premium Acre is where I put
-                the numbers and the documents that do not fit a free email.
-              </p>
             </div>
           </div>
         </section>
@@ -537,8 +446,33 @@ export default function PremiumAcreJoinPage() {
           </div>
         </section>
 
+        {/* ─── Who writes this ───────────────────────────────────────────── */}
+        <section className="px-4 py-20">
+          <div className="max-w-xl mx-auto">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight text-center mb-8">
+              Who writes this
+            </h2>
+            <div className="flex items-start gap-5">
+              <Image
+                src="/images/eugen-author.jpg"
+                alt="AgDrone Eugen"
+                width={112}
+                height={112}
+                className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+              />
+              <p className="text-base text-gray-600 leading-relaxed">
+                I am <strong className="text-gray-900">AgDrone Eugen</strong>. I
+                edit Tank Mix, the free weekly that goes out to 1,000+ drone
+                operators across the country, and I run agdronedirectory.com,
+                the national operator directory. The Premium Acre is where I put
+                the numbers and the playbooks that do not fit a free email.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* ─── The founding offer ────────────────────────────────────────── */}
-        <section id="founder-deal" className="px-4 py-20 scroll-mt-20">
+        <section id="founder-deal" className="px-4 pb-20 scroll-mt-20">
           <div className="max-w-3xl mx-auto">
             <div className="bg-gradient-to-br from-green-900 to-green-950 rounded-3xl px-6 py-12 sm:px-12 text-center text-white">
               <p className="inline-block text-[11px] font-semibold uppercase tracking-widest text-green-300 border border-green-700 rounded-full px-4 py-1.5 mb-6">
@@ -596,11 +530,11 @@ export default function PremiumAcreJoinPage() {
         <section className="px-4 pb-24">
           <div className="max-w-2xl mx-auto text-center border-t border-stone-200 pt-16">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-4">
-              Your margin is the whole game
+              Lock in the founding rate
             </h2>
             <p className="text-gray-600 mb-8">
-              One money lane. One compliance trap. One binder document. Twice a
-              month, for less than what one acre paid at the old rate.
+              $17 a month while you stay. $49 after the founding spots close.
+              Read the free guides first if you want proof.
             </p>
             <CtaButton />
             <CtaNote />

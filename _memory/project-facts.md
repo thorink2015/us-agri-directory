@@ -125,6 +125,15 @@ and `AUTHOR.organizationId` getters.
   founding Stripe CTA. Copy voice on the join page: no strikethrough
   price theater ($49 stated in words), one CTA label everywhere
   ("Lock in my $17 rate"), "locked while you stay" never "for life".
+- **Positioning (Eugen, 2026-07-17, second pass):** hero in his own
+  newsletter-ad voice: H1 is just "The Premium Acre" + his line "I do
+  the digging, you get the playbook: the work that pays more, who's
+  buying and how to land it." Money-making content is center stage
+  (playbooks, researched numbers/rates, how to land work, getting
+  found online). The five binder documents are a WELCOME BONUS perk,
+  never a headline section. No ad-style headlines.
+- **H1 note:** join page H1 is "The Premium Acre", so the signup page
+  H1 became "The Premium Acre founding list" (site-wide unique-H1 rule).
 
 ## Internal folders (not served by the site)
 
