@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
-import { Mail } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, Mail } from 'lucide-react';
 import { AUTHOR, SITE } from '@/data/author';
 import PremiumAcreForm from './PremiumAcreForm';
 
@@ -110,6 +111,17 @@ export default function PremiumAcrePage() {
             Every month I find the work that pays more than commodity acres, who
             buys it, what it pays and how to land it. Plus how to get your own
             business found online, so farmers come looking for you.
+          </p>
+
+          <p className="text-sm text-gray-700 mt-8">
+            Ready now? Founding membership is open.{' '}
+            <Link
+              href="/premium-acre/join"
+              className="inline-flex items-center gap-1 font-semibold text-green-800 hover:underline"
+            >
+              See what is inside
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
           </p>
         </div>
       </div>

@@ -202,10 +202,17 @@ export default function GuidesHubPage() {
 
       {/* Free downloads / lead magnets */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
-        <div className="flex items-baseline justify-between mb-5">
+        <div className="flex flex-wrap items-baseline justify-between gap-2 mb-5">
           <h2 className="text-sm font-semibold uppercase tracking-widest text-gray-500">
             Free downloads
           </h2>
+          <Link
+            href="/premium-acre/join"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-green-800 hover:underline"
+          >
+            Want the paid issues? Join The Premium Acre
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[

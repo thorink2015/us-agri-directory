@@ -14,7 +14,7 @@ export default function Footer() {
   // Focused landing pages get a single-line footer: brand + copyright +
   // the two policy links, nothing else (and no top margin, so there is no
   // gray gap above it).
-  if (pathname === '/premium-acre') {
+  if (pathname === '/premium-acre' || pathname === '/premium-acre/join') {
     return (
       <footer className="bg-green-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">

@@ -52,6 +52,7 @@ Last updated: 2026-04-15
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 tracking | To be replaced with Plausible |
 | `NEXT_PUBLIC_FORMSPREE_ID` | Contact form endpoint | Set |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Plausible Analytics site ID | **Not yet set — blocked on Eugen** |
+| `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL` | Stripe Payment Link for The Premium Acre CTAs on `/premium-acre/join` | **Not yet set — blocked on Eugen.** Buttons fall back to `/premium-acre` until set |
 
 ## Schema @id anchors (every JSON-LD on the site references these)
 
@@ -96,6 +97,24 @@ and `AUTHOR.organizationId` getters.
   updated" + `HomepageNewsletterForm`) on 2026-06-17. The `newsletter`
   and `newsletter-homepage` Formspree `_form_type` values are now
   unused.
+
+## Paid newsletter (The Premium Acre)
+
+- **Product:** paid twice-monthly newsletter (issues on the 1st and
+  15th): one Money Lane + one Fine Print + one Binder Doc per issue.
+- **Pricing (2026-07-17, per Eugen):** founding members $17/month
+  locked for life; public anchor price $49/month.
+- **Pages:** `/premium-acre` = founding-list email signup (Formspree
+  `premium-acre-signup`); `/premium-acre/join` = founding sales page,
+  CTAs go to the Stripe Payment Link via
+  `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL`.
+- **Starter Binder (founder day-one delivery):** Job Quoting Sheet,
+  Spray Application Record, Spray Service Agreement, Subcontract Spray
+  Agreement, Pre-Season Compliance Checklist. Documents themselves live
+  outside this repo (Eugen's deliverables).
+- **Leads perk:** directory farmer inquiries in a member's area get
+  sent to members first. Frame as perk, never a promise (lead flow not
+  stable yet, per Eugen 2026-07-17).
 
 ## Internal folders (not served by the site)
 

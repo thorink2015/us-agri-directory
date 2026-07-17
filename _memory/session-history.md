@@ -1135,6 +1135,42 @@ fully delivered through the existing emit points.
   title, canonical, single H1, all three schema types, the PDF download
   link, zero em/en dashes.
 
+## 2026-07-17 — /premium-acre/join founding sales page (branch claude/paid-newsletter-landing-7khc1e)
+
+- Founding-member SALES page for The Premium Acre at `/premium-acre/join`
+  (the /premium-acre page keeps collecting emails; this page takes the
+  payment). Light Apple-style design: white/stone-50, serif headlines,
+  green-800 accent, pill CTAs, a pure-CSS "issue card stack" hero graphic
+  (no images). Sections: hero with $49-struck/$17 pricing, 3 pillars
+  (Money Lane / Fine Print / Binder Doc), 5-doc Starter Binder list,
+  First Look Leads (framed as perk not quota per Eugen's "not stable
+  yet"), sneak-peek cards linking the 3 free PDF guides, dark-green
+  founder-deal card with 5 perks, Eugen trust strip (photo +
+  AUTHOR.fullName), 5-question FAQ (FAQAccordion + FAQPage JSON-LD),
+  final CTA. All body copy from Eugen's Premium Acre deliverable
+  (pasted in-session); founding price $17/month per Eugen (deliverable
+  had $19), $49 anchor retained.
+- **Stripe CTA:** all buttons read `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL`
+  (new env var, to be set in Netlify to the live Stripe Payment Link).
+  Until set, buttons fall back to `/premium-acre` so no dead link ships.
+- Chrome: join page added to the minimal-header/minimal-footer
+  conditions, GlobalNewsletter SUPPRESS_ON; ExitIntentPopup already
+  covers it via the `/premium-acre` startsWith rule.
+- Wiring: sitemap staticPages (0.6 monthly); inbound links from
+  /premium-acre ("Ready now? ... See what is inside") and the /guides
+  hub Free downloads header; outbound to the 3 guide pages. Schemas:
+  BreadcrumbList (Home > The Premium Acre > Join) + WebPage + FAQPage.
+  No Byline/AuthorCard (conversion-landing precedent from /premium-acre).
+- Deliberate omissions: no hard deadline date on the founder card
+  ("Sunday night" in the deliverable would go stale; used "Founding
+  spots are limited" instead). H1 is the deliverable tagline "Make more
+  per acre. Keep every dollar of it." with the brand carried by eyebrow,
+  title tag and meta.
+- Verified: `npm run build` clean; join.html has correct title,
+  canonical, unique H1, 3 schema blocks, minimal header (0 dropdowns),
+  minimal footer, 3 guide links, next/image author photo, zero em/en
+  dashes.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
