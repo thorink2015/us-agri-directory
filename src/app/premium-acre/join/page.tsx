@@ -118,7 +118,7 @@ const FOUNDER_PERKS = [
     rest: 'New members after founding pay $49.',
   },
   {
-    lead: 'First look at farmer leads in your area, starting day one.',
+    lead: 'First look at farmer leads in your area.',
     rest: 'When an inquiry comes through the directory, members see it first. A perk, not a quota.',
   },
   {
@@ -126,7 +126,7 @@ const FOUNDER_PERKS = [
     rest: 'How farmers find you, what an inspector would see, and the three fixes I would make first, sent to you.',
   },
   {
-    lead: 'Bonus: five ready-to-use documents the day you join.',
+    lead: 'Bonus: five ready-to-use documents.',
     rest: 'Quoting sheet, spray record, service agreement, subcontract agreement and a compliance checklist.',
   },
   {
@@ -139,7 +139,7 @@ const FAQS = [
   {
     question: 'How do I know the issues are worth paying for?',
     answer:
-      'Read the free field guides first. The Premium Acre Playbook, The Solar Book and Fields Only a Drone Can Fly cost nothing, and every paid issue has to clear that bar and go further. If the guides do not earn your $17, keep your money.',
+      'Start with the free field guides: The Premium Acre Playbook, The Solar Book and Fields Only a Drone Can Fly. They are the kind of digging The Premium Acre is built on. And membership is month to month, so you can cancel anytime.',
   },
   {
     question: 'Is the founding rate really locked?',
@@ -147,9 +147,9 @@ const FAQS = [
       'Yes. Founding members pay $17 a month for as long as they stay, and the price never goes up. After the founding spots close, the regular rate is $49 a month.',
   },
   {
-    question: 'What do I get the day I join?',
+    question: 'What happens after I join?',
     answer:
-      'A welcome bonus of five ready-to-use documents (quoting sheet, spray record, service agreement, subcontract agreement and a compliance checklist), first look at farmer leads in your area, and the next issue on the 1st or the 15th.',
+      'You lock in the $17 founding rate. The newsletter kicks off in the next week or so, and founding members get the first issue plus the welcome bonuses: five ready-to-use documents (quoting sheet, spray record, service agreement, subcontract agreement and a compliance checklist) and first look at farmer leads in your area.',
   },
   {
     question: 'How is this different from Tank Mix?',
@@ -411,13 +411,11 @@ export default function PremiumAcreJoinPage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-3">
-                See the work before you pay
+                The guides that inspired this
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                These three field guides are free Tank Mix downloads. Every paid
-                issue clears this bar, then goes further: exact numbers, what to
-                say and the document to close the work. If the guides are not
-                worth your time, keep your $17.
+                Three free field guides from Tank Mix. Work like this is what
+                grew into The Premium Acre.
               </p>
             </div>
 
@@ -534,7 +532,6 @@ export default function PremiumAcreJoinPage() {
             </h2>
             <p className="text-gray-600 mb-8">
               $17 a month while you stay. $49 after the founding spots close.
-              Read the free guides first if you want proof.
             </p>
             <CtaButton />
             <CtaNote />

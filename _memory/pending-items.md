@@ -240,9 +240,15 @@ See `_research/README.md` for what's uploaded and what's missing.
   founder-deal card (safe, but not selling). No code change needed once
   the env var is set.
 - Optional: a real close date for the founding offer. The page
-  currently says "Founding spots are limited" with no date; if Eugen
-  wants "closes Sunday night" urgency, it is a one-line copy edit on
-  the founder card.
+  currently says "Founding member offer" with no date; a hard date is
+  a one-line copy edit on the founder card.
+- **The five bonus documents are NOT built/hosted yet** (Eugen,
+  2026-07-17: "i didnt put them anywhere yet"). The page therefore
+  promises no day-one delivery: the "What happens after I join?" FAQ
+  says the newsletter kicks off "in the next week or so" with the
+  first issue + welcome bonuses. Once Eugen produces the documents
+  (drafts exist in his Claude Desktop sessions), update that FAQ if
+  the timeline language goes stale.
 
 ## Blocked on external account setup (Eugen handles)
 

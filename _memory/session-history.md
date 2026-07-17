@@ -1237,6 +1237,15 @@ fully delivered through the existing emit points.
 - Verified: build clean (2,370 pages); HTML checked for both H1s, his
   hero line, binder section gone, docs-as-bonus, 7 FAQPage questions,
   zero em/en dashes.
+- **Same-PR follow-up (Eugen feedback):** guides section softened to
+  modest framing (H2 "The guides that inspired this", no "before you
+  pay" / "keep your $17" challenge); all day-one delivery promises
+  removed because the five documents are not built yet ("day you
+  join" / "starting day one" cut from perks; FAQ became "What happens
+  after I join?" with Eugen's "next week or so" kickoff timeline);
+  worth-it FAQ softened to month-to-month framing; "Read the free
+  guides first if you want proof" cut from the closer. Verified in
+  built HTML: zero leftover pay-challenge/day-one strings.
 
 ## What's next
 
