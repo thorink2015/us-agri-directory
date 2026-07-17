@@ -8,3 +8,7 @@ export const PREMIUM_ACRE_STRIPE_URL =
   process.env.NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL || '';
 
 export const PREMIUM_ACRE_JOIN_PATH = '/premium-acre/join';
+
+// Email-only twin of the join page for the wider Tank Mix reader wave
+// (noindex; same shared SalesPage component).
+export const PREMIUM_ACRE_SUBSCRIBE_PATH = '/premium-acre/subscribe';

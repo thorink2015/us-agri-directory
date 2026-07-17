@@ -14,7 +14,12 @@ import { usePathname } from 'next/navigation';
  * Takes the (server-rendered) NewsletterCTA as children so the marketing copy
  * still ships in the SSR HTML.
  */
-const SUPPRESS_ON = ['/', '/premium-acre', '/premium-acre/join'];
+const SUPPRESS_ON = [
+  '/',
+  '/premium-acre',
+  '/premium-acre/join',
+  '/premium-acre/subscribe',
+];
 
 export default function GlobalNewsletter({
   children,

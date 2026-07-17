@@ -8,6 +8,7 @@ import GetMatchedButton from '@/components/leads/GetMatchedButton';
 import {
   PREMIUM_ACRE_STRIPE_URL,
   PREMIUM_ACRE_JOIN_PATH,
+  PREMIUM_ACRE_SUBSCRIBE_PATH,
 } from '@/lib/premium-acre';
 
 type NavLink = { href: string; label: string; description?: string };
@@ -101,25 +102,27 @@ export default function Header() {
     [],
   );
 
-  // The two Premium Acre pages get a stripped-down header branded for the
-  // paid newsletter: its own logo plus a single founding CTA. The CTA goes
-  // to the Stripe Payment Link once the env var is set; until then the join
-  // page scrolls to the founder deal and the signup page links to /join.
-  const minimal =
-    pathname === '/premium-acre' || pathname === PREMIUM_ACRE_JOIN_PATH;
+  // The Premium Acre pages get a stripped-down header branded for the paid
+  // newsletter: its own logo plus a single founding CTA. The CTA goes to
+  // the Stripe Payment Link once the env var is set; until then the sales
+  // pages scroll to their founder-deal card and the signup page links to
+  // /join. The logo stays on the current sales page so each email wave
+  // keeps its own URL.
+  const onSalesPage =
+    pathname === PREMIUM_ACRE_JOIN_PATH ||
+    pathname === PREMIUM_ACRE_SUBSCRIBE_PATH;
+  const minimal = pathname === '/premium-acre' || onSalesPage;
 
   if (minimal) {
     const ctaHref =
       PREMIUM_ACRE_STRIPE_URL ||
-      (pathname === PREMIUM_ACRE_JOIN_PATH
-        ? '#founder-deal'
-        : PREMIUM_ACRE_JOIN_PATH);
+      (onSalesPage ? '#founder-deal' : PREMIUM_ACRE_JOIN_PATH);
     return (
       <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <Link
-              href={PREMIUM_ACRE_JOIN_PATH}
+              href={onSalesPage ? pathname : PREMIUM_ACRE_JOIN_PATH}
               className="flex items-center gap-2 group flex-shrink-0"
             >
               <div className="w-8 h-8 bg-green-800 rounded-lg flex items-center justify-center">
