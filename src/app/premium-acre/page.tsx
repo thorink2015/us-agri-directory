@@ -93,7 +93,7 @@ export default function PremiumAcrePage() {
           </div>
 
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-5 text-balance">
-            The Premium Acre
+            The Premium Acre founding list
           </h1>
 
           <p className="text-lg text-gray-700 leading-relaxed">

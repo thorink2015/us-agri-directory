@@ -1208,6 +1208,45 @@ fully delivered through the existing emit points.
   for H1, 4 CTA anchors, rebranded chrome, 7 FAQPage questions, zero
   em/en dashes, zero legacy jargon strings.
 
+## 2026-07-17 — /premium-acre/join simplified, money-first (branch claude/paid-newsletter-landing-7khc1e, PR after #144)
+
+- Third pass per Eugen: previous H1 ("Get off the $13 acre.") felt
+  like an ad; he supplied his own newsletter-ad copy as the model.
+  Branch restarted from main (post-#144 merge).
+- Hero now his voice verbatim: eyebrow "Now open", H1 "The Premium
+  Acre", paragraph "A paid newsletter for ag drone operators. I do
+  the digging, you get the playbook: the work that pays more, who's
+  buying and how to land it. Founding members lock the lowest price."
+  Price block unchanged ($17 locked while you stay, $49 stated after).
+- Money-making content promoted to center stage: new "I do the
+  digging. You get the playbook." section with three cards (The work
+  that pays more / The numbers, researched for you / How to land it,
+  incl. getting found online per his fine-print copy). Issue-mock rows
+  updated to match.
+- Binder demoted per Eugen ("just a small perk, like bonus"): the
+  five-document section deleted; docs now one founder perk ("Bonus:
+  five ready-to-use documents the day you join") + one FAQ mention.
+  Compliance demoted to one "Also inside" line (keeps the $750 fact).
+  Money Lane / Fine Print / Binder Doc issue-anatomy naming dropped
+  from the page.
+- Leads callout kept (inside the playbook section). Guides, trust,
+  founder card, FAQ (7, updated), simplified closer ("Lock in the
+  founding rate") all retained.
+- H1 uniqueness: signup page H1 changed to "The Premium Acre founding
+  list" so the join page can own "The Premium Acre".
+- Verified: build clean (2,370 pages); HTML checked for both H1s, his
+  hero line, binder section gone, docs-as-bonus, 7 FAQPage questions,
+  zero em/en dashes.
+- **Same-PR follow-up (Eugen feedback):** guides section softened to
+  modest framing (H2 "The guides that inspired this", no "before you
+  pay" / "keep your $17" challenge); all day-one delivery promises
+  removed because the five documents are not built yet ("day you
+  join" / "starting day one" cut from perks; FAQ became "What happens
+  after I join?" with Eugen's "next week or so" kickoff timeline);
+  worth-it FAQ softened to month-to-month framing; "Read the free
+  guides first if you want proof" cut from the closer. Verified in
+  built HTML: zero leftover pay-challenge/day-one strings.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
