@@ -1171,6 +1171,43 @@ fully delivered through the existing emit points.
   minimal footer, 3 guide links, next/image author photo, zero em/en
   dashes.
 
+## 2026-07-17 — /premium-acre/join fixes + copy overhaul (branch claude/paid-newsletter-landing-7khc1e, PR #144)
+
+- Follow-up to merged PR #143 after Eugen's live review. Branch
+  restarted from main per merged-PR protocol.
+- **Commit 1 (mechanical):** new `src/lib/premium-acre.ts` shared
+  Stripe-link constant; all founding CTAs (page + new minimal-header
+  button) read it and scroll to `#founder-deal` while unset (was:
+  bounce to /premium-acre, which Eugen hit as "wrong link"). Minimal
+  header CTA swapped from "List your business"; header + footer logo
+  rebranded to The Premium Acre (Mail icon + serif wordmark, footer
+  line "© 2026 The Premium Acre · A Tank Mix publication"). Trust
+  strip: "AgDrone Eugen" + 1,000+ readers.
+- **Commit 2 (copy):** full copy pass synthesized from a 3-agent
+  review panel Eugen requested (direct-response copywriter, skeptical
+  operator proxy, plain-English line editor). Panel-consensus changes:
+  H1 "Get off the $13 acre."; eyebrow "For US spray drone operators";
+  $49 strikethrough replaced with plain stated future price (operator
+  called the strike "staged"); "locked for life" normalized to
+  "locked while you stay" everywhere; one CTA label everywhere
+  ("Lock in my $17 rate"); jargon cut (drip, dismantled, no questions
+  asked, revenue stream, script, Operation Teardown as a name);
+  "wins the job" claim cut (paper survives audits, does not win
+  jobs); closer acre math fixed to the old $21 rate ($17 < $21, was
+  implicitly $17 > $13); leads section shrunk to an honest callout
+  card inside the binder section; trust strip moved above the offer,
+  first person, "goes out to 1,000+"; FAQ grown to 7 with the two
+  real objections (worth-it: "If the guides do not earn your $17,
+  keep your money"; part-timer) and reordered by objection weight;
+  founder-card scarcity now consequence-based ("the $17 lock is gone
+  for good") instead of a countless "spots are limited" poster.
+- All facts still trace to Eugen's deliverable + his in-chat inputs
+  ($17 price, 1,000+ readers, AgDrone Eugen persona). No invented
+  numbers, testimonials or guarantees.
+- Verified: `npm run build` clean (2,370 pages); built HTML checked
+  for H1, 4 CTA anchors, rebranded chrome, 7 FAQPage questions, zero
+  em/en dashes, zero legacy jargon strings.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

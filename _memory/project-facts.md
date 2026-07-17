@@ -52,7 +52,7 @@ Last updated: 2026-04-15
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 tracking | To be replaced with Plausible |
 | `NEXT_PUBLIC_FORMSPREE_ID` | Contact form endpoint | Set |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Plausible Analytics site ID | **Not yet set — blocked on Eugen** |
-| `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL` | Stripe Payment Link for The Premium Acre CTAs on `/premium-acre/join` | **Not yet set — blocked on Eugen.** Buttons fall back to `/premium-acre` until set |
+| `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL` | Stripe Payment Link for The Premium Acre CTAs (join page + minimal header), read via `src/lib/premium-acre.ts` | **Not yet set — blocked on Eugen.** Buttons scroll to the founder-deal card until set |
 
 ## Schema @id anchors (every JSON-LD on the site references these)
 
@@ -115,6 +115,16 @@ and `AUTHOR.organizationId` getters.
 - **Leads perk:** directory farmer inquiries in a member's area get
   sent to members first. Frame as perk, never a promise (lead flow not
   stable yet, per Eugen 2026-07-17).
+- **Public persona (2026-07-17, per Eugen):** on Premium Acre pages the
+  author appears as "AgDrone Eugen" (no family name) with the author
+  photo. Tank Mix reach figure per Eugen: 1,000+ drone operators.
+  `src/data/author.ts` itself stays untouched (frozen).
+- **Chrome branding:** the minimal header/footer on `/premium-acre` and
+  `/premium-acre/join` carry The Premium Acre brand (Mail icon + serif
+  wordmark), not the directory brand, and the header CTA is the
+  founding Stripe CTA. Copy voice on the join page: no strikethrough
+  price theater ($49 stated in words), one CTA label everywhere
+  ("Lock in my $17 rate"), "locked while you stay" never "for life".
 
 ## Internal folders (not served by the site)
 
