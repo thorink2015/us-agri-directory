@@ -3,8 +3,12 @@
 import Link from 'next/link';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Plane, ChevronDown } from 'lucide-react';
+import { Menu, X, Plane, ChevronDown, Mail } from 'lucide-react';
 import GetMatchedButton from '@/components/leads/GetMatchedButton';
+import {
+  PREMIUM_ACRE_STRIPE_URL,
+  PREMIUM_ACRE_JOIN_PATH,
+} from '@/lib/premium-acre';
 
 type NavLink = { href: string; label: string; description?: string };
 type NavTopItem =
@@ -97,31 +101,40 @@ export default function Header() {
     [],
   );
 
-  // Focused landing pages (e.g. the newsletter signup) get a stripped-down
-  // header: just the logo and the operator CTA, no nav or dropdowns.
+  // The two Premium Acre pages get a stripped-down header branded for the
+  // paid newsletter: its own logo plus a single founding CTA. The CTA goes
+  // to the Stripe Payment Link once the env var is set; until then the join
+  // page scrolls to the founder deal and the signup page links to /join.
   const minimal =
-    pathname === '/premium-acre' || pathname === '/premium-acre/join';
+    pathname === '/premium-acre' || pathname === PREMIUM_ACRE_JOIN_PATH;
 
   if (minimal) {
+    const ctaHref =
+      PREMIUM_ACRE_STRIPE_URL ||
+      (pathname === PREMIUM_ACRE_JOIN_PATH
+        ? '#founder-deal'
+        : PREMIUM_ACRE_JOIN_PATH);
     return (
       <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/" className="flex items-center gap-2 group flex-shrink-0">
-              <div className="w-8 h-8 bg-green-700 rounded-lg flex items-center justify-center">
-                <Plane className="w-5 h-5 text-white rotate-45" />
+            <Link
+              href={PREMIUM_ACRE_JOIN_PATH}
+              className="flex items-center gap-2 group flex-shrink-0"
+            >
+              <div className="w-8 h-8 bg-green-800 rounded-lg flex items-center justify-center">
+                <Mail className="w-4 h-4 text-white" />
               </div>
-              <span className="font-bold text-xl text-green-900 group-hover:opacity-80 transition-opacity">
-                US Ag Drone
-                <span className="text-yellow-700"> Directory</span>
+              <span className="font-serif font-bold text-xl text-gray-900 group-hover:opacity-80 transition-opacity">
+                The Premium Acre
               </span>
             </Link>
-            <Link
-              href="/list-your-business"
-              className="px-3 py-2 text-green-700 hover:text-green-800 hover:bg-green-50 text-sm font-medium rounded-lg border border-green-200 hover:border-green-300 transition-colors"
+            <a
+              href={ctaHref}
+              className="px-4 py-2 bg-green-800 hover:bg-green-900 text-white text-sm font-semibold rounded-full transition-colors"
             >
-              List your business
-            </Link>
+              Claim your founding spot
+            </a>
           </div>
         </div>
       </header>

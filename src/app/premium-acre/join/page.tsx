@@ -12,6 +12,7 @@ import {
   Download,
 } from 'lucide-react';
 import { AUTHOR, SITE } from '@/data/author';
+import { PREMIUM_ACRE_STRIPE_URL } from '@/lib/premium-acre';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 
 // ─── Founding-member sales page for The Premium Acre (paid newsletter) ───────
@@ -26,10 +27,9 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 // ─── Stripe checkout ─────────────────────────────────────────────────────────
 // Every CTA on this page points here. Set NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL
 // in the Netlify dashboard to the live Stripe Payment Link
-// (https://buy.stripe.com/...) and redeploy. Until it is set, buttons fall
-// back to the founding-list page so no dead link can ship.
-const STRIPE_CHECKOUT_URL =
-  process.env.NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL || '/premium-acre';
+// (https://buy.stripe.com/...) and redeploy. Until it is set, the buttons
+// scroll to the founder-deal card so nobody gets bounced off the page.
+const STRIPE_CHECKOUT_URL = PREMIUM_ACRE_STRIPE_URL || '#founder-deal';
 
 const PAGE_PATH = '/premium-acre/join';
 const DESCRIPTION =
@@ -503,7 +503,7 @@ export default function PremiumAcreJoinPage() {
         </section>
 
         {/* ─── The founding offer ────────────────────────────────────────── */}
-        <section className="px-4 py-20">
+        <section id="founder-deal" className="px-4 py-20 scroll-mt-20">
           <div className="max-w-3xl mx-auto">
             <div className="bg-gradient-to-br from-green-900 to-green-950 rounded-3xl px-6 py-12 sm:px-12 text-center text-white">
               <p className="inline-block text-[11px] font-semibold uppercase tracking-widest text-green-300 border border-green-700 rounded-full px-4 py-1.5 mb-6">
@@ -555,17 +555,17 @@ export default function PremiumAcreJoinPage() {
           <div className="max-w-xl mx-auto flex items-center gap-5">
             <Image
               src="/images/eugen-author.jpg"
-              alt={AUTHOR.fullName}
+              alt="AgDrone Eugen"
               width={112}
               height={112}
               className="w-14 h-14 rounded-full object-cover flex-shrink-0"
             />
             <p className="text-sm text-gray-600 leading-relaxed">
               The Premium Acre is written by{' '}
-              <strong className="text-gray-900">{AUTHOR.fullName}</strong>,
-              editor of Tank Mix, the weekly newsletter read by Part 137 spray
-              drone operators across the country, and founder of
-              agdronedirectory.com, the national operator directory.
+              <strong className="text-gray-900">AgDrone Eugen</strong>, editor
+              of Tank Mix, the weekly newsletter read by 1,000+ drone operators
+              across the country, and founder of agdronedirectory.com, the
+              national operator directory.
             </p>
           </div>
         </section>
