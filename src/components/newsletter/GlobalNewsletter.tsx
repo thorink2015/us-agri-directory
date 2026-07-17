@@ -7,13 +7,14 @@ import { usePathname } from 'next/navigation';
  * suppress list:
  *  - `/` — the homepage places its own NewsletterCTA in-flow (a more prominent
  *    slot), so suppressing it here avoids a duplicate beehiiv form.
- *  - `/premium-acre` — this is itself a newsletter signup page; visitors are
- *    the newsletter audience already, so the site-wide band is redundant.
+ *  - `/premium-acre` and `/premium-acre/join` — these are themselves
+ *    newsletter pages; visitors are the newsletter audience already, so the
+ *    site-wide band is redundant.
  *
  * Takes the (server-rendered) NewsletterCTA as children so the marketing copy
  * still ships in the SSR HTML.
  */
-const SUPPRESS_ON = ['/', '/premium-acre'];
+const SUPPRESS_ON = ['/', '/premium-acre', '/premium-acre/join'];
 
 export default function GlobalNewsletter({
   children,

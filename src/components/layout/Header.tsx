@@ -99,7 +99,8 @@ export default function Header() {
 
   // Focused landing pages (e.g. the newsletter signup) get a stripped-down
   // header: just the logo and the operator CTA, no nav or dropdowns.
-  const minimal = pathname === '/premium-acre';
+  const minimal =
+    pathname === '/premium-acre' || pathname === '/premium-acre/join';
 
   if (minimal) {
     return (

@@ -230,6 +230,18 @@ See `_research/README.md` for what's uploaded and what's missing.
 | `research-05-keyword-map.md` | Homepage rewrite, `/pricing` pillar rewrite |
 | `operators-batch-2-southeast.md` | Southeast operator seed data (plan references Batch 2 but not uploaded) — other 7 batches fully imported (PR #38) |
 
+## Blocked on Eugen — The Premium Acre launch (2026-07-17)
+
+- **Stripe Payment Link.** Create the $17/month subscription Payment
+  Link in Stripe, then set `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL` in the
+  Netlify dashboard and redeploy. Until then every CTA on
+  `/premium-acre/join` falls back to `/premium-acre` (safe, but not
+  selling). No code change needed once the env var is set.
+- Optional: a real close date for the founding offer. The page
+  currently says "Founding spots are limited" with no date; if Eugen
+  wants "closes Sunday night" urgency, it is a one-line copy edit on
+  the founder card.
+
 ## Blocked on external account setup (Eugen handles)
 
 - ✅ Yandex Webmaster — verified
