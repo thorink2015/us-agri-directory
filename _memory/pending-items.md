@@ -234,9 +234,11 @@ See `_research/README.md` for what's uploaded and what's missing.
 
 - **Stripe Payment Link.** Create the $17/month subscription Payment
   Link in Stripe, then set `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL` in the
-  Netlify dashboard and redeploy. Until then every CTA on
-  `/premium-acre/join` falls back to `/premium-acre` (safe, but not
-  selling). No code change needed once the env var is set.
+  Netlify dashboard and redeploy (or paste the link in chat to hardcode
+  it in `src/lib/premium-acre.ts`). Until then every CTA on
+  `/premium-acre/join` (and the minimal-header CTA) scrolls to the
+  founder-deal card (safe, but not selling). No code change needed once
+  the env var is set.
 - Optional: a real close date for the founding offer. The page
   currently says "Founding spots are limited" with no date; if Eugen
   wants "closes Sunday night" urgency, it is a one-line copy edit on

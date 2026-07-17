@@ -18,8 +18,11 @@ import FAQAccordion from '@/components/ui/FAQAccordion';
 // ─── Founding-member sales page for The Premium Acre (paid newsletter) ───────
 // Light, minimal, conversion-focused. Sits below the /premium-acre founding
 // list signup: that page collects emails, this one takes the payment. All
-// body copy comes from Eugen's Premium Acre deliverable (pillars, binder
-// docs, founder stack); founding price set to $17/month per Eugen.
+// facts come from Eugen's Premium Acre deliverable (pillars, binder docs,
+// founder stack); founding price $17/month per Eugen. Copy was reworked
+// 2026-07-17 from a three-agent review (direct-response, operator proxy,
+// plain-English editor): honest price framing instead of a strikethrough,
+// one CTA label everywhere, trade language over marketing language.
 // Uses the same distraction-free chrome as /premium-acre (minimal header +
 // footer, no newsletter band, no exit popup).
 // -----------------------------------------------------------------------------
@@ -33,7 +36,7 @@ const STRIPE_CHECKOUT_URL = PREMIUM_ACRE_STRIPE_URL || '#founder-deal';
 
 const PAGE_PATH = '/premium-acre/join';
 const DESCRIPTION =
-  'The twice-monthly playbook for spray drone operators: one revenue lane, one compliance trap, one binder doc per issue. Get the founding rate, $17 a month.';
+  'Twice a month for spray drone operators: one money lane priced to the dollar, one compliance trap taken apart, one binder document. Get the founding rate, $17 a month.';
 
 export const metadata: Metadata = {
   title: 'Join The Premium Acre: $17 Founding Member Rate',
@@ -70,26 +73,26 @@ export const metadata: Metadata = {
   },
 };
 
-// ─── Page content (from Eugen's Premium Acre deliverable) ────────────────────
+// ─── Page content (facts from Eugen's Premium Acre deliverable) ──────────────
 
 const PILLARS = [
   {
     icon: TrendingUp,
     tag: 'Offense',
     title: 'The Money Lane',
-    body: 'One revenue stream broken down to the dollar. Who pays, what to quote, who to call and the words to use. Solar sites pay vegetation contractors five figures a year and almost nobody flies herbicide on them. We dig up lanes like that while everyone else fights over $13 corn acres.',
+    body: 'One money lane broken down to the dollar. Who pays, what to quote, who to call and the words to use. Solar sites pay vegetation contractors five figures a year. Almost nobody flies herbicide on them. I dig up lanes like that while everyone else fights over $13 corn acres.',
   },
   {
     icon: Shield,
     tag: 'Defense',
     title: 'The Fine Print',
-    body: "One missing line on a spray record is a $750 fine, no questions asked. A label that does not cover drones is your liability, not the manufacturer's. Every issue we take one compliance trap apart so the inspector, the label and the undercutter never cost you a season.",
+    body: "One missing line on a spray record is a $750 fine. A label that does not cover drones is your liability, not the manufacturer's. Every issue, I take one compliance trap apart so you do not lose a season to an inspector, a label or the cheap guy down the road.",
   },
   {
     icon: FileText,
     tag: 'Paperwork that pays',
     title: 'The Binder Doc',
-    body: 'Every issue ships a document straight into your Operator Binder. Quoting sheets. Spray records. Contracts. A year from now you own the binder that survives an audit and wins the job.',
+    body: 'Every issue ships a document straight into your Operator Binder. Quoting sheets. Spray records. Contracts. A year from now you own the binder that survives an audit.',
   },
 ];
 
@@ -97,17 +100,17 @@ const BINDER_DOCS = [
   {
     num: '01',
     title: 'Job Quoting Sheet',
-    desc: 'Price on your numbers with a script to defend your rate against the undercutter',
+    desc: 'Price jobs on your numbers, with the words for when the farmer brings up the cheaper guy',
   },
   {
     num: '02',
     title: 'Spray Application Record',
-    desc: 'The audit-ready record built on FAA Part 137 plus the fields states fine you for missing',
+    desc: 'The audit-ready record built on FAA Part 137, plus the fields your state fines you for missing',
   },
   {
     num: '03',
     title: 'Spray Service Agreement',
-    desc: 'The operator to farmer contract that does the talking before anything goes wrong',
+    desc: 'The operator-to-farmer contract that does the talking before anything goes wrong',
   },
   {
     num: '04',
@@ -142,57 +145,67 @@ const SAMPLE_GUIDES = [
 const FOUNDER_PERKS = [
   {
     lead: '$17 a month for as long as you stay.',
-    rest: 'The public price is $49.',
+    rest: 'New members after founding pay $49.',
   },
   {
     lead: 'The Starter Binder the day you join.',
-    rest: 'All five documents up front, not a drip.',
+    rest: 'All five documents up front.',
   },
   {
-    lead: 'A personal Operation Teardown.',
-    rest: 'I review how farmers find you and what an inspector would see, then send your three highest-value fixes.',
+    lead: 'I go through your operation myself.',
+    rest: 'How farmers find you, what an inspector would see, and the three fixes I would make first, sent to you.',
   },
   {
-    lead: 'First look at farmer leads from the directory in your area,',
-    rest: 'from day one.',
+    lead: 'First look at farmer leads in your area, starting day one.',
+    rest: 'When an inquiry comes through the directory, members see it first. A perk, not a quota.',
   },
   {
-    lead: 'A founding vote',
-    rest: 'on every Money Lane and Fine Print topic we cover.',
+    lead: 'A vote on every Money Lane and Fine Print topic.',
+    rest: 'You help pick the jobs and the traps each issue takes apart.',
   },
 ];
 
 const FAQS = [
   {
-    question: 'When do issues arrive?',
+    question: 'How do I know the issues are worth paying for?',
     answer:
-      'Twice a month, on the 1st and the 15th, straight to your inbox. Every issue carries one Money Lane, one Fine Print and one Binder Doc.',
-  },
-  {
-    question: 'What do I get the day I join?',
-    answer:
-      'The full Starter Binder: the Job Quoting Sheet, Spray Application Record, Spray Service Agreement, Subcontract Spray Agreement and Pre-Season Compliance Checklist. All five documents up front, not a drip.',
-  },
-  {
-    question: 'How does payment work?',
-    answer:
-      'Checkout runs through Stripe with any major card. Membership is month to month with no contract, and you can cancel anytime.',
+      'Read the free field guides first. The Premium Acre Playbook, The Solar Book and Fields Only a Drone Can Fly cost nothing, and every paid issue has to clear that bar and go further. If the guides do not earn your $17, keep your money.',
   },
   {
     question: 'Is the founding rate really locked?',
     answer:
-      'Yes. Founding members pay $17 a month for as long as they stay, and the price never goes up while the membership is active. After the founding spots close, the regular rate is $49 a month.',
+      'Yes. Founding members pay $17 a month for as long as they stay, and the price never goes up. After the founding spots close, the regular rate is $49 a month.',
+  },
+  {
+    question: 'What do I get the day I join?',
+    answer:
+      'The full Starter Binder: the Job Quoting Sheet, Spray Application Record, Spray Service Agreement, Subcontract Spray Agreement and Pre-Season Compliance Checklist. All five documents up front.',
   },
   {
     question: 'How is this different from Tank Mix?',
     answer:
-      'Tank Mix is the free weekly that shows you the industry. The Premium Acre shows you the invoice and the inspection: exact numbers, call scripts and documents built to be used on the job.',
+      'Tank Mix is the free weekly that shows you the industry. The Premium Acre shows you the invoice and the inspection: exact numbers, what to say and the documents you use on the job.',
+  },
+  {
+    question: 'I spray part time. Is this for me?',
+    answer:
+      'Yes. A part-time operator signs the same contracts, keeps the same spray records and faces the same inspector as a full-time outfit. And better-paying work matters most when your flying hours are limited.',
+  },
+  {
+    question: 'How does payment work?',
+    answer:
+      'Checkout runs through Stripe with any major card. Membership is month to month, and you can cancel anytime.',
+  },
+  {
+    question: 'When do issues arrive?',
+    answer:
+      'Twice a month, on the 1st and the 15th, straight to your inbox. Every issue carries one Money Lane, one Fine Print and one Binder Doc.',
   },
 ];
 
 // ─── Small shared pieces ─────────────────────────────────────────────────────
 
-function CtaButton({ label, invert = false }: { label: string; invert?: boolean }) {
+function CtaButton({ invert = false }: { invert?: boolean }) {
   return (
     <a
       href={STRIPE_CHECKOUT_URL}
@@ -202,7 +215,7 @@ function CtaButton({ label, invert = false }: { label: string; invert?: boolean 
           : 'inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-800 text-white font-semibold rounded-full hover:bg-green-900 transition-colors text-base shadow-sm'
       }
     >
-      {label}
+      Lock in my $17 rate
       <ArrowRight className="w-4 h-4" />
     </a>
   );
@@ -211,8 +224,8 @@ function CtaButton({ label, invert = false }: { label: string; invert?: boolean 
 function CtaNote({ light = false }: { light?: boolean }) {
   return (
     <p className={`text-xs mt-4 ${light ? 'text-green-200' : 'text-gray-500'}`}>
-      Secure checkout by Stripe. Cancel anytime. Your rate never goes up as long
-      as you stay.
+      Stripe checkout. Month to month, cancel anytime. Your $17 never goes up
+      while you stay.
     </p>
   );
 }
@@ -278,34 +291,33 @@ export default function PremiumAcreJoinPage() {
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-green-800 bg-green-50 border border-green-200 px-3 py-1 rounded-full mb-6">
               <Mail className="w-3.5 h-3.5" />
-              The Premium Acre is open
+              For US spray drone operators
             </div>
 
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-6 text-balance">
-              Make more per acre. Keep every dollar of it.
+              Get off the $13 acre.
             </h1>
 
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
-              The average spray acre paid $21 last year. Now it pays $13. The
-              Premium Acre is the twice-monthly playbook for operators who fight
-              back: one revenue lane broken down to the dollar, one compliance
-              trap dismantled and one document for your Operator Binder. Every
-              issue.
+              The average spray acre paid $21 last year. It pays $13 now. The
+              Premium Acre finds the work that never joined the price war: who
+              pays, what to quote, and the paperwork that gets you paid and
+              through an inspection. Twice a month, on the 1st and the 15th.
             </p>
 
-            <div className="flex items-baseline justify-center gap-3 mb-6">
-              <span className="text-xl text-gray-400 line-through decoration-gray-300">
-                $49
-              </span>
+            <div className="mb-2 flex items-baseline justify-center gap-2">
               <span className="font-serif text-5xl font-bold text-gray-900">
                 $17
               </span>
               <span className="text-sm text-gray-500">
-                /month, locked for life
+                /month, locked while you stay
               </span>
             </div>
+            <p className="text-sm text-gray-500 mb-6">
+              After the founding spots close, the price is $49 a month.
+            </p>
 
-            <CtaButton label="Claim my founding spot for $17" />
+            <CtaButton />
             <CtaNote />
 
             {/* Issue mock: a light stacked-cards graphic of the newsletter */}
@@ -334,7 +346,7 @@ export default function PremiumAcreJoinPage() {
                         The Money Lane
                       </p>
                       <p className="text-xs text-gray-500">
-                        One revenue lane, broken down to the dollar
+                        Who pays, what to quote, who to call
                       </p>
                     </div>
                   </li>
@@ -347,7 +359,7 @@ export default function PremiumAcreJoinPage() {
                         The Fine Print
                       </p>
                       <p className="text-xs text-gray-500">
-                        One compliance trap, dismantled
+                        One compliance trap, taken apart
                       </p>
                     </div>
                   </li>
@@ -378,8 +390,8 @@ export default function PremiumAcreJoinPage() {
                 Every issue, the 1st and the 15th
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Tank Mix shows you the industry. The Premium Acre shows you the
-                invoice and the inspection.
+                Tank Mix, the free weekly, shows you the industry. The Premium
+                Acre shows you the invoice and the inspection.
               </p>
             </div>
 
@@ -407,7 +419,7 @@ export default function PremiumAcreJoinPage() {
           </div>
         </section>
 
-        {/* ─── The Starter Binder ────────────────────────────────────────── */}
+        {/* ─── The Starter Binder + leads callout ────────────────────────── */}
         <section className="px-4 py-20 bg-stone-50">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-10">
@@ -415,8 +427,8 @@ export default function PremiumAcreJoinPage() {
                 Your binder starts with five documents, day one
               </h2>
               <p className="text-gray-600">
-                No drip. Founding members get the full Starter Binder the moment
-                they join.
+                Founding members get the full Starter Binder the day they join.
+                Nothing held back for later.
               </p>
             </div>
 
@@ -438,27 +450,50 @@ export default function PremiumAcreJoinPage() {
                 </li>
               ))}
               <li className="text-center text-sm text-gray-500 pt-2">
-                A new document lands in the binder with every issue.
+                A new document lands in your binder with every issue.
               </li>
             </ul>
+
+            <div className="mt-10 bg-white border border-stone-200 rounded-2xl p-6 flex items-start gap-4">
+              <span className="flex-shrink-0 w-10 h-10 rounded-full bg-green-50 flex items-center justify-center">
+                <MapPin className="w-5 h-5 text-green-800" />
+              </span>
+              <div>
+                <p className="text-sm font-semibold text-gray-900 mb-1">
+                  First look at farmer leads
+                </p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  When a farmer inquiry from your area comes through
+                  agdronedirectory.com, members see it first. A founding perk,
+                  not a quota: leads land when farmers ask.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* ─── First look leads ──────────────────────────────────────────── */}
+        {/* ─── Who writes this ───────────────────────────────────────────── */}
         <section className="px-4 py-20">
-          <div className="max-w-2xl mx-auto text-center">
-            <span className="inline-flex w-12 h-12 rounded-full bg-green-50 items-center justify-center mb-5">
-              <MapPin className="w-6 h-6 text-green-800" />
-            </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight mb-4">
-              First look at directory leads
+          <div className="max-w-xl mx-auto">
+            <h2 className="font-serif text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight text-center mb-8">
+              Who writes this
             </h2>
-            <p className="text-gray-600 leading-relaxed">
-              When a farmer inquiry comes through agdronedirectory.com in your
-              area, I send it to you before it goes anywhere else. It is a
-              founding perk, not a quota: leads land when farmers ask, and
-              members hear about them first.
-            </p>
+            <div className="flex items-start gap-5">
+              <Image
+                src="/images/eugen-author.jpg"
+                alt="AgDrone Eugen"
+                width={112}
+                height={112}
+                className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+              />
+              <p className="text-base text-gray-600 leading-relaxed">
+                I am <strong className="text-gray-900">AgDrone Eugen</strong>. I
+                edit Tank Mix, the free weekly that goes out to 1,000+ drone
+                operators across the country, and I run agdronedirectory.com,
+                the national operator directory. The Premium Acre is where I put
+                the numbers and the documents that do not fit a free email.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -470,10 +505,10 @@ export default function PremiumAcreJoinPage() {
                 See the work before you pay
               </h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                These three field guides are free Tank Mix downloads. This is
-                the standard every paid issue clears, and the paid issues go
-                further: exact numbers, call scripts and the documents to close
-                the work.
+                These three field guides are free Tank Mix downloads. Every paid
+                issue clears this bar, then goes further: exact numbers, what to
+                say and the document to close the work. If the guides are not
+                worth your time, keep your $17.
               </p>
             </div>
 
@@ -507,26 +542,23 @@ export default function PremiumAcreJoinPage() {
           <div className="max-w-3xl mx-auto">
             <div className="bg-gradient-to-br from-green-900 to-green-950 rounded-3xl px-6 py-12 sm:px-12 text-center text-white">
               <p className="inline-block text-[11px] font-semibold uppercase tracking-widest text-green-300 border border-green-700 rounded-full px-4 py-1.5 mb-6">
-                Founding spots are limited
+                Founding member offer
               </p>
 
               <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-2">
-                The founder deal
+                The founding member deal
               </h2>
               <p className="text-green-200 mb-8">
-                The first operators in get terms nobody after them will ever
-                see.
+                When the founding spots close, the rate is $49 a month and the
+                $17 lock is gone for good.
               </p>
 
-              <div className="flex items-baseline justify-center gap-3 mb-8">
-                <span className="text-2xl text-green-400 line-through decoration-green-600">
-                  $49
-                </span>
+              <div className="flex items-baseline justify-center gap-2 mb-8">
                 <span className="font-serif text-6xl font-bold text-white">
                   $17
                 </span>
                 <span className="text-sm text-green-200">
-                  /month, locked for life
+                  /month, locked while you stay
                 </span>
               </div>
 
@@ -544,29 +576,9 @@ export default function PremiumAcreJoinPage() {
                 ))}
               </ul>
 
-              <CtaButton label="Claim my founding spot for $17" invert />
+              <CtaButton invert />
               <CtaNote light />
             </div>
-          </div>
-        </section>
-
-        {/* ─── Who writes it ─────────────────────────────────────────────── */}
-        <section className="px-4 pb-20">
-          <div className="max-w-xl mx-auto flex items-center gap-5">
-            <Image
-              src="/images/eugen-author.jpg"
-              alt="AgDrone Eugen"
-              width={112}
-              height={112}
-              className="w-14 h-14 rounded-full object-cover flex-shrink-0"
-            />
-            <p className="text-sm text-gray-600 leading-relaxed">
-              The Premium Acre is written by{' '}
-              <strong className="text-gray-900">AgDrone Eugen</strong>, editor
-              of Tank Mix, the weekly newsletter read by 1,000+ drone operators
-              across the country, and founder of agdronedirectory.com, the
-              national operator directory.
-            </p>
           </div>
         </section>
 
@@ -587,10 +599,10 @@ export default function PremiumAcreJoinPage() {
               Your margin is the whole game
             </h2>
             <p className="text-gray-600 mb-8">
-              One revenue lane. One compliance trap. One binder document. Twice
-              a month, for the price of a single acre.
+              One money lane. One compliance trap. One binder document. Twice a
+              month, for less than what one acre paid at the old rate.
             </p>
-            <CtaButton label="Become a founding member" />
+            <CtaButton />
             <CtaNote />
             <p className="text-xs text-gray-400 mt-10">
               The Premium Acre · A Tank Mix publication ·{' '}

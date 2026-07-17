@@ -133,7 +133,7 @@ export default function Header() {
               href={ctaHref}
               className="px-4 py-2 bg-green-800 hover:bg-green-900 text-white text-sm font-semibold rounded-full transition-colors"
             >
-              Claim your founding spot
+              Lock in my $17 rate
             </a>
           </div>
         </div>
