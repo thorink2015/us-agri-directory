@@ -11,27 +11,26 @@ import {
   Download,
 } from 'lucide-react';
 import { AUTHOR, SITE } from '@/data/author';
-import { PREMIUM_ACRE_STRIPE_URL } from '@/lib/premium-acre';
+import {
+  PREMIUM_ACRE_STRIPE_FOUNDING_URL,
+  PREMIUM_ACRE_STRIPE_REGULAR_URL,
+} from '@/lib/premium-acre';
 import FAQAccordion from '@/components/ui/FAQAccordion';
 
 // ─── Shared sales page for The Premium Acre (paid newsletter) ────────────────
-// Rendered by BOTH sales routes so their content can never drift apart:
-//   /premium-acre/join       (indexable; sent to the founding-list wave)
-//   /premium-acre/subscribe  (noindex; sent to the wider Tank Mix list)
-// Each route owns its metadata and passes its path/name in. Positioning per
-// Eugen (2026-07-17): hero in his own newsletter-ad voice, money-making
-// content center stage, the five documents demoted to a welcome-bonus perk,
-// no day-one delivery promises (docs not produced yet; kickoff "in the next
-// week or so"), guides framed modestly as the work that inspired this.
-// Facts trace to Eugen's deliverable and his in-chat inputs; $17/month.
+// Rendered by BOTH sales routes so their shared content can never drift:
+//   /premium-acre/join       founding variant, $17/mo (indexable)
+//   /premium-acre/subscribe  regular variant, $49/mo (noindex, Tank Mix wave)
+// The `variant` prop switches everything price- and offer-related (Stripe
+// link, CTA label and note, hero lock line, price block, offer card, perks,
+// FAQ set, closer); the regular variant contains no founding language at
+// all. Positioning per Eugen (2026-07-17): hero in his own newsletter-ad
+// voice, money-making content center stage, the five documents demoted to a
+// welcome-bonus perk, no day-one delivery promises (docs not produced yet),
+// guides framed modestly as the work that inspired this.
 // -----------------------------------------------------------------------------
 
-// ─── Stripe checkout ─────────────────────────────────────────────────────────
-// Every CTA on the page points here. Set NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL
-// in the Netlify dashboard to the live Stripe Payment Link
-// (https://buy.stripe.com/...) and redeploy. Until it is set, the buttons
-// scroll to the founder-deal card so nobody gets bounced off the page.
-const STRIPE_CHECKOUT_URL = PREMIUM_ACRE_STRIPE_URL || '#founder-deal';
+export type PremiumAcreVariant = 'founding' | 'regular';
 
 // ─── Page content (facts from Eugen's deliverable + his in-chat copy) ────────
 
@@ -71,7 +70,7 @@ const SAMPLE_GUIDES = [
   },
 ];
 
-const FOUNDER_PERKS = [
+const FOUNDING_PERKS = [
   {
     lead: '$17 a month for as long as you stay.',
     rest: 'New members after founding pay $49.',
@@ -94,22 +93,32 @@ const FOUNDER_PERKS = [
   },
 ];
 
-const FAQS = [
+const REGULAR_PERKS = [
   {
-    question: 'How do I know the issues are worth paying for?',
-    answer:
-      'Start with the free field guides: The Premium Acre Playbook, The Solar Book and Fields Only a Drone Can Fly. They are the kind of digging The Premium Acre is built on. And membership is month to month, so you can cancel anytime.',
+    lead: 'Two issues a month, on the 1st and the 15th.',
+    rest: 'The work that pays more, the numbers researched for you and how to land it.',
   },
   {
-    question: 'Is the founding rate really locked?',
-    answer:
-      'Yes. Founding members pay $17 a month for as long as they stay, and the price never goes up. After the founding spots close, the regular rate is $49 a month.',
+    lead: 'First look at farmer leads in your area.',
+    rest: 'When an inquiry comes through the directory, members see it first. A perk, not a quota.',
   },
   {
-    question: 'What happens after I join?',
-    answer:
-      'You lock in the $17 founding rate. The newsletter kicks off in the next week or so, and founding members get the first issue plus the welcome bonuses: five ready-to-use documents (quoting sheet, spray record, service agreement, subcontract agreement and a compliance checklist) and first look at farmer leads in your area.',
+    lead: 'Bonus: five ready-to-use documents.',
+    rest: 'Quoting sheet, spray record, service agreement, subcontract agreement and a compliance checklist.',
   },
+  {
+    lead: 'A vote on what I dig into next.',
+    rest: 'You help pick the work and the numbers each issue breaks down.',
+  },
+];
+
+const FAQ_WORTH_IT = {
+  question: 'How do I know the issues are worth paying for?',
+  answer:
+    'Start with the free field guides: The Premium Acre Playbook, The Solar Book and Fields Only a Drone Can Fly. They are the kind of digging The Premium Acre is built on. And membership is month to month, so you can cancel anytime.',
+};
+
+const FAQ_TAIL = [
   {
     question: 'How is this different from Tank Mix?',
     answer:
@@ -131,29 +140,102 @@ const FAQS = [
   },
 ];
 
+const FOUNDING_FAQS = [
+  FAQ_WORTH_IT,
+  {
+    question: 'Is the founding rate really locked?',
+    answer:
+      'Yes. Founding members pay $17 a month for as long as they stay, and the price never goes up. After the founding spots close, the regular rate is $49 a month.',
+  },
+  {
+    question: 'What happens after I join?',
+    answer:
+      'You lock in the $17 founding rate. The newsletter kicks off in the next week or so, and founding members get the first issue plus the welcome bonuses: five ready-to-use documents (quoting sheet, spray record, service agreement, subcontract agreement and a compliance checklist) and first look at farmer leads in your area.',
+  },
+  ...FAQ_TAIL,
+];
+
+const REGULAR_FAQS = [
+  FAQ_WORTH_IT,
+  {
+    question: 'What happens after I join?',
+    answer:
+      'You get the next issue on the 1st or the 15th, plus the welcome bonuses: five ready-to-use documents (quoting sheet, spray record, service agreement, subcontract agreement and a compliance checklist) and first look at farmer leads in your area.',
+  },
+  ...FAQ_TAIL,
+];
+
+// ─── Variant configuration (everything price- and offer-related) ─────────────
+
+const VARIANTS = {
+  founding: {
+    stripeUrl: PREMIUM_ACRE_STRIPE_FOUNDING_URL,
+    ctaLabel: 'Lock in my $17 rate',
+    ctaNote:
+      'Stripe checkout. Month to month, cancel anytime. Your $17 never goes up while you stay.',
+    heroLockLine: true,
+    price: '$17',
+    priceCaption: '/month, locked while you stay',
+    afterPriceLine: 'After the founding spots close, the price is $49 a month.',
+    leadsCalloutTag: 'A founding perk, not a quota: leads land when farmers ask.',
+    offerBadge: 'Founding member offer',
+    offerTitle: 'The founding member deal',
+    offerSub:
+      'When the founding spots close, the rate is $49 a month and the $17 lock is gone for good.',
+    perks: FOUNDING_PERKS,
+    faqs: FOUNDING_FAQS,
+    closerTitle: 'Lock in the founding rate',
+    closerBody: '$17 a month while you stay. $49 after the founding spots close.',
+  },
+  regular: {
+    stripeUrl: PREMIUM_ACRE_STRIPE_REGULAR_URL,
+    ctaLabel: 'Join for $49 a month',
+    ctaNote: 'Stripe checkout. Month to month, cancel anytime.',
+    heroLockLine: false,
+    price: '$49',
+    priceCaption: '/month',
+    afterPriceLine: null,
+    leadsCalloutTag: 'A member perk, not a quota: leads land when farmers ask.',
+    offerBadge: 'Membership',
+    offerTitle: 'The membership',
+    offerSub: 'Every issue, the leads and the bonuses. Month to month.',
+    perks: REGULAR_PERKS,
+    faqs: REGULAR_FAQS,
+    closerTitle: 'Join The Premium Acre',
+    closerBody: '$49 a month. Month to month, cancel anytime.',
+  },
+} as const;
+
 // ─── Small shared pieces ─────────────────────────────────────────────────────
 
-function CtaButton({ invert = false }: { invert?: boolean }) {
+function CtaButton({
+  href,
+  label,
+  invert = false,
+}: {
+  href: string;
+  label: string;
+  invert?: boolean;
+}) {
   return (
     <a
-      href={STRIPE_CHECKOUT_URL}
+      href={href}
       className={
         invert
           ? 'inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-green-900 font-semibold rounded-full hover:bg-green-50 transition-colors text-base'
           : 'inline-flex items-center justify-center gap-2 px-8 py-4 bg-green-800 text-white font-semibold rounded-full hover:bg-green-900 transition-colors text-base shadow-sm'
       }
     >
-      Lock in my $17 rate
+      {label}
       <ArrowRight className="w-4 h-4" />
     </a>
   );
 }
 
-function CtaNote({ light = false }: { light?: boolean }) {
+function CtaNote({ text, light = false }: { text: string; light?: boolean }) {
   return (
     <p className={`text-xs mt-4 ${light ? 'text-green-200' : 'text-gray-500'}`}>
-      Stripe checkout. Month to month, cancel anytime. Your $17 never goes up
-      while you stay.
+      {text}
     </p>
   );
 }
@@ -167,6 +249,8 @@ interface SalesPageProps {
   description: string;
   /** Last breadcrumb item label, e.g. 'Join' */
   breadcrumbLeafName: string;
+  /** Pricing/offer variant: founding ($17) or regular ($49) */
+  variant: PremiumAcreVariant;
 }
 
 export default function PremiumAcreSalesPage({
@@ -174,7 +258,9 @@ export default function PremiumAcreSalesPage({
   pageName,
   description,
   breadcrumbLeafName,
+  variant,
 }: SalesPageProps) {
+  const cfg = VARIANTS[variant];
   const absoluteUrl = `${SITE.domain}${pagePath}`;
 
   const breadcrumbSchema = {
@@ -212,7 +298,7 @@ export default function PremiumAcreSalesPage({
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: FAQS.map((faq) => ({
+    mainEntity: cfg.faqs.map((faq) => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: { '@type': 'Answer', text: faq.answer },
@@ -250,23 +336,24 @@ export default function PremiumAcreSalesPage({
             <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
               A paid newsletter for ag drone operators. I do the digging, you
               get the playbook: the work that pays more, who&apos;s buying and
-              how to land it. Founding members lock the lowest price.
+              how to land it.
+              {cfg.heroLockLine && ' Founding members lock the lowest price.'}
             </p>
 
             <div className="mb-2 flex items-baseline justify-center gap-2">
               <span className="font-serif text-5xl font-bold text-gray-900">
-                $17
+                {cfg.price}
               </span>
-              <span className="text-sm text-gray-500">
-                /month, locked while you stay
-              </span>
+              <span className="text-sm text-gray-500">{cfg.priceCaption}</span>
             </div>
-            <p className="text-sm text-gray-500 mb-6">
-              After the founding spots close, the price is $49 a month.
-            </p>
+            {cfg.afterPriceLine && (
+              <p className="text-sm text-gray-500 mb-6">{cfg.afterPriceLine}</p>
+            )}
 
-            <CtaButton />
-            <CtaNote />
+            <div className={cfg.afterPriceLine ? '' : 'mt-6'}>
+              <CtaButton href={cfg.stripeUrl} label={cfg.ctaLabel} />
+              <CtaNote text={cfg.ctaNote} />
+            </div>
 
             {/* Issue mock: a light stacked-cards graphic of the newsletter */}
             <div className="relative max-w-md mx-auto mt-16" aria-hidden="true">
@@ -378,8 +465,8 @@ export default function PremiumAcreSalesPage({
                 </p>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   When a farmer inquiry from your area comes through
-                  agdronedirectory.com, members see it first. A founding perk,
-                  not a quota: leads land when farmers ask.
+                  agdronedirectory.com, members see it first.{' '}
+                  {cfg.leadsCalloutTag}
                 </p>
               </div>
             </div>
@@ -449,33 +536,30 @@ export default function PremiumAcreSalesPage({
           </div>
         </section>
 
-        {/* ─── The founding offer ────────────────────────────────────────── */}
+        {/* ─── The offer ─────────────────────────────────────────────────── */}
         <section id="founder-deal" className="px-4 pb-20 scroll-mt-20">
           <div className="max-w-3xl mx-auto">
             <div className="bg-gradient-to-br from-green-900 to-green-950 rounded-3xl px-6 py-12 sm:px-12 text-center text-white">
               <p className="inline-block text-[11px] font-semibold uppercase tracking-widest text-green-300 border border-green-700 rounded-full px-4 py-1.5 mb-6">
-                Founding member offer
+                {cfg.offerBadge}
               </p>
 
               <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight mb-2">
-                The founding member deal
+                {cfg.offerTitle}
               </h2>
-              <p className="text-green-200 mb-8">
-                When the founding spots close, the rate is $49 a month and the
-                $17 lock is gone for good.
-              </p>
+              <p className="text-green-200 mb-8">{cfg.offerSub}</p>
 
               <div className="flex items-baseline justify-center gap-2 mb-8">
                 <span className="font-serif text-6xl font-bold text-white">
-                  $17
+                  {cfg.price}
                 </span>
                 <span className="text-sm text-green-200">
-                  /month, locked while you stay
+                  {cfg.priceCaption}
                 </span>
               </div>
 
               <ul className="max-w-md mx-auto text-left space-y-4 mb-10">
-                {FOUNDER_PERKS.map((perk) => (
+                {cfg.perks.map((perk) => (
                   <li key={perk.lead} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
                     <p className="text-sm text-green-100 leading-relaxed">
@@ -488,8 +572,8 @@ export default function PremiumAcreSalesPage({
                 ))}
               </ul>
 
-              <CtaButton invert />
-              <CtaNote light />
+              <CtaButton href={cfg.stripeUrl} label={cfg.ctaLabel} invert />
+              <CtaNote text={cfg.ctaNote} light />
             </div>
           </div>
         </section>
@@ -500,7 +584,7 @@ export default function PremiumAcreSalesPage({
             <h2 className="font-serif text-3xl font-bold text-gray-900 tracking-tight text-center mb-8">
               Questions, answered
             </h2>
-            <FAQAccordion faqs={FAQS} />
+            <FAQAccordion faqs={[...cfg.faqs]} />
           </div>
         </section>
 
@@ -508,13 +592,11 @@ export default function PremiumAcreSalesPage({
         <section className="px-4 pb-24">
           <div className="max-w-2xl mx-auto text-center border-t border-stone-200 pt-16">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight mb-4">
-              Lock in the founding rate
+              {cfg.closerTitle}
             </h2>
-            <p className="text-gray-600 mb-8">
-              $17 a month while you stay. $49 after the founding spots close.
-            </p>
-            <CtaButton />
-            <CtaNote />
+            <p className="text-gray-600 mb-8">{cfg.closerBody}</p>
+            <CtaButton href={cfg.stripeUrl} label={cfg.ctaLabel} />
+            <CtaNote text={cfg.ctaNote} />
             <p className="text-xs text-gray-400 mt-10">
               The Premium Acre · A Tank Mix publication ·{' '}
               <Link href="/" className="hover:text-gray-600 transition-colors">

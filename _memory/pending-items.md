@@ -232,13 +232,11 @@ See `_research/README.md` for what's uploaded and what's missing.
 
 ## Blocked on Eugen — The Premium Acre launch (2026-07-17)
 
-- **Stripe Payment Link.** Create the $17/month subscription Payment
-  Link in Stripe, then set `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL` in the
-  Netlify dashboard and redeploy (or paste the link in chat to hardcode
-  it in `src/lib/premium-acre.ts`). Until then every CTA on
-  `/premium-acre/join` (and the minimal-header CTA) scrolls to the
-  founder-deal card (safe, but not selling). No code change needed once
-  the env var is set.
+- ✅ **Stripe Payment Links** — DONE 2026-07-17. Eugen supplied both
+  links in chat; hardcoded in `src/lib/premium-acre.ts` (founding $17
+  on /join, regular $49 on /subscribe). The
+  `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL` env var is retired (was never
+  set in Netlify).
 - Optional: a real close date for the founding offer. The page
   currently says "Founding member offer" with no date; a hard date is
   a one-line copy edit on the founder card.

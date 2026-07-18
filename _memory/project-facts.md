@@ -52,7 +52,7 @@ Last updated: 2026-04-15
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 tracking | To be replaced with Plausible |
 | `NEXT_PUBLIC_FORMSPREE_ID` | Contact form endpoint | Set |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Plausible Analytics site ID | **Not yet set — blocked on Eugen** |
-| `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL` | Stripe Payment Link for The Premium Acre CTAs (join page + minimal header), read via `src/lib/premium-acre.ts` | **Not yet set — blocked on Eugen.** Buttons scroll to the founder-deal card until set |
+| `NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL` | RETIRED 2026-07-17 (never set). Stripe links are now hardcoded in `src/lib/premium-acre.ts` | Obsolete |
 
 ## Schema @id anchors (every JSON-LD on the site references these)
 
@@ -103,7 +103,13 @@ and `AUTHOR.organizationId` getters.
 - **Product:** paid twice-monthly newsletter (issues on the 1st and
   15th): one Money Lane + one Fine Print + one Binder Doc per issue.
 - **Pricing (2026-07-17, per Eugen):** founding members $17/month
-  locked for life; public anchor price $49/month.
+  locked ("while you stay"); regular members $49/month. The founding
+  offer is for the founding-list wave (/join); the wider Tank Mix wave
+  (/subscribe) gets the regular $49 rate.
+- **Stripe Payment Links (live, hardcoded in
+  `src/lib/premium-acre.ts`, supplied by Eugen 2026-07-17):**
+  founding $17 `https://buy.stripe.com/eVq00jcGu8wF3ales40gw0l`;
+  regular $49 `https://buy.stripe.com/3cI9ATaymeV36mx2Jm0gw0m`.
 - **Pages:** `/premium-acre` = founding-list email signup (Formspree
   `premium-acre-signup`); `/premium-acre/join` = founding sales page
   (indexable, for the founding-list wave); `/premium-acre/subscribe` =
