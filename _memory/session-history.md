@@ -1273,6 +1273,34 @@ fully delivered through the existing emit points.
   join.html unchanged and indexable; sitemap contains /join but not
   /subscribe.
 
+## 2026-07-17 — Live Stripe links + $49 regular variant on /subscribe (branch claude/paid-newsletter-landing-7khc1e, PR after #146)
+
+- Eugen supplied both live Stripe Payment Links in chat and clarified
+  the second page is for REGULAR members at $49 (not a founding twin).
+  Branch restarted from main.
+- `src/lib/premium-acre.ts`: both links hardcoded
+  (PREMIUM_ACRE_STRIPE_FOUNDING_URL $17, PREMIUM_ACRE_STRIPE_REGULAR_URL
+  $49); the never-set NEXT_PUBLIC_STRIPE_PREMIUM_ACRE_URL env var and
+  the #founder-deal scroll fallback are retired.
+- `SalesPage.tsx` gained a `variant` prop ('founding' | 'regular')
+  switching everything price/offer-related: Stripe URL, CTA label
+  ("Lock in my $17 rate" vs "Join for $49 a month"), CTA note, hero
+  lock line, price block (+$49-after line only on founding), leads
+  callout tag (founding perk vs member perk), offer card (Founding
+  member deal vs The membership), perks (regular drops the $17 lock
+  and the personal operation review, keeps issues/leads/docs
+  bonus/vote), FAQ set (regular drops the locked-rate Q and the
+  founding kickoff answer), closer. Regular variant contains zero
+  founding language.
+- Route wrappers pass their variant; subscribe metadata updated to
+  $49 (title, description, OG alt).
+- Minimal header CTA now carries the right link + label per page
+  (founding on /premium-acre and /join, regular on /subscribe).
+- Verified: build clean; join.html has founding link x7 and zero
+  regular-link leakage; subscribe.html has regular link x7, zero
+  founding-link leakage, zero founding strings, "Join for $49 a
+  month" labels; signup-page header carries the founding link.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

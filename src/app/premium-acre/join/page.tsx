@@ -56,6 +56,7 @@ export default function PremiumAcreJoinPage() {
       pageName="Join The Premium Acre"
       description={DESCRIPTION}
       breadcrumbLeafName="Join"
+      variant="founding"
     />
   );
 }

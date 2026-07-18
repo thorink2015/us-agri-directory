@@ -6,7 +6,8 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, Plane, ChevronDown, Mail } from 'lucide-react';
 import GetMatchedButton from '@/components/leads/GetMatchedButton';
 import {
-  PREMIUM_ACRE_STRIPE_URL,
+  PREMIUM_ACRE_STRIPE_FOUNDING_URL,
+  PREMIUM_ACRE_STRIPE_REGULAR_URL,
   PREMIUM_ACRE_JOIN_PATH,
   PREMIUM_ACRE_SUBSCRIBE_PATH,
 } from '@/lib/premium-acre';
@@ -103,20 +104,21 @@ export default function Header() {
   );
 
   // The Premium Acre pages get a stripped-down header branded for the paid
-  // newsletter: its own logo plus a single founding CTA. The CTA goes to
-  // the Stripe Payment Link once the env var is set; until then the sales
-  // pages scroll to their founder-deal card and the signup page links to
-  // /join. The logo stays on the current sales page so each email wave
-  // keeps its own URL.
+  // newsletter: its own logo plus a single Stripe CTA. The subscribe page
+  // (wider Tank Mix wave) carries the regular $49 link; the join and
+  // founding-list pages carry the founding $17 link. The logo stays on the
+  // current sales page so each email wave keeps its own URL.
   const onSalesPage =
     pathname === PREMIUM_ACRE_JOIN_PATH ||
     pathname === PREMIUM_ACRE_SUBSCRIBE_PATH;
   const minimal = pathname === '/premium-acre' || onSalesPage;
 
   if (minimal) {
-    const ctaHref =
-      PREMIUM_ACRE_STRIPE_URL ||
-      (onSalesPage ? '#founder-deal' : PREMIUM_ACRE_JOIN_PATH);
+    const isRegular = pathname === PREMIUM_ACRE_SUBSCRIBE_PATH;
+    const ctaHref = isRegular
+      ? PREMIUM_ACRE_STRIPE_REGULAR_URL
+      : PREMIUM_ACRE_STRIPE_FOUNDING_URL;
+    const ctaLabel = isRegular ? 'Join for $49 a month' : 'Lock in my $17 rate';
     return (
       <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,7 +138,7 @@ export default function Header() {
               href={ctaHref}
               className="px-4 py-2 bg-green-800 hover:bg-green-900 text-white text-sm font-semibold rounded-full transition-colors"
             >
-              Lock in my $17 rate
+              {ctaLabel}
             </a>
           </div>
         </div>
