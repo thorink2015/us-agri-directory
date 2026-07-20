@@ -369,6 +369,45 @@ the eight audit files committed in PR #118.
   statistics guide ("final rule expected Spring 2026" in llms-full.txt).
   Do not invent the outcome.
 
+## Formspree inbox triage — Phase 2/3 SHIPPED (2026-07-20)
+
+All 10 operator records (7 new/enriched + 3 updated) shipped in PR
+#148 across commits 706f9a1, eda2055, 22bd794, and the Batch C commit.
+Deliverables in `_research/formspree-processing-2026-07-20/`.
+
+### Follow-ups for Eugen
+
+1. **Elevated Ag Drone Services collision.** Batch C shipped as a
+   fresh `elevated-ag-drone-services` slug. The blank
+   `elevated-agriculture-llc` (line 10815, FAA docket record with
+   no state/contact) is intact. If these turn out to be the same
+   entity, merge the two slugs and pick one canonical URL (301
+   redirect the other via `netlify.toml`).
+2. **Altitude Agri Services city.** Record still says Richland;
+   form said Kennewick (both Tri-Cities WA). Reply to Kurt B at
+   `kurt.b@altitudeagriservices.com` to confirm which one is right.
+   Also flag: existing `linkedin: 'Y'` looks like a data-entry
+   error — get the real LinkedIn URL from Kurt too.
+3. **Volitant Technologies location correction.** Full overwrite
+   Birmingham AL → Dunbar NE, counties collapsed to Nebraska only.
+   If Volitant actually operates in both regions (e.g. HQ in NE,
+   franchise in AL), reach out to `info@volitant.tech` to confirm
+   coverage and expand counties back if needed.
+4. **beehiiv imports.** `_research/formspree-processing-2026-07-20/07-newsletter-import.csv`
+   (40 emails) → Tank Mix audience.
+   `05-premium-acre-signup.csv` (7 emails) → Premium Acre audience.
+5. **Listing-live email sends.** Use
+   `08-email-listing-live.md` template. All 10 profiles are live at
+   the URLs already listed in that file's ready-to-send queue.
+6. **Lead routing (27 leads).** `03-get-matched-lead.csv` +
+   `04-exit-intent-lead.csv` → route to state operators.
+7. **Quote request forward (1).** `06-operator-quote-request.csv` →
+   forward Gary Langford's request to the Embry-Riddle contact.
+8. **Insurance-agency reply.** Reply to Donna at
+   `donnac@westernvalley.com` about the insurance-partnership
+   inquiry.
+
+
 ## Optional polish (not blocking)
 
 - Netlify post-deploy GitHub Action to auto-run IndexNow ping

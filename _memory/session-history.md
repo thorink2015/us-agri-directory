@@ -1301,6 +1301,81 @@ fully delivered through the existing emit points.
   founding-link leakage, zero founding strings, "Join for $49 a
   month" labels; signup-page header carries the founding link.
 
+## 2026-07-20 — Formspree inbox triage (Phase 1: data + templates)
+
+Working branch: `claude/agdrone-form-processing-1oapae`.
+
+- **Batch 1 (Phase 1, this commit):** parsed the 47 2026-06/2026-07
+  Formspree submissions Eugen dropped and produced categorized
+  deliverables under `_research/formspree-processing-2026-07-20/`:
+  master CSV (all 47), 6 per-form-type CSVs
+  (list-your-business, listing-update, get-matched-lead,
+  exit-intent-lead, premium-acre-signup, operator-quote-request),
+  a deduped 40-email `07-newsletter-import.csv` ready for beehiiv
+  Tank Mix import, a reusable "your listing is live"
+  `08-email-listing-live.md` template with per-operator send
+  checklist, and a `README.md` triage doc.
+- **Phase 2 (next batches, blocked on Eugen's "next" per the 1-3
+  batch rule):** create 5 new operator records (Viewpoint FL,
+  EcoAg NY, AG Fertilizer TX, Leigh Low WI, Elevated Ag Drone AL)
+  and enrich 2 existing thin records (Heartland Sky IA/NE line
+  8487, Wolverine Drone Services LLC MI line 3446).
+- **Phase 3 (next):** apply 3 owner-submitted updates on Altitude
+  Agri Services (WA, line 6478), CropTech Solutions (PA, line
+  2018), Volitant Technologies (NE, line 366).
+- **Phase 4-6 are Eugen's:** beehiiv import, listing-live sends,
+  lead routing.
+- **Not created:** Western Valley Insurance Associates was
+  misclassified as a listing (insurance agency partnership
+  inquiry, not a drone operator) — flagged for Eugen to reply
+  personally.
+- **Batch 2 (Phase 1 dedup audit):** second-pass audit of every
+  list-your-business + listing-update against operators.ts (614
+  records) by name / email / phone / website / city, plus SEO/
+  sitemap/schema plumbing verification. New file
+  `09-dedup-audit.md`. Findings that changed the plan: (a) FLAG on
+  Elevated Ag Drone Services vs the blank `elevated-agriculture-llc`
+  FAA-docket record (line 10815) — could be same legal entity as a
+  dba; Batch C created separately with an in-code comment flag so
+  Eugen can merge later if confirmed. (b) Volitant Technologies
+  (line 366) update is a LOCATION CORRECTION (Birmingham AL → Dunbar
+  NE), not just an additive refresh. (c) Altitude Agri Services
+  city conflict (Kennewick vs Richland); Phase 3 will only add the
+  email, not overwrite city. (d) All 4 create-new candidates
+  (Viewpoint, EcoAg, AG Fertilizer, Leigh Low) confirmed
+  zero-collision. CSVs 01 and 02 updated inline with the corrected
+  actions.
+- **Batch 3 (Phase 2 Batch A):** shipped 3 new operator records:
+  `viewpoint-agriculture` (Sebring FL, Part 137, $18/ac, 9 crops, 4
+  drones, 5 services); `ecoag-aerial-imaging` (Rochester NY, Part
+  107 mapping-only, DJI Mavic 3M + multispectral, 10 crops);
+  `ag-fertilizer-llc` (Bastrop TX, XAG P100 Pro, blank description
+  so `composeAutoParagraph` lifts). All 3 verified: true.
+- **Batch 4 (Phase 2 Batch B):** shipped 1 new + 2 enrichments:
+  new `leigh-low-aerial-services-llc` (Mauston WI + IL, DJI T100,
+  $16/ac); enriched `heartland-sky` (line 8487) with phone / email /
+  services (7) / drones / crops (7) / description quoting owner's
+  20,000-acre experience / +nebraska county / verified:true /
+  pendingConfirmation removed; enriched `wolverine-drone-services-llc`
+  (line 3446) with email / ownerName Jeff Whiting / fuller
+  description mentioning son Eric + aquatics + right-of-way + mosquito
+  certifications / 9 crops / $15/ac / verified:true.
+- **Batch 5 (Phase 3 owner updates):** shipped 3 updates:
+  `altitude-agri-services` (email add only — city Kennewick vs
+  Richland conflict left for Kurt to resolve); `croptech-solutions`
+  (email + ownerName Randy Biebel + spreading/training services +
+  dji-agras-t40 + 4 new crops + $15/ac); `volitant-technologies`
+  LOCATION CORRECTION (city Birmingham AL → Dunbar NE, counties 7
+  Southeast → ['nebraska'], phone/email/website added, 3 new
+  services + 3 new drones + 4 new crops + $13/ac; description prose
+  preserved, tagline updated).
+- **Batch 6 (Phase 2 Batch C):** shipped
+  `elevated-ag-drone-services` (Auburn AL + GA + MS, DJI T50,
+  $12-15/ac, 5 services, 12 crops). In-code comment flags the
+  possible collision with `elevated-agriculture-llc` (line 10815,
+  blank FAA docket record). If Eugen later confirms they are the
+  same entity, merge and drop one slug.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's
