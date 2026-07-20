@@ -378,41 +378,53 @@ Deliverables from Phase 1 live under
 
 Per the 1-3 batch rule, do these in 3 batches. See
 `_research/formspree-processing-2026-07-20/01-list-your-business.csv`
-for full data.
+and `09-dedup-audit.md` for the second-pass audit results.
 
-- **Batch A (3 new):** Viewpoint Agriculture (Sebring, FL),
-  EcoAg Aerial Imaging (Rochester, NY), AG Fertilizer LLC
-  (Bastrop, TX).
-- **Batch B (2 new + 1 slug-collision-safe new):** Leigh Low
-  Aerial Services LLC (Mauston, WI + IL), Elevated Ag Drone
-  Services (Auburn, AL + GA + MS) with slug
-  `elevated-ag-drone-services` (distinct from existing
-  `elevated-ag-solutions` MN and `elevated-agriculture-llc`).
-- **Batch C (2 enrichments of thin records):**
+- **Batch A (3 new, zero-collision confirmed):** Viewpoint Agriculture
+  (Sebring, FL), EcoAg Aerial Imaging (Rochester, NY), AG Fertilizer
+  LLC (Bastrop, TX).
+- **Batch B (1 new + 2 thin-record enrichments):** Leigh Low Aerial
+  Services LLC (Mauston, WI + IL); enrich `heartland-sky` (line 8487)
+  with phone/email/full-description/services/drones/crops, add
+  `nebraska` to counties, flip pendingConfirmation off and verified
+  on; enrich `wolverine-drone-services-llc` (line 3446) with email +
+  ownerName Jeff Whiting + description + crops + $15/ac.
+- **Batch C — BLOCKED on Eugen:** Elevated Ag Drone Services (Auburn
+  AL, GA, MS). Possible collision with `elevated-agriculture-llc`
+  (line 10815, blank FAA-docket record). Decide before creating:
+  enrich in place + rename, or create fresh slug
+  `elevated-ag-drone-services` and delete the blank record. See
+  `09-dedup-audit.md § FLAGGED — possible collision`.
+- **Batch B enrichments (2 thin records):**
   - `heartland-sky` (line 8487) — flip
     `pendingConfirmation: true` → false, add owner phone
     6413529089, email heartlandskyllc@gmail.com, full crops
     list, drones ['dji-agras-t50'], services list, expand
-    counties to add 'nebraska', price $14-$18/acre.
+    counties to add 'nebraska', price $14-$18/acre. Do NOT set
+    certFAAPart137 (form language is ambiguous on 137).
   - `wolverine-drone-services-llc` (line 3446) — add email
     jeffwhiting@wolverinedroneservices.com, ownerName "Jeff
     Whiting", replace description with the two-sentence form
     submission text, add crops list, price $15/acre. Keep
-    existing facebook URL.
+    existing facebook URL. Do NOT set certFAAPart137 without
+    owner confirmation.
 
 ### Phase 3 — owner-submitted updates (`update-existing`)
 
-See `02-listing-update.csv`.
+See `02-listing-update.csv` + `09-dedup-audit.md`.
 
-- `croptech-solutions` (line 2018) — full refresh of email,
-  services, drones, crops, price per Randy's 2026-06-24 form.
-- `volitant-technologies` (line 366) — full refresh of email,
-  phone, website, services, drones, crops, price per the
-  2026-06-23 form.
-- `altitude-agri-services` (line 6478) — add email
-  kurt.b@altitudeagriservices.com. Form was sparse; Eugen to reply
-  to Kurt asking what else to change (existing city Richland vs
-  form's Kennewick).
+- `croptech-solutions` (line 2018) — Randy Biebel. Phone + website
+  already match; additive edits: email, +2 drones (add
+  dji-agras-t40), +2 services (spreading, training), expanded
+  crops (add alfalfa, pasture, potatoes, row-crops), priceMinUsd 15.
+- `volitant-technologies` (line 366) — LOCATION CORRECTION.
+  Overwrite city ('Birmingham' → 'Dunbar'), counties (7 SE states →
+  ['nebraska']). Add phone, email, website; expand drones/crops/
+  services; priceMinUsd 13. Preserve description prose.
+- `altitude-agri-services` (line 6478) — safe additive edit ONLY:
+  add email kurt.b@altitudeagriservices.com. DO NOT overwrite city
+  (form Kennewick vs record Richland — both Tri-Cities WA). Eugen
+  replies to Kurt to confirm.
 
 ### Phase 4-6 — Eugen (not Claude Code)
 

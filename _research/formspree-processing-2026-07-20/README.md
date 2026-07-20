@@ -16,18 +16,27 @@ export. Files in this folder are the deliverables for that triage.
 | `06-operator-quote-request.csv` | Only quote requests on operator profiles (1). Forward to the operator directly. | Eugen |
 | `07-newsletter-import.csv` | Deduped list of every email across every form type (40 unique), tagged with source, ready for beehiiv import. | Eugen |
 | `08-email-listing-live.md` | Reusable email template for "your listing is live" plus a ready-to-send queue. | Eugen |
+| `09-dedup-audit.md` | Second-pass audit of every list-your-business + listing-update against `operators.ts` (name / email / phone / website / city). Includes SEO/sitemap/schema plumbing verification. **Overrides** the initial triage on Elevated Ag Drone Services + Volitant + Altitude. | Eugen + Claude Code (must-read before Phase 2) |
 
 ## Action summary (what needs building)
+
+**Updated 2026-07-20 after `09-dedup-audit.md` — see that file for
+the full per-candidate audit.**
 
 ### list-your-business (8 submissions)
 
 - **Create new operator (4):** Viewpoint Agriculture (FL), EcoAg
   Aerial Imaging (NY), AG Fertilizer LLC (TX), Leigh Low Aerial
-  Services LLC (WI).
-- **Create new operator, name collides with existing but different
-  company (1):** Elevated Ag Drone Services (AL, Auburn). Existing
-  `elevated-ag-solutions` is MN; existing `elevated-agriculture-llc`
-  is a blank FAA-docket record. Use slug
+  Services LLC (WI). All zero-collision confirmed by second-pass
+  audit.
+- **FLAG — verify before creating (1):** Elevated Ag Drone Services
+  (AL, Auburn). Existing `elevated-ag-solutions` is MN;
+  `elevated-aerial-services-llc` is WI. But the blank
+  `elevated-agriculture-llc` (line 10815) is a Part 137 docket record
+  with NO state or contact info — possibly the same legal entity
+  operating under a dba. Eugen must decide: enrich in place + rename,
+  or create fresh + delete blank record. Do NOT auto-create until
+  resolved. Use slug
   `elevated-ag-drone-services`.
 - **Enrich existing thin record (2):** Heartland Sky (`heartland-sky`,
   line 8487) and Wolverine Drone Services LLC
@@ -42,12 +51,19 @@ export. Files in this folder are the deliverables for that triage.
 ### listing-update (3 submissions)
 
 - Altitude Agri Services (`altitude-agri-services`, line 6478) —
-  Kurt B. Form is sparse; add email and reply to Kurt asking what
-  else to change.
-- CropTech Solutions (`croptech-solutions`, line 2018) — Randy. Full
-  services/drones/crops/price/email refresh.
-- Volitant Technologies (`volitant-technologies`, line 366) — full
-  services/drones/crops/phone/email/website/price refresh.
+  Kurt B. Phone matches; **city conflict** (form Kennewick vs
+  record Richland — both Tri-Cities WA). Safe additive edit: add
+  email `kurt.b@altitudeagriservices.com`. Eugen replies to Kurt to
+  confirm city + any other edits.
+- CropTech Solutions (`croptech-solutions`, line 2018) — Randy
+  Biebel. Phone + website match. Additive: email, +2 drones, +2
+  services, expanded crops, price $15.
+- Volitant Technologies (`volitant-technologies`, line 366) —
+  **location correction** (existing city Birmingham AL with 7
+  Southeast counties → owner-submitted Dunbar NE, counties ['nebraska']).
+  Owner used the `?claim=` update link, strong ownership signal.
+  Overwrite city + counties, add phone/email/website, expand fields.
+  Description prose preserved.
 
 ### Leads (get-matched-lead + exit-intent-lead + operator-quote-request)
 

@@ -1329,6 +1329,21 @@ Working branch: `claude/agdrone-form-processing-1oapae`.
   misclassified as a listing (insurance agency partnership
   inquiry, not a drone operator) — flagged for Eugen to reply
   personally.
+- **Batch 2 (Phase 1 dedup audit):** second-pass audit of every
+  list-your-business + listing-update against operators.ts (614
+  records) by name / email / phone / website / city, plus SEO/
+  sitemap/schema plumbing verification. New file
+  `09-dedup-audit.md`. Findings that changed the plan: (a) FLAG on
+  Elevated Ag Drone Services vs the blank `elevated-agriculture-llc`
+  FAA-docket record (line 10815) — could be same legal entity as a
+  dba; Batch C now blocked pending Eugen decision. (b) Volitant
+  Technologies (line 366) update is a LOCATION CORRECTION
+  (Birmingham AL → Dunbar NE), not just an additive refresh. (c)
+  Altitude Agri Services city conflict (Kennewick vs Richland);
+  Phase 3 will only add the email, not overwrite city. (d) All 4
+  create-new candidates (Viewpoint, EcoAg, AG Fertilizer, Leigh
+  Low) confirmed zero-collision. CSVs 01 and 02 updated inline with
+  the corrected actions.
 
 ## What's next
 
