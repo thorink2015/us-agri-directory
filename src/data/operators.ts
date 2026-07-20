@@ -11135,6 +11135,31 @@ export const operators: Operator[] = [
     verified: true,
     lastUpdated: '2026-06-16',
   },
+
+  // ── FORMSPREE BATCH 2026-07-20 C: owner-submitted list-your-business ────
+  // Note: kept separate from elevated-agriculture-llc (blank FAA docket
+  // record at slug 'elevated-agriculture-llc'). If Eugen later confirms
+  // they are the same entity, merge and drop one of the two slugs.
+  {
+    slug: 'elevated-ag-drone-services',
+    name: 'Elevated Ag Drone Services',
+    shortName: 'Elevated Ag Drone',
+    country: 'US',
+    counties: ['alabama', 'georgia', 'mississippi'],
+    city: 'Auburn',
+    phone: '(205) 332-2810',
+    email: 'elevatedag2@gmail.com',
+    website: 'https://elevatedagdrone.com',
+    description: '',
+    services: ['spraying', 'spreading', 'seeding', 'mapping', 'sales'],
+    drones: ['dji-agras-t50'],
+    crops: ['corn', 'soybeans', 'cotton', 'wheat', 'rice', 'alfalfa', 'grapes', 'orchards', 'pasture', 'potatoes', 'cover-crops', 'row-crops'],
+    priceMinUsd: 12,
+    priceMaxUsd: 15,
+    featured: false,
+    verified: true,
+    lastUpdated: '2026-07-08',
+  },
 ];
 
 export function getOperatorBySlug(slug: string): Operator | undefined {

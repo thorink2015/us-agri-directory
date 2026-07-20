@@ -369,78 +369,44 @@ the eight audit files committed in PR #118.
   statistics guide ("final rule expected Spring 2026" in llms-full.txt).
   Do not invent the outcome.
 
-## Formspree inbox triage — Phase 2/3 pending (2026-07-20)
+## Formspree inbox triage — Phase 2/3 SHIPPED (2026-07-20)
 
-Deliverables from Phase 1 live under
-`_research/formspree-processing-2026-07-20/`. Follow-up batches:
+All 10 operator records (7 new/enriched + 3 updated) shipped in PR
+#148 across commits 706f9a1, eda2055, 22bd794, and the Batch C commit.
+Deliverables in `_research/formspree-processing-2026-07-20/`.
 
-### Phase 2 — new operator records to create (`create-new` in triage)
+### Follow-ups for Eugen
 
-Per the 1-3 batch rule, do these in 3 batches. See
-`_research/formspree-processing-2026-07-20/01-list-your-business.csv`
-and `09-dedup-audit.md` for the second-pass audit results.
+1. **Elevated Ag Drone Services collision.** Batch C shipped as a
+   fresh `elevated-ag-drone-services` slug. The blank
+   `elevated-agriculture-llc` (line 10815, FAA docket record with
+   no state/contact) is intact. If these turn out to be the same
+   entity, merge the two slugs and pick one canonical URL (301
+   redirect the other via `netlify.toml`).
+2. **Altitude Agri Services city.** Record still says Richland;
+   form said Kennewick (both Tri-Cities WA). Reply to Kurt B at
+   `kurt.b@altitudeagriservices.com` to confirm which one is right.
+   Also flag: existing `linkedin: 'Y'` looks like a data-entry
+   error — get the real LinkedIn URL from Kurt too.
+3. **Volitant Technologies location correction.** Full overwrite
+   Birmingham AL → Dunbar NE, counties collapsed to Nebraska only.
+   If Volitant actually operates in both regions (e.g. HQ in NE,
+   franchise in AL), reach out to `info@volitant.tech` to confirm
+   coverage and expand counties back if needed.
+4. **beehiiv imports.** `_research/formspree-processing-2026-07-20/07-newsletter-import.csv`
+   (40 emails) → Tank Mix audience.
+   `05-premium-acre-signup.csv` (7 emails) → Premium Acre audience.
+5. **Listing-live email sends.** Use
+   `08-email-listing-live.md` template. All 10 profiles are live at
+   the URLs already listed in that file's ready-to-send queue.
+6. **Lead routing (27 leads).** `03-get-matched-lead.csv` +
+   `04-exit-intent-lead.csv` → route to state operators.
+7. **Quote request forward (1).** `06-operator-quote-request.csv` →
+   forward Gary Langford's request to the Embry-Riddle contact.
+8. **Insurance-agency reply.** Reply to Donna at
+   `donnac@westernvalley.com` about the insurance-partnership
+   inquiry.
 
-- **Batch A (3 new, zero-collision confirmed):** Viewpoint Agriculture
-  (Sebring, FL), EcoAg Aerial Imaging (Rochester, NY), AG Fertilizer
-  LLC (Bastrop, TX).
-- **Batch B (1 new + 2 thin-record enrichments):** Leigh Low Aerial
-  Services LLC (Mauston, WI + IL); enrich `heartland-sky` (line 8487)
-  with phone/email/full-description/services/drones/crops, add
-  `nebraska` to counties, flip pendingConfirmation off and verified
-  on; enrich `wolverine-drone-services-llc` (line 3446) with email +
-  ownerName Jeff Whiting + description + crops + $15/ac.
-- **Batch C — BLOCKED on Eugen:** Elevated Ag Drone Services (Auburn
-  AL, GA, MS). Possible collision with `elevated-agriculture-llc`
-  (line 10815, blank FAA-docket record). Decide before creating:
-  enrich in place + rename, or create fresh slug
-  `elevated-ag-drone-services` and delete the blank record. See
-  `09-dedup-audit.md § FLAGGED — possible collision`.
-- **Batch B enrichments (2 thin records):**
-  - `heartland-sky` (line 8487) — flip
-    `pendingConfirmation: true` → false, add owner phone
-    6413529089, email heartlandskyllc@gmail.com, full crops
-    list, drones ['dji-agras-t50'], services list, expand
-    counties to add 'nebraska', price $14-$18/acre. Do NOT set
-    certFAAPart137 (form language is ambiguous on 137).
-  - `wolverine-drone-services-llc` (line 3446) — add email
-    jeffwhiting@wolverinedroneservices.com, ownerName "Jeff
-    Whiting", replace description with the two-sentence form
-    submission text, add crops list, price $15/acre. Keep
-    existing facebook URL. Do NOT set certFAAPart137 without
-    owner confirmation.
-
-### Phase 3 — owner-submitted updates (`update-existing`)
-
-See `02-listing-update.csv` + `09-dedup-audit.md`.
-
-- `croptech-solutions` (line 2018) — Randy Biebel. Phone + website
-  already match; additive edits: email, +2 drones (add
-  dji-agras-t40), +2 services (spreading, training), expanded
-  crops (add alfalfa, pasture, potatoes, row-crops), priceMinUsd 15.
-- `volitant-technologies` (line 366) — LOCATION CORRECTION.
-  Overwrite city ('Birmingham' → 'Dunbar'), counties (7 SE states →
-  ['nebraska']). Add phone, email, website; expand drones/crops/
-  services; priceMinUsd 13. Preserve description prose.
-- `altitude-agri-services` (line 6478) — safe additive edit ONLY:
-  add email kurt.b@altitudeagriservices.com. DO NOT overwrite city
-  (form Kennewick vs record Richland — both Tri-Cities WA). Eugen
-  replies to Kurt to confirm.
-
-### Phase 4-6 — Eugen (not Claude Code)
-
-- Import `07-newsletter-import.csv` (40 emails) to beehiiv Tank Mix
-  audience.
-- Import `05-premium-acre-signup.csv` (7 emails) to beehiiv
-  Premium Acre audience.
-- After Phase 2/3 profiles ship, send `08-email-listing-live.md`
-  template to each of the 10 operators (7 new/enriched + 3
-  updated).
-- Route 27 farmer leads (`03-get-matched-lead.csv` +
-  `04-exit-intent-lead.csv`) to state operators.
-- Forward Gary Langford's Embry-Riddle quote request
-  (`06-operator-quote-request.csv`) to the Embry-Riddle contact.
-- Reply personally to Western Valley Insurance (CA) about
-  insurance partnerships — not a drone-operator listing.
 
 ## Optional polish (not blocking)
 

@@ -73,21 +73,22 @@ Fill this in per operator before sending:
 
 ## Ready-to-send queue
 
-After Phase 2 builds ship, these are the pending sends. Filled URLs go
-in the `profile_url` column of `01-list-your-business.csv`.
+All 10 profiles are live in production after PR #148 merges to
+`main` (Netlify auto-deploys on merge). Verify each URL renders 200
+before sending.
 
-| Operator (submitted) | Contact | Email | Profile URL (to fill in) |
-|---|---|---|---|
-| Viewpoint Agriculture | (no name given) | contact@viewpointagriculture.com | https://agdronedirectory.com/operators/viewpoint-agriculture |
-| EcoAg Aerial Imaging | (Adamskij ?) | adamskijma@gmail.com | https://agdronedirectory.com/operators/ecoag-aerial-imaging |
-| AG Fertilizer, LLC. | Matt | matt@ag-fertilizer.com | https://agdronedirectory.com/operators/ag-fertilizer-llc |
-| Heartland Sky LLC | Isaiah Borgos | heartlandskyllc@gmail.com | https://agdronedirectory.com/operators/heartland-sky |
-| Elevated Ag Drone Services | (no name) | elevatedag2@gmail.com | https://agdronedirectory.com/operators/elevated-ag-drone-services |
-| Leigh Low Aerial Services LLC | (no name) | leighlow.agservices@gmail.com | https://agdronedirectory.com/operators/leigh-low-aerial-services-llc |
-| Wolverine Drone Services LLC | Jeff Whiting | jeffwhiting@wolverinedroneservices.com | https://agdronedirectory.com/operators/wolverine-drone-services-llc |
-| ALTITUDE AGRI SERVICES, LLC | Kurt B | kurt.b@altitudeagriservices.com | https://agdronedirectory.com/operators/altitude-agri-services |
-| CropTech Solutions | Randy | randy@croptech.us | https://agdronedirectory.com/operators/croptech-solutions |
-| Volitant Technologies | (no name) | info@volitant.tech | https://agdronedirectory.com/operators/volitant-technologies |
+| Operator | Contact | Email | Profile URL | Send status |
+|---|---|---|---|---|
+| Viewpoint Agriculture | (no name) | contact@viewpointagriculture.com | https://agdronedirectory.com/operators/viewpoint-agriculture | pending |
+| EcoAg Aerial Imaging | Adam (adamskijma) | adamskijma@gmail.com | https://agdronedirectory.com/operators/ecoag-aerial-imaging | pending |
+| AG Fertilizer, LLC. | Matt | matt@ag-fertilizer.com | https://agdronedirectory.com/operators/ag-fertilizer-llc | pending |
+| Heartland Sky | Isaiah Borgos | heartlandskyllc@gmail.com | https://agdronedirectory.com/operators/heartland-sky | pending — enrichment, use "your listing has been updated" variant |
+| Leigh Low Aerial Services LLC | (no name) | leighlow.agservices@gmail.com | https://agdronedirectory.com/operators/leigh-low-aerial-services-llc | pending |
+| Wolverine Drone Services LLC | Jeff Whiting (+ son Eric) | jeffwhiting@wolverinedroneservices.com | https://agdronedirectory.com/operators/wolverine-drone-services-llc | pending — enrichment, use "your listing has been updated" variant |
+| Elevated Ag Drone Services | (no name) | elevatedag2@gmail.com | https://agdronedirectory.com/operators/elevated-ag-drone-services | pending — also mention the blank `elevated-agriculture-llc` record and ask if that is their same entity so we can merge |
+| ALTITUDE AGRI SERVICES, LLC | Kurt B | kurt.b@altitudeagriservices.com | https://agdronedirectory.com/operators/altitude-agri-services | pending — use "your listing has been updated" variant; ALSO ask Kurt to confirm city (record says Richland, form said Kennewick) + share his real LinkedIn URL (current record just says 'Y') |
+| CropTech Solutions | Randy Biebel | randy@croptech.us | https://agdronedirectory.com/operators/croptech-solutions | pending — use "your listing has been updated" variant |
+| Volitant Technologies | (no name) | info@volitant.tech | https://agdronedirectory.com/operators/volitant-technologies | pending — use "your listing has been updated" variant; ALSO confirm coverage (we moved city from Birmingham AL to Dunbar NE per the form; if they still cover Southeast states, we can restore those counties) |
 
 For the three updates (Altitude, CropTech, Volitant), swap the
 "listing is live" opener for "your listing has been updated" and drop
