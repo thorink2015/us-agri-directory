@@ -1301,6 +1301,35 @@ fully delivered through the existing emit points.
   founding-link leakage, zero founding strings, "Join for $49 a
   month" labels; signup-page header carries the founding link.
 
+## 2026-07-20 — Formspree inbox triage (Phase 1: data + templates)
+
+Working branch: `claude/agdrone-form-processing-1oapae`.
+
+- **Batch 1 (Phase 1, this commit):** parsed the 47 2026-06/2026-07
+  Formspree submissions Eugen dropped and produced categorized
+  deliverables under `_research/formspree-processing-2026-07-20/`:
+  master CSV (all 47), 6 per-form-type CSVs
+  (list-your-business, listing-update, get-matched-lead,
+  exit-intent-lead, premium-acre-signup, operator-quote-request),
+  a deduped 40-email `07-newsletter-import.csv` ready for beehiiv
+  Tank Mix import, a reusable "your listing is live"
+  `08-email-listing-live.md` template with per-operator send
+  checklist, and a `README.md` triage doc.
+- **Phase 2 (next batches, blocked on Eugen's "next" per the 1-3
+  batch rule):** create 5 new operator records (Viewpoint FL,
+  EcoAg NY, AG Fertilizer TX, Leigh Low WI, Elevated Ag Drone AL)
+  and enrich 2 existing thin records (Heartland Sky IA/NE line
+  8487, Wolverine Drone Services LLC MI line 3446).
+- **Phase 3 (next):** apply 3 owner-submitted updates on Altitude
+  Agri Services (WA, line 6478), CropTech Solutions (PA, line
+  2018), Volitant Technologies (NE, line 366).
+- **Phase 4-6 are Eugen's:** beehiiv import, listing-live sends,
+  lead routing.
+- **Not created:** Western Valley Insurance Associates was
+  misclassified as a listing (insurance agency partnership
+  inquiry, not a drone operator) — flagged for Eugen to reply
+  personally.
+
 ## What's next
 
 Tier 2 (the actual operator-research batches) is gated on Eugen's

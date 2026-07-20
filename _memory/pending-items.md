@@ -369,6 +369,67 @@ the eight audit files committed in PR #118.
   statistics guide ("final rule expected Spring 2026" in llms-full.txt).
   Do not invent the outcome.
 
+## Formspree inbox triage — Phase 2/3 pending (2026-07-20)
+
+Deliverables from Phase 1 live under
+`_research/formspree-processing-2026-07-20/`. Follow-up batches:
+
+### Phase 2 — new operator records to create (`create-new` in triage)
+
+Per the 1-3 batch rule, do these in 3 batches. See
+`_research/formspree-processing-2026-07-20/01-list-your-business.csv`
+for full data.
+
+- **Batch A (3 new):** Viewpoint Agriculture (Sebring, FL),
+  EcoAg Aerial Imaging (Rochester, NY), AG Fertilizer LLC
+  (Bastrop, TX).
+- **Batch B (2 new + 1 slug-collision-safe new):** Leigh Low
+  Aerial Services LLC (Mauston, WI + IL), Elevated Ag Drone
+  Services (Auburn, AL + GA + MS) with slug
+  `elevated-ag-drone-services` (distinct from existing
+  `elevated-ag-solutions` MN and `elevated-agriculture-llc`).
+- **Batch C (2 enrichments of thin records):**
+  - `heartland-sky` (line 8487) — flip
+    `pendingConfirmation: true` → false, add owner phone
+    6413529089, email heartlandskyllc@gmail.com, full crops
+    list, drones ['dji-agras-t50'], services list, expand
+    counties to add 'nebraska', price $14-$18/acre.
+  - `wolverine-drone-services-llc` (line 3446) — add email
+    jeffwhiting@wolverinedroneservices.com, ownerName "Jeff
+    Whiting", replace description with the two-sentence form
+    submission text, add crops list, price $15/acre. Keep
+    existing facebook URL.
+
+### Phase 3 — owner-submitted updates (`update-existing`)
+
+See `02-listing-update.csv`.
+
+- `croptech-solutions` (line 2018) — full refresh of email,
+  services, drones, crops, price per Randy's 2026-06-24 form.
+- `volitant-technologies` (line 366) — full refresh of email,
+  phone, website, services, drones, crops, price per the
+  2026-06-23 form.
+- `altitude-agri-services` (line 6478) — add email
+  kurt.b@altitudeagriservices.com. Form was sparse; Eugen to reply
+  to Kurt asking what else to change (existing city Richland vs
+  form's Kennewick).
+
+### Phase 4-6 — Eugen (not Claude Code)
+
+- Import `07-newsletter-import.csv` (40 emails) to beehiiv Tank Mix
+  audience.
+- Import `05-premium-acre-signup.csv` (7 emails) to beehiiv
+  Premium Acre audience.
+- After Phase 2/3 profiles ship, send `08-email-listing-live.md`
+  template to each of the 10 operators (7 new/enriched + 3
+  updated).
+- Route 27 farmer leads (`03-get-matched-lead.csv` +
+  `04-exit-intent-lead.csv`) to state operators.
+- Forward Gary Langford's Embry-Riddle quote request
+  (`06-operator-quote-request.csv`) to the Embry-Riddle contact.
+- Reply personally to Western Valley Insurance (CA) about
+  insurance partnerships — not a drone-operator listing.
+
 ## Optional polish (not blocking)
 
 - Netlify post-deploy GitHub Action to auto-run IndexNow ping
