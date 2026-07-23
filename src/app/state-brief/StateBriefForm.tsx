@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import { counties } from '@/data/counties';
 
 const FORMSPREE_ID = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
 
@@ -15,6 +14,15 @@ const RADIUS_OPTIONS = [
   { value: '250-miles', label: 'Within 250 miles' },
   { value: 'whole-state', label: 'Whole state' },
   { value: 'multi-state', label: 'Multi-state' },
+];
+
+const COUNTRY_OPTIONS = [
+  'United States',
+  'United Kingdom',
+  'Canada',
+  'Australia',
+  'New Zealand',
+  'Other',
 ];
 
 export default function StateBriefForm() {
@@ -35,7 +43,7 @@ export default function StateBriefForm() {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           ...data,
-          _subject: `State brief request: ${data.state_name || 'unknown state'}`,
+          _subject: `State brief request: ${data.state || 'unknown'} (${data.country || 'unknown'})`,
           page_url: typeof window !== 'undefined' ? window.location.href : '',
           referrer: typeof document !== 'undefined' ? document.referrer : '',
         }),
@@ -58,12 +66,10 @@ export default function StateBriefForm() {
       <div className="text-center py-6">
         <CheckCircle className="w-11 h-11 text-green-600 mx-auto mb-4" />
         <p className="text-lg font-semibold text-gray-900 mb-2">
-          Got it. Your state brief is on the way.
+          Got it. Your brief is on the way.
         </p>
         <p className="text-sm text-gray-600 leading-relaxed">
-          Give me a few days to pull it together. It lands in your inbox with
-          the agencies buying this work near you, where they post bids and
-          what your state makes you carry.
+          Give me a few days to pull it together. It lands in your inbox.
         </p>
         <p className="text-sm text-gray-500 mt-4">Talk soon, Eugen</p>
       </div>
@@ -137,33 +143,29 @@ export default function StateBriefForm() {
 
       <div className="grid grid-cols-2 gap-3">
         <div>
-          <label htmlFor="state_name" className="sr-only">
-            State
-          </label>
-          <select
-            id="state_name"
-            name="state_name"
-            required
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
-          >
-            <option value="">State</option>
-            {counties.map((c) => (
-              <option key={c.slug} value={c.name}>
-                {c.name}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div>
           <label htmlFor="city" className="sr-only">
-            City (optional)
+            City
           </label>
           <input
             id="city"
             name="city"
             type="text"
             autoComplete="address-level2"
-            placeholder="Nearest city (optional)"
+            placeholder="City"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+        </div>
+        <div>
+          <label htmlFor="state" className="sr-only">
+            State or region
+          </label>
+          <input
+            id="state"
+            name="state"
+            type="text"
+            required
+            autoComplete="address-level1"
+            placeholder="State or region"
             className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
           />
         </div>
@@ -171,8 +173,25 @@ export default function StateBriefForm() {
 
       <div className="grid grid-cols-2 gap-3">
         <div>
+          <label htmlFor="country" className="sr-only">
+            Country
+          </label>
+          <select
+            id="country"
+            name="country"
+            defaultValue="United States"
+            className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
+          >
+            {COUNTRY_OPTIONS.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
           <label htmlFor="service_radius" className="sr-only">
-            Service radius
+            How far will you travel?
           </label>
           <select
             id="service_radius"
@@ -186,33 +205,17 @@ export default function StateBriefForm() {
             ))}
           </select>
         </div>
-        <div>
-          <label htmlFor="country" className="sr-only">
-            Country
-          </label>
-          <select
-            id="country"
-            name="country"
-            defaultValue="United States"
-            className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
-          >
-            <option value="United States">United States</option>
-            <option value="Canada">Canada</option>
-            <option value="Mexico">Mexico</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
       </div>
 
       <div>
         <label htmlFor="notes" className="sr-only">
-          Notes on the area you fly
+          Anything else about the area you fly
         </label>
         <textarea
           id="notes"
           name="notes"
           rows={4}
-          placeholder="Describe the area you fly. Which counties, what crops, whether you cover the whole state or just a chunk of it, any specialty work you want to focus on. The more you tell me, the sharper the brief."
+          placeholder="Anything else about the area you fly? Counties, crops, specialty work you want to focus on, or how much of your state you can cover. Whole state is fine."
           className="w-full px-4 py-3 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-green-500 resize-y"
         />
       </div>
@@ -233,7 +236,7 @@ export default function StateBriefForm() {
       </button>
 
       <p className="text-xs text-gray-500 text-center pt-1">
-        Three questions, thirty seconds. Costs nothing.
+        Free. One brief per operator. Your details stay with me.
       </p>
     </form>
   );

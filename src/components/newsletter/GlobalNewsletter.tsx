@@ -19,6 +19,7 @@ const SUPPRESS_ON = [
   '/premium-acre',
   '/premium-acre/join',
   '/premium-acre/subscribe',
+  '/state-brief',
 ];
 
 export default function GlobalNewsletter({

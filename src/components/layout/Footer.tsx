@@ -42,6 +42,35 @@ export default function Footer() {
     );
   }
 
+  // Minimal single-line footer for the /state-brief lead-capture page.
+  // Directory logo (links back to /) plus copyright + policy links only.
+  if (pathname === '/state-brief') {
+    return (
+      <footer className="bg-green-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <Link href="/" className="flex items-center gap-2">
+            <div className="w-7 h-7 bg-green-700 rounded-lg flex items-center justify-center">
+              <Plane className="w-4 h-4 text-white rotate-45" />
+            </div>
+            <span className="font-bold text-white">
+              US Ag Drone
+              <span className="text-yellow-500"> Directory</span>
+            </span>
+          </Link>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-green-300">
+            <span>© 2026 {SITE.name}</span>
+            <span className="text-green-700">|</span>
+            <Link href="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+            <span className="text-green-700">|</span>
+            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+            <span className="text-green-700">|</span>
+            <Link href="/affiliate-disclosure" className="hover:text-white transition-colors">Affiliate Disclosure</Link>
+          </div>
+        </div>
+      </footer>
+    );
+  }
+
   return (
     <footer className="bg-green-900 text-white mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
