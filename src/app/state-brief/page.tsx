@@ -5,17 +5,15 @@ import StateBriefForm from './StateBriefForm';
 
 // ─── State brief request landing page ─────────────────────────────────────
 // Single-purpose form. Reached from the Tank Mix newsletter "Send me my state
-// brief" CTA. Collects operator location so Eugen can build a personalized
-// brief on local buyers (city, county, and state agencies buying drone work
-// near them) plus what their state makes them carry to bid on that work.
-// Posts to the site's existing Formspree endpoint with
-// _form_type "state-brief-request". Copy is Eugen's from the newsletter.
-// Chrome matches /premium-acre (minimal, form-first).
+// brief" CTA. The header, footer and the site-wide newsletter band are all
+// suppressed for this route (see Header.tsx, Footer.tsx, GlobalNewsletter.tsx)
+// so the page reads as a focused lead-capture. Posts to Formspree with
+// _form_type "state-brief-request".
 // -----------------------------------------------------------------------------
 
 const PAGE_PATH = '/state-brief';
 const DESCRIPTION =
-  "Everything in the newsletter is national. Your money is local. Give me your state and nearest good sized town and I'll build you a brief on the agencies buying this work near you, where they post bids and what your state makes you carry.";
+  "Tell me where you fly and I'll send you a short brief with the local buyers hiring drone operators near you plus what you need to bid on that work.";
 
 export const metadata: Metadata = {
   title: 'Get your state brief | AgDroneDirectory',
@@ -98,21 +96,35 @@ export default function StateBriefPage() {
             Tell me where you fly
           </h1>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-8">
-            Everything in the newsletter is national. Your money is local. Tell
-            me your state, your nearest good sized town, and how far you will
-            travel. I&apos;ll build you a brief on the agencies buying this
-            work near you, where they post bids and what your state makes you
-            carry.
+          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+            Fill this out and I&apos;ll email you back a short brief with:
           </p>
 
-          <div className="bg-white border border-stone-200 rounded-2xl shadow-sm p-6 sm:p-8 text-left">
+          <ul className="text-left text-base text-gray-800 leading-relaxed mb-8 space-y-2 max-w-md mx-auto">
+            <li className="flex gap-3">
+              <span aria-hidden="true" className="text-green-700 font-bold">·</span>
+              <span>Local buyers hiring drone operators near you (cities, counties, state agencies)</span>
+            </li>
+            <li className="flex gap-3">
+              <span aria-hidden="true" className="text-green-700 font-bold">·</span>
+              <span>Where they post their bids</span>
+            </li>
+            <li className="flex gap-3">
+              <span aria-hidden="true" className="text-green-700 font-bold">·</span>
+              <span>What your state or country requires you to have to bid on that work</span>
+            </li>
+          </ul>
+
+          <div
+            id="state-brief-form"
+            className="bg-white border border-stone-200 rounded-2xl shadow-sm p-6 sm:p-8 text-left scroll-mt-24"
+          >
             <StateBriefForm />
           </div>
 
           <p className="text-xs text-gray-500 leading-relaxed mt-6">
-            One brief per operator. Your details stay with me and are never
-            resold. Only choosing the state is fine, whole state is fine.
+            Free. One brief per operator. Your details stay with me and are
+            never resold.
           </p>
         </div>
       </div>
